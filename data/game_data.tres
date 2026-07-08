@@ -1,7 +1,40 @@
 [gd_resource type="Resource" script_class="GameData" format=3 uid="uid://dcckexgblr3de"]
 
 [ext_resource type="Script" uid="uid://cp2inhinnjjop" path="res://scripts/data/game_data.gd" id="1_urpql"]
+[ext_resource type="Script" uid="uid://5t2j51l6wd4l" path="res://scripts/data/mini_game_data.gd" id="1_vllua"]
+[ext_resource type="Script" uid="uid://br5q0sg4b052d" path="res://scripts/data/level_data.gd" id="2_r34r7"]
+
+[sub_resource type="Resource" id="Resource_k2o1c"]
+script = ExtResource("1_vllua")
+metadata/_custom_type_script = "uid://5t2j51l6wd4l"
+
+[sub_resource type="Resource" id="Resource_7fe16"]
+script = ExtResource("1_vllua")
+metadata/_custom_type_script = "uid://5t2j51l6wd4l"
+
+[sub_resource type="Resource" id="Resource_yqv0c"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([SubResource("Resource_k2o1c"), SubResource("Resource_7fe16")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Resource_lhs1r"]
+script = ExtResource("1_vllua")
+metadata/_custom_type_script = "uid://5t2j51l6wd4l"
+
+[sub_resource type="Resource" id="Resource_pftn3"]
+script = ExtResource("1_vllua")
+metadata/_custom_type_script = "uid://5t2j51l6wd4l"
+
+[sub_resource type="Resource" id="Resource_7lvw4"]
+script = ExtResource("1_vllua")
+metadata/_custom_type_script = "uid://5t2j51l6wd4l"
+
+[sub_resource type="Resource" id="Resource_2ewf2"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([SubResource("Resource_lhs1r"), SubResource("Resource_pftn3"), SubResource("Resource_7lvw4")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
 
 [resource]
 script = ExtResource("1_urpql")
+levels = Array[Resource]([SubResource("Resource_yqv0c"), SubResource("Resource_2ewf2")])
 metadata/_custom_type_script = "uid://cp2inhinnjjop"
