@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://wrkponuspoej" path="res://scripts/managers/game_ui_manager.gd" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dgxh18nboxsck" path="res://content/prefabs/ui/game_ui.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://bibakvkxipxo8" path="res://content/prefabs/box.tscn" id="7_o6xl0"]
+[ext_resource type="Script" path="res://scripts/managers/level_manager.gd" id="8_lvlmgr"]
+[ext_resource type="PackedScene" path="res://content/prefabs/level/level.tscn" id="9_lvlprfb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jyhfs"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -30,15 +32,21 @@ game_manager = NodePath("Global/GameManager")
 transform = Transform3D(0.9895786, 0.14399351, 0, -0.14399351, 0.9895786, 0, 0, 0, 1, -0.11032963, 0.659583, 1.0783575)
 mass = 287.432
 
-[node name="GameManager" type="Node" parent="Global" unique_id=1073659002 node_paths=PackedStringArray("game_ui_manager")]
+[node name="GameManager" type="Node" parent="Global" unique_id=1073659002 node_paths=PackedStringArray("game_ui_manager", "level_manager")]
 script = ExtResource("1_o5qli")
 game_data = ExtResource("2_0wfyh")
 game_ui_manager = NodePath("GameUIManager")
+level_manager = NodePath("LevelManager")
 
 [node name="GameUIManager" type="Node" parent="Global/GameManager" unique_id=433846898 node_paths=PackedStringArray("root_scene")]
 script = ExtResource("4_jyhfs")
 game_ui_prefab = ExtResource("5_tbgi4")
 root_scene = NodePath("../../..")
+
+[node name="LevelManager" type="Node" parent="Global/GameManager" node_paths=PackedStringArray("level_root")]
+script = ExtResource("8_lvlmgr")
+level_root = NodePath("../../../Level")
+level_prefab = ExtResource("9_lvlprfb")
 
 [node name="Camera3D" type="Camera3D" parent="Global" unique_id=1394663866]
 transform = Transform3D(0.83676434, -0.21746358, 0.50252867, 0, 0.91775465, 0.3971479, -0.5475632, -0.3323192, 0.76794434, 1.1614614, 1.8561649, 1.8021082)

@@ -56,15 +56,21 @@ func initialize(game_manager:GameManager):
 				_add_level_button(level_index)
 	menu_levels.grid_container.resized.connect(_on_levels_container_resized, CONNECT_ONE_SHOT)
 	_on_levels_container_resized()
+	_level_buttons[0].set_current(true)
 
 func _add_level_button(level_index: int) -> void:
 	var button_level := button_level_prefab.instantiate() as ButtonLevelUI
 	button_level.initialize(level_index, _game_manager.game_state.is_level_unlocked(level_index))
+	button_level.selected.connect(_on_level_selected)
 	_level_buttons[level_index] = button_level
 	menu_levels.grid_container.add_child(button_level)
 
 func _on_level_unlocked(level_index: int) -> void:
 	_level_buttons[level_index].set_unlocked(true)
+
+func _on_level_selected(level_index: int) -> void:
+	hide()
+	_game_manager.level_manager.start_level(level_index)
 
 func _on_levels_container_resized() -> void:
 	menu_levels.scrol_container.scroll_vertical = 999999999
