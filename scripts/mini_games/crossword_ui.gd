@@ -1,6 +1,8 @@
 class_name CrosswordUI
 extends Control
 
+signal completed
+
 const CELL_SIZE := Vector2(40, 40)
 const NORMAL_COLOR := Color.WHITE
 const SELECTED_COLOR := Color(0.7, 0.85, 1.0)
@@ -16,9 +18,12 @@ var _cell_backgrounds: Dictionary = {}
 var _cell_placements: Dictionary = {}
 var _placement_attempts: Dictionary = {}
 var _selected_placement: CrosswordWordPlacement
+var _word_count: int
+var _solved_count: int = 0
 
 func initialize(crossword_data: CrosswordData) -> void:
 	var placements := CrosswordGenerator.generate(crossword_data.clues)
+	_word_count = placements.size()
 	_render_grid(placements)
 	input.text_changed.connect(_on_word_input_changed)
 
@@ -150,3 +155,6 @@ func _validate_word(submitted_text: String) -> void:
 	_selected_placement = null
 	hint_label.text = ""
 	input.text = ""
+	_solved_count += 1
+	if _solved_count == _word_count:
+		completed.emit()

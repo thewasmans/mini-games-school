@@ -10,3 +10,6 @@ func initialize(game_manager:GameManager):
 	_game_ui = game_ui_prefab.instantiate()
 	_game_ui.initialize(game_manager)
 	root_scene.add_child(_game_ui)
+
+func show_menu() -> void:
+	_game_ui.show()

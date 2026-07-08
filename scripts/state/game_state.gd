@@ -16,10 +16,13 @@ func _init(_game_data:GameData) -> void:
 func is_level_unlocked(level_index: int) -> bool:
 	return level_index < unlocked_level_count
 
+func select_level(level_index: int) -> void:
+	current_level = level_index
+	current_level_changed.emit(current_level)
+
 func complete_level(level_index: int) -> void:
 	if level_index != unlocked_level_count - 1:
 		return
 	unlocked_level_count += 1
 	level_unlocked.emit(unlocked_level_count - 1)
-	current_level = unlocked_level_count - 1
-	current_level_changed.emit(current_level)
+	select_level(unlocked_level_count - 1)
