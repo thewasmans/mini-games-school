@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b4qqoy48s4na1"]
+
+[ext_resource type="Script" uid="uid://ewov5mglodbo" path="res://scripts/level/level.gd" id="1_8od4f"]
+
+[node name="Level" type="Control" unique_id=1301094388 node_paths=PackedStringArray("mini_game_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8od4f")
+mini_game_label = NodePath("MiniGameLabel")
+
+[node name="MiniGameLabel" type="Label" parent="." unique_id=86546250]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -167.0
+offset_top = 28.0
+offset_right = 167.0
+offset_bottom = 84.0
+grow_horizontal = 2
+text = "CROSS WORD"
+horizontal_alignment = 1
+vertical_alignment = 1
