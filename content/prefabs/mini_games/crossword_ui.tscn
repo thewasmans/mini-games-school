@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://caxlfire3r11w" path="res://scripts/mini_games/crossword_ui.gd" id="1_crossword"]
 
-[node name="CrosswordUI" type="Control" unique_id=1160996909 node_paths=PackedStringArray("grid_container", "clues_label")]
+[node name="CrosswordUI" type="Control" unique_id=1160996909 node_paths=PackedStringArray("grid_container", "clues_container")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,7 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_crossword")
 grid_container = NodePath("HBoxContainer/GridContainer")
-clues_label = NodePath("HBoxContainer/CluesLabel")
+clues_container = NodePath("HBoxContainer/CluesScroll/CluesContainer")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1294682604]
 layout_mode = 1
@@ -29,8 +29,13 @@ size_flags_vertical = 3
 theme_override_constants/h_separation = 2
 theme_override_constants/v_separation = 2
 
-[node name="CluesLabel" type="Label" parent="HBoxContainer" unique_id=1494173797]
+[node name="CluesScroll" type="ScrollContainer" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-autowrap_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="CluesContainer" type="VBoxContainer" parent="HBoxContainer/CluesScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
