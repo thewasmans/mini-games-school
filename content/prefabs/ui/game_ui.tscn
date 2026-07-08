@@ -11,13 +11,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7e7t2")
-levels_container = NodePath("GridContainer")
+levels_container = NodePath("Panel/GridContainer")
 button_level_prefab = ExtResource("2_npsjx")
 
-[node name="GridContainer" type="GridContainer" parent="." unique_id=923873145]
+[node name="Panel" type="Panel" parent="." unique_id=1111584490]
 layout_mode = 0
-offset_right = 623.0
-offset_bottom = 403.0
+offset_right = 202.0
+offset_bottom = 285.0
+
+[node name="GridContainer" type="GridContainer" parent="Panel" unique_id=923873145]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/h_separation = 19
 theme_override_constants/v_separation = 24
 columns = 5

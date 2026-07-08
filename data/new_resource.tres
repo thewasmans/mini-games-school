@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cqd0espmk4npp"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/data/cross_words/word_data.gd" id="1_n3143"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/data/cross_words/cross_word_data.gd" id="2_7d3su"]
+
+[sub_resource type="Resource" id="Resource_n3143"]
+script = ExtResource("1_n3143")
+word = "Orange"
+hint = "Mmm le jus"
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[sub_resource type="Resource" id="Resource_7d3su"]
+script = ExtResource("1_n3143")
+word = "Jus"
+hint = "Ma bite"
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[resource]
+script = ExtResource("2_7d3su")
+clues = Array[ExtResource("1_n3143")]([SubResource("Resource_n3143"), SubResource("Resource_7d3su")])
+metadata/_custom_type_script = "uid://cvhcj85uqr48d"
