@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dgxh18nboxsck"]
+
+[ext_resource type="Script" uid="uid://chfxvwlqr0oqm" path="res://scripts/ui/game_ui.gd" id="1_7e7t2"]
+
+[node name="GameUi" type="Control" unique_id=137618360 node_paths=PackedStringArray("respawn_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7e7t2")
+respawn_button = NodePath("RespawnButton")
+
+[node name="RespawnButton" type="Button" parent="." unique_id=1042189276]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -113.0
+offset_top = -109.984985
+offset_right = 113.0
+offset_bottom = -36.984985
+grow_horizontal = 2
+grow_vertical = 0
+text = "Respawn Box"
+
+[node name="Label" type="Label" parent="." unique_id=1694930581]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -113.0
+offset_top = 31.045
+offset_right = 113.0
+offset_bottom = 104.045
+grow_horizontal = 2
+text = "Demo Architecture"
+horizontal_alignment = 1
+vertical_alignment = 1
