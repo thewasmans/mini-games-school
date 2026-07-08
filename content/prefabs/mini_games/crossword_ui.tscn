@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://caxlfire3r11w" path="res://scripts/mini_games/crossword_ui.gd" id="1_crossword"]
 
-[node name="CrosswordUI" type="Control" unique_id=1160996909 node_paths=PackedStringArray("grid_container", "clues_container")]
+[node name="CrosswordUI" type="Control" unique_id=1160996909 node_paths=PackedStringArray("grid_container", "hint_label", "input")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,32 +10,33 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_crossword")
-grid_container = NodePath("HBoxContainer/GridContainer")
-clues_container = NodePath("HBoxContainer/CluesScroll/CluesContainer")
+grid_container = NodePath("VBoxContainer/GridContainer")
+hint_label = NodePath("VBoxContainer/HintLabel")
+input = NodePath("HiddenInput")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1294682604]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1294682604]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 40
+alignment = 1
 
-[node name="GridContainer" type="GridContainer" parent="HBoxContainer" unique_id=925921772]
+[node name="HintLabel" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
+horizontal_alignment = 1
+text = "Cliquez sur une case pour commencer"
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=925921772]
+layout_mode = 2
+size_flags_horizontal = 4
 theme_override_constants/h_separation = 2
 theme_override_constants/v_separation = 2
 
-[node name="CluesScroll" type="ScrollContainer" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-horizontal_scroll_mode = 0
-
-[node name="CluesContainer" type="VBoxContainer" parent="HBoxContainer/CluesScroll"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/separation = 12
+[node name="HiddenInput" type="LineEdit" parent="."]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(1, 1)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+mouse_filter = 2

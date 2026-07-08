@@ -2,22 +2,35 @@ class_name CrosswordUI
 extends Control
 
 const CELL_SIZE := Vector2(40, 40)
+const NORMAL_COLOR := Color.WHITE
+const SELECTED_COLOR := Color(0.7, 0.85, 1.0)
+const CURRENT_COLOR := Color(1.0, 0.8, 0.3)
+const HOVER_COLOR := Color(0.88, 0.94, 1.0)
 
 @export var grid_container: GridContainer
-@export var clues_container: VBoxContainer
+@export var hint_label: Label
+@export var input: LineEdit
 
 var _cells: Dictionary = {}
+var _cell_backgrounds: Dictionary = {}
+var _cell_placements: Dictionary = {}
+var _placement_attempts: Dictionary = {}
+var _selected_placement: CrosswordWordPlacement
 
 func initialize(crossword_data: CrosswordData) -> void:
 	var placements := CrosswordGenerator.generate(crossword_data.clues)
 	_render_grid(placements)
-	_render_clues(placements)
+	input.text_changed.connect(_on_word_input_changed)
 
 func _render_grid(placements: Array[CrosswordWordPlacement]) -> void:
 	var letter_positions: Dictionary = {}
 	for placement in placements:
 		for letter_index in placement.word_data.word.length():
-			letter_positions[placement.cell_position(letter_index)] = true
+			var pos := placement.cell_position(letter_index)
+			letter_positions[pos] = true
+			if not _cell_placements.has(pos):
+				_cell_placements[pos] = []
+			_cell_placements[pos].append(placement)
 	if letter_positions.is_empty():
 		return
 	var positions: Array = letter_positions.keys()
@@ -34,55 +47,106 @@ func _render_grid(placements: Array[CrosswordWordPlacement]) -> void:
 	for y in range(min_y, max_y + 1):
 		for x in range(min_x, max_x + 1):
 			var pos := Vector2i(x, y)
-			var cell := Label.new()
-			cell.custom_minimum_size = CELL_SIZE
-			cell.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-			cell.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 			if letter_positions.has(pos):
-				var background := StyleBoxFlat.new()
-				background.bg_color = Color.WHITE
-				cell.add_theme_stylebox_override("normal", background)
-				cell.add_theme_color_override("font_color", Color.BLACK)
-				_cells[pos] = cell
-			grid_container.add_child(cell)
+				grid_container.add_child(_create_cell(pos))
+			else:
+				var spacer := Control.new()
+				spacer.custom_minimum_size = CELL_SIZE
+				grid_container.add_child(spacer)
 
-func _render_clues(placements: Array[CrosswordWordPlacement]) -> void:
-	var sorted_placements := placements.duplicate()
-	sorted_placements.sort_custom(func(a: CrosswordWordPlacement, b: CrosswordWordPlacement) -> bool:
-		if a.start.y != b.start.y:
-			return a.start.y < b.start.y
-		return a.start.x < b.start.x)
-	for i in sorted_placements.size():
-		_add_clue_row(sorted_placements[i], i + 1)
+func _create_cell(pos: Vector2i) -> Button:
+	var cell := Button.new()
+	cell.custom_minimum_size = CELL_SIZE
+	cell.focus_mode = Control.FOCUS_NONE
+	var background := StyleBoxFlat.new()
+	background.bg_color = NORMAL_COLOR
+	cell.add_theme_stylebox_override("normal", background)
+	cell.add_theme_stylebox_override("hover", background)
+	cell.add_theme_stylebox_override("pressed", background)
+	cell.add_theme_color_override("font_color", Color.BLACK)
+	cell.add_theme_color_override("font_hover_color", Color.BLACK)
+	cell.pressed.connect(_on_cell_pressed.bind(pos))
+	cell.mouse_entered.connect(_on_cell_mouse_entered.bind(pos))
+	cell.mouse_exited.connect(_on_cell_mouse_exited.bind(pos))
+	_cells[pos] = cell
+	_cell_backgrounds[pos] = background
+	return cell
 
-func _add_clue_row(placement: CrosswordWordPlacement, number: int) -> void:
+func _on_cell_pressed(pos: Vector2i) -> void:
+	var placements: Array = _cell_placements[pos]
+	var next_placement: CrosswordWordPlacement = placements[0]
+	if placements.size() > 1 and _selected_placement in placements:
+		var current_index: int = placements.find(_selected_placement)
+		next_placement = placements[(current_index + 1) % placements.size()]
+	_select_placement(next_placement)
+
+func _select_placement(placement: CrosswordWordPlacement) -> void:
+	if _selected_placement != null:
+		_placement_attempts[_selected_placement] = input.text
+	_clear_selection_color()
+	_selected_placement = placement
+	input.max_length = placement.word_data.word.length()
+	var attempt: String = _placement_attempts.get(placement, "")
+	input.text = attempt
+	input.caret_column = attempt.length()
+	_update_word_cells(attempt)
+	_update_current_cell_color(attempt.length())
 	var direction := "Horizontal" if placement.is_horizontal else "Vertical"
-	var row := HBoxContainer.new()
-	var hint_label := Label.new()
-	hint_label.text = "%d. (%s) %s" % [number, direction, placement.word_data.hint]
-	hint_label.size_flags_horizontal = SIZE_EXPAND_FILL
-	row.add_child(hint_label)
-	var line_edit := LineEdit.new()
-	line_edit.placeholder_text = "..."
-	line_edit.custom_minimum_size = Vector2(120, 0)
-	line_edit.text_changed.connect(_on_word_input_changed.bind(line_edit))
-	line_edit.text_submitted.connect(_on_word_submitted.bind(placement, line_edit))
-	row.add_child(line_edit)
-	clues_container.add_child(row)
+	hint_label.text = "(%s) %s" % [direction, placement.word_data.hint]
+	input.grab_focus()
 
-func _on_word_input_changed(_new_text: String, line_edit: LineEdit) -> void:
-	line_edit.remove_theme_color_override("font_color")
+func _on_cell_mouse_entered(pos: Vector2i) -> void:
+	_set_word_color(_cell_placements[pos][0], HOVER_COLOR)
 
-func _on_word_submitted(submitted_text: String, placement: CrosswordWordPlacement, line_edit: LineEdit) -> void:
-	if submitted_text.strip_edges().to_upper() == placement.word_data.word:
-		_reveal_word(placement)
-		line_edit.editable = false
-		line_edit.add_theme_color_override("font_color", Color.GREEN)
+func _on_cell_mouse_exited(pos: Vector2i) -> void:
+	var placement: CrosswordWordPlacement = _cell_placements[pos][0]
+	if placement == _selected_placement:
+		_update_current_cell_color(input.text.length())
 	else:
-		line_edit.add_theme_color_override("font_color", Color.RED)
+		_set_word_color(placement, NORMAL_COLOR)
 
-func _reveal_word(placement: CrosswordWordPlacement) -> void:
+func _set_word_color(placement: CrosswordWordPlacement, color: Color) -> void:
 	for letter_index in placement.word_data.word.length():
 		var pos := placement.cell_position(letter_index)
-		if _cells.has(pos):
-			_cells[pos].text = placement.word_data.word[letter_index]
+		if _cell_backgrounds.has(pos):
+			_cell_backgrounds[pos].bg_color = color
+
+func _clear_selection_color() -> void:
+	if _selected_placement == null:
+		return
+	_set_word_color(_selected_placement, NORMAL_COLOR)
+
+func _update_current_cell_color(current_index: int) -> void:
+	for letter_index in _selected_placement.word_data.word.length():
+		var pos := _selected_placement.cell_position(letter_index)
+		if not _cell_backgrounds.has(pos):
+			continue
+		_cell_backgrounds[pos].bg_color = CURRENT_COLOR if letter_index == current_index else SELECTED_COLOR
+
+func _update_word_cells(new_text: String) -> void:
+	var word := _selected_placement.word_data.word
+	for letter_index in word.length():
+		var pos := _selected_placement.cell_position(letter_index)
+		if not _cells.has(pos):
+			continue
+		_cells[pos].text = new_text[letter_index].to_upper() if letter_index < new_text.length() else ""
+
+func _on_word_input_changed(new_text: String) -> void:
+	if _selected_placement == null:
+		return
+	_update_word_cells(new_text)
+	_update_current_cell_color(new_text.length())
+	if new_text.length() == _selected_placement.word_data.word.length():
+		_validate_word(new_text)
+
+func _validate_word(submitted_text: String) -> void:
+	if submitted_text.strip_edges().to_upper() != _selected_placement.word_data.word:
+		input.text = ""
+		_update_word_cells("")
+		_update_current_cell_color(0)
+		return
+	_placement_attempts[_selected_placement] = _selected_placement.word_data.word
+	_clear_selection_color()
+	_selected_placement = null
+	hint_label.text = ""
+	input.text = ""
