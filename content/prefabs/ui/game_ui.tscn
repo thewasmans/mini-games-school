@@ -2,8 +2,10 @@
 
 [ext_resource type="Script" uid="uid://chfxvwlqr0oqm" path="res://scripts/ui/game_ui.gd" id="1_7e7t2"]
 [ext_resource type="PackedScene" uid="uid://0gapd7wm8ydd" path="res://content/prefabs/ui/button_level_ui.tscn" id="2_npsjx"]
+[ext_resource type="PackedScene" uid="uid://dy4o76u7t5tkx" path="res://content/prefabs/ui/menu_levels_ui.tscn" id="3_hpqhx"]
+[ext_resource type="PackedScene" uid="uid://d0h5gr0h7xhcu" path="res://content/prefabs/ui/menu_start_ui.tscn" id="4_mpxm1"]
 
-[node name="GameUi" type="Control" unique_id=137618360 node_paths=PackedStringArray("levels_container")]
+[node name="GameUi" type="Control" unique_id=137618360 node_paths=PackedStringArray("menu_levels")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,21 +13,28 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7e7t2")
-levels_container = NodePath("Panel/GridContainer")
+menu_levels = NodePath("MenuLevelsUI")
 button_level_prefab = ExtResource("2_npsjx")
 
-[node name="Panel" type="Panel" parent="." unique_id=1111584490]
-layout_mode = 0
-offset_right = 202.0
-offset_bottom = 285.0
-
-[node name="GridContainer" type="GridContainer" parent="Panel" unique_id=923873145]
+[node name="MenuStartUI" parent="." unique_id=1191208820 instance=ExtResource("4_mpxm1")]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/h_separation = 19
-theme_override_constants/v_separation = 24
-columns = 5
+
+[node name="MenuLevelsUI" parent="." unique_id=941951630 instance=ExtResource("3_hpqhx")]
+visible = false
+layout_mode = 1
+
+[node name="Control" type="Control" parent="." unique_id=1485961964]
+anchors_preset = 0
+
+[node name="Control2" type="Control" parent="." unique_id=1759440022]
+anchors_preset = 0
+
+[node name="Control3" type="Control" parent="." unique_id=655710354]
+anchors_preset = 0
+
+[node name="Control4" type="Control" parent="." unique_id=1360731129]
+anchors_preset = 0
+
+[connection signal="pressed" from="MenuStartUI/PlayButton" to="." method="_on_play_button_pressed"]
+
+[editable path="MenuStartUI"]

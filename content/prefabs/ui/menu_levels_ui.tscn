@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://dy4o76u7t5tkx"]
+
+[ext_resource type="Script" uid="uid://d3mg8c4udidsw" path="res://scripts/ui/menu_levels_ui.gd" id="1_lc1qx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lc1qx"]
+bg_color = Color(0.13630775, 0.13630778, 0.13630772, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fi0wm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fi0wm"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+shadow_color = Color(0.27439442, 0.2743946, 0.27439454, 0.6)
+shadow_size = 1
+
+[node name="MenuLevelsUI" type="Panel" unique_id=941951630 node_paths=PackedStringArray("scrol_container", "grid_container")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lc1qx")
+script = ExtResource("1_lc1qx")
+scrol_container = NodePath("ScrollContainer")
+grid_container = NodePath("ScrollContainer/GridContainer")
+
+[node name="BackButton" type="Button" parent="." unique_id=115007813]
+layout_mode = 1
+offset_right = 150.0
+offset_bottom = 150.0
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fi0wm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fi0wm")
+text = "⬅️"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1375696083]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -208.0
+offset_top = -183.0
+offset_right = 208.0
+offset_bottom = 183.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer" unique_id=441393419]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 50
+columns = 5
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

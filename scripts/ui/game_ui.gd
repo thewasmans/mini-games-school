@@ -1,15 +1,19 @@
 class_name GameUI
 extends Control
 
-@export var levels_container: GridContainer
+@export var menu_levels: MenuLevelsUI
 @export var button_level_prefab: PackedScene
 
 var _game_manager:GameManager
+var _level_buttons: Array[ButtonLevelUI] = []
 
 func initialize(game_manager:GameManager):
+	$MenuLevelsUI.hide()
 	_game_manager = game_manager
-	var columns := levels_container.columns
+	_game_manager.game_state.level_unlocked.connect(_on_level_unlocked)
+	var columns := menu_levels.grid_container.columns
 	var levels := _game_manager.game_data.levels
+	_level_buttons.resize(levels.size())
 	var rows: Array[Array] = []
 	var index := 0
 	var content_row := 0
@@ -47,11 +51,23 @@ func initialize(game_manager:GameManager):
 		for c in render_row.size():
 			var level_index: int = render_row[c]
 			if level_index == -1:
-				levels_container.add_child(Control.new())
+				menu_levels.grid_container.add_child(Control.new())
 			else:
 				_add_level_button(level_index)
+	menu_levels.grid_container.resized.connect(_on_levels_container_resized, CONNECT_ONE_SHOT)
+	_on_levels_container_resized()
 
 func _add_level_button(level_index: int) -> void:
 	var button_level := button_level_prefab.instantiate() as ButtonLevelUI
-	button_level.initialize(level_index + 1)
-	levels_container.add_child(button_level)
+	button_level.initialize(level_index, _game_manager.game_state.is_level_unlocked(level_index))
+	_level_buttons[level_index] = button_level
+	menu_levels.grid_container.add_child(button_level)
+
+func _on_level_unlocked(level_index: int) -> void:
+	_level_buttons[level_index].set_unlocked(true)
+
+func _on_levels_container_resized() -> void:
+	menu_levels.scrol_container.scroll_vertical = 999999999
+
+func _on_play_button_pressed() -> void:
+	$MenuLevelsUI.show()
