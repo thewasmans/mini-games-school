@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://b4qqoy48s4na1"]
 
 [ext_resource type="Script" uid="uid://ewov5mglodbo" path="res://scripts/level/level.gd" id="1_8od4f"]
+[ext_resource type="PackedScene" uid="uid://bsw4556x5xgdg" path="res://content/prefabs/mini_games/crossword_ui.tscn" id="2_xword"]
 
-[node name="Level" type="Control" unique_id=1301094388 node_paths=PackedStringArray("mini_game_label")]
+[node name="Level" type="Control" unique_id=1301094388 node_paths=PackedStringArray("mini_game_label", "mini_game_container")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,6 +12,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8od4f")
 mini_game_label = NodePath("MiniGameLabel")
+mini_game_container = NodePath("MiniGameContainer")
+crossword_prefab = ExtResource("2_xword")
 
 [node name="MiniGameLabel" type="Label" parent="." unique_id=86546250]
 layout_mode = 1
@@ -25,3 +28,11 @@ grow_horizontal = 2
 text = "CROSS WORD"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MiniGameContainer" type="Control" parent="." unique_id=1215192136]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bsw4556x5xgdg"]
+
+[ext_resource type="Script" uid="uid://caxlfire3r11w" path="res://scripts/mini_games/crossword_ui.gd" id="1_crossword"]
+
+[node name="CrosswordUI" type="Control" unique_id=1160996909 node_paths=PackedStringArray("grid_container", "clues_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_crossword")
+grid_container = NodePath("HBoxContainer/GridContainer")
+clues_label = NodePath("HBoxContainer/CluesLabel")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1294682604]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer" unique_id=925921772]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+
+[node name="CluesLabel" type="Label" parent="HBoxContainer" unique_id=1494173797]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+autowrap_mode = 2

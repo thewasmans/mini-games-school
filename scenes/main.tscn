@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dgxh18nboxsck" path="res://content/prefabs/ui/game_ui.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://bibakvkxipxo8" path="res://content/prefabs/box.tscn" id="7_o6xl0"]
 [ext_resource type="Script" path="res://scripts/managers/level_manager.gd" id="8_lvlmgr"]
-[ext_resource type="PackedScene" path="res://content/prefabs/level/level.tscn" id="9_lvlprfb"]
+[ext_resource type="PackedScene" path="res://content/prefabs/level/cross_word.tscn" id="9_lvlprfb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jyhfs"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
