@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://0gapd7wm8ydd"]
+
+[ext_resource type="Theme" uid="uid://jeoivhqws570" path="res://content/theme/theme.tres" id="1_r7qfe"]
+
+[node name="ButtonLevelUI" type="Button" unique_id=1791857553]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1102.0
+offset_bottom = -598.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_r7qfe")
+text = "XXX"
