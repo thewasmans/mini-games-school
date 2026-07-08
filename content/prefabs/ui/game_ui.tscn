@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dgxh18nboxsck"]
 
 [ext_resource type="Script" uid="uid://chfxvwlqr0oqm" path="res://scripts/ui/game_ui.gd" id="1_7e7t2"]
+[ext_resource type="PackedScene" uid="uid://0gapd7wm8ydd" path="res://content/prefabs/ui/button_level_ui.tscn" id="2_npsjx"]
 
 [node name="GameUi" type="Control" unique_id=137618360 node_paths=PackedStringArray("respawn_button")]
 layout_mode = 3
@@ -10,33 +11,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7e7t2")
-respawn_button = NodePath("RespawnButton")
+respawn_button = NodePath("")
 
-[node name="RespawnButton" type="Button" parent="." unique_id=1042189276]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -113.0
-offset_top = -109.984985
-offset_right = 113.0
-offset_bottom = -36.984985
-grow_horizontal = 2
-grow_vertical = 0
-text = "Respawn Box"
-
-[node name="Label" type="Label" parent="." unique_id=1694930581]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -113.0
-offset_top = 31.045
-offset_right = 113.0
-offset_bottom = 104.045
-grow_horizontal = 2
-text = "Demo Architecture"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="ButtonLevelUI" parent="." unique_id=1791857553 instance=ExtResource("2_npsjx")]
+layout_mode = 0
+anchors_preset = 0
