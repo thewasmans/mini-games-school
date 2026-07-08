@@ -3,7 +3,14 @@
 [ext_resource type="Script" uid="uid://ewov5mglodbo" path="res://scripts/level/level.gd" id="1_8od4f"]
 [ext_resource type="PackedScene" uid="uid://bsw4556x5xgdg" path="res://content/prefabs/mini_games/crossword_ui.tscn" id="2_xword"]
 
-[node name="Level" type="Control" unique_id=1301094388 node_paths=PackedStringArray("mini_game_label", "mini_game_container", "validate_button")]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lvlback"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lvlback"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+shadow_color = Color(0.27439442, 0.2743946, 0.27439454, 0.6)
+shadow_size = 1
+
+[node name="Level" type="Control" unique_id=1301094388 node_paths=PackedStringArray("mini_game_label", "mini_game_container", "validate_button", "back_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,6 +21,7 @@ script = ExtResource("1_8od4f")
 mini_game_label = NodePath("MiniGameLabel")
 mini_game_container = NodePath("MiniGameContainer")
 validate_button = NodePath("ValidateButton")
+back_button = NodePath("BackButton")
 crossword_prefab = ExtResource("2_xword")
 
 [node name="MiniGameLabel" type="Label" parent="." unique_id=86546250]
@@ -37,6 +45,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 1
+offset_right = 150.0
+offset_bottom = 150.0
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lvlback")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lvlback")
+text = "⬅️"
 
 [node name="ValidateButton" type="Button" parent="."]
 layout_mode = 1
