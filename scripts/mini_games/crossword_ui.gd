@@ -8,6 +8,7 @@ const NORMAL_COLOR := Color.WHITE
 const SELECTED_COLOR := Color(0.7, 0.85, 1.0)
 const CURRENT_COLOR := Color(1.0, 0.8, 0.3)
 const HOVER_COLOR := Color(0.88, 0.94, 1.0)
+const INCORRECT_COLOR := Color(1.0, 0.5, 0.5)
 
 @export var grid_container: GridContainer
 @export var hint_label: Label
@@ -26,6 +27,7 @@ func initialize(crossword_data: CrosswordData) -> void:
 	_word_count = placements.size()
 	_render_grid(placements)
 	input.text_changed.connect(_on_word_input_changed)
+	input.text_submitted.connect(_on_word_input_submitted)
 
 func _render_grid(placements: Array[CrosswordWordPlacement]) -> void:
 	var letter_positions: Dictionary = {}
@@ -94,7 +96,7 @@ func _select_placement(placement: CrosswordWordPlacement) -> void:
 	var attempt: String = _placement_attempts.get(placement, "")
 	input.text = attempt
 	input.caret_column = attempt.length()
-	_update_word_cells(attempt)
+	_update_word_cells(attempt, false)
 	_update_current_cell_color(attempt.length())
 	var direction := "Horizontal" if placement.is_horizontal else "Vertical"
 	hint_label.text = "(%s) %s" % [direction, placement.word_data.hint]
@@ -128,13 +130,31 @@ func _update_current_cell_color(current_index: int) -> void:
 			continue
 		_cell_backgrounds[pos].bg_color = CURRENT_COLOR if letter_index == current_index else SELECTED_COLOR
 
-func _update_word_cells(new_text: String) -> void:
+func _update_word_cells(new_text: String, animate: bool = true) -> void:
 	var word := _selected_placement.word_data.word
 	for letter_index in word.length():
 		var pos := _selected_placement.cell_position(letter_index)
 		if not _cells.has(pos):
 			continue
-		_cells[pos].text = new_text[letter_index].to_upper() if letter_index < new_text.length() else ""
+		var cell: Button = _cells[pos]
+		var letter := new_text[letter_index].to_upper() if letter_index < new_text.length() else ""
+		if animate and letter != "" and cell.text != letter:
+			_animate_letter(cell)
+		cell.text = letter
+
+func _animate_letter(cell: Control) -> void:
+	if cell.has_meta("bounce_tween"):
+		var previous_tween: Tween = cell.get_meta("bounce_tween")
+		if previous_tween != null and previous_tween.is_valid():
+			previous_tween.kill()
+	cell.pivot_offset = CELL_SIZE / 2.0
+	cell.scale = Vector2(0.4, 0.4)
+	cell.modulate.a = 0.0
+	var tween := create_tween()
+	tween.set_parallel(true)
+	tween.tween_property(cell, "scale", Vector2.ONE, 0.25).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	tween.tween_property(cell, "modulate:a", 1.0, .15)
+	cell.set_meta("bounce_tween", tween)
 
 func _on_word_input_changed(new_text: String) -> void:
 	if _selected_placement == null:
@@ -144,11 +164,12 @@ func _on_word_input_changed(new_text: String) -> void:
 	if new_text.length() == _selected_placement.word_data.word.length():
 		_validate_word(new_text)
 
+func _on_word_input_submitted(_new_text: String) -> void:
+	input.grab_focus()
+
 func _validate_word(submitted_text: String) -> void:
 	if submitted_text.strip_edges().to_upper() != _selected_placement.word_data.word:
-		input.text = ""
-		_update_word_cells("")
-		_update_current_cell_color(0)
+		_set_word_color(_selected_placement, INCORRECT_COLOR)
 		return
 	_placement_attempts[_selected_placement] = _selected_placement.word_data.word
 	_clear_selection_color()
