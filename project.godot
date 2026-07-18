@@ -10,10 +10,14 @@ config_version=5
 
 [application]
 
-config/name="2026-godot-gdscript-template"
+config/name="mini-games-school"
 run/main_scene="uid://d0nk4vuu48k3"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/csv_crossword_importer/plugin.cfg")
 
 [input]
 
