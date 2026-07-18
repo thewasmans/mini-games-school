@@ -15,6 +15,10 @@ run/main_scene="uid://d0nk4vuu48k3"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/csv_crossword_importer/plugin.cfg")
+
 [input]
 
 action_forward={
