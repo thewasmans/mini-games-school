@@ -1,0 +1,245 @@
+[gd_scene format=3 uid="uid://ccs1jafnacsi3"]
+
+[ext_resource type="Shader" uid="uid://bxuk61jidddde" path="res://scenes/blur.gdshader.gdshader" id="1_wwt1o"]
+[ext_resource type="Texture2D" uid="uid://ci1kf3xitgu2" path="res://textures/ImgMenu.jpeg" id="2_ypubq"]
+[ext_resource type="FontFile" uid="uid://doucvkqgxdm8f" path="res://content/theme/FredokaOne-Regular.ttf" id="3_q3f7y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cg8kq"]
+bg_color = Color(0.07058824, 0.03529412, 0.015686275, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0, 0, 0, 1)
+shadow_size = 10
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l00ce"]
+shader = ExtResource("1_wwt1o")
+shader_parameter/blur_amount = 2.000000095
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y4wn3"]
+bg_color = Color(0.23137255, 0.50980395, 0.9647059, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3764706, 0.64705884, 0.98039216, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_color = Color(0, 0, 0, 0.53333336)
+shadow_size = 8
+shadow_offset = Vector2(0, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yy8jv"]
+bg_color = Color(0.23137255, 0.50980395, 0.9647059, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3764706, 0.64705884, 0.98039216, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_color = Color(0, 0, 0, 0.53333336)
+shadow_size = 8
+shadow_offset = Vector2(0, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fdtw3"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.3764706, 0.64705884, 0.98039216, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47g1v"]
+bg_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvfe2"]
+bg_color = Color(0.23137255, 0.50980395, 0.9647059, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3764706, 0.64705884, 0.98039216, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.53333336)
+shadow_size = 8
+shadow_offset = Vector2(0, 6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x1lk6"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.3764706, 0.64705884, 0.98039216, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ydr1"]
+bg_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
+
+[sub_resource type="Environment" id="Environment_y4wn3"]
+glow_enabled = true
+glow_normalized = true
+glow_bloom = 0.3
+glow_hdr_threshold = 0.82
+
+[node name="SteampunkMenu" type="Control" unique_id=367091194]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 125.0
+offset_top = -63.0
+offset_right = 125.0
+offset_bottom = -63.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainPanel" type="PanelContainer" parent="." unique_id=990945470]
+clip_children = 1
+custom_minimum_size = Vector2(450, 650)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = -325.0
+offset_right = 210.0
+offset_bottom = 325.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cg8kq")
+
+[node name="Background" type="TextureRect" parent="MainPanel" unique_id=1906917042]
+material = SubResource("ShaderMaterial_l00ce")
+layout_mode = 2
+texture = ExtResource("2_ypubq")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MarginContainer" type="MarginContainer" parent="MainPanel" unique_id=1467851145]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="UIContainer" type="VBoxContainer" parent="MainPanel/MarginContainer" unique_id=72403075]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="TitlePanel" type="PanelContainer" parent="MainPanel/MarginContainer/UIContainer" unique_id=135879419]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_y4wn3")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="MainPanel/MarginContainer/UIContainer/TitlePanel" unique_id=234301159]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_q3f7y")
+theme_override_font_sizes/font_size = 42
+text = "Choisis ta matière !"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Espaceur1" type="Control" parent="MainPanel/MarginContainer/UIContainer" unique_id=1027436211]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="BoutonS1" type="Button" parent="MainPanel/MarginContainer/UIContainer" unique_id=615043862]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_q3f7y")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_yy8jv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fdtw3")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_47g1v")
+text = "Matière A"
+
+[node name="BoutonS2" type="Button" parent="MainPanel/MarginContainer/UIContainer" unique_id=54816320]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_q3f7y")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_yy8jv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fdtw3")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_47g1v")
+text = "Matière B"
+
+[node name="BoutonS3" type="Button" parent="MainPanel/MarginContainer/UIContainer" unique_id=339969919]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_q3f7y")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_yy8jv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fdtw3")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_47g1v")
+text = "Matière C"
+
+[node name="Espaceur3" type="Control" parent="MainPanel/MarginContainer/UIContainer" unique_id=1069664071]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+
+[node name="BoutonsBas" type="HBoxContainer" parent="MainPanel/MarginContainer/UIContainer" unique_id=162924171]
+layout_mode = 2
+theme_override_constants/separation = 150
+alignment = 1
+
+[node name="BoutonRetour" type="Button" parent="MainPanel/MarginContainer/UIContainer/BoutonsBas" unique_id=1602079568]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_q3f7y")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_wvfe2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_x1lk6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_3ydr1")
+text = "Retour"
+
+[node name="BoutonMenu" type="Button" parent="MainPanel/MarginContainer/UIContainer/BoutonsBas" unique_id=1938402445]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_q3f7y")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_wvfe2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_x1lk6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_3ydr1")
+text = "Menu"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1299461196]
+environment = SubResource("Environment_y4wn3")
