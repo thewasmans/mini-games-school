@@ -6,8 +6,8 @@
 [ext_resource type="Script" uid="uid://wrkponuspoej" path="res://scripts/managers/game_ui_manager.gd" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dgxh18nboxsck" path="res://content/prefabs/ui/game_ui.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://bibakvkxipxo8" path="res://content/prefabs/box.tscn" id="7_o6xl0"]
-[ext_resource type="Script" path="res://scripts/managers/level_manager.gd" id="8_lvlmgr"]
-[ext_resource type="PackedScene" path="res://content/prefabs/level/cross_word.tscn" id="9_lvlprfb"]
+[ext_resource type="Script" uid="uid://biod1yqhch7nv" path="res://scripts/managers/level_manager.gd" id="8_lvlmgr"]
+[ext_resource type="PackedScene" uid="uid://b4qqoy48s4na1" path="res://content/prefabs/level/cross_word.tscn" id="9_lvlprfb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jyhfs"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -43,7 +43,7 @@ script = ExtResource("4_jyhfs")
 game_ui_prefab = ExtResource("5_tbgi4")
 root_scene = NodePath("../../..")
 
-[node name="LevelManager" type="Node" parent="Global/GameManager" node_paths=PackedStringArray("level_root")]
+[node name="LevelManager" type="Node" parent="Global/GameManager" unique_id=938964462 node_paths=PackedStringArray("level_root")]
 script = ExtResource("8_lvlmgr")
 level_root = NodePath("../../../Level")
 level_prefab = ExtResource("9_lvlprfb")
