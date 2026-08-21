@@ -7,7 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://dgxh18nboxsck" path="res://content/prefabs/ui/game_ui.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://bibakvkxipxo8" path="res://content/prefabs/box.tscn" id="7_o6xl0"]
 [ext_resource type="Script" uid="uid://biod1yqhch7nv" path="res://scripts/managers/level_manager.gd" id="8_lvlmgr"]
+[ext_resource type="Texture2D" uid="uid://ci1kf3xitgu2" path="res://textures/ImgMenu.jpeg" id="9_85g3d"]
+[ext_resource type="Shader" uid="uid://bxuk61jidddde" path="res://scenes/blur.gdshader.gdshader" id="9_choun"]
 [ext_resource type="PackedScene" uid="uid://b4qqoy48s4na1" path="res://content/prefabs/level/cross_word.tscn" id="9_lvlprfb"]
+[ext_resource type="FontFile" uid="uid://doucvkqgxdm8f" path="res://content/theme/FredokaOne-Regular.ttf" id="11_ya4ey"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jyhfs"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -21,6 +24,55 @@ background_mode = 2
 sky = SubResource("Sky_tbgi4")
 tonemap_mode = 2
 glow_enabled = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7fe16"]
+shader = ExtResource("9_choun")
+shader_parameter/blur_amount = 1.50000007125
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eb6dy"]
+bg_color = Color(0.23137255, 0.50980395, 0.9647059, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3764706, 0.64705884, 0.98039216, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_color = Color(0, 0, 0, 0.53333336)
+shadow_size = 8
+shadow_offset = Vector2(0, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ya4ey"]
+bg_color = Color(0.23137255, 0.50980395, 0.9647059, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3764706, 0.64705884, 0.98039216, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.53333336)
+shadow_size = 8
+shadow_offset = Vector2(0, 6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trceg"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.3764706, 0.64705884, 0.98039216, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a8y0u"]
+bg_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
 
 [node name="Main" type="Node" unique_id=727947993 node_paths=PackedStringArray("game_manager")]
 script = ExtResource("1_sugp2")
@@ -43,15 +95,14 @@ script = ExtResource("4_jyhfs")
 game_ui_prefab = ExtResource("5_tbgi4")
 root_scene = NodePath("../../..")
 
-[node name="LevelManager" type="Node" parent="Global/GameManager" unique_id=938964462 node_paths=PackedStringArray("level_root")]
+[node name="LevelManager" type="Node" parent="Global/GameManager" unique_id=938964462]
 script = ExtResource("8_lvlmgr")
-level_root = NodePath("../../../Level")
 level_prefab = ExtResource("9_lvlprfb")
 
 [node name="Camera3D" type="Camera3D" parent="Global" unique_id=1394663866]
 transform = Transform3D(0.83676434, -0.21746358, 0.50252867, 0, 0.91775465, 0.3971479, -0.5475632, -0.3323192, 0.76794434, 1.1614614, 1.8561649, 1.8021082)
 
-[node name="Level" type="Node" parent="." unique_id=1565323220]
+[node name="Level" type="Node" parent="." unique_id=351994038]
 
 [node name="Environment" type="Node" parent="." unique_id=2009965417]
 
@@ -63,3 +114,74 @@ environment = SubResource("Environment_tefeu")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting" unique_id=1700028554]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2067070568]
+
+[node name="Background" type="TextureRect" parent="CanvasLayer" unique_id=944241409]
+material = SubResource("ShaderMaterial_7fe16")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_85g3d")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MainContainer" type="MarginContainer" parent="CanvasLayer" unique_id=8261028]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainContainer" unique_id=917217376]
+layout_mode = 2
+
+[node name="TitlePanel" type="PanelContainer" parent="CanvasLayer/MainContainer/VBoxContainer" unique_id=1343741586]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_eb6dy")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/MainContainer/VBoxContainer/TitlePanel" unique_id=1503897005]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("11_ya4ey")
+theme_override_font_sizes/font_size = 42
+text = "Titre matière + année"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BoutonsBas" type="HBoxContainer" parent="CanvasLayer/MainContainer/VBoxContainer" unique_id=698912831]
+layout_mode = 2
+theme_override_constants/separation = 150
+alignment = 1
+
+[node name="BoutonRetour" type="Button" parent="CanvasLayer/MainContainer/VBoxContainer/BoutonsBas" unique_id=1472211257]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("11_ya4ey")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_ya4ey")
+theme_override_styles/hover = SubResource("StyleBoxFlat_trceg")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_a8y0u")
+text = "Retour"
+
+[node name="BoutonMenu" type="Button" parent="CanvasLayer/MainContainer/VBoxContainer/BoutonsBas" unique_id=686846626]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("11_ya4ey")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_ya4ey")
+theme_override_styles/hover = SubResource("StyleBoxFlat_trceg")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_a8y0u")
+text = "Menu"
