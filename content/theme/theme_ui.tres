@@ -1,3 +1,50 @@
 [gd_resource type="Theme" format=3 uid="uid://diqjg8ijjbc0l"]
 
+[ext_resource type="FontFile" uid="uid://df26m6md63dv1" path="res://content/theme/fonts/Fredoka-Regular.ttf" id="1_7dxyk"]
+[ext_resource type="StyleBox" uid="uid://shd81vk1xmqp" path="res://content/theme/ui_style_button_normal.tres" id="1_bugk3"]
+[ext_resource type="Texture2D" uid="uid://dc47hcvhhkufh" path="res://content/sprites/ui/ui_buttons.png" id="2_u386j"]
+[ext_resource type="Texture2D" uid="uid://c3upgh7dpfrhf" path="res://content/sprites/ui/ui_background.png" id="3_pq3oh"]
+
+[sub_resource type="FontVariation" id="FontVariation_u386j"]
+base_font = ExtResource("1_7dxyk")
+variation_embolden = 2.0
+spacing_glyph = 2
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7dxyk"]
+texture = ExtResource("2_u386j")
+texture_margin_left = 55.0
+texture_margin_top = 41.0
+texture_margin_right = 51.0
+texture_margin_bottom = 45.0
+region_rect = Rect2(19, 702, 304, 304)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u386j"]
+texture = ExtResource("2_u386j")
+texture_margin_left = 55.0
+texture_margin_top = 43.0
+texture_margin_right = 66.0
+texture_margin_bottom = 43.0
+region_rect = Rect2(361, 704, 301, 300)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pq3oh"]
+texture = ExtResource("2_u386j")
+texture_margin_left = 55.0
+texture_margin_top = 40.0
+texture_margin_right = 51.0
+texture_margin_bottom = 46.0
+region_rect = Rect2(24, 365, 293, 296)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w8hwn"]
+texture = ExtResource("3_pq3oh")
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
 [resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/constants/outline_size = 5
+Button/fonts/font = SubResource("FontVariation_u386j")
+Button/styles/focus = SubResource("StyleBoxTexture_7dxyk")
+Button/styles/hover = SubResource("StyleBoxTexture_u386j")
+Button/styles/normal = ExtResource("1_bugk3")
+Button/styles/pressed = SubResource("StyleBoxTexture_pq3oh")
+Panel/styles/panel = SubResource("StyleBoxTexture_w8hwn")
