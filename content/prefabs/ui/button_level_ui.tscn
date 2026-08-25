@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://0gapd7wm8ydd"]
 
-[ext_resource type="Theme" uid="uid://jeoivhqws570" path="res://content/theme/theme.tres" id="1_r7qfe"]
+[ext_resource type="Theme" uid="uid://jeoivhqws570" path="res://content/theme/button_level_ui/theme_button_level_ui.tres" id="1_r7qfe"]
 [ext_resource type="Script" uid="uid://d35eoyr7k6vfy" path="res://scripts/ui/button_level_ui.gd" id="2_lvlbtn"]
 
 [node name="ButtonLevelUI" type="Button" unique_id=1791857553]
