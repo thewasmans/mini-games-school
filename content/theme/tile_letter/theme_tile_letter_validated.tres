@@ -1,0 +1,22 @@
+[gd_resource type="Theme" format=3 uid="uid://cpx7am23p62r1"]
+
+[ext_resource type="Texture2D" uid="uid://byfovpddxsvga" path="res://content/sprites/ui/ui_tile_letter.png" id="1_5782j"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o6xl0"]
+texture = ExtResource("1_5782j")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+region_rect = Rect2(524, 82, 258, 266)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w7ojl"]
+texture = ExtResource("1_5782j")
+region_rect = Rect2(320, 121, 177, 188)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5782j"]
+
+[resource]
+Button/styles/hover = SubResource("StyleBoxTexture_o6xl0")
+Button/styles/normal = SubResource("StyleBoxTexture_w7ojl")
+Button/styles/pressed = SubResource("StyleBoxTexture_5782j")
