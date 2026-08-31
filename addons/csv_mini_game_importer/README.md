@@ -8,7 +8,10 @@ Ajoute deux entrées dans le menu **Projet > Outils** :
 On choisit un fichier `.csv` (n'importe où sur le disque). Un panneau récapitulatif
 s'affiche alors :
 
-- une ligne de synthèse (nombre de quiz / phrases, images manquantes, lignes ignorées) ;
+- un **marqueur de statut** en haut : vert `OK — aucun avertissement`, ou orange
+  `ATTENTION — …` listant les avertissements (images manquantes, lignes ignorées,
+  lignes en erreur) ;
+- une ligne de synthèse (nombre de quiz / phrases détectés) ;
 - **la liste numérotée des quiz détectés** (scroll list), chacun avec son état à droite :
   `image : <nom>` (vert), `image manquante : <nom>` (orange) ou `pas d'image` (gris) —
   pour le crypto : `indice : <texte>` ou `pas d'indice` ;
@@ -45,9 +48,13 @@ Pourquoi s'alimenter ?;Pour jouer.;Pour vivre et grandir.;Pour grandir.;Pour boi
 
 - `A`..`D` : le texte des quatre choix, dans l'ordre d'affichage (pas de mélange).
 - `Réponse` : la lettre `A`, `B`, `C` ou `D`, ou le texte exact du bon choix.
-- `nom image` : optionnel. Nom de fichier résolu dans `res://content/sprites/memo/`
-  (l'extension `.png` est ajoutée si absente) ; un chemin `res://…` complet est aussi
-  accepté. Vide = pas d'image.
+- `nom image` : optionnel, vide = pas d'image. La résolution essaie, dans l'ordre :
+  1. relatif **au dossier du CSV** (`<dossier du csv>/<nom image>`) ;
+  2. `res://content/sprites/memo/<nom image>`.
+  L'extension `.png` est ajoutée si le nom n'en a pas. Un chemin `res://…` ou un
+  chemin absolu sont pris tels quels.
+  Une image **dans le projet** (`res://…`) est référencée par fichier ; une image
+  **hors projet** est chargée et **intégrée** dans le `.tres` (donnée embarquée).
 
 ## Format crypto
 

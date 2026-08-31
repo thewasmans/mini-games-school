@@ -105,10 +105,23 @@ func _build_report_panel() -> Control:
 	root.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	root.add_theme_constant_override("separation", 10)
 
+	var warnings: PackedStringArray = _report.get("warnings", PackedStringArray())
+	var status := Label.new()
+	status.add_theme_font_size_override("font_size", 15)
+	status.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	if warnings.is_empty():
+		status.text = "OK  —  aucun avertissement"
+		status.add_theme_color_override("font_color", COLOR_OK)
+	else:
+		status.text = "ATTENTION  —  " + "   •   ".join(warnings)
+		status.add_theme_color_override("font_color", COLOR_WARN)
+	root.add_child(status)
+
 	var summary := Label.new()
 	summary.text = _report.get("summary", "")
-	summary.add_theme_font_size_override("font_size", 15)
+	summary.add_theme_font_size_override("font_size", 13)
 	summary.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	summary.add_theme_color_override("font_color", COLOR_NEUTRAL)
 	root.add_child(summary)
 
 	var scroll := ScrollContainer.new()
@@ -189,6 +202,7 @@ func _detect_delimiter(first_line: String) -> String:
 
 func _build_memo_data(csv_path: String) -> MemoData:
 	var rows := _read_csv_rows(csv_path)
+	var csv_dir := csv_path.get_base_dir()
 	var questions: Array[MemoQuestionData] = []
 	var report_rows: Array = []
 	var errors: PackedStringArray = PackedStringArray()
@@ -215,7 +229,7 @@ func _build_memo_data(csv_path: String) -> MemoData:
 		var status_text := "pas d'image"
 		var status_color := COLOR_NEUTRAL
 		if not image_name.is_empty():
-			var texture := _load_memo_texture(image_name)
+			var texture := _load_memo_texture(image_name, csv_dir)
 			if texture != null:
 				question_data.image = texture
 				status_text = "image : %s" % image_name
@@ -227,14 +241,18 @@ func _build_memo_data(csv_path: String) -> MemoData:
 		report_rows.append({"label": _short(question, 62), "status": status_text, "color": status_color})
 		questions.append(question_data)
 
-	var summary := "%d quiz détecté(s)" % questions.size()
+	var warnings: PackedStringArray = PackedStringArray()
 	if missing_count > 0:
-		summary += "   —   %d image(s) manquante(s)" % missing_count
+		warnings.append("%d image(s) manquante(s)" % missing_count)
 	if skipped > 0:
-		summary += "   —   %d ligne(s) ignorée(s)" % skipped
+		warnings.append("%d ligne(s) ignorée(s)" % skipped)
+	if not errors.is_empty():
+		warnings.append("%d ligne(s) en erreur" % errors.size())
+
+	var summary := "%d quiz détecté(s)" % questions.size()
 	if questions.is_empty():
 		summary = "Aucun quiz valide — rien ne sera enregistré."
-	_report = {"summary": summary, "rows": report_rows, "errors": errors}
+	_report = {"summary": summary, "warnings": warnings, "rows": report_rows, "errors": errors}
 
 	if questions.is_empty():
 		return null
@@ -271,16 +289,20 @@ func _build_crypto_data(csv_path: String) -> CryptoData:
 		report_rows.append({"label": _short(text, 62), "status": status_text, "color": status_color})
 		phrases.append(phrase_data)
 
+	var warnings: PackedStringArray = PackedStringArray()
+	if skipped > 0:
+		warnings.append("%d ligne(s) ignorée(s)" % skipped)
+	if without_hint > 0:
+		warnings.append("%d phrase(s) sans indice" % without_hint)
+
 	var summary := "%d phrase(s) détectée(s)   —   masquage %d%%%s" % [
 		phrases.size(),
 		roundi(crypto_data.hidden_letter_ratio * 100.0),
 		"" if ratio_from_csv else " (défaut)",
 	]
-	if without_hint > 0:
-		summary += "   —   %d sans indice" % without_hint
 	if phrases.is_empty():
 		summary = "Aucune phrase valide — rien ne sera enregistré."
-	_report = {"summary": summary, "rows": report_rows, "errors": PackedStringArray()}
+	_report = {"summary": summary, "warnings": warnings, "rows": report_rows, "errors": PackedStringArray()}
 
 	if phrases.is_empty():
 		return null
@@ -296,17 +318,37 @@ func _resolve_correct_index(answer: String, choices: Array[String]) -> int:
 			return choice_index
 	return -1
 
-func _load_memo_texture(image_name: String) -> Texture2D:
-	var candidates: Array[String] = []
-	if image_name.begins_with("res://"):
-		candidates.append(image_name)
-	else:
-		candidates.append(MEMO_IMAGE_DIR.path_join(image_name))
-		candidates.append(MEMO_IMAGE_DIR.path_join(image_name) + ".png")
-	for candidate in candidates:
-		if ResourceLoader.exists(candidate):
-			return load(candidate) as Texture2D
+func _load_memo_texture(image_name: String, csv_dir: String) -> Texture2D:
+	for candidate in _memo_image_candidates(image_name, csv_dir):
+		var texture := _load_texture_from_path(candidate)
+		if texture != null:
+			return texture
 	return null
+
+func _memo_image_candidates(image_name: String, csv_dir: String) -> PackedStringArray:
+	var bases: PackedStringArray = PackedStringArray()
+	if image_name.begins_with("res://") or image_name.is_absolute_path():
+		bases.append(image_name)
+	else:
+		bases.append(csv_dir.path_join(image_name))
+		bases.append(MEMO_IMAGE_DIR.path_join(image_name))
+	var candidates: PackedStringArray = PackedStringArray()
+	for base in bases:
+		candidates.append(base)
+		if base.get_extension().is_empty():
+			candidates.append(base + ".png")
+	return candidates
+
+func _load_texture_from_path(path: String) -> Texture2D:
+	var localized := path if path.begins_with("res://") else ProjectSettings.localize_path(path)
+	if localized.begins_with("res://"):
+		return load(localized) as Texture2D if ResourceLoader.exists(localized) else null
+	if not FileAccess.file_exists(path):
+		return null
+	var image := Image.load_from_file(path)
+	if image == null or image.is_empty():
+		return null
+	return ImageTexture.create_from_image(image)
 
 func _short(text: String, limit := 45) -> String:
 	return text if text.length() <= limit else text.left(limit - 1) + "…"
