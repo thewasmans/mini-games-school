@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bsw4556x5xgdg"]
 
-[ext_resource type="Script" uid="uid://caxlfire3r11w" path="res://scripts/mini_games/crossword_ui.gd" id="1_crossword"]
+[ext_resource type="Script" uid="uid://caxlfire3r11w" path="res://scripts/ui/crossword_ui.gd" id="1_crossword"]
 
 [sub_resource type="Gradient" id="Gradient_0tx7u"]
 offsets = PackedFloat32Array(0)

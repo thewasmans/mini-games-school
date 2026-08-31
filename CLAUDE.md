@@ -37,6 +37,7 @@ The project uses a **manager pattern**: a central `GameManager` owns a list of `
 - `content/materials/`, `content/models_3d/`: 3D assets (materials, `.glb` models + textures).
 - `data/`: `GameData` `.tres` instances.
 - `scripts/`: mirrors the conceptual layers — `managers/`, `state/`, `data/`, `ui/`.
+- `scripts/mini_games/`: one folder per mini-game (`crossword/`, `memo/`, `crypto/`) holding that game's runtime logic and `Resource` data classes; `mini_game_data.gd` (the shared `MiniGameData` base) sits at the folder root. The matching `*_ui.gd` scripts live in `scripts/ui/` with the rest of the UI scripts.
 
 ## Key conventions
 
