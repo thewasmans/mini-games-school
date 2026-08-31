@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="mini-games-school"
+config/name="Mini Games School"
 run/main_scene="uid://d0nk4vuu48k3"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
