@@ -1,0 +1,91 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bx1or1c3ofssb"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_se34h"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_nu1m0"]
+
+[sub_resource type="Resource" id="Resource_nnejw"]
+script = ExtResource("1_se34h")
+question = "Pourquoi les humains doivent-ils s'alimenter ?"
+choices = Array[String](["Pour jouer uniquement.", "Pour vivre et grandir.", "Pour devenir très grands.", "Pour ne plus avoir soif."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_n5ste"]
+script = ExtResource("1_se34h")
+question = "Quel élément est un aliment vital pour l'humain ?"
+choices = Array[String](["Le soda.", "Le jus de fruit.", "L'eau.", "Le café."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_si5mt"]
+script = ExtResource("1_se34h")
+question = "Comment doit être l'alimentation pour rester en bonne santé ?"
+choices = Array[String](["Toujours la même.", "Variée.", "Très sucrée.", "Très salée."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_2kctk"]
+script = ExtResource("1_se34h")
+question = "Qu'est-ce qui influence la disponibilité des fruits et légumes locaux ?"
+choices = Array[String](["La couleur.", "Le prix.", "La saison.", "La forme."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_cq2co"]
+script = ExtResource("1_se34h")
+question = "Pourquoi regroupe-t-on les aliments en familles ?"
+choices = Array[String](["Pour faire des devoirs.", "Pour mieux comprendre la variété.", "Pour les jeter.", "Pour les vendre plus cher."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_40g73"]
+script = ExtResource("1_se34h")
+question = "Les aliments sont-ils nécessaires pour grandir ?"
+choices = Array[String](["Non.", "Oui.", "Seulement les bonbons.", "Seulement l'eau."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_5df5a"]
+script = ExtResource("1_se34h")
+question = "Que signifie \"manger local\"  ?"
+choices = Array[String](["Acheter loin.", "Acheter dans son environnement proche.", "Acheter sur Internet.", "Acheter des produits chers."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_q7ccm"]
+script = ExtResource("1_se34h")
+question = "Comment peut-on étudier le régime alimentaire d'un animal ?"
+choices = Array[String](["En regardant son milieu de vie.", "En regardant ses dents.", "En cherchant les couples.", "En étudiant ses pattes.."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_6hlpu"]
+script = ExtResource("1_se34h")
+question = "Est-ce que l'eau est considérée comme un aliment ?"
+choices = Array[String](["Oui.", "Non.", "Seulement l'eau chaude.", "Seulement l'eau pétillante."])
+
+[sub_resource type="Resource" id="Resource_7i1v2"]
+script = ExtResource("1_se34h")
+question = "Pourquoi insiste-t-on sur l'alimentation variée ?"
+choices = Array[String](["Parce que c'est nécessaire pour vivre.", "C'est inutile.", "Pour avoir l'ensemble des aliments utiles.", "Pour mieux dormir."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_f0v8j"]
+script = ExtResource("1_se34h")
+question = "Peut-on classer les aliments ?"
+choices = Array[String](["Non.", "Oui, selon leur variété.", "Jamais.", "Seulement par couleur."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_olx2e"]
+script = ExtResource("1_se34h")
+question = "L'eau est-elle vitale ?"
+choices = Array[String](["Non.", "Seulement en été.", "Oui.", "Pas vraiment."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_deo40"]
+script = ExtResource("1_se34h")
+question = "Comment appelle-t-on ce que l'on mange pour vivre ?"
+choices = Array[String](["Des jouets.", "Des aliments.", "Des objets.", "Des outils."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_0h0tw"]
+script = ExtResource("1_se34h")
+question = "Les fruits et légumes dépendent-ils de la saison ?"
+choices = Array[String](["Non.", "Oui.", "Ils dépendent du prix.", "Jamais."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_nu1m0")
+questions = Array[ExtResource("1_se34h")]([SubResource("Resource_nnejw"), SubResource("Resource_n5ste"), SubResource("Resource_si5mt"), SubResource("Resource_2kctk"), SubResource("Resource_cq2co"), SubResource("Resource_40g73"), SubResource("Resource_5df5a"), SubResource("Resource_q7ccm"), SubResource("Resource_6hlpu"), SubResource("Resource_7i1v2"), SubResource("Resource_f0v8j"), SubResource("Resource_olx2e"), SubResource("Resource_deo40"), SubResource("Resource_0h0tw")])

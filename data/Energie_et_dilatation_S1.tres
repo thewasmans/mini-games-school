@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bpcudk37ondbf"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_sudb4"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_4ewav"]
+
+[sub_resource type="Resource" id="Resource_qw841"]
+script = ExtResource("1_sudb4")
+word = "LIQUIDE;ETAT DE LA MATIÈRE DANS LEQUEL LES MOLÉCULES ONT UNE COHÉSION INTERMÉDIAIRE"
+hint = "ce qui la rend déformable."
+
+[sub_resource type="Resource" id="Resource_p46xh"]
+script = ExtResource("1_sudb4")
+word = "GAZ;ETAT DE LA MATIÈRE DANS LEQUEL LES MOLÉCULES ONT LA PLUS FAIBLE COHÉSION"
+hint = "les atomes sont quasi indépendants."
+
+[sub_resource type="Resource" id="Resource_gy38v"]
+script = ExtResource("1_sudb4")
+word = "SOLIDE;ETAT DE LA MATIÈRE DANS LEQUEL LES MOLÉCULES ONT UNE FORTE COHÉSION"
+hint = "ce qui rend le composé résistant."
+
+[resource]
+script = ExtResource("2_4ewav")
+clues = Array[ExtResource("1_sudb4")]([SubResource("Resource_qw841"), SubResource("Resource_p46xh"), SubResource("Resource_gy38v")])
