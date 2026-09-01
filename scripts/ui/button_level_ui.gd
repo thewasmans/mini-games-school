@@ -15,7 +15,7 @@ func set_unlocked(is_unlocked: bool) -> void:
 	disabled = not is_unlocked
 
 func set_current(is_current: bool) -> void:
-	modulate = Color.PURPLE if is_current else Color.WHITE
+	modulate = Color(1.264, 1.342, 1.264) if is_current else Color.WHITE
 
 func _on_pressed() -> void:
 	selected.emit(level_index)
