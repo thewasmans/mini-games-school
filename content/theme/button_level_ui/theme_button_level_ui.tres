@@ -1,0 +1,24 @@
+[gd_resource type="Theme" format=3 uid="uid://jeoivhqws570"]
+
+[ext_resource type="StyleBox" uid="uid://ifhy6yixme3y" path="res://content/theme/button_level_ui/normal_style_box_flat.tres" id="2_p73nq"]
+[ext_resource type="Texture2D" uid="uid://d1g6xcjax2gtj" path="res://content/sprites/ui/ui_buttons_level.png" id="2_w7ojl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xcw3m"]
+texture = ExtResource("2_w7ojl")
+region_rect = Rect2(96, 446, 179, 204)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w7ojl"]
+texture = ExtResource("2_w7ojl")
+region_rect = Rect2(326, 1047, 180, 215)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3t4dt"]
+texture = ExtResource("2_w7ojl")
+region_rect = Rect2(539, 1118, 153, 130)
+
+[resource]
+Button/constants/outline_size = 5
+Button/font_sizes/font_size = 20
+Button/styles/disabled = SubResource("StyleBoxTexture_xcw3m")
+Button/styles/hover = SubResource("StyleBoxTexture_w7ojl")
+Button/styles/normal = ExtResource("2_p73nq")
+Button/styles/pressed = SubResource("StyleBoxTexture_3t4dt")

@@ -9,6 +9,8 @@ const SELECTED_COLOR := Color(0.7, 0.85, 1.0)
 const CURRENT_COLOR := Color(1.0, 0.8, 0.3)
 const HOVER_COLOR := Color(0.88, 0.94, 1.0)
 const INCORRECT_COLOR := Color(1.0, 0.5, 0.5)
+const TILE_LETTER_THEME := preload("res://content/theme/tile_letter/theme_tile_letter.tres")
+const TILE_LETTER_VALIDATED_THEME := preload("res://content/theme/tile_letter/theme_tile_letter_validated.tres")
 
 @export var grid_container: GridContainer
 @export var hint_label: Label
@@ -65,19 +67,18 @@ func _create_cell(pos: Vector2i) -> Button:
 	var cell := Button.new()
 	cell.custom_minimum_size = CELL_SIZE
 	cell.focus_mode = Control.FOCUS_NONE
-	var background := StyleBoxFlat.new()
-	background.bg_color = NORMAL_COLOR
-	cell.add_theme_stylebox_override("normal", background)
-	cell.add_theme_stylebox_override("hover", background)
-	cell.add_theme_stylebox_override("pressed", background)
-	cell.add_theme_color_override("font_color", Color.BLACK)
-	cell.add_theme_color_override("font_hover_color", Color.BLACK)
+	cell.theme = TILE_LETTER_THEME
+	_apply_letter_color(cell)
 	cell.pressed.connect(_on_cell_pressed.bind(pos))
 	cell.mouse_entered.connect(_on_cell_mouse_entered.bind(pos))
 	cell.mouse_exited.connect(_on_cell_mouse_exited.bind(pos))
 	_cells[pos] = cell
-	_cell_backgrounds[pos] = background
+	_cell_backgrounds[pos] = cell
 	return cell
+
+func _apply_letter_color(cell: Button) -> void:
+	for state in ["font_color", "font_hover_color", "font_pressed_color", "font_focus_color", "font_hover_pressed_color", "font_disabled_color"]:
+		cell.add_theme_color_override(state, Color.WHITE)
 
 func _on_cell_pressed(pos: Vector2i) -> void:
 	var placements: Array = _cell_placements[pos]
@@ -116,7 +117,7 @@ func _set_word_color(placement: CrosswordWordPlacement, color: Color) -> void:
 	for letter_index in placement.word_data.word.length():
 		var pos := placement.cell_position(letter_index)
 		if _cell_backgrounds.has(pos):
-			_cell_backgrounds[pos].bg_color = color
+			_cell_backgrounds[pos].modulate = color
 
 func _clear_selection_color() -> void:
 	if _selected_placement == null:
@@ -128,7 +129,7 @@ func _update_current_cell_color(current_index: int) -> void:
 		var pos := _selected_placement.cell_position(letter_index)
 		if not _cell_backgrounds.has(pos):
 			continue
-		_cell_backgrounds[pos].bg_color = CURRENT_COLOR if letter_index == current_index else SELECTED_COLOR
+		_cell_backgrounds[pos].modulate = CURRENT_COLOR if letter_index == current_index else SELECTED_COLOR
 
 func _update_word_cells(new_text: String, animate: bool = true) -> void:
 	var word := _selected_placement.word_data.word
@@ -173,6 +174,10 @@ func _validate_word(submitted_text: String) -> void:
 		return
 	_placement_attempts[_selected_placement] = _selected_placement.word_data.word
 	_clear_selection_color()
+	for letter_index in _selected_placement.word_data.word.length():
+		var pos := _selected_placement.cell_position(letter_index)
+		if _cells.has(pos):
+			_cells[pos].theme = TILE_LETTER_VALIDATED_THEME
 	_selected_placement = null
 	hint_label.text = ""
 	input.text = ""

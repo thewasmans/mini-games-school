@@ -1,5 +1,5 @@
 class_name MenuLevelsUI
-extends Panel
+extends Control
 
 @export var scrol_container: ScrollContainer
 @export var grid_container: GridContainer
