@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bx1or1c3ofssb"]
 
 [ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_se34h"]
+[ext_resource type="Texture2D" uid="uid://bte8umt02fv7p" path="res://icon.svg" id="2_nnejw"]
 [ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_nu1m0"]
 
 [sub_resource type="Resource" id="Resource_nnejw"]
 script = ExtResource("1_se34h")
 question = "Pourquoi les humains doivent-ils s'alimenter ?"
+image = ExtResource("2_nnejw")
 choices = Array[String](["Pour jouer uniquement.", "Pour vivre et grandir.", "Pour devenir très grands.", "Pour ne plus avoir soif."])
 correct_choice_index = 1
 

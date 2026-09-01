@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bmemouigd0012" path="res://scripts/ui/memo_ui.gd" id="1_memo"]
 
-[node name="MemoUI" type="Control" node_paths=PackedStringArray("question_label", "image_rect", "choices_container")]
+[node name="MemoUI" type="Control" unique_id=706038612 node_paths=PackedStringArray("question_label", "image_rect", "choices_container")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,7 +14,15 @@ question_label = NodePath("VBoxContainer/QuestionLabel")
 image_rect = NodePath("VBoxContainer/ImageRect")
 choices_container = NodePath("VBoxContainer/ChoicesContainer")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Button" type="Button" parent="." unique_id=1073176392]
+layout_mode = 0
+offset_left = 125.0
+offset_top = -135.0
+offset_right = 446.0
+offset_bottom = -29.0
+text = "Les carottes du voisins"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=607911068]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,18 +36,18 @@ grow_vertical = 2
 theme_override_constants/separation = 16
 alignment = 1
 
-[node name="QuestionLabel" type="Label" parent="VBoxContainer"]
+[node name="QuestionLabel" type="Label" parent="VBoxContainer" unique_id=585392985]
 layout_mode = 2
 text = "Question"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="ImageRect" type="TextureRect" parent="VBoxContainer"]
+[node name="ImageRect" type="TextureRect" parent="VBoxContainer" unique_id=2118647481]
 custom_minimum_size = Vector2(0, 240)
 layout_mode = 2
 expand_mode = 3
 stretch_mode = 5
 
-[node name="ChoicesContainer" type="VBoxContainer" parent="VBoxContainer"]
+[node name="ChoicesContainer" type="VBoxContainer" parent="VBoxContainer" unique_id=732935389]
 layout_mode = 2
 theme_override_constants/separation = 8

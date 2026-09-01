@@ -1,0 +1,8 @@
+[gd_resource type="FontVariation" format=3 uid="uid://cljeeey5206u6"]
+
+[ext_resource type="FontFile" uid="uid://df26m6md63dv1" path="res://content/theme/fonts/Fredoka-Regular.ttf" id="1_ix4rj"]
+
+[resource]
+base_font = ExtResource("1_ix4rj")
+variation_embolden = 2.0
+spacing_glyph = 2
