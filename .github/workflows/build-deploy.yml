@@ -35,6 +35,8 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: barichello/godot-ci:4.7
+    env:
+      GODOT_VERSION: "4.7"
     strategy:
       fail-fast: false
       matrix:
@@ -56,12 +58,12 @@ jobs:
         with:
           ref: ${{ github.event_name == 'pull_request' && 'develop' || github.ref }}
 
-      - name: Prepare Godot (templates + reglages editeur)
+      - name: Setup export templates + reglages editeur
         run: |
-          mkdir -p ~/.local/share/godot/export_templates
-          mv /root/.local/share/godot/export_templates/* ~/.local/share/godot/export_templates/ || true
+          mkdir -v -p ~/.local/share/godot/export_templates/
+          mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
           mkdir -p ~/.config/godot
-          cp -r /root/.config/godot/. ~/.config/godot/ 2>/dev/null || true
+          cp -rn /root/.config/godot/. ~/.config/godot/ 2>/dev/null || true
 
       - name: Keystore Android
         if: matrix.channel == 'android'
@@ -81,16 +83,16 @@ jobs:
           GODOT_ANDROID_KEYSTORE_RELEASE_USER: ${{ secrets.ANDROID_KEYSTORE_USER }}
           GODOT_ANDROID_KEYSTORE_RELEASE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
         run: |
-          mkdir -p "build/${{ matrix.channel }}"
-          godot --headless --import || true
-          godot --headless --import || true
+          set -e
+          mkdir -v -p "build/${{ matrix.channel }}"
+          EXPORT_DIR="$(readlink -f build)"
           MODE=release
           if [ "${{ matrix.channel }}" = "android" ] && [ ! -f "$GODOT_ANDROID_KEYSTORE_RELEASE_PATH" ]; then
             MODE=debug
           fi
           echo "Export ${{ matrix.preset }} (mode: $MODE)"
-          set -e
-          godot --headless --export-$MODE "${{ matrix.preset }}" "$PWD/build/${{ matrix.channel }}/${{ matrix.output }}"
+          godot --headless --verbose --export-$MODE "${{ matrix.preset }}" "$EXPORT_DIR/${{ matrix.channel }}/${{ matrix.output }}"
+          echo "--- contenu du build ---"
           ls -R "build/${{ matrix.channel }}"
 
       - uses: actions/upload-artifact@v4
@@ -143,8 +145,9 @@ jobs:
         run: |
           VERSION="1.0.${{ github.run_number }}"
           for channel in windows linux web android; do
-            if [ -d "dist/$channel" ]; then
-              echo "== push $channel =="
-              ./butler push "dist/$channel" "$ITCH_USERNAME/$ITCH_GAME:$channel" --userversion "$VERSION"
-            fi
+            [ -d "dist/$channel" ] || continue
+            itch_channel="$channel"
+            [ "$channel" = "web" ] && itch_channel="html5"
+            echo "== push $channel -> :$itch_channel =="
+            ./butler push "dist/$channel" "$ITCH_USERNAME/$ITCH_GAME:$itch_channel" --userversion "$VERSION"
           done
