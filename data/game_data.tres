@@ -1,77 +1,15 @@
 [gd_resource type="Resource" script_class="GameData" format=3 uid="uid://dcckexgblr3de"]
 
 [ext_resource type="Script" uid="uid://cp2inhinnjjop" path="res://scripts/data/game_data.gd" id="1_urpql"]
-[ext_resource type="Script" uid="uid://5t2j51l6wd4l" path="res://scripts/data/mini_game_data.gd" id="1_vllua"]
 [ext_resource type="Script" uid="uid://br5q0sg4b052d" path="res://scripts/data/level_data.gd" id="2_r34r7"]
-[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/data/cross_words/word_data.gd" id="3_k2o1c"]
-[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/data/cross_words/cross_word_data.gd" id="4_7fe16"]
-
-[sub_resource type="Resource" id="Resource_vy2p8"]
-script = ExtResource("3_k2o1c")
-word = "Orange"
-hint = "Mmm le jus"
-metadata/_custom_type_script = "uid://cygosmrxwmpq0"
-
-[sub_resource type="Resource" id="Resource_1diyi"]
-script = ExtResource("3_k2o1c")
-word = "Jus"
-hint = "Boisson de fruits"
-metadata/_custom_type_script = "uid://cygosmrxwmpq0"
-
-[sub_resource type="Resource" id="Resource_k2o1c"]
-script = ExtResource("3_k2o1c")
-word = "Prune"
-hint = "COup dans ta gueule"
-metadata/_custom_type_script = "uid://cygosmrxwmpq0"
-
-[sub_resource type="Resource" id="Resource_7fe16"]
-script = ExtResource("3_k2o1c")
-word = "Boisson"
-hint = "Truc à boire"
-metadata/_custom_type_script = "uid://cygosmrxwmpq0"
-
-[sub_resource type="Resource" id="Resource_cog1c"]
-script = ExtResource("4_7fe16")
-clues = Array[ExtResource("3_k2o1c")]([SubResource("Resource_vy2p8"), SubResource("Resource_1diyi"), SubResource("Resource_k2o1c"), SubResource("Resource_7fe16")])
-metadata/_custom_type_script = "uid://cvhcj85uqr48d"
+[ext_resource type="Script" uid="uid://5t2j51l6wd4l" path="res://scripts/data/mini_game_data.gd" id="2_vllua"]
 
 [sub_resource type="Resource" id="Resource_yqv0c"]
 script = ExtResource("2_r34r7")
-mini_games = Array[ExtResource("1_vllua")]([SubResource("Resource_cog1c")])
 metadata/_custom_type_script = "uid://br5q0sg4b052d"
-
-[sub_resource type="Resource" id="Resource_7lvw4"]
-script = ExtResource("3_k2o1c")
-word = "Cellule"
-hint = "Unité du vivant"
-metadata/_custom_type_script = "uid://cygosmrxwmpq0"
-
-[sub_resource type="Resource" id="Resource_d15be"]
-script = ExtResource("3_k2o1c")
-word = "Biologie"
-hint = "Science qui étudie le vivant"
-metadata/_custom_type_script = "uid://cygosmrxwmpq0"
-
-[sub_resource type="Resource" id="Resource_lhs1r"]
-script = ExtResource("3_k2o1c")
-word = "Biotope"
-hint = "Milieu de vie des vivants"
-metadata/_custom_type_script = "uid://cygosmrxwmpq0"
-
-[sub_resource type="Resource" id="Resource_pftn3"]
-script = ExtResource("3_k2o1c")
-word = "Organite"
-hint = "Structure interne dans la cellule"
-metadata/_custom_type_script = "uid://cygosmrxwmpq0"
-
-[sub_resource type="Resource" id="Resource_c7j1l"]
-script = ExtResource("4_7fe16")
-clues = Array[ExtResource("3_k2o1c")]([SubResource("Resource_7lvw4"), SubResource("Resource_d15be"), SubResource("Resource_lhs1r"), SubResource("Resource_pftn3")])
-metadata/_custom_type_script = "uid://cvhcj85uqr48d"
 
 [sub_resource type="Resource" id="Resource_2ewf2"]
 script = ExtResource("2_r34r7")
-mini_games = Array[ExtResource("1_vllua")]([SubResource("Resource_c7j1l")])
 metadata/_custom_type_script = "uid://br5q0sg4b052d"
 
 [sub_resource type="Resource" id="Resource_lvl03"]
