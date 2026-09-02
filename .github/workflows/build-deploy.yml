@@ -1,0 +1,150 @@
+name: Build & Deploy
+
+# Se declenche UNIQUEMENT quand une Pull Request est mergee dans `develop`
+# (ou manuellement via "Run workflow").
+#
+# Secrets a definir dans Settings > Secrets and variables > Actions :
+#   BUTLER_API_KEY              cle API itch.io  (https://itch.io/user/settings/api-keys)
+#   ITCH_USERNAME              identifiant itch.io
+#   ITCH_GAME                  slug du jeu itch.io  (ex: "mini-games-school")
+# Optionnels (sinon l'APK Android est signe avec la cle debug) :
+#   ANDROID_KEYSTORE_BASE64    keystore release encode base64 : base64 -w0 release.keystore
+#   ANDROID_KEYSTORE_USER      alias de la cle
+#   ANDROID_KEYSTORE_PASSWORD  mot de passe du keystore et de la cle
+#
+# L'image `barichello/godot-ci` doit exister pour la version de Godot du projet
+# (voir config/features dans project.godot). Adapter le tag ci-dessous si besoin.
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [develop]
+  workflow_dispatch:
+
+concurrency:
+  group: build-deploy-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    name: Export ${{ matrix.channel }}
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    container:
+      image: barichello/godot-ci:4.7
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - channel: windows
+            preset: Windows Desktop
+            output: mini-games-school.exe
+          - channel: linux
+            preset: Linux
+            output: mini-games-school.x86_64
+          - channel: web
+            preset: Web
+            output: index.html
+          - channel: android
+            preset: Android
+            output: mini-games-school.apk
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && 'develop' || github.ref }}
+
+      - name: Prepare Godot (templates + reglages editeur)
+        run: |
+          mkdir -p ~/.local/share/godot/export_templates
+          mv /root/.local/share/godot/export_templates/* ~/.local/share/godot/export_templates/ || true
+          mkdir -p ~/.config/godot
+          cp -r /root/.config/godot/. ~/.config/godot/ 2>/dev/null || true
+
+      - name: Keystore Android
+        if: matrix.channel == 'android'
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+        run: |
+          if [ -n "$ANDROID_KEYSTORE_BASE64" ]; then
+            echo "$ANDROID_KEYSTORE_BASE64" | base64 -d > "$GITHUB_WORKSPACE/release.keystore"
+            echo "Keystore de release en place."
+          else
+            echo "Pas de keystore de release -> APK signe avec la cle debug."
+          fi
+
+      - name: Export ${{ matrix.preset }}
+        env:
+          GODOT_ANDROID_KEYSTORE_RELEASE_PATH: ${{ github.workspace }}/release.keystore
+          GODOT_ANDROID_KEYSTORE_RELEASE_USER: ${{ secrets.ANDROID_KEYSTORE_USER }}
+          GODOT_ANDROID_KEYSTORE_RELEASE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+        run: |
+          mkdir -p "build/${{ matrix.channel }}"
+          godot --headless --import || true
+          godot --headless --import || true
+          MODE=release
+          if [ "${{ matrix.channel }}" = "android" ] && [ ! -f "$GODOT_ANDROID_KEYSTORE_RELEASE_PATH" ]; then
+            MODE=debug
+          fi
+          echo "Export ${{ matrix.preset }} (mode: $MODE)"
+          set -e
+          godot --headless --export-$MODE "${{ matrix.preset }}" "$PWD/build/${{ matrix.channel }}/${{ matrix.output }}"
+          ls -R "build/${{ matrix.channel }}"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.channel }}
+          path: build/${{ matrix.channel }}
+          if-no-files-found: error
+          retention-days: 30
+
+  itch:
+    name: Publier sur itch.io
+    needs: export
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verifie les secrets itch.io
+        id: check
+        env:
+          BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
+          ITCH_USERNAME: ${{ secrets.ITCH_USERNAME }}
+          ITCH_GAME: ${{ secrets.ITCH_GAME }}
+        run: |
+          if [ -n "$BUTLER_API_KEY" ] && [ -n "$ITCH_USERNAME" ] && [ -n "$ITCH_GAME" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::Secrets itch.io absents (BUTLER_API_KEY / ITCH_USERNAME / ITCH_GAME) - publication ignoree."
+          fi
+
+      - name: Recupere les builds
+        if: steps.check.outputs.ready == 'true'
+        uses: actions/download-artifact@v4
+        with:
+          path: dist
+
+      - name: Installe butler
+        if: steps.check.outputs.ready == 'true'
+        run: |
+          curl -fsSL -o butler.zip https://broth.itch.zone/butler/linux-amd64/LATEST/archive/default
+          unzip -q butler.zip
+          chmod +x butler
+          ./butler -V
+
+      - name: Push itch.io
+        if: steps.check.outputs.ready == 'true'
+        env:
+          BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
+          ITCH_USERNAME: ${{ secrets.ITCH_USERNAME }}
+          ITCH_GAME: ${{ secrets.ITCH_GAME }}
+        run: |
+          VERSION="1.0.${{ github.run_number }}"
+          for channel in windows linux web android; do
+            if [ -d "dist/$channel" ]; then
+              echo "== push $channel =="
+              ./butler push "dist/$channel" "$ITCH_USERNAME/$ITCH_GAME:$channel" --userversion "$VERSION"
+            fi
+          done
