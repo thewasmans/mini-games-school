@@ -2,20 +2,16 @@ class_name MemoCheat
 extends MiniGameCheat
 
 func hint_text() -> String:
-	var lines: PackedStringArray = []
-	var questions: Array = ui._questions
-	for question_index in questions.size():
-		var question_data = questions[question_index]
-		var marker := ">" if question_index == ui._question_index else " "
-		var answer = question_data.choices[question_data.correct_choice_index]
-		lines.append("%s %s  ->  %s" % [marker, question_data.question, answer])
-	return "\n".join(lines)
+	if ui._question_index >= ui._questions.size():
+		return ""
+	var question_data = ui._questions[ui._question_index]
+	return "Réponse : %s" % question_data.choices[question_data.correct_choice_index]
 
 func autofill() -> void:
-	while _alive() and ui._question_index < ui._questions.size():
+	while _running() and ui._question_index < ui._questions.size():
 		var current_index: int = ui._question_index
 		await _wait(STEP_INTERVAL)
-		if not _alive():
+		if not _running():
 			return
 		if ui._question_index != current_index:
 			continue

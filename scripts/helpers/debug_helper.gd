@@ -19,7 +19,6 @@ var _mini_game_ui
 var _cheat: MiniGameCheat
 var _level: Level
 var _panel: PanelContainer
-var _hint_box: PanelContainer
 var _hint_label: Label
 var _ready_done := false
 var _prefill_running := false
@@ -53,6 +52,8 @@ func unbind() -> void:
 		_level.tree_exited.disconnect(unbind)
 	if is_instance_valid(_mini_game_ui) and _mini_game_ui.is_connected("completed", _on_mini_game_completed):
 		_mini_game_ui.disconnect("completed", _on_mini_game_completed)
+	if _cheat != null:
+		_cheat.cancel()
 	_mini_game_ui = null
 	_cheat = null
 	_level = null
@@ -79,7 +80,7 @@ func _input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 
 func _process(delta: float) -> void:
-	if not _ready_done or not show_hints or not _hint_box.visible:
+	if not _ready_done or not show_hints or not _hint_label.visible:
 		return
 	_hint_refresh_countdown -= delta
 	if _hint_refresh_countdown <= 0.0:
@@ -99,26 +100,9 @@ func _build_ui() -> void:
 		margin.add_theme_constant_override("margin_" + side, PANEL_MARGIN)
 	_panel.add_child(margin)
 
-	var column := VBoxContainer.new()
-	column.add_theme_constant_override("separation", 4)
-	margin.add_child(column)
-
-	_hint_box = PanelContainer.new()
-	_hint_box.visible = false
-	column.add_child(_hint_box)
-	var hint_scroll := ScrollContainer.new()
-	hint_scroll.custom_minimum_size = Vector2(0, 80)
-	hint_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-	_hint_box.add_child(hint_scroll)
-	_hint_label = Label.new()
-	_hint_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_hint_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	_hint_label.add_theme_font_size_override("font_size", FONT_SIZE)
-	hint_scroll.add_child(_hint_label)
-
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 16)
-	column.add_child(row)
+	margin.add_child(row)
 
 	var title := Label.new()
 	title.text = "Helper (F1)"
@@ -128,6 +112,15 @@ func _build_ui() -> void:
 	row.add_child(_make_toggle("Auto select / prefill", auto_prefill, _on_prefill_toggled))
 	row.add_child(_make_toggle("Auto validate", auto_validate, _on_validate_toggled))
 	row.add_child(_make_toggle("Show hints", show_hints, _on_hints_toggled))
+
+	_hint_label = Label.new()
+	_hint_label.visible = false
+	_hint_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	_hint_label.clip_text = true
+	_hint_label.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+	_hint_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	_hint_label.add_theme_font_size_override("font_size", FONT_SIZE)
+	row.add_child(_hint_label)
 
 func _compact_theme() -> Theme:
 	var theme := (load(THEME_PATH) as Theme).duplicate(true) as Theme
@@ -157,6 +150,8 @@ func _on_prefill_toggled(pressed: bool) -> void:
 	auto_prefill = pressed
 	if pressed:
 		_start_prefill()
+	elif _cheat != null:
+		_cheat.cancel()
 
 func _on_validate_toggled(pressed: bool) -> void:
 	auto_validate = pressed
@@ -172,14 +167,15 @@ func _refresh_hints() -> void:
 		return
 	if show_hints and _cheat != null:
 		_hint_label.text = _cheat.hint_text()
-		_hint_box.visible = true
+		_hint_label.visible = true
 	else:
-		_hint_box.visible = false
+		_hint_label.visible = false
 
 func _start_prefill() -> void:
 	if _prefill_running or _cheat == null:
 		return
 	var cheat := _cheat
+	cheat.arm()
 	_prefill_running = true
 	await cheat.autofill()
 	if _cheat == cheat:

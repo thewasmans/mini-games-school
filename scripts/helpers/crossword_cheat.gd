@@ -2,15 +2,14 @@ class_name CrosswordCheat
 extends MiniGameCheat
 
 func hint_text() -> String:
-	var lines: PackedStringArray = []
-	for placement in _placements():
-		var direction := "H" if placement.is_horizontal else "V"
-		lines.append("(%s) %s  =  %s" % [direction, placement.word_data.hint, placement.word_data.word])
-	return "\n".join(lines)
+	var placement = ui._selected_placement
+	if placement == null:
+		return ""
+	return placement.word_data.word
 
 func autofill() -> void:
 	for placement in _placements():
-		if not _alive():
+		if not _running():
 			return
 		if ui._placement_attempts.get(placement, "") == placement.word_data.word:
 			continue
@@ -21,7 +20,7 @@ func autofill() -> void:
 			ui.input.caret_column = length
 			ui._on_word_input_changed(ui.input.text)
 			await _wait(CHAR_INTERVAL)
-			if not _alive():
+			if not _running():
 				return
 		await _wait(STEP_INTERVAL)
 
