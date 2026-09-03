@@ -6,8 +6,8 @@ func hint_text() -> String:
 	var phrases: Array = ui._crypto_data.phrases
 	for phrase_index in phrases.size():
 		var phrase_data = phrases[phrase_index]
-		var marker := ">" if phrase_index == ui._puzzle_index else " "
-		lines.append("%s %s  (%s)" % [marker, phrase_data.text, phrase_data.hint])
+		var marker := "Phrase:" if phrase_index == ui._puzzle_index else " "
+		lines.append("%s %s" % [marker, phrase_data.text])
 	return "\n".join(lines)
 
 func autofill() -> void:
