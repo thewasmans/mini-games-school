@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bpcudk37ondbf"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_882to"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_t20gs"]
+
+[sub_resource type="Resource" id="Resource_qw841"]
+script = ExtResource("1_882to")
+word = "LIQUIDE"
+hint = "ce qui la rend déformable."
+
+[sub_resource type="Resource" id="Resource_p46xh"]
+script = ExtResource("1_882to")
+word = "GAZ"
+hint = "les atomes sont quasi indépendants."
+
+[sub_resource type="Resource" id="Resource_gy38v"]
+script = ExtResource("1_882to")
+word = "SOLIDE"
+hint = "ce qui rend le composé résistant."
+
+[sub_resource type="Resource" id="Resource_lhs1r"]
+script = ExtResource("1_882to")
+word = "Araigné"
+hint = "Araigné"
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[sub_resource type="Resource" id="Resource_pftn3"]
+script = ExtResource("1_882to")
+word = "Fromage"
+hint = "Fromage"
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[sub_resource type="Resource" id="Resource_7lvw4"]
+script = ExtResource("1_882to")
+word = "Girafe"
+hint = "Girafe"
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[sub_resource type="Resource" id="Resource_2ewf2"]
+script = ExtResource("1_882to")
+word = "Spider-Man"
+hint = "Spider-Man"
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[resource]
+script = ExtResource("2_t20gs")
+clues = Array[ExtResource("1_882to")]([SubResource("Resource_qw841"), SubResource("Resource_p46xh"), SubResource("Resource_gy38v"), SubResource("Resource_lhs1r"), SubResource("Resource_pftn3"), SubResource("Resource_7lvw4"), SubResource("Resource_2ewf2")])
