@@ -15,6 +15,10 @@ run/main_scene="uid://d0nk4vuu48k3"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [dotnet]
 
 project/assembly_name="mini-games-school"
@@ -57,3 +61,4 @@ action_turn_left={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+textures/vram_compression/import_etc2_astc=true
