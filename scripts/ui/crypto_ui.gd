@@ -74,8 +74,8 @@ func _on_slot_text_changed(new_text: String, character_index: int) -> void:
 
 func _focus_next_slot(character_index: int) -> void:
 	var indices := _sorted_slot_indices()
-	var position := indices.find(character_index)
-	for offset in range(position + 1, indices.size()):
+	var pos := indices.find(character_index)
+	for offset in range(pos + 1, indices.size()):
 		if _slots[indices[offset]].text == "":
 			_slots[indices[offset]].grab_focus()
 			return
