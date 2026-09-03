@@ -16,6 +16,7 @@ static var auto_validate := false
 static var show_hints := false
 
 var _mini_game_ui
+var _cheat: MiniGameCheat
 var _level: Level
 var _panel: PanelContainer
 var _hint_box: PanelContainer
@@ -53,6 +54,7 @@ func unbind() -> void:
 	if is_instance_valid(_mini_game_ui) and _mini_game_ui.is_connected("completed", _on_mini_game_completed):
 		_mini_game_ui.disconnect("completed", _on_mini_game_completed)
 	_mini_game_ui = null
+	_cheat = null
 	_level = null
 	_prefill_running = false
 	_refresh_hints()
@@ -62,6 +64,7 @@ func _activate_binding() -> void:
 		return
 	if not _mini_game_ui.is_connected("completed", _on_mini_game_completed):
 		_mini_game_ui.connect("completed", _on_mini_game_completed)
+	_cheat = _make_cheat(_mini_game_ui)
 	_refresh_hints()
 	if auto_prefill:
 		_start_prefill()
@@ -167,18 +170,19 @@ func _on_hints_toggled(pressed: bool) -> void:
 func _refresh_hints() -> void:
 	if not _ready_done:
 		return
-	if show_hints and _mini_game_ui != null and _mini_game_ui.has_method("debug_hint_text"):
-		_hint_label.text = _mini_game_ui.debug_hint_text()
+	if show_hints and _cheat != null:
+		_hint_label.text = _cheat.hint_text()
 		_hint_box.visible = true
 	else:
 		_hint_box.visible = false
 
 func _start_prefill() -> void:
-	if _prefill_running or _mini_game_ui == null or not _mini_game_ui.has_method("debug_autofill"):
+	if _prefill_running or _cheat == null:
 		return
+	var cheat := _cheat
 	_prefill_running = true
-	await _mini_game_ui.debug_autofill()
-	if is_instance_valid(self):
+	await cheat.autofill()
+	if _cheat == cheat:
 		_prefill_running = false
 
 func _on_mini_game_completed() -> void:
@@ -189,3 +193,12 @@ func _on_mini_game_completed() -> void:
 func _validate_if_ready() -> void:
 	if _level != null and _level.validate_button.visible:
 		_level.validate()
+
+func _make_cheat(mini_game_ui: Node) -> MiniGameCheat:
+	if mini_game_ui is CrosswordUI:
+		return CrosswordCheat.new(mini_game_ui)
+	if mini_game_ui is MemoUI:
+		return MemoCheat.new(mini_game_ui)
+	if mini_game_ui is CryptoUI:
+		return CryptoCheat.new(mini_game_ui)
+	return null
