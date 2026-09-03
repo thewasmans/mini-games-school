@@ -5,7 +5,7 @@ func hint_text() -> String:
 	if ui._question_index >= ui._questions.size():
 		return ""
 	var question_data = ui._questions[ui._question_index]
-	return "Réponse : %s" % question_data.choices[question_data.correct_choice_index]
+	return question_data.choices[question_data.correct_choice_index]
 
 func autofill() -> void:
 	while _running() and ui._question_index < ui._questions.size():

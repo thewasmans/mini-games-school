@@ -2,13 +2,9 @@ class_name CryptoCheat
 extends MiniGameCheat
 
 func hint_text() -> String:
-	var lines: PackedStringArray = []
-	var phrases: Array = ui._crypto_data.phrases
-	for phrase_index in phrases.size():
-		var phrase_data = phrases[phrase_index]
-		var marker := "Phrase:" if phrase_index == ui._puzzle_index else " "
-		lines.append("%s %s" % [marker, phrase_data.text])
-	return "\n".join(lines)
+	if ui._puzzle == null:
+		return ""
+	return ui._puzzle.solution()
 
 func autofill() -> void:
 	while _running() and ui._puzzle_index < ui._crypto_data.phrases.size():

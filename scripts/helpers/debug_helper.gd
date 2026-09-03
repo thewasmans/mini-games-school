@@ -118,6 +118,7 @@ func _build_ui() -> void:
 	_hint_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_hint_label.clip_text = true
 	_hint_label.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+	_hint_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	_hint_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	_hint_label.add_theme_font_size_override("font_size", FONT_SIZE)
 	row.add_child(_hint_label)
@@ -165,11 +166,12 @@ func _on_hints_toggled(pressed: bool) -> void:
 func _refresh_hints() -> void:
 	if not _ready_done:
 		return
-	if show_hints and _cheat != null:
-		_hint_label.text = _cheat.hint_text()
-		_hint_label.visible = true
-	else:
+	var hint := _cheat.hint_text() if show_hints and _cheat != null else ""
+	if hint.is_empty():
 		_hint_label.visible = false
+	else:
+		_hint_label.text = "Hint : " + hint
+		_hint_label.visible = true
 
 func _start_prefill() -> void:
 	if _prefill_running or _cheat == null:
