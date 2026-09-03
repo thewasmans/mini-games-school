@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cp2inhinnjjop" path="res://scripts/data/game_data.gd" id="1_urpql"]
 [ext_resource type="Script" uid="uid://5t2j51l6wd4l" path="res://scripts/mini_games/mini_game_data.gd" id="1_vllua"]
 [ext_resource type="Script" uid="uid://br5q0sg4b052d" path="res://scripts/data/level_data.gd" id="2_r34r7"]
+[ext_resource type="Resource" uid="uid://bpcudk37ondbf" path="res://data/crosswords_example_data.tres" id="3_7fe16"]
 [ext_resource type="Resource" uid="uid://bx1or1c3ofssb" path="res://data/quizz_example_data.tres" id="3_k2o1c"]
 [ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="5_yqv0c"]
 [ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="6_lhs1r"]
@@ -28,7 +29,12 @@ script = ExtResource("2_r34r7")
 mini_games = Array[ExtResource("1_vllua")]([ExtResource("3_k2o1c")])
 metadata/_custom_type_script = "uid://br5q0sg4b052d"
 
+[sub_resource type="Resource" id="Resource_k2o1c"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("3_7fe16")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
 [resource]
 script = ExtResource("1_urpql")
-levels = Array[ExtResource("2_r34r7")]([SubResource("Resource_pftn3"), SubResource("Resource_yqv0c"), SubResource("Resource_pftn3")])
+levels = Array[ExtResource("2_r34r7")]([SubResource("Resource_pftn3"), SubResource("Resource_yqv0c"), SubResource("Resource_k2o1c")])
 metadata/_custom_type_script = "uid://cp2inhinnjjop"
