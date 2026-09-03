@@ -40,7 +40,11 @@ func _load_puzzle() -> void:
 	if _slots.is_empty():
 		_advance()
 		return
-	_slots[_sorted_slot_indices()[0]].grab_focus()
+	var first_slot: LineEdit = _slots[_sorted_slot_indices()[0]]
+	if first_slot.is_inside_tree():
+		first_slot.grab_focus()
+	else:
+		first_slot.grab_focus.call_deferred()
 
 func _create_space() -> Control:
 	var spacer := Control.new()
