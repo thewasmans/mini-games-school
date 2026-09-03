@@ -25,7 +25,7 @@ project/assembly_name="mini-games-school"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/csv_crossword_importer/plugin.cfg")
+enabled=PackedStringArray("res://addons/csv_mini_game_importer/plugin.cfg")
 
 [gui]
 

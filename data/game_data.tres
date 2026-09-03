@@ -1,90 +1,22 @@
 [gd_resource type="Resource" script_class="GameData" format=3 uid="uid://dcckexgblr3de"]
 
 [ext_resource type="Script" uid="uid://cp2inhinnjjop" path="res://scripts/data/game_data.gd" id="1_urpql"]
+[ext_resource type="Script" uid="uid://5t2j51l6wd4l" path="res://scripts/mini_games/mini_game_data.gd" id="1_vllua"]
 [ext_resource type="Script" uid="uid://br5q0sg4b052d" path="res://scripts/data/level_data.gd" id="2_r34r7"]
-[ext_resource type="Script" uid="uid://5t2j51l6wd4l" path="res://scripts/data/mini_game_data.gd" id="2_vllua"]
+[ext_resource type="Resource" uid="uid://bpcudk37ondbf" path="res://data/crosswords_example_data.tres" id="3_7fe16"]
+[ext_resource type="Resource" uid="uid://bx1or1c3ofssb" path="res://data/quizz_example_data.tres" id="3_k2o1c"]
+
+[sub_resource type="Resource" id="Resource_o6xl0"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("3_7fe16")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
 
 [sub_resource type="Resource" id="Resource_yqv0c"]
 script = ExtResource("2_r34r7")
-metadata/_custom_type_script = "uid://br5q0sg4b052d"
-
-[sub_resource type="Resource" id="Resource_2ewf2"]
-script = ExtResource("2_r34r7")
-metadata/_custom_type_script = "uid://br5q0sg4b052d"
-
-[sub_resource type="Resource" id="Resource_lvl03"]
-script = ExtResource("2_r34r7")
-metadata/_custom_type_script = "uid://br5q0sg4b052d"
-
-[sub_resource type="Resource" id="Resource_lvl04"]
-script = ExtResource("2_r34r7")
-metadata/_custom_type_script = "uid://br5q0sg4b052d"
-
-[sub_resource type="Resource" id="Resource_lvl05"]
-script = ExtResource("2_r34r7")
-metadata/_custom_type_script = "uid://br5q0sg4b052d"
-
-[sub_resource type="Resource" id="Resource_lvl06"]
-script = ExtResource("2_r34r7")
-metadata/_custom_type_script = "uid://br5q0sg4b052d"
-
-[sub_resource type="Resource" id="Resource_lvl07"]
-script = ExtResource("2_r34r7")
-metadata/_custom_type_script = "uid://br5q0sg4b052d"
-
-[sub_resource type="Resource" id="Resource_lvl08"]
-script = ExtResource("2_r34r7")
-metadata/_custom_type_script = "uid://br5q0sg4b052d"
-
-[sub_resource type="Resource" id="Resource_lvl09"]
-script = ExtResource("2_r34r7")
-metadata/_custom_type_script = "uid://br5q0sg4b052d"
-
-[sub_resource type="Resource" id="Resource_lvl10"]
-script = ExtResource("2_r34r7")
-metadata/_custom_type_script = "uid://br5q0sg4b052d"
-
-[sub_resource type="Resource" id="Resource_lvl11"]
-script = ExtResource("2_r34r7")
-metadata/_custom_type_script = "uid://br5q0sg4b052d"
-
-[sub_resource type="Resource" id="Resource_lvl12"]
-script = ExtResource("2_r34r7")
-metadata/_custom_type_script = "uid://br5q0sg4b052d"
-
-[sub_resource type="Resource" id="Resource_lvl13"]
-script = ExtResource("2_r34r7")
-metadata/_custom_type_script = "uid://br5q0sg4b052d"
-
-[sub_resource type="Resource" id="Resource_lvl14"]
-script = ExtResource("2_r34r7")
-metadata/_custom_type_script = "uid://br5q0sg4b052d"
-
-[sub_resource type="Resource" id="Resource_lvl15"]
-script = ExtResource("2_r34r7")
-metadata/_custom_type_script = "uid://br5q0sg4b052d"
-
-[sub_resource type="Resource" id="Resource_lvl16"]
-script = ExtResource("2_r34r7")
-metadata/_custom_type_script = "uid://br5q0sg4b052d"
-
-[sub_resource type="Resource" id="Resource_lvl17"]
-script = ExtResource("2_r34r7")
-metadata/_custom_type_script = "uid://br5q0sg4b052d"
-
-[sub_resource type="Resource" id="Resource_lvl18"]
-script = ExtResource("2_r34r7")
-metadata/_custom_type_script = "uid://br5q0sg4b052d"
-
-[sub_resource type="Resource" id="Resource_lvl19"]
-script = ExtResource("2_r34r7")
-metadata/_custom_type_script = "uid://br5q0sg4b052d"
-
-[sub_resource type="Resource" id="Resource_lvl20"]
-script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("3_k2o1c")])
 metadata/_custom_type_script = "uid://br5q0sg4b052d"
 
 [resource]
 script = ExtResource("1_urpql")
-levels = Array[ExtResource("2_r34r7")]([SubResource("Resource_yqv0c"), SubResource("Resource_2ewf2"), SubResource("Resource_lvl03"), SubResource("Resource_lvl04"), SubResource("Resource_lvl05"), SubResource("Resource_lvl06"), SubResource("Resource_lvl07"), SubResource("Resource_lvl08"), SubResource("Resource_lvl09"), SubResource("Resource_lvl10"), SubResource("Resource_lvl11"), SubResource("Resource_lvl12"), SubResource("Resource_lvl13"), SubResource("Resource_lvl14"), SubResource("Resource_lvl15"), SubResource("Resource_lvl16"), SubResource("Resource_lvl17"), SubResource("Resource_lvl18"), SubResource("Resource_lvl19"), SubResource("Resource_lvl20")])
+levels = Array[ExtResource("2_r34r7")]([SubResource("Resource_o6xl0"), SubResource("Resource_yqv0c")])
 metadata/_custom_type_script = "uid://cp2inhinnjjop"

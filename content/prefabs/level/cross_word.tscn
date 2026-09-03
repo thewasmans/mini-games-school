@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://ewov5mglodbo" path="res://scripts/level/level.gd" id="1_8od4f"]
 [ext_resource type="PackedScene" uid="uid://bsw4556x5xgdg" path="res://content/prefabs/mini_games/crossword_ui.tscn" id="2_xword"]
 [ext_resource type="Texture2D" uid="uid://c3upgh7dpfrhf" path="res://content/sprites/ui/ui_background.png" id="3_yoao0"]
+[ext_resource type="PackedScene" uid="uid://bmemouiscn012" path="res://content/prefabs/mini_games/memo_ui.tscn" id="4_memo"]
+[ext_resource type="PackedScene" uid="uid://ccryptuiscn12" path="res://content/prefabs/mini_games/crypto_ui.tscn" id="5_crypto"]
 
 [node name="Level" type="Control" unique_id=1301094388 node_paths=PackedStringArray("mini_game_label", "mini_game_container", "validate_button", "back_button")]
 layout_mode = 3
@@ -15,6 +17,8 @@ script = ExtResource("1_8od4f")
 mini_game_label = NodePath("MiniGameLabel")
 mini_game_container = NodePath("MiniGameContainer")
 crossword_prefab = ExtResource("2_xword")
+memo_prefab = ExtResource("4_memo")
+crypto_prefab = ExtResource("5_crypto")
 validate_button = NodePath("ValidateButton")
 back_button = NodePath("BackButton")
 
