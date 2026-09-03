@@ -8,6 +8,7 @@ const INCORRECT_COLOR := Color(1.0, 0.5, 0.5)
 const NEXT_DELAY := 0.6
 const CHOICE_MIN_SIZE := Vector2(0, 56)
 const CHOICE_FONT_SIZE := 15
+const DEBUG_STEP_INTERVAL := 0.4
 
 @export var question_label: Label
 @export var image_rect: TextureRect
@@ -71,3 +72,23 @@ func _on_choice_pressed(choice_index: int) -> void:
 		return
 	await get_tree().create_timer(NEXT_DELAY).timeout
 	_show_question()
+
+func debug_hint_text() -> String:
+	var lines: PackedStringArray = []
+	for question_index in _questions.size():
+		var question_data := _questions[question_index]
+		var marker := ">" if question_index == _question_index else " "
+		var answer := question_data.choices[question_data.correct_choice_index]
+		lines.append("%s %s  ->  %s" % [marker, question_data.question, answer])
+	return "\n".join(lines)
+
+func debug_autofill() -> void:
+	while is_inside_tree() and _question_index < _questions.size():
+		var current_index := _question_index
+		await get_tree().create_timer(DEBUG_STEP_INTERVAL).timeout
+		if not is_inside_tree():
+			return
+		if _question_index != current_index:
+			continue
+		_on_choice_pressed(_questions[current_index].correct_choice_index)
+		await get_tree().create_timer(NEXT_DELAY + DEBUG_STEP_INTERVAL).timeout

@@ -10,6 +10,8 @@ const SLOT_SIZE := Vector2(32, 44)
 const LETTER_SIZE := Vector2(24, 44)
 const SPACE_SIZE := Vector2(16, 44)
 const REVEAL_DELAY := 0.6
+const DEBUG_CHAR_INTERVAL := 0.06
+const DEBUG_STEP_INTERVAL := 0.35
 
 @export var flow_container: FlowContainer
 @export var hint_label: Label
@@ -117,3 +119,30 @@ func _sorted_slot_indices() -> Array:
 	var indices := _slots.keys()
 	indices.sort()
 	return indices
+
+func debug_hint_text() -> String:
+	var lines: PackedStringArray = []
+	for phrase_index in _crypto_data.phrases.size():
+		var phrase_data := _crypto_data.phrases[phrase_index]
+		var marker := ">" if phrase_index == _puzzle_index else " "
+		lines.append("%s %s  (%s)" % [marker, phrase_data.text, phrase_data.hint])
+	return "\n".join(lines)
+
+func debug_autofill() -> void:
+	while is_inside_tree() and _puzzle_index < _crypto_data.phrases.size():
+		var current_index := _puzzle_index
+		var solution := _puzzle.solution()
+		for character_index in _sorted_slot_indices():
+			var slot: LineEdit = _slots[character_index]
+			slot.text = solution[character_index]
+			_on_slot_text_changed(slot.text, character_index)
+			await get_tree().create_timer(DEBUG_CHAR_INTERVAL).timeout
+			if not is_inside_tree():
+				return
+		var guard := 0
+		while _puzzle_index == current_index and guard < 600:
+			await get_tree().process_frame
+			if not is_inside_tree():
+				return
+			guard += 1
+		await get_tree().create_timer(DEBUG_STEP_INTERVAL).timeout

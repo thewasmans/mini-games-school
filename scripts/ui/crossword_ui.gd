@@ -11,6 +11,8 @@ const HOVER_COLOR := Color(0.88, 0.94, 1.0)
 const INCORRECT_COLOR := Color(1.0, 0.5, 0.5)
 const TILE_LETTER_THEME := preload("res://content/theme/tile_letter/theme_tile_letter.tres")
 const TILE_LETTER_VALIDATED_THEME := preload("res://content/theme/tile_letter/theme_tile_letter_validated.tres")
+const DEBUG_CHAR_INTERVAL := 0.06
+const DEBUG_STEP_INTERVAL := 0.35
 
 @export var grid_container: GridContainer
 @export var hint_label: Label
@@ -21,11 +23,13 @@ var _cell_backgrounds: Dictionary = {}
 var _cell_placements: Dictionary = {}
 var _placement_attempts: Dictionary = {}
 var _selected_placement: CrosswordWordPlacement
+var _placements: Array[CrosswordWordPlacement] = []
 var _word_count: int
 var _solved_count: int = 0
 
 func initialize(crossword_data: CrosswordData) -> void:
 	var placements := CrosswordGenerator.generate(crossword_data.clues)
+	_placements = placements
 	_word_count = placements.size()
 	_render_grid(placements)
 	input.text_changed.connect(_on_word_input_changed)
@@ -184,3 +188,27 @@ func _validate_word(submitted_text: String) -> void:
 	_solved_count += 1
 	if _solved_count == _word_count:
 		completed.emit()
+
+func debug_hint_text() -> String:
+	var lines: PackedStringArray = []
+	for placement in _placements:
+		var direction := "H" if placement.is_horizontal else "V"
+		lines.append("(%s) %s  =  %s" % [direction, placement.word_data.hint, placement.word_data.word])
+	return "\n".join(lines)
+
+func debug_autofill() -> void:
+	for placement in _placements:
+		if not is_inside_tree():
+			return
+		if _placement_attempts.get(placement, "") == placement.word_data.word:
+			continue
+		_select_placement(placement)
+		var word: String = placement.word_data.word
+		for length in range(1, word.length() + 1):
+			input.text = word.substr(0, length)
+			input.caret_column = length
+			_on_word_input_changed(input.text)
+			await get_tree().create_timer(DEBUG_CHAR_INTERVAL).timeout
+			if not is_inside_tree():
+				return
+		await get_tree().create_timer(DEBUG_STEP_INTERVAL).timeout

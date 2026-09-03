@@ -5,3 +5,9 @@ extends Node
 
 func _ready() -> void:
 	game_manager.initialize()
+	_spawn_debug_helper()
+
+func _spawn_debug_helper() -> void:
+	if not OS.has_feature("editor"):
+		return
+	add_child(DebugHelper.new())

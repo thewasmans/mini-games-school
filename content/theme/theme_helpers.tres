@@ -1,0 +1,42 @@
+[gd_resource type="Theme" format=3 uid="uid://cdofhu37j6nvk"]
+
+[sub_resource type="FontVariation" id="FontVariation_mpxm1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tipki"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7t0hm"]
+bg_color = Color(0.08208982, 0.082089834, 0.082089774, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2u3hs"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qi2l8"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p0c76"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_repgm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_01ovg"]
+
+[sub_resource type="FontVariation" id="FontVariation_repgm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6xl0"]
+bg_color = Color(0, 0, 0, 0.88235295)
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/fonts/font = SubResource("FontVariation_mpxm1")
+Button/styles/disabled = SubResource("StyleBoxEmpty_tipki")
+Button/styles/hover = SubResource("StyleBoxFlat_7t0hm")
+Button/styles/normal = SubResource("StyleBoxFlat_2u3hs")
+Button/styles/pressed = SubResource("StyleBoxFlat_qi2l8")
+CheckBox/colors/font_hover_color = Color(0.6269557, 0.6269558, 0.6269568, 1)
+CheckBox/colors/font_pressed_color = Color(0.3353648, 0.3353648, 0.3353648, 1)
+CheckBox/styles/hover = SubResource("StyleBoxTexture_p0c76")
+CheckBox/styles/normal = SubResource("StyleBoxEmpty_repgm")
+CheckBox/styles/pressed = SubResource("StyleBoxEmpty_01ovg")
+Label/constants/outline_size = 0
+Label/fonts/font = SubResource("FontVariation_repgm")
+Panel/styles/panel = SubResource("StyleBoxFlat_o6xl0")

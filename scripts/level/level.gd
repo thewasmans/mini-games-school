@@ -33,6 +33,11 @@ func initialize(_level_index: int, _level_data: LevelData, game_manager: GameMan
 	mini_game_container.add_child(mini_game_ui)
 	mini_game_ui.completed.connect(_on_mini_game_completed)
 	mini_game_ui.initialize(mini_game)
+	if DebugHelper.instance != null:
+		DebugHelper.instance.bind(mini_game_ui, self)
+
+func validate() -> void:
+	_on_validate_button_pressed()
 
 func _prefab_for(mini_game: MiniGameData) -> PackedScene:
 	if mini_game is CrosswordData:
