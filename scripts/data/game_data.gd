@@ -1,4 +1,4 @@
 extends Resource
 class_name GameData
 
-@export var levels: Array[LevelData]
+@export var study_levels: Array[StudyLevelData]

@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://cmenustudyscn"]
+
+[ext_resource type="Script" uid="uid://bmenustudygd1" path="res://scripts/ui/menu_study_levels_ui.gd" id="1_stdylvl"]
+[ext_resource type="Texture2D" uid="uid://c3upgh7dpfrhf" path="res://content/sprites/ui/ui_background.png" id="2_bg"]
+[ext_resource type="Texture2D" uid="uid://bssxvehr8hskc" path="res://content/sprites/ui/icon_return.png" id="3_back"]
+
+[node name="MenuStudyLevelsUI" type="Control" node_paths=PackedStringArray("buttons_container")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_stdylvl")
+buttons_container = NodePath("ButtonsContainer")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 1
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 233.0
+offset_bottom = 156.0
+scale = Vector2(0.525, 0.525)
+theme_override_font_sizes/font_size = 39
+icon = ExtResource("3_back")
+icon_alignment = 1
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
