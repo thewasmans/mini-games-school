@@ -6,5 +6,6 @@ extends Manager
 
 func start_level(level_index: int) -> void:
 	var level := level_prefab.instantiate() as Level
-	level.initialize(level_index, game_data.levels[level_index], _game_manager)
+	var levels := game_data.study_levels[game_state.current_study_level].levels
+	level.initialize(level_index, levels[level_index], _game_manager)
 	level_root.add_child(level)

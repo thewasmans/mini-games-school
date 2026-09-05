@@ -4,8 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://0gapd7wm8ydd" path="res://content/prefabs/ui/button_level_ui.tscn" id="2_npsjx"]
 [ext_resource type="PackedScene" uid="uid://dy4o76u7t5tkx" path="res://content/prefabs/ui/menu_levels_ui.tscn" id="3_hpqhx"]
 [ext_resource type="PackedScene" uid="uid://d0h5gr0h7xhcu" path="res://content/prefabs/ui/menu_start_ui.tscn" id="4_mpxm1"]
+[ext_resource type="PackedScene" uid="uid://cmenustudyscn" path="res://content/prefabs/ui/menu_study_levels_ui.tscn" id="5_stdylvl"]
 
-[node name="GameUi" type="Control" unique_id=137618360 node_paths=PackedStringArray("menu_levels")]
+[node name="GameUi" type="Control" unique_id=137618360 node_paths=PackedStringArray("menu_study_levels", "menu_levels")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,10 +14,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7e7t2")
+menu_study_levels = NodePath("MenuStudyLevelsUI")
 menu_levels = NodePath("MenuLevelsUI")
 button_level_prefab = ExtResource("2_npsjx")
 
 [node name="MenuStartUI" parent="." unique_id=1191208820 instance=ExtResource("4_mpxm1")]
+layout_mode = 1
+
+[node name="MenuStudyLevelsUI" parent="." unique_id=1191208821 instance=ExtResource("5_stdylvl")]
+visible = false
 layout_mode = 1
 
 [node name="MenuLevelsUI" parent="." unique_id=941951630 instance=ExtResource("3_hpqhx")]
