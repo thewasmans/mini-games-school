@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://c5ccqx3lp5wpk"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_m08ou"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_vwhnk"]
+
+[sub_resource type="Resource" id="Resource_bxpiu"]
+script = ExtResource("1_m08ou")
+word = "USAGE"
+hint = "Loi de l'évolution proposée par Lamarck."
+
+[sub_resource type="Resource" id="Resource_5dcwb"]
+script = ExtResource("1_m08ou")
+word = "MEIOSE"
+hint = "Processus de division cellulaire permettant d'obtenir des cellules filles génétiquement différentes."
+
+[sub_resource type="Resource" id="Resource_jq5a8"]
+script = ExtResource("1_m08ou")
+word = "ANCETRE"
+hint = "Ascendant, se dit d'une espèce dont une autre provient."
+
+[sub_resource type="Resource" id="Resource_ofyv6"]
+script = ExtResource("1_m08ou")
+word = "DARWIN"
+hint = "Scientifique à l'origine du mécanisme de la sélection naturelle."
+
+[sub_resource type="Resource" id="Resource_vrlt6"]
+script = ExtResource("1_m08ou")
+word = "SELECTION"
+hint = "Peut être naturelle ou artificielle, théorie de l'évolution proposée par Darwin."
+
+[sub_resource type="Resource" id="Resource_obnof"]
+script = ExtResource("1_m08ou")
+word = "FOSSILE"
+hint = "Trace d'un organisme minéralisé dans une roche sédimentaire."
+
+[sub_resource type="Resource" id="Resource_efbs8"]
+script = ExtResource("1_m08ou")
+word = "CRISES"
+hint = "Périodes durant lesquelles, à l’échelle du globe, un grand nombre d’espèces ont disparu simultanément."
+
+[sub_resource type="Resource" id="Resource_y8q5r"]
+script = ExtResource("1_m08ou")
+word = "DINOSAURE"
+hint = "Groupe d'animaux qui ont disparu il y a environ 65 millions d’années."
+
+[sub_resource type="Resource" id="Resource_nxpal"]
+script = ExtResource("1_m08ou")
+word = "ESPECES"
+hint = "Individus qui se ressemblent physiquement et qui sont capables de se reproduire entre eux. Leurs descendants sont viables et féconds."
+
+[sub_resource type="Resource" id="Resource_yo8sl"]
+script = ExtResource("1_m08ou")
+word = "SIXIEME"
+hint = "Numéro de l'extinction nommée Holocène."
+
+[sub_resource type="Resource" id="Resource_dqh08"]
+script = ExtResource("1_m08ou")
+word = "HASARD"
+hint = "Processus aléatoire pouvant expliquer certains phénomènes biologiques incompris."
+
+[sub_resource type="Resource" id="Resource_jrcnd"]
+script = ExtResource("1_m08ou")
+word = "BIOTIQUE"
+hint = "Caractérise les facteurs vivants d'un milieu."
+
+[sub_resource type="Resource" id="Resource_ium7c"]
+script = ExtResource("1_m08ou")
+word = "BIOME"
+hint = "Vaste région biogéographique s'étendant sous un même climat."
+
+[resource]
+script = ExtResource("2_vwhnk")
+clues = Array[ExtResource("1_m08ou")]([SubResource("Resource_bxpiu"), SubResource("Resource_5dcwb"), SubResource("Resource_jq5a8"), SubResource("Resource_ofyv6"), SubResource("Resource_vrlt6"), SubResource("Resource_obnof"), SubResource("Resource_efbs8"), SubResource("Resource_y8q5r"), SubResource("Resource_nxpal"), SubResource("Resource_yo8sl"), SubResource("Resource_dqh08"), SubResource("Resource_jrcnd"), SubResource("Resource_ium7c")])

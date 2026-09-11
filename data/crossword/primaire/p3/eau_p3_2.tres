@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://beu1h0vap56hl"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_hgjoi"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_fdbyt"]
+
+[sub_resource type="Resource" id="Resource_x5mgw"]
+script = ExtResource("1_hgjoi")
+word = "DRAIN"
+hint = "Tube servant à faire écouler un liquide."
+
+[sub_resource type="Resource" id="Resource_euf04"]
+script = ExtResource("1_hgjoi")
+word = "EVACUATION"
+hint = "Action de libérer, d'évacuer l'eau."
+
+[sub_resource type="Resource" id="Resource_who0n"]
+script = ExtResource("1_hgjoi")
+word = "FILTRATION"
+hint = "Action de nettoyer l'eau, de la rendre potable."
+
+[sub_resource type="Resource" id="Resource_fpo0r"]
+script = ExtResource("1_hgjoi")
+word = "INCOLORE"
+hint = "Se dit d'un élément qui n'a pas de couleur, comme l'air."
+
+[sub_resource type="Resource" id="Resource_irtgo"]
+script = ExtResource("1_hgjoi")
+word = "CHATEAU"
+hint = "Lieu de réserve importante d'eau."
+
+[sub_resource type="Resource" id="Resource_xomjk"]
+script = ExtResource("1_hgjoi")
+word = "POTABLE"
+hint = "Fait que l'eau puisse être consommée."
+
+[sub_resource type="Resource" id="Resource_74u0g"]
+script = ExtResource("1_hgjoi")
+word = "INODORE"
+hint = "Se dit d'un élément qui n'a pas d'odeur, comme l'eau."
+
+[resource]
+script = ExtResource("2_fdbyt")
+clues = Array[ExtResource("1_hgjoi")]([SubResource("Resource_x5mgw"), SubResource("Resource_euf04"), SubResource("Resource_who0n"), SubResource("Resource_fpo0r"), SubResource("Resource_irtgo"), SubResource("Resource_xomjk"), SubResource("Resource_74u0g")])

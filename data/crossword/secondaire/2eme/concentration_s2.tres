@@ -1,0 +1,78 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cb2r0yq548u83"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_4t7bs"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_8gqa7"]
+
+[sub_resource type="Resource" id="Resource_8go2d"]
+script = ExtResource("1_4t7bs")
+word = "SOLUTION"
+hint = "Résultat obtenu lorsqu'un solvant décompose un soluté."
+
+[sub_resource type="Resource" id="Resource_r731p"]
+script = ExtResource("1_4t7bs")
+word = "REACTION"
+hint = "Transformation de la matière au cours de laquelle les espèces chimiques sont modifiées."
+
+[sub_resource type="Resource" id="Resource_lrxtm"]
+script = ExtResource("1_4t7bs")
+word = "XE"
+hint = "Symbole chimique du xénon."
+
+[sub_resource type="Resource" id="Resource_hui1b"]
+script = ExtResource("1_4t7bs")
+word = "DISSOLUTION"
+hint = "Processus par lequel un soluté se disperse dans un solvant, formant ainsi une solution homogène."
+
+[sub_resource type="Resource" id="Resource_mkr2q"]
+script = ExtResource("1_4t7bs")
+word = "DILUTION"
+hint = "Procédé utilisé pour diminuer la concentration d'une solution en y ajoutant du solvant, sans changer la quantité de soluté."
+
+[sub_resource type="Resource" id="Resource_mc38k"]
+script = ExtResource("1_4t7bs")
+word = "PHOSPHORE"
+hint = "Elément chimique dont la symbole est P."
+
+[sub_resource type="Resource" id="Resource_qaylc"]
+script = ExtResource("1_4t7bs")
+word = "SOLUTE"
+hint = "Se dit de la substance qui est dissoute par un solvant."
+
+[sub_resource type="Resource" id="Resource_kl6yy"]
+script = ExtResource("1_4t7bs")
+word = "CALCIUM"
+hint = "Elément chimique dont la symbole est Ca."
+
+[sub_resource type="Resource" id="Resource_40gq8"]
+script = ExtResource("1_4t7bs")
+word = "HYDROGENE"
+hint = "Elément chimique dont la symbole est H."
+
+[sub_resource type="Resource" id="Resource_1q1xj"]
+script = ExtResource("1_4t7bs")
+word = "CHLORE"
+hint = "Elément chimique dont la symbole est Cl."
+
+[sub_resource type="Resource" id="Resource_4ipdj"]
+script = ExtResource("1_4t7bs")
+word = "ARGENT"
+hint = "Elément chimique dont la symbole est Ag."
+
+[sub_resource type="Resource" id="Resource_yqeyu"]
+script = ExtResource("1_4t7bs")
+word = "HG"
+hint = "Symbole chimique du mercure."
+
+[sub_resource type="Resource" id="Resource_jbjh1"]
+script = ExtResource("1_4t7bs")
+word = "CO"
+hint = "Symbole chimique du cobalt."
+
+[sub_resource type="Resource" id="Resource_b7vn0"]
+script = ExtResource("1_4t7bs")
+word = "BA"
+hint = "Symbole chimique du baryum."
+
+[resource]
+script = ExtResource("2_8gqa7")
+clues = Array[ExtResource("1_4t7bs")]([SubResource("Resource_8go2d"), SubResource("Resource_r731p"), SubResource("Resource_lrxtm"), SubResource("Resource_hui1b"), SubResource("Resource_mkr2q"), SubResource("Resource_mc38k"), SubResource("Resource_qaylc"), SubResource("Resource_kl6yy"), SubResource("Resource_40gq8"), SubResource("Resource_1q1xj"), SubResource("Resource_4ipdj"), SubResource("Resource_yqeyu"), SubResource("Resource_jbjh1"), SubResource("Resource_b7vn0")])

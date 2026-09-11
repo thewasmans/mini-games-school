@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://vuouiexuqwgg"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_g35ia"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_aloms"]
+
+[sub_resource type="Resource" id="Resource_kxnaf"]
+script = ExtResource("1_g35ia")
+word = "DIOXYGENE"
+hint = "Gaz se trouvant dans l'air, nécessaire à la survie des animaux."
+
+[sub_resource type="Resource" id="Resource_pibhq"]
+script = ExtResource("1_g35ia")
+word = "VOLUME"
+hint = "Espace occupé par un objet."
+
+[sub_resource type="Resource" id="Resource_ttvrl"]
+script = ExtResource("1_g35ia")
+word = "CONSTITUANT"
+hint = "Elément qui compose la matière, qui se trouve à l'intérieur d'un contenant."
+
+[sub_resource type="Resource" id="Resource_savo1"]
+script = ExtResource("1_g35ia")
+word = "HOMOGENE"
+hint = "Type de mélange dont il n'est pas possible de distinguer les constituants à l'œil nu, comme l'eau et la grenadine."
+
+[sub_resource type="Resource" id="Resource_bx3rp"]
+script = ExtResource("1_g35ia")
+word = "PROTOCOLE"
+hint = "Procédure à suivre pour réaliser une expérience."
+
+[sub_resource type="Resource" id="Resource_aguq6"]
+script = ExtResource("1_g35ia")
+word = "BALANCE"
+hint = "Outil de mesure de la masse."
+
+[sub_resource type="Resource" id="Resource_xkkx5"]
+script = ExtResource("1_g35ia")
+word = "POIDS"
+hint = "Correspond à une force liée à la masse."
+
+[sub_resource type="Resource" id="Resource_8hyim"]
+script = ExtResource("1_g35ia")
+word = "UNITE"
+hint = "Grandeur physique conventionnelle, correspond au watt pour la mesure de la puissance."
+
+[sub_resource type="Resource" id="Resource_qam5b"]
+script = ExtResource("1_g35ia")
+word = "EAU"
+hint = "Se trouve sous la forme potable et naturelle."
+
+[resource]
+script = ExtResource("2_aloms")
+clues = Array[ExtResource("1_g35ia")]([SubResource("Resource_kxnaf"), SubResource("Resource_pibhq"), SubResource("Resource_ttvrl"), SubResource("Resource_savo1"), SubResource("Resource_bx3rp"), SubResource("Resource_aguq6"), SubResource("Resource_xkkx5"), SubResource("Resource_8hyim"), SubResource("Resource_qam5b")])

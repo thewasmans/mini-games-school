@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bl6uv6hi2i4mk"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_wlk2h"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_rt67t"]
+
+[sub_resource type="Resource" id="Resource_ebtqd"]
+script = ExtResource("1_wlk2h")
+word = "TOXICOMANIE"
+hint = "Maladie provoquant l'addiction à une drogue."
+
+[sub_resource type="Resource" id="Resource_5wpwi"]
+script = ExtResource("1_wlk2h")
+word = "POSSESSION"
+hint = "Trouble dissociatif de l'identité où un agent extérieur prend le contrôle du sujet."
+
+[sub_resource type="Resource" id="Resource_m06w7"]
+script = ExtResource("1_wlk2h")
+word = "NEUROLEPTIQUE"
+hint = "Antipsychotique qui réduit les symptômes positifs de la schizophrénie."
+
+[sub_resource type="Resource" id="Resource_g64w4"]
+script = ExtResource("1_wlk2h")
+word = "TOURETTE"
+hint = "Syndrome provoquant des tics moteurs et vocaux."
+
+[sub_resource type="Resource" id="Resource_cm3fa"]
+script = ExtResource("1_wlk2h")
+word = "BORDERLINE"
+hint = "Trouble caractérisé par une instabilité thymique et de l'impulsivité."
+
+[sub_resource type="Resource" id="Resource_51eel"]
+script = ExtResource("1_wlk2h")
+word = "HISTERIE"
+hint = "Névrose caractérisée par une tendance aux manifestations émotives spectaculaires."
+
+[sub_resource type="Resource" id="Resource_3d4d6"]
+script = ExtResource("1_wlk2h")
+word = "THYMOREGULATEUR"
+hint = "Médicament que l'on donne à un sujet bipolaire."
+
+[sub_resource type="Resource" id="Resource_lk2aa"]
+script = ExtResource("1_wlk2h")
+word = "BIPOLAIRE"
+hint = "Trouble de la régulation de l'humeur provoquant des phases d'euphorie et de dépression."
+
+[sub_resource type="Resource" id="Resource_effi7"]
+script = ExtResource("1_wlk2h")
+word = "DELIRE"
+hint = "Perte du sens de la réalité se traduisant par un ensemble de convictions fausses."
+
+[sub_resource type="Resource" id="Resource_vwkdn"]
+script = ExtResource("1_wlk2h")
+word = "PICK"
+hint = "Maladie neurodégénérative où le sujet souffre de désinhibition et d'indifférence émotionnelle."
+
+[resource]
+script = ExtResource("2_rt67t")
+clues = Array[ExtResource("1_wlk2h")]([SubResource("Resource_ebtqd"), SubResource("Resource_5wpwi"), SubResource("Resource_m06w7"), SubResource("Resource_g64w4"), SubResource("Resource_cm3fa"), SubResource("Resource_51eel"), SubResource("Resource_3d4d6"), SubResource("Resource_lk2aa"), SubResource("Resource_effi7"), SubResource("Resource_vwkdn")])

@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cuufyida34qmu"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_tcq0c"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_w0ajb"]
+
+[sub_resource type="Resource" id="Resource_3fcpq"]
+script = ExtResource("1_tcq0c")
+word = "CENTIMORGAN"
+hint = "Unité de mesure de distance entre deux gènes liés."
+
+[sub_resource type="Resource" id="Resource_kk4av"]
+script = ExtResource("1_tcq0c")
+word = "SEL"
+hint = "Chlorure de sodium utile au bon fonctionnement du corps."
+
+[sub_resource type="Resource" id="Resource_jcve0"]
+script = ExtResource("1_tcq0c")
+word = "NOYAU"
+hint = "Organite de taille imposante dans la cellule eucaryote."
+
+[sub_resource type="Resource" id="Resource_7mydf"]
+script = ExtResource("1_tcq0c")
+word = "INITIATION"
+hint = "Etape de la transcription qui se caractérise par la séparation des deux brins d'ADN."
+
+[sub_resource type="Resource" id="Resource_1mxjj"]
+script = ExtResource("1_tcq0c")
+word = "COVALENTE"
+hint = "Type de liaisons qui se forment entre les bases de l'ADN et le squelette sucre-phosphate."
+
+[sub_resource type="Resource" id="Resource_7aw8q"]
+script = ExtResource("1_tcq0c")
+word = "MICROGRAPHIE"
+hint = "Coupe qui permet de voir une image microscopique."
+
+[sub_resource type="Resource" id="Resource_74ep7"]
+script = ExtResource("1_tcq0c")
+word = "TRADUCTION"
+hint = "Etape de la synthèse des protéines qui se caractérise par la formation d'une protéine."
+
+[sub_resource type="Resource" id="Resource_e6io6"]
+script = ExtResource("1_tcq0c")
+word = "RIBOSOME"
+hint = "Organite composé de deux sous-unités intervenant dans la synthèse des protéines."
+
+[sub_resource type="Resource" id="Resource_oeuki"]
+script = ExtResource("1_tcq0c")
+word = "ULTRASTRUCTURE"
+hint = "Structure de cellules ou de tissus observés au microscope électronique."
+
+[sub_resource type="Resource" id="Resource_5ka12"]
+script = ExtResource("1_tcq0c")
+word = "PYRIMIDIQUE"
+hint = "Groupe de bases composées de la cytosine et de la thymine."
+
+[sub_resource type="Resource" id="Resource_2hv2l"]
+script = ExtResource("1_tcq0c")
+word = "START"
+hint = "Nom du codon donnant le départ de la lecture d'un gène."
+
+[sub_resource type="Resource" id="Resource_n4bus"]
+script = ExtResource("1_tcq0c")
+word = "HEMOGLOBINE"
+hint = "Protéine qui permet le transport de l'oxygène dans le sang."
+
+[sub_resource type="Resource" id="Resource_8lrlq"]
+script = ExtResource("1_tcq0c")
+word = "CYTOPLASME"
+hint = "Contenu interne de la cellule dans lequel on y retrouve le cytosol."
+
+[sub_resource type="Resource" id="Resource_owktl"]
+script = ExtResource("1_tcq0c")
+word = "NUCLEOTIDE"
+hint = "Elément formé d'une base, d'un sucre et de l'acide phosphorique."
+
+[sub_resource type="Resource" id="Resource_dct2q"]
+script = ExtResource("1_tcq0c")
+word = "ARN"
+hint = "Molécule qui sert de messager à l'ADN."
+
+[resource]
+script = ExtResource("2_w0ajb")
+clues = Array[ExtResource("1_tcq0c")]([SubResource("Resource_3fcpq"), SubResource("Resource_kk4av"), SubResource("Resource_jcve0"), SubResource("Resource_7mydf"), SubResource("Resource_1mxjj"), SubResource("Resource_7aw8q"), SubResource("Resource_74ep7"), SubResource("Resource_e6io6"), SubResource("Resource_oeuki"), SubResource("Resource_5ka12"), SubResource("Resource_2hv2l"), SubResource("Resource_n4bus"), SubResource("Resource_8lrlq"), SubResource("Resource_owktl"), SubResource("Resource_dct2q")])

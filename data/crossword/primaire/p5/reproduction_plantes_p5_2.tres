@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://ct87gs1p37faj"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_erd14"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_3o0ea"]
+
+[sub_resource type="Resource" id="Resource_k2ltu"]
+script = ExtResource("1_erd14")
+word = "FRUCTIFICATION"
+hint = "Phénomène de transformation par fécondation des fleurs en fruits."
+
+[sub_resource type="Resource" id="Resource_bdqan"]
+script = ExtResource("1_erd14")
+word = "DISSEMINATION"
+hint = "Action de répandre, d'étaler des graines de plantes dans un champ."
+
+[sub_resource type="Resource" id="Resource_b52cg"]
+script = ExtResource("1_erd14")
+word = "TIGE"
+hint = "Partie allongée des plantes qui porte les feuilles."
+
+[sub_resource type="Resource" id="Resource_nmjt7"]
+script = ExtResource("1_erd14")
+word = "ABEILLE"
+hint = "Insecte pollinisateur qui permet d'obtenir du miel."
+
+[sub_resource type="Resource" id="Resource_dnvi1"]
+script = ExtResource("1_erd14")
+word = "HYDROGAMIE"
+hint = "Transport des grains de pollen par l'eau."
+
+[sub_resource type="Resource" id="Resource_fide3"]
+script = ExtResource("1_erd14")
+word = "ANEMOGAMIE"
+hint = "Transport des grains de pollen par le vent, l'air."
+
+[sub_resource type="Resource" id="Resource_xxrm6"]
+script = ExtResource("1_erd14")
+word = "GROSEILLIER"
+hint = "Arbuste cultivé pour ses fruits, les groseilles."
+
+[sub_resource type="Resource" id="Resource_gmrei"]
+script = ExtResource("1_erd14")
+word = "GERMINATION"
+hint = "Etapes par lesquelles une graine se développe et devient une plante."
+
+[resource]
+script = ExtResource("2_3o0ea")
+clues = Array[ExtResource("1_erd14")]([SubResource("Resource_k2ltu"), SubResource("Resource_bdqan"), SubResource("Resource_b52cg"), SubResource("Resource_nmjt7"), SubResource("Resource_dnvi1"), SubResource("Resource_fide3"), SubResource("Resource_xxrm6"), SubResource("Resource_gmrei")])

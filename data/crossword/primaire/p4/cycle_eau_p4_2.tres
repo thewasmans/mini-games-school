@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bnqfln0yf346p"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_35qcb"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_o00ry"]
+
+[sub_resource type="Resource" id="Resource_rcwr2"]
+script = ExtResource("1_35qcb")
+word = "MATIERE"
+hint = "Tout ce qui compose les corps qui nous entourent, tout ce qui a une masse et un volume."
+
+[sub_resource type="Resource" id="Resource_7ru5q"]
+script = ExtResource("1_35qcb")
+word = "GAZ"
+hint = "Etat où la matière est complètement désorganisée, comme l'air."
+
+[sub_resource type="Resource" id="Resource_bjeek"]
+script = ExtResource("1_35qcb")
+word = "CONDENSATION"
+hint = "Phénomène physique de changement d'état de la matière d'un état gazeux à un état compact."
+
+[sub_resource type="Resource" id="Resource_toxwl"]
+script = ExtResource("1_35qcb")
+word = "MER"
+hint = "L'eau des fleuves s'y jette."
+
+[sub_resource type="Resource" id="Resource_50j5p"]
+script = ExtResource("1_35qcb")
+word = "LIQUEFACTION"
+hint = "Changement d'état qui fait passer un corps de l'état gazeux à l'état liquide."
+
+[sub_resource type="Resource" id="Resource_tk1sv"]
+script = ExtResource("1_35qcb")
+word = "SUBLIMATION"
+hint = "Passage de l'état solide à l'état gazeux de la matière."
+
+[sub_resource type="Resource" id="Resource_6j865"]
+script = ExtResource("1_35qcb")
+word = "GELEE"
+hint = "Caractérise l'eau à l'état solide lorsqu'elle est glacée."
+
+[sub_resource type="Resource" id="Resource_4boq3"]
+script = ExtResource("1_35qcb")
+word = "FUSION"
+hint = "Passage de l'état solide vers l'état liquide."
+
+[sub_resource type="Resource" id="Resource_y6jyi"]
+script = ExtResource("1_35qcb")
+word = "PRECIPITATION"
+hint = "Terme qui caractérise toutes les formes de l'eau à l'état liquide ou solide provenant de l'atmosphère."
+
+[sub_resource type="Resource" id="Resource_dxiud"]
+script = ExtResource("1_35qcb")
+word = "LIQUIDE"
+hint = "Etat de la matière où les éléments sont faiblement liés, forme de fluide déformable."
+
+[sub_resource type="Resource" id="Resource_2kyft"]
+script = ExtResource("1_35qcb")
+word = "REVERSIBLE"
+hint = "Caractérise une situation où il est possible de revenir à l'état initial, au départ."
+
+[resource]
+script = ExtResource("2_o00ry")
+clues = Array[ExtResource("1_35qcb")]([SubResource("Resource_rcwr2"), SubResource("Resource_7ru5q"), SubResource("Resource_bjeek"), SubResource("Resource_toxwl"), SubResource("Resource_50j5p"), SubResource("Resource_tk1sv"), SubResource("Resource_6j865"), SubResource("Resource_4boq3"), SubResource("Resource_y6jyi"), SubResource("Resource_dxiud"), SubResource("Resource_2kyft")])

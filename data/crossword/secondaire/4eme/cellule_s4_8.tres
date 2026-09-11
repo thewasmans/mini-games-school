@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://druqctxgvgv5q"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_4wnhl"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_5fgyj"]
+
+[sub_resource type="Resource" id="Resource_uq2rw"]
+script = ExtResource("1_4wnhl")
+word = "POLLINISATION"
+hint = "Transport du pollen des étamines (partie mâle des fleurs) au pistil (partie femelle)."
+
+[sub_resource type="Resource" id="Resource_3o0rs"]
+script = ExtResource("1_4wnhl")
+word = "PURE"
+hint = "Lignée dont les caractères étudiés sont bien fixés et ne se modifient pas au cours des générations successives."
+
+[sub_resource type="Resource" id="Resource_1e3mx"]
+script = ExtResource("1_4wnhl")
+word = "MONOHYBRIDISME"
+hint = "L'étude de la transmission d’un caractère."
+
+[sub_resource type="Resource" id="Resource_hdtse"]
+script = ExtResource("1_4wnhl")
+word = "MENDEL"
+hint = "Père fondateur de la génétique."
+
+[sub_resource type="Resource" id="Resource_xqguk"]
+script = ExtResource("1_4wnhl")
+word = "HAPLOIDE"
+hint = "Caractérise une cellule dont le noyau ne comprend qu'un seul exemplaire de chaque chromosome (n=23)."
+
+[sub_resource type="Resource" id="Resource_2nkud"]
+script = ExtResource("1_4wnhl")
+word = "ALLELE"
+hint = "Variant qu'un gène peut présenter."
+
+[sub_resource type="Resource" id="Resource_wuh23"]
+script = ExtResource("1_4wnhl")
+word = "DREPANOCYTOSE"
+hint = "Maladie qui se manifeste par la formation d’une protéine d’hémoglobine anormale qui déforme les globules rouges."
+
+[sub_resource type="Resource" id="Resource_jkq0x"]
+script = ExtResource("1_4wnhl")
+word = "PUNNETT"
+hint = "Nom du scientifique ayant proposé le tableau de croisement en génétique."
+
+[sub_resource type="Resource" id="Resource_8taac"]
+script = ExtResource("1_4wnhl")
+word = "PHENOTYPE"
+hint = "Ensemble des caractères apparents d'un individu."
+
+[sub_resource type="Resource" id="Resource_kgr2v"]
+script = ExtResource("1_4wnhl")
+word = "LYSOSOME"
+hint = "Vésicules contenant des enzymes hydrolytiques qui digèrent des macromolécules."
+
+[sub_resource type="Resource" id="Resource_eaokh"]
+script = ExtResource("1_4wnhl")
+word = "GENOTYPE"
+hint = "Information portée par le génome d'un organisme, par opposition au phénotype."
+
+[resource]
+script = ExtResource("2_5fgyj")
+clues = Array[ExtResource("1_4wnhl")]([SubResource("Resource_uq2rw"), SubResource("Resource_3o0rs"), SubResource("Resource_1e3mx"), SubResource("Resource_hdtse"), SubResource("Resource_xqguk"), SubResource("Resource_2nkud"), SubResource("Resource_wuh23"), SubResource("Resource_jkq0x"), SubResource("Resource_8taac"), SubResource("Resource_kgr2v"), SubResource("Resource_eaokh")])

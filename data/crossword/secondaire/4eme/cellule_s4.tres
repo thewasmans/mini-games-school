@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://ccvhq4tbhmbgn"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_8chte"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_sylir"]
+
+[sub_resource type="Resource" id="Resource_fdxnj"]
+script = ExtResource("1_8chte")
+word = "TRANSGENESE"
+hint = "Méthode de transfert en génétique permettant d’obtenir un OGM."
+
+[sub_resource type="Resource" id="Resource_dd6ch"]
+script = ExtResource("1_8chte")
+word = "NUCLEOIDE"
+hint = "Région des cellules procaryotes où se trouve le matériel génétique."
+
+[sub_resource type="Resource" id="Resource_i86h4"]
+script = ExtResource("1_8chte")
+word = "PHAGE"
+hint = "Nom donné à des virus qui n'infectent que des bactéries."
+
+[sub_resource type="Resource" id="Resource_au0j7"]
+script = ExtResource("1_8chte")
+word = "GLUCOSE"
+hint = "Monosaccharide le plus utilisé par la cellule animale."
+
+[sub_resource type="Resource" id="Resource_qufhi"]
+script = ExtResource("1_8chte")
+word = "THYMINE"
+hint = "Base azotée caractérisée par la lettre T."
+
+[sub_resource type="Resource" id="Resource_5gpy7"]
+script = ExtResource("1_8chte")
+word = "PLASMIDE"
+hint = "Portion d’ADN distincte de l’ADN chromosomique."
+
+[sub_resource type="Resource" id="Resource_g6fwl"]
+script = ExtResource("1_8chte")
+word = "GUANINE"
+hint = "Base azotée caractérisée par la lettre G."
+
+[sub_resource type="Resource" id="Resource_n3vew"]
+script = ExtResource("1_8chte")
+word = "REIN"
+hint = "Organe de filtration du sang et qui produit l'urine."
+
+[sub_resource type="Resource" id="Resource_32y6l"]
+script = ExtResource("1_8chte")
+word = "SOLVANT"
+hint = "Se dit d’une substance capable de dissoudre un soluté."
+
+[sub_resource type="Resource" id="Resource_aekqp"]
+script = ExtResource("1_8chte")
+word = "ESSENTIELS"
+hint = "Se dit des acides aminés qui ne peuvent être synthétisés par l’organisme."
+
+[sub_resource type="Resource" id="Resource_0lpm2"]
+script = ExtResource("1_8chte")
+word = "AMIDON"
+hint = "Réserve glucidique des végétaux."
+
+[resource]
+script = ExtResource("2_sylir")
+clues = Array[ExtResource("1_8chte")]([SubResource("Resource_fdxnj"), SubResource("Resource_dd6ch"), SubResource("Resource_i86h4"), SubResource("Resource_au0j7"), SubResource("Resource_qufhi"), SubResource("Resource_5gpy7"), SubResource("Resource_g6fwl"), SubResource("Resource_n3vew"), SubResource("Resource_32y6l"), SubResource("Resource_aekqp"), SubResource("Resource_0lpm2")])

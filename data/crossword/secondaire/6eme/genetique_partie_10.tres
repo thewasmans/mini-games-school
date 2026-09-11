@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://tp8l5y44p2c6"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_pfm2v"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_guceg"]
+
+[sub_resource type="Resource" id="Resource_8dkj6"]
+script = ExtResource("1_pfm2v")
+word = "FIXISME"
+hint = "Théorie qui stipule que les espèces ont été créées par la main divine et sont immuables."
+
+[sub_resource type="Resource" id="Resource_a5ttc"]
+script = ExtResource("1_pfm2v")
+word = "LAMARCKISME"
+hint = "Théorie basée sur la loi de l'usage en évolution."
+
+[sub_resource type="Resource" id="Resource_bwmqc"]
+script = ExtResource("1_pfm2v")
+word = "EXTINCTION"
+hint = "Disparition majeure d'espèces dans un écosystème."
+
+[sub_resource type="Resource" id="Resource_gxsb1"]
+script = ExtResource("1_pfm2v")
+word = "XENOGREFFE"
+hint = "Transplantation d'un greffon venant d'un animal vers un humain."
+
+[sub_resource type="Resource" id="Resource_dj3em"]
+script = ExtResource("1_pfm2v")
+word = "UV"
+hint = "Rayon provenant du Soleil et responsable du cancer de la peau."
+
+[sub_resource type="Resource" id="Resource_ke40p"]
+script = ExtResource("1_pfm2v")
+word = "COMMUNAUTE"
+hint = "Ensemble de populations, d'espèces différentes dans un environnement."
+
+[sub_resource type="Resource" id="Resource_ufg2b"]
+script = ExtResource("1_pfm2v")
+word = "INVASIVE"
+hint = "Terme utilisé pour informer d'une espèce qui est étrangère et pose problème dans l'environnement introduit."
+
+[sub_resource type="Resource" id="Resource_mbx0k"]
+script = ExtResource("1_pfm2v")
+word = "PHOTOSYNTHESE"
+hint = "Processus biologique permettant de fabriquer de l'énergie à partir des rayons du Soleil."
+
+[sub_resource type="Resource" id="Resource_p5gor"]
+script = ExtResource("1_pfm2v")
+word = "MILLER"
+hint = "Scientifique à l'origine de l'expérience de la soupe primitive."
+
+[sub_resource type="Resource" id="Resource_gswp4"]
+script = ExtResource("1_pfm2v")
+word = "CLADE"
+hint = "Ancêtre commun avec tous ses descendants qui possèdent une même innovation évolutive."
+
+[sub_resource type="Resource" id="Resource_6wltl"]
+script = ExtResource("1_pfm2v")
+word = "DIOXYGENE"
+hint = "Molécule indispensable à la respiration des animaux."
+
+[sub_resource type="Resource" id="Resource_y2mcv"]
+script = ExtResource("1_pfm2v")
+word = "HOMOLOGUE"
+hint = "Se dit d'une structure identique partagée par deux organismes."
+
+[sub_resource type="Resource" id="Resource_wsl7j"]
+script = ExtResource("1_pfm2v")
+word = "INNOVATION"
+hint = "Mutation qui permet une modification d'un caractère (phénotype) donnant un avantage à son porteur."
+
+[sub_resource type="Resource" id="Resource_kyldx"]
+script = ExtResource("1_pfm2v")
+word = "POPULATION"
+hint = "Ensemble d'individus de la même espèce."
+
+[sub_resource type="Resource" id="Resource_8n0ln"]
+script = ExtResource("1_pfm2v")
+word = "ENDOSYMBIOSE"
+hint = "Type de symbiose où un des organismes vit dans le corps de l'autre."
+
+[resource]
+script = ExtResource("2_guceg")
+clues = Array[ExtResource("1_pfm2v")]([SubResource("Resource_8dkj6"), SubResource("Resource_a5ttc"), SubResource("Resource_bwmqc"), SubResource("Resource_gxsb1"), SubResource("Resource_dj3em"), SubResource("Resource_ke40p"), SubResource("Resource_ufg2b"), SubResource("Resource_mbx0k"), SubResource("Resource_p5gor"), SubResource("Resource_gswp4"), SubResource("Resource_6wltl"), SubResource("Resource_y2mcv"), SubResource("Resource_wsl7j"), SubResource("Resource_kyldx"), SubResource("Resource_8n0ln")])

@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bs6d5uyqo8va"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_db8e2"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_bond4"]
+
+[sub_resource type="Resource" id="Resource_g1x3o"]
+script = ExtResource("1_db8e2")
+word = "ADAPTATION"
+hint = "Changement biologique et/ou physique d'une espèce par rapport à son environnement."
+
+[sub_resource type="Resource" id="Resource_1s1yf"]
+script = ExtResource("1_db8e2")
+word = "CHROMOSOME"
+hint = "Structure constituée d'ADN et de protéines."
+
+[sub_resource type="Resource" id="Resource_mlffs"]
+script = ExtResource("1_db8e2")
+word = "NEODARWINISME"
+hint = "Théorie selon laquelle les espèces évoluent par sélection naturelle, sans hérédité des caractères acquis."
+
+[sub_resource type="Resource" id="Resource_lbdv6"]
+script = ExtResource("1_db8e2")
+word = "PHENOTYPE"
+hint = "Ensemble des caractères apparents d'un individu."
+
+[sub_resource type="Resource" id="Resource_umqjj"]
+script = ExtResource("1_db8e2")
+word = "DIHYBRIDISME"
+hint = "L'étude de la transmission de deux caractères."
+
+[sub_resource type="Resource" id="Resource_efinh"]
+script = ExtResource("1_db8e2")
+word = "DERIVE"
+hint = "Phénomène en génétique qui se caractérise par l'évolution d'une espèce causée par des événements aléatoires."
+
+[sub_resource type="Resource" id="Resource_pyyb8"]
+script = ExtResource("1_db8e2")
+word = "MORGAN"
+hint = "Scientifique qui a étudié le développement d'une petite mouche des fruits."
+
+[sub_resource type="Resource" id="Resource_2n42r"]
+script = ExtResource("1_db8e2")
+word = "LOCI"
+hint = "Endroits spécifiques où se situe un gène."
+
+[sub_resource type="Resource" id="Resource_ryi1b"]
+script = ExtResource("1_db8e2")
+word = "GRIPPE"
+hint = "Maladie provoquée par le virus Influenza, caractérisé par de la fièvre et de la fatigue."
+
+[sub_resource type="Resource" id="Resource_g7req"]
+script = ExtResource("1_db8e2")
+word = "PURE"
+hint = "Lignée comprenant des descendants homozygotes et qui proviennent d'individus ayant un patrimoine génétique similaire."
+
+[sub_resource type="Resource" id="Resource_mv1as"]
+script = ExtResource("1_db8e2")
+word = "XY"
+hint = "Définit le sexe masculin au niveau génétique."
+
+[sub_resource type="Resource" id="Resource_jhoya"]
+script = ExtResource("1_db8e2")
+word = "XX"
+hint = "Définit le sexe féminin au niveau génétique."
+
+[sub_resource type="Resource" id="Resource_opqv7"]
+script = ExtResource("1_db8e2")
+word = "RECESSIF"
+hint = "Se dit du caractère qui s'exprime uniquement s'il est présent sur les deux allèles."
+
+[sub_resource type="Resource" id="Resource_hurbr"]
+script = ExtResource("1_db8e2")
+word = "HYPOTHESE"
+hint = "Proposition visant à fournir une explication vraisemblable d'un ensemble de faits, et qui doit être soumise au contrôle de l'expérience."
+
+[sub_resource type="Resource" id="Resource_7obdg"]
+script = ExtResource("1_db8e2")
+word = "PEPTIDE"
+hint = "Courtes chaînes d'acides aminés."
+
+[resource]
+script = ExtResource("2_bond4")
+clues = Array[ExtResource("1_db8e2")]([SubResource("Resource_g1x3o"), SubResource("Resource_1s1yf"), SubResource("Resource_mlffs"), SubResource("Resource_lbdv6"), SubResource("Resource_umqjj"), SubResource("Resource_efinh"), SubResource("Resource_pyyb8"), SubResource("Resource_2n42r"), SubResource("Resource_ryi1b"), SubResource("Resource_g7req"), SubResource("Resource_mv1as"), SubResource("Resource_jhoya"), SubResource("Resource_opqv7"), SubResource("Resource_hurbr"), SubResource("Resource_7obdg")])

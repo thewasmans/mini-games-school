@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://byf5j4e6yg8ff"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_8xoe4"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_ptxd6"]
+
+[sub_resource type="Resource" id="Resource_evnl5"]
+script = ExtResource("1_8xoe4")
+word = "PLUIE"
+hint = "Petites gouttes d'eau qui tombent du ciel depuis les nuages."
+
+[sub_resource type="Resource" id="Resource_0iqu1"]
+script = ExtResource("1_8xoe4")
+word = "SAISON"
+hint = "Période de temps divisée en 4 parties : été, hiver, automne et printemps."
+
+[sub_resource type="Resource" id="Resource_v2pol"]
+script = ExtResource("1_8xoe4")
+word = "NEIGE"
+hint = "Petit flocon qui tombe en hiver lorsqu'il fait froid."
+
+[sub_resource type="Resource" id="Resource_ltkq2"]
+script = ExtResource("1_8xoe4")
+word = "GEL"
+hint = "Froid intense."
+
+[sub_resource type="Resource" id="Resource_rqkva"]
+script = ExtResource("1_8xoe4")
+word = "CYCLONE"
+hint = "Tempête violente caractérisée par des vents tourbillonnants, équivalent de l'ouragan."
+
+[sub_resource type="Resource" id="Resource_foy5q"]
+script = ExtResource("1_8xoe4")
+word = "THERMOMETRE"
+hint = "Instrument de mesure de la température."
+
+[sub_resource type="Resource" id="Resource_wqw4d"]
+script = ExtResource("1_8xoe4")
+word = "FUSION"
+hint = "Changement d'état de la matière lorsqu'on chauffe de la glace."
+
+[sub_resource type="Resource" id="Resource_5oj81"]
+script = ExtResource("1_8xoe4")
+word = "GIROUETTE"
+hint = "Instrument de mesure de direction du vent."
+
+[sub_resource type="Resource" id="Resource_jv8k3"]
+script = ExtResource("1_8xoe4")
+word = "BROUILLARD"
+hint = "Phénomène naturel produit par de fines gouttelettes d'eau en suspension dans l'air qui limitent la visibilité."
+
+[sub_resource type="Resource" id="Resource_50sxh"]
+script = ExtResource("1_8xoe4")
+word = "EXPERIENCE"
+hint = "Epreuve, test pour démontrer ou étudier quelque chose."
+
+[resource]
+script = ExtResource("2_ptxd6")
+clues = Array[ExtResource("1_8xoe4")]([SubResource("Resource_evnl5"), SubResource("Resource_0iqu1"), SubResource("Resource_v2pol"), SubResource("Resource_ltkq2"), SubResource("Resource_rqkva"), SubResource("Resource_foy5q"), SubResource("Resource_wqw4d"), SubResource("Resource_5oj81"), SubResource("Resource_jv8k3"), SubResource("Resource_50sxh")])

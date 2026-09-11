@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://q2dfb82mx586"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_sq3su"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_v885d"]
+
+[sub_resource type="Resource" id="Resource_wl1rb"]
+script = ExtResource("1_sq3su")
+word = "AUTOMATISME"
+hint = "Mécanisme cérébral qui se met rapidement en place."
+
+[sub_resource type="Resource" id="Resource_hknrp"]
+script = ExtResource("1_sq3su")
+word = "PERMANENCE"
+hint = "Théorie proposée par Piaget concernant la vision des objets chez les enfants."
+
+[sub_resource type="Resource" id="Resource_0oiya"]
+script = ExtResource("1_sq3su")
+word = "EPISSAGE"
+hint = "Processus de sélection de neurones à l'enfance."
+
+[sub_resource type="Resource" id="Resource_r0wv3"]
+script = ExtResource("1_sq3su")
+word = "INHIBITION"
+hint = "Capacité de résistance mentale à un automatisme."
+
+[sub_resource type="Resource" id="Resource_2c5y3"]
+script = ExtResource("1_sq3su")
+word = "CONSERVATION"
+hint = "Théorie proposée par Piaget concernant l'heuristique longueur est égal à nombre."
+
+[sub_resource type="Resource" id="Resource_jslgs"]
+script = ExtResource("1_sq3su")
+word = "EEG"
+hint = "Acronyme d'électroencéphalographie."
+
+[sub_resource type="Resource" id="Resource_wgr0j"]
+script = ExtResource("1_sq3su")
+word = "RECYCLAGE"
+hint = "Capacité de neurones visuels à devenir des neurones de la lecture."
+
+[sub_resource type="Resource" id="Resource_45kpo"]
+script = ExtResource("1_sq3su")
+word = "EKMAN"
+hint = "Théorie qui concerne les 6 émotions primaires."
+
+[sub_resource type="Resource" id="Resource_877fm"]
+script = ExtResource("1_sq3su")
+word = "PREFRONTAL"
+hint = "Partie du cerveau mature vers 25 ans."
+
+[sub_resource type="Resource" id="Resource_g1g7c"]
+script = ExtResource("1_sq3su")
+word = "PEUR"
+hint = "Joie, colère, surprise, dégoût, tristesse et..."
+
+[sub_resource type="Resource" id="Resource_iy5kj"]
+script = ExtResource("1_sq3su")
+word = "LIMBIQUE"
+hint = "Nom du système impliqué dans les états émotionnels et la mémoire."
+
+[sub_resource type="Resource" id="Resource_fhbty"]
+script = ExtResource("1_sq3su")
+word = "DROGUE"
+hint = "Se dit d'une substance psychoactive qui module l'humeur."
+
+[sub_resource type="Resource" id="Resource_fbv2j"]
+script = ExtResource("1_sq3su")
+word = "STIMULATION"
+hint = "Technique mise en place avec l'âge pour travailler les fonctions cognitives, comme la mémoire."
+
+[sub_resource type="Resource" id="Resource_j6pjc"]
+script = ExtResource("1_sq3su")
+word = "RECOMPENSE"
+hint = "Nom du système impliqué dans l'état de bien être."
+
+[sub_resource type="Resource" id="Resource_kmlge"]
+script = ExtResource("1_sq3su")
+word = "AMYGDALE"
+hint = "Structure cérébrale qui s'actionne lors d'un stress."
+
+[resource]
+script = ExtResource("2_v885d")
+clues = Array[ExtResource("1_sq3su")]([SubResource("Resource_wl1rb"), SubResource("Resource_hknrp"), SubResource("Resource_0oiya"), SubResource("Resource_r0wv3"), SubResource("Resource_2c5y3"), SubResource("Resource_jslgs"), SubResource("Resource_wgr0j"), SubResource("Resource_45kpo"), SubResource("Resource_877fm"), SubResource("Resource_g1g7c"), SubResource("Resource_iy5kj"), SubResource("Resource_fhbty"), SubResource("Resource_fbv2j"), SubResource("Resource_j6pjc"), SubResource("Resource_kmlge")])

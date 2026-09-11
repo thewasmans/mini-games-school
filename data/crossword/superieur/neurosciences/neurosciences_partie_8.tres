@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://b5a564lv524dd"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_nb5x5"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_k6pa0"]
+
+[sub_resource type="Resource" id="Resource_2gj83"]
+script = ExtResource("1_nb5x5")
+word = "PROSOPAGNOSIE"
+hint = "Syndrome où le patient voit des visages déformés."
+
+[sub_resource type="Resource" id="Resource_6jrkn"]
+script = ExtResource("1_nb5x5")
+word = "GERSTMANN"
+hint = "Syndrome qui se caractérise par une acalculie et une agnosie."
+
+[sub_resource type="Resource" id="Resource_flyuc"]
+script = ExtResource("1_nb5x5")
+word = "ILLUSION"
+hint = "Conflit entre la perception et la réalité."
+
+[sub_resource type="Resource" id="Resource_fyiis"]
+script = ExtResource("1_nb5x5")
+word = "DORSALE"
+hint = "Voie nerveuse dans le haut du cerveau qui localise les objets."
+
+[sub_resource type="Resource" id="Resource_jqmhj"]
+script = ExtResource("1_nb5x5")
+word = "VENTRALE"
+hint = "Voie nerveuse dans le bas du cerveau qui identifie les objets."
+
+[sub_resource type="Resource" id="Resource_3db10"]
+script = ExtResource("1_nb5x5")
+word = "ATAXIE"
+hint = "Trouble de la marche affectant le cervelet."
+
+[sub_resource type="Resource" id="Resource_su5ye"]
+script = ExtResource("1_nb5x5")
+word = "ISCHEMIQUE"
+hint = "Forme d'AVC qui se caractérise par un thrombus bloquant l'artère."
+
+[sub_resource type="Resource" id="Resource_3u32p"]
+script = ExtResource("1_nb5x5")
+word = "HYPOTHALAMUS"
+hint = "Petite glande dans le cerveau impliquée dans de nombreuses fonctions comme le sommeil ou la faim."
+
+[sub_resource type="Resource" id="Resource_6k7ar"]
+script = ExtResource("1_nb5x5")
+word = "SENSATION"
+hint = "Variation dans un milieu."
+
+[sub_resource type="Resource" id="Resource_di6jc"]
+script = ExtResource("1_nb5x5")
+word = "DYSPHASIE"
+hint = "Difficulté dans la communication orale."
+
+[sub_resource type="Resource" id="Resource_vm6sv"]
+script = ExtResource("1_nb5x5")
+word = "CAROTIDE"
+hint = "Artère du cou qui alimente le cerveau."
+
+[sub_resource type="Resource" id="Resource_67itx"]
+script = ExtResource("1_nb5x5")
+word = "FOIE"
+hint = "Organe qui stocke et donne le sucre lorsqu'il en faut."
+
+[sub_resource type="Resource" id="Resource_nhj6w"]
+script = ExtResource("1_nb5x5")
+word = "DIASCHISIS"
+hint = "Perte de fonction cérébrale éloignée de la lésion."
+
+[sub_resource type="Resource" id="Resource_y4htd"]
+script = ExtResource("1_nb5x5")
+word = "ADRENALINE"
+hint = "Hormone libérée lors d'un stress permettant de dilater les pupilles."
+
+[sub_resource type="Resource" id="Resource_5506b"]
+script = ExtResource("1_nb5x5")
+word = "HEMORRAGIQUE"
+hint = "Forme d'AVC qui se caractérise par une rupture d'anévrisme."
+
+[resource]
+script = ExtResource("2_k6pa0")
+clues = Array[ExtResource("1_nb5x5")]([SubResource("Resource_2gj83"), SubResource("Resource_6jrkn"), SubResource("Resource_flyuc"), SubResource("Resource_fyiis"), SubResource("Resource_jqmhj"), SubResource("Resource_3db10"), SubResource("Resource_su5ye"), SubResource("Resource_3u32p"), SubResource("Resource_6k7ar"), SubResource("Resource_di6jc"), SubResource("Resource_vm6sv"), SubResource("Resource_67itx"), SubResource("Resource_nhj6w"), SubResource("Resource_y4htd"), SubResource("Resource_5506b")])

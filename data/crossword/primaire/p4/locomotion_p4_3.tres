@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://ei36k0fcg2m2"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_1jnp2"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_ghvw5"]
+
+[sub_resource type="Resource" id="Resource_wo4jl"]
+script = ExtResource("1_1jnp2")
+word = "TETE"
+hint = "Partie supérieure du fémur."
+
+[sub_resource type="Resource" id="Resource_k0lg2"]
+script = ExtResource("1_1jnp2")
+word = "ULNA"
+hint = "Autre terme scientifique pour désigner le cubitus."
+
+[sub_resource type="Resource" id="Resource_n18i1"]
+script = ExtResource("1_1jnp2")
+word = "EQUILIBRE"
+hint = "Capacité du corps à être maintenu droit sans tomber."
+
+[sub_resource type="Resource" id="Resource_3sqnl"]
+script = ExtResource("1_1jnp2")
+word = "TENDON"
+hint = "Tissu qui relie l'os au muscle."
+
+[sub_resource type="Resource" id="Resource_0buje"]
+script = ExtResource("1_1jnp2")
+word = "ARTICULATION"
+hint = "Jointure, point de contact entre deux ou plusieurs os."
+
+[sub_resource type="Resource" id="Resource_ry2le"]
+script = ExtResource("1_1jnp2")
+word = "PERONE"
+hint = "Os situé dans la jambe, derrière le tibia."
+
+[sub_resource type="Resource" id="Resource_ml0k8"]
+script = ExtResource("1_1jnp2")
+word = "LIGAMENT"
+hint = "Ensemble de fibres qui unissent deux os au niveau d'une articulation."
+
+[sub_resource type="Resource" id="Resource_4ooj4"]
+script = ExtResource("1_1jnp2")
+word = "NERF"
+hint = "Faisceau de fibres nerveuses issues de neurones."
+
+[sub_resource type="Resource" id="Resource_7xfbn"]
+script = ExtResource("1_1jnp2")
+word = "PHALANGE"
+hint = "Pièce osseuse que l'on retrouve au niveau des doigts."
+
+[sub_resource type="Resource" id="Resource_1ruo0"]
+script = ExtResource("1_1jnp2")
+word = "CERVEAU"
+hint = "Organe responsable des fonctions essentielles."
+
+[sub_resource type="Resource" id="Resource_tagrq"]
+script = ExtResource("1_1jnp2")
+word = "FLEXION"
+hint = "Mouvement d'un membre du corps qui se plie ou se courbe."
+
+[sub_resource type="Resource" id="Resource_e4wai"]
+script = ExtResource("1_1jnp2")
+word = "DISQUE"
+hint = "Articulation située entre les vertèbres de la colonne."
+
+[resource]
+script = ExtResource("2_ghvw5")
+clues = Array[ExtResource("1_1jnp2")]([SubResource("Resource_wo4jl"), SubResource("Resource_k0lg2"), SubResource("Resource_n18i1"), SubResource("Resource_3sqnl"), SubResource("Resource_0buje"), SubResource("Resource_ry2le"), SubResource("Resource_ml0k8"), SubResource("Resource_4ooj4"), SubResource("Resource_7xfbn"), SubResource("Resource_1ruo0"), SubResource("Resource_tagrq"), SubResource("Resource_e4wai")])

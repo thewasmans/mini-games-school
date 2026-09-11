@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://ba7d583i23du"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_utj35"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_llppn"]
+
+[sub_resource type="Resource" id="Resource_vtl24"]
+script = ExtResource("1_utj35")
+word = "BAROMETRE"
+hint = "Instrument de mesure de la pression."
+
+[sub_resource type="Resource" id="Resource_6rkuv"]
+script = ExtResource("1_utj35")
+word = "ETATS"
+hint = "Formes sous lesquelles une substance peut exister."
+
+[sub_resource type="Resource" id="Resource_0gmm4"]
+script = ExtResource("1_utj35")
+word = "PLUVIOMETRE"
+hint = "Instrument de mesure de quantité de pluie."
+
+[sub_resource type="Resource" id="Resource_kojql"]
+script = ExtResource("1_utj35")
+word = "VOLCAN"
+hint = "Montagne de roches magmatiques qui peut cracher de la lave."
+
+[sub_resource type="Resource" id="Resource_fnxen"]
+script = ExtResource("1_utj35")
+word = "VENT"
+hint = "Déplacement de l'air."
+
+[sub_resource type="Resource" id="Resource_orjim"]
+script = ExtResource("1_utj35")
+word = "OCEAN"
+hint = "Très grande étendue d'eau de mer qui entoure les différents continents de la Terre."
+
+[sub_resource type="Resource" id="Resource_r7emi"]
+script = ExtResource("1_utj35")
+word = "EST"
+hint = "Endroit où le Soleil se lève."
+
+[sub_resource type="Resource" id="Resource_3xomo"]
+script = ExtResource("1_utj35")
+word = "BULLETIN"
+hint = "Rapport de la météo observée en un temps et un endroit donné, se dit d'un rapport de score."
+
+[sub_resource type="Resource" id="Resource_iyy13"]
+script = ExtResource("1_utj35")
+word = "SOLIDIFICATION"
+hint = "Changement d'état de la matière lorsqu'on gèle de l'eau."
+
+[sub_resource type="Resource" id="Resource_qcaxl"]
+script = ExtResource("1_utj35")
+word = "TORNADE"
+hint = "Tourbillon de vents qui suit un couloir et peut se déplacer à 300km/h."
+
+[sub_resource type="Resource" id="Resource_ua4nr"]
+script = ExtResource("1_utj35")
+word = "MATIERE"
+hint = "Se dit de tout ce qui occupe un espace et possède une masse."
+
+[resource]
+script = ExtResource("2_llppn")
+clues = Array[ExtResource("1_utj35")]([SubResource("Resource_vtl24"), SubResource("Resource_6rkuv"), SubResource("Resource_0gmm4"), SubResource("Resource_kojql"), SubResource("Resource_fnxen"), SubResource("Resource_orjim"), SubResource("Resource_r7emi"), SubResource("Resource_3xomo"), SubResource("Resource_iyy13"), SubResource("Resource_qcaxl"), SubResource("Resource_ua4nr")])

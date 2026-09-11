@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cp8w8ropl2qsn"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_q05i4"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_cq8my"]
+
+[sub_resource type="Resource" id="Resource_yjsjc"]
+script = ExtResource("1_q05i4")
+word = "THYMINE"
+hint = "Base azotée caractérisée par la lettre T."
+
+[sub_resource type="Resource" id="Resource_isnvc"]
+script = ExtResource("1_q05i4")
+word = "RECESSIF"
+hint = "Se dit du caractère qui s'exprime uniquement s'il est présent sur les deux allèles."
+
+[sub_resource type="Resource" id="Resource_pa2is"]
+script = ExtResource("1_q05i4")
+word = "HOMOZYGOTE"
+hint = "Individu qui possède deux allèles identiques pour un gène donné."
+
+[sub_resource type="Resource" id="Resource_8qt4g"]
+script = ExtResource("1_q05i4")
+word = "GENETIQUE"
+hint = "Science qui s'intéresse aux séquences génétiques."
+
+[sub_resource type="Resource" id="Resource_6q4bi"]
+script = ExtResource("1_q05i4")
+word = "AMIDON"
+hint = "Réserve glucidique des végétaux."
+
+[sub_resource type="Resource" id="Resource_loey8"]
+script = ExtResource("1_q05i4")
+word = "GONOSOME"
+hint = "Chromosome sexuel."
+
+[sub_resource type="Resource" id="Resource_oddyc"]
+script = ExtResource("1_q05i4")
+word = "HEREDITE"
+hint = "Science qui s'intéresse à la transmission des gènes des parents vers les descendants."
+
+[sub_resource type="Resource" id="Resource_84dxs"]
+script = ExtResource("1_q05i4")
+word = "DIPLOIDE"
+hint = "Caractérise une cellule dont le noyau comprend deux exemplaires de chaque chromosome (2n=46)."
+
+[resource]
+script = ExtResource("2_cq8my")
+clues = Array[ExtResource("1_q05i4")]([SubResource("Resource_yjsjc"), SubResource("Resource_isnvc"), SubResource("Resource_pa2is"), SubResource("Resource_8qt4g"), SubResource("Resource_6q4bi"), SubResource("Resource_loey8"), SubResource("Resource_oddyc"), SubResource("Resource_84dxs")])

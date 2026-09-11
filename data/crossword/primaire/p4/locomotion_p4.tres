@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dbljgm3gv3hfq"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_javfb"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_8xwat"]
+
+[sub_resource type="Resource" id="Resource_w7ibr"]
+script = ExtResource("1_javfb")
+word = "CRANE"
+hint = "Ensemble d'os qui protège le cerveau."
+
+[sub_resource type="Resource" id="Resource_hiopj"]
+script = ExtResource("1_javfb")
+word = "FEMUR"
+hint = "Os qui se situe dans la cuisse dont la tête s'insère dans le bassin."
+
+[sub_resource type="Resource" id="Resource_8052v"]
+script = ExtResource("1_javfb")
+word = "VIS"
+hint = "Implant permettant de fixer un os, de le stabiliser."
+
+[sub_resource type="Resource" id="Resource_1vkyf"]
+script = ExtResource("1_javfb")
+word = "GENOU"
+hint = "Articulation qui relie les os de la jambe avec celui de la cuisse."
+
+[sub_resource type="Resource" id="Resource_46f2f"]
+script = ExtResource("1_javfb")
+word = "SQUELETTE"
+hint = "Ensemble des os qui constituent le corps humain."
+
+[sub_resource type="Resource" id="Resource_bh61e"]
+script = ExtResource("1_javfb")
+word = "TIBIA"
+hint = "Os qui se situe dans la jambe, à l'avant."
+
+[sub_resource type="Resource" id="Resource_1c5nc"]
+script = ExtResource("1_javfb")
+word = "RADIUS"
+hint = "Os qui se situe dans l'avant-bras, du côté du pouce."
+
+[sub_resource type="Resource" id="Resource_k8svf"]
+script = ExtResource("1_javfb")
+word = "COUDE"
+hint = "Articulation située à la jonction du bras et de l'avant-bras."
+
+[sub_resource type="Resource" id="Resource_bgyfk"]
+script = ExtResource("1_javfb")
+word = "TARSE"
+hint = "Ensemble d'os qui se situent dans le pied, au niveau de la cheville."
+
+[sub_resource type="Resource" id="Resource_v82ox"]
+script = ExtResource("1_javfb")
+word = "CUBITUS"
+hint = "Os qui se situe dans l'avant-bras, du côté du coude."
+
+[sub_resource type="Resource" id="Resource_t0vl6"]
+script = ExtResource("1_javfb")
+word = "CHEVILLE"
+hint = "Articulation qui relie les os du pied avec ceux de la jambe."
+
+[sub_resource type="Resource" id="Resource_syajk"]
+script = ExtResource("1_javfb")
+word = "SCAPULAIRE"
+hint = "Nom de la ceinture osseuse qui se situe dans le haut du corps."
+
+[resource]
+script = ExtResource("2_8xwat")
+clues = Array[ExtResource("1_javfb")]([SubResource("Resource_w7ibr"), SubResource("Resource_hiopj"), SubResource("Resource_8052v"), SubResource("Resource_1vkyf"), SubResource("Resource_46f2f"), SubResource("Resource_bh61e"), SubResource("Resource_1c5nc"), SubResource("Resource_k8svf"), SubResource("Resource_bgyfk"), SubResource("Resource_v82ox"), SubResource("Resource_t0vl6"), SubResource("Resource_syajk")])

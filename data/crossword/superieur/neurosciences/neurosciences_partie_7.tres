@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://h0ef0rvr5fqh"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_fq4tw"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_urkmk"]
+
+[sub_resource type="Resource" id="Resource_cvumi"]
+script = ExtResource("1_fq4tw")
+word = "SPINAUX"
+hint = "Se dit des nerfs qui ressortent de la moelle épinière."
+
+[sub_resource type="Resource" id="Resource_2dkab"]
+script = ExtResource("1_fq4tw")
+word = "ANXIETE"
+hint = "Réaction physiologique liée à la peur."
+
+[sub_resource type="Resource" id="Resource_yt0lo"]
+script = ExtResource("1_fq4tw")
+word = "FRONTAL"
+hint = "Syndrome qui se caractérise par un changement de la personnalité."
+
+[sub_resource type="Resource" id="Resource_gfmd4"]
+script = ExtResource("1_fq4tw")
+word = "HEMISPHERE"
+hint = "Partie du cerveau comprenant les lobes."
+
+[sub_resource type="Resource" id="Resource_jhu7p"]
+script = ExtResource("1_fq4tw")
+word = "CERVELET"
+hint = "Structure impliquée dans l'équilibre."
+
+[sub_resource type="Resource" id="Resource_hxqqw"]
+script = ExtResource("1_fq4tw")
+word = "SYMPATHIQUE"
+hint = "Système nerveux qui s'active en cas de stress."
+
+[sub_resource type="Resource" id="Resource_08512"]
+script = ExtResource("1_fq4tw")
+word = "TEMPORAL"
+hint = "Lobe impliqué dans la mémoire."
+
+[sub_resource type="Resource" id="Resource_feqto"]
+script = ExtResource("1_fq4tw")
+word = "STRESS"
+hint = "Menace dans l'environnement."
+
+[sub_resource type="Resource" id="Resource_i1ngp"]
+script = ExtResource("1_fq4tw")
+word = "AVC"
+hint = "Acronyme d'accident vasculaire cérébral."
+
+[sub_resource type="Resource" id="Resource_mvvhx"]
+script = ExtResource("1_fq4tw")
+word = "MALADIE"
+hint = "Terme commun pour désigner une pathologie."
+
+[sub_resource type="Resource" id="Resource_eqdpc"]
+script = ExtResource("1_fq4tw")
+word = "CAPGRAS"
+hint = "Syndrome du délire d'illusions de sosies."
+
+[sub_resource type="Resource" id="Resource_5ps18"]
+script = ExtResource("1_fq4tw")
+word = "DECONNEXION"
+hint = "Syndrome qui se caractérise par une séparation entre les deux hémisphères."
+
+[sub_resource type="Resource" id="Resource_oc0hk"]
+script = ExtResource("1_fq4tw")
+word = "SCHIZOPHRENIE"
+hint = "Maladie psychiatrique où le patient perçoit une réalité différente et souffre d'hallucinations."
+
+[sub_resource type="Resource" id="Resource_3nuyr"]
+script = ExtResource("1_fq4tw")
+word = "HALLUCINATION"
+hint = "Trouble dans lequel une personne voit ou entend des choses qui n'existent pas."
+
+[sub_resource type="Resource" id="Resource_py33e"]
+script = ExtResource("1_fq4tw")
+word = "DEMENCE"
+hint = "Perte d'autonomie chez un patient."
+
+[resource]
+script = ExtResource("2_urkmk")
+clues = Array[ExtResource("1_fq4tw")]([SubResource("Resource_cvumi"), SubResource("Resource_2dkab"), SubResource("Resource_yt0lo"), SubResource("Resource_gfmd4"), SubResource("Resource_jhu7p"), SubResource("Resource_hxqqw"), SubResource("Resource_08512"), SubResource("Resource_feqto"), SubResource("Resource_i1ngp"), SubResource("Resource_mvvhx"), SubResource("Resource_eqdpc"), SubResource("Resource_5ps18"), SubResource("Resource_oc0hk"), SubResource("Resource_3nuyr"), SubResource("Resource_py33e")])

@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bpsyejy20dith"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_7h12m"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_jvw4b"]
+
+[sub_resource type="Resource" id="Resource_pk1k8"]
+script = ExtResource("1_7h12m")
+word = "ENZYME"
+hint = "Protéine, catalyseur qui permet de modifier une réaction chimique sans se transformer."
+
+[sub_resource type="Resource" id="Resource_6wa4i"]
+script = ExtResource("1_7h12m")
+word = "VITAMINE"
+hint = "Substance nécessaire au bon fonctionnement de l’organisme, parfois fabriquée par les bactéries."
+
+[sub_resource type="Resource" id="Resource_bu6d1"]
+script = ExtResource("1_7h12m")
+word = "BOL"
+hint = "Masse alimentaire mastiquée qui traverse l'œsophage et passe dans l'estomac."
+
+[sub_resource type="Resource" id="Resource_dhqtl"]
+script = ExtResource("1_7h12m")
+word = "GLUCIDE"
+hint = "Carburant qui donne l'énergie aux cellules."
+
+[sub_resource type="Resource" id="Resource_3kbku"]
+script = ExtResource("1_7h12m")
+word = "DIETETIQUE"
+hint = "Discipline basée sur le principe d'une alimentation saine et équilibrée associée à une bonne hygiène de vie."
+
+[sub_resource type="Resource" id="Resource_r3s2w"]
+script = ExtResource("1_7h12m")
+word = "GRAISSE"
+hint = "Lipide servant à stocker l'énergie."
+
+[sub_resource type="Resource" id="Resource_ivl05"]
+script = ExtResource("1_7h12m")
+word = "OBESITE"
+hint = "Situation lorsque les apports alimentaires sont en excès par rapport aux besoins alimentaires."
+
+[sub_resource type="Resource" id="Resource_vfnms"]
+script = ExtResource("1_7h12m")
+word = "ANOREXIE"
+hint = "Trouble alimentaire se traduisant par une perte de masse et une inquiétude à se nourrir."
+
+[sub_resource type="Resource" id="Resource_rtacb"]
+script = ExtResource("1_7h12m")
+word = "DIGESTION"
+hint = "Processus de transformation des aliments en nutriments."
+
+[sub_resource type="Resource" id="Resource_2gx4p"]
+script = ExtResource("1_7h12m")
+word = "FEHLING"
+hint = "Liqueur qui sert couramment à caractériser des substances chimiques à partir d'une coloration bleue."
+
+[sub_resource type="Resource" id="Resource_ulgdp"]
+script = ExtResource("1_7h12m")
+word = "MALBOUFFE"
+hint = "Alimentation malsaine que l'on retrouve dans les fast food."
+
+[resource]
+script = ExtResource("2_jvw4b")
+clues = Array[ExtResource("1_7h12m")]([SubResource("Resource_pk1k8"), SubResource("Resource_6wa4i"), SubResource("Resource_bu6d1"), SubResource("Resource_dhqtl"), SubResource("Resource_3kbku"), SubResource("Resource_r3s2w"), SubResource("Resource_ivl05"), SubResource("Resource_vfnms"), SubResource("Resource_rtacb"), SubResource("Resource_2gx4p"), SubResource("Resource_ulgdp")])

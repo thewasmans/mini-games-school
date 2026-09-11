@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://b30yoc7xemwer"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_76uo7"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_j5trp"]
+
+[sub_resource type="Resource" id="Resource_5f5ag"]
+script = ExtResource("1_76uo7")
+word = "FE"
+hint = "Symbole chimique du fer."
+
+[sub_resource type="Resource" id="Resource_f5bly"]
+script = ExtResource("1_76uo7")
+word = "MOLECULE"
+hint = "Ensemble d'atomes, structure de base de la matière comme l'eau."
+
+[sub_resource type="Resource" id="Resource_bh7ng"]
+script = ExtResource("1_76uo7")
+word = "SOLUTION"
+hint = "Résultat obtenu lorsqu'un solvant décompose un soluté."
+
+[sub_resource type="Resource" id="Resource_g3i7e"]
+script = ExtResource("1_76uo7")
+word = "SOLUTE"
+hint = "Se dit de la substance qui est dissoute par un solvant."
+
+[sub_resource type="Resource" id="Resource_vsups"]
+script = ExtResource("1_76uo7")
+word = "SOLVANT"
+hint = "Se dit d'une substance qui permet de dissoudre, comme l'eau."
+
+[sub_resource type="Resource" id="Resource_wonnt"]
+script = ExtResource("1_76uo7")
+word = "AIMANTATION"
+hint = "Procédé par lequel un métal est séparé d’un autre constituant par attirance magnétique."
+
+[sub_resource type="Resource" id="Resource_00lcd"]
+script = ExtResource("1_76uo7")
+word = "HOMOGENE"
+hint = "Mélange dont on ne peut pas distinguer les constituants à l’œil nu après agitation."
+
+[sub_resource type="Resource" id="Resource_lssqe"]
+script = ExtResource("1_76uo7")
+word = "TAMISAGE"
+hint = "Opération qui consiste à faire passer un élément sur un tamis pour en extraire les plus fines particules."
+
+[sub_resource type="Resource" id="Resource_syb6q"]
+script = ExtResource("1_76uo7")
+word = "CORPS"
+hint = "Elément constitué d'une seule espèce chimique."
+
+[sub_resource type="Resource" id="Resource_hb6qw"]
+script = ExtResource("1_76uo7")
+word = "OXYGENE"
+hint = "Composé chimique noté O."
+
+[sub_resource type="Resource" id="Resource_odu6m"]
+script = ExtResource("1_76uo7")
+word = "ELEMENT"
+hint = "Substance chimique du tableau périodique de Mendeleïev."
+
+[resource]
+script = ExtResource("2_j5trp")
+clues = Array[ExtResource("1_76uo7")]([SubResource("Resource_5f5ag"), SubResource("Resource_f5bly"), SubResource("Resource_bh7ng"), SubResource("Resource_g3i7e"), SubResource("Resource_vsups"), SubResource("Resource_wonnt"), SubResource("Resource_00lcd"), SubResource("Resource_lssqe"), SubResource("Resource_syb6q"), SubResource("Resource_hb6qw"), SubResource("Resource_odu6m")])

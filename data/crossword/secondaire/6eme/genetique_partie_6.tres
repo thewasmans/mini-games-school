@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cysmhjv4uw7dx"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_ies1a"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_mtcof"]
+
+[sub_resource type="Resource" id="Resource_tx860"]
+script = ExtResource("1_ies1a")
+word = "PURIQUE"
+hint = "Groupe de bases composées de l'adénine et de la guanine."
+
+[sub_resource type="Resource" id="Resource_xx7ql"]
+script = ExtResource("1_ies1a")
+word = "TRANSCRIPTION"
+hint = "Etape de la synthèse des protéines qui se caractérise par le passage de l'ADN à l'ARNm."
+
+[sub_resource type="Resource" id="Resource_eet1t"]
+script = ExtResource("1_ies1a")
+word = "DESOXYRIBOSE"
+hint = "Sucre qui compose l'ADN."
+
+[sub_resource type="Resource" id="Resource_488js"]
+script = ExtResource("1_ies1a")
+word = "CODON"
+hint = "Ensemble de trois nucléotides consécutifs de la séquence d'un acide nucléique portant l'information génétique."
+
+[sub_resource type="Resource" id="Resource_qshko"]
+script = ExtResource("1_ies1a")
+word = "MUTE"
+hint = "Se dit d'un gène lorsqu'il a subi une modification génétique anormale."
+
+[sub_resource type="Resource" id="Resource_ofwr0"]
+script = ExtResource("1_ies1a")
+word = "STOP"
+hint = "Nom du codon donnant la fin de la lecture d'un gène."
+
+[sub_resource type="Resource" id="Resource_0tkca"]
+script = ExtResource("1_ies1a")
+word = "GUANINE"
+hint = "Base purique."
+
+[sub_resource type="Resource" id="Resource_06g7o"]
+script = ExtResource("1_ies1a")
+word = "MATRICE"
+hint = "Egalement appelé brin transcrit, copie d'ADN utilisée pour effectuer la transcription de l'ADN en ARN."
+
+[sub_resource type="Resource" id="Resource_nqqjl"]
+script = ExtResource("1_ies1a")
+word = "SCHEMA"
+hint = "Figure donnant une représentation simplifiée et fonctionnelle."
+
+[sub_resource type="Resource" id="Resource_n88q8"]
+script = ExtResource("1_ies1a")
+word = "ENZYME"
+hint = "Protéine, catalyseur qui permet de modifier une réaction chimique sans se transformer."
+
+[sub_resource type="Resource" id="Resource_ca2ps"]
+script = ExtResource("1_ies1a")
+word = "TATA"
+hint = "Région de nucléotides qui influencent la transcription des gènes eucaryotes."
+
+[sub_resource type="Resource" id="Resource_7nk6l"]
+script = ExtResource("1_ies1a")
+word = "OKAZAKI"
+hint = "Segments, fragments d'acide nucléique qui sont produits lors de la réplication de l'ADN."
+
+[sub_resource type="Resource" id="Resource_umyuj"]
+script = ExtResource("1_ies1a")
+word = "DECES"
+hint = "Terme médical qui reflète la mort de l'espèce."
+
+[sub_resource type="Resource" id="Resource_0yfr2"]
+script = ExtResource("1_ies1a")
+word = "EXON"
+hint = "Séquence nucléotidique codante."
+
+[sub_resource type="Resource" id="Resource_7k66a"]
+script = ExtResource("1_ies1a")
+word = "CODE"
+hint = "Tableau de correspondance entre les acides aminés et les codons en génétique."
+
+[resource]
+script = ExtResource("2_mtcof")
+clues = Array[ExtResource("1_ies1a")]([SubResource("Resource_tx860"), SubResource("Resource_xx7ql"), SubResource("Resource_eet1t"), SubResource("Resource_488js"), SubResource("Resource_qshko"), SubResource("Resource_ofwr0"), SubResource("Resource_0tkca"), SubResource("Resource_06g7o"), SubResource("Resource_nqqjl"), SubResource("Resource_n88q8"), SubResource("Resource_ca2ps"), SubResource("Resource_7nk6l"), SubResource("Resource_umyuj"), SubResource("Resource_0yfr2"), SubResource("Resource_7k66a")])

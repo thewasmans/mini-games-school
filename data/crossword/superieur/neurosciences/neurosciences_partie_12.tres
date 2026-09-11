@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cuiacii8hgli2"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_1cg07"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_gxy8b"]
+
+[sub_resource type="Resource" id="Resource_v8cmh"]
+script = ExtResource("1_1cg07")
+word = "AGRYPNIE"
+hint = "Perte prolongée du sommeil."
+
+[sub_resource type="Resource" id="Resource_qnes1"]
+script = ExtResource("1_1cg07")
+word = "INSOMNIE"
+hint = "Difficulté de s'endormir."
+
+[sub_resource type="Resource" id="Resource_rf67u"]
+script = ExtResource("1_1cg07")
+word = "BRUGADA"
+hint = "Syndrome provoquant des anomalies cardiaques et des paralysies du sommeil."
+
+[sub_resource type="Resource" id="Resource_d34wm"]
+script = ExtResource("1_1cg07")
+word = "LENT"
+hint = "Stade du sommeil où le sujet récupère progressivement."
+
+[sub_resource type="Resource" id="Resource_h3jy7"]
+script = ExtResource("1_1cg07")
+word = "MYOPATHIE"
+hint = "Maladie musculaire provoquée par la mutation du chromosome X."
+
+[sub_resource type="Resource" id="Resource_0pxop"]
+script = ExtResource("1_1cg07")
+word = "NEUROPATHOLOGIE"
+hint = "Terme général qui caractérise des maladies affectant le système nerveux."
+
+[sub_resource type="Resource" id="Resource_wa8lp"]
+script = ExtResource("1_1cg07")
+word = "RUBINSTEIN"
+hint = "Anomalie génétique caractérisée par des parties du corps déformées et un retard mental."
+
+[sub_resource type="Resource" id="Resource_8kyfy"]
+script = ExtResource("1_1cg07")
+word = "TRISOMIE"
+hint = "Anomalie chromosomique provoquant une dysmorphie et des malformations cardiaques."
+
+[sub_resource type="Resource" id="Resource_jjqjs"]
+script = ExtResource("1_1cg07")
+word = "MENTALE"
+hint = "Maladie qui affecte les pensées, les émotions et les comportements."
+
+[sub_resource type="Resource" id="Resource_nriii"]
+script = ExtResource("1_1cg07")
+word = "KORSAKOFF"
+hint = "Syndrome provoqué par l'alcool et qui provoque de la confabulation."
+
+[sub_resource type="Resource" id="Resource_25il4"]
+script = ExtResource("1_1cg07")
+word = "PSYCHIATRIE"
+hint = "Partie de la médecine qui étudie et traite les maladies mentales."
+
+[sub_resource type="Resource" id="Resource_t0c18"]
+script = ExtResource("1_1cg07")
+word = "HUNTINGTON"
+hint = "Maladie héréditaire dominante qui se traduit par une chorée dans les premiers stades."
+
+[sub_resource type="Resource" id="Resource_3olt6"]
+script = ExtResource("1_1cg07")
+word = "XXY"
+hint = "Etat chromosomique d'un patient souffrant du syndrome de Klinefelter."
+
+[sub_resource type="Resource" id="Resource_4jlhg"]
+script = ExtResource("1_1cg07")
+word = "HAYLING"
+hint = "Test neurocognitif permettant d'évaluer les capacités d'inhibition."
+
+[sub_resource type="Resource" id="Resource_1nqde"]
+script = ExtResource("1_1cg07")
+word = "DEPISTAGE"
+hint = "Technique qui consiste à rechercher une maladie chez un sujet."
+
+[resource]
+script = ExtResource("2_gxy8b")
+clues = Array[ExtResource("1_1cg07")]([SubResource("Resource_v8cmh"), SubResource("Resource_qnes1"), SubResource("Resource_rf67u"), SubResource("Resource_d34wm"), SubResource("Resource_h3jy7"), SubResource("Resource_0pxop"), SubResource("Resource_wa8lp"), SubResource("Resource_8kyfy"), SubResource("Resource_jjqjs"), SubResource("Resource_nriii"), SubResource("Resource_25il4"), SubResource("Resource_t0c18"), SubResource("Resource_3olt6"), SubResource("Resource_4jlhg"), SubResource("Resource_1nqde")])

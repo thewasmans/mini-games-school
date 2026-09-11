@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://iel4ddl21jpw"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_soolb"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_4ts1q"]
+
+[sub_resource type="Resource" id="Resource_cdyfm"]
+script = ExtResource("1_soolb")
+word = "AXONE"
+hint = "Câble de connexion du neurone."
+
+[sub_resource type="Resource" id="Resource_h3k54"]
+script = ExtResource("1_soolb")
+word = "LCR"
+hint = "Liquide dans lequel baignent le cerveau et la moelle épinière."
+
+[sub_resource type="Resource" id="Resource_scsl7"]
+script = ExtResource("1_soolb")
+word = "INHIBITEURS"
+hint = "Se dit des neurotransmetteurs qui empêchent le signal de se poursuivre."
+
+[sub_resource type="Resource" id="Resource_d38v6"]
+script = ExtResource("1_soolb")
+word = "EXCITATEURS"
+hint = "Se dit des neurotransmetteurs qui assurent la continuité du signal."
+
+[sub_resource type="Resource" id="Resource_k0d5i"]
+script = ExtResource("1_soolb")
+word = "DEPOLARISATION"
+hint = "Mécanisme se déroulant lors d'une inversion de charges."
+
+[sub_resource type="Resource" id="Resource_0pch5"]
+script = ExtResource("1_soolb")
+word = "AFFERENTE"
+hint = "Voie nerveuse qui démarre du sens et se dirige vers le cerveau."
+
+[sub_resource type="Resource" id="Resource_sxpkj"]
+script = ExtResource("1_soolb")
+word = "INTERNEURONE"
+hint = "Type de neurone servant de relais entre les moteurs et les sensoriels."
+
+[sub_resource type="Resource" id="Resource_0l8f0"]
+script = ExtResource("1_soolb")
+word = "TRONC"
+hint = "Structure qui relie le cerveau à la moelle épinière."
+
+[sub_resource type="Resource" id="Resource_lm8bp"]
+script = ExtResource("1_soolb")
+word = "NERF"
+hint = "Ensemble d'axones."
+
+[sub_resource type="Resource" id="Resource_to4p2"]
+script = ExtResource("1_soolb")
+word = "AUTONOME"
+hint = "Se dit du système nerveux végétatif."
+
+[sub_resource type="Resource" id="Resource_n1i4d"]
+script = ExtResource("1_soolb")
+word = "DENDRITE"
+hint = "Zone de réception du neurone."
+
+[sub_resource type="Resource" id="Resource_3luyi"]
+script = ExtResource("1_soolb")
+word = "FOLIE"
+hint = "Emotion intense qui peut se traduire par un dérèglement mental."
+
+[sub_resource type="Resource" id="Resource_hasj6"]
+script = ExtResource("1_soolb")
+word = "OCCIPITAL"
+hint = "Lobe impliqué dans la vision."
+
+[sub_resource type="Resource" id="Resource_f8f76"]
+script = ExtResource("1_soolb")
+word = "EPILEPSIE"
+hint = "Trouble neurologique résultant d'une activité électrique anormale dans le cerveau."
+
+[sub_resource type="Resource" id="Resource_jcnov"]
+script = ExtResource("1_soolb")
+word = "CONTROLATERAL"
+hint = "Phénomène permettant l'inversion des fibres nerveuses entre le cerveau et le reste du corps."
+
+[resource]
+script = ExtResource("2_4ts1q")
+clues = Array[ExtResource("1_soolb")]([SubResource("Resource_cdyfm"), SubResource("Resource_h3k54"), SubResource("Resource_scsl7"), SubResource("Resource_d38v6"), SubResource("Resource_k0d5i"), SubResource("Resource_0pch5"), SubResource("Resource_sxpkj"), SubResource("Resource_0l8f0"), SubResource("Resource_lm8bp"), SubResource("Resource_to4p2"), SubResource("Resource_n1i4d"), SubResource("Resource_3luyi"), SubResource("Resource_hasj6"), SubResource("Resource_f8f76"), SubResource("Resource_jcnov")])

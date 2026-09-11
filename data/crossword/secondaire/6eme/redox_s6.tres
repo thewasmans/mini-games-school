@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://c0xbxw3hhkia4"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_pjbtm"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_ri0yk"]
+
+[sub_resource type="Resource" id="Resource_hfp44"]
+script = ExtResource("1_pjbtm")
+word = "TITRAGE"
+hint = "Méthode d’analyse chimique quantitative qui permet de mesurer la concentration d’un acide ou d’une base."
+
+[sub_resource type="Resource" id="Resource_6p075"]
+script = ExtResource("1_pjbtm")
+word = "PILE"
+hint = "Générateur de courant électrique continu, siège d’une réaction rédox spontanée."
+
+[sub_resource type="Resource" id="Resource_o2pgl"]
+script = ExtResource("1_pjbtm")
+word = "CATHODE"
+hint = "Electrode où se déroule la réduction, elle est négative."
+
+[sub_resource type="Resource" id="Resource_lhiq2"]
+script = ExtResource("1_pjbtm")
+word = "OXYDOREDUCTION"
+hint = "Réaction de transfert d'électrons entre un oxydant et un réducteur."
+
+[sub_resource type="Resource" id="Resource_u151l"]
+script = ExtResource("1_pjbtm")
+word = "ANODE"
+hint = "Electrode où se déroule l'oxydation, elle est positive."
+
+[sub_resource type="Resource" id="Resource_03c1k"]
+script = ExtResource("1_pjbtm")
+word = "CORROSION"
+hint = "Altération d'un matériau par réaction chimique avec un oxydant."
+
+[sub_resource type="Resource" id="Resource_p7smr"]
+script = ExtResource("1_pjbtm")
+word = "REDUCTION"
+hint = "Transformation subie par l'oxydant."
+
+[sub_resource type="Resource" id="Resource_xlkt2"]
+script = ExtResource("1_pjbtm")
+word = "GAMMA"
+hint = "Règle qui permet de prévoir le sens d'une réaction d'oxydoréduction."
+
+[sub_resource type="Resource" id="Resource_qtgva"]
+script = ExtResource("1_pjbtm")
+word = "ELECTROLYSE"
+hint = "Méthode qui permet de forcer la réaction entre un réducteur et un oxydant."
+
+[sub_resource type="Resource" id="Resource_3tvqb"]
+script = ExtResource("1_pjbtm")
+word = "ACCUMULATEUR"
+hint = "Pile rechargeable au moyen du courant électrique, siège d’une réaction rédox non spontanée."
+
+[sub_resource type="Resource" id="Resource_g25ac"]
+script = ExtResource("1_pjbtm")
+word = "REDUCTEUR"
+hint = "Elément donneur d’électrons."
+
+[sub_resource type="Resource" id="Resource_flyy0"]
+script = ExtResource("1_pjbtm")
+word = "OXYDANT"
+hint = "Elément receveur d’électrons."
+
+[sub_resource type="Resource" id="Resource_uq285"]
+script = ExtResource("1_pjbtm")
+word = "OXYDATION"
+hint = "Transformation subie par le réducteur."
+
+[resource]
+script = ExtResource("2_ri0yk")
+clues = Array[ExtResource("1_pjbtm")]([SubResource("Resource_hfp44"), SubResource("Resource_6p075"), SubResource("Resource_o2pgl"), SubResource("Resource_lhiq2"), SubResource("Resource_u151l"), SubResource("Resource_03c1k"), SubResource("Resource_p7smr"), SubResource("Resource_xlkt2"), SubResource("Resource_qtgva"), SubResource("Resource_3tvqb"), SubResource("Resource_g25ac"), SubResource("Resource_flyy0"), SubResource("Resource_uq285")])

@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dfr5jpgkiogk3"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_nggkg"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_ojtid"]
+
+[sub_resource type="Resource" id="Resource_1p70b"]
+script = ExtResource("1_nggkg")
+word = "MITE"
+hint = "Petit papillon blanchâtre de la famille des teignes, dont les larves rongent les étoffes et les fourrures."
+
+[sub_resource type="Resource" id="Resource_xj6vx"]
+script = ExtResource("1_nggkg")
+word = "TIQUE"
+hint = "Arachnide acarien parasite des animaux se nourrissant de sang."
+
+[sub_resource type="Resource" id="Resource_6nr21"]
+script = ExtResource("1_nggkg")
+word = "POISSONS"
+hint = "Groupe d'animaux qui vivent uniquement dans l'eau et possèdent des nageoires."
+
+[sub_resource type="Resource" id="Resource_o268m"]
+script = ExtResource("1_nggkg")
+word = "VERTEBRE"
+hint = "Animal qui possède un crâne et une colonne vertébrale."
+
+[sub_resource type="Resource" id="Resource_b6fn3"]
+script = ExtResource("1_nggkg")
+word = "SCORPION"
+hint = "Arachnide qui possède des pinces et un aiguillon venimeux."
+
+[sub_resource type="Resource" id="Resource_q028w"]
+script = ExtResource("1_nggkg")
+word = "MEDUSE"
+hint = "Animal présent depuis 600 millions d'années et qui est principalement composé d'eau."
+
+[sub_resource type="Resource" id="Resource_2k1r1"]
+script = ExtResource("1_nggkg")
+word = "OISEAUX"
+hint = "Groupe d'animaux ovipares, pourvus de plumes et d'ailes dont la majorité sont capable de chanter et de voler."
+
+[sub_resource type="Resource" id="Resource_olvb3"]
+script = ExtResource("1_nggkg")
+word = "MOLLUSQUES"
+hint = "Animaux dont le corps est mou, mais qui possède une coquille visible ou cachée."
+
+[sub_resource type="Resource" id="Resource_2l5kk"]
+script = ExtResource("1_nggkg")
+word = "REQUIN"
+hint = "Poisson cartilagineux dont certains sont de grands prédateurs marins."
+
+[sub_resource type="Resource" id="Resource_1a3dv"]
+script = ExtResource("1_nggkg")
+word = "CROCODILES"
+hint = "Groupe d'animaux qui sont d'excellents prédateurs, ils ont un museau allongé et possèdent jusqu'à 80 dents."
+
+[sub_resource type="Resource" id="Resource_ns6ra"]
+script = ExtResource("1_nggkg")
+word = "CREVETTE"
+hint = "Petit crustacé décapode marin, ou d'eau douce, dont certaines espèces sont comestibles."
+
+[resource]
+script = ExtResource("2_ojtid")
+clues = Array[ExtResource("1_nggkg")]([SubResource("Resource_1p70b"), SubResource("Resource_xj6vx"), SubResource("Resource_6nr21"), SubResource("Resource_o268m"), SubResource("Resource_b6fn3"), SubResource("Resource_q028w"), SubResource("Resource_2k1r1"), SubResource("Resource_olvb3"), SubResource("Resource_2l5kk"), SubResource("Resource_1a3dv"), SubResource("Resource_ns6ra")])

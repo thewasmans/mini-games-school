@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://xu5pgwy8xnn3"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_1op44"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_m5624"]
+
+[sub_resource type="Resource" id="Resource_dhfjb"]
+script = ExtResource("1_1op44")
+word = "POLLINISATION"
+hint = "Mode de dissémination de graines effectué par certains animaux comme les abeilles."
+
+[sub_resource type="Resource" id="Resource_0f01p"]
+script = ExtResource("1_1op44")
+word = "BIOTOPE"
+hint = "Milieu physico-chimique dans lequel on y retrouve les êtres vivants."
+
+[sub_resource type="Resource" id="Resource_wvhhk"]
+script = ExtResource("1_1op44")
+word = "ECOLOGIE"
+hint = "Science qui s'intéresse aux interactions entre le vivant et l'environnement."
+
+[sub_resource type="Resource" id="Resource_3p4e6"]
+script = ExtResource("1_1op44")
+word = "UICN"
+hint = "Union Internationale pour la Conservation de la Nature et de ses ressources."
+
+[sub_resource type="Resource" id="Resource_j4qsy"]
+script = ExtResource("1_1op44")
+word = "EMPREINTE"
+hint = "Permet de mesurer la pression qu'exerce l'homme sur les ressources et les écosystèmes."
+
+[sub_resource type="Resource" id="Resource_j1h7i"]
+script = ExtResource("1_1op44")
+word = "MAILLAGE"
+hint = "Terme utilisé pour parler de l'ensemble des éléments naturels qui créent un réseau nécessaire au vivant."
+
+[sub_resource type="Resource" id="Resource_xnsrd"]
+script = ExtResource("1_1op44")
+word = "NATUREL"
+hint = "Par opposition à ce qui est artificiel."
+
+[sub_resource type="Resource" id="Resource_w2vvm"]
+script = ExtResource("1_1op44")
+word = "ADN"
+hint = "Molécule située dans le noyau."
+
+[sub_resource type="Resource" id="Resource_2dv3v"]
+script = ExtResource("1_1op44")
+word = "BIOCENOSE"
+hint = "Ensemble des êtres vivants dans un environnement."
+
+[sub_resource type="Resource" id="Resource_f1etx"]
+script = ExtResource("1_1op44")
+word = "ENDEMIQUE"
+hint = "Se dit d'une espèce qui vit dans une aire géographique bien délimitée."
+
+[sub_resource type="Resource" id="Resource_5qlwh"]
+script = ExtResource("1_1op44")
+word = "PREDATEUR"
+hint = "Situé au dessus de la chaîne alimentaire, c'est un chasseur de différents animaux."
+
+[resource]
+script = ExtResource("2_m5624")
+clues = Array[ExtResource("1_1op44")]([SubResource("Resource_dhfjb"), SubResource("Resource_0f01p"), SubResource("Resource_wvhhk"), SubResource("Resource_3p4e6"), SubResource("Resource_j4qsy"), SubResource("Resource_j1h7i"), SubResource("Resource_xnsrd"), SubResource("Resource_w2vvm"), SubResource("Resource_2dv3v"), SubResource("Resource_f1etx"), SubResource("Resource_5qlwh")])

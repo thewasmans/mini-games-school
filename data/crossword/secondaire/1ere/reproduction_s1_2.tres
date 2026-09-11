@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://b6thimbqc3hu3"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_iwsv4"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_g5lx8"]
+
+[sub_resource type="Resource" id="Resource_8ee5n"]
+script = ExtResource("1_iwsv4")
+word = "TESTICULE"
+hint = "Lieu de fabrication des spermatozoïdes."
+
+[sub_resource type="Resource" id="Resource_e2qrq"]
+script = ExtResource("1_iwsv4")
+word = "URETRE"
+hint = "Conduit qui transporte l'urine ou le sperme."
+
+[sub_resource type="Resource" id="Resource_6mutu"]
+script = ExtResource("1_iwsv4")
+word = "IST"
+hint = "Infections sexuellement transmissibles (acronyme)."
+
+[sub_resource type="Resource" id="Resource_dj7nr"]
+script = ExtResource("1_iwsv4")
+word = "REGLES"
+hint = "Terme familier pour référer aux menstruations de la femme."
+
+[sub_resource type="Resource" id="Resource_0tlok"]
+script = ExtResource("1_iwsv4")
+word = "VAGIN"
+hint = "Organe tubulaire qui sépare l'utérus de la vulve."
+
+[sub_resource type="Resource" id="Resource_3s6ye"]
+script = ExtResource("1_iwsv4")
+word = "IST"
+hint = "Terme générique pour les infections sexuellement transmissibles."
+
+[sub_resource type="Resource" id="Resource_w375j"]
+script = ExtResource("1_iwsv4")
+word = "HORMONE"
+hint = "Molécule de communication qui voyage dans le sang."
+
+[sub_resource type="Resource" id="Resource_sk53o"]
+script = ExtResource("1_iwsv4")
+word = "BEBE"
+hint = "Terme commun pour parler du nouveau né."
+
+[sub_resource type="Resource" id="Resource_vqc3g"]
+script = ExtResource("1_iwsv4")
+word = "PRESERVATIF"
+hint = "Dispositif permettant de se protéger contre les IST."
+
+[sub_resource type="Resource" id="Resource_50syt"]
+script = ExtResource("1_iwsv4")
+word = "CONTRACEPTION"
+hint = "Méthode utilisée lors d'un rapport sexuel pour éviter une fécondation."
+
+[resource]
+script = ExtResource("2_g5lx8")
+clues = Array[ExtResource("1_iwsv4")]([SubResource("Resource_8ee5n"), SubResource("Resource_e2qrq"), SubResource("Resource_6mutu"), SubResource("Resource_dj7nr"), SubResource("Resource_0tlok"), SubResource("Resource_3s6ye"), SubResource("Resource_w375j"), SubResource("Resource_sk53o"), SubResource("Resource_vqc3g"), SubResource("Resource_50syt")])

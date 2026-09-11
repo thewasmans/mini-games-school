@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://b2levldhc2rtw"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_j8clt"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_11hp1"]
+
+[sub_resource type="Resource" id="Resource_iflqi"]
+script = ExtResource("1_j8clt")
+word = "TORTUE"
+hint = "Animal qui possède une carapace solide et un bec, il se déplace lentement."
+
+[sub_resource type="Resource" id="Resource_ksera"]
+script = ExtResource("1_j8clt")
+word = "CLOPORTE"
+hint = "Crustacé terrestre que l'on retrouve sous les cailloux à l'obscurité et à l'humidité."
+
+[sub_resource type="Resource" id="Resource_8nqdu"]
+script = ExtResource("1_j8clt")
+word = "VIPERE"
+hint = "Faisant partie des squamates, ce serpent peut être venimeux."
+
+[sub_resource type="Resource" id="Resource_h4cja"]
+script = ExtResource("1_j8clt")
+word = "VER"
+hint = "Animal décomposeur de nos jardins faisant partie des annélides."
+
+[sub_resource type="Resource" id="Resource_wpebl"]
+script = ExtResource("1_j8clt")
+word = "GRENOUILLE"
+hint = "Amphibien qui pond dans l'eau, se métamorphose et vit sur terre à l'âge adulte."
+
+[sub_resource type="Resource" id="Resource_f2vwc"]
+script = ExtResource("1_j8clt")
+word = "POUX"
+hint = "Insectes parasites hématophages de l'homme qui vivent dans les cheveux, les poils ou les vêtements."
+
+[sub_resource type="Resource" id="Resource_2hkeq"]
+script = ExtResource("1_j8clt")
+word = "MAMMIFERES"
+hint = "Groupe d'animaux qui possèdent des mamelles et des poils."
+
+[sub_resource type="Resource" id="Resource_fgtut"]
+script = ExtResource("1_j8clt")
+word = "RENARD"
+hint = "Mammifère qui vit dans nos campagnes et qui chasse, entre autres, les poules."
+
+[sub_resource type="Resource" id="Resource_7rf3u"]
+script = ExtResource("1_j8clt")
+word = "MYRIAPODES"
+hint = "Groupe d'animaux dans lequel on y retrouve le mille pattes et le chilopode."
+
+[sub_resource type="Resource" id="Resource_xgt5v"]
+script = ExtResource("1_j8clt")
+word = "PUCE"
+hint = "Insecte sauteur, de couleur brune, parasite de l'être humain et de quelques animaux."
+
+[sub_resource type="Resource" id="Resource_k8qg4"]
+script = ExtResource("1_j8clt")
+word = "CORAIL"
+hint = "Animal qui vit fixé dans le sable de l'eau de mer et qui filtre pour manger."
+
+[resource]
+script = ExtResource("2_11hp1")
+clues = Array[ExtResource("1_j8clt")]([SubResource("Resource_iflqi"), SubResource("Resource_ksera"), SubResource("Resource_8nqdu"), SubResource("Resource_h4cja"), SubResource("Resource_wpebl"), SubResource("Resource_f2vwc"), SubResource("Resource_2hkeq"), SubResource("Resource_fgtut"), SubResource("Resource_7rf3u"), SubResource("Resource_xgt5v"), SubResource("Resource_k8qg4")])

@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bd1708eq55lbx"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_m8wnw"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_p4oks"]
+
+[sub_resource type="Resource" id="Resource_3fph4"]
+script = ExtResource("1_m8wnw")
+word = "EUCARYOTES"
+hint = "Organismes dont les cellules possèdent un noyau, apparus il y a 2,1 milliards d'années."
+
+[sub_resource type="Resource" id="Resource_1nee0"]
+script = ExtResource("1_m8wnw")
+word = "STROMATOLITHES"
+hint = "Fossiles bactériens retrouvés en Australie, preuves de vie ancienne."
+
+[sub_resource type="Resource" id="Resource_a1wka"]
+script = ExtResource("1_m8wnw")
+word = "PHOTOSYNTHESE"
+hint = "Processus biologique réalisé par les algues bleues."
+
+[sub_resource type="Resource" id="Resource_msjl3"]
+script = ExtResource("1_m8wnw")
+word = "ACANTHOSTEGA"
+hint = "Premier amphibien identifié, marquant la sortie du poisson de l'eau."
+
+[sub_resource type="Resource" id="Resource_8eemw"]
+script = ExtResource("1_m8wnw")
+word = "AMNIOTIQUE"
+hint = "Type d'œuf permettant aux reptiles de se développer hors de l'eau."
+
+[sub_resource type="Resource" id="Resource_ttaep"]
+script = ExtResource("1_m8wnw")
+word = "PANGEE"
+hint = "Supercontinent qui regroupait les terres émergées à l'époque des reptiles."
+
+[sub_resource type="Resource" id="Resource_04lnk"]
+script = ExtResource("1_m8wnw")
+word = "HOMINIDES"
+hint = "Famille incluant l'espèce humaine, apparue il y a environ 7 millions d'années."
+
+[sub_resource type="Resource" id="Resource_eh80f"]
+script = ExtResource("1_m8wnw")
+word = "TRIAS"
+hint = "Période de l'ère secondaire située entre 251 et 200 millions d'années."
+
+[sub_resource type="Resource" id="Resource_a8n8u"]
+script = ExtResource("1_m8wnw")
+word = "JURASSIQUE"
+hint = "Période de l'ère secondaire située entre 200 et 145 millions d'années."
+
+[sub_resource type="Resource" id="Resource_7tmts"]
+script = ExtResource("1_m8wnw")
+word = "CRETACE"
+hint = "Période de l'ère secondaire située entre 145 et 65 millions d'années."
+
+[sub_resource type="Resource" id="Resource_i0vqn"]
+script = ExtResource("1_m8wnw")
+word = "ORNITISCHIENS"
+hint = "Lignée de dinosaures caractérisée par un régime alimentaire herbivore."
+
+[sub_resource type="Resource" id="Resource_n4cdr"]
+script = ExtResource("1_m8wnw")
+word = "SAURISCHIENS"
+hint = "Lignée de dinosaures caractérisée par un mode de vie carnivore bipède."
+
+[resource]
+script = ExtResource("2_p4oks")
+clues = Array[ExtResource("1_m8wnw")]([SubResource("Resource_3fph4"), SubResource("Resource_1nee0"), SubResource("Resource_a1wka"), SubResource("Resource_msjl3"), SubResource("Resource_8eemw"), SubResource("Resource_ttaep"), SubResource("Resource_04lnk"), SubResource("Resource_eh80f"), SubResource("Resource_a8n8u"), SubResource("Resource_7tmts"), SubResource("Resource_i0vqn"), SubResource("Resource_n4cdr")])

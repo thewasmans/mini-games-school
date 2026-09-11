@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cl1d4o1cbgd5a"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_1kbxy"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_jhnwj"]
+
+[sub_resource type="Resource" id="Resource_ncoj6"]
+script = ExtResource("1_1kbxy")
+word = "CATION"
+hint = "Elément chimique chargé positivement."
+
+[sub_resource type="Resource" id="Resource_nid24"]
+script = ExtResource("1_1kbxy")
+word = "ATOME"
+hint = "Constituant élémentaire de toutes les substances solides, liquides ou gazeuses."
+
+[sub_resource type="Resource" id="Resource_dxyg5"]
+script = ExtResource("1_1kbxy")
+word = "ANION"
+hint = "Elément chimique chargé négativement."
+
+[sub_resource type="Resource" id="Resource_8nut8"]
+script = ExtResource("1_1kbxy")
+word = "MICROSCOPE"
+hint = "Outil de mesure basé sur des lentilles et permettant d'agrandir l'image d'un objet."
+
+[sub_resource type="Resource" id="Resource_u8hp2"]
+script = ExtResource("1_1kbxy")
+word = "DEMOCRITE"
+hint = "Philosophe de l’Antiquité qui affirme que la matière est constituée de particules très petites."
+
+[sub_resource type="Resource" id="Resource_cbd6u"]
+script = ExtResource("1_1kbxy")
+word = "MENDELEIEV"
+hint = "Scientifique russe qui a proposé un classement périodique des éléments chimiques."
+
+[sub_resource type="Resource" id="Resource_qdnwq"]
+script = ExtResource("1_1kbxy")
+word = "PROTON"
+hint = "Particule élémentaire du noyau atomique, de charge électrique positive."
+
+[sub_resource type="Resource" id="Resource_q3ta6"]
+script = ExtResource("1_1kbxy")
+word = "DALTON"
+hint = "Chimiste du 18ème siècle précisant que les atomes peuvent se combiner pour former une nouvelle substance (pense à Lucky Luke)."
+
+[resource]
+script = ExtResource("2_jhnwj")
+clues = Array[ExtResource("1_1kbxy")]([SubResource("Resource_ncoj6"), SubResource("Resource_nid24"), SubResource("Resource_dxyg5"), SubResource("Resource_8nut8"), SubResource("Resource_u8hp2"), SubResource("Resource_cbd6u"), SubResource("Resource_qdnwq"), SubResource("Resource_q3ta6")])

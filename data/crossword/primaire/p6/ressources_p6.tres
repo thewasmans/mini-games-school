@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://c322wf6b4nvts"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_c4nwc"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_byjs3"]
+
+[sub_resource type="Resource" id="Resource_4rovi"]
+script = ExtResource("1_c4nwc")
+word = "SOLEIL"
+hint = "Source d'énergie naturelle qui fournit de la chaleur et qui permet de produire de l'électricité via des panneaux photovoltaïques."
+
+[sub_resource type="Resource" id="Resource_1nebd"]
+script = ExtResource("1_c4nwc")
+word = "CYCLE"
+hint = "Suite de phénomènes se renouvelant sans arrêt."
+
+[sub_resource type="Resource" id="Resource_5glpt"]
+script = ExtResource("1_c4nwc")
+word = "MECANIQUE"
+hint = "Correspond à l'énergie totale d'un corps, tenant compte de sa position et de son mouvement."
+
+[sub_resource type="Resource" id="Resource_1t7eu"]
+script = ExtResource("1_c4nwc")
+word = "LUMINEUSE"
+hint = "Forme d'énergie qui provient du Soleil ou d'une lampe."
+
+[sub_resource type="Resource" id="Resource_s1j1e"]
+script = ExtResource("1_c4nwc")
+word = "RENOUVELABLE"
+hint = "Se dit d'une énergie provenant de sources naturelles qui se renouvelle à un rythme supérieur de sa consommation."
+
+[sub_resource type="Resource" id="Resource_qx3me"]
+script = ExtResource("1_c4nwc")
+word = "TRANSFERT"
+hint = "Terme utilisé pour traduire le déplacement d'énergie thermique d'un objet chaud à un objet froid."
+
+[sub_resource type="Resource" id="Resource_vq0sk"]
+script = ExtResource("1_c4nwc")
+word = "ISOLANT"
+hint = "Matériau qui permet d'empêcher la chaleur ou le froid de s'échapper, comme le bois ou la laine."
+
+[sub_resource type="Resource" id="Resource_uobkx"]
+script = ExtResource("1_c4nwc")
+word = "ELECTRIQUE"
+hint = "Forme d'énergie qui permet d'alimenter, d'allumer un ordinateur ou un smartphone."
+
+[sub_resource type="Resource" id="Resource_nmh83"]
+script = ExtResource("1_c4nwc")
+word = "CONDUCTEUR"
+hint = "Se dit d'un matériau qui transfert la chaleur, comme l'aluminium."
+
+[sub_resource type="Resource" id="Resource_wgcqr"]
+script = ExtResource("1_c4nwc")
+word = "EOLIENNE"
+hint = "Technologie exploitant l'énergie cinétique du vent."
+
+[sub_resource type="Resource" id="Resource_st211"]
+script = ExtResource("1_c4nwc")
+word = "HYDRAULIQUE"
+hint = "Technologie exploitant l'énergie de l'eau en mouvement, utilisée notamment dans les barrages."
+
+[sub_resource type="Resource" id="Resource_d0ulo"]
+script = ExtResource("1_c4nwc")
+word = "VENT"
+hint = "Terme météorologique qui désigne le mouvement de l'air."
+
+[sub_resource type="Resource" id="Resource_okiix"]
+script = ExtResource("1_c4nwc")
+word = "BASSE"
+hint = "On parle de haute pression et de..."
+
+[resource]
+script = ExtResource("2_byjs3")
+clues = Array[ExtResource("1_c4nwc")]([SubResource("Resource_4rovi"), SubResource("Resource_1nebd"), SubResource("Resource_5glpt"), SubResource("Resource_1t7eu"), SubResource("Resource_s1j1e"), SubResource("Resource_qx3me"), SubResource("Resource_vq0sk"), SubResource("Resource_uobkx"), SubResource("Resource_nmh83"), SubResource("Resource_wgcqr"), SubResource("Resource_st211"), SubResource("Resource_d0ulo"), SubResource("Resource_okiix")])

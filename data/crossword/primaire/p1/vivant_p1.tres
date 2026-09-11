@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://crir1o0khq41j"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_2lb8h"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_ql61r"]
+
+[sub_resource type="Resource" id="Resource_p0ugf"]
+script = ExtResource("1_2lb8h")
+word = "PATTES"
+hint = "Organes de locomotion utilisés par les insectes et les crocodiles."
+
+[sub_resource type="Resource" id="Resource_1pxtd"]
+script = ExtResource("1_2lb8h")
+word = "CLASSER"
+hint = "Regrouper des êtres vivants selon leurs attributs en commun."
+
+[sub_resource type="Resource" id="Resource_py2l1"]
+script = ExtResource("1_2lb8h")
+word = "COMPARER"
+hint = "Mettre en évidence les différences et les ressemblances entre les vivants."
+
+[sub_resource type="Resource" id="Resource_gk1l2"]
+script = ExtResource("1_2lb8h")
+word = "COQUILLE"
+hint = "Carapace spécifique aux escargots, aux calmars ou encore aux moules."
+
+[sub_resource type="Resource" id="Resource_tberm"]
+script = ExtResource("1_2lb8h")
+word = "MOURIR"
+hint = "Verbe à l'infinitif caractérisant un être vivant qui disparait définitivement de l'environnement."
+
+[sub_resource type="Resource" id="Resource_3xeul"]
+script = ExtResource("1_2lb8h")
+word = "ATTRIBUT"
+hint = "Elément qui caractérise un être vivant, comme ses pattes, son squelette ou ses plumes."
+
+[sub_resource type="Resource" id="Resource_fqtal"]
+script = ExtResource("1_2lb8h")
+word = "TRIER"
+hint = "Regrouper des êtres vivants selon ce qu'ils possèdent ou ne possèdent pas."
+
+[resource]
+script = ExtResource("2_ql61r")
+clues = Array[ExtResource("1_2lb8h")]([SubResource("Resource_p0ugf"), SubResource("Resource_1pxtd"), SubResource("Resource_py2l1"), SubResource("Resource_gk1l2"), SubResource("Resource_tberm"), SubResource("Resource_3xeul"), SubResource("Resource_fqtal")])

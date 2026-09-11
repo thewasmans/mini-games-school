@@ -1,0 +1,78 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://co7rpl0bcfonu"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_sk10u"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_2w11a"]
+
+[sub_resource type="Resource" id="Resource_jpmcq"]
+script = ExtResource("1_sk10u")
+word = "VISION"
+hint = "Fonction qui consiste à voir."
+
+[sub_resource type="Resource" id="Resource_bfkib"]
+script = ExtResource("1_sk10u")
+word = "TOUCHER"
+hint = "Sens dont l'organe utilisé est la peau."
+
+[sub_resource type="Resource" id="Resource_lm7q5"]
+script = ExtResource("1_sk10u")
+word = "EMETTEUR"
+hint = "Appareil qui produit les informations."
+
+[sub_resource type="Resource" id="Resource_nuoa5"]
+script = ExtResource("1_sk10u")
+word = "ODORAT"
+hint = "Sens dont l'organe utilisé est le nez."
+
+[sub_resource type="Resource" id="Resource_mxhw1"]
+script = ExtResource("1_sk10u")
+word = "NERF"
+hint = "Tube de transport des informations dans le corps."
+
+[sub_resource type="Resource" id="Resource_ekfy4"]
+script = ExtResource("1_sk10u")
+word = "SENS"
+hint = "Instruments de la perception du corps permettant d'éprouver des impressions."
+
+[sub_resource type="Resource" id="Resource_07xqi"]
+script = ExtResource("1_sk10u")
+word = "VUE"
+hint = "Sens dont l'organe utilisé est l'œil."
+
+[sub_resource type="Resource" id="Resource_ivfwq"]
+script = ExtResource("1_sk10u")
+word = "OUIE"
+hint = "Sens dont l'organe utilisé est l'oreille."
+
+[sub_resource type="Resource" id="Resource_htu4p"]
+script = ExtResource("1_sk10u")
+word = "RECEPTEUR"
+hint = "Appareil qui reçoit les informations."
+
+[sub_resource type="Resource" id="Resource_uy63m"]
+script = ExtResource("1_sk10u")
+word = "CERVEAU"
+hint = "Organe situé dans le crâne qui remplit de nombreuses fonctions essentielles."
+
+[sub_resource type="Resource" id="Resource_xacbu"]
+script = ExtResource("1_sk10u")
+word = "GOUT"
+hint = "Sens dont l'organe utilisé est la langue."
+
+[sub_resource type="Resource" id="Resource_nhn80"]
+script = ExtResource("1_sk10u")
+word = "SOURCE"
+hint = "Point d'origine ou de provenance à partir duquel quelque chose se forme."
+
+[sub_resource type="Resource" id="Resource_34i55"]
+script = ExtResource("1_sk10u")
+word = "LASER"
+hint = "Instrument produisant un fin rayon lumineux."
+
+[sub_resource type="Resource" id="Resource_ysr18"]
+script = ExtResource("1_sk10u")
+word = "CASQUE"
+hint = "Objet que l'on porte sur les oreilles pour protéger contre les sons forts."
+
+[resource]
+script = ExtResource("2_2w11a")
+clues = Array[ExtResource("1_sk10u")]([SubResource("Resource_jpmcq"), SubResource("Resource_bfkib"), SubResource("Resource_lm7q5"), SubResource("Resource_nuoa5"), SubResource("Resource_mxhw1"), SubResource("Resource_ekfy4"), SubResource("Resource_07xqi"), SubResource("Resource_ivfwq"), SubResource("Resource_htu4p"), SubResource("Resource_uy63m"), SubResource("Resource_xacbu"), SubResource("Resource_nhn80"), SubResource("Resource_34i55"), SubResource("Resource_ysr18")])

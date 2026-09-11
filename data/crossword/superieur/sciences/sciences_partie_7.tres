@@ -1,0 +1,78 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://p1wtm81x0gyw"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_tposb"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_udr8y"]
+
+[sub_resource type="Resource" id="Resource_x2k15"]
+script = ExtResource("1_tposb")
+word = "COMPORTEMENT"
+hint = "Ensemble des réactions observables d'un animal."
+
+[sub_resource type="Resource" id="Resource_wtmt6"]
+script = ExtResource("1_tposb")
+word = "INSTINCT"
+hint = "Comportement inné, non appris."
+
+[sub_resource type="Resource" id="Resource_gbo2t"]
+script = ExtResource("1_tposb")
+word = "APPRENTISSAGE"
+hint = "Modification du comportement basée sur l'expérience."
+
+[sub_resource type="Resource" id="Resource_kk4nw"]
+script = ExtResource("1_tposb")
+word = "MIGRATION"
+hint = "Déplacement saisonnier d'animaux pour chercher nourriture ou reproduction."
+
+[sub_resource type="Resource" id="Resource_wr3tv"]
+script = ExtResource("1_tposb")
+word = "HIBERNATION"
+hint = "État de sommeil hivernal pour économiser l'énergie."
+
+[sub_resource type="Resource" id="Resource_4t0kd"]
+script = ExtResource("1_tposb")
+word = "SEXUEE"
+hint = "Reproduction impliquant deux parents et une recombinaison génétique."
+
+[sub_resource type="Resource" id="Resource_p6kaq"]
+script = ExtResource("1_tposb")
+word = "ASEXUEE"
+hint = "Reproduction impliquant un seul parent, produisant des clones."
+
+[sub_resource type="Resource" id="Resource_56u20"]
+script = ExtResource("1_tposb")
+word = "HERMAPHRODITE"
+hint = "Organisme possédant à la fois des organes reproducteurs mâles et femelles."
+
+[sub_resource type="Resource" id="Resource_mj8nc"]
+script = ExtResource("1_tposb")
+word = "POLLINISATION"
+hint = "Transport du pollen des organes mâles vers les organes femelles des fleurs."
+
+[sub_resource type="Resource" id="Resource_fof1g"]
+script = ExtResource("1_tposb")
+word = "GERMINATION"
+hint = "Développement d'une graine pour donner une nouvelle plante."
+
+[sub_resource type="Resource" id="Resource_wh2fv"]
+script = ExtResource("1_tposb")
+word = "SEQUOIA"
+hint = "Végétal massif et géant pouvant atteindre 111 mètres de haut."
+
+[sub_resource type="Resource" id="Resource_nmjnw"]
+script = ExtResource("1_tposb")
+word = "FEUILLE"
+hint = "Organe des plantes assurant principalement la photosynthèse."
+
+[sub_resource type="Resource" id="Resource_rnrwv"]
+script = ExtResource("1_tposb")
+word = "TIGE"
+hint = "Organe de la plante assurant sa structure et le support aérien."
+
+[sub_resource type="Resource" id="Resource_kfqpg"]
+script = ExtResource("1_tposb")
+word = "RACINE"
+hint = "Organe de la plante assurant la nutrition et la fixation au sol."
+
+[resource]
+script = ExtResource("2_udr8y")
+clues = Array[ExtResource("1_tposb")]([SubResource("Resource_x2k15"), SubResource("Resource_wtmt6"), SubResource("Resource_gbo2t"), SubResource("Resource_kk4nw"), SubResource("Resource_wr3tv"), SubResource("Resource_4t0kd"), SubResource("Resource_p6kaq"), SubResource("Resource_56u20"), SubResource("Resource_mj8nc"), SubResource("Resource_fof1g"), SubResource("Resource_wh2fv"), SubResource("Resource_nmjnw"), SubResource("Resource_rnrwv"), SubResource("Resource_kfqpg")])

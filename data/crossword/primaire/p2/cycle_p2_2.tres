@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bx31lygwuilf4"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_2u43q"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_mhwgj"]
+
+[sub_resource type="Resource" id="Resource_l56vk"]
+script = ExtResource("1_2u43q")
+word = "VIEILLISSEMENT"
+hint = "Etape de la vie d'un animal après sa croissance, lorsqu'il prend de l'âge."
+
+[sub_resource type="Resource" id="Resource_j4kjp"]
+script = ExtResource("1_2u43q")
+word = "CROISSANCE"
+hint = "Etape de la vie d'une espèce où elle grandit et change."
+
+[sub_resource type="Resource" id="Resource_1s2v3"]
+script = ExtResource("1_2u43q")
+word = "NAITRE"
+hint = "Première étape de la vie d'un être vivant, lorsqu'il vit."
+
+[sub_resource type="Resource" id="Resource_efxay"]
+script = ExtResource("1_2u43q")
+word = "FECONDATION"
+hint = "Fusion entre la cellule mâle et la cellule femelle pour donner un embryon."
+
+[sub_resource type="Resource" id="Resource_7x5j1"]
+script = ExtResource("1_2u43q")
+word = "METAMORPHOSE"
+hint = "Période de la vie d'un animal qui correspond au passage d'une forme larvaire à une forme juvénile ou adulte."
+
+[sub_resource type="Resource" id="Resource_vxujg"]
+script = ExtResource("1_2u43q")
+word = "VIVIPARE"
+hint = "Animal qui donne naissance à des petits, et qui ne pond pas des oeufs."
+
+[sub_resource type="Resource" id="Resource_mgtla"]
+script = ExtResource("1_2u43q")
+word = "VIVANT"
+hint = "Être qui peut naitre, grandir, manger et mourir."
+
+[sub_resource type="Resource" id="Resource_k3oqa"]
+script = ExtResource("1_2u43q")
+word = "MOURIR"
+hint = "Dernière étape de la vie d'un vivant, lorsqu'il disparait pour toujours."
+
+[resource]
+script = ExtResource("2_mhwgj")
+clues = Array[ExtResource("1_2u43q")]([SubResource("Resource_l56vk"), SubResource("Resource_j4kjp"), SubResource("Resource_1s2v3"), SubResource("Resource_efxay"), SubResource("Resource_7x5j1"), SubResource("Resource_vxujg"), SubResource("Resource_mgtla"), SubResource("Resource_k3oqa")])

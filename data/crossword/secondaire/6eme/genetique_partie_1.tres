@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bu1ol3xy8lc28"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_js1k2"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_x74hg"]
+
+[sub_resource type="Resource" id="Resource_ytvqh"]
+script = ExtResource("1_js1k2")
+word = "ESPECE"
+hint = "Groupe d'individus interféconds présentant des caractères communs, dont les descendants sont fertiles."
+
+[sub_resource type="Resource" id="Resource_6c4wk"]
+script = ExtResource("1_js1k2")
+word = "GENE"
+hint = "Portion d'ADN."
+
+[sub_resource type="Resource" id="Resource_imlyu"]
+script = ExtResource("1_js1k2")
+word = "MENDEL"
+hint = "Père fondateur de la génétique qui a étudié le petit pois."
+
+[sub_resource type="Resource" id="Resource_q6lfy"]
+script = ExtResource("1_js1k2")
+word = "ATCG"
+hint = "Dans l'ordre : Adenine, Thymine, Cytosine et Guanine."
+
+[sub_resource type="Resource" id="Resource_vyli7"]
+script = ExtResource("1_js1k2")
+word = "DOMESTICATION"
+hint = "Transformation d'une espèce sauvage en une espèce soumise à une exploitation par l'homme."
+
+[sub_resource type="Resource" id="Resource_f0j7w"]
+script = ExtResource("1_js1k2")
+word = "HOMOZYGOTE"
+hint = "Individu qui possède deux allèles identiques pour un gène donné."
+
+[sub_resource type="Resource" id="Resource_r4m7g"]
+script = ExtResource("1_js1k2")
+word = "CROSS"
+hint = "Nom du test représentant le croisement entre un individu au génotype inconnu et un individu homozygote récessif."
+
+[sub_resource type="Resource" id="Resource_kjy8h"]
+script = ExtResource("1_js1k2")
+word = "SPECIATION"
+hint = "Processus permettant à des populations d'une même espèce d'évoluer indépendamment pour former des espèces distinctes."
+
+[sub_resource type="Resource" id="Resource_fxj6i"]
+script = ExtResource("1_js1k2")
+word = "HETEROZYGOTE"
+hint = "Individu qui possède deux allèles différents pour un gène donné."
+
+[sub_resource type="Resource" id="Resource_hjt8c"]
+script = ExtResource("1_js1k2")
+word = "ANCETRE"
+hint = "Nom général de l'individu qui correspond à l'ascendant."
+
+[sub_resource type="Resource" id="Resource_kjwnr"]
+script = ExtResource("1_js1k2")
+word = "SOMATIQUE"
+hint = "Cellule composant le corps humain excepté les cellules germinales."
+
+[sub_resource type="Resource" id="Resource_wtwga"]
+script = ExtResource("1_js1k2")
+word = "RACE"
+hint = "Sélection d'espèces par les humains pour des caractéristiques spécifiques."
+
+[sub_resource type="Resource" id="Resource_dppni"]
+script = ExtResource("1_js1k2")
+word = "DARWIN"
+hint = "Scientifique à l'origine du mécanisme de la sélection naturelle."
+
+[sub_resource type="Resource" id="Resource_10o1o"]
+script = ExtResource("1_js1k2")
+word = "MEIOSE"
+hint = "Processus de division cellulaire permettant d'obtenir des cellules filles génétiquement différentes."
+
+[sub_resource type="Resource" id="Resource_hd8ke"]
+script = ExtResource("1_js1k2")
+word = "ADN"
+hint = "Molécule formée de deux brins enroulés en une double hélice."
+
+[resource]
+script = ExtResource("2_x74hg")
+clues = Array[ExtResource("1_js1k2")]([SubResource("Resource_ytvqh"), SubResource("Resource_6c4wk"), SubResource("Resource_imlyu"), SubResource("Resource_q6lfy"), SubResource("Resource_vyli7"), SubResource("Resource_f0j7w"), SubResource("Resource_r4m7g"), SubResource("Resource_kjy8h"), SubResource("Resource_fxj6i"), SubResource("Resource_hjt8c"), SubResource("Resource_kjwnr"), SubResource("Resource_wtwga"), SubResource("Resource_dppni"), SubResource("Resource_10o1o"), SubResource("Resource_hd8ke")])

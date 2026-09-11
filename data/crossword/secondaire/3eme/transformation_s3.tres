@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://b11j80735l5dx"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_up4py"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_6v6v7"]
+
+[sub_resource type="Resource" id="Resource_h2avq"]
+script = ExtResource("1_up4py")
+word = "ACIDE"
+hint = "Se dit d'une substance chimique capable de donner des protons, comme l'acide phosphorique."
+
+[sub_resource type="Resource" id="Resource_sn28a"]
+script = ExtResource("1_up4py")
+word = "PICTOGRAMME"
+hint = "Elément visuel, figuratif, qui peut représenter une notion, un concept ou une idée de manière graphique."
+
+[sub_resource type="Resource" id="Resource_6oufm"]
+script = ExtResource("1_up4py")
+word = "COOLING"
+hint = "Technique de refroidissement qui consiste à faire couler de l'eau à 10-20 °C sur la brûlure pendant au moins 15 minutes."
+
+[sub_resource type="Resource" id="Resource_wjhpn"]
+script = ExtResource("1_up4py")
+word = "ACTIVATION"
+hint = "Se dit d'une énergie nécessaire pour surmonter la barrière énergétique entre les réactifs et les produits d'une réaction."
+
+[sub_resource type="Resource" id="Resource_316hu"]
+script = ExtResource("1_up4py")
+word = "PONDERER"
+hint = "Méthode en chimie qui consiste à équilibrer des équations entre les réactifs et les produits."
+
+[sub_resource type="Resource" id="Resource_nqvax"]
+script = ExtResource("1_up4py")
+word = "COMBUSTION"
+hint = "Réaction de chaleur obtenue avec le mélange d'un combustible (gaz) et d'un comburant (dioxygène)."
+
+[sub_resource type="Resource" id="Resource_blm3n"]
+script = ExtResource("1_up4py")
+word = "COEFFICIENT"
+hint = "Nombre que l'on indique devant une substance chimique dans une équation pour l'équilibrer."
+
+[sub_resource type="Resource" id="Resource_duk5f"]
+script = ExtResource("1_up4py")
+word = "TRANSFORMATION"
+hint = "Opération par laquelle il y a du changement."
+
+[sub_resource type="Resource" id="Resource_n2rq1"]
+script = ExtResource("1_up4py")
+word = "CORROSION"
+hint = "Oxydation, altération d'un matériau par réaction chimique avec un oxydant."
+
+[sub_resource type="Resource" id="Resource_2axnx"]
+script = ExtResource("1_up4py")
+word = "ETIQUETAGE"
+hint = "Ensemble d'informations qui figurent sur une substance chimique afin de l'identifier et de la classer."
+
+[sub_resource type="Resource" id="Resource_r5h57"]
+script = ExtResource("1_up4py")
+word = "LAVOISIER"
+hint = "Célèbre chimiste français qui a proposé la théorie de la conservation de la matière."
+
+[sub_resource type="Resource" id="Resource_uwjpr"]
+script = ExtResource("1_up4py")
+word = "BASE"
+hint = "Se dit d'une substance chimique capable de prendre, d'accepter des protons, comme la soude caustique."
+
+[resource]
+script = ExtResource("2_6v6v7")
+clues = Array[ExtResource("1_up4py")]([SubResource("Resource_h2avq"), SubResource("Resource_sn28a"), SubResource("Resource_6oufm"), SubResource("Resource_wjhpn"), SubResource("Resource_316hu"), SubResource("Resource_nqvax"), SubResource("Resource_blm3n"), SubResource("Resource_duk5f"), SubResource("Resource_n2rq1"), SubResource("Resource_2axnx"), SubResource("Resource_r5h57"), SubResource("Resource_uwjpr")])

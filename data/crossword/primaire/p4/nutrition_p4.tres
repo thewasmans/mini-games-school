@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cdr7mgeowp85x"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_otluc"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_e47dr"]
+
+[sub_resource type="Resource" id="Resource_k0t5m"]
+script = ExtResource("1_otluc")
+word = "PANCREAS"
+hint = "Organe permettant de réguler le taux de sucre dans le sang."
+
+[sub_resource type="Resource" id="Resource_uae5g"]
+script = ExtResource("1_otluc")
+word = "ESTOMAC"
+hint = "Organe contenant du suc gastrique et qui stocke les aliments."
+
+[sub_resource type="Resource" id="Resource_iqc7f"]
+script = ExtResource("1_otluc")
+word = "TRANSFORMATION"
+hint = "Opération par laquelle il y a du changement."
+
+[sub_resource type="Resource" id="Resource_k8i85"]
+script = ExtResource("1_otluc")
+word = "GOUT"
+hint = "Sens dont l'organe utilisé est la langue."
+
+[sub_resource type="Resource" id="Resource_w3sd2"]
+script = ExtResource("1_otluc")
+word = "FOIE"
+hint = "Glande annexe au système digestif qui sécrète la bile et stocke le sucre."
+
+[sub_resource type="Resource" id="Resource_leavu"]
+script = ExtResource("1_otluc")
+word = "INTESTIN"
+hint = "Organe du système digestif qui permet l'absorption des nutriments dans le sang."
+
+[sub_resource type="Resource" id="Resource_c076f"]
+script = ExtResource("1_otluc")
+word = "BILE"
+hint = "Substance produite par le foie et libérée par la vésicule biliaire."
+
+[sub_resource type="Resource" id="Resource_sihyn"]
+script = ExtResource("1_otluc")
+word = "DIGESTION"
+hint = "Processus de transformation des aliments en nutriments."
+
+[sub_resource type="Resource" id="Resource_y50nn"]
+script = ExtResource("1_otluc")
+word = "OESOPHAGE"
+hint = "Tube séparant la bouche de l'estomac dans lequel la bouillie alimentaire circule."
+
+[sub_resource type="Resource" id="Resource_5lvtm"]
+script = ExtResource("1_otluc")
+word = "NUTRIMENT"
+hint = "Substance, élément que l'on retrouve dans un aliment."
+
+[sub_resource type="Resource" id="Resource_od7ca"]
+script = ExtResource("1_otluc")
+word = "ALIMENT"
+hint = "Synonyme de nourriture."
+
+[sub_resource type="Resource" id="Resource_1awy7"]
+script = ExtResource("1_otluc")
+word = "SANG"
+hint = "Liquide biologique vital qui circule continuellement dans les vaisseaux sanguins."
+
+[sub_resource type="Resource" id="Resource_pqgo0"]
+script = ExtResource("1_otluc")
+word = "RECTUM"
+hint = "Portion terminale du gros intestin, qui aboutit à l'anus."
+
+[resource]
+script = ExtResource("2_e47dr")
+clues = Array[ExtResource("1_otluc")]([SubResource("Resource_k0t5m"), SubResource("Resource_uae5g"), SubResource("Resource_iqc7f"), SubResource("Resource_k8i85"), SubResource("Resource_w3sd2"), SubResource("Resource_leavu"), SubResource("Resource_c076f"), SubResource("Resource_sihyn"), SubResource("Resource_y50nn"), SubResource("Resource_5lvtm"), SubResource("Resource_od7ca"), SubResource("Resource_1awy7"), SubResource("Resource_pqgo0")])

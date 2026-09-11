@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://djo54cn5tdxna"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_skdjg"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_22k66"]
+
+[sub_resource type="Resource" id="Resource_cf3gw"]
+script = ExtResource("1_skdjg")
+word = "ENERGIE"
+hint = "Capacité à modifier un état ou à produire un travail entraînant un mouvement."
+
+[sub_resource type="Resource" id="Resource_uq8nm"]
+script = ExtResource("1_skdjg")
+word = "CENTRALE"
+hint = "Site industriel destiné à la production d'électricité."
+
+[sub_resource type="Resource" id="Resource_bc42w"]
+script = ExtResource("1_skdjg")
+word = "VENT"
+hint = "Source d'énergie naturelle et renouvelable provenant du mouvement de l'air."
+
+[sub_resource type="Resource" id="Resource_fsy3y"]
+script = ExtResource("1_skdjg")
+word = "TRANSFORMATION"
+hint = "Opération par laquelle il y a du changement physique ou chimique."
+
+[sub_resource type="Resource" id="Resource_7goop"]
+script = ExtResource("1_skdjg")
+word = "CHIMIQUE"
+hint = "Forme d'énergie provenant des produits formés par les réactifs."
+
+[sub_resource type="Resource" id="Resource_32ja1"]
+script = ExtResource("1_skdjg")
+word = "NUCLEAIRE"
+hint = "Forme d’énergie libérée par le noyau, le cœur des atomes, composé de protons et de neutrons."
+
+[sub_resource type="Resource" id="Resource_ugr7a"]
+script = ExtResource("1_skdjg")
+word = "GEOTHERMIE"
+hint = "Source d'énergie provenant du sol, chaleur provenant de la terre."
+
+[sub_resource type="Resource" id="Resource_j0nsv"]
+script = ExtResource("1_skdjg")
+word = "URANIUM"
+hint = "Elément chimique de numéro atomique 92, de symbole U."
+
+[sub_resource type="Resource" id="Resource_5uhqm"]
+script = ExtResource("1_skdjg")
+word = "BIOMASSE"
+hint = "Energie qui correspond à la masse biologique de la matière."
+
+[sub_resource type="Resource" id="Resource_3ns5y"]
+script = ExtResource("1_skdjg")
+word = "FORCE"
+hint = "Action qui se réalise suite à l'interaction entre deux objets, produit de la masse et de l'accélération."
+
+[sub_resource type="Resource" id="Resource_a3ijx"]
+script = ExtResource("1_skdjg")
+word = "SOUFRE"
+hint = "Elément chimique dont le symbole est S."
+
+[sub_resource type="Resource" id="Resource_od30o"]
+script = ExtResource("1_skdjg")
+word = "METAL"
+hint = "Cas du fer, du cuivre, de l'aluminium ou encore de l'or."
+
+[resource]
+script = ExtResource("2_22k66")
+clues = Array[ExtResource("1_skdjg")]([SubResource("Resource_cf3gw"), SubResource("Resource_uq8nm"), SubResource("Resource_bc42w"), SubResource("Resource_fsy3y"), SubResource("Resource_7goop"), SubResource("Resource_32ja1"), SubResource("Resource_ugr7a"), SubResource("Resource_j0nsv"), SubResource("Resource_5uhqm"), SubResource("Resource_3ns5y"), SubResource("Resource_a3ijx"), SubResource("Resource_od30o")])

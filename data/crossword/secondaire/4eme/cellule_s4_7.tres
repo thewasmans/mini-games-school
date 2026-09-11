@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dlpg6kejpns1p"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_uc8h2"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_e4jnq"]
+
+[sub_resource type="Resource" id="Resource_k14x8"]
+script = ExtResource("1_uc8h2")
+word = "CARYOTYPE"
+hint = "Représentation de l'ensemble des chromosomes d'une cellule, classés par paire."
+
+[sub_resource type="Resource" id="Resource_ew866"]
+script = ExtResource("1_uc8h2")
+word = "CYCLE"
+hint = "Période durant laquelle l'ADN se présente sous différents aspects."
+
+[sub_resource type="Resource" id="Resource_g6vhy"]
+script = ExtResource("1_uc8h2")
+word = "CYTOCINESE"
+hint = "Etape de la mitose où l'on peut voir deux cellules filles formées, génétiquement identiques."
+
+[sub_resource type="Resource" id="Resource_1iml5"]
+script = ExtResource("1_uc8h2")
+word = "NUCLEOLE"
+hint = "Région du noyau où se trouve l'ADN."
+
+[sub_resource type="Resource" id="Resource_vb3e6"]
+script = ExtResource("1_uc8h2")
+word = "MITOSE"
+hint = "Processus de division cellulaire permettant d'obtenir des cellules filles génétiquement identiques."
+
+[sub_resource type="Resource" id="Resource_hrfba"]
+script = ExtResource("1_uc8h2")
+word = "VACUOLE"
+hint = "Compartiment qui sert surtout au maintien de l’équilibre hydrique."
+
+[sub_resource type="Resource" id="Resource_6pyct"]
+script = ExtResource("1_uc8h2")
+word = "OPTIQUE"
+hint = "Technique de microscopie basée sur l'utilisation de lentilles."
+
+[sub_resource type="Resource" id="Resource_kdq7k"]
+script = ExtResource("1_uc8h2")
+word = "VIRUS"
+hint = "Agent infectieux nécessitant un hôte."
+
+[sub_resource type="Resource" id="Resource_vf7ep"]
+script = ExtResource("1_uc8h2")
+word = "ZYGOTE"
+hint = "Cellule oeuf fécondée résultant de la fusion d'un gamète femelle et d'un gamète mâle."
+
+[sub_resource type="Resource" id="Resource_y12i1"]
+script = ExtResource("1_uc8h2")
+word = "HETEROZYGOTE"
+hint = "Individu qui possède deux allèles différents pour un gène donné."
+
+[sub_resource type="Resource" id="Resource_fmw2a"]
+script = ExtResource("1_uc8h2")
+word = "GAMETE"
+hint = "Cellule reproductrice appelée spermatozoide ou ovocyte."
+
+[resource]
+script = ExtResource("2_e4jnq")
+clues = Array[ExtResource("1_uc8h2")]([SubResource("Resource_k14x8"), SubResource("Resource_ew866"), SubResource("Resource_g6vhy"), SubResource("Resource_1iml5"), SubResource("Resource_vb3e6"), SubResource("Resource_hrfba"), SubResource("Resource_6pyct"), SubResource("Resource_kdq7k"), SubResource("Resource_vf7ep"), SubResource("Resource_y12i1"), SubResource("Resource_fmw2a")])

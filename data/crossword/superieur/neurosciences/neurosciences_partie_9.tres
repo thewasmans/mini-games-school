@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://d2jvpr1ejdbqa"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_4qp0j"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_ucr1l"]
+
+[sub_resource type="Resource" id="Resource_l4fc6"]
+script = ExtResource("1_4qp0j")
+word = "CORTISOL"
+hint = "Hormone permettant de réguler le métabolisme lors d'un stress."
+
+[sub_resource type="Resource" id="Resource_0xofv"]
+script = ExtResource("1_4qp0j")
+word = "DOPAMINE"
+hint = "Neurotransmetteur impliqué dans le bien être et la motricité."
+
+[sub_resource type="Resource" id="Resource_xkkkj"]
+script = ExtResource("1_4qp0j")
+word = "REIN"
+hint = "Organe fabriquant l'urine."
+
+[sub_resource type="Resource" id="Resource_12m70"]
+script = ExtResource("1_4qp0j")
+word = "EMPATHIE"
+hint = "Capacité de se mettre à la place de l'autre, à comprendre ses émotions."
+
+[sub_resource type="Resource" id="Resource_x330r"]
+script = ExtResource("1_4qp0j")
+word = "GLUTAMATE"
+hint = "Neurotransmetteur excitateur concentré dans l'hippocampe."
+
+[sub_resource type="Resource" id="Resource_c0mnq"]
+script = ExtResource("1_4qp0j")
+word = "GABA"
+hint = "Neurotransmetteur inhibiteur concentré dans l'amygdale."
+
+[sub_resource type="Resource" id="Resource_87t0a"]
+script = ExtResource("1_4qp0j")
+word = "IDIOSYNCRASIQUE"
+hint = "Se d'une réaction personnelle liée à ses propres émotions."
+
+[sub_resource type="Resource" id="Resource_0m1rg"]
+script = ExtResource("1_4qp0j")
+word = "ENFERMEMENT"
+hint = "Syndrome très handicapant qui est provoqué par une lésion du tronc cérébral."
+
+[sub_resource type="Resource" id="Resource_71unv"]
+script = ExtResource("1_4qp0j")
+word = "PREMOTEUR"
+hint = "Cortex qui séquence les mouvements à réaliser."
+
+[sub_resource type="Resource" id="Resource_2k8t2"]
+script = ExtResource("1_4qp0j")
+word = "AMBIGUE"
+hint = "Forme d'illusion où le cerveau traite l'image qui a le plus de sens selon sa perception."
+
+[sub_resource type="Resource" id="Resource_8vx34"]
+script = ExtResource("1_4qp0j")
+word = "ATV"
+hint = "Structure contenant le noyau accumbens, le septum et les hippocampes."
+
+[sub_resource type="Resource" id="Resource_rdmqe"]
+script = ExtResource("1_4qp0j")
+word = "IMC"
+hint = "Acronyme d'infirmité motrice cérébrale."
+
+[sub_resource type="Resource" id="Resource_i5wt7"]
+script = ExtResource("1_4qp0j")
+word = "NEUROSOCIAL"
+hint = "Terme utilisé pour qualifier un cerveau en relation avec le cerveau d'autrui."
+
+[sub_resource type="Resource" id="Resource_qk71d"]
+script = ExtResource("1_4qp0j")
+word = "PSYCHOPATHE"
+hint = "Patient qui manipule et ment aux gens, il ne ressent parfois aucune émotion."
+
+[sub_resource type="Resource" id="Resource_1d3ij"]
+script = ExtResource("1_4qp0j")
+word = "TETRAPLEGIE"
+hint = "Paralysie qui bloque l'ensemble des membres du corps."
+
+[resource]
+script = ExtResource("2_ucr1l")
+clues = Array[ExtResource("1_4qp0j")]([SubResource("Resource_l4fc6"), SubResource("Resource_0xofv"), SubResource("Resource_xkkkj"), SubResource("Resource_12m70"), SubResource("Resource_x330r"), SubResource("Resource_c0mnq"), SubResource("Resource_87t0a"), SubResource("Resource_0m1rg"), SubResource("Resource_71unv"), SubResource("Resource_2k8t2"), SubResource("Resource_8vx34"), SubResource("Resource_rdmqe"), SubResource("Resource_i5wt7"), SubResource("Resource_qk71d"), SubResource("Resource_1d3ij")])

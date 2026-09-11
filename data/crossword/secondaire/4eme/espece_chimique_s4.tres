@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://biiydxp66gpbu"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_66v64"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_g4esw"]
+
+[sub_resource type="Resource" id="Resource_wcx4v"]
+script = ExtResource("1_66v64")
+word = "AVOGADRO"
+hint = "Nom du nombre de particules qui se trouvent dans une mole."
+
+[sub_resource type="Resource" id="Resource_aqc0o"]
+script = ExtResource("1_66v64")
+word = "NOMENCLATURE"
+hint = "Ensemble de règles qui permettent de nommer les éléments et les composés en interprétant leur formule chimique."
+
+[sub_resource type="Resource" id="Resource_scp0v"]
+script = ExtResource("1_66v64")
+word = "SIGNIFICATIFS"
+hint = "Se dit des chiffres qui indiquent la fiabilité d'une valeur numérique."
+
+[sub_resource type="Resource" id="Resource_uucvp"]
+script = ExtResource("1_66v64")
+word = "QUATERNAIRE"
+hint = "Corps composé de quatre éléments chimiques, comme l'acide sulfurique."
+
+[sub_resource type="Resource" id="Resource_gtu8n"]
+script = ExtResource("1_66v64")
+word = "DILUTION"
+hint = "Procédé utilisé pour diminuer la concentration d'une solution en y ajoutant du solvant."
+
+[sub_resource type="Resource" id="Resource_0w2cy"]
+script = ExtResource("1_66v64")
+word = "MOLE"
+hint = "Unité de mesure qui correspond à un nombre fixe de particules."
+
+[sub_resource type="Resource" id="Resource_0ttci"]
+script = ExtResource("1_66v64")
+word = "STOECHIOMETRIE"
+hint = "Méthode de pondération des substances qui interagissent dans une réaction chimique."
+
+[sub_resource type="Resource" id="Resource_fasx0"]
+script = ExtResource("1_66v64")
+word = "DENSITE"
+hint = "Rapport de la masse volumique d'un corps à la masse volumique d'un référent."
+
+[sub_resource type="Resource" id="Resource_yg8hs"]
+script = ExtResource("1_66v64")
+word = "ISOTOPE"
+hint = "Elément chimique qui possède le même nombre de protons (et d'électrons), mais qui diffère par le nombre de neutrons."
+
+[sub_resource type="Resource" id="Resource_10noh"]
+script = ExtResource("1_66v64")
+word = "BINAIRE"
+hint = "Corps composé de deux éléments chimiques, comme le HCl."
+
+[sub_resource type="Resource" id="Resource_cl2k1"]
+script = ExtResource("1_66v64")
+word = "CNTP"
+hint = "Acronyme pour les conditions normales de température et de pression."
+
+[resource]
+script = ExtResource("2_g4esw")
+clues = Array[ExtResource("1_66v64")]([SubResource("Resource_wcx4v"), SubResource("Resource_aqc0o"), SubResource("Resource_scp0v"), SubResource("Resource_uucvp"), SubResource("Resource_gtu8n"), SubResource("Resource_0w2cy"), SubResource("Resource_0ttci"), SubResource("Resource_fasx0"), SubResource("Resource_yg8hs"), SubResource("Resource_10noh"), SubResource("Resource_cl2k1")])

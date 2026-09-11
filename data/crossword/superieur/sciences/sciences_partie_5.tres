@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cvsc8n7dtmnwx"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_6bujo"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_x0m4u"]
+
+[sub_resource type="Resource" id="Resource_atfa5"]
+script = ExtResource("1_6bujo")
+word = "PRODUCTEUR"
+hint = "Organisme autotrophe à la base de la chaîne alimentaire."
+
+[sub_resource type="Resource" id="Resource_sgpgw"]
+script = ExtResource("1_6bujo")
+word = "CONSOMMATEUR"
+hint = "Organisme hétérotrophe se nourrissant d'autres êtres vivants."
+
+[sub_resource type="Resource" id="Resource_wpsf2"]
+script = ExtResource("1_6bujo")
+word = "DECOMPOSEUR"
+hint = "Organisme recyclant la matière organique en minérale."
+
+[sub_resource type="Resource" id="Resource_tlujl"]
+script = ExtResource("1_6bujo")
+word = "MINERALISATION"
+hint = "Transformation de la matière organique en matière minérale."
+
+[sub_resource type="Resource" id="Resource_cvnhe"]
+script = ExtResource("1_6bujo")
+word = "CHLOROPHYLLE"
+hint = "Pigment responsable de la photosynthèse dans les plantes."
+
+[sub_resource type="Resource" id="Resource_vlrly"]
+script = ExtResource("1_6bujo")
+word = "CELLULE"
+hint = "Unité fondamentale structurale et fonctionnelle de tout vivant."
+
+[sub_resource type="Resource" id="Resource_bxwwh"]
+script = ExtResource("1_6bujo")
+word = "ORGANITE"
+hint = "Structure spécialisée contenue dans le cytoplasme de la cellule."
+
+[sub_resource type="Resource" id="Resource_3ypb8"]
+script = ExtResource("1_6bujo")
+word = "NOYAU"
+hint = "Organite contenant le matériel génétique."
+
+[sub_resource type="Resource" id="Resource_ql114"]
+script = ExtResource("1_6bujo")
+word = "MITOSE"
+hint = "Division cellulaire permettant la multiplication des cellules."
+
+[sub_resource type="Resource" id="Resource_e41qg"]
+script = ExtResource("1_6bujo")
+word = "MEIOSE"
+hint = "Division cellulaire spécialisée dans la production de gamètes."
+
+[sub_resource type="Resource" id="Resource_7481x"]
+script = ExtResource("1_6bujo")
+word = "GAMETE"
+hint = "Cellule reproductrice."
+
+[sub_resource type="Resource" id="Resource_7edn5"]
+script = ExtResource("1_6bujo")
+word = "FECONDATION"
+hint = "Fusion d'un gamète mâle et d'un gamète femelle."
+
+[sub_resource type="Resource" id="Resource_80wse"]
+script = ExtResource("1_6bujo")
+word = "ZYGOTE"
+hint = "Cellule résultant de la fécondation."
+
+[sub_resource type="Resource" id="Resource_qyea8"]
+script = ExtResource("1_6bujo")
+word = "EMBRYON"
+hint = "Stade précoce de développement d'un organisme après la fécondation."
+
+[sub_resource type="Resource" id="Resource_co1a1"]
+script = ExtResource("1_6bujo")
+word = "METAMORPHOSE"
+hint = "Transformation biologique radicale au cours du développement."
+
+[resource]
+script = ExtResource("2_x0m4u")
+clues = Array[ExtResource("1_6bujo")]([SubResource("Resource_atfa5"), SubResource("Resource_sgpgw"), SubResource("Resource_wpsf2"), SubResource("Resource_tlujl"), SubResource("Resource_cvnhe"), SubResource("Resource_vlrly"), SubResource("Resource_bxwwh"), SubResource("Resource_3ypb8"), SubResource("Resource_ql114"), SubResource("Resource_e41qg"), SubResource("Resource_7481x"), SubResource("Resource_7edn5"), SubResource("Resource_80wse"), SubResource("Resource_qyea8"), SubResource("Resource_co1a1")])

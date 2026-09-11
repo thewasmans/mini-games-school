@@ -1,0 +1,78 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://by653q2u6yq0a"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_lf2c4"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_1lbfi"]
+
+[sub_resource type="Resource" id="Resource_rcpa5"]
+script = ExtResource("1_lf2c4")
+word = "MAMMIFERES"
+hint = "Classe d'animaux ayant connu une croissance importante il y a 60 millions d'années."
+
+[sub_resource type="Resource" id="Resource_7c58h"]
+script = ExtResource("1_lf2c4")
+word = "PRIMATES"
+hint = "Ordre de mammifères incluant l'homme et ses ancêtres."
+
+[sub_resource type="Resource" id="Resource_txpq4"]
+script = ExtResource("1_lf2c4")
+word = "NEANDERTAL"
+hint = "Espèce d'hominidé disparue ayant coexisté avec Homo Sapiens."
+
+[sub_resource type="Resource" id="Resource_l6l5t"]
+script = ExtResource("1_lf2c4")
+word = "METEORITE"
+hint = "Corps céleste responsable de l'extinction des dinosaures il y a 65 millions d'années."
+
+[sub_resource type="Resource" id="Resource_dg6y7"]
+script = ExtResource("1_lf2c4")
+word = "YUCATAN"
+hint = "Lieu géographique de l'impact de la météorite ayant causé l'extinction massive."
+
+[sub_resource type="Resource" id="Resource_jeulj"]
+script = ExtResource("1_lf2c4")
+word = "PALEOZOIQUE"
+hint = "Ère primaire caractérisée par le développement de la vie marine et terrestre."
+
+[sub_resource type="Resource" id="Resource_45yfd"]
+script = ExtResource("1_lf2c4")
+word = "MESOZOIQUE"
+hint = "Ère secondaire, connue comme l'ère des dinosaures."
+
+[sub_resource type="Resource" id="Resource_45j71"]
+script = ExtResource("1_lf2c4")
+word = "CENOZOIQUE"
+hint = "Ère marquée par le développement des mammifères."
+
+[sub_resource type="Resource" id="Resource_j6xrg"]
+script = ExtResource("1_lf2c4")
+word = "QUADRUPEDE"
+hint = "Animal se déplaçant sur ses quatre membres."
+
+[sub_resource type="Resource" id="Resource_2hwe1"]
+script = ExtResource("1_lf2c4")
+word = "BIPEDE"
+hint = "Animal se déplaçant sur ses deux membres postérieurs."
+
+[sub_resource type="Resource" id="Resource_41cxb"]
+script = ExtResource("1_lf2c4")
+word = "CLADISTIQUE"
+hint = "Méthode de classification basée sur les relations de parenté."
+
+[sub_resource type="Resource" id="Resource_ee13y"]
+script = ExtResource("1_lf2c4")
+word = "PHYLOGENIE"
+hint = "Étude des relations évolutives entre les êtres vivants."
+
+[sub_resource type="Resource" id="Resource_7cnbe"]
+script = ExtResource("1_lf2c4")
+word = "ADN"
+hint = "Molécule support de l'information génétique."
+
+[sub_resource type="Resource" id="Resource_vns7m"]
+script = ExtResource("1_lf2c4")
+word = "GENETIQUE"
+hint = "Science étudiant l'hérédité et les gènes."
+
+[resource]
+script = ExtResource("2_1lbfi")
+clues = Array[ExtResource("1_lf2c4")]([SubResource("Resource_rcpa5"), SubResource("Resource_7c58h"), SubResource("Resource_txpq4"), SubResource("Resource_l6l5t"), SubResource("Resource_dg6y7"), SubResource("Resource_jeulj"), SubResource("Resource_45yfd"), SubResource("Resource_45j71"), SubResource("Resource_j6xrg"), SubResource("Resource_2hwe1"), SubResource("Resource_41cxb"), SubResource("Resource_ee13y"), SubResource("Resource_7cnbe"), SubResource("Resource_vns7m")])

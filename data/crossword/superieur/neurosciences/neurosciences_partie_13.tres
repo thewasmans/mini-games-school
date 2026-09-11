@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://b67gl5h4pt4fo"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_tmg8m"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_cjluj"]
+
+[sub_resource type="Resource" id="Resource_x0qaj"]
+script = ExtResource("1_tmg8m")
+word = "TURNER"
+hint = "Monosomie affectant uniquement les filles et provoquant souvent une infertilité."
+
+[sub_resource type="Resource" id="Resource_vikb1"]
+script = ExtResource("1_tmg8m")
+word = "SPECTRE"
+hint = "Terme actuel qui caractérise les différentes formes d'autisme."
+
+[sub_resource type="Resource" id="Resource_t05be"]
+script = ExtResource("1_tmg8m")
+word = "WILLIAM"
+hint = "Micro-délétion détectée par la méthode FISH et qui se traduit par de l'hypersociabilité."
+
+[sub_resource type="Resource" id="Resource_0mini"]
+script = ExtResource("1_tmg8m")
+word = "COMORBIDITE"
+hint = "Association de plusieurs troubles suite à une maladie primaire."
+
+[sub_resource type="Resource" id="Resource_4nfld"]
+script = ExtResource("1_tmg8m")
+word = "DEPRESSION"
+hint = "Maladie psychiatrique induisant tristesse, fatigue et perte d'intérêt."
+
+[sub_resource type="Resource" id="Resource_fobu4"]
+script = ExtResource("1_tmg8m")
+word = "TREACHER"
+hint = "Maladie congénitale qui entraine un mauvais développement des structures du visage."
+
+[sub_resource type="Resource" id="Resource_g3wju"]
+script = ExtResource("1_tmg8m")
+word = "TACHYCARDIE"
+hint = "Augmentation rapide du rythme cardiaque."
+
+[sub_resource type="Resource" id="Resource_l33ut"]
+script = ExtResource("1_tmg8m")
+word = "LEWY"
+hint = "Forme de démence comprenant des hallucinations visuelles et une cognition fluctuante."
+
+[sub_resource type="Resource" id="Resource_j2myr"]
+script = ExtResource("1_tmg8m")
+word = "SCLEROSE"
+hint = "Maladie auto-immune où des macrophages détruisent la gaine de myéline."
+
+[sub_resource type="Resource" id="Resource_j34q8"]
+script = ExtResource("1_tmg8m")
+word = "PRADER"
+hint = "Maladie très rare provoquant de l'hyperphagie et de l'hypotonie chez le bébé."
+
+[sub_resource type="Resource" id="Resource_wopf3"]
+script = ExtResource("1_tmg8m")
+word = "ANGOISSE"
+hint = "Grande anxiété qui se traduit par une rupture de la personne."
+
+[sub_resource type="Resource" id="Resource_3b24c"]
+script = ExtResource("1_tmg8m")
+word = "KLINEFELTER"
+hint = "Trisomie touchant exclusivement les hommes et provoquant l'infertilité."
+
+[sub_resource type="Resource" id="Resource_fkptm"]
+script = ExtResource("1_tmg8m")
+word = "AUTISME"
+hint = "Trouble qui se caractérise par de la stéréotypie, des difficultés de communication et de sociabilité."
+
+[sub_resource type="Resource" id="Resource_ojtac"]
+script = ExtResource("1_tmg8m")
+word = "CHARCOT"
+hint = "Forme de sclérose paralysante suite à une dégénérescence des motoneurones."
+
+[sub_resource type="Resource" id="Resource_2jerd"]
+script = ExtResource("1_tmg8m")
+word = "HISTOPATHOLOGIE"
+hint = "Technique permettant de distinguer certaines neuropathologies sur base des protéines."
+
+[resource]
+script = ExtResource("2_cjluj")
+clues = Array[ExtResource("1_tmg8m")]([SubResource("Resource_x0qaj"), SubResource("Resource_vikb1"), SubResource("Resource_t05be"), SubResource("Resource_0mini"), SubResource("Resource_4nfld"), SubResource("Resource_fobu4"), SubResource("Resource_g3wju"), SubResource("Resource_l33ut"), SubResource("Resource_j2myr"), SubResource("Resource_j34q8"), SubResource("Resource_wopf3"), SubResource("Resource_3b24c"), SubResource("Resource_fkptm"), SubResource("Resource_ojtac"), SubResource("Resource_2jerd")])

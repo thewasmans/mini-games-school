@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dqufuuk2pigo5"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_efd6t"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_swvrk"]
+
+[sub_resource type="Resource" id="Resource_4nle3"]
+script = ExtResource("1_efd6t")
+word = "BORNE"
+hint = "Correspond à l'extrémité positive ou négative d'un générateur, d'une pile."
+
+[sub_resource type="Resource" id="Resource_wmrk3"]
+script = ExtResource("1_efd6t")
+word = "FERME"
+hint = "Circuit dont le courant passe et le récepteur (lampe) fonctionne (s'allume)."
+
+[sub_resource type="Resource" id="Resource_6eovu"]
+script = ExtResource("1_efd6t")
+word = "PARALLELE"
+hint = "Circuit dont le courant emprunte plusieurs chemins."
+
+[sub_resource type="Resource" id="Resource_khgav"]
+script = ExtResource("1_efd6t")
+word = "CABLES"
+hint = "Fils électriques qui permettent à l'électricité de circuler."
+
+[sub_resource type="Resource" id="Resource_vm077"]
+script = ExtResource("1_efd6t")
+word = "INTERRUPTEUR"
+hint = "Dispositif permettant d'interrompre ou de permettre le passage d'un flux électrique."
+
+[sub_resource type="Resource" id="Resource_uinpb"]
+script = ExtResource("1_efd6t")
+word = "LED"
+hint = "Composant électronique et optique qui représente une diode électroluminescente."
+
+[sub_resource type="Resource" id="Resource_xuufv"]
+script = ExtResource("1_efd6t")
+word = "GENERATEUR"
+hint = "Dispositif permettant d'obtenir de l'électricité."
+
+[sub_resource type="Resource" id="Resource_5a3bp"]
+script = ExtResource("1_efd6t")
+word = "CONDUCTEUR"
+hint = "Caractérise un matériau qui conduit le courant électrique, comme le métal."
+
+[sub_resource type="Resource" id="Resource_q04e4"]
+script = ExtResource("1_efd6t")
+word = "SYMBOLE"
+hint = "Représentation conventionnelle utilisée pour simplifier l'écriture."
+
+[resource]
+script = ExtResource("2_swvrk")
+clues = Array[ExtResource("1_efd6t")]([SubResource("Resource_4nle3"), SubResource("Resource_wmrk3"), SubResource("Resource_6eovu"), SubResource("Resource_khgav"), SubResource("Resource_vm077"), SubResource("Resource_uinpb"), SubResource("Resource_xuufv"), SubResource("Resource_5a3bp"), SubResource("Resource_q04e4")])

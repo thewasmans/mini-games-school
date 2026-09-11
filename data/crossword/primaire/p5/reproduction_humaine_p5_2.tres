@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dithfgnoq7eis"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_eh6r3"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_kwir7"]
+
+[sub_resource type="Resource" id="Resource_ermea"]
+script = ExtResource("1_eh6r3")
+word = "ADOLESCENCE"
+hint = "Période où le jeune est en recherche de son identité et de ses valeurs."
+
+[sub_resource type="Resource" id="Resource_1jc2q"]
+script = ExtResource("1_eh6r3")
+word = "REPRODUCTION"
+hint = "Processus qui permet la production de nouveaux organismes, de descendants."
+
+[sub_resource type="Resource" id="Resource_bcr75"]
+script = ExtResource("1_eh6r3")
+word = "OVOCYTE"
+hint = "Cellule reproductrice de la femme."
+
+[sub_resource type="Resource" id="Resource_wu8ef"]
+script = ExtResource("1_eh6r3")
+word = "SPERMATOZOIDE"
+hint = "Cellule reproductrice de l'homme."
+
+[sub_resource type="Resource" id="Resource_8k0a7"]
+script = ExtResource("1_eh6r3")
+word = "FECONDATION"
+hint = "Fusion entre le spermatozoïde et l'ovocyte pour former un ovule."
+
+[sub_resource type="Resource" id="Resource_otpka"]
+script = ExtResource("1_eh6r3")
+word = "CLITORIS"
+hint = "Organe érectile de l'appareil génital féminin situé à l'entrée de la vulve."
+
+[sub_resource type="Resource" id="Resource_ua0g1"]
+script = ExtResource("1_eh6r3")
+word = "PROSTATE"
+hint = "Glande masculine dont la fonction principale est de produire un liquide qui entre dans la composition du sperme."
+
+[sub_resource type="Resource" id="Resource_5w4sy"]
+script = ExtResource("1_eh6r3")
+word = "UTERUS"
+hint = "Partie de l'appareil reproducteur féminin dans lequel le bébé se développe."
+
+[sub_resource type="Resource" id="Resource_bv0am"]
+script = ExtResource("1_eh6r3")
+word = "TESTICULE"
+hint = "Lieu de fabrication des spermatozoïdes."
+
+[sub_resource type="Resource" id="Resource_aego0"]
+script = ExtResource("1_eh6r3")
+word = "SEXUE"
+hint = "Mode de reproduction qui implique deux sexes différents."
+
+[resource]
+script = ExtResource("2_kwir7")
+clues = Array[ExtResource("1_eh6r3")]([SubResource("Resource_ermea"), SubResource("Resource_1jc2q"), SubResource("Resource_bcr75"), SubResource("Resource_wu8ef"), SubResource("Resource_8k0a7"), SubResource("Resource_otpka"), SubResource("Resource_ua0g1"), SubResource("Resource_5w4sy"), SubResource("Resource_bv0am"), SubResource("Resource_aego0")])

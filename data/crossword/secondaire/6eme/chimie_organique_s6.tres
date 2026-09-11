@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cd08m0r84jggf"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_6t5ue"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_6cmby"]
+
+[sub_resource type="Resource" id="Resource_4l7wn"]
+script = ExtResource("1_6t5ue")
+word = "POLYMERE"
+hint = "Macromolécule constituée par la répétition d’unités dites monomères."
+
+[sub_resource type="Resource" id="Resource_0wj6x"]
+script = ExtResource("1_6t5ue")
+word = "POLYMERISATION"
+hint = "Réaction au cours de laquelle se forme un polymère au départ de monomères."
+
+[sub_resource type="Resource" id="Resource_vo4wc"]
+script = ExtResource("1_6t5ue")
+word = "THERMODURCISSABLE"
+hint = "Polymère qui durcit lorsqu’il est chauffé, réaction irréversible."
+
+[sub_resource type="Resource" id="Resource_jv212"]
+script = ExtResource("1_6t5ue")
+word = "TRANS"
+hint = "Se dit d'un isomère dont les deux substituants sont placés de part et d’autre de la double liaison."
+
+[sub_resource type="Resource" id="Resource_7jf4u"]
+script = ExtResource("1_6t5ue")
+word = "ELASTOMERE"
+hint = "Polymère qui présente des propriétés élastiques."
+
+[sub_resource type="Resource" id="Resource_iirtr"]
+script = ExtResource("1_6t5ue")
+word = "ALCENE"
+hint = "Hydrocarbure comportant au moins une double liaison entre carbone."
+
+[sub_resource type="Resource" id="Resource_guhwy"]
+script = ExtResource("1_6t5ue")
+word = "THERMOPLASTIQUE"
+hint = "Polymère qui se ramollit lorsqu’il est chauffé, réaction réversible."
+
+[sub_resource type="Resource" id="Resource_dwvr3"]
+script = ExtResource("1_6t5ue")
+word = "MONOMERE"
+hint = "Molécule de petite taille et de faible masse moléculaire."
+
+[sub_resource type="Resource" id="Resource_c74dr"]
+script = ExtResource("1_6t5ue")
+word = "PEPTIDIQUE"
+hint = "Se dit d'une liaison chimique entre des acides aminés."
+
+[sub_resource type="Resource" id="Resource_qu7du"]
+script = ExtResource("1_6t5ue")
+word = "CIS"
+hint = "Se dit d'un isomère dont les deux substituants sont placés du même côté de la double liaison."
+
+[sub_resource type="Resource" id="Resource_ru114"]
+script = ExtResource("1_6t5ue")
+word = "ALCANE"
+hint = "Hydrocarbure comportant uniquement des liaisons simples entre carbone."
+
+[resource]
+script = ExtResource("2_6cmby")
+clues = Array[ExtResource("1_6t5ue")]([SubResource("Resource_4l7wn"), SubResource("Resource_0wj6x"), SubResource("Resource_vo4wc"), SubResource("Resource_jv212"), SubResource("Resource_7jf4u"), SubResource("Resource_iirtr"), SubResource("Resource_guhwy"), SubResource("Resource_dwvr3"), SubResource("Resource_c74dr"), SubResource("Resource_qu7du"), SubResource("Resource_ru114")])

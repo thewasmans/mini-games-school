@@ -1,0 +1,78 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://c5bgivrhtvhdx"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_uky7o"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_v8exs"]
+
+[sub_resource type="Resource" id="Resource_cokk1"]
+script = ExtResource("1_uky7o")
+word = "LARVE"
+hint = "Forme juvénile de certains animaux différente de l'adulte."
+
+[sub_resource type="Resource" id="Resource_anhme"]
+script = ExtResource("1_uky7o")
+word = "MUE"
+hint = "Processus de changement de peau ou de carapace chez certains animaux."
+
+[sub_resource type="Resource" id="Resource_syvm1"]
+script = ExtResource("1_uky7o")
+word = "EXOSQUELETTE"
+hint = "Squelette externe rigide chez les insectes et crustacés."
+
+[sub_resource type="Resource" id="Resource_vabi5"]
+script = ExtResource("1_uky7o")
+word = "ENDOSQUELETTE"
+hint = "Squelette interne, caractéristique des vertébrés."
+
+[sub_resource type="Resource" id="Resource_o57qb"]
+script = ExtResource("1_uky7o")
+word = "CARTILAGE"
+hint = "Tissu conjonctif souple composant le squelette de certains vertébrés."
+
+[sub_resource type="Resource" id="Resource_mqyc1"]
+script = ExtResource("1_uky7o")
+word = "OS"
+hint = "Tissu rigide composant le squelette interne des vertébrés."
+
+[sub_resource type="Resource" id="Resource_tqpke"]
+script = ExtResource("1_uky7o")
+word = "RESPIRATION"
+hint = "Processus d'échange gazeux."
+
+[sub_resource type="Resource" id="Resource_q1hou"]
+script = ExtResource("1_uky7o")
+word = "BRANCHIES"
+hint = "Organes respiratoires des poissons."
+
+[sub_resource type="Resource" id="Resource_syf5x"]
+script = ExtResource("1_uky7o")
+word = "POUMONS"
+hint = "Organes respiratoires des mammifères."
+
+[sub_resource type="Resource" id="Resource_2ftlo"]
+script = ExtResource("1_uky7o")
+word = "CIRCULATION"
+hint = "Mouvement du sang dans l'organisme pour transporter les nutriments."
+
+[sub_resource type="Resource" id="Resource_bxuar"]
+script = ExtResource("1_uky7o")
+word = "CŒUR"
+hint = "Organe musculaire pompant le sang."
+
+[sub_resource type="Resource" id="Resource_ll6pj"]
+script = ExtResource("1_uky7o")
+word = "SANG"
+hint = "Liquide transportant l'oxygène et les nutriments."
+
+[sub_resource type="Resource" id="Resource_3w6hd"]
+script = ExtResource("1_uky7o")
+word = "EXCRETION"
+hint = "Élimination des déchets métaboliques de l'organisme."
+
+[sub_resource type="Resource" id="Resource_3k1v8"]
+script = ExtResource("1_uky7o")
+word = "CERVEAU"
+hint = "Centre de contrôle du système nerveux central."
+
+[resource]
+script = ExtResource("2_v8exs")
+clues = Array[ExtResource("1_uky7o")]([SubResource("Resource_cokk1"), SubResource("Resource_anhme"), SubResource("Resource_syvm1"), SubResource("Resource_vabi5"), SubResource("Resource_o57qb"), SubResource("Resource_mqyc1"), SubResource("Resource_tqpke"), SubResource("Resource_q1hou"), SubResource("Resource_syf5x"), SubResource("Resource_2ftlo"), SubResource("Resource_bxuar"), SubResource("Resource_ll6pj"), SubResource("Resource_3w6hd"), SubResource("Resource_3k1v8")])

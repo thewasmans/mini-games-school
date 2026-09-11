@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://6nl7v2ex17nw"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_63h6k"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_wa2vq"]
+
+[sub_resource type="Resource" id="Resource_55pxx"]
+script = ExtResource("1_63h6k")
+word = "DECLIN"
+hint = "Phénomène cognitif qui apparait malheureusement avec l'âge."
+
+[sub_resource type="Resource" id="Resource_65h1x"]
+script = ExtResource("1_63h6k")
+word = "GYRUS"
+hint = "Terme scientifique qui correspond aux plis du cerveau."
+
+[sub_resource type="Resource" id="Resource_y4pu1"]
+script = ExtResource("1_63h6k")
+word = "NEUROGENESE"
+hint = "Capacité de fabrication de neurones."
+
+[sub_resource type="Resource" id="Resource_s3ly6"]
+script = ExtResource("1_63h6k")
+word = "SYNAPSE"
+hint = "Zone de communication entre deux neurones."
+
+[sub_resource type="Resource" id="Resource_orcdc"]
+script = ExtResource("1_63h6k")
+word = "HIPPOCAMPE"
+hint = "Structure du cerveau qui intervient dans la mémoire spatiale."
+
+[sub_resource type="Resource" id="Resource_yrrp4"]
+script = ExtResource("1_63h6k")
+word = "BLANCHE"
+hint = "Substance composée de graisses."
+
+[sub_resource type="Resource" id="Resource_my6r3"]
+script = ExtResource("1_63h6k")
+word = "GRISE"
+hint = "Substance composée de neurones."
+
+[sub_resource type="Resource" id="Resource_n6bfp"]
+script = ExtResource("1_63h6k")
+word = "CALLEUX"
+hint = "Corps qui sépare les deux hémisphères."
+
+[sub_resource type="Resource" id="Resource_kuge5"]
+script = ExtResource("1_63h6k")
+word = "MENINGES"
+hint = "Couches protectrices du cerveau."
+
+[sub_resource type="Resource" id="Resource_1lvkb"]
+script = ExtResource("1_63h6k")
+word = "HYPNOSEDATION"
+hint = "Technique qui associe l'hypnose et la sédation intraveineuse."
+
+[sub_resource type="Resource" id="Resource_6mk2i"]
+script = ExtResource("1_63h6k")
+word = "GLYCEMIE"
+hint = "Taux de sucres dans le sang."
+
+[sub_resource type="Resource" id="Resource_o7gu7"]
+script = ExtResource("1_63h6k")
+word = "ESCALIER"
+hint = "Modèle d'apprentissage proposé par Piaget."
+
+[sub_resource type="Resource" id="Resource_718dw"]
+script = ExtResource("1_63h6k")
+word = "AMNESIE"
+hint = "Perte de mémoire."
+
+[sub_resource type="Resource" id="Resource_5ibpv"]
+script = ExtResource("1_63h6k")
+word = "NEUROMYTHE"
+hint = "Mythe qui concerne les neurosciences, comme les 10% d'utilisation."
+
+[sub_resource type="Resource" id="Resource_78err"]
+script = ExtResource("1_63h6k")
+word = "WYNN"
+hint = "Test qui permet de vérifier l'intuition des mathématiques chez les enfants."
+
+[resource]
+script = ExtResource("2_wa2vq")
+clues = Array[ExtResource("1_63h6k")]([SubResource("Resource_55pxx"), SubResource("Resource_65h1x"), SubResource("Resource_y4pu1"), SubResource("Resource_s3ly6"), SubResource("Resource_orcdc"), SubResource("Resource_yrrp4"), SubResource("Resource_my6r3"), SubResource("Resource_n6bfp"), SubResource("Resource_kuge5"), SubResource("Resource_1lvkb"), SubResource("Resource_6mk2i"), SubResource("Resource_o7gu7"), SubResource("Resource_718dw"), SubResource("Resource_5ibpv"), SubResource("Resource_78err")])

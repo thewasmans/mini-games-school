@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cjas5npd6mpqq"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_vvt37"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_yyru5"]
+
+[sub_resource type="Resource" id="Resource_pmj25"]
+script = ExtResource("1_vvt37")
+word = "LENTILLES"
+hint = "Objets transparents faits de verre ou de plastique dont au moins une des faces est courbe et qui ont la propriété de réfracter la lumière."
+
+[sub_resource type="Resource" id="Resource_eg6ud"]
+script = ExtResource("1_vvt37")
+word = "LUMIERE"
+hint = "Onde polychromatique qui transporte de l'énergie sous forme de photons."
+
+[sub_resource type="Resource" id="Resource_052hj"]
+script = ExtResource("1_vvt37")
+word = "REFRACTION"
+hint = "Phénomène lumineux au cours duquel la lumière dévie de sa trajectoire lorsqu'elle passe d’un milieu transparent à un autre."
+
+[sub_resource type="Resource" id="Resource_wojlx"]
+script = ExtResource("1_vvt37")
+word = "PRESBYTIE"
+hint = "Perte progressive liée à l'âge de la capacité de l'œil à voir nettement les objets proches, autre que la cataracte."
+
+[sub_resource type="Resource" id="Resource_h6w8s"]
+script = ExtResource("1_vvt37")
+word = "POLYCHROMATIQUE"
+hint = "Se dit d'une lumière composée de radiations de différentes longueurs d'onde."
+
+[sub_resource type="Resource" id="Resource_hbk22"]
+script = ExtResource("1_vvt37")
+word = "SNELL"
+hint = "Loi permettant de calculer les angles incidents et réfractés."
+
+[sub_resource type="Resource" id="Resource_2r5du"]
+script = ExtResource("1_vvt37")
+word = "ISOTROPIE"
+hint = "Caractérise l'invariance des propriétés physiques d'un milieu en fonction de la direction."
+
+[sub_resource type="Resource" id="Resource_0gu3q"]
+script = ExtResource("1_vvt37")
+word = "REFLEXION"
+hint = "Changement de direction de la lumière à l'interface de deux milieux qui la fait revenir vers son milieu d'origine."
+
+[sub_resource type="Resource" id="Resource_6cdk4"]
+script = ExtResource("1_vvt37")
+word = "LUXMETRE"
+hint = "Unité de mesure de l’éclairement d’une source lumineuse."
+
+[resource]
+script = ExtResource("2_yyru5")
+clues = Array[ExtResource("1_vvt37")]([SubResource("Resource_pmj25"), SubResource("Resource_eg6ud"), SubResource("Resource_052hj"), SubResource("Resource_wojlx"), SubResource("Resource_h6w8s"), SubResource("Resource_hbk22"), SubResource("Resource_2r5du"), SubResource("Resource_0gu3q"), SubResource("Resource_6cdk4")])

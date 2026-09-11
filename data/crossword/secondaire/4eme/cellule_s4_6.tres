@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cweaarkge7cqg"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_gity1"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_ovgho"]
+
+[sub_resource type="Resource" id="Resource_aclus"]
+script = ExtResource("1_gity1")
+word = "MITOCHONDRIE"
+hint = "Organite qui constitue le site principal de la respiration cellulaire."
+
+[sub_resource type="Resource" id="Resource_cd548"]
+script = ExtResource("1_gity1")
+word = "PHAGOCYTOSE"
+hint = "Mécanisme biologique qui permet aux cellules d'internaliser et de digérer des particules et des micro-organismes."
+
+[sub_resource type="Resource" id="Resource_sbutr"]
+script = ExtResource("1_gity1")
+word = "VEGETALE"
+hint = "Type de cellule possédant une paroi pecto-cellulosique et une vacuole."
+
+[sub_resource type="Resource" id="Resource_sbm5p"]
+script = ExtResource("1_gity1")
+word = "VACUOLE"
+hint = "Compartiment qui sert surtout au maintien de l’équilibre hydrique."
+
+[sub_resource type="Resource" id="Resource_elmn5"]
+script = ExtResource("1_gity1")
+word = "CYTOSOL"
+hint = "Partie liquide du cytoplasme."
+
+[sub_resource type="Resource" id="Resource_6ydd1"]
+script = ExtResource("1_gity1")
+word = "MUTATION"
+hint = "Modification de nucléotides au sein de l'ADN."
+
+[sub_resource type="Resource" id="Resource_lo63e"]
+script = ExtResource("1_gity1")
+word = "MEIOSE"
+hint = "Processus de division cellulaire permettant d'obtenir des cellules filles génétiquement différentes."
+
+[sub_resource type="Resource" id="Resource_xyjsg"]
+script = ExtResource("1_gity1")
+word = "POLYMERASE"
+hint = "Enzyme permettant la formation de chaque nouveau brin d'ADN lors de la réplication."
+
+[sub_resource type="Resource" id="Resource_dox0b"]
+script = ExtResource("1_gity1")
+word = "GENE"
+hint = "Portion d'ADN."
+
+[sub_resource type="Resource" id="Resource_sbyhl"]
+script = ExtResource("1_gity1")
+word = "CHROMOSOME"
+hint = "Structure constituée d'ADN et de protéines."
+
+[sub_resource type="Resource" id="Resource_k3os1"]
+script = ExtResource("1_gity1")
+word = "ASEXUEE"
+hint = "Mode de reproduction qui n'implique pas les sexes."
+
+[resource]
+script = ExtResource("2_ovgho")
+clues = Array[ExtResource("1_gity1")]([SubResource("Resource_aclus"), SubResource("Resource_cd548"), SubResource("Resource_sbutr"), SubResource("Resource_sbm5p"), SubResource("Resource_elmn5"), SubResource("Resource_6ydd1"), SubResource("Resource_lo63e"), SubResource("Resource_xyjsg"), SubResource("Resource_dox0b"), SubResource("Resource_sbyhl"), SubResource("Resource_k3os1")])

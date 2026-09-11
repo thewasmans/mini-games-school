@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cn5785wr0vk7j"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_qoaa8"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_lgiw0"]
+
+[sub_resource type="Resource" id="Resource_h633f"]
+script = ExtResource("1_qoaa8")
+word = "LIQUIDE"
+hint = "Etat de la matière dans lequel les molécules ont une cohésion intermédiaire, ce qui la rend déformable."
+
+[sub_resource type="Resource" id="Resource_csht4"]
+script = ExtResource("1_qoaa8")
+word = "GAZ"
+hint = "Etat de la matière dans lequel les molécules ont la plus faible cohésion, les atomes sont quasi indépendants."
+
+[sub_resource type="Resource" id="Resource_u2rx2"]
+script = ExtResource("1_qoaa8")
+word = "CONTRACTION"
+hint = "Diminution du volume d'un corps sous l'influence de la chaleur."
+
+[sub_resource type="Resource" id="Resource_f687y"]
+script = ExtResource("1_qoaa8")
+word = "ENTROPIE"
+hint = "Grandeur physique qui caractérise le degré de désorganisation d'un système."
+
+[sub_resource type="Resource" id="Resource_b33x3"]
+script = ExtResource("1_qoaa8")
+word = "DILATATION"
+hint = "Augmentation du volume d'un corps sous l'influence de la chaleur."
+
+[sub_resource type="Resource" id="Resource_tnohu"]
+script = ExtResource("1_qoaa8")
+word = "TEMPERATURE"
+hint = "Grandeur physique exprimée en degré Celsius."
+
+[sub_resource type="Resource" id="Resource_vdrti"]
+script = ExtResource("1_qoaa8")
+word = "EBULLITION"
+hint = "Formation de bulles lors du changement violent d’un corps de l’état liquide vers l’état gazeux."
+
+[sub_resource type="Resource" id="Resource_u7f31"]
+script = ExtResource("1_qoaa8")
+word = "FUSION"
+hint = "Passage de l'état solide à l'état liquide sous l'action de la chaleur."
+
+[sub_resource type="Resource" id="Resource_1xvnx"]
+script = ExtResource("1_qoaa8")
+word = "SOLIDE"
+hint = "Etat de la matière dans lequel les molécules ont une forte cohésion, ce qui rend le composé résistant."
+
+[sub_resource type="Resource" id="Resource_vqwvp"]
+script = ExtResource("1_qoaa8")
+word = "CHALEUR"
+hint = "Energie thermique."
+
+[resource]
+script = ExtResource("2_lgiw0")
+clues = Array[ExtResource("1_qoaa8")]([SubResource("Resource_h633f"), SubResource("Resource_csht4"), SubResource("Resource_u2rx2"), SubResource("Resource_f687y"), SubResource("Resource_b33x3"), SubResource("Resource_tnohu"), SubResource("Resource_vdrti"), SubResource("Resource_u7f31"), SubResource("Resource_1xvnx"), SubResource("Resource_vqwvp")])

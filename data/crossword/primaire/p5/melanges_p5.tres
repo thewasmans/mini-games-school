@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dgus6ac0gudek"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_csftb"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_tut46"]
+
+[sub_resource type="Resource" id="Resource_klx6e"]
+script = ExtResource("1_csftb")
+word = "CHIMIE"
+hint = "Science qui étudie la matière et ses transformations."
+
+[sub_resource type="Resource" id="Resource_bp5gk"]
+script = ExtResource("1_csftb")
+word = "MOLECULE"
+hint = "Ensemble d'atomes associés, chimiquement connectés."
+
+[sub_resource type="Resource" id="Resource_e3ub0"]
+script = ExtResource("1_csftb")
+word = "MASSE"
+hint = "Quantité de matière d'une substance dont l'unité est le gramme."
+
+[sub_resource type="Resource" id="Resource_0mmdu"]
+script = ExtResource("1_csftb")
+word = "ATOME"
+hint = "Elément constitutif de la matière, des molécules en particulier."
+
+[sub_resource type="Resource" id="Resource_27dsm"]
+script = ExtResource("1_csftb")
+word = "HETEROGENE"
+hint = "Mélange dont il est possible de distinguer les constituants à l'œil nu, comme l'eau et l'huile."
+
+[sub_resource type="Resource" id="Resource_4adww"]
+script = ExtResource("1_csftb")
+word = "CARBONE"
+hint = "Elément chimique se trouvant au cœur des molécules du vivant."
+
+[sub_resource type="Resource" id="Resource_20x6l"]
+script = ExtResource("1_csftb")
+word = "DIAZOTE"
+hint = "Gaz se trouvant dans l'air, molécule diatomique composée de deux atomes d'azote."
+
+[sub_resource type="Resource" id="Resource_prwj2"]
+script = ExtResource("1_csftb")
+word = "INTERACTION"
+hint = "Relation entre deux objets lorsqu'une force s'exerce."
+
+[sub_resource type="Resource" id="Resource_ksxnf"]
+script = ExtResource("1_csftb")
+word = "PURE"
+hint = "Caractérise une eau nettoyée, filtrée, otée d'impuretés."
+
+[resource]
+script = ExtResource("2_tut46")
+clues = Array[ExtResource("1_csftb")]([SubResource("Resource_klx6e"), SubResource("Resource_bp5gk"), SubResource("Resource_e3ub0"), SubResource("Resource_0mmdu"), SubResource("Resource_27dsm"), SubResource("Resource_4adww"), SubResource("Resource_20x6l"), SubResource("Resource_prwj2"), SubResource("Resource_ksxnf")])

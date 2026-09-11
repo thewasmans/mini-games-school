@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://b6tlcoq1he3bs"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_t828y"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_ebfoh"]
+
+[sub_resource type="Resource" id="Resource_g8k0o"]
+script = ExtResource("1_t828y")
+word = "DAUPHIN"
+hint = "Mammifère aquatique qui vit en groupe et vient parfois en aide aux personnes."
+
+[sub_resource type="Resource" id="Resource_enq78"]
+script = ExtResource("1_t828y")
+word = "MORUE"
+hint = "Gros poisson des mers froides, consommé frais sous le nom de cabillaud."
+
+[sub_resource type="Resource" id="Resource_5jpyk"]
+script = ExtResource("1_t828y")
+word = "CEPHALOPODE"
+hint = "Groupe d'animaux qui se caractérisent par des tentacules au niveau de la bouche."
+
+[sub_resource type="Resource" id="Resource_k8dyx"]
+script = ExtResource("1_t828y")
+word = "PHYLOGENIE"
+hint = "Science qui étudie les relations de parenté génétique entre les espèces (taxons)."
+
+[sub_resource type="Resource" id="Resource_p8ju5"]
+script = ExtResource("1_t828y")
+word = "CLASSER"
+hint = "Organiser les espèces sur base des attributs en commun et de leur histoire évolutive."
+
+[sub_resource type="Resource" id="Resource_b57jx"]
+script = ExtResource("1_t828y")
+word = "CLASSEMENT"
+hint = "Manière d'organiser les êtres vivants sur base de leurs attributs."
+
+[sub_resource type="Resource" id="Resource_ix3ai"]
+script = ExtResource("1_t828y")
+word = "TAXONOMIE"
+hint = "Science qui étudie la classification des êtres vivants dans différentes catégories."
+
+[sub_resource type="Resource" id="Resource_4jsya"]
+script = ExtResource("1_t828y")
+word = "SYSTEMATIQUE"
+hint = "Science de l'inventaire et de l'organisation de la diversité des êtres vivants."
+
+[sub_resource type="Resource" id="Resource_bp7sn"]
+script = ExtResource("1_t828y")
+word = "EMBOITEMENT"
+hint = "Stratégie de regroupement d'espèces sur base des points communs pour classer."
+
+[sub_resource type="Resource" id="Resource_d0hir"]
+script = ExtResource("1_t828y")
+word = "CRUSTACE"
+hint = "Taxon comprenant un céphalothorax et dans lequel on y retrouve les crabes."
+
+[resource]
+script = ExtResource("2_ebfoh")
+clues = Array[ExtResource("1_t828y")]([SubResource("Resource_g8k0o"), SubResource("Resource_enq78"), SubResource("Resource_5jpyk"), SubResource("Resource_k8dyx"), SubResource("Resource_p8ju5"), SubResource("Resource_b57jx"), SubResource("Resource_ix3ai"), SubResource("Resource_4jsya"), SubResource("Resource_bp7sn"), SubResource("Resource_d0hir")])

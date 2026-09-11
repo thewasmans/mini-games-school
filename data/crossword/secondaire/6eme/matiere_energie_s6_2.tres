@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://ccv4mpyma1asi"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_cgn3r"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_ug8d5"]
+
+[sub_resource type="Resource" id="Resource_a3wf3"]
+script = ExtResource("1_cgn3r")
+word = "MASSIQUE"
+hint = "Quantité de chaleur nécessaire pour élever la température d'une substance de 1°C par kilogramme."
+
+[sub_resource type="Resource" id="Resource_cqbr1"]
+script = ExtResource("1_cgn3r")
+word = "CONSERVATION"
+hint = "Principe selon lequel la somme des énergies entrantes (absorbées) est égale à la somme des énergies sortantes (produites)."
+
+[sub_resource type="Resource" id="Resource_1hr3c"]
+script = ExtResource("1_cgn3r")
+word = "PHOTON"
+hint = "Particule qui porte une « énergie lumineuse » élémentaire, sans charge."
+
+[sub_resource type="Resource" id="Resource_eg83f"]
+script = ExtResource("1_cgn3r")
+word = "LATENTE"
+hint = "Quantité de chaleur nécessaire pour provoquer un changement d'état d'une substance à température constante."
+
+[sub_resource type="Resource" id="Resource_5gnpj"]
+script = ExtResource("1_cgn3r")
+word = "RENDEMENT"
+hint = "Rapport (%) entre l'énergie sortante et l’énergie entrante."
+
+[sub_resource type="Resource" id="Resource_6a7ll"]
+script = ExtResource("1_cgn3r")
+word = "ABSORPTION"
+hint = "Spectre du rayonnement incident absorbé par le matériau."
+
+[sub_resource type="Resource" id="Resource_vwsyh"]
+script = ExtResource("1_cgn3r")
+word = "EMISSION"
+hint = "Se dit d'une libération d'énergie sous la forme d'ondes par un corps."
+
+[sub_resource type="Resource" id="Resource_vl2ag"]
+script = ExtResource("1_cgn3r")
+word = "RAYONNEMENT"
+hint = "Processus d'émission ou de transmission d'énergie sous forme de particules ou d'ondes électromagnétiques."
+
+[sub_resource type="Resource" id="Resource_2vfe8"]
+script = ExtResource("1_cgn3r")
+word = "PHOTOVOLTAIQUE"
+hint = "Effet qui permet la production d'électricité à partir du rayonnement solaire."
+
+[sub_resource type="Resource" id="Resource_i4nm0"]
+script = ExtResource("1_cgn3r")
+word = "CONVECTION"
+hint = "Transfert de chaleur par déplacement de matière, comme dans les liquides ou les gaz."
+
+[sub_resource type="Resource" id="Resource_lwn1f"]
+script = ExtResource("1_cgn3r")
+word = "CONDUCTION"
+hint = "Transfert de chaleur par contact direct entre les molécules, sans déplacement de matière."
+
+[resource]
+script = ExtResource("2_ug8d5")
+clues = Array[ExtResource("1_cgn3r")]([SubResource("Resource_a3wf3"), SubResource("Resource_cqbr1"), SubResource("Resource_1hr3c"), SubResource("Resource_eg83f"), SubResource("Resource_5gnpj"), SubResource("Resource_6a7ll"), SubResource("Resource_vwsyh"), SubResource("Resource_vl2ag"), SubResource("Resource_2vfe8"), SubResource("Resource_i4nm0"), SubResource("Resource_lwn1f")])

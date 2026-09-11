@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cqdckcre8u3i8"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_2qwpw"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_s8y1i"]
+
+[sub_resource type="Resource" id="Resource_v6mka"]
+script = ExtResource("1_2qwpw")
+word = "CARNIVORE"
+hint = "Être vivant qui se nourrit de viandes."
+
+[sub_resource type="Resource" id="Resource_3sjxx"]
+script = ExtResource("1_2qwpw")
+word = "TERRE"
+hint = "Planète sur laquelle on retrouve beaucoup d'écosystèmes."
+
+[sub_resource type="Resource" id="Resource_3yd4p"]
+script = ExtResource("1_2qwpw")
+word = "PREDATEUR"
+hint = "Situé au dessus de la chaîne alimentaire, c'est un chasseur de différents animaux."
+
+[sub_resource type="Resource" id="Resource_s2o6u"]
+script = ExtResource("1_2qwpw")
+word = "HIBERNATION"
+hint = "Adaptation d'un animal à réduire la température corporelle et d'autres fonctions vitales durant l'hiver."
+
+[sub_resource type="Resource" id="Resource_ngpjm"]
+script = ExtResource("1_2qwpw")
+word = "CONSOMMATEUR"
+hint = "Organisme qui se nourrit des producteurs."
+
+[sub_resource type="Resource" id="Resource_ilbjr"]
+script = ExtResource("1_2qwpw")
+word = "MIMETISME"
+hint = "Capacité d'un être vivant à imiter un autre vivant pour survivre."
+
+[sub_resource type="Resource" id="Resource_2o72f"]
+script = ExtResource("1_2qwpw")
+word = "MIGRATION"
+hint = "Déplacement d'animaux d'un environnement vers un autre pour diverses raisons, comme le climat."
+
+[sub_resource type="Resource" id="Resource_plhgh"]
+script = ExtResource("1_2qwpw")
+word = "PROIE"
+hint = "Animal qui est traqué par le prédateur."
+
+[sub_resource type="Resource" id="Resource_easq0"]
+script = ExtResource("1_2qwpw")
+word = "RACE"
+hint = "Population animale résultant, par sélection, de la subdivision d'une même espèce."
+
+[sub_resource type="Resource" id="Resource_bvb3v"]
+script = ExtResource("1_2qwpw")
+word = "HERBIVORE"
+hint = "Être vivant qui se nourrit d'herbes."
+
+[sub_resource type="Resource" id="Resource_787tx"]
+script = ExtResource("1_2qwpw")
+word = "ENDEMIQUE"
+hint = "Être vivant qui ne vit que dans un endroit unique, exclusif."
+
+[resource]
+script = ExtResource("2_s8y1i")
+clues = Array[ExtResource("1_2qwpw")]([SubResource("Resource_v6mka"), SubResource("Resource_3sjxx"), SubResource("Resource_3yd4p"), SubResource("Resource_s2o6u"), SubResource("Resource_ngpjm"), SubResource("Resource_ilbjr"), SubResource("Resource_2o72f"), SubResource("Resource_plhgh"), SubResource("Resource_easq0"), SubResource("Resource_bvb3v"), SubResource("Resource_787tx")])

@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bv25u4jwddl62"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_5gjqv"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_0w2n6"]
+
+[sub_resource type="Resource" id="Resource_1uyln"]
+script = ExtResource("1_5gjqv")
+word = "SON"
+hint = "Onde acoustique qui se propage dans l'air."
+
+[sub_resource type="Resource" id="Resource_0vs6p"]
+script = ExtResource("1_5gjqv")
+word = "REFLEXION"
+hint = "Changement de direction de la lumière à l'interface de deux milieux."
+
+[sub_resource type="Resource" id="Resource_71ruu"]
+script = ExtResource("1_5gjqv")
+word = "PRODUCTION"
+hint = "Action de fabriquer quelque chose."
+
+[sub_resource type="Resource" id="Resource_jcdvk"]
+script = ExtResource("1_5gjqv")
+word = "INTENSITE"
+hint = "Caractérise un son de force faible ou forte."
+
+[sub_resource type="Resource" id="Resource_a7ugn"]
+script = ExtResource("1_5gjqv")
+word = "TIMBRE"
+hint = "Ensemble de caractéristiques du son qui permet de reconnaître un instrument ou une voix."
+
+[sub_resource type="Resource" id="Resource_pwap7"]
+script = ExtResource("1_5gjqv")
+word = "HAUTEUR"
+hint = "Caractérise un son grave ou aigu."
+
+[sub_resource type="Resource" id="Resource_ljuwx"]
+script = ExtResource("1_5gjqv")
+word = "ABSORPTION"
+hint = "Action de capter des longueurs d'ondes spécifiques du Soleil."
+
+[sub_resource type="Resource" id="Resource_cy07s"]
+script = ExtResource("1_5gjqv")
+word = "PROPAGATION"
+hint = "Fait de s'étendre, d'être diffusé, comme une onde qui se....dans l'eau."
+
+[sub_resource type="Resource" id="Resource_4pu5y"]
+script = ExtResource("1_5gjqv")
+word = "NASAL"
+hint = "Qui est relatif au nez ou lui appartient."
+
+[sub_resource type="Resource" id="Resource_v7r84"]
+script = ExtResource("1_5gjqv")
+word = "LOUPE"
+hint = "Instrument de base en optique permettant d'agrandir l'image d'un objet."
+
+[sub_resource type="Resource" id="Resource_2ox7w"]
+script = ExtResource("1_5gjqv")
+word = "MIROIR"
+hint = "Instrument qui sert à réfléchir la lumière et dans lequel on se regarde."
+
+[sub_resource type="Resource" id="Resource_bh6t7"]
+script = ExtResource("1_5gjqv")
+word = "LUMIERE"
+hint = "Spectre contenant plusieurs types de rayonnements lumineux pouvant éclairer un milieu."
+
+[sub_resource type="Resource" id="Resource_p4mjv"]
+script = ExtResource("1_5gjqv")
+word = "ONDE"
+hint = "Déformation ou vibration qui se propage dans un milieu donné."
+
+[resource]
+script = ExtResource("2_0w2n6")
+clues = Array[ExtResource("1_5gjqv")]([SubResource("Resource_1uyln"), SubResource("Resource_0vs6p"), SubResource("Resource_71ruu"), SubResource("Resource_jcdvk"), SubResource("Resource_a7ugn"), SubResource("Resource_pwap7"), SubResource("Resource_ljuwx"), SubResource("Resource_cy07s"), SubResource("Resource_4pu5y"), SubResource("Resource_v7r84"), SubResource("Resource_2ox7w"), SubResource("Resource_bh6t7"), SubResource("Resource_p4mjv")])

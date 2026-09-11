@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cp3wx281m470q"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_7u7id"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_7k6hd"]
+
+[sub_resource type="Resource" id="Resource_228h3"]
+script = ExtResource("1_7u7id")
+word = "ESTOMAC"
+hint = "Organe contenant du suc gastrique et qui stocke les aliments."
+
+[sub_resource type="Resource" id="Resource_gq7q2"]
+script = ExtResource("1_7u7id")
+word = "ALVEOLE"
+hint = "Petite cavité en forme de sac dans les poumons où se produisent les échanges gazeux."
+
+[sub_resource type="Resource" id="Resource_w0f6w"]
+script = ExtResource("1_7u7id")
+word = "POUMON"
+hint = "Organe situé dans le thorax qui permet de respirer."
+
+[sub_resource type="Resource" id="Resource_bi08c"]
+script = ExtResource("1_7u7id")
+word = "INSPIRATION"
+hint = "Mécanisme respiratoire qui correspond à l'entrée d'air dans les poumons."
+
+[sub_resource type="Resource" id="Resource_hjbds"]
+script = ExtResource("1_7u7id")
+word = "SALIVATION"
+hint = "Partie de la digestion qui se déroule dans la bouche avec la mastication."
+
+[sub_resource type="Resource" id="Resource_dgkfd"]
+script = ExtResource("1_7u7id")
+word = "ANUS"
+hint = "Trou par lequel sort les matières fécales, le caca."
+
+[sub_resource type="Resource" id="Resource_aejbs"]
+script = ExtResource("1_7u7id")
+word = "TRACHEE"
+hint = "Tube constitué de cartilages qui sépare la gorge des poumons."
+
+[sub_resource type="Resource" id="Resource_kedul"]
+script = ExtResource("1_7u7id")
+word = "BILE"
+hint = "Substance produite par le foie et libérée par la vésicule biliaire."
+
+[sub_resource type="Resource" id="Resource_jc4pi"]
+script = ExtResource("1_7u7id")
+word = "COLON"
+hint = "Lieu où se déroule la fabrication de la matière fécale."
+
+[sub_resource type="Resource" id="Resource_p7p5o"]
+script = ExtResource("1_7u7id")
+word = "GRELE"
+hint = "Partie de l'intestin qui permet l'absorption des nutriments dans le sang."
+
+[sub_resource type="Resource" id="Resource_clj7a"]
+script = ExtResource("1_7u7id")
+word = "APNEE"
+hint = "Arrêt momentané de la respiration."
+
+[resource]
+script = ExtResource("2_7k6hd")
+clues = Array[ExtResource("1_7u7id")]([SubResource("Resource_228h3"), SubResource("Resource_gq7q2"), SubResource("Resource_w0f6w"), SubResource("Resource_bi08c"), SubResource("Resource_hjbds"), SubResource("Resource_dgkfd"), SubResource("Resource_aejbs"), SubResource("Resource_kedul"), SubResource("Resource_jc4pi"), SubResource("Resource_p7p5o"), SubResource("Resource_clj7a")])

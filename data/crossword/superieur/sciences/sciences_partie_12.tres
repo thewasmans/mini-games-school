@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://ft6c68vj57ff"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_xx73i"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_gsh1u"]
+
+[sub_resource type="Resource" id="Resource_bdn5j"]
+script = ExtResource("1_xx73i")
+word = "GALIEN"
+hint = "Médecin grec de l'Antiquité dont les écrits ont dominé la médecine pendant des siècles."
+
+[sub_resource type="Resource" id="Resource_g3pj7"]
+script = ExtResource("1_xx73i")
+word = "VESALE"
+hint = "Anatomiste de la Renaissance, auteur du traité fondateur De humani corporis fabrica."
+
+[sub_resource type="Resource" id="Resource_n3rqh"]
+script = ExtResource("1_xx73i")
+word = "VINCI"
+hint = "Artiste et scientifique de la Renaissance, célèbre pour ses dessins anatomiques précis."
+
+[sub_resource type="Resource" id="Resource_akvhc"]
+script = ExtResource("1_xx73i")
+word = "DISSECTION"
+hint = "Action de couper méthodiquement un cadavre pour en observer les structures anatomiques."
+
+[sub_resource type="Resource" id="Resource_uly5g"]
+script = ExtResource("1_xx73i")
+word = "IMAGERIE"
+hint = "Ensemble des techniques permettant de visualiser l'intérieur du corps."
+
+[sub_resource type="Resource" id="Resource_k7tvy"]
+script = ExtResource("1_xx73i")
+word = "ENDOSCOPIE"
+hint = "Technique d'exploration visuelle de l'intérieur d'un organe à l'aide d'une sonde."
+
+[sub_resource type="Resource" id="Resource_eetaa"]
+script = ExtResource("1_xx73i")
+word = "CHROMOSOMES"
+hint = "Structures constituées d'ADN et de protéines, porteuses des gènes."
+
+[sub_resource type="Resource" id="Resource_4li7k"]
+script = ExtResource("1_xx73i")
+word = "HAPLOIDE"
+hint = "Cellule possédant un seul jeu de chromosomes."
+
+[sub_resource type="Resource" id="Resource_aiuwy"]
+script = ExtResource("1_xx73i")
+word = "DIPLOIDE"
+hint = "Cellule possédant deux jeux de chromosomes."
+
+[resource]
+script = ExtResource("2_gsh1u")
+clues = Array[ExtResource("1_xx73i")]([SubResource("Resource_bdn5j"), SubResource("Resource_g3pj7"), SubResource("Resource_n3rqh"), SubResource("Resource_akvhc"), SubResource("Resource_uly5g"), SubResource("Resource_k7tvy"), SubResource("Resource_eetaa"), SubResource("Resource_4li7k"), SubResource("Resource_aiuwy")])

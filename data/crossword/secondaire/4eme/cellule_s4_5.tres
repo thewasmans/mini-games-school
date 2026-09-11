@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bp1cmu6llunwa"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_0cn7y"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_ijukq"]
+
+[sub_resource type="Resource" id="Resource_p6mpc"]
+script = ExtResource("1_0cn7y")
+word = "TRANSPLANTATION"
+hint = "Greffe d'un organe depuis un donneur vers un receveur."
+
+[sub_resource type="Resource" id="Resource_6j5qb"]
+script = ExtResource("1_0cn7y")
+word = "OPTIQUE"
+hint = "Technique de microscopie basée sur l'utilisation de lentilles."
+
+[sub_resource type="Resource" id="Resource_0myr6"]
+script = ExtResource("1_0cn7y")
+word = "LYSOSOME"
+hint = "Vésicule contenant des enzymes hydrolytiques qui digèrent des macromolécules."
+
+[sub_resource type="Resource" id="Resource_qrisr"]
+script = ExtResource("1_0cn7y")
+word = "ORGANITE"
+hint = "Compartiment différencié contenu dans les cellules eucaryotes et qui a des fonctions bien précises, comme l'appareil de golgi."
+
+[sub_resource type="Resource" id="Resource_pmee3"]
+script = ExtResource("1_0cn7y")
+word = "CHLOROPLASTE"
+hint = "Organite caractéristique des cellules chlorophylliennes permettant la photosynthèse."
+
+[sub_resource type="Resource" id="Resource_p7ri4"]
+script = ExtResource("1_0cn7y")
+word = "NUCLEOTIDE"
+hint = "Molécule composée de phosphate + sucre (désoxyribose) + base azotée."
+
+[sub_resource type="Resource" id="Resource_y82lb"]
+script = ExtResource("1_0cn7y")
+word = "GOLGI"
+hint = "Empilement de sacs membraneux aplatis permettant le tri des protéines."
+
+[sub_resource type="Resource" id="Resource_8ii07"]
+script = ExtResource("1_0cn7y")
+word = "ENDOCYTOSE"
+hint = "Mécanisme de transport de molécules vers l'intérieur de la cellule."
+
+[sub_resource type="Resource" id="Resource_sn2um"]
+script = ExtResource("1_0cn7y")
+word = "RETICULUM"
+hint = "Réseau de tubules et de sacs membraneux appelés citernes."
+
+[sub_resource type="Resource" id="Resource_nbxho"]
+script = ExtResource("1_0cn7y")
+word = "CHOLESTEROL"
+hint = "Graisse qui réduit la fluidité de la membrane cellulaire et empêche sa solidification à basse température."
+
+[sub_resource type="Resource" id="Resource_nbpg1"]
+script = ExtResource("1_0cn7y")
+word = "CENTRIOLE"
+hint = "Structure composée de 9 triplets de microtubules disposés en cercle."
+
+[resource]
+script = ExtResource("2_ijukq")
+clues = Array[ExtResource("1_0cn7y")]([SubResource("Resource_p6mpc"), SubResource("Resource_6j5qb"), SubResource("Resource_0myr6"), SubResource("Resource_qrisr"), SubResource("Resource_pmee3"), SubResource("Resource_p7ri4"), SubResource("Resource_y82lb"), SubResource("Resource_8ii07"), SubResource("Resource_sn2um"), SubResource("Resource_nbxho"), SubResource("Resource_nbpg1")])

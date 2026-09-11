@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://c8eqk2el3j502"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_a67yk"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_galne"]
+
+[sub_resource type="Resource" id="Resource_obdu5"]
+script = ExtResource("1_a67yk")
+word = "BRUME"
+hint = "Brouillard léger en suspension dans l'air."
+
+[sub_resource type="Resource" id="Resource_mqlew"]
+script = ExtResource("1_a67yk")
+word = "INSTRUMENT"
+hint = "Outil général qui permet de réaliser des mesures."
+
+[sub_resource type="Resource" id="Resource_xthn8"]
+script = ExtResource("1_a67yk")
+word = "CALENDRIER"
+hint = "Système de repérage des dates en fonction du temps."
+
+[sub_resource type="Resource" id="Resource_ccg5e"]
+script = ExtResource("1_a67yk")
+word = "TONNERRE"
+hint = "Bruit qui se produit peu de temps après l'éclair."
+
+[sub_resource type="Resource" id="Resource_h7inm"]
+script = ExtResource("1_a67yk")
+word = "SOLEIL"
+hint = "Etoile qui donne la lumière à notre planète Terre."
+
+[sub_resource type="Resource" id="Resource_jg62a"]
+script = ExtResource("1_a67yk")
+word = "GLACE"
+hint = "Eau à l'état solide lorsque la température descend en dessous de 0°C."
+
+[sub_resource type="Resource" id="Resource_cllc0"]
+script = ExtResource("1_a67yk")
+word = "METEOROLOGIE"
+hint = "Science qui étudie les phénomènes atmosphériques comme les nuages, la pluie ou le vent."
+
+[sub_resource type="Resource" id="Resource_3bx8e"]
+script = ExtResource("1_a67yk")
+word = "VENT"
+hint = "Mouvement de l'air."
+
+[sub_resource type="Resource" id="Resource_ccjif"]
+script = ExtResource("1_a67yk")
+word = "NUAGE"
+hint = "Phénomène qui se forme lorsque la vapeur d'eau se condense en altitude."
+
+[sub_resource type="Resource" id="Resource_4s4g5"]
+script = ExtResource("1_a67yk")
+word = "ECLAIR"
+hint = "Phénomène lumineux qui apparait suite à une décharge électrique dans les nuages."
+
+[resource]
+script = ExtResource("2_galne")
+clues = Array[ExtResource("1_a67yk")]([SubResource("Resource_obdu5"), SubResource("Resource_mqlew"), SubResource("Resource_xthn8"), SubResource("Resource_ccg5e"), SubResource("Resource_h7inm"), SubResource("Resource_jg62a"), SubResource("Resource_cllc0"), SubResource("Resource_3bx8e"), SubResource("Resource_ccjif"), SubResource("Resource_4s4g5")])

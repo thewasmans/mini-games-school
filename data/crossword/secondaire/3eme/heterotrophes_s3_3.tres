@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cwdijn4bthbsa"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_wfnf7"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_rko0w"]
+
+[sub_resource type="Resource" id="Resource_wwaj4"]
+script = ExtResource("1_wfnf7")
+word = "PROTEASE"
+hint = "Enzyme qui décompose les protéines en acides aminés."
+
+[sub_resource type="Resource" id="Resource_46v48"]
+script = ExtResource("1_wfnf7")
+word = "GRELE"
+hint = "Lieu de l'intestin où se déroule le mécanisme d'absorption."
+
+[sub_resource type="Resource" id="Resource_fc2rq"]
+script = ExtResource("1_wfnf7")
+word = "MACROMOLECULE"
+hint = "Grande molécule qui possède une masse moléculaire élevée."
+
+[sub_resource type="Resource" id="Resource_udb16"]
+script = ExtResource("1_wfnf7")
+word = "HYDROLYSE"
+hint = "Processus chimique qui consiste à casser une molécule en utilisant de l'eau."
+
+[sub_resource type="Resource" id="Resource_l6ah2"]
+script = ExtResource("1_wfnf7")
+word = "SUBSTRAT"
+hint = "Molécule transformée au cours d'une catalyse enzymatique."
+
+[sub_resource type="Resource" id="Resource_ovfbh"]
+script = ExtResource("1_wfnf7")
+word = "AMYLASE"
+hint = "Enzyme qui accélère le début de la digestion de l'amidon."
+
+[sub_resource type="Resource" id="Resource_7cgpo"]
+script = ExtResource("1_wfnf7")
+word = "RATE"
+hint = "Organe qui joue un rôle dans l'immunité des cellules sanguines."
+
+[sub_resource type="Resource" id="Resource_vk43r"]
+script = ExtResource("1_wfnf7")
+word = "MICROSCOPE"
+hint = "Outil permettant d'agrandir l'image d'un objet."
+
+[sub_resource type="Resource" id="Resource_t88jt"]
+script = ExtResource("1_wfnf7")
+word = "AUTOTROPHE"
+hint = "Organisme capable de fabriquer seul leur matière organique."
+
+[sub_resource type="Resource" id="Resource_l8khg"]
+script = ExtResource("1_wfnf7")
+word = "HETEROTROPHE"
+hint = "Organisme incapable de fabriquer seul leur matière organique."
+
+[resource]
+script = ExtResource("2_rko0w")
+clues = Array[ExtResource("1_wfnf7")]([SubResource("Resource_wwaj4"), SubResource("Resource_46v48"), SubResource("Resource_fc2rq"), SubResource("Resource_udb16"), SubResource("Resource_l6ah2"), SubResource("Resource_ovfbh"), SubResource("Resource_7cgpo"), SubResource("Resource_vk43r"), SubResource("Resource_t88jt"), SubResource("Resource_l8khg")])

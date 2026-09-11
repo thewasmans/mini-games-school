@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dtq3lxbkhvlki"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_dfm2n"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_h14ql"]
+
+[sub_resource type="Resource" id="Resource_xc8qu"]
+script = ExtResource("1_dfm2n")
+word = "ARN"
+hint = "Acide nucléique formé d'un seul brin qui joue un rôle dans la synthèse des protéines."
+
+[sub_resource type="Resource" id="Resource_b2bc5"]
+script = ExtResource("1_dfm2n")
+word = "PLASMIQUE"
+hint = "Structure qui délimite le cytoplasme du milieu extracellulaire, on parle de la membrane..."
+
+[sub_resource type="Resource" id="Resource_b3rjg"]
+script = ExtResource("1_dfm2n")
+word = "EUCARYOTE"
+hint = "Etre vivant se caractérisant par la présence d'un noyau."
+
+[sub_resource type="Resource" id="Resource_2curu"]
+script = ExtResource("1_dfm2n")
+word = "MONOSACCHARIDE"
+hint = "Monomère de glucides."
+
+[sub_resource type="Resource" id="Resource_06mxw"]
+script = ExtResource("1_dfm2n")
+word = "GENE"
+hint = "Portion d'ADN."
+
+[sub_resource type="Resource" id="Resource_7mcqs"]
+script = ExtResource("1_dfm2n")
+word = "PEPTIDIQUE"
+hint = "Nom de la liaison entre des acides aminés."
+
+[sub_resource type="Resource" id="Resource_u0wlr"]
+script = ExtResource("1_dfm2n")
+word = "AMPHIPATIQUE"
+hint = "Se dit d’une molécule ayant un pôle hydrophile et un pôle hydrophobe."
+
+[sub_resource type="Resource" id="Resource_ysq57"]
+script = ExtResource("1_dfm2n")
+word = "CYTOPLASME"
+hint = "Contenu interne d'une cellule."
+
+[sub_resource type="Resource" id="Resource_tgb27"]
+script = ExtResource("1_dfm2n")
+word = "BACTERIE"
+hint = "Etre vivant faisant partie du monde des procaryotes."
+
+[sub_resource type="Resource" id="Resource_0xosf"]
+script = ExtResource("1_dfm2n")
+word = "LIPIDES"
+hint = "Macromolécules classés en trois groupes : les graisses, les phospholipides et les stéroïdes."
+
+[sub_resource type="Resource" id="Resource_xuj2d"]
+script = ExtResource("1_dfm2n")
+word = "RIBOSOME"
+hint = "Complexe de protéines intervenant dans la synthèse des protéines."
+
+[resource]
+script = ExtResource("2_h14ql")
+clues = Array[ExtResource("1_dfm2n")]([SubResource("Resource_xc8qu"), SubResource("Resource_b2bc5"), SubResource("Resource_b3rjg"), SubResource("Resource_2curu"), SubResource("Resource_06mxw"), SubResource("Resource_7mcqs"), SubResource("Resource_u0wlr"), SubResource("Resource_ysq57"), SubResource("Resource_tgb27"), SubResource("Resource_0xosf"), SubResource("Resource_xuj2d")])

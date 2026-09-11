@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dqwb2kkde7r20"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_u2faf"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_e0dcx"]
+
+[sub_resource type="Resource" id="Resource_7vcie"]
+script = ExtResource("1_u2faf")
+word = "CAPILLAIRES"
+hint = "Petits vaisseaux sanguins qui relient les veines aux artères."
+
+[sub_resource type="Resource" id="Resource_2er8f"]
+script = ExtResource("1_u2faf")
+word = "PERISTALTISME"
+hint = "Mouvement de contraction automatique des organes lors de la digestion."
+
+[sub_resource type="Resource" id="Resource_1u08c"]
+script = ExtResource("1_u2faf")
+word = "ARTERE"
+hint = "Vaisseau sanguin à forte pression, dont les parois sont épaisses."
+
+[sub_resource type="Resource" id="Resource_hex5h"]
+script = ExtResource("1_u2faf")
+word = "NUTRIMENT"
+hint = "Qui constitue l'aliment."
+
+[sub_resource type="Resource" id="Resource_3fakb"]
+script = ExtResource("1_u2faf")
+word = "COEUR"
+hint = "Organe musculaire qui sert à pomper le sang dans le corps."
+
+[sub_resource type="Resource" id="Resource_pn1yk"]
+script = ExtResource("1_u2faf")
+word = "SALIVE"
+hint = "Substance sécrétée par des glandes dans la bouche qui aide à la digestion."
+
+[sub_resource type="Resource" id="Resource_c3qh0"]
+script = ExtResource("1_u2faf")
+word = "CIRCULATION"
+hint = "Terme qui réfère à la manière dont le sang se déplace dans le corps, peut être pulmonaire ou générale."
+
+[sub_resource type="Resource" id="Resource_tvlkl"]
+script = ExtResource("1_u2faf")
+word = "GLANDE"
+hint = "Organe dont la fonction est de sécréter des substances dans le corps ou à l'extérieur."
+
+[sub_resource type="Resource" id="Resource_1q4es"]
+script = ExtResource("1_u2faf")
+word = "URINE"
+hint = "Substance contenue dans la vessie et qui s'élimine régulièrement."
+
+[sub_resource type="Resource" id="Resource_bc8j7"]
+script = ExtResource("1_u2faf")
+word = "VEINE"
+hint = "Vaisseau sanguin à faible pression, dont les parois sont fines."
+
+[sub_resource type="Resource" id="Resource_rfojd"]
+script = ExtResource("1_u2faf")
+word = "POULS"
+hint = "Battement des artères produit par les vagues successives du sang projeté du cœur."
+
+[resource]
+script = ExtResource("2_e0dcx")
+clues = Array[ExtResource("1_u2faf")]([SubResource("Resource_7vcie"), SubResource("Resource_2er8f"), SubResource("Resource_1u08c"), SubResource("Resource_hex5h"), SubResource("Resource_3fakb"), SubResource("Resource_pn1yk"), SubResource("Resource_c3qh0"), SubResource("Resource_tvlkl"), SubResource("Resource_1q4es"), SubResource("Resource_bc8j7"), SubResource("Resource_rfojd")])

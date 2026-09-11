@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dr78e3hehgfn7"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_u2wiv"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_6i4vr"]
+
+[sub_resource type="Resource" id="Resource_afq6f"]
+script = ExtResource("1_u2wiv")
+word = "TRANSLOCATION"
+hint = "Processus de déplacement des séquences génétiques."
+
+[sub_resource type="Resource" id="Resource_arw6l"]
+script = ExtResource("1_u2wiv")
+word = "VINGT"
+hint = "Nombre d'acides aminés au total."
+
+[sub_resource type="Resource" id="Resource_p4sc1"]
+script = ExtResource("1_u2wiv")
+word = "CODANT"
+hint = "Brin non transcrit, celui qui ne sert pas de modèle pour la copie."
+
+[sub_resource type="Resource" id="Resource_j7wov"]
+script = ExtResource("1_u2wiv")
+word = "UNIVERSEL"
+hint = "Terme qui signifie que le code génétique est le même pour l'ensemble du vivant."
+
+[sub_resource type="Resource" id="Resource_0vyw0"]
+script = ExtResource("1_u2wiv")
+word = "SITE"
+hint = "Lieu de fixation d'une enzyme lors de la réplication de l'ADN."
+
+[sub_resource type="Resource" id="Resource_cirje"]
+script = ExtResource("1_u2wiv")
+word = "CANCER"
+hint = "Maladie qui se caractérise par une prolifération anarchique de cellules dans le corps."
+
+[sub_resource type="Resource" id="Resource_fxbt0"]
+script = ExtResource("1_u2wiv")
+word = "SILENCIEUSE"
+hint = "Forme de mutation qui ne modifie pas la nature de l’acide aminé."
+
+[sub_resource type="Resource" id="Resource_m030h"]
+script = ExtResource("1_u2wiv")
+word = "PATHOLOGIE"
+hint = "Terme médical qui reflète une maladie en général."
+
+[sub_resource type="Resource" id="Resource_rfejj"]
+script = ExtResource("1_u2wiv")
+word = "DUPLICATION"
+hint = "Présence d'un segment de chromosome supplémentaire."
+
+[sub_resource type="Resource" id="Resource_wtjdv"]
+script = ExtResource("1_u2wiv")
+word = "ELONGATION"
+hint = "Etape de la formation de l'ARNm par l'ARN polymérase lors de la transcription."
+
+[sub_resource type="Resource" id="Resource_0tqyx"]
+script = ExtResource("1_u2wiv")
+word = "TERMINAISON"
+hint = "Etape de la transcription où l'ARN polymérase se détache de l'ADN ainsi que l'ARNm et les deux brins de l'ADN se referment."
+
+[sub_resource type="Resource" id="Resource_p5jt4"]
+script = ExtResource("1_u2wiv")
+word = "DELETION"
+hint = "Perte d'un fragment plus ou moins important d'ADN, constituant une cause de mutation."
+
+[sub_resource type="Resource" id="Resource_gorrh"]
+script = ExtResource("1_u2wiv")
+word = "MATURATION"
+hint = "Phase qui consiste en des modifications post transcriptionnelles de l'ARN."
+
+[sub_resource type="Resource" id="Resource_drbrd"]
+script = ExtResource("1_u2wiv")
+word = "REDONDANT"
+hint = "Terme qui signifie que plusieurs triplets peuvent coder pour le même acide aminé."
+
+[sub_resource type="Resource" id="Resource_1ej54"]
+script = ExtResource("1_u2wiv")
+word = "EPISSAGE"
+hint = "Phase de rassemblement des exons et excision des introns."
+
+[resource]
+script = ExtResource("2_6i4vr")
+clues = Array[ExtResource("1_u2wiv")]([SubResource("Resource_afq6f"), SubResource("Resource_arw6l"), SubResource("Resource_p4sc1"), SubResource("Resource_j7wov"), SubResource("Resource_0vyw0"), SubResource("Resource_cirje"), SubResource("Resource_fxbt0"), SubResource("Resource_m030h"), SubResource("Resource_rfejj"), SubResource("Resource_wtjdv"), SubResource("Resource_0tqyx"), SubResource("Resource_p5jt4"), SubResource("Resource_gorrh"), SubResource("Resource_drbrd"), SubResource("Resource_1ej54")])

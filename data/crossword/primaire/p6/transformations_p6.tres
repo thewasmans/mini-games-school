@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://c2p06rrm1qnla"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_s84bk"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_mooet"]
+
+[sub_resource type="Resource" id="Resource_25eh3"]
+script = ExtResource("1_s84bk")
+word = "COMBUSTION"
+hint = "Réaction produisant de la chaleur obtenue avec le mélange d'un combustible (gaz) et d'un comburant (dioxygène)."
+
+[sub_resource type="Resource" id="Resource_lpsfq"]
+script = ExtResource("1_s84bk")
+word = "CHALEUR"
+hint = "Transfert d'énergie thermique d'une corps chaud à un corps froid."
+
+[sub_resource type="Resource" id="Resource_6qg5f"]
+script = ExtResource("1_s84bk")
+word = "MATIERE"
+hint = "Tout ce qui compose les corps qui nous entourent, tout ce qui a une masse et un volume."
+
+[sub_resource type="Resource" id="Resource_lh3aq"]
+script = ExtResource("1_s84bk")
+word = "COMBUSTIBLE"
+hint = "Se dit d'une matière susceptible de brûler, comme le charbon ou l'essence."
+
+[sub_resource type="Resource" id="Resource_hp515"]
+script = ExtResource("1_s84bk")
+word = "COMBURANT"
+hint = "Substance chimique qui permet la combustion d'un combustible, comme l'oxygène."
+
+[sub_resource type="Resource" id="Resource_ugsgu"]
+script = ExtResource("1_s84bk")
+word = "TRANSFORMATION"
+hint = "Opération par laquelle il y a du changement."
+
+[sub_resource type="Resource" id="Resource_djjhj"]
+script = ExtResource("1_s84bk")
+word = "FORCE"
+hint = "Toute cause capable de modifier l'état de mouvement d'un corps ou de la déformer."
+
+[sub_resource type="Resource" id="Resource_75gxd"]
+script = ExtResource("1_s84bk")
+word = "PHYSIQUE"
+hint = "Se dit d'une transformation au cours de laquelle la matière n'est pas modifiée, comme l'eau en glace."
+
+[sub_resource type="Resource" id="Resource_23e0t"]
+script = ExtResource("1_s84bk")
+word = "CHIMIQUE"
+hint = "Se dit d'une transformation au cours de laquelle la matière est modifiée, comme l'eau en vin."
+
+[sub_resource type="Resource" id="Resource_5arby"]
+script = ExtResource("1_s84bk")
+word = "ENERGIE"
+hint = "Capacité à modifier un état, comme la température, l'état physique ou encore le mouvement."
+
+[resource]
+script = ExtResource("2_mooet")
+clues = Array[ExtResource("1_s84bk")]([SubResource("Resource_25eh3"), SubResource("Resource_lpsfq"), SubResource("Resource_6qg5f"), SubResource("Resource_lh3aq"), SubResource("Resource_hp515"), SubResource("Resource_ugsgu"), SubResource("Resource_djjhj"), SubResource("Resource_75gxd"), SubResource("Resource_23e0t"), SubResource("Resource_5arby")])

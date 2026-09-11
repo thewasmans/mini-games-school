@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://c0knqw4akhhse"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_vvsm5"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_cfq0j"]
+
+[sub_resource type="Resource" id="Resource_h3onh"]
+script = ExtResource("1_vvsm5")
+word = "AMPLITUDE"
+hint = "Elongation maximale d'une oscillation."
+
+[sub_resource type="Resource" id="Resource_on6t1"]
+script = ExtResource("1_vvsm5")
+word = "RESONANCE"
+hint = "Phénomène selon lequel certains objets sont sensibles à certaines fréquences."
+
+[sub_resource type="Resource" id="Resource_3j4eu"]
+script = ExtResource("1_vvsm5")
+word = "REFRACTION"
+hint = "Phénomène au cours duquel l'onde dévie de sa trajectoire lorsqu'elle passe d’un milieu à un autre."
+
+[sub_resource type="Resource" id="Resource_auhuv"]
+script = ExtResource("1_vvsm5")
+word = "SUPERPOSITION"
+hint = "Se dit lorsque deux ondes se croisent sans se perturber."
+
+[sub_resource type="Resource" id="Resource_nh58a"]
+script = ExtResource("1_vvsm5")
+word = "LONGUEUR"
+hint = "Distance parcourue par l’onde pendant une durée égale à sa période."
+
+[sub_resource type="Resource" id="Resource_6jwb8"]
+script = ExtResource("1_vvsm5")
+word = "HUYGENS"
+hint = "Principe qui concerne la propagation de la lumière sous forme d'ondelettes transmises."
+
+[sub_resource type="Resource" id="Resource_3xsyj"]
+script = ExtResource("1_vvsm5")
+word = "CELERITE"
+hint = "Vitesse de propagation d'une onde."
+
+[sub_resource type="Resource" id="Resource_leq7n"]
+script = ExtResource("1_vvsm5")
+word = "STROBOSCOPE"
+hint = "Dispositif qui produit une alternance de phases lumineuses et de phases obscures."
+
+[sub_resource type="Resource" id="Resource_wppsm"]
+script = ExtResource("1_vvsm5")
+word = "REFLEXION"
+hint = "Changement de direction de l'onde à l'interface de deux milieux."
+
+[sub_resource type="Resource" id="Resource_0yy7p"]
+script = ExtResource("1_vvsm5")
+word = "INTERFERENCE"
+hint = "Superposition de deux ondes de même fréquence."
+
+[sub_resource type="Resource" id="Resource_xlijv"]
+script = ExtResource("1_vvsm5")
+word = "DIFFRACTION"
+hint = "Phénomène par lequel une onde qui rencontre un obstacle subit un étalement des directions de sa propagation."
+
+[sub_resource type="Resource" id="Resource_uv0e3"]
+script = ExtResource("1_vvsm5")
+word = "DOPPLER"
+hint = "Effet lorsqu’une source et un observateur sont en mouvement."
+
+[resource]
+script = ExtResource("2_cfq0j")
+clues = Array[ExtResource("1_vvsm5")]([SubResource("Resource_h3onh"), SubResource("Resource_on6t1"), SubResource("Resource_3j4eu"), SubResource("Resource_auhuv"), SubResource("Resource_nh58a"), SubResource("Resource_6jwb8"), SubResource("Resource_3xsyj"), SubResource("Resource_leq7n"), SubResource("Resource_wppsm"), SubResource("Resource_0yy7p"), SubResource("Resource_xlijv"), SubResource("Resource_uv0e3")])

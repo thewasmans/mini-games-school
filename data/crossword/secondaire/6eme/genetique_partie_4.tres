@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://c307ut3hed5ny"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_bkmga"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_ww358"]
+
+[sub_resource type="Resource" id="Resource_fw3c1"]
+script = ExtResource("1_bkmga")
+word = "PRION"
+hint = "Protéine qui peut devenir pathogène en changeant sa conformation dans l'espace."
+
+[sub_resource type="Resource" id="Resource_nuon6"]
+script = ExtResource("1_bkmga")
+word = "AMINE"
+hint = "Terme associé à l'acide qui constitue la protéine."
+
+[sub_resource type="Resource" id="Resource_5wmtq"]
+script = ExtResource("1_bkmga")
+word = "ALLOPATRIQUE"
+hint = "Type de spéciation qui se déroule lorsque des populations sont isolées géographiquement."
+
+[sub_resource type="Resource" id="Resource_2onax"]
+script = ExtResource("1_bkmga")
+word = "MAJUSCULE"
+hint = "Façon d'écrire l'allèle dominant."
+
+[sub_resource type="Resource" id="Resource_6ca2q"]
+script = ExtResource("1_bkmga")
+word = "CYTOLOGIE"
+hint = "Etude de la cellule, correspond à la biologie cellulaire."
+
+[sub_resource type="Resource" id="Resource_7dox7"]
+script = ExtResource("1_bkmga")
+word = "INSULINE"
+hint = "Protéine qui diminue le taux de glucose sanguin."
+
+[sub_resource type="Resource" id="Resource_y7xxv"]
+script = ExtResource("1_bkmga")
+word = "SYNTHESE"
+hint = "Terme utilisé pour refléter la production d'une molécule, sa fabrication."
+
+[sub_resource type="Resource" id="Resource_rjw81"]
+script = ExtResource("1_bkmga")
+word = "MUTATION"
+hint = "Modification de nucléotides au sein de l'ADN."
+
+[sub_resource type="Resource" id="Resource_djy03"]
+script = ExtResource("1_bkmga")
+word = "METABOLISME"
+hint = "Ensemble des réactions chimiques se déroulant au sein des cellules."
+
+[sub_resource type="Resource" id="Resource_ig6wy"]
+script = ExtResource("1_bkmga")
+word = "GENOME"
+hint = "Ensemble des gènes d'un individu."
+
+[sub_resource type="Resource" id="Resource_pf1w4"]
+script = ExtResource("1_bkmga")
+word = "CODOMINANCE"
+hint = "Se dit lorsque les deux allèles s'expriment conjointement."
+
+[sub_resource type="Resource" id="Resource_mn1ms"]
+script = ExtResource("1_bkmga")
+word = "SYMPATRIQUE"
+hint = "Type de spéciation qui se fait par apparition d’une nouvelle espèce sur une aire de répartition."
+
+[sub_resource type="Resource" id="Resource_vfkgb"]
+script = ExtResource("1_bkmga")
+word = "ETRANGLEMENT"
+hint = "Effet de réduction de la diversité génétique suite à des catastrophes."
+
+[sub_resource type="Resource" id="Resource_mfs60"]
+script = ExtResource("1_bkmga")
+word = "DOMINANT"
+hint = "Se dit du caractère qui s'exprime, même s'il n'est présent que sur un seul allèle."
+
+[sub_resource type="Resource" id="Resource_5a8u3"]
+script = ExtResource("1_bkmga")
+word = "MINUSCULE"
+hint = "Façon d'écrire l'allèle récessif."
+
+[resource]
+script = ExtResource("2_ww358")
+clues = Array[ExtResource("1_bkmga")]([SubResource("Resource_fw3c1"), SubResource("Resource_nuon6"), SubResource("Resource_5wmtq"), SubResource("Resource_2onax"), SubResource("Resource_6ca2q"), SubResource("Resource_7dox7"), SubResource("Resource_y7xxv"), SubResource("Resource_rjw81"), SubResource("Resource_djy03"), SubResource("Resource_ig6wy"), SubResource("Resource_pf1w4"), SubResource("Resource_mn1ms"), SubResource("Resource_vfkgb"), SubResource("Resource_mfs60"), SubResource("Resource_5a8u3")])

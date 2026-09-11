@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bp1bd6ucnewu0"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_dlnpb"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_12l5n"]
+
+[sub_resource type="Resource" id="Resource_iftpl"]
+script = ExtResource("1_dlnpb")
+word = "MYOCARDE"
+hint = "Muscle constituant la paroi du cœur."
+
+[sub_resource type="Resource" id="Resource_djko1"]
+script = ExtResource("1_dlnpb")
+word = "TENDON"
+hint = "Tissu conjonctif fibreux reliant un muscle à un os."
+
+[sub_resource type="Resource" id="Resource_mn6fd"]
+script = ExtResource("1_dlnpb")
+word = "DERME"
+hint = "Couche profonde de la peau riche en vaisseaux sanguins."
+
+[sub_resource type="Resource" id="Resource_kmpv3"]
+script = ExtResource("1_dlnpb")
+word = "MELANINE"
+hint = "Pigment responsable de la couleur de la peau."
+
+[sub_resource type="Resource" id="Resource_vel71"]
+script = ExtResource("1_dlnpb")
+word = "SEBACEE"
+hint = "Glande cutanée sécrétant le sébum."
+
+[sub_resource type="Resource" id="Resource_ofuss"]
+script = ExtResource("1_dlnpb")
+word = "SUDORIPARE"
+hint = "Glande produisant la sueur."
+
+[sub_resource type="Resource" id="Resource_g8ew1"]
+script = ExtResource("1_dlnpb")
+word = "METABOLISME"
+hint = "Ensemble des réactions chimiques qui se déroulent au sein d'un organisme."
+
+[sub_resource type="Resource" id="Resource_e2iyd"]
+script = ExtResource("1_dlnpb")
+word = "SQUELETTE"
+hint = "Ensemble des os et des cartilages soutenant le corps humain."
+
+[sub_resource type="Resource" id="Resource_dby8d"]
+script = ExtResource("1_dlnpb")
+word = "OSTEOPOROSE"
+hint = "Maladie caractérisée par une diminution de la densité osseuse."
+
+[sub_resource type="Resource" id="Resource_ea3ba"]
+script = ExtResource("1_dlnpb")
+word = "CARTILAGE"
+hint = "Tissu conjonctif souple et résistant contenant de l'eau."
+
+[sub_resource type="Resource" id="Resource_bm4ek"]
+script = ExtResource("1_dlnpb")
+word = "LISSE"
+hint = "Muscle involontaire présent dans les parois des organes internes."
+
+[resource]
+script = ExtResource("2_12l5n")
+clues = Array[ExtResource("1_dlnpb")]([SubResource("Resource_iftpl"), SubResource("Resource_djko1"), SubResource("Resource_mn6fd"), SubResource("Resource_kmpv3"), SubResource("Resource_vel71"), SubResource("Resource_ofuss"), SubResource("Resource_g8ew1"), SubResource("Resource_e2iyd"), SubResource("Resource_dby8d"), SubResource("Resource_ea3ba"), SubResource("Resource_bm4ek")])

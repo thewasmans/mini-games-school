@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://byrkg1wa24c8"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_lwgd2"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_qc8ib"]
+
+[sub_resource type="Resource" id="Resource_ydsdd"]
+script = ExtResource("1_lwgd2")
+word = "COLON"
+hint = "Lieu où se déroule la fabrication de la matière fécale."
+
+[sub_resource type="Resource" id="Resource_wxbkl"]
+script = ExtResource("1_lwgd2")
+word = "ESTOMAC"
+hint = "Organe de stockage du bol alimentaire."
+
+[sub_resource type="Resource" id="Resource_u7pxr"]
+script = ExtResource("1_lwgd2")
+word = "FERMENTATION"
+hint = "Processus de transformation d'énergie sans oxygène réalisé par des bactéries et des levures."
+
+[sub_resource type="Resource" id="Resource_qfel2"]
+script = ExtResource("1_lwgd2")
+word = "DIOXYGENE"
+hint = "Gaz indispensable à toute forme de vie animale."
+
+[sub_resource type="Resource" id="Resource_sdceb"]
+script = ExtResource("1_lwgd2")
+word = "LACTIQUE"
+hint = "Type de fermentation permettant de produire des yaourts, des saucissons ou encore de la choucroute."
+
+[sub_resource type="Resource" id="Resource_cdkhr"]
+script = ExtResource("1_lwgd2")
+word = "BACTERIE"
+hint = "Etre vivant faisant partie du monde des procaryotes."
+
+[sub_resource type="Resource" id="Resource_huvqp"]
+script = ExtResource("1_lwgd2")
+word = "CHYME"
+hint = "Bouillie formée par la masse alimentaire au moment où elle passe dans l'intestin."
+
+[sub_resource type="Resource" id="Resource_6bfpe"]
+script = ExtResource("1_lwgd2")
+word = "ULTRASTRUCTURE"
+hint = "Structure de cellules ou de tissus observés au microscope électronique."
+
+[sub_resource type="Resource" id="Resource_hoboq"]
+script = ExtResource("1_lwgd2")
+word = "MASTICATION"
+hint = "Etape de la digestion qui se déroule dans la bouche avec la salivation."
+
+[sub_resource type="Resource" id="Resource_npxvv"]
+script = ExtResource("1_lwgd2")
+word = "RESPIRATION"
+hint = "Mécanisme cellulaire réalisé au sein de la mitochondrie et permettant la fabrication d'ATP."
+
+[sub_resource type="Resource" id="Resource_vnh8s"]
+script = ExtResource("1_lwgd2")
+word = "PHOTOSYNTHESE"
+hint = "Processus de transformation de l'énergie lumineuse en glucides au sein du chloroplaste."
+
+[resource]
+script = ExtResource("2_qc8ib")
+clues = Array[ExtResource("1_lwgd2")]([SubResource("Resource_ydsdd"), SubResource("Resource_wxbkl"), SubResource("Resource_u7pxr"), SubResource("Resource_qfel2"), SubResource("Resource_sdceb"), SubResource("Resource_cdkhr"), SubResource("Resource_huvqp"), SubResource("Resource_6bfpe"), SubResource("Resource_hoboq"), SubResource("Resource_npxvv"), SubResource("Resource_vnh8s")])

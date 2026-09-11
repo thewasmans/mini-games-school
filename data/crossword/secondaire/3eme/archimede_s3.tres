@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dynvwkemeeq78"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_idpor"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_gnqd0"]
+
+[sub_resource type="Resource" id="Resource_xrhjh"]
+script = ExtResource("1_idpor")
+word = "FORCE"
+hint = "Produit mathématique de la masse et de l'accélération selon la seconde loi de Newton."
+
+[sub_resource type="Resource" id="Resource_aylgo"]
+script = ExtResource("1_idpor")
+word = "POUSSEE"
+hint = "Force verticale qui s'oppose au corps qui descend vers le fond, proposée par Archimède."
+
+[sub_resource type="Resource" id="Resource_ja2bv"]
+script = ExtResource("1_idpor")
+word = "MASSE"
+hint = "Quantité de matière d'une substance dont l'unité est le gramme."
+
+[sub_resource type="Resource" id="Resource_esjuf"]
+script = ExtResource("1_idpor")
+word = "FLOTTAISON"
+hint = "Action de rester en surface sur un liquide sans couler."
+
+[sub_resource type="Resource" id="Resource_r6id4"]
+script = ExtResource("1_idpor")
+word = "PRINCIPE"
+hint = "Loi physique apparente, qu'aucune expérience n'a invalidée jusqu'à ce jour."
+
+[sub_resource type="Resource" id="Resource_poxrl"]
+script = ExtResource("1_idpor")
+word = "FLUIDE"
+hint = "Substance déformable lorsqu'elle est soumise à une force, capable de prendre la forme du contenant dans lequel elle se trouve."
+
+[sub_resource type="Resource" id="Resource_yymtf"]
+script = ExtResource("1_idpor")
+word = "RESULTANTE"
+hint = "Ensemble des forces appliquées sur l'objet."
+
+[sub_resource type="Resource" id="Resource_m7wmn"]
+script = ExtResource("1_idpor")
+word = "VOLUME"
+hint = "Espace occupé par un objet, dont l'unité est le mètre cube."
+
+[sub_resource type="Resource" id="Resource_0ip0j"]
+script = ExtResource("1_idpor")
+word = "EQUILIBRE"
+hint = "Situation où les forces agissant sur un objet se compensent parfaitement, résultant en une absence de mouvement."
+
+[resource]
+script = ExtResource("2_gnqd0")
+clues = Array[ExtResource("1_idpor")]([SubResource("Resource_xrhjh"), SubResource("Resource_aylgo"), SubResource("Resource_ja2bv"), SubResource("Resource_esjuf"), SubResource("Resource_r6id4"), SubResource("Resource_poxrl"), SubResource("Resource_yymtf"), SubResource("Resource_m7wmn"), SubResource("Resource_0ip0j")])

@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://crngcktovljm7"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_spa5k"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_yfcja"]
+
+[sub_resource type="Resource" id="Resource_tn3mb"]
+script = ExtResource("1_spa5k")
+word = "BIODIVERSITE"
+hint = "Terme reflétant l'ensemble de la diversité du vivant."
+
+[sub_resource type="Resource" id="Resource_esf1c"]
+script = ExtResource("1_spa5k")
+word = "EXTINCTION"
+hint = "Terme désignant la disparition définitive d'une espèce."
+
+[sub_resource type="Resource" id="Resource_01grt"]
+script = ExtResource("1_spa5k")
+word = "HOMOLOGUES"
+hint = "Structures qui peuvent différer d’apparence et de fonction mais qui dérivent toutes de la même partie du corps d’un ancêtre commun."
+
+[sub_resource type="Resource" id="Resource_qml0i"]
+script = ExtResource("1_spa5k")
+word = "INNOVATION"
+hint = "Nouveau caractère avantageux qui permet aux individus de se reproduire davantage, on parle d'... évolutive."
+
+[sub_resource type="Resource" id="Resource_n50c6"]
+script = ExtResource("1_spa5k")
+word = "RECHAUFFEMENT"
+hint = "Variation des températures du climat à la hausse."
+
+[sub_resource type="Resource" id="Resource_vqcq6"]
+script = ExtResource("1_spa5k")
+word = "ADAPTATION"
+hint = "Mécanisme mis en place par les espèces pour survivre dans un environnement."
+
+[sub_resource type="Resource" id="Resource_sh8do"]
+script = ExtResource("1_spa5k")
+word = "MONOPHYLETIQUE"
+hint = "Taxon comprenant une espèce et tous ses descendants."
+
+[sub_resource type="Resource" id="Resource_b3y84"]
+script = ExtResource("1_spa5k")
+word = "BIODIVERSITE"
+hint = "Terme reflétant l'ensemble de la diversité du vivant."
+
+[sub_resource type="Resource" id="Resource_xq36x"]
+script = ExtResource("1_spa5k")
+word = "VARIABILITE"
+hint = "Caractère de ce qui peut être changé, propriété de ce qui est instable dans une population."
+
+[sub_resource type="Resource" id="Resource_nax5o"]
+script = ExtResource("1_spa5k")
+word = "CLADE"
+hint = "Groupe de taxons ayant une origine phylétique commune."
+
+[sub_resource type="Resource" id="Resource_tgwhr"]
+script = ExtResource("1_spa5k")
+word = "CONVERGENCE"
+hint = "Acquisition de structures similaires au sein de lignées différentes, comme les ailes."
+
+[sub_resource type="Resource" id="Resource_5qm5e"]
+script = ExtResource("1_spa5k")
+word = "PARAPHYLETIQUE"
+hint = "Taxon comprenant une espèce et une partie de ses descendants."
+
+[sub_resource type="Resource" id="Resource_0who8"]
+script = ExtResource("1_spa5k")
+word = "RACE"
+hint = "Population animale résultant, par sélection, de la subdivision d'une même espèce pour des critères spécifiques."
+
+[resource]
+script = ExtResource("2_yfcja")
+clues = Array[ExtResource("1_spa5k")]([SubResource("Resource_tn3mb"), SubResource("Resource_esf1c"), SubResource("Resource_01grt"), SubResource("Resource_qml0i"), SubResource("Resource_n50c6"), SubResource("Resource_vqcq6"), SubResource("Resource_sh8do"), SubResource("Resource_b3y84"), SubResource("Resource_xq36x"), SubResource("Resource_nax5o"), SubResource("Resource_tgwhr"), SubResource("Resource_5qm5e"), SubResource("Resource_0who8")])

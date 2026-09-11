@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dao5phoqad3l5"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_i3mo0"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_s5e28"]
+
+[sub_resource type="Resource" id="Resource_o7o3y"]
+script = ExtResource("1_i3mo0")
+word = "FUSIBLE"
+hint = "Organe de sécurité qui coupe le courant électrique et qui peut fondre."
+
+[sub_resource type="Resource" id="Resource_76uoo"]
+script = ExtResource("1_i3mo0")
+word = "INTENSITE"
+hint = "Quantité de charges électriques qui traverse une section donnée du circuit par unité de temps, l'unité est l'Ampère (A)."
+
+[sub_resource type="Resource" id="Resource_t0smw"]
+script = ExtResource("1_i3mo0")
+word = "SERIE"
+hint = "Se dit d'un circuit électrique où il n'y a qu'un seul chemin par lequel peut passer le courant, ce qui fait que l'intensité est la même dans tout le circuit."
+
+[sub_resource type="Resource" id="Resource_wf3w1"]
+script = ExtResource("1_i3mo0")
+word = "PARALLELE"
+hint = "Se dit d'un circuit électrique dont le courant emprunte différents chemins, l'intensité est différente dans le circuit et les récepteurs sont indépendants."
+
+[sub_resource type="Resource" id="Resource_2hvc6"]
+script = ExtResource("1_i3mo0")
+word = "RESISTANCE"
+hint = "Aptitude d'un matériau conducteur à s'opposer au passage d'un courant électrique de symbole R."
+
+[sub_resource type="Resource" id="Resource_ig42u"]
+script = ExtResource("1_i3mo0")
+word = "PRISE"
+hint = "Connecteur permettant de relier des appareils électriques au réseau, on y branche son smartphone."
+
+[sub_resource type="Resource" id="Resource_um3na"]
+script = ExtResource("1_i3mo0")
+word = "ELECTROCUTION"
+hint = "Le passage d'électricité dans le corps (électrisation) qui peut causer des brûlures, des troubles cardiaques ou d'autres lésions mortelles."
+
+[sub_resource type="Resource" id="Resource_fkbvj"]
+script = ExtResource("1_i3mo0")
+word = "CONTACT"
+hint = "Forme d'électrisation qui permet de charger deux objets neutres et de nature différente sans les frotter, en se touchant simplement."
+
+[sub_resource type="Resource" id="Resource_kyl8e"]
+script = ExtResource("1_i3mo0")
+word = "TENSION"
+hint = "Différence de potentiel, quantité d'énergie électrique transférée par unité de charge entre deux points d'un circuit."
+
+[resource]
+script = ExtResource("2_s5e28")
+clues = Array[ExtResource("1_i3mo0")]([SubResource("Resource_o7o3y"), SubResource("Resource_76uoo"), SubResource("Resource_t0smw"), SubResource("Resource_wf3w1"), SubResource("Resource_2hvc6"), SubResource("Resource_ig42u"), SubResource("Resource_um3na"), SubResource("Resource_fkbvj"), SubResource("Resource_kyl8e")])

@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://jnlc7nibwy6a"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_qsmbk"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_uf3j2"]
+
+[sub_resource type="Resource" id="Resource_6dv03"]
+script = ExtResource("1_qsmbk")
+word = "INTRASPECIFIQUE"
+hint = "Type de relation entre des organismes de la même espèce."
+
+[sub_resource type="Resource" id="Resource_an4qj"]
+script = ExtResource("1_qsmbk")
+word = "COMPETITION"
+hint = "Suite au manque de ressources alimentaires, les mêmes espèces entrent en…"
+
+[sub_resource type="Resource" id="Resource_p7ex1"]
+script = ExtResource("1_qsmbk")
+word = "COMMENSALISME"
+hint = "Association entre deux êtres vivants dans laquelle l'un tire profit de l'autre sans lui porter préjudice."
+
+[sub_resource type="Resource" id="Resource_p4n81"]
+script = ExtResource("1_qsmbk")
+word = "PREDATION"
+hint = "Relation de type alimentaire au cours de laquelle un prédateur se nourrit d’une proie."
+
+[sub_resource type="Resource" id="Resource_alvcd"]
+script = ExtResource("1_qsmbk")
+word = "CHAINE"
+hint = "Suite dans laquelle on présente de quoi se nourrit chacun des êtres vivants d'un écosystème."
+
+[sub_resource type="Resource" id="Resource_4ehvn"]
+script = ExtResource("1_qsmbk")
+word = "SYMBIOSE"
+hint = "Association qui profite aux deux espèces qui y participent."
+
+[sub_resource type="Resource" id="Resource_qrts5"]
+script = ExtResource("1_qsmbk")
+word = "HERBIVORE"
+hint = "Se dit d'un  animal qui mange de l'herbe, des feuilles et d'autres végétaux."
+
+[sub_resource type="Resource" id="Resource_c3l13"]
+script = ExtResource("1_qsmbk")
+word = "FLUX"
+hint = "Transfert de matière et/ou d'énergie d'un chainon à l'autre."
+
+[sub_resource type="Resource" id="Resource_6uye7"]
+script = ExtResource("1_qsmbk")
+word = "WWF"
+hint = "Acronyme de \"World Wildlife Fund\"."
+
+[sub_resource type="Resource" id="Resource_5bs7w"]
+script = ExtResource("1_qsmbk")
+word = "CHAINON"
+hint = "Elément d'une chaine alimentaire qui représente un niveau, autre terme que maillon."
+
+[sub_resource type="Resource" id="Resource_o7ii2"]
+script = ExtResource("1_qsmbk")
+word = "CARNIVORE"
+hint = "Type de régime alimentaire où la viande se trouve au menu principal."
+
+[sub_resource type="Resource" id="Resource_ab46w"]
+script = ExtResource("1_qsmbk")
+word = "PHYTOPLANCTON"
+hint = "Ensemble des végétaux unicellulaires présents dans les eaux de surface dans l'océan."
+
+[resource]
+script = ExtResource("2_uf3j2")
+clues = Array[ExtResource("1_qsmbk")]([SubResource("Resource_6dv03"), SubResource("Resource_an4qj"), SubResource("Resource_p7ex1"), SubResource("Resource_p4n81"), SubResource("Resource_alvcd"), SubResource("Resource_4ehvn"), SubResource("Resource_qrts5"), SubResource("Resource_c3l13"), SubResource("Resource_6uye7"), SubResource("Resource_5bs7w"), SubResource("Resource_o7ii2"), SubResource("Resource_ab46w")])

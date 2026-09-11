@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dvfjtcxjpyn32"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_jhhsr"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_fph54"]
+
+[sub_resource type="Resource" id="Resource_jdnir"]
+script = ExtResource("1_jhhsr")
+word = "BIOME"
+hint = "Vaste unité écologique sur la Terre, grand ensemble d'écosystèmes."
+
+[sub_resource type="Resource" id="Resource_l2ulb"]
+script = ExtResource("1_jhhsr")
+word = "THERAPIE"
+hint = "Traitement curatif qui vise à aider le patient au quotidien."
+
+[sub_resource type="Resource" id="Resource_txior"]
+script = ExtResource("1_jhhsr")
+word = "EXTINCTION"
+hint = "Disparition majeure d'espèces dans un écosystème."
+
+[sub_resource type="Resource" id="Resource_1ri25"]
+script = ExtResource("1_jhhsr")
+word = "CLE"
+hint = "Se dit d'une espèce nécessaire au bon fonctionnement de l'écosystème."
+
+[sub_resource type="Resource" id="Resource_t6ke5"]
+script = ExtResource("1_jhhsr")
+word = "ECOSYSTEME"
+hint = "Milieu dans lequel on y retrouve le biotope et la biocénose."
+
+[sub_resource type="Resource" id="Resource_tu4hf"]
+script = ExtResource("1_jhhsr")
+word = "DEFORESTATION"
+hint = "Acte de détruire une forêt, d'enlever les arbres pour diverses finalités."
+
+[sub_resource type="Resource" id="Resource_weeq0"]
+script = ExtResource("1_jhhsr")
+word = "MAILLAGE"
+hint = "Terme utilisé pour parler de l'ensemble des éléments naturels qui créent un réseau nécessaire au vivant."
+
+[sub_resource type="Resource" id="Resource_4nd1q"]
+script = ExtResource("1_jhhsr")
+word = "PATURAGE"
+hint = "Terrain couvert d'herbes, réservé à l'alimentation du bétail."
+
+[sub_resource type="Resource" id="Resource_dl0fg"]
+script = ExtResource("1_jhhsr")
+word = "ENDEMIQUE"
+hint = "Se dit d'une espèce qui vit dans une aire géographique bien délimitée."
+
+[sub_resource type="Resource" id="Resource_jbh0j"]
+script = ExtResource("1_jhhsr")
+word = "DATE"
+hint = "Terme utilisé pour déterminer une période de temps où vivait une espèce."
+
+[sub_resource type="Resource" id="Resource_p47qv"]
+script = ExtResource("1_jhhsr")
+word = "BIO"
+hint = "Label utilisé pour définir une alimentation saine."
+
+[resource]
+script = ExtResource("2_fph54")
+clues = Array[ExtResource("1_jhhsr")]([SubResource("Resource_jdnir"), SubResource("Resource_l2ulb"), SubResource("Resource_txior"), SubResource("Resource_1ri25"), SubResource("Resource_t6ke5"), SubResource("Resource_tu4hf"), SubResource("Resource_weeq0"), SubResource("Resource_4nd1q"), SubResource("Resource_dl0fg"), SubResource("Resource_jbh0j"), SubResource("Resource_p47qv")])

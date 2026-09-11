@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bq2e0jr3jqp8j"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_qr5uu"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_1bhbn"]
+
+[sub_resource type="Resource" id="Resource_cwfhn"]
+script = ExtResource("1_qr5uu")
+word = "AMPHETAMINE"
+hint = "Drogue stimulante que l'on retrouve dans le traitement des TDA."
+
+[sub_resource type="Resource" id="Resource_5888o"]
+script = ExtResource("1_qr5uu")
+word = "STROOP"
+hint = "Test évaluant l'attention sélective à partir de mots et de couleurs."
+
+[sub_resource type="Resource" id="Resource_qn26m"]
+script = ExtResource("1_qr5uu")
+word = "MATURATION"
+hint = "Terme qui réfère à la réorganisation cérébrale des connexions cérébrales lors de l'adolescence."
+
+[sub_resource type="Resource" id="Resource_3gm6j"]
+script = ExtResource("1_qr5uu")
+word = "VIEILLISSEMENT"
+hint = "Processus continu et progressif d'altération des fonctions à partir de 65 ans."
+
+[sub_resource type="Resource" id="Resource_quydx"]
+script = ExtResource("1_qr5uu")
+word = "TOLERANCE"
+hint = "Terme qui réfère à l'augmentation de la consommation d'une drogue pour obtenir les effets."
+
+[sub_resource type="Resource" id="Resource_qppvn"]
+script = ExtResource("1_qr5uu")
+word = "CANNABIS"
+hint = "Drogue sédative contenant du THC."
+
+[sub_resource type="Resource" id="Resource_kjw0h"]
+script = ExtResource("1_qr5uu")
+word = "CENTRAL"
+hint = "Système nerveux comprenant l'encéphale et la moelle épinière."
+
+[sub_resource type="Resource" id="Resource_i5gkv"]
+script = ExtResource("1_qr5uu")
+word = "NEUROLOGIE"
+hint = "Etude des cellules nerveuses."
+
+[sub_resource type="Resource" id="Resource_bbjfv"]
+script = ExtResource("1_qr5uu")
+word = "GOLGI"
+hint = "Scientifique qui propose la théorie réticulaire."
+
+[sub_resource type="Resource" id="Resource_1pj1y"]
+script = ExtResource("1_qr5uu")
+word = "EFFERENTE"
+hint = "Voie nerveuse qui démarre du cerveau et se dirige vers le sens."
+
+[sub_resource type="Resource" id="Resource_iqhr8"]
+script = ExtResource("1_qr5uu")
+word = "ASTROCYTE"
+hint = "Gliocyte de la barrière hémato encéphalique."
+
+[sub_resource type="Resource" id="Resource_l0l3v"]
+script = ExtResource("1_qr5uu")
+word = "NEUROTRANSMETTEUR"
+hint = "Molécule de communication entre les neurones."
+
+[sub_resource type="Resource" id="Resource_2qb4j"]
+script = ExtResource("1_qr5uu")
+word = "NOYAU"
+hint = "Centre métabolique du neurone."
+
+[sub_resource type="Resource" id="Resource_2kl5a"]
+script = ExtResource("1_qr5uu")
+word = "NEUROTOXINE"
+hint = "Substance toxique qui agit au niveau des neurones et peut provoquer la paralysie."
+
+[sub_resource type="Resource" id="Resource_dmh1i"]
+script = ExtResource("1_qr5uu")
+word = "CRANIENS"
+hint = "Se dit des 24 nerfs qui se trouvent dans le cerveau."
+
+[resource]
+script = ExtResource("2_1bhbn")
+clues = Array[ExtResource("1_qr5uu")]([SubResource("Resource_cwfhn"), SubResource("Resource_5888o"), SubResource("Resource_qn26m"), SubResource("Resource_3gm6j"), SubResource("Resource_quydx"), SubResource("Resource_qppvn"), SubResource("Resource_kjw0h"), SubResource("Resource_i5gkv"), SubResource("Resource_bbjfv"), SubResource("Resource_1pj1y"), SubResource("Resource_iqhr8"), SubResource("Resource_l0l3v"), SubResource("Resource_2qb4j"), SubResource("Resource_2kl5a"), SubResource("Resource_dmh1i")])

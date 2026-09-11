@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bxv23yih4h5u3"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_m7ioo"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_m2wyk"]
+
+[sub_resource type="Resource" id="Resource_c4wbk"]
+script = ExtResource("1_m7ioo")
+word = "VESSIE"
+hint = "Organe creux dans lequel s'accumule l'urine."
+
+[sub_resource type="Resource" id="Resource_5y3p3"]
+script = ExtResource("1_m7ioo")
+word = "OVAIRE"
+hint = "Lieu de production des ovocytes."
+
+[sub_resource type="Resource" id="Resource_0ykp7"]
+script = ExtResource("1_m7ioo")
+word = "VULVE"
+hint = "Ensemble des organes génitaux externes de la femme, comme le vagin."
+
+[sub_resource type="Resource" id="Resource_vpohg"]
+script = ExtResource("1_m7ioo")
+word = "PENIS"
+hint = "Organe musculaire qui libère le sperme."
+
+[sub_resource type="Resource" id="Resource_ora5h"]
+script = ExtResource("1_m7ioo")
+word = "PUBERTE"
+hint = "Moment de bouleversements physiologiques et psychologiques chez l'adolescent."
+
+[sub_resource type="Resource" id="Resource_81tdq"]
+script = ExtResource("1_m7ioo")
+word = "MENSTRUATIONS"
+hint = "Pertes de sang régulières chez la femme permettant d'évacuer l'utérus."
+
+[sub_resource type="Resource" id="Resource_vfpud"]
+script = ExtResource("1_m7ioo")
+word = "PILOSITE"
+hint = "Ensemble des poils couvrant le corps."
+
+[sub_resource type="Resource" id="Resource_cyrgh"]
+script = ExtResource("1_m7ioo")
+word = "ASEXUEE"
+hint = "Mode de reproduction qui n'implique pas les sexes."
+
+[sub_resource type="Resource" id="Resource_ojdxf"]
+script = ExtResource("1_m7ioo")
+word = "PROTEGER"
+hint = "Terme à l'infinitif qui signifie que l'on se met en sécurité lors d'un rapport sexuel."
+
+[sub_resource type="Resource" id="Resource_yteng"]
+script = ExtResource("1_m7ioo")
+word = "VAGIN"
+hint = "Organe tubulaire qui sépare l'utérus de la vulve."
+
+[resource]
+script = ExtResource("2_m2wyk")
+clues = Array[ExtResource("1_m7ioo")]([SubResource("Resource_c4wbk"), SubResource("Resource_5y3p3"), SubResource("Resource_0ykp7"), SubResource("Resource_vpohg"), SubResource("Resource_ora5h"), SubResource("Resource_81tdq"), SubResource("Resource_vfpud"), SubResource("Resource_cyrgh"), SubResource("Resource_ojdxf"), SubResource("Resource_yteng")])

@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://b5chcaqmhs3jc"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_au24a"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_pw0tk"]
+
+[sub_resource type="Resource" id="Resource_5vexa"]
+script = ExtResource("1_au24a")
+word = "OVOVIVIPARE"
+hint = "Animal qui pond des œufs, mais ceux-ci restent à l'intérieur de la femelle et des petits en ressortent."
+
+[sub_resource type="Resource" id="Resource_wrx6d"]
+script = ExtResource("1_au24a")
+word = "EMBRYON"
+hint = "Premier stade du développement d'un œuf ou zygote, chez les plantes et les animaux."
+
+[sub_resource type="Resource" id="Resource_xty3x"]
+script = ExtResource("1_au24a")
+word = "EAU"
+hint = "Aliment indispensable à la survie de tout vivant."
+
+[sub_resource type="Resource" id="Resource_5xdc8"]
+script = ExtResource("1_au24a")
+word = "DIMORPHISME"
+hint = "Terme utilisé pour mettre en évidence des différences physiques entre les mâles et les femelles."
+
+[sub_resource type="Resource" id="Resource_mdchh"]
+script = ExtResource("1_au24a")
+word = "REPRODUCTION"
+hint = "Processus qui permet la production de nouveaux enfants."
+
+[sub_resource type="Resource" id="Resource_j3bb2"]
+script = ExtResource("1_au24a")
+word = "CYCLE"
+hint = "Passage d'une étape de la vie à une autre selon un mode circulaire."
+
+[sub_resource type="Resource" id="Resource_7ji8l"]
+script = ExtResource("1_au24a")
+word = "ALIMENT"
+hint = "Nourriture permettant la croissance d'un vivant."
+
+[sub_resource type="Resource" id="Resource_6dmug"]
+script = ExtResource("1_au24a")
+word = "OVIPARE"
+hint = "Animal qui pond des œufs."
+
+[resource]
+script = ExtResource("2_pw0tk")
+clues = Array[ExtResource("1_au24a")]([SubResource("Resource_5vexa"), SubResource("Resource_wrx6d"), SubResource("Resource_xty3x"), SubResource("Resource_5xdc8"), SubResource("Resource_mdchh"), SubResource("Resource_j3bb2"), SubResource("Resource_7ji8l"), SubResource("Resource_6dmug")])

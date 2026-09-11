@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bn40co706gd6l"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_xh11h"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_0qit0"]
+
+[sub_resource type="Resource" id="Resource_7fsfq"]
+script = ExtResource("1_xh11h")
+word = "ATOME"
+hint = "Plus petit élément chimique que l'on ne peut pas diviser, particule qui compose la molécule."
+
+[sub_resource type="Resource" id="Resource_4kwjk"]
+script = ExtResource("1_xh11h")
+word = "ZINC"
+hint = "Elément chimique dont le symbole est Zn."
+
+[sub_resource type="Resource" id="Resource_bcxbt"]
+script = ExtResource("1_xh11h")
+word = "AIR"
+hint = "Mélange de gaz contenant de l'azote, oxygène et hélium."
+
+[sub_resource type="Resource" id="Resource_m7dc0"]
+script = ExtResource("1_xh11h")
+word = "LI"
+hint = "Symbole chimique du lithium."
+
+[sub_resource type="Resource" id="Resource_6pamh"]
+script = ExtResource("1_xh11h")
+word = "SN"
+hint = "Symbole chimique de l'étain."
+
+[sub_resource type="Resource" id="Resource_ohxty"]
+script = ExtResource("1_xh11h")
+word = "MN"
+hint = "Symbole chimique du manganèse."
+
+[sub_resource type="Resource" id="Resource_02dmm"]
+script = ExtResource("1_xh11h")
+word = "IODE"
+hint = "Elément chimique dont le symbole est I."
+
+[sub_resource type="Resource" id="Resource_14nb2"]
+script = ExtResource("1_xh11h")
+word = "DIOXYGENE"
+hint = "Corps pur simple présent dans l'air et qui nous permet de respirer."
+
+[sub_resource type="Resource" id="Resource_enrd5"]
+script = ExtResource("1_xh11h")
+word = "COMPOSE"
+hint = "Se dit d'un corps pur qui possède plusieurs types d'atomes, comme le NaCl."
+
+[sub_resource type="Resource" id="Resource_k8e5g"]
+script = ExtResource("1_xh11h")
+word = "XENON"
+hint = "Gaz rare dont le symbole chimique est Xe."
+
+[resource]
+script = ExtResource("2_0qit0")
+clues = Array[ExtResource("1_xh11h")]([SubResource("Resource_7fsfq"), SubResource("Resource_4kwjk"), SubResource("Resource_bcxbt"), SubResource("Resource_m7dc0"), SubResource("Resource_6pamh"), SubResource("Resource_ohxty"), SubResource("Resource_02dmm"), SubResource("Resource_14nb2"), SubResource("Resource_enrd5"), SubResource("Resource_k8e5g")])

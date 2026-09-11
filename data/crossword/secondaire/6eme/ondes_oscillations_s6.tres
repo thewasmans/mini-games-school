@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://mk8bkf6m63k8"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_j8jlj"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_aww4h"]
+
+[sub_resource type="Resource" id="Resource_rc3qr"]
+script = ExtResource("1_j8jlj")
+word = "PULSATION"
+hint = "Nombre de radians par seconde, autre que la fréquence."
+
+[sub_resource type="Resource" id="Resource_puggo"]
+script = ExtResource("1_j8jlj")
+word = "ELONGATION"
+hint = "Distance ou grandeur qui varie au cours du temps, se note y(x)=..."
+
+[sub_resource type="Resource" id="Resource_myfkm"]
+script = ExtResource("1_j8jlj")
+word = "AMORTISSEMENT"
+hint = "Correspond à une diminution d’amplitude sans que la fréquence varie notablement."
+
+[sub_resource type="Resource" id="Resource_spdgb"]
+script = ExtResource("1_j8jlj")
+word = "TORSION"
+hint = "Onde où les points du milieu tournent localement autour de la direction de propagation."
+
+[sub_resource type="Resource" id="Resource_vwu0r"]
+script = ExtResource("1_j8jlj")
+word = "CONCORDANCE"
+hint = "Se dit lorsque deux points oscillent de la même manière sur une période."
+
+[sub_resource type="Resource" id="Resource_h2rrv"]
+script = ExtResource("1_j8jlj")
+word = "PERIODE"
+hint = "Durée nécessaire pour que l’objet effectue un tour du cercle."
+
+[sub_resource type="Resource" id="Resource_1r6k3"]
+script = ExtResource("1_j8jlj")
+word = "FREQUENCE"
+hint = "Nombre de tours effectués par unité de temps."
+
+[sub_resource type="Resource" id="Resource_qabh4"]
+script = ExtResource("1_j8jlj")
+word = "QUADRATURE"
+hint = "Se dit lorsque deux points sont à mi-chemin l'un de l'autre au niveau de leur phase."
+
+[sub_resource type="Resource" id="Resource_ek6n3"]
+script = ExtResource("1_j8jlj")
+word = "TRANSVERSALE"
+hint = "Caractérise une onde qui produit une perturbation dans une direction perpendiculaire à la direction de propagation."
+
+[sub_resource type="Resource" id="Resource_cf7ko"]
+script = ExtResource("1_j8jlj")
+word = "OPPOSITION"
+hint = "Se dit lorsque deux points oscillent de manière opposée sur une période."
+
+[sub_resource type="Resource" id="Resource_cinyn"]
+script = ExtResource("1_j8jlj")
+word = "LONGITUDINALE"
+hint = "Caractérise une onde qui  produit une perturbation dans la direction de la propagation."
+
+[sub_resource type="Resource" id="Resource_kr0cu"]
+script = ExtResource("1_j8jlj")
+word = "OSCILLATION"
+hint = "Mouvement répétitif d'une pièce mobile autour d'un point fixe d'équilibre."
+
+[resource]
+script = ExtResource("2_aww4h")
+clues = Array[ExtResource("1_j8jlj")]([SubResource("Resource_rc3qr"), SubResource("Resource_puggo"), SubResource("Resource_myfkm"), SubResource("Resource_spdgb"), SubResource("Resource_vwu0r"), SubResource("Resource_h2rrv"), SubResource("Resource_1r6k3"), SubResource("Resource_qabh4"), SubResource("Resource_ek6n3"), SubResource("Resource_cf7ko"), SubResource("Resource_cinyn"), SubResource("Resource_kr0cu")])

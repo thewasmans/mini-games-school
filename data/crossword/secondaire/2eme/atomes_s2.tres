@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://c82npyfqjcvq6"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_qpy7v"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_uuqlg"]
+
+[sub_resource type="Resource" id="Resource_wbtc2"]
+script = ExtResource("1_qpy7v")
+word = "MAGNESIUM"
+hint = "Elément chimique dont le symbole est Mg."
+
+[sub_resource type="Resource" id="Resource_thk71"]
+script = ExtResource("1_qpy7v")
+word = "ARGON"
+hint = "Gaz rare dont le symbole chimique est l'Ar."
+
+[sub_resource type="Resource" id="Resource_bdhvl"]
+script = ExtResource("1_qpy7v")
+word = "OZONE"
+hint = "Couche de gaz qui absorbe les UVs."
+
+[sub_resource type="Resource" id="Resource_72iin"]
+script = ExtResource("1_qpy7v")
+word = "ELECTROLYSE"
+hint = "Procédé par lequel on effectue la décomposition de l'eau en dihydrogène et dioxygène."
+
+[sub_resource type="Resource" id="Resource_ikvdu"]
+script = ExtResource("1_qpy7v")
+word = "INDICE"
+hint = "Chiffre qui apparait après un symbole chimique dans une formule chimique."
+
+[sub_resource type="Resource" id="Resource_0yoif"]
+script = ExtResource("1_qpy7v")
+word = "SIMPLE"
+hint = "Se dit d'un corps pur qui possède un seul type d'atomes, comme le diazote."
+
+[sub_resource type="Resource" id="Resource_8uabg"]
+script = ExtResource("1_qpy7v")
+word = "NE"
+hint = "Symbole chimique du néon."
+
+[sub_resource type="Resource" id="Resource_kcrc6"]
+script = ExtResource("1_qpy7v")
+word = "CU"
+hint = "Symbole chimique du cuivre."
+
+[sub_resource type="Resource" id="Resource_2exl1"]
+script = ExtResource("1_qpy7v")
+word = "PB"
+hint = "Symbole chimique du plomb."
+
+[sub_resource type="Resource" id="Resource_k6x08"]
+script = ExtResource("1_qpy7v")
+word = "SE"
+hint = "Symbole chimique du sélénium."
+
+[resource]
+script = ExtResource("2_uuqlg")
+clues = Array[ExtResource("1_qpy7v")]([SubResource("Resource_wbtc2"), SubResource("Resource_thk71"), SubResource("Resource_bdhvl"), SubResource("Resource_72iin"), SubResource("Resource_ikvdu"), SubResource("Resource_0yoif"), SubResource("Resource_8uabg"), SubResource("Resource_kcrc6"), SubResource("Resource_2exl1"), SubResource("Resource_k6x08")])

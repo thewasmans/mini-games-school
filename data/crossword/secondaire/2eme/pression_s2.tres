@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://d0bq7qtatkd0x"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_j8bvq"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_7l7l7"]
+
+[sub_resource type="Resource" id="Resource_5vp4a"]
+script = ExtResource("1_j8bvq")
+word = "POULIE"
+hint = "Dispositif constitué d'une pièce rigide, la roue, qui pivote autour d'un point d'appui, l'essieu."
+
+[sub_resource type="Resource" id="Resource_cteb8"]
+script = ExtResource("1_j8bvq")
+word = "DYNAMOMETRE"
+hint = "Outil de mesure de la force."
+
+[sub_resource type="Resource" id="Resource_spawi"]
+script = ExtResource("1_j8bvq")
+word = "POIDS"
+hint = "Force liée à la masse d'un corps, elle varie selon l'astre."
+
+[sub_resource type="Resource" id="Resource_q3bcf"]
+script = ExtResource("1_j8bvq")
+word = "LEVIER"
+hint = "Machine simple qui amplifie une force en utilisant un point d'appui."
+
+[sub_resource type="Resource" id="Resource_imon7"]
+script = ExtResource("1_j8bvq")
+word = "ENGRENAGE"
+hint = "Dispositif mécanique comportant deux roues dentées engrenées qui permet la transmission d'un mouvement de rotation."
+
+[sub_resource type="Resource" id="Resource_mtf0l"]
+script = ExtResource("1_j8bvq")
+word = "SI"
+hint = "Terme simplifié pour le système international des unités."
+
+[sub_resource type="Resource" id="Resource_v1sl0"]
+script = ExtResource("1_j8bvq")
+word = "NEWTON"
+hint = "Unité de mesure de la force."
+
+[sub_resource type="Resource" id="Resource_bb1np"]
+script = ExtResource("1_j8bvq")
+word = "ELECTROSTATIQUE"
+hint = "Branche de la physique qui étudie les phénomènes causés par les charges électriques au repos."
+
+[sub_resource type="Resource" id="Resource_d4pmg"]
+script = ExtResource("1_j8bvq")
+word = "MAGNETISME"
+hint = "Partie de la physique qui étudie les propriétés des aimants et les phénomènes qui s'y rattachent."
+
+[sub_resource type="Resource" id="Resource_lniou"]
+script = ExtResource("1_j8bvq")
+word = "FROTTEMENT"
+hint = "Force créée par l'interaction de deux surfaces en contact qui glissent l'une sur l'autre et qui s'oppose au mouvement."
+
+[sub_resource type="Resource" id="Resource_1juev"]
+script = ExtResource("1_j8bvq")
+word = "MASSE"
+hint = "Quantité de matière d'un corps, invariable."
+
+[sub_resource type="Resource" id="Resource_5sgvp"]
+script = ExtResource("1_j8bvq")
+word = "CORPS"
+hint = "Objet matériel caractérisé par ses propriétés physiques."
+
+[resource]
+script = ExtResource("2_7l7l7")
+clues = Array[ExtResource("1_j8bvq")]([SubResource("Resource_5vp4a"), SubResource("Resource_cteb8"), SubResource("Resource_spawi"), SubResource("Resource_q3bcf"), SubResource("Resource_imon7"), SubResource("Resource_mtf0l"), SubResource("Resource_v1sl0"), SubResource("Resource_bb1np"), SubResource("Resource_d4pmg"), SubResource("Resource_lniou"), SubResource("Resource_1juev"), SubResource("Resource_5sgvp")])

@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bc5sixuv4d8c3"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_h3n65"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_i5rwb"]
+
+[sub_resource type="Resource" id="Resource_sitl4"]
+script = ExtResource("1_h3n65")
+word = "OBJET"
+hint = "Caractérise tout élément qui n'est pas vivant, qui peut être naturel ou artificiel."
+
+[sub_resource type="Resource" id="Resource_pj172"]
+script = ExtResource("1_h3n65")
+word = "EAU"
+hint = "Liquide naturel le plus répandu sur la surface de la Terre."
+
+[sub_resource type="Resource" id="Resource_42p15"]
+script = ExtResource("1_h3n65")
+word = "LAC"
+hint = "Milieu de vie aquatique contenant une grande quantité d'eau et que l'on retrouve à certains lieux, comme à L'Eau d'Heure."
+
+[sub_resource type="Resource" id="Resource_1n8no"]
+script = ExtResource("1_h3n65")
+word = "NOURRITURE"
+hint = "Terme scientifique qui désigne l'aliment."
+
+[sub_resource type="Resource" id="Resource_ngjbl"]
+script = ExtResource("1_h3n65")
+word = "AIR"
+hint = "Mélange de gaz incolore, invisible et inodore permettant aux animaux de respirer."
+
+[sub_resource type="Resource" id="Resource_nvpbm"]
+script = ExtResource("1_h3n65")
+word = "JARDIN"
+hint = "Milieu de vie aménagé par l'humain à proximité de sa maison afin d'avoir un décor vert."
+
+[sub_resource type="Resource" id="Resource_4f347"]
+script = ExtResource("1_h3n65")
+word = "REPRODUCTION"
+hint = "Etape de la vie d'un vivant qui lui permet d'avoir des enfants."
+
+[sub_resource type="Resource" id="Resource_cgxdp"]
+script = ExtResource("1_h3n65")
+word = "PRAIRIE"
+hint = "Grande étendue d'herbes où l'on peut y voir des moutons ou des vaches."
+
+[resource]
+script = ExtResource("2_i5rwb")
+clues = Array[ExtResource("1_h3n65")]([SubResource("Resource_sitl4"), SubResource("Resource_pj172"), SubResource("Resource_42p15"), SubResource("Resource_1n8no"), SubResource("Resource_ngjbl"), SubResource("Resource_nvpbm"), SubResource("Resource_4f347"), SubResource("Resource_cgxdp")])

@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bhv0sabxii8r8"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_hl63x"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_njrhj"]
+
+[sub_resource type="Resource" id="Resource_l0vof"]
+script = ExtResource("1_hl63x")
+word = "OESOPHAGE"
+hint = "Tube séparant la bouche de l'estomac dans lequel la bouillie alimentaire circule."
+
+[sub_resource type="Resource" id="Resource_2hq3i"]
+script = ExtResource("1_hl63x")
+word = "FOIE"
+hint = "Glande annexe au système digestif qui sécrète la bile et stocke le sucre."
+
+[sub_resource type="Resource" id="Resource_jdy83"]
+script = ExtResource("1_hl63x")
+word = "NASAL"
+hint = "Terme scientifique qui caractérise la cavité du nez."
+
+[sub_resource type="Resource" id="Resource_frq3w"]
+script = ExtResource("1_hl63x")
+word = "EXPIRATION"
+hint = "Mécanisme respiratoire qui correspond à la sortie d'air."
+
+[sub_resource type="Resource" id="Resource_8gjt6"]
+script = ExtResource("1_hl63x")
+word = "VENTILATION"
+hint = "Terme scientifique qui correspond à la respiration."
+
+[sub_resource type="Resource" id="Resource_5xq01"]
+script = ExtResource("1_hl63x")
+word = "BUCCAL"
+hint = "Terme scientifique qui caractérise la cavité de la bouche."
+
+[sub_resource type="Resource" id="Resource_t07r6"]
+script = ExtResource("1_hl63x")
+word = "THORAX"
+hint = "Partie du squelette dans lequel on retrouve les poumons et le cœur."
+
+[sub_resource type="Resource" id="Resource_ae0wu"]
+script = ExtResource("1_hl63x")
+word = "SANG"
+hint = "Liquide biologique vital qui circule continuellement dans les vaisseaux sanguins."
+
+[sub_resource type="Resource" id="Resource_4s88m"]
+script = ExtResource("1_hl63x")
+word = "PANCREAS"
+hint = "Organe permettant de réguler le taux de sucre dans le sang."
+
+[sub_resource type="Resource" id="Resource_daet5"]
+script = ExtResource("1_hl63x")
+word = "DIAPHRAGME"
+hint = "Muscle sous les poumons impliqué dans les mouvements respiratoires."
+
+[resource]
+script = ExtResource("2_njrhj")
+clues = Array[ExtResource("1_hl63x")]([SubResource("Resource_l0vof"), SubResource("Resource_2hq3i"), SubResource("Resource_jdy83"), SubResource("Resource_frq3w"), SubResource("Resource_8gjt6"), SubResource("Resource_5xq01"), SubResource("Resource_t07r6"), SubResource("Resource_ae0wu"), SubResource("Resource_4s88m"), SubResource("Resource_daet5")])

@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://c46riin40ihot"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_iq5cb"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_hynrj"]
+
+[sub_resource type="Resource" id="Resource_o4k5b"]
+script = ExtResource("1_iq5cb")
+word = "APPROVISIONNEMENT"
+hint = "Action de fournir des biens et des services."
+
+[sub_resource type="Resource" id="Resource_ojl5k"]
+script = ExtResource("1_iq5cb")
+word = "ORDRE"
+hint = "Terme anciennement utilisé dans le classement des animaux proposé par Linné."
+
+[sub_resource type="Resource" id="Resource_4rx4d"]
+script = ExtResource("1_iq5cb")
+word = "PATURAGE"
+hint = "Terrain couvert d'herbes, réservé à l'alimentation du bétail."
+
+[sub_resource type="Resource" id="Resource_7lg6b"]
+script = ExtResource("1_iq5cb")
+word = "EXON"
+hint = "Séquence nucléotidique codante."
+
+[sub_resource type="Resource" id="Resource_51nn0"]
+script = ExtResource("1_iq5cb")
+word = "BIOMANIPULATION"
+hint = "Action de manipuler l'environnement en introduisant une espèce, par exemple."
+
+[sub_resource type="Resource" id="Resource_78pd1"]
+script = ExtResource("1_iq5cb")
+word = "CLADE"
+hint = "Ancêtre commun avec tous ses descendants qui possèdent une même innovation évolutive."
+
+[sub_resource type="Resource" id="Resource_am8d0"]
+script = ExtResource("1_iq5cb")
+word = "TOURBE"
+hint = "Matière organique fossile formée suite à la décomposition des végétaux."
+
+[sub_resource type="Resource" id="Resource_51ods"]
+script = ExtResource("1_iq5cb")
+word = "PROIE"
+hint = "Se dit de l'animal qui est traqué par le prédateur."
+
+[sub_resource type="Resource" id="Resource_6sij1"]
+script = ExtResource("1_iq5cb")
+word = "ESPECE"
+hint = "Terme utilisé en écologie sur lequel les scientifiques ont du mal à s'accorder sur une définition unique."
+
+[sub_resource type="Resource" id="Resource_lttuu"]
+script = ExtResource("1_iq5cb")
+word = "TERRE"
+hint = "Planète bleue du système solaire où la vie est possible."
+
+[sub_resource type="Resource" id="Resource_tnbp5"]
+script = ExtResource("1_iq5cb")
+word = "SUREXPLOITATION"
+hint = "Action d'épuiser les ressources avant qu'elles ne puissent se renouveler."
+
+[resource]
+script = ExtResource("2_hynrj")
+clues = Array[ExtResource("1_iq5cb")]([SubResource("Resource_o4k5b"), SubResource("Resource_ojl5k"), SubResource("Resource_4rx4d"), SubResource("Resource_7lg6b"), SubResource("Resource_51nn0"), SubResource("Resource_78pd1"), SubResource("Resource_am8d0"), SubResource("Resource_51ods"), SubResource("Resource_6sij1"), SubResource("Resource_lttuu"), SubResource("Resource_tnbp5")])

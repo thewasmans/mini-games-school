@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cllhxqc1uqy4k"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_c7um7"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_y0s7o"]
+
+[sub_resource type="Resource" id="Resource_sibn3"]
+script = ExtResource("1_c7um7")
+word = "ARCHEOPTERYX"
+hint = "Oiseau primitif découvert en 1861, possédant des dents et des écailles."
+
+[sub_resource type="Resource" id="Resource_baik1"]
+script = ExtResource("1_c7um7")
+word = "LINNE"
+hint = "Botaniste ayant proposé une nouvelle méthode de classification en 1735."
+
+[sub_resource type="Resource" id="Resource_laawa"]
+script = ExtResource("1_c7um7")
+word = "ARISTOTE"
+hint = "Philosophe antique ayant classé les animaux par milieu de vie."
+
+[sub_resource type="Resource" id="Resource_bi2ns"]
+script = ExtResource("1_c7um7")
+word = "DARWIN"
+hint = "Naturaliste auteur de la théorie de la sélection naturelle."
+
+[sub_resource type="Resource" id="Resource_ptu0o"]
+script = ExtResource("1_c7um7")
+word = "LAMARCK"
+hint = "Naturaliste ayant proposé la théorie de l'usage."
+
+[sub_resource type="Resource" id="Resource_3jxha"]
+script = ExtResource("1_c7um7")
+word = "SELECTION"
+hint = "Processus par lequel les individus les mieux adaptés survivent."
+
+[sub_resource type="Resource" id="Resource_07fa2"]
+script = ExtResource("1_c7um7")
+word = "USAGE"
+hint = "Théorie selon laquelle l'utilisation d'un organe le modifie."
+
+[sub_resource type="Resource" id="Resource_yqc8e"]
+script = ExtResource("1_c7um7")
+word = "RECYCLAGE"
+hint = "Processus de traitement des déchets."
+
+[sub_resource type="Resource" id="Resource_l6w2o"]
+script = ExtResource("1_c7um7")
+word = "BIODIVERSITE"
+hint = "Variété des formes de vie présentes sur Terre."
+
+[sub_resource type="Resource" id="Resource_elw6v"]
+script = ExtResource("1_c7um7")
+word = "TAXONOMIE"
+hint = "Science de la classification des organismes."
+
+[sub_resource type="Resource" id="Resource_r0vkw"]
+script = ExtResource("1_c7um7")
+word = "ESPECE"
+hint = "Groupe d'individus capables de se reproduire entre eux."
+
+[sub_resource type="Resource" id="Resource_3kmgi"]
+script = ExtResource("1_c7um7")
+word = "ENDOTHERME"
+hint = "Animal capable de réguler sa propre température corporelle."
+
+[sub_resource type="Resource" id="Resource_qulsn"]
+script = ExtResource("1_c7um7")
+word = "ECTOTHERME"
+hint = "Animal dont la température corporelle dépend de l'environnement."
+
+[sub_resource type="Resource" id="Resource_w5swe"]
+script = ExtResource("1_c7um7")
+word = "VERTEBRES"
+hint = "Animaux possédant une colonne vertébrale, apparus vers 420 millions d'années."
+
+[sub_resource type="Resource" id="Resource_kj8rk"]
+script = ExtResource("1_c7um7")
+word = "INSECTES"
+hint = "Groupe d'invertébrés terrestres apparus vers 410 millions d'années."
+
+[resource]
+script = ExtResource("2_y0s7o")
+clues = Array[ExtResource("1_c7um7")]([SubResource("Resource_sibn3"), SubResource("Resource_baik1"), SubResource("Resource_laawa"), SubResource("Resource_bi2ns"), SubResource("Resource_ptu0o"), SubResource("Resource_3jxha"), SubResource("Resource_07fa2"), SubResource("Resource_yqc8e"), SubResource("Resource_l6w2o"), SubResource("Resource_elw6v"), SubResource("Resource_r0vkw"), SubResource("Resource_3kmgi"), SubResource("Resource_qulsn"), SubResource("Resource_w5swe"), SubResource("Resource_kj8rk")])

@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://b17psc1ipticd"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_q8scp"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_3vutx"]
+
+[sub_resource type="Resource" id="Resource_6dfyk"]
+script = ExtResource("1_q8scp")
+word = "BRONSTED"
+hint = "Selon lui, l'acide est une molécule capable de libérer un proton."
+
+[sub_resource type="Resource" id="Resource_4xynv"]
+script = ExtResource("1_q8scp")
+word = "TAMPON"
+hint = "Solution contenant un mélange d'un acide faible et de sa base conjuguée, le pH est stable."
+
+[sub_resource type="Resource" id="Resource_3wtrv"]
+script = ExtResource("1_q8scp")
+word = "VIRAGE"
+hint = "Zone dans laquelle l'indicateur change de couleur."
+
+[sub_resource type="Resource" id="Resource_x7dab"]
+script = ExtResource("1_q8scp")
+word = "INDICATEUR"
+hint = "Substance qui a la propriété de changer de couleur en fonction du pH."
+
+[sub_resource type="Resource" id="Resource_n2ik8"]
+script = ExtResource("1_q8scp")
+word = "AUTOPROTOLYSE"
+hint = "Réaction de transfert de protons entre deux molécules identiques (eau)."
+
+[sub_resource type="Resource" id="Resource_yg12s"]
+script = ExtResource("1_q8scp")
+word = "FORT"
+hint = "Se dit d'un acide dont la réaction avec l’eau est complète."
+
+[sub_resource type="Resource" id="Resource_qfv3a"]
+script = ExtResource("1_q8scp")
+word = "AMPHOLYTE"
+hint = "Molécule ou ion capable de jouer le rôle d’acide ou de base."
+
+[sub_resource type="Resource" id="Resource_ymtqo"]
+script = ExtResource("1_q8scp")
+word = "BASE"
+hint = "Selon Arrhenius, c'est un corps pur qui libère des ions hydroxydes."
+
+[sub_resource type="Resource" id="Resource_lxiad"]
+script = ExtResource("1_q8scp")
+word = "ACIDE"
+hint = "Selon Arrhenius, c'est un corps pur qui libère des protons."
+
+[sub_resource type="Resource" id="Resource_e07rq"]
+script = ExtResource("1_q8scp")
+word = "SALIFICATION"
+hint = "Réaction entre un acide et une base formant un sel."
+
+[sub_resource type="Resource" id="Resource_lwu5a"]
+script = ExtResource("1_q8scp")
+word = "EQUIVALENCE"
+hint = "Point où le pH de la solution est égal à 7."
+
+[sub_resource type="Resource" id="Resource_o1cch"]
+script = ExtResource("1_q8scp")
+word = "FAIBLE"
+hint = "Se dit d'un acide ou une base dont la réaction avec l’eau est incomplète."
+
+[sub_resource type="Resource" id="Resource_d5p2w"]
+script = ExtResource("1_q8scp")
+word = "PH"
+hint = "Mesure de l'acidité ou basicité d'un milieu."
+
+[resource]
+script = ExtResource("2_3vutx")
+clues = Array[ExtResource("1_q8scp")]([SubResource("Resource_6dfyk"), SubResource("Resource_4xynv"), SubResource("Resource_3wtrv"), SubResource("Resource_x7dab"), SubResource("Resource_n2ik8"), SubResource("Resource_yg12s"), SubResource("Resource_qfv3a"), SubResource("Resource_ymtqo"), SubResource("Resource_lxiad"), SubResource("Resource_e07rq"), SubResource("Resource_lwu5a"), SubResource("Resource_o1cch"), SubResource("Resource_d5p2w")])

@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://caolb5jc8hf10"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_jrxq7"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_ir2eu"]
+
+[sub_resource type="Resource" id="Resource_myfm8"]
+script = ExtResource("1_jrxq7")
+word = "RADIS"
+hint = "Plante potagère à racine comestible (généralement rose)."
+
+[sub_resource type="Resource" id="Resource_7usso"]
+script = ExtResource("1_jrxq7")
+word = "AGRUME"
+hint = "Terme général du genre Citrus qui comprend l'orange, le citron, le pamplemousse et le kumquat."
+
+[sub_resource type="Resource" id="Resource_3obeg"]
+script = ExtResource("1_jrxq7")
+word = "LOCAL"
+hint = "Se dit d'un aliment que l'on retrouve dans nos régions, que l'on cultive chez nous."
+
+[sub_resource type="Resource" id="Resource_70ny5"]
+script = ExtResource("1_jrxq7")
+word = "POMMIER"
+hint = "Arbre qui produit des pommes."
+
+[sub_resource type="Resource" id="Resource_5eaml"]
+script = ExtResource("1_jrxq7")
+word = "FRUIT"
+hint = "Produit que l'on récupère chez certaines plantes et que l'on mange surtout en été."
+
+[sub_resource type="Resource" id="Resource_pdymo"]
+script = ExtResource("1_jrxq7")
+word = "CERISIER"
+hint = "Arbre qui produit des cerises."
+
+[sub_resource type="Resource" id="Resource_goy6g"]
+script = ExtResource("1_jrxq7")
+word = "POTAGER"
+hint = "Espace de culture de légumes et de fruits frais."
+
+[sub_resource type="Resource" id="Resource_ep02m"]
+script = ExtResource("1_jrxq7")
+word = "LEGUME"
+hint = "Partie d'une plante que l'on peut manger et que l'on retrouve dans le potager."
+
+[resource]
+script = ExtResource("2_ir2eu")
+clues = Array[ExtResource("1_jrxq7")]([SubResource("Resource_myfm8"), SubResource("Resource_7usso"), SubResource("Resource_3obeg"), SubResource("Resource_70ny5"), SubResource("Resource_5eaml"), SubResource("Resource_pdymo"), SubResource("Resource_goy6g"), SubResource("Resource_ep02m")])

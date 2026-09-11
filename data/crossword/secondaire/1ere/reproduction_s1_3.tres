@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bjqoloc0glc2y"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_e7k4v"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_yker4"]
+
+[sub_resource type="Resource" id="Resource_mxcxx"]
+script = ExtResource("1_e7k4v")
+word = "MENSTRUEL"
+hint = "Période de cycles d'une femme dite régulière."
+
+[sub_resource type="Resource" id="Resource_hu0kj"]
+script = ExtResource("1_e7k4v")
+word = "FOETUS"
+hint = "Etre humain à partir du troisième mois de développement."
+
+[sub_resource type="Resource" id="Resource_w6fki"]
+script = ExtResource("1_e7k4v")
+word = "GROSSESSE"
+hint = "Aussi appelée gestation, période durant laquelle la femme est enceinte."
+
+[sub_resource type="Resource" id="Resource_eaq7l"]
+script = ExtResource("1_e7k4v")
+word = "GENRE"
+hint = "Définit l'identité dans laquelle la personne se sent : homme, femme ou non binaire."
+
+[sub_resource type="Resource" id="Resource_kjoc2"]
+script = ExtResource("1_e7k4v")
+word = "EMBRYON"
+hint = "Premier stade du développement d'un œuf ou zygote."
+
+[sub_resource type="Resource" id="Resource_bue7c"]
+script = ExtResource("1_e7k4v")
+word = "PUBERTE"
+hint = "Période de transformations physiologiques du corps de l'adolescent."
+
+[sub_resource type="Resource" id="Resource_hc075"]
+script = ExtResource("1_e7k4v")
+word = "FECONDATION"
+hint = "Union entre un spermatozoïde et un ovocyte."
+
+[sub_resource type="Resource" id="Resource_5kvp4"]
+script = ExtResource("1_e7k4v")
+word = "VACCINATION"
+hint = "Acte médical permettant de protéger contre un microbe."
+
+[sub_resource type="Resource" id="Resource_xq8iw"]
+script = ExtResource("1_e7k4v")
+word = "FSH"
+hint = "Hormone folliculaire."
+
+[sub_resource type="Resource" id="Resource_wqhk0"]
+script = ExtResource("1_e7k4v")
+word = "SEXE"
+hint = "Terme caractérisant la différence biologique entre les mâles et les femelles."
+
+[resource]
+script = ExtResource("2_yker4")
+clues = Array[ExtResource("1_e7k4v")]([SubResource("Resource_mxcxx"), SubResource("Resource_hu0kj"), SubResource("Resource_w6fki"), SubResource("Resource_eaq7l"), SubResource("Resource_kjoc2"), SubResource("Resource_bue7c"), SubResource("Resource_hc075"), SubResource("Resource_5kvp4"), SubResource("Resource_xq8iw"), SubResource("Resource_wqhk0")])

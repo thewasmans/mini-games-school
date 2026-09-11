@@ -1,0 +1,78 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cyia3oefmol1w"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_0skfh"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_sbwkb"]
+
+[sub_resource type="Resource" id="Resource_i61ky"]
+script = ExtResource("1_0skfh")
+word = "SAUVEGARDE"
+hint = "Action de préserver une espèce avant qu'elle ne disparaisse définitivement."
+
+[sub_resource type="Resource" id="Resource_nhw8a"]
+script = ExtResource("1_0skfh")
+word = "FLEUR"
+hint = "Partie de la plante qui est souvent odorante et contenant les organes reproducteurs."
+
+[sub_resource type="Resource" id="Resource_b6eqh"]
+script = ExtResource("1_0skfh")
+word = "SURPECHE"
+hint = "Action d'attraper trop de poissons avant qu'ils ne se reproduisent suffisamment."
+
+[sub_resource type="Resource" id="Resource_bduaw"]
+script = ExtResource("1_0skfh")
+word = "STEPPE"
+hint = "Etendue d'herbes dans un climat aride, considéré comme un biome."
+
+[sub_resource type="Resource" id="Resource_12gqk"]
+script = ExtResource("1_0skfh")
+word = "BIOCONTAMINATION"
+hint = "Pollution d'un environnement à cause d'une substance toxique ou d'une espèce néfaste."
+
+[sub_resource type="Resource" id="Resource_3bp1q"]
+script = ExtResource("1_0skfh")
+word = "RESERVE"
+hint = "Espace naturel protégé d'une importance nationale ou internationale."
+
+[sub_resource type="Resource" id="Resource_nihwg"]
+script = ExtResource("1_0skfh")
+word = "MAIS"
+hint = "Plante tropicale cultivée comme céréale pour ses grains riches en amidon."
+
+[sub_resource type="Resource" id="Resource_8u1ih"]
+script = ExtResource("1_0skfh")
+word = "BIOMANIPULATION"
+hint = "Action de manipuler l'environnement en introduisant une espèce."
+
+[sub_resource type="Resource" id="Resource_4rkgh"]
+script = ExtResource("1_0skfh")
+word = "FAUNE"
+hint = "Ensemble des espèces animales vivant dans un espace géographique."
+
+[sub_resource type="Resource" id="Resource_rkqu4"]
+script = ExtResource("1_0skfh")
+word = "DEFORESTATION"
+hint = "Action de détruire une forêt, d'enlever les arbres pour se chauffer."
+
+[sub_resource type="Resource" id="Resource_gqkvr"]
+script = ExtResource("1_0skfh")
+word = "SUREXPLOITATION"
+hint = "Action d'épuiser les ressources avant qu'elles ne puissent se renouveler."
+
+[sub_resource type="Resource" id="Resource_34i76"]
+script = ExtResource("1_0skfh")
+word = "POLLUTION"
+hint = "Action de contaminer l'air, l'eau ou la terre."
+
+[sub_resource type="Resource" id="Resource_5anxl"]
+script = ExtResource("1_0skfh")
+word = "BRACONNAGE"
+hint = "Pratique illégale de la chasse ou de la pêche."
+
+[sub_resource type="Resource" id="Resource_ibx47"]
+script = ExtResource("1_0skfh")
+word = "INVASIVE"
+hint = "Terme utilisé pour informer d'une espèce qui est étrangère et pose problème dans l'environnement."
+
+[resource]
+script = ExtResource("2_sbwkb")
+clues = Array[ExtResource("1_0skfh")]([SubResource("Resource_i61ky"), SubResource("Resource_nhw8a"), SubResource("Resource_b6eqh"), SubResource("Resource_bduaw"), SubResource("Resource_12gqk"), SubResource("Resource_3bp1q"), SubResource("Resource_nihwg"), SubResource("Resource_8u1ih"), SubResource("Resource_4rkgh"), SubResource("Resource_rkqu4"), SubResource("Resource_gqkvr"), SubResource("Resource_34i76"), SubResource("Resource_5anxl"), SubResource("Resource_ibx47")])

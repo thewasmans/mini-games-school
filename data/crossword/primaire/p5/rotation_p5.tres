@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cqw1tbnf8jvag"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_nisja"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_te4rs"]
+
+[sub_resource type="Resource" id="Resource_kldii"]
+script = ExtResource("1_nisja")
+word = "SATURNE"
+hint = "Planète gazeuse composée d'un anneau visible au télescope."
+
+[sub_resource type="Resource" id="Resource_ucopl"]
+script = ExtResource("1_nisja")
+word = "ROCHE"
+hint = "Elément physique qui caractérise une planète tellurique."
+
+[sub_resource type="Resource" id="Resource_v608t"]
+script = ExtResource("1_nisja")
+word = "ROTATION"
+hint = "Mouvement d'un corps autour d'un point ou d'un axe."
+
+[sub_resource type="Resource" id="Resource_c44j1"]
+script = ExtResource("1_nisja")
+word = "SOLEIL"
+hint = "Etoile jaune de taille moyenne au centre de notre système."
+
+[sub_resource type="Resource" id="Resource_w606h"]
+script = ExtResource("1_nisja")
+word = "REVOLUTION"
+hint = "Trajectoire d'une planète autour d'une étoile, comme la Terre autour du Soleil."
+
+[sub_resource type="Resource" id="Resource_fdemx"]
+script = ExtResource("1_nisja")
+word = "MARS"
+hint = "Planète rouge dans laquelle il y a de fortes tempêtes de sables."
+
+[sub_resource type="Resource" id="Resource_q1s2r"]
+script = ExtResource("1_nisja")
+word = "PLANETE"
+hint = "Astre qui tourne autour d'une étoile, comme Jupiter."
+
+[sub_resource type="Resource" id="Resource_3xpoq"]
+script = ExtResource("1_nisja")
+word = "SATELLITE"
+hint = "Corps céleste gravitant autour d'une planète."
+
+[sub_resource type="Resource" id="Resource_bq28s"]
+script = ExtResource("1_nisja")
+word = "VENUS"
+hint = "Planète tellurique dont la température moyenne dépasse les 400°C."
+
+[resource]
+script = ExtResource("2_te4rs")
+clues = Array[ExtResource("1_nisja")]([SubResource("Resource_kldii"), SubResource("Resource_ucopl"), SubResource("Resource_v608t"), SubResource("Resource_c44j1"), SubResource("Resource_w606h"), SubResource("Resource_fdemx"), SubResource("Resource_q1s2r"), SubResource("Resource_3xpoq"), SubResource("Resource_bq28s")])

@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dyr3ydbfxykyr"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_p2fsc"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_kxily"]
+
+[sub_resource type="Resource" id="Resource_acmnm"]
+script = ExtResource("1_p2fsc")
+word = "SPECTATEUR"
+hint = "Se dit d'un ion qui n'est pas impliqué dans la réaction de précipitation."
+
+[sub_resource type="Resource" id="Resource_5cx4k"]
+script = ExtResource("1_p2fsc")
+word = "AQUEUSE"
+hint = "Se dit d'une solution contenant de l'eau."
+
+[sub_resource type="Resource" id="Resource_pgtcs"]
+script = ExtResource("1_p2fsc")
+word = "ACTEUR"
+hint = "Se dit d'un ion impliqué dans la réaction de précipitation."
+
+[sub_resource type="Resource" id="Resource_mb3bo"]
+script = ExtResource("1_p2fsc")
+word = "CONDUCTIBILITE"
+hint = "Propriété qu'ont les corps de transmettre la chaleur, l'électricité, autre terme que la conductivité."
+
+[sub_resource type="Resource" id="Resource_cw3vg"]
+script = ExtResource("1_p2fsc")
+word = "PRECIPITATION"
+hint = "Réaction chimique durant laquelle un produit très peu soluble est formé."
+
+[sub_resource type="Resource" id="Resource_tmodb"]
+script = ExtResource("1_p2fsc")
+word = "ELECTROLYTE"
+hint = "Substance chimique capable de transporter ou de conduire une charge électrique."
+
+[sub_resource type="Resource" id="Resource_xgw6b"]
+script = ExtResource("1_p2fsc")
+word = "ELECTROLYSE"
+hint = "Procédé par lequel on effectue la décomposition de l'eau en dihydrogène et dioxygène."
+
+[sub_resource type="Resource" id="Resource_yv57g"]
+script = ExtResource("1_p2fsc")
+word = "SOLUBILITE"
+hint = "Quantité maximale de soluté qu'on peut dissoudre dans un solvant."
+
+[sub_resource type="Resource" id="Resource_644p5"]
+script = ExtResource("1_p2fsc")
+word = "IONIQUE"
+hint = "Se dit d'une réaction entre les ions acteurs, type de liaison chimique forte."
+
+[sub_resource type="Resource" id="Resource_0d8le"]
+script = ExtResource("1_p2fsc")
+word = "TERNAIRE"
+hint = "Corps composé de trois éléments chimiques, comme le NaOH."
+
+[resource]
+script = ExtResource("2_kxily")
+clues = Array[ExtResource("1_p2fsc")]([SubResource("Resource_acmnm"), SubResource("Resource_5cx4k"), SubResource("Resource_pgtcs"), SubResource("Resource_mb3bo"), SubResource("Resource_cw3vg"), SubResource("Resource_tmodb"), SubResource("Resource_xgw6b"), SubResource("Resource_yv57g"), SubResource("Resource_644p5"), SubResource("Resource_0d8le")])

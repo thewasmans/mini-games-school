@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://db6jyw8q6difp"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_w6edp"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_rsl00"]
+
+[sub_resource type="Resource" id="Resource_0chc4"]
+script = ExtResource("1_w6edp")
+word = "CORTEX"
+hint = "Groupe de neurones qui effectuent la même fonction."
+
+[sub_resource type="Resource" id="Resource_4pqip"]
+script = ExtResource("1_w6edp")
+word = "VESALE"
+hint = "Il est le premier scientifique à dire que les nerfs sont reliés au cerveau."
+
+[sub_resource type="Resource" id="Resource_ek28t"]
+script = ExtResource("1_w6edp")
+word = "TUMEUR"
+hint = "Groupe de cellules anormales qui forment une masse."
+
+[sub_resource type="Resource" id="Resource_utknc"]
+script = ExtResource("1_w6edp")
+word = "CEREBROCENTRISME"
+hint = "Le cerveau est le centre de la conscience et des mécanismes mentaux."
+
+[sub_resource type="Resource" id="Resource_cvby7"]
+script = ExtResource("1_w6edp")
+word = "PENFIELD"
+hint = "Il propose l'homonculus, des cartes du cortex cérébral."
+
+[sub_resource type="Resource" id="Resource_xsr24"]
+script = ExtResource("1_w6edp")
+word = "HYPNOSE"
+hint = "Technique qui consiste à focaliser l'attention et à modifier l'état de la conscience."
+
+[sub_resource type="Resource" id="Resource_mns14"]
+script = ExtResource("1_w6edp")
+word = "CERVEAU"
+hint = "Terme commun qui correspond à l'encéphale."
+
+[sub_resource type="Resource" id="Resource_puh0i"]
+script = ExtResource("1_w6edp")
+word = "MOTEUR"
+hint = "Cortex qui est impliqué dans la motricité."
+
+[sub_resource type="Resource" id="Resource_hxc1h"]
+script = ExtResource("1_w6edp")
+word = "RX"
+hint = "Type de rayons utilisés lors d'un scanner."
+
+[sub_resource type="Resource" id="Resource_4bipq"]
+script = ExtResource("1_w6edp")
+word = "GALL"
+hint = "Fondateur de la phrénologie."
+
+[sub_resource type="Resource" id="Resource_1iuq8"]
+script = ExtResource("1_w6edp")
+word = "NEUROPLASTICITE"
+hint = "Capacité du système nerveux à se réorganiser."
+
+[sub_resource type="Resource" id="Resource_ed15r"]
+script = ExtResource("1_w6edp")
+word = "CARDIOCENTRISME"
+hint = "Le cœur est le centre de la conscience et des mécanismes mentaux."
+
+[sub_resource type="Resource" id="Resource_rddjq"]
+script = ExtResource("1_w6edp")
+word = "NEUROSCIENCES"
+hint = "Ensemble des études scientifiques qui concernent le système nerveux."
+
+[sub_resource type="Resource" id="Resource_y8s2u"]
+script = ExtResource("1_w6edp")
+word = "MACLEAN"
+hint = "Scientifique qui propose l'hypothèse du cerveau triunique."
+
+[sub_resource type="Resource" id="Resource_he5p2"]
+script = ExtResource("1_w6edp")
+word = "HE"
+hint = "Symbole chimique de l'hélium, gaz utilisé dans l'IRM."
+
+[resource]
+script = ExtResource("2_rsl00")
+clues = Array[ExtResource("1_w6edp")]([SubResource("Resource_0chc4"), SubResource("Resource_4pqip"), SubResource("Resource_ek28t"), SubResource("Resource_utknc"), SubResource("Resource_cvby7"), SubResource("Resource_xsr24"), SubResource("Resource_mns14"), SubResource("Resource_puh0i"), SubResource("Resource_hxc1h"), SubResource("Resource_4bipq"), SubResource("Resource_1iuq8"), SubResource("Resource_ed15r"), SubResource("Resource_rddjq"), SubResource("Resource_y8s2u"), SubResource("Resource_he5p2")])

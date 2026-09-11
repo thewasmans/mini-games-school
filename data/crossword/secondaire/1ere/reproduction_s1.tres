@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://b0fpvbj0afgko"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_o4ma0"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_00kjl"]
+
+[sub_resource type="Resource" id="Resource_ysryn"]
+script = ExtResource("1_o4ma0")
+word = "UTERUS"
+hint = "Partie de l'appareil reproducteur féminin dans lequel le bébé se développe."
+
+[sub_resource type="Resource" id="Resource_m4tv2"]
+script = ExtResource("1_o4ma0")
+word = "PENIS"
+hint = "Organe musculaire qui libère le sperme."
+
+[sub_resource type="Resource" id="Resource_8vjcs"]
+script = ExtResource("1_o4ma0")
+word = "ENDOMETRE"
+hint = "Paroi interne de l'utérus."
+
+[sub_resource type="Resource" id="Resource_kijvd"]
+script = ExtResource("1_o4ma0")
+word = "SPERMIDUCTE"
+hint = "Aussi appelé canal déférent, conduit dans lequel circulent les spermatozoïdes."
+
+[sub_resource type="Resource" id="Resource_vbom8"]
+script = ExtResource("1_o4ma0")
+word = "OVAIRE"
+hint = "Lieu de production des ovocytes."
+
+[sub_resource type="Resource" id="Resource_b4k42"]
+script = ExtResource("1_o4ma0")
+word = "PROSTATE"
+hint = "Glande masculine dont la fonction principale est de produire un liquide qui entre dans la composition du sperme."
+
+[sub_resource type="Resource" id="Resource_6bhxp"]
+script = ExtResource("1_o4ma0")
+word = "ANATOMIE"
+hint = "Science qui a pour objet l'étude de la structure des organes."
+
+[sub_resource type="Resource" id="Resource_dvx4b"]
+script = ExtResource("1_o4ma0")
+word = "CLITORIS"
+hint = "Organe érectile de l'appareil génital féminin situé à l'entrée de la vulve."
+
+[sub_resource type="Resource" id="Resource_fmvf1"]
+script = ExtResource("1_o4ma0")
+word = "VULVE"
+hint = "Ensemble des organes génitaux externes de la femme (clitoris, lèvres et vagin)."
+
+[sub_resource type="Resource" id="Resource_6vraa"]
+script = ExtResource("1_o4ma0")
+word = "SYSTEME"
+hint = "Ensemble d'organes assurant des fonctions biologiques spécifiques."
+
+[sub_resource type="Resource" id="Resource_l3ogc"]
+script = ExtResource("1_o4ma0")
+word = "MUCUS"
+hint = "Sécrétions visqueuses et translucides, comme la glaire cervicale/vaginale."
+
+[resource]
+script = ExtResource("2_00kjl")
+clues = Array[ExtResource("1_o4ma0")]([SubResource("Resource_ysryn"), SubResource("Resource_m4tv2"), SubResource("Resource_8vjcs"), SubResource("Resource_kijvd"), SubResource("Resource_vbom8"), SubResource("Resource_b4k42"), SubResource("Resource_6bhxp"), SubResource("Resource_dvx4b"), SubResource("Resource_fmvf1"), SubResource("Resource_6vraa"), SubResource("Resource_l3ogc")])

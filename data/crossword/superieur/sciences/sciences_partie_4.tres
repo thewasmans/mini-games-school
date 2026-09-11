@@ -1,0 +1,78 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://fhld4yqq5g7m"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_8pt1c"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_gsenm"]
+
+[sub_resource type="Resource" id="Resource_5pfn0"]
+script = ExtResource("1_8pt1c")
+word = "ECOLOGIE"
+hint = "Étude des interactions des êtres vivants entre eux et avec leur milieu."
+
+[sub_resource type="Resource" id="Resource_h1qpa"]
+script = ExtResource("1_8pt1c")
+word = "BIOSPHERE"
+hint = "Ensemble des zones de la planète où la vie est présente."
+
+[sub_resource type="Resource" id="Resource_6mj5w"]
+script = ExtResource("1_8pt1c")
+word = "ATMOSPHERE"
+hint = "Couche gazeuse entourant la Terre, nécessaire à la vie."
+
+[sub_resource type="Resource" id="Resource_nkcbm"]
+script = ExtResource("1_8pt1c")
+word = "FOSSILE"
+hint = "Trace ou reste d'un organisme conservé dans les sédiments."
+
+[sub_resource type="Resource" id="Resource_j6a3n"]
+script = ExtResource("1_8pt1c")
+word = "PALEONTOLOGIE"
+hint = "Science étudiant les êtres vivants ayant vécu dans le passé via les fossiles."
+
+[sub_resource type="Resource" id="Resource_qv8ri"]
+script = ExtResource("1_8pt1c")
+word = "ADAPTATION"
+hint = "Transformation évolutive permettant à une espèce de survivre dans son milieu."
+
+[sub_resource type="Resource" id="Resource_hlgpw"]
+script = ExtResource("1_8pt1c")
+word = "MUTATION"
+hint = "Modification spontanée de l'information génétique."
+
+[sub_resource type="Resource" id="Resource_n8m2v"]
+script = ExtResource("1_8pt1c")
+word = "COMPETITION"
+hint = "Rivalité entre individus pour l'accès aux ressources."
+
+[sub_resource type="Resource" id="Resource_bv50u"]
+script = ExtResource("1_8pt1c")
+word = "SYMBIOSE"
+hint = "Association biologique durable entre deux organismes."
+
+[sub_resource type="Resource" id="Resource_t8tb3"]
+script = ExtResource("1_8pt1c")
+word = "PARASITISME"
+hint = "Relation où un organisme tire profit aux dépens d'un autre."
+
+[sub_resource type="Resource" id="Resource_cone3"]
+script = ExtResource("1_8pt1c")
+word = "BIOTOPE"
+hint = "Lieu géographique présentant des conditions environnementales uniformes."
+
+[sub_resource type="Resource" id="Resource_hg4bi"]
+script = ExtResource("1_8pt1c")
+word = "BIOCENOSE"
+hint = "Ensemble des êtres vivants peuplant un biotope donné."
+
+[sub_resource type="Resource" id="Resource_1u0jf"]
+script = ExtResource("1_8pt1c")
+word = "ECOSYSTEME"
+hint = "Interaction entre le biotope et la biocénose."
+
+[sub_resource type="Resource" id="Resource_x0te7"]
+script = ExtResource("1_8pt1c")
+word = "TROPHIQUE"
+hint = "Relatif à l'alimentation."
+
+[resource]
+script = ExtResource("2_gsenm")
+clues = Array[ExtResource("1_8pt1c")]([SubResource("Resource_5pfn0"), SubResource("Resource_h1qpa"), SubResource("Resource_6mj5w"), SubResource("Resource_nkcbm"), SubResource("Resource_j6a3n"), SubResource("Resource_qv8ri"), SubResource("Resource_hlgpw"), SubResource("Resource_n8m2v"), SubResource("Resource_bv50u"), SubResource("Resource_t8tb3"), SubResource("Resource_cone3"), SubResource("Resource_hg4bi"), SubResource("Resource_1u0jf"), SubResource("Resource_x0te7")])

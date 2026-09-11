@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bw0xqwqw8o8sw"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_pk8cq"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_nemps"]
+
+[sub_resource type="Resource" id="Resource_5s53k"]
+script = ExtResource("1_pk8cq")
+word = "HERBIER"
+hint = "Collection scientifique de plantes séchées."
+
+[sub_resource type="Resource" id="Resource_0tjqo"]
+script = ExtResource("1_pk8cq")
+word = "CHAMPIGNON"
+hint = "Organisme hétérotrophe doté d'une paroi en chitine."
+
+[sub_resource type="Resource" id="Resource_587b6"]
+script = ExtResource("1_pk8cq")
+word = "CHITINE"
+hint = "Molécule rigide constituant la paroi cellulaire des champignons."
+
+[sub_resource type="Resource" id="Resource_rppsm"]
+script = ExtResource("1_pk8cq")
+word = "GLYCOGENE"
+hint = "Forme de stockage des glucides chez les champignons."
+
+[sub_resource type="Resource" id="Resource_gjnc2"]
+script = ExtResource("1_pk8cq")
+word = "MICROMYCETE"
+hint = "Champignon microscopique unicellulaire."
+
+[sub_resource type="Resource" id="Resource_irgqs"]
+script = ExtResource("1_pk8cq")
+word = "MACROMYCETE"
+hint = "Champignon supérieur visible à l'œil nu."
+
+[sub_resource type="Resource" id="Resource_dcbrd"]
+script = ExtResource("1_pk8cq")
+word = "MYCELIUM"
+hint = "Réseau souterrain dense constitué de filaments chez les champignons."
+
+[sub_resource type="Resource" id="Resource_4sopk"]
+script = ExtResource("1_pk8cq")
+word = "HYPHE"
+hint = "Filament microscopique constituant la structure des champignons."
+
+[sub_resource type="Resource" id="Resource_j5uxt"]
+script = ExtResource("1_pk8cq")
+word = "CHAPEAU"
+hint = "Partie supérieure du champignon abritant les spores."
+
+[sub_resource type="Resource" id="Resource_xcdf8"]
+script = ExtResource("1_pk8cq")
+word = "PEDONCULE"
+hint = "Tige ou pied soutenant le chapeau du champignon."
+
+[sub_resource type="Resource" id="Resource_k8bjk"]
+script = ExtResource("1_pk8cq")
+word = "ANNEAU"
+hint = "Collerette résiduelle entourant le pied de certains champignons."
+
+[resource]
+script = ExtResource("2_nemps")
+clues = Array[ExtResource("1_pk8cq")]([SubResource("Resource_5s53k"), SubResource("Resource_0tjqo"), SubResource("Resource_587b6"), SubResource("Resource_rppsm"), SubResource("Resource_gjnc2"), SubResource("Resource_irgqs"), SubResource("Resource_dcbrd"), SubResource("Resource_4sopk"), SubResource("Resource_j5uxt"), SubResource("Resource_xcdf8"), SubResource("Resource_k8bjk")])

@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dvc2ooqvo6tki"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_xxbl2"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_cq72j"]
+
+[sub_resource type="Resource" id="Resource_imnxh"]
+script = ExtResource("1_xxbl2")
+word = "PETROLE"
+hint = "Ressource naturelle provenant de la décomposition d'organismes marins et qui est distillée pour obtenir du gaz."
+
+[sub_resource type="Resource" id="Resource_pfb1u"]
+script = ExtResource("1_xxbl2")
+word = "THERMIQUE"
+hint = "Se dit d'une énergie liée à la température, correspond à la chaleur."
+
+[sub_resource type="Resource" id="Resource_la1s2"]
+script = ExtResource("1_xxbl2")
+word = "BIODEGRADABILITE"
+hint = "Qualité d'une substance qui se décompose par les microbes."
+
+[sub_resource type="Resource" id="Resource_ru6iv"]
+script = ExtResource("1_xxbl2")
+word = "MACROSCOPIQUE"
+hint = "Terme utilisé pour caractériser un élément que l'on peut voir à l'œil."
+
+[sub_resource type="Resource" id="Resource_hv2ay"]
+script = ExtResource("1_xxbl2")
+word = "MINERALE"
+hint = "Matière non vivante, comme les roches."
+
+[sub_resource type="Resource" id="Resource_bg8vo"]
+script = ExtResource("1_xxbl2")
+word = "ORGANIQUE"
+hint = "Matière vivante, comme les animaux."
+
+[sub_resource type="Resource" id="Resource_tntac"]
+script = ExtResource("1_xxbl2")
+word = "SOL"
+hint = "Structure formée de roches minérales et organiques sur laquelle nous marchons."
+
+[sub_resource type="Resource" id="Resource_0rkxt"]
+script = ExtResource("1_xxbl2")
+word = "CONDUCTIVITE"
+hint = "Capacité d'un matériau à laisser passer le courant ou la chaleur."
+
+[sub_resource type="Resource" id="Resource_02lsm"]
+script = ExtResource("1_xxbl2")
+word = "MALLEABILITE"
+hint = "Propriété d'un matériau à être déformé selon la température ou la pression."
+
+[sub_resource type="Resource" id="Resource_snldu"]
+script = ExtResource("1_xxbl2")
+word = "TRANSFORMATION"
+hint = "Opération durant laquelle il y a du changement physique ou chimique."
+
+[sub_resource type="Resource" id="Resource_ofkdb"]
+script = ExtResource("1_xxbl2")
+word = "ENERGIE"
+hint = "Capacité à modifier un état ou à produire un travail entraînant un mouvement."
+
+[sub_resource type="Resource" id="Resource_5kvbx"]
+script = ExtResource("1_xxbl2")
+word = "ECLAT"
+hint = "Couleur reflétée par le métal, luminosité d'une étoile."
+
+[resource]
+script = ExtResource("2_cq72j")
+clues = Array[ExtResource("1_xxbl2")]([SubResource("Resource_imnxh"), SubResource("Resource_pfb1u"), SubResource("Resource_la1s2"), SubResource("Resource_ru6iv"), SubResource("Resource_hv2ay"), SubResource("Resource_bg8vo"), SubResource("Resource_tntac"), SubResource("Resource_0rkxt"), SubResource("Resource_02lsm"), SubResource("Resource_snldu"), SubResource("Resource_ofkdb"), SubResource("Resource_5kvbx")])

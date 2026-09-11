@@ -3,55 +3,78 @@
 [ext_resource type="Script" uid="uid://cp2inhinnjjop" path="res://scripts/data/game_data.gd" id="1_urpql"]
 [ext_resource type="Script" uid="uid://5t2j51l6wd4l" path="res://scripts/mini_games/mini_game_data.gd" id="1_vllua"]
 [ext_resource type="Script" uid="uid://br5q0sg4b052d" path="res://scripts/data/level_data.gd" id="2_r34r7"]
-[ext_resource type="Resource" uid="uid://bpcudk37ondbf" path="res://data/crosswords_example_data.tres" id="3_7fe16"]
-[ext_resource type="Resource" uid="uid://bx1or1c3ofssb" path="res://data/quizz_example_data.tres" id="3_k2o1c"]
-[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="5_yqv0c"]
-[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="6_lhs1r"]
+[ext_resource type="Resource" uid="uid://caolb5jc8hf10" path="res://data/crossword/primaire/p1/alimentation_p1.tres" id="5_vy2p8"]
+[ext_resource type="Resource" uid="uid://bob8xnluncllm" path="res://data/crossword/primaire/p1/alimentation_p1_2.tres" id="6_1diyi"]
+[ext_resource type="Resource" uid="uid://bc5sixuv4d8c3" path="res://data/crossword/primaire/p1/animaux_p1.tres" id="7_cog1c"]
 [ext_resource type="Script" uid="uid://dqstlvldata01" path="res://scripts/data/study_level_data.gd" id="7_stdylvl"]
-
-[sub_resource type="Resource" id="Resource_85g3d"]
-script = ExtResource("5_yqv0c")
-text = "Mdr les foughères en l'air"
-hint = "Okay boomer"
-metadata/_custom_type_script = "uid://dcacf80pyq888"
+[ext_resource type="Resource" uid="uid://x4erjskdjxmv" path="res://data/crossword/primaire/p1/animaux_p1_2.tres" id="8_d15be"]
+[ext_resource type="Resource" uid="uid://dyyhvtotswgsy" path="res://data/crossword/primaire/p1/objets_p1.tres" id="9_c7j1l"]
+[ext_resource type="Resource" uid="uid://csubdswbvvjcp" path="res://data/crossword/primaire/p1/objets_p1_2.tres" id="10_ux8ld"]
+[ext_resource type="Resource" uid="uid://crir1o0khq41j" path="res://data/crossword/primaire/p1/vivant_p1.tres" id="11_l84in"]
+[ext_resource type="Resource" uid="uid://42wxwuuhtr06" path="res://data/crossword/primaire/p1/vivant_p1_2.tres" id="12_iwpjk"]
 
 [sub_resource type="Resource" id="Resource_tipki"]
-script = ExtResource("6_lhs1r")
-phrases = Array[ExtResource("5_yqv0c")]([SubResource("Resource_85g3d")])
-metadata/_custom_type_script = "uid://bd1ufgnv22yot"
-
-[sub_resource type="Resource" id="Resource_pftn3"]
 script = ExtResource("2_r34r7")
-mini_games = Array[ExtResource("1_vllua")]([SubResource("Resource_tipki")])
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("5_vy2p8")])
 metadata/_custom_type_script = "uid://br5q0sg4b052d"
 
-[sub_resource type="Resource" id="Resource_yqv0c"]
+[sub_resource type="Resource" id="Resource_ny3j2"]
 script = ExtResource("2_r34r7")
-mini_games = Array[ExtResource("1_vllua")]([ExtResource("3_k2o1c")])
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("6_1diyi")])
 metadata/_custom_type_script = "uid://br5q0sg4b052d"
 
-[sub_resource type="Resource" id="Resource_k2o1c"]
+[sub_resource type="Resource" id="Resource_o6xl0"]
 script = ExtResource("2_r34r7")
-mini_games = Array[ExtResource("1_vllua")]([ExtResource("3_7fe16")])
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("7_cog1c")])
 metadata/_custom_type_script = "uid://br5q0sg4b052d"
 
-[sub_resource type="Resource" id="StudyLevel_primaire"]
+[sub_resource type="Resource" id="Resource_vy2p8"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("8_d15be")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Resource_choun"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("9_c7j1l")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Resource_ya4ey"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("10_ux8ld")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Resource_eb6dy"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("11_l84in")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Resource_trceg"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("12_iwpjk")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Resource_1diyi"]
 script = ExtResource("7_stdylvl")
 name = "Primaire"
-levels = Array[ExtResource("2_r34r7")]([SubResource("Resource_pftn3"), SubResource("Resource_yqv0c"), SubResource("Resource_k2o1c")])
+levels = Array[ExtResource("2_r34r7")]([SubResource("Resource_tipki"), SubResource("Resource_ny3j2"), SubResource("Resource_o6xl0"), SubResource("Resource_vy2p8"), SubResource("Resource_choun"), SubResource("Resource_ya4ey"), SubResource("Resource_eb6dy"), SubResource("Resource_trceg")])
 metadata/_custom_type_script = "uid://dqstlvldata01"
 
-[sub_resource type="Resource" id="StudyLevel_secondaire"]
+[sub_resource type="Resource" id="Resource_c7j1l"]
+script = ExtResource("2_r34r7")
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Resource_cog1c"]
 script = ExtResource("7_stdylvl")
 name = "Secondaire"
+levels = Array[ExtResource("2_r34r7")]([SubResource("Resource_c7j1l")])
 metadata/_custom_type_script = "uid://dqstlvldata01"
 
-[sub_resource type="Resource" id="StudyLevel_superieur"]
+[sub_resource type="Resource" id="Resource_d15be"]
 script = ExtResource("7_stdylvl")
 name = "Supérieur"
 metadata/_custom_type_script = "uid://dqstlvldata01"
 
 [resource]
 script = ExtResource("1_urpql")
-study_levels = Array[ExtResource("7_stdylvl")]([SubResource("StudyLevel_primaire"), SubResource("StudyLevel_secondaire"), SubResource("StudyLevel_superieur")])
+study_levels = Array[ExtResource("7_stdylvl")]([SubResource("Resource_1diyi"), SubResource("Resource_cog1c"), SubResource("Resource_d15be")])
 metadata/_custom_type_script = "uid://cp2inhinnjjop"

@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cmmeeyn5t44h3"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_gprio"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_40hkh"]
+
+[sub_resource type="Resource" id="Resource_oyd2t"]
+script = ExtResource("1_gprio")
+word = "IRM"
+hint = "Technique médicale qui repose sur les propriétés magnétiques de l'eau."
+
+[sub_resource type="Resource" id="Resource_gdso1"]
+script = ExtResource("1_gprio")
+word = "PARKINSON"
+hint = "Maladie neurodégénérative qui se caractérise par une perturbation de la motricité."
+
+[sub_resource type="Resource" id="Resource_wi8yv"]
+script = ExtResource("1_gprio")
+word = "LOBOTOMIE"
+hint = "Technique qui consiste à sectionner des fibres nerveuses dans le cerveau."
+
+[sub_resource type="Resource" id="Resource_r042h"]
+script = ExtResource("1_gprio")
+word = "DIFFUSION"
+hint = "Technique d'imagerie développée par Denis LeBihan."
+
+[sub_resource type="Resource" id="Resource_v4aub"]
+script = ExtResource("1_gprio")
+word = "ELECTRIQUE"
+hint = "Type d'activité produite par les neurones."
+
+[sub_resource type="Resource" id="Resource_3w82j"]
+script = ExtResource("1_gprio")
+word = "ELECTRODE"
+hint = "Dispositif permettant d'étudier l'activité électrique que l'on place sur le corps."
+
+[sub_resource type="Resource" id="Resource_fa66m"]
+script = ExtResource("1_gprio")
+word = "SCINTIGRAPHIE"
+hint = "Technique d'imagerie permettant d'étudier le fonctionnement d'un organe."
+
+[sub_resource type="Resource" id="Resource_0701u"]
+script = ExtResource("1_gprio")
+word = "CHIRURGIE"
+hint = "Intervention médicale qui consiste à ouvrir une partie du corps."
+
+[sub_resource type="Resource" id="Resource_mokni"]
+script = ExtResource("1_gprio")
+word = "TEP"
+hint = "Technique d'imagerie qui repose sur des rayonnements émis par un traceur radioactif."
+
+[sub_resource type="Resource" id="Resource_0u415"]
+script = ExtResource("1_gprio")
+word = "ALZHEIMER"
+hint = "Maladie neurodégénérative qui se caractérise par une perte de mémoire."
+
+[sub_resource type="Resource" id="Resource_a3ahe"]
+script = ExtResource("1_gprio")
+word = "NEURONE"
+hint = "Cellule nerveuse impliquée dans diverses fonctions comme le raisonnement."
+
+[sub_resource type="Resource" id="Resource_35ao8"]
+script = ExtResource("1_gprio")
+word = "SMT"
+hint = "Technique qui consiste à créer un champ magnétique autour du cerveau."
+
+[sub_resource type="Resource" id="Resource_bmgvw"]
+script = ExtResource("1_gprio")
+word = "EMOTION"
+hint = "Ressenti psychologique et biologique subjectif d'une personne."
+
+[sub_resource type="Resource" id="Resource_5t8nk"]
+script = ExtResource("1_gprio")
+word = "GLIE"
+hint = "Substance qui entoure les neurones."
+
+[sub_resource type="Resource" id="Resource_fxbbl"]
+script = ExtResource("1_gprio")
+word = "PARIETAL"
+hint = "Lobe du cerveau qui intervient dans la douleur."
+
+[resource]
+script = ExtResource("2_40hkh")
+clues = Array[ExtResource("1_gprio")]([SubResource("Resource_oyd2t"), SubResource("Resource_gdso1"), SubResource("Resource_wi8yv"), SubResource("Resource_r042h"), SubResource("Resource_v4aub"), SubResource("Resource_3w82j"), SubResource("Resource_fa66m"), SubResource("Resource_0701u"), SubResource("Resource_mokni"), SubResource("Resource_0u415"), SubResource("Resource_a3ahe"), SubResource("Resource_35ao8"), SubResource("Resource_bmgvw"), SubResource("Resource_5t8nk"), SubResource("Resource_fxbbl")])

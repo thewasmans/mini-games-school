@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cjddas87pok2r"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_idbuy"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_iiepi"]
+
+[sub_resource type="Resource" id="Resource_16ta8"]
+script = ExtResource("1_idbuy")
+word = "MULTIMETRE"
+hint = "Appareil électrique permettant d'effectuer des mesures d'intensités, de tensions ou de résistances."
+
+[sub_resource type="Resource" id="Resource_5j5u3"]
+script = ExtResource("1_idbuy")
+word = "REPULSION"
+hint = "Force électrique qui pousse deux objets à s'éloigner l'un de l'autre car les charges sont de même nature."
+
+[sub_resource type="Resource" id="Resource_xrup2"]
+script = ExtResource("1_idbuy")
+word = "POTENTIEL"
+hint = "Grandeur physique qui mesure l'état électrique d'un point précis à un moment donné, son unité est le Volt (V)."
+
+[sub_resource type="Resource" id="Resource_ra6sc"]
+script = ExtResource("1_idbuy")
+word = "LUMINEUSE"
+hint = "Forme d'énergie qui permet d'éclairer et qui est produite à partir de l'électricité."
+
+[sub_resource type="Resource" id="Resource_50myj"]
+script = ExtResource("1_idbuy")
+word = "FROTTEMENT"
+hint = "Forme d'électrisation qui permet de charger deux objets neutres et de nature différente en les frottant ensemble."
+
+[sub_resource type="Resource" id="Resource_yyvja"]
+script = ExtResource("1_idbuy")
+word = "ATTRACTION"
+hint = "Force électrique qui pousse deux objets à se rapprocher car la nature des charges s'opposent."
+
+[sub_resource type="Resource" id="Resource_lgjeu"]
+script = ExtResource("1_idbuy")
+word = "PUISSANCE"
+hint = "Taux ou quantité d'énergie transférée dans le temps, l'unité est le kW."
+
+[sub_resource type="Resource" id="Resource_4or6k"]
+script = ExtResource("1_idbuy")
+word = "DISJONCTEUR"
+hint = "Dispositif qui permet de couper le courant en cas de court-circuit ou de surintensité, il peut se réarmer à la différence du fusible."
+
+[resource]
+script = ExtResource("2_iiepi")
+clues = Array[ExtResource("1_idbuy")]([SubResource("Resource_16ta8"), SubResource("Resource_5j5u3"), SubResource("Resource_xrup2"), SubResource("Resource_ra6sc"), SubResource("Resource_50myj"), SubResource("Resource_yyvja"), SubResource("Resource_lgjeu"), SubResource("Resource_4or6k")])

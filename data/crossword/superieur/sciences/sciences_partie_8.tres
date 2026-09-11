@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dpy7mckrs1mbd"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_cohvv"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_sp1i2"]
+
+[sub_resource type="Resource" id="Resource_pbv0p"]
+script = ExtResource("1_cohvv")
+word = "STOMATE"
+hint = "Petite ouverture sur les feuilles permettant les échanges gazeux."
+
+[sub_resource type="Resource" id="Resource_3cke4"]
+script = ExtResource("1_cohvv")
+word = "XYLEME"
+hint = "Tissu conducteur transportant la sève brute."
+
+[sub_resource type="Resource" id="Resource_y4ri8"]
+script = ExtResource("1_cohvv")
+word = "PHLOEME"
+hint = "Tissu conducteur transportant la sève élaborée."
+
+[sub_resource type="Resource" id="Resource_q2mqx"]
+script = ExtResource("1_cohvv")
+word = "CRYPTOGAME"
+hint = "Nom donné aux plantes sans fleurs."
+
+[sub_resource type="Resource" id="Resource_5kloq"]
+script = ExtResource("1_cohvv")
+word = "PHANEROGAME"
+hint = "Nom donné aux plantes à fleurs."
+
+[sub_resource type="Resource" id="Resource_g3e7g"]
+script = ExtResource("1_cohvv")
+word = "LIMBE"
+hint = "Surface principale de la feuille."
+
+[sub_resource type="Resource" id="Resource_2rrwk"]
+script = ExtResource("1_cohvv")
+word = "PETIOLE"
+hint = "Portion par laquelle la feuille s'accroche à la tige."
+
+[sub_resource type="Resource" id="Resource_akmyg"]
+script = ExtResource("1_cohvv")
+word = "AUTOTROPHE"
+hint = "Organisme capable de produire sa propre matière organique."
+
+[sub_resource type="Resource" id="Resource_dsbll"]
+script = ExtResource("1_cohvv")
+word = "EVAPOTRANSPIRATION"
+hint = "Mécanisme d'élimination d'eau par la plante."
+
+[sub_resource type="Resource" id="Resource_tw5dk"]
+script = ExtResource("1_cohvv")
+word = "TOUNDRA"
+hint = "Biome très froid caractérisé par un sol gelé en profondeur."
+
+[sub_resource type="Resource" id="Resource_m73pn"]
+script = ExtResource("1_cohvv")
+word = "TAIGA"
+hint = "Vaste forêt de conifères propre aux régions froides."
+
+[sub_resource type="Resource" id="Resource_gf48w"]
+script = ExtResource("1_cohvv")
+word = "SAVANE"
+hint = "Biome caractérisé par des herbes hautes et de grands mammifères."
+
+[sub_resource type="Resource" id="Resource_dn8tc"]
+script = ExtResource("1_cohvv")
+word = "STEPPE"
+hint = "Biome caractérisé par une végétation herbacée basse."
+
+[resource]
+script = ExtResource("2_sp1i2")
+clues = Array[ExtResource("1_cohvv")]([SubResource("Resource_pbv0p"), SubResource("Resource_3cke4"), SubResource("Resource_y4ri8"), SubResource("Resource_q2mqx"), SubResource("Resource_5kloq"), SubResource("Resource_g3e7g"), SubResource("Resource_2rrwk"), SubResource("Resource_akmyg"), SubResource("Resource_dsbll"), SubResource("Resource_tw5dk"), SubResource("Resource_m73pn"), SubResource("Resource_gf48w"), SubResource("Resource_dn8tc")])

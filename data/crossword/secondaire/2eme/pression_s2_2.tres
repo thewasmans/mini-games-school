@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cag4xfju7b8vj"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_51mvo"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_tkvuj"]
+
+[sub_resource type="Resource" id="Resource_g7xfq"]
+script = ExtResource("1_51mvo")
+word = "SURFACE"
+hint = "Partie extérieure d'un solide, celle qui le limite."
+
+[sub_resource type="Resource" id="Resource_l33yw"]
+script = ExtResource("1_51mvo")
+word = "CLIMAT"
+hint = "Conditions météorologiques moyennes (température, précipitations, vent…) dans un endroit donné."
+
+[sub_resource type="Resource" id="Resource_xoup2"]
+script = ExtResource("1_51mvo")
+word = "AIR"
+hint = "Mélange de gaz contenant principalement du diazote."
+
+[sub_resource type="Resource" id="Resource_k3w5d"]
+script = ExtResource("1_51mvo")
+word = "METEOROLOGIE"
+hint = "Science qui a pour objet l'étude des phénomènes atmosphériques tels que les nuages, les précipitations ou le vent."
+
+[sub_resource type="Resource" id="Resource_lppp3"]
+script = ExtResource("1_51mvo")
+word = "AIRE"
+hint = "Mesure de la surface, de l'intérieur de cette surface."
+
+[sub_resource type="Resource" id="Resource_hjxge"]
+script = ExtResource("1_51mvo")
+word = "ANTICYCLONE"
+hint = "Zone de haute pression atmosphérique souvent associée à un temps sec, sans nuage et donc ensoleillé."
+
+[sub_resource type="Resource" id="Resource_r8yow"]
+script = ExtResource("1_51mvo")
+word = "ATMOSPHERE"
+hint = "Ensemble de couches gazeuses qui enveloppent la Terre."
+
+[sub_resource type="Resource" id="Resource_n8mgh"]
+script = ExtResource("1_51mvo")
+word = "BAROMETRE"
+hint = "Outil de mesure de la pression."
+
+[sub_resource type="Resource" id="Resource_r77dd"]
+script = ExtResource("1_51mvo")
+word = "DEPRESSION"
+hint = "Zone de basse pression atmosphérique souvent associée à un mauvais temps."
+
+[sub_resource type="Resource" id="Resource_6vhrf"]
+script = ExtResource("1_51mvo")
+word = "PRESSION"
+hint = "Force qui s'exerce sur une surface donnée dont l'unité est le bar ou le pascal."
+
+[sub_resource type="Resource" id="Resource_o5w10"]
+script = ExtResource("1_51mvo")
+word = "INTENSITE"
+hint = "Caractéristique de la force autre que le sens, la direction ou le point d'application."
+
+[sub_resource type="Resource" id="Resource_qays7"]
+script = ExtResource("1_51mvo")
+word = "FORCE"
+hint = "Action mécanique exercée sur un objet entrainant son déplacement."
+
+[resource]
+script = ExtResource("2_tkvuj")
+clues = Array[ExtResource("1_51mvo")]([SubResource("Resource_g7xfq"), SubResource("Resource_l33yw"), SubResource("Resource_xoup2"), SubResource("Resource_k3w5d"), SubResource("Resource_lppp3"), SubResource("Resource_hjxge"), SubResource("Resource_r8yow"), SubResource("Resource_n8mgh"), SubResource("Resource_r77dd"), SubResource("Resource_6vhrf"), SubResource("Resource_o5w10"), SubResource("Resource_qays7")])

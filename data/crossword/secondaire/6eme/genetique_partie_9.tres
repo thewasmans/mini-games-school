@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cow16v6ne1x0y"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_82844"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_7kweq"]
+
+[sub_resource type="Resource" id="Resource_l006l"]
+script = ExtResource("1_82844")
+word = "REL"
+hint = "Compartiment lisse de la cellule où se déroule la fabrication des protéines et des lipides."
+
+[sub_resource type="Resource" id="Resource_a2huc"]
+script = ExtResource("1_82844")
+word = "ANEMIE"
+hint = "Baisse anormale du taux d'hémoglobine dans le sang."
+
+[sub_resource type="Resource" id="Resource_6qins"]
+script = ExtResource("1_82844")
+word = "BIOTECHNOLOGIE"
+hint = "Domaine qui recouvre l'ensemble des technologies et applications liées à la modification du vivant."
+
+[sub_resource type="Resource" id="Resource_7p6c7"]
+script = ExtResource("1_82844")
+word = "POLYGENISME"
+hint = "Lorsqu’un caractère subit l’influence de plusieurs gènes."
+
+[sub_resource type="Resource" id="Resource_c5c0u"]
+script = ExtResource("1_82844")
+word = "EPISTASIE"
+hint = "Interaction existant entre deux ou plusieurs gènes."
+
+[sub_resource type="Resource" id="Resource_8ok0c"]
+script = ExtResource("1_82844")
+word = "CERN"
+hint = "Conseil européen pour la recherche nucléaire."
+
+[sub_resource type="Resource" id="Resource_drbff"]
+script = ExtResource("1_82844")
+word = "CUVIER"
+hint = "Fondateur de la paléontologie."
+
+[sub_resource type="Resource" id="Resource_c2m0f"]
+script = ExtResource("1_82844")
+word = "KLINEFELTER"
+hint = "Syndrome chromosomique spécifique des hommes qui provoque la stérilité."
+
+[sub_resource type="Resource" id="Resource_g7yal"]
+script = ExtResource("1_82844")
+word = "METASTASE"
+hint = "Ensemble de cellules cancéreuses qui, issues d’un organe, migrent vers un autre organe."
+
+[sub_resource type="Resource" id="Resource_ehahr"]
+script = ExtResource("1_82844")
+word = "CRISE"
+hint = "Extinction de masse qui affecte des familles d'espèces entières."
+
+[sub_resource type="Resource" id="Resource_1724o"]
+script = ExtResource("1_82844")
+word = "MUCOVISCIDOSE"
+hint = "Maladie récessive qui se caractérise par des problèmes pulmonaires."
+
+[sub_resource type="Resource" id="Resource_06ya3"]
+script = ExtResource("1_82844")
+word = "PASTEUR"
+hint = "Scientifique qui a démontré que la vie ne pouvait venir spontanément de la matière inanimée."
+
+[sub_resource type="Resource" id="Resource_bpqsa"]
+script = ExtResource("1_82844")
+word = "POLLUTION"
+hint = "Action de contaminer l'environnement."
+
+[sub_resource type="Resource" id="Resource_ff8rx"]
+script = ExtResource("1_82844")
+word = "THERAPIE"
+hint = "Traitement curatif qui vise à aider le patient au quotidien."
+
+[sub_resource type="Resource" id="Resource_ocdj7"]
+script = ExtResource("1_82844")
+word = "BIODIVERSITE"
+hint = "Terme qui englobe la diversité biologique des espèces dans un environnement."
+
+[resource]
+script = ExtResource("2_7kweq")
+clues = Array[ExtResource("1_82844")]([SubResource("Resource_l006l"), SubResource("Resource_a2huc"), SubResource("Resource_6qins"), SubResource("Resource_7p6c7"), SubResource("Resource_c5c0u"), SubResource("Resource_8ok0c"), SubResource("Resource_drbff"), SubResource("Resource_c2m0f"), SubResource("Resource_g7yal"), SubResource("Resource_ehahr"), SubResource("Resource_1724o"), SubResource("Resource_06ya3"), SubResource("Resource_bpqsa"), SubResource("Resource_ff8rx"), SubResource("Resource_ocdj7")])

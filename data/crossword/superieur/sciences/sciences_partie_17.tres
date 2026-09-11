@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://ccocaoq8s1qux"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_o7n6x"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_d44mi"]
+
+[sub_resource type="Resource" id="Resource_rymh6"]
+script = ExtResource("1_o7n6x")
+word = "CORNEE"
+hint = "Membrane transparente et bombée située à l'avant de l'œil."
+
+[sub_resource type="Resource" id="Resource_p46j3"]
+script = ExtResource("1_o7n6x")
+word = "IRIS"
+hint = "Partie colorée de l'œil."
+
+[sub_resource type="Resource" id="Resource_gdl00"]
+script = ExtResource("1_o7n6x")
+word = "PUPILLE"
+hint = "Ouverture centrale de l'iris par où la lumière pénètre dans l'œil."
+
+[sub_resource type="Resource" id="Resource_t2fpv"]
+script = ExtResource("1_o7n6x")
+word = "CRISTALLIN"
+hint = "Lentille élastique permettant l'accommodation de l'œil."
+
+[sub_resource type="Resource" id="Resource_ouhc0"]
+script = ExtResource("1_o7n6x")
+word = "RETINE"
+hint = "Membrane interne de l'œil contenant les photorécepteurs."
+
+[sub_resource type="Resource" id="Resource_0mqvs"]
+script = ExtResource("1_o7n6x")
+word = "PAPILLE"
+hint = "Structure de la langue contenant les récepteurs sensoriels du goût."
+
+[sub_resource type="Resource" id="Resource_2fxgp"]
+script = ExtResource("1_o7n6x")
+word = "ARTERE"
+hint = "Vaisseau sanguin transportant le sang du cœur vers les organes."
+
+[sub_resource type="Resource" id="Resource_dge84"]
+script = ExtResource("1_o7n6x")
+word = "VEINE"
+hint = "Vaisseau sanguin ramenant le sang des organes vers le cœur."
+
+[sub_resource type="Resource" id="Resource_80i58"]
+script = ExtResource("1_o7n6x")
+word = "CAPILLAIRE"
+hint = "Vaisseau sanguin microscopique où s'effectuent les échanges de gaz et de nutriments avec les tissus."
+
+[sub_resource type="Resource" id="Resource_3fk0h"]
+script = ExtResource("1_o7n6x")
+word = "PLASMA"
+hint = "Partie liquide du sang composée d'eau et de protéines."
+
+[resource]
+script = ExtResource("2_d44mi")
+clues = Array[ExtResource("1_o7n6x")]([SubResource("Resource_rymh6"), SubResource("Resource_p46j3"), SubResource("Resource_gdl00"), SubResource("Resource_t2fpv"), SubResource("Resource_ouhc0"), SubResource("Resource_0mqvs"), SubResource("Resource_2fxgp"), SubResource("Resource_dge84"), SubResource("Resource_80i58"), SubResource("Resource_3fk0h")])

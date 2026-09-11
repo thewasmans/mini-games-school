@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cqns3twgel2fr"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_4ogu3"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_db7va"]
+
+[sub_resource type="Resource" id="Resource_wegmc"]
+script = ExtResource("1_4ogu3")
+word = "VALENCE"
+hint = "Capacité de liaison d'un atome."
+
+[sub_resource type="Resource" id="Resource_yvpj6"]
+script = ExtResource("1_4ogu3")
+word = "FAMILLE"
+hint = "Groupe d'éléments qui ont des propriétés chimiques similaires, ils sont dans la même colonne."
+
+[sub_resource type="Resource" id="Resource_h2j41"]
+script = ExtResource("1_4ogu3")
+word = "SYMBOLE"
+hint = "Abréviation ou courte représentation du nom d'un élément chimique."
+
+[sub_resource type="Resource" id="Resource_m50yf"]
+script = ExtResource("1_4ogu3")
+word = "ION"
+hint = "Elément chimique chargé positivement ou négativement."
+
+[sub_resource type="Resource" id="Resource_r42e4"]
+script = ExtResource("1_4ogu3")
+word = "RELATIVE"
+hint = "Masse atomique qui est la moyenne pondérée des masses des isotopes d'un élément."
+
+[sub_resource type="Resource" id="Resource_qaeul"]
+script = ExtResource("1_4ogu3")
+word = "RUTHERFORD"
+hint = "Physicien qui découvre une nouvelle particule subatomique, le proton."
+
+[sub_resource type="Resource" id="Resource_twfdj"]
+script = ExtResource("1_4ogu3")
+word = "NEUTRON"
+hint = "Particule élémentaire du noyau atomique, de charge électrique neutre."
+
+[sub_resource type="Resource" id="Resource_jkmwl"]
+script = ExtResource("1_4ogu3")
+word = "ELECTRON"
+hint = "Particule élémentaire de charge électrique négative qui gravite autour du noyau de l'atome."
+
+[sub_resource type="Resource" id="Resource_l622b"]
+script = ExtResource("1_4ogu3")
+word = "PERIODE"
+hint = "Groupe d'éléments de la ligne horizontale du tableau périodique, ils ont le même nombre de couches électroniques."
+
+[resource]
+script = ExtResource("2_db7va")
+clues = Array[ExtResource("1_4ogu3")]([SubResource("Resource_wegmc"), SubResource("Resource_yvpj6"), SubResource("Resource_h2j41"), SubResource("Resource_m50yf"), SubResource("Resource_r42e4"), SubResource("Resource_qaeul"), SubResource("Resource_twfdj"), SubResource("Resource_jkmwl"), SubResource("Resource_l622b")])

@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://x4erjskdjxmv"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_6qwmx"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_1e7xc"]
+
+[sub_resource type="Resource" id="Resource_1f3qn"]
+script = ExtResource("1_6qwmx")
+word = "MARE"
+hint = "Milieu de vie naturel et aquatique aménagé par l'humain afin d'y voir des poissons et des grenouilles."
+
+[sub_resource type="Resource" id="Resource_tthj6"]
+script = ExtResource("1_6qwmx")
+word = "POULE"
+hint = "Oiseau domestiqué pour obtenir des œufs que l'on peut manger en omelette ou sur le plat."
+
+[sub_resource type="Resource" id="Resource_7y7mn"]
+script = ExtResource("1_6qwmx")
+word = "TERRE"
+hint = "Elément solide qui permet à une plante de s'enraciner."
+
+[sub_resource type="Resource" id="Resource_o4db8"]
+script = ExtResource("1_6qwmx")
+word = "FORET"
+hint = "Milieu de vie naturel et terrestre dans nos régions où vivent des plantes, des animaux et des champignons."
+
+[sub_resource type="Resource" id="Resource_4erea"]
+script = ExtResource("1_6qwmx")
+word = "RESPIRER"
+hint = "Action qui permet aux animaux de survivre en utilisant l'oxygène dans l'air."
+
+[sub_resource type="Resource" id="Resource_eah0f"]
+script = ExtResource("1_6qwmx")
+word = "RIVIERE"
+hint = "Milieu de vie aquatique que l'on retrouve dans une forêt ou dans un bois et qui se caractérise par un mouvement de l'eau."
+
+[sub_resource type="Resource" id="Resource_ohw2l"]
+script = ExtResource("1_6qwmx")
+word = "VIVANT"
+hint = "Se dit d'un être qui peut grandir, naitre, mourir et manger."
+
+[sub_resource type="Resource" id="Resource_plxeq"]
+script = ExtResource("1_6qwmx")
+word = "MOURIR"
+hint = "Verbe qui caractérise un être vivant qui disparait définitivement de son milieu de vie."
+
+[sub_resource type="Resource" id="Resource_4uqd0"]
+script = ExtResource("1_6qwmx")
+word = "MER"
+hint = "Vaste étendue d'eau salée qui se jette dans les océans."
+
+[resource]
+script = ExtResource("2_1e7xc")
+clues = Array[ExtResource("1_6qwmx")]([SubResource("Resource_1f3qn"), SubResource("Resource_tthj6"), SubResource("Resource_7y7mn"), SubResource("Resource_o4db8"), SubResource("Resource_4erea"), SubResource("Resource_eah0f"), SubResource("Resource_ohw2l"), SubResource("Resource_plxeq"), SubResource("Resource_4uqd0")])

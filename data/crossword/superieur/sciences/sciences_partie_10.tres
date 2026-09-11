@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://ctio2gb0lvfb6"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_xjgc8"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_14v3j"]
+
+[sub_resource type="Resource" id="Resource_3ekcg"]
+script = ExtResource("1_xjgc8")
+word = "PETALE"
+hint = "Élément coloré de la corolle servant à attirer les pollinisateurs."
+
+[sub_resource type="Resource" id="Resource_nmd03"]
+script = ExtResource("1_xjgc8")
+word = "COROLLE"
+hint = "Ensemble de tous les pétales d'une fleur."
+
+[sub_resource type="Resource" id="Resource_5xc00"]
+script = ExtResource("1_xjgc8")
+word = "SEPALE"
+hint = "Pièce protectrice externe de la fleur."
+
+[sub_resource type="Resource" id="Resource_a72wf"]
+script = ExtResource("1_xjgc8")
+word = "CALICE"
+hint = "Ensemble de tous les sépales d'une fleur."
+
+[sub_resource type="Resource" id="Resource_ioltt"]
+script = ExtResource("1_xjgc8")
+word = "FECONDATION"
+hint = "Fusion entre le grain de pollen et l'ovule."
+
+[sub_resource type="Resource" id="Resource_7as3w"]
+script = ExtResource("1_xjgc8")
+word = "ETIOLATION"
+hint = "Allongement excessif et anormal de la tige d'une plante à l'obscurité."
+
+[sub_resource type="Resource" id="Resource_0txfe"]
+script = ExtResource("1_xjgc8")
+word = "TROPISME"
+hint = "Orientation de la croissance d'une plante en réaction à un stimulus."
+
+[sub_resource type="Resource" id="Resource_8kin4"]
+script = ExtResource("1_xjgc8")
+word = "ZOOCHORIE"
+hint = "Mode de pollinisation ou de dissémination assuré par les animaux."
+
+[sub_resource type="Resource" id="Resource_jlfwr"]
+script = ExtResource("1_xjgc8")
+word = "ANEMOGAMIE"
+hint = "Mode de pollinisation assuré par le vent."
+
+[sub_resource type="Resource" id="Resource_rdh3s"]
+script = ExtResource("1_xjgc8")
+word = "HYDROGAMIE"
+hint = "Mode de pollinisation assuré par l'eau."
+
+[sub_resource type="Resource" id="Resource_bxypn"]
+script = ExtResource("1_xjgc8")
+word = "CAROTENE"
+hint = "Pigment végétal absorbant principalement les longueurs d'onde bleues et vertes."
+
+[sub_resource type="Resource" id="Resource_h0cm7"]
+script = ExtResource("1_xjgc8")
+word = "ALGUE"
+hint = "Végétal aquatique primitif dépourvu de racines."
+
+[sub_resource type="Resource" id="Resource_w8wfe"]
+script = ExtResource("1_xjgc8")
+word = "CRAMPON"
+hint = "Organe de fixation des algues sur le substrat."
+
+[resource]
+script = ExtResource("2_14v3j")
+clues = Array[ExtResource("1_xjgc8")]([SubResource("Resource_3ekcg"), SubResource("Resource_nmd03"), SubResource("Resource_5xc00"), SubResource("Resource_a72wf"), SubResource("Resource_ioltt"), SubResource("Resource_7as3w"), SubResource("Resource_0txfe"), SubResource("Resource_8kin4"), SubResource("Resource_jlfwr"), SubResource("Resource_rdh3s"), SubResource("Resource_bxypn"), SubResource("Resource_h0cm7"), SubResource("Resource_w8wfe")])

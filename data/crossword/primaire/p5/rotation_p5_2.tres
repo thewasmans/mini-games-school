@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dy0vyapeeetyv"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_ugaxa"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_i28hw"]
+
+[sub_resource type="Resource" id="Resource_50urh"]
+script = ExtResource("1_ugaxa")
+word = "URANUS"
+hint = "Planète gazeuse située entre neptune et saturne."
+
+[sub_resource type="Resource" id="Resource_7dt52"]
+script = ExtResource("1_ugaxa")
+word = "TERRE"
+hint = "Planète bleue sur laquelle nous vivons."
+
+[sub_resource type="Resource" id="Resource_88uwp"]
+script = ExtResource("1_ugaxa")
+word = "LUNE"
+hint = "Satellite naturel qui se trouve autour de la Terre."
+
+[sub_resource type="Resource" id="Resource_n1oxn"]
+script = ExtResource("1_ugaxa")
+word = "ASTEROIDES"
+hint = "Corps célestes composés de roches dont la taille peut atteindre plusieurs kilomètres."
+
+[sub_resource type="Resource" id="Resource_jtw3u"]
+script = ExtResource("1_ugaxa")
+word = "PRECESSION"
+hint = "Se dit du mouvement de la Terre suite à son axe d'inclinaison."
+
+[sub_resource type="Resource" id="Resource_ep0hl"]
+script = ExtResource("1_ugaxa")
+word = "GAZ"
+hint = "Elément physique qui caractérise une planète gazeuse."
+
+[sub_resource type="Resource" id="Resource_gqgi2"]
+script = ExtResource("1_ugaxa")
+word = "ALTERNANCE"
+hint = "Succession dans le temps ou l'espace selon un ordre régulier, comme le jour et la nuit."
+
+[sub_resource type="Resource" id="Resource_2810p"]
+script = ExtResource("1_ugaxa")
+word = "METEORITE"
+hint = "Fragment de corps céleste qui traverse l'atmosphère et atteint la croûte terrestre."
+
+[sub_resource type="Resource" id="Resource_ebgqc"]
+script = ExtResource("1_ugaxa")
+word = "MODELE"
+hint = "Représentation simplifiée de la réalité d'un phénomène."
+
+[sub_resource type="Resource" id="Resource_greti"]
+script = ExtResource("1_ugaxa")
+word = "JUPITER"
+hint = "Planète la plus grosse du système solaire."
+
+[resource]
+script = ExtResource("2_i28hw")
+clues = Array[ExtResource("1_ugaxa")]([SubResource("Resource_50urh"), SubResource("Resource_7dt52"), SubResource("Resource_88uwp"), SubResource("Resource_n1oxn"), SubResource("Resource_jtw3u"), SubResource("Resource_ep0hl"), SubResource("Resource_gqgi2"), SubResource("Resource_2810p"), SubResource("Resource_ebgqc"), SubResource("Resource_greti")])

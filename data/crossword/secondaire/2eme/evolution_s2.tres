@@ -1,0 +1,78 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://baf47ckvmawpv"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_3phwl"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_aajk3"]
+
+[sub_resource type="Resource" id="Resource_sap25"]
+script = ExtResource("1_3phwl")
+word = "MAISON"
+hint = "E.T. Téléphone..."
+
+[sub_resource type="Resource" id="Resource_efcp8"]
+script = ExtResource("1_3phwl")
+word = "EXTINCTION"
+hint = "Disparition majeure d'espèces dans un environnement."
+
+[sub_resource type="Resource" id="Resource_ddihq"]
+script = ExtResource("1_3phwl")
+word = "ECORCE"
+hint = "Surface dure constituant la couche externe de la terre."
+
+[sub_resource type="Resource" id="Resource_d4flv"]
+script = ExtResource("1_3phwl")
+word = "ATTRIBUT"
+hint = "Caractère de ce qui appartient à une espèce."
+
+[sub_resource type="Resource" id="Resource_xv5du"]
+script = ExtResource("1_3phwl")
+word = "PHYLOGENIE"
+hint = "Science qui étudie les relations de parenté génétique entre les espèces (taxons)."
+
+[sub_resource type="Resource" id="Resource_rmqhk"]
+script = ExtResource("1_3phwl")
+word = "EVOLUTION"
+hint = "Fait scientifique qui se caractérise par des changements au cours du temps."
+
+[sub_resource type="Resource" id="Resource_1i58c"]
+script = ExtResource("1_3phwl")
+word = "DATE"
+hint = "Terme permettant de situer une espèce en étudiant la radioactivité du carbone."
+
+[sub_resource type="Resource" id="Resource_5lptd"]
+script = ExtResource("1_3phwl")
+word = "MANTEAU"
+hint = "Couche intermédiaire entre le noyau terrestre et la croûte terrestre, l'écorce."
+
+[sub_resource type="Resource" id="Resource_0guwe"]
+script = ExtResource("1_3phwl")
+word = "BIODIVERSITE"
+hint = "Ensemble de la diversité des espèces dans un milieu."
+
+[sub_resource type="Resource" id="Resource_vxk8m"]
+script = ExtResource("1_3phwl")
+word = "ECOLOGIE"
+hint = "Science qui a pour objet l'étude des espèces en interaction avec leur environnement."
+
+[sub_resource type="Resource" id="Resource_a1twl"]
+script = ExtResource("1_3phwl")
+word = "DARWIN"
+hint = "Chercheur naturaliste à l'origine de la théorie sur la sélection naturelle."
+
+[sub_resource type="Resource" id="Resource_7arxr"]
+script = ExtResource("1_3phwl")
+word = "SEISME"
+hint = "Secousse du sol, tremblement de terre."
+
+[sub_resource type="Resource" id="Resource_jjs5u"]
+script = ExtResource("1_3phwl")
+word = "VOLCAN"
+hint = "Montagne formée de roches magmatiques dans laquelle se trouve la lave."
+
+[sub_resource type="Resource" id="Resource_pup80"]
+script = ExtResource("1_3phwl")
+word = "NOYAU"
+hint = "Partie centrale de la Terre essentiellement constituée de fer métallique."
+
+[resource]
+script = ExtResource("2_aajk3")
+clues = Array[ExtResource("1_3phwl")]([SubResource("Resource_sap25"), SubResource("Resource_efcp8"), SubResource("Resource_ddihq"), SubResource("Resource_d4flv"), SubResource("Resource_xv5du"), SubResource("Resource_rmqhk"), SubResource("Resource_1i58c"), SubResource("Resource_5lptd"), SubResource("Resource_0guwe"), SubResource("Resource_vxk8m"), SubResource("Resource_a1twl"), SubResource("Resource_7arxr"), SubResource("Resource_jjs5u"), SubResource("Resource_pup80")])

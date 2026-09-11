@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cwpom3qnxpv5d"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_63yrj"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_26qr4"]
+
+[sub_resource type="Resource" id="Resource_xtl1k"]
+script = ExtResource("1_63yrj")
+word = "ANATOMIE"
+hint = "Science qui étudie la structure et l'organisation des parties d'un être vivant."
+
+[sub_resource type="Resource" id="Resource_b0ns4"]
+script = ExtResource("1_63yrj")
+word = "VERTEBRE"
+hint = "Taxon d'animaux possédant un crâne et une colonne vertébrale."
+
+[sub_resource type="Resource" id="Resource_6ttb0"]
+script = ExtResource("1_63yrj")
+word = "ANALOGUES"
+hint = "Structures qui se ressemblent (et qui remplissent éventuellement la même fonction), mais ont deux origines évolutives complètement distinctes."
+
+[sub_resource type="Resource" id="Resource_kah4v"]
+script = ExtResource("1_63yrj")
+word = "EVOLUTION"
+hint = "Fait scientifique qui se caractérise par des changements au cours du temps, que l'on peut étudier chez des bactéries."
+
+[sub_resource type="Resource" id="Resource_hkjbi"]
+script = ExtResource("1_63yrj")
+word = "MATRICE"
+hint = "Tableau de comparaisons des caractéristiques entre espèces."
+
+[sub_resource type="Resource" id="Resource_egm25"]
+script = ExtResource("1_63yrj")
+word = "CLADE"
+hint = "Groupe de taxons ayant une origine phylétique commune."
+
+[sub_resource type="Resource" id="Resource_kpg6u"]
+script = ExtResource("1_63yrj")
+word = "WWF"
+hint = "Acronyme de \"World Wildlife Fund\"."
+
+[sub_resource type="Resource" id="Resource_ab4m3"]
+script = ExtResource("1_63yrj")
+word = "ABIOTIQUE"
+hint = "Terme qui caractérise des facteurs physico-chimiques comme le pH."
+
+[sub_resource type="Resource" id="Resource_ayhmu"]
+script = ExtResource("1_63yrj")
+word = "BIOME"
+hint = "Vaste région biogéographique s'étendant sous un même climat."
+
+[sub_resource type="Resource" id="Resource_u4lte"]
+script = ExtResource("1_63yrj")
+word = "MITOSE"
+hint = "Processus de division cellulaire permettant d'obtenir des cellules filles génétiquement identiques."
+
+[sub_resource type="Resource" id="Resource_1rmje"]
+script = ExtResource("1_63yrj")
+word = "PHYLOGENIE"
+hint = "Science de classification de l'ensemble du vivant, effectuée en fonction des liens de parenté de chaque espèce dans un arbre."
+
+[sub_resource type="Resource" id="Resource_h226v"]
+script = ExtResource("1_63yrj")
+word = "ANALOGUES"
+hint = "Structures qui se ressemblent (et qui remplissent éventuellement la même fonction), mais ont deux origines évolutives complètement distinctes."
+
+[sub_resource type="Resource" id="Resource_xyrw7"]
+script = ExtResource("1_63yrj")
+word = "ECOSYSTEME"
+hint = "Ensemble formé par une communauté d'êtres vivants en interaction avec leur environnement."
+
+[resource]
+script = ExtResource("2_26qr4")
+clues = Array[ExtResource("1_63yrj")]([SubResource("Resource_xtl1k"), SubResource("Resource_b0ns4"), SubResource("Resource_6ttb0"), SubResource("Resource_kah4v"), SubResource("Resource_hkjbi"), SubResource("Resource_egm25"), SubResource("Resource_kpg6u"), SubResource("Resource_ab4m3"), SubResource("Resource_ayhmu"), SubResource("Resource_u4lte"), SubResource("Resource_1rmje"), SubResource("Resource_h226v"), SubResource("Resource_xyrw7")])

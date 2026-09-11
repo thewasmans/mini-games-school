@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://ymiem1rnh7pd"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_72w5h"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_qr3y8"]
+
+[sub_resource type="Resource" id="Resource_7rr3q"]
+script = ExtResource("1_72w5h")
+word = "LAMPE"
+hint = "Elément lumineux qui sert de récepteur dans un circuit simple."
+
+[sub_resource type="Resource" id="Resource_881bq"]
+script = ExtResource("1_72w5h")
+word = "ISOLANT"
+hint = "Caractérise un matériau qui ne conduit pas le courant électrique, comme le plastique."
+
+[sub_resource type="Resource" id="Resource_p3bif"]
+script = ExtResource("1_72w5h")
+word = "OUVERT"
+hint = "Circuit dont le courant ne passe pas et le récepteur (lampe) se coupe (s'éteint)."
+
+[sub_resource type="Resource" id="Resource_2bkbc"]
+script = ExtResource("1_72w5h")
+word = "FIL"
+hint = "Autre terme correspondant à des câbles électriques."
+
+[sub_resource type="Resource" id="Resource_b80tk"]
+script = ExtResource("1_72w5h")
+word = "PILE"
+hint = "Correspond au générateur dans un circuit électrique simple."
+
+[sub_resource type="Resource" id="Resource_tbmh0"]
+script = ExtResource("1_72w5h")
+word = "SERIE"
+hint = "Circuit dont le courant emprunte un seul chemin."
+
+[sub_resource type="Resource" id="Resource_qskix"]
+script = ExtResource("1_72w5h")
+word = "RECEPTEUR"
+hint = "Appareil qui reçoit des signaux électriques."
+
+[sub_resource type="Resource" id="Resource_pysbs"]
+script = ExtResource("1_72w5h")
+word = "CONDUCTIVITE"
+hint = "Valeur qui caractérise le passage du courant ou de la chaleur dans un matériau."
+
+[resource]
+script = ExtResource("2_qr3y8")
+clues = Array[ExtResource("1_72w5h")]([SubResource("Resource_7rr3q"), SubResource("Resource_881bq"), SubResource("Resource_p3bif"), SubResource("Resource_2bkbc"), SubResource("Resource_b80tk"), SubResource("Resource_tbmh0"), SubResource("Resource_qskix"), SubResource("Resource_pysbs")])

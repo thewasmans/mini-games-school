@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://c234wcdp00qai"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_2dsqf"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_ll6k6"]
+
+[sub_resource type="Resource" id="Resource_kw5uq"]
+script = ExtResource("1_2dsqf")
+word = "ESTOMAC"
+hint = "Poche musculaire sécrétant des sucs gastriques acides."
+
+[sub_resource type="Resource" id="Resource_1jifk"]
+script = ExtResource("1_2dsqf")
+word = "FOIE"
+hint = "Glande volumineuse produisant la bile, stockant le glycogène et détoxifiant le sang."
+
+[sub_resource type="Resource" id="Resource_6ee68"]
+script = ExtResource("1_2dsqf")
+word = "PANCREAS"
+hint = "Glande mixte produisant des hormones régulatrices de la glycémie."
+
+[sub_resource type="Resource" id="Resource_bm7nc"]
+script = ExtResource("1_2dsqf")
+word = "BILE"
+hint = "Liquide sécrété par le foie favorisant la digestion des graisses."
+
+[sub_resource type="Resource" id="Resource_0rj02"]
+script = ExtResource("1_2dsqf")
+word = "DIAPHRAGME"
+hint = "Muscle principal de la respiration."
+
+[sub_resource type="Resource" id="Resource_hcgmy"]
+script = ExtResource("1_2dsqf")
+word = "TRACHEE"
+hint = "Conduit cartilagineux reliant le larynx aux bronches."
+
+[sub_resource type="Resource" id="Resource_ldox3"]
+script = ExtResource("1_2dsqf")
+word = "BRONCHE"
+hint = "Conduits aériens principaux se ramifiant dans les poumons en bronchioles."
+
+[sub_resource type="Resource" id="Resource_yvelh"]
+script = ExtResource("1_2dsqf")
+word = "HORMONE"
+hint = "Messager chimique transporté par le sang pour réguler des fonctions physiologiques."
+
+[sub_resource type="Resource" id="Resource_drl7g"]
+script = ExtResource("1_2dsqf")
+word = "THYROIDE"
+hint = "Glande endocrine du cou régulant le métabolisme général."
+
+[sub_resource type="Resource" id="Resource_3sovy"]
+script = ExtResource("1_2dsqf")
+word = "INSULINE"
+hint = "Hormone hypoglycémiante sécrétée par le pancréas."
+
+[sub_resource type="Resource" id="Resource_xohrc"]
+script = ExtResource("1_2dsqf")
+word = "NEURONE"
+hint = "Cellule nerveuse spécialisée dans la transmission des messages."
+
+[sub_resource type="Resource" id="Resource_meuag"]
+script = ExtResource("1_2dsqf")
+word = "SYNAPSE"
+hint = "Zone de contact entre deux neurones."
+
+[resource]
+script = ExtResource("2_ll6k6")
+clues = Array[ExtResource("1_2dsqf")]([SubResource("Resource_kw5uq"), SubResource("Resource_1jifk"), SubResource("Resource_6ee68"), SubResource("Resource_bm7nc"), SubResource("Resource_0rj02"), SubResource("Resource_hcgmy"), SubResource("Resource_ldox3"), SubResource("Resource_yvelh"), SubResource("Resource_drl7g"), SubResource("Resource_3sovy"), SubResource("Resource_xohrc"), SubResource("Resource_meuag")])

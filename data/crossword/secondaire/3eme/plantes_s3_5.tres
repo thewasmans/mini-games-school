@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://ctc87uiqj0u1w"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_odk2b"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_cboed"]
+
+[sub_resource type="Resource" id="Resource_8mom2"]
+script = ExtResource("1_odk2b")
+word = "CARBONE"
+hint = "Elément chimique présent dans les êtres vivants, les océans, l’air et l’écorce terrestre."
+
+[sub_resource type="Resource" id="Resource_drmgp"]
+script = ExtResource("1_odk2b")
+word = "HYDROSPHERE"
+hint = "Zones de la planète occupées par de l’eau ou de la glace, avec la lithosphère et l'atmosphère."
+
+[sub_resource type="Resource" id="Resource_11ffm"]
+script = ExtResource("1_odk2b")
+word = "DECOMPOSEUR"
+hint = "Organisme de la chaine alimentaire qui transforme la matière minérale en matière organique."
+
+[sub_resource type="Resource" id="Resource_u837g"]
+script = ExtResource("1_odk2b")
+word = "CLIMAX"
+hint = "Etat d'équilibre vers lequel un écosystème tend à évoluer."
+
+[sub_resource type="Resource" id="Resource_us46r"]
+script = ExtResource("1_odk2b")
+word = "CYCLE"
+hint = "Suite de phénomènes se renouvelant sans arrêt."
+
+[sub_resource type="Resource" id="Resource_8jhuk"]
+script = ExtResource("1_odk2b")
+word = "RECYCLAGE"
+hint = "Procédé de traitement des déchets permettant de réintroduire de nouveaux produits dans le cycle de consommation."
+
+[sub_resource type="Resource" id="Resource_3oj5n"]
+script = ExtResource("1_odk2b")
+word = "PRODUCTEUR"
+hint = "Organismes qui sont à la base de la chaine alimentaire."
+
+[sub_resource type="Resource" id="Resource_da7ei"]
+script = ExtResource("1_odk2b")
+word = "FAUNE"
+hint = "Ensemble des espèces animales vivant dans un espace géographique."
+
+[sub_resource type="Resource" id="Resource_4u8o1"]
+script = ExtResource("1_odk2b")
+word = "CONSOMMATEUR"
+hint = "Se dit de l'organisme qui se nourrit des producteurs."
+
+[sub_resource type="Resource" id="Resource_jhuuq"]
+script = ExtResource("1_odk2b")
+word = "FLORE"
+hint = "Ensemble des espèces végétales vivant dans un espace géographique."
+
+[sub_resource type="Resource" id="Resource_esqk6"]
+script = ExtResource("1_odk2b")
+word = "UICN"
+hint = "Union Internationale pour la Conservation de la Nature et de ses ressources."
+
+[resource]
+script = ExtResource("2_cboed")
+clues = Array[ExtResource("1_odk2b")]([SubResource("Resource_8mom2"), SubResource("Resource_drmgp"), SubResource("Resource_11ffm"), SubResource("Resource_u837g"), SubResource("Resource_us46r"), SubResource("Resource_8jhuk"), SubResource("Resource_3oj5n"), SubResource("Resource_da7ei"), SubResource("Resource_4u8o1"), SubResource("Resource_jhuuq"), SubResource("Resource_esqk6")])

@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://citmmcydvvkiv"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_qbxu8"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_xe3b7"]
+
+[sub_resource type="Resource" id="Resource_b6un8"]
+script = ExtResource("1_qbxu8")
+word = "GLOBALE"
+hint = "Méthode de lecture où on enseigne le mot dans son ensemble avec une image."
+
+[sub_resource type="Resource" id="Resource_j4hq5"]
+script = ExtResource("1_qbxu8")
+word = "CONNEXIONISME"
+hint = "Théorie selon laquelle le cerveau fonctionne comme un ensemble pour les différentes aptitudes."
+
+[sub_resource type="Resource" id="Resource_31di4"]
+script = ExtResource("1_qbxu8")
+word = "PARADOXALE"
+hint = "Forme d'illusion en 2D, mais qui n'existe qu'en 3D."
+
+[sub_resource type="Resource" id="Resource_4wbnk"]
+script = ExtResource("1_qbxu8")
+word = "RETROGRADE"
+hint = "Amnésie de type trouble de la remémoration."
+
+[sub_resource type="Resource" id="Resource_q83p5"]
+script = ExtResource("1_qbxu8")
+word = "OPTIQUE"
+hint = "Forme d'illusion qui provoque une fausse impression de perspective ou de dimension."
+
+[sub_resource type="Resource" id="Resource_l41w7"]
+script = ExtResource("1_qbxu8")
+word = "MEMOIRE"
+hint = "Fonction qui permet de conserver et rappeler une information."
+
+[sub_resource type="Resource" id="Resource_f730c"]
+script = ExtResource("1_qbxu8")
+word = "SOMMEIL"
+hint = "Fonction permettant de consolider la mémoire et de réguler ses émotions."
+
+[sub_resource type="Resource" id="Resource_6g5eh"]
+script = ExtResource("1_qbxu8")
+word = "LIEU"
+hint = "Méthode de mémorisation associant un élément à retenir avec un endroit."
+
+[sub_resource type="Resource" id="Resource_pjafd"]
+script = ExtResource("1_qbxu8")
+word = "IMAGINATION"
+hint = "Forme d'apprentissage permettant d'améliorer ses mouvements lorsqu'ils sont automatisés."
+
+[sub_resource type="Resource" id="Resource_5g7sy"]
+script = ExtResource("1_qbxu8")
+word = "NEUROEFFICACE"
+hint = "Se dit d'un cerveau qui est très opérationnel en utilisant peu d'énergie."
+
+[sub_resource type="Resource" id="Resource_ono61"]
+script = ExtResource("1_qbxu8")
+word = "CONSCIENCE"
+hint = "Concept à la fois biologique et philosophique très difficile à définir."
+
+[sub_resource type="Resource" id="Resource_h5u61"]
+script = ExtResource("1_qbxu8")
+word = "POLYSOMNOGRAPHIE"
+hint = "Ensemble de techniques médicales permettant d'étudier le sommeil."
+
+[sub_resource type="Resource" id="Resource_i2uhl"]
+script = ExtResource("1_qbxu8")
+word = "SIESTE"
+hint = "Courte période de sommeil permettant d'améliorer ses aptitudes."
+
+[sub_resource type="Resource" id="Resource_37bxc"]
+script = ExtResource("1_qbxu8")
+word = "HYPERMNESIE"
+hint = "Trouble où le patient mémorise l'ensemble des moments de sa vie."
+
+[sub_resource type="Resource" id="Resource_5431e"]
+script = ExtResource("1_qbxu8")
+word = "PARADOXAL"
+hint = "Stade du sommeil où le sujet rêve."
+
+[resource]
+script = ExtResource("2_xe3b7")
+clues = Array[ExtResource("1_qbxu8")]([SubResource("Resource_b6un8"), SubResource("Resource_j4hq5"), SubResource("Resource_31di4"), SubResource("Resource_4wbnk"), SubResource("Resource_q83p5"), SubResource("Resource_l41w7"), SubResource("Resource_f730c"), SubResource("Resource_6g5eh"), SubResource("Resource_pjafd"), SubResource("Resource_5g7sy"), SubResource("Resource_ono61"), SubResource("Resource_h5u61"), SubResource("Resource_i2uhl"), SubResource("Resource_37bxc"), SubResource("Resource_5431e")])

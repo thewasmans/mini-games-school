@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bp33kp044biqv"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_7evj1"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_vpxhl"]
+
+[sub_resource type="Resource" id="Resource_0fjqi"]
+script = ExtResource("1_7evj1")
+word = "EVAPORATION"
+hint = "Changement progressif de l'état liquide vers l'état gazeux."
+
+[sub_resource type="Resource" id="Resource_8hqk3"]
+script = ExtResource("1_7evj1")
+word = "DEGEL"
+hint = "Situation qui se produit lorsque la glace fond progressivement."
+
+[sub_resource type="Resource" id="Resource_nags6"]
+script = ExtResource("1_7evj1")
+word = "ENERGIE"
+hint = "Capacité à modifier un état ou à produire un travail entraînant un mouvement."
+
+[sub_resource type="Resource" id="Resource_dxn1j"]
+script = ExtResource("1_7evj1")
+word = "EAU"
+hint = "Peut se trouver à l'état solide, liquide ou gazeux."
+
+[sub_resource type="Resource" id="Resource_ppqnb"]
+script = ExtResource("1_7evj1")
+word = "SOLIDIFICATION"
+hint = "Passage d'un corps de l'état liquide à l'état solide."
+
+[sub_resource type="Resource" id="Resource_os3k3"]
+script = ExtResource("1_7evj1")
+word = "EBULLITION"
+hint = "Formation de bulles lors du changement rapide d'un corps de l'état liquide vers l'état gazeux."
+
+[sub_resource type="Resource" id="Resource_5yrhs"]
+script = ExtResource("1_7evj1")
+word = "SOLIDE"
+hint = "Etat de la matière caractérisé par l'absence de liberté entre les molécules, état organisé de la matière."
+
+[sub_resource type="Resource" id="Resource_vl0ui"]
+script = ExtResource("1_7evj1")
+word = "NEIGE"
+hint = "Eau congelée qui tombe des nuages en flocons blancs et légers."
+
+[sub_resource type="Resource" id="Resource_lgjqa"]
+script = ExtResource("1_7evj1")
+word = "RUISSELLEMENT"
+hint = "Ecoulement des eaux à la surface de la terre."
+
+[sub_resource type="Resource" id="Resource_v6tkx"]
+script = ExtResource("1_7evj1")
+word = "INFILTRATION"
+hint = "Processus physique par lequel l'eau pénètre dans les sols et alimente les nappes."
+
+[resource]
+script = ExtResource("2_vpxhl")
+clues = Array[ExtResource("1_7evj1")]([SubResource("Resource_0fjqi"), SubResource("Resource_8hqk3"), SubResource("Resource_nags6"), SubResource("Resource_dxn1j"), SubResource("Resource_ppqnb"), SubResource("Resource_os3k3"), SubResource("Resource_5yrhs"), SubResource("Resource_vl0ui"), SubResource("Resource_lgjqa"), SubResource("Resource_v6tkx")])

@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dyrxxmrflyiwg"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_de14h"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_5nuxx"]
+
+[sub_resource type="Resource" id="Resource_jclgx"]
+script = ExtResource("1_de14h")
+word = "HYDRAULIQUE"
+hint = "Forme d'énergie qui a un rapport avec l'eau."
+
+[sub_resource type="Resource" id="Resource_dh7eg"]
+script = ExtResource("1_de14h")
+word = "EAU"
+hint = "Molécule indispensable à toute forme de vie."
+
+[sub_resource type="Resource" id="Resource_nwbx5"]
+script = ExtResource("1_de14h")
+word = "EPURATION"
+hint = "Type de station dans laquelle l'eau est nettoyée."
+
+[sub_resource type="Resource" id="Resource_wkf1y"]
+script = ExtResource("1_de14h")
+word = "TRANSPARENT"
+hint = "Objet qui laisse passer la lumière et qui permet de voir nettement à travers."
+
+[sub_resource type="Resource" id="Resource_da0u6"]
+script = ExtResource("1_de14h")
+word = "CAPTAGE"
+hint = "Action de récupérer l'eau, de la reprendre."
+
+[sub_resource type="Resource" id="Resource_bis7d"]
+script = ExtResource("1_de14h")
+word = "TOXIQUE"
+hint = "Substance nocive pour un organisme."
+
+[sub_resource type="Resource" id="Resource_ys6bc"]
+script = ExtResource("1_de14h")
+word = "MELANGE"
+hint = "Association de deux ou plusieurs substances."
+
+[resource]
+script = ExtResource("2_5nuxx")
+clues = Array[ExtResource("1_de14h")]([SubResource("Resource_jclgx"), SubResource("Resource_dh7eg"), SubResource("Resource_nwbx5"), SubResource("Resource_wkf1y"), SubResource("Resource_da0u6"), SubResource("Resource_bis7d"), SubResource("Resource_ys6bc")])

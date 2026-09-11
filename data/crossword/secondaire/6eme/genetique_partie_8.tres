@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dutmwt2atieu"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_wnl2j"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_cw8rj"]
+
+[sub_resource type="Resource" id="Resource_8ndde"]
+script = ExtResource("1_wnl2j")
+word = "INTRON"
+hint = "Séquence nucléotidique non codante."
+
+[sub_resource type="Resource" id="Resource_jas7x"]
+script = ExtResource("1_wnl2j")
+word = "CLONE"
+hint = "Terme utilisé pour caractériser un sujet génétiquement identique."
+
+[sub_resource type="Resource" id="Resource_a6m3u"]
+script = ExtResource("1_wnl2j")
+word = "TURNER"
+hint = "Syndrome chromosomique spécifique des femmes qui provoque une petite taille."
+
+[sub_resource type="Resource" id="Resource_0wrs4"]
+script = ExtResource("1_wnl2j")
+word = "PHAGE"
+hint = "Virus qui n'infecte que des bactéries, utilisé comme vecteur."
+
+[sub_resource type="Resource" id="Resource_f0gio"]
+script = ExtResource("1_wnl2j")
+word = "POLYPLOIDIE"
+hint = "Présence de plusieurs lots de chromosomes (au moins 3), fréquent chez les plantes."
+
+[sub_resource type="Resource" id="Resource_v7law"]
+script = ExtResource("1_wnl2j")
+word = "POLYDACTYLIE"
+hint = "Malformation des membres caractérisée par l'existence d'un ou plusieurs doigts ou orteils en plus."
+
+[sub_resource type="Resource" id="Resource_ql0ji"]
+script = ExtResource("1_wnl2j")
+word = "ANEUPLOIDIE"
+hint = "État d’une cellule ou d’un individu possédant un nombre anormal de chromosomes, comme la T21."
+
+[sub_resource type="Resource" id="Resource_q4bj1"]
+script = ExtResource("1_wnl2j")
+word = "MELANINE"
+hint = "Pigment donnant la coloration à la peau."
+
+[sub_resource type="Resource" id="Resource_nedtr"]
+script = ExtResource("1_wnl2j")
+word = "ADENINE"
+hint = "Base purique autre que la guanine."
+
+[sub_resource type="Resource" id="Resource_tmbb6"]
+script = ExtResource("1_wnl2j")
+word = "TRANSGENESE"
+hint = "Processus de transfert d’un gène étranger dans un organisme."
+
+[sub_resource type="Resource" id="Resource_gem6y"]
+script = ExtResource("1_wnl2j")
+word = "HOMEOTIQUE"
+hint = "Gène architecte qui intervient dans la mise en place du plan d’organisation d'un vivant."
+
+[sub_resource type="Resource" id="Resource_58ja8"]
+script = ExtResource("1_wnl2j")
+word = "EAU"
+hint = "Molécule apparue lorsque les météorites se sont réchauffées sur Terre."
+
+[sub_resource type="Resource" id="Resource_liugs"]
+script = ExtResource("1_wnl2j")
+word = "RER"
+hint = "Compartiment rugueux de la cellule où se déroule la fabrication des protéines et des lipides."
+
+[sub_resource type="Resource" id="Resource_7i0jg"]
+script = ExtResource("1_wnl2j")
+word = "ONCOLOGIE"
+hint = "Science qui a pour objet l'étude du cancer."
+
+[sub_resource type="Resource" id="Resource_36djj"]
+script = ExtResource("1_wnl2j")
+word = "TRISOMIE"
+hint = "Maladie chromosomique qui peut être de type 21, 18 ou 13."
+
+[resource]
+script = ExtResource("2_cw8rj")
+clues = Array[ExtResource("1_wnl2j")]([SubResource("Resource_8ndde"), SubResource("Resource_jas7x"), SubResource("Resource_a6m3u"), SubResource("Resource_0wrs4"), SubResource("Resource_f0gio"), SubResource("Resource_v7law"), SubResource("Resource_ql0ji"), SubResource("Resource_q4bj1"), SubResource("Resource_nedtr"), SubResource("Resource_tmbb6"), SubResource("Resource_gem6y"), SubResource("Resource_58ja8"), SubResource("Resource_liugs"), SubResource("Resource_7i0jg"), SubResource("Resource_36djj")])

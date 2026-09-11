@@ -1,0 +1,78 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://b6511lnk48knh"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_2320n"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_bdsyc"]
+
+[sub_resource type="Resource" id="Resource_nb6pe"]
+script = ExtResource("1_2320n")
+word = "DESERT"
+hint = "Biome aride caractérisé par une sécheresse extrême."
+
+[sub_resource type="Resource" id="Resource_4xcwe"]
+script = ExtResource("1_2320n")
+word = "PERMAFROST"
+hint = "Sol dont la température se maintient en permanence en dessous de 0°C."
+
+[sub_resource type="Resource" id="Resource_0qy4s"]
+script = ExtResource("1_2320n")
+word = "NEPENTHES"
+hint = "Plante carnivore en forme d'urne digérant ses proies."
+
+[sub_resource type="Resource" id="Resource_733ff"]
+script = ExtResource("1_2320n")
+word = "SPORE"
+hint = "Unité de reproduction des plantes sans fleurs et des champignons."
+
+[sub_resource type="Resource" id="Resource_sqhvx"]
+script = ExtResource("1_2320n")
+word = "GRAINE"
+hint = "Organe de dissémination contenant un embryon végétal."
+
+[sub_resource type="Resource" id="Resource_gh6rb"]
+script = ExtResource("1_2320n")
+word = "ETAMINE"
+hint = "Organe reproducteur mâle de la fleur."
+
+[sub_resource type="Resource" id="Resource_foimn"]
+script = ExtResource("1_2320n")
+word = "ANTHERE"
+hint = "Partie supérieure de l'étamine contenant les grains de pollen."
+
+[sub_resource type="Resource" id="Resource_bolnk"]
+script = ExtResource("1_2320n")
+word = "FILAMENT"
+hint = "Pédoncule soutenant l'anthère de l'étamine."
+
+[sub_resource type="Resource" id="Resource_w2yoo"]
+script = ExtResource("1_2320n")
+word = "POLLEN"
+hint = "Cellule sexuelle masculine microscopique de la plante."
+
+[sub_resource type="Resource" id="Resource_lbri2"]
+script = ExtResource("1_2320n")
+word = "PISTIL"
+hint = "Organe reproducteur féminin de la fleur."
+
+[sub_resource type="Resource" id="Resource_n7378"]
+script = ExtResource("1_2320n")
+word = "STIGMATE"
+hint = "Pointe collante du pistil recevant les grains de pollen."
+
+[sub_resource type="Resource" id="Resource_pojla"]
+script = ExtResource("1_2320n")
+word = "STYLE"
+hint = "Tube reliant le stigmate à l'ovaire."
+
+[sub_resource type="Resource" id="Resource_q0wqq"]
+script = ExtResource("1_2320n")
+word = "OVAIRE"
+hint = "Partie de la fleur abritant les ovules et se transformant en fruit."
+
+[sub_resource type="Resource" id="Resource_6uqdq"]
+script = ExtResource("1_2320n")
+word = "OVULE"
+hint = "Cellule sexuelle féminine contenue dans l'ovaire."
+
+[resource]
+script = ExtResource("2_bdsyc")
+clues = Array[ExtResource("1_2320n")]([SubResource("Resource_nb6pe"), SubResource("Resource_4xcwe"), SubResource("Resource_0qy4s"), SubResource("Resource_733ff"), SubResource("Resource_sqhvx"), SubResource("Resource_gh6rb"), SubResource("Resource_foimn"), SubResource("Resource_bolnk"), SubResource("Resource_w2yoo"), SubResource("Resource_lbri2"), SubResource("Resource_n7378"), SubResource("Resource_pojla"), SubResource("Resource_q0wqq"), SubResource("Resource_6uqdq")])

@@ -1,0 +1,78 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://c2ok7unqkddoj"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_x5217"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_v75sw"]
+
+[sub_resource type="Resource" id="Resource_3mbbi"]
+script = ExtResource("1_x5217")
+word = "FE"
+hint = "Symbole chimique du fer."
+
+[sub_resource type="Resource" id="Resource_4qbdh"]
+script = ExtResource("1_x5217")
+word = "HYDROXYDE"
+hint = "Fonction chimique qui se note -OH."
+
+[sub_resource type="Resource" id="Resource_uy36k"]
+script = ExtResource("1_x5217")
+word = "SODIUM"
+hint = "Elément chimique dont la symbole est Na."
+
+[sub_resource type="Resource" id="Resource_dfsvc"]
+script = ExtResource("1_x5217")
+word = "OR"
+hint = "Elément chimique dont la symbole est Au."
+
+[sub_resource type="Resource" id="Resource_njp1t"]
+script = ExtResource("1_x5217")
+word = "CONCENTRATION"
+hint = "Rapport entre la quantité de soluté présente dans une quantité donnée de solution."
+
+[sub_resource type="Resource" id="Resource_20t46"]
+script = ExtResource("1_x5217")
+word = "HELIUM"
+hint = "Elément chimique dont la symbole est He."
+
+[sub_resource type="Resource" id="Resource_bs54x"]
+script = ExtResource("1_x5217")
+word = "NB"
+hint = "Symbole chimique du niobium."
+
+[sub_resource type="Resource" id="Resource_trgev"]
+script = ExtResource("1_x5217")
+word = "MG"
+hint = "Symbole chimique du magnésium."
+
+[sub_resource type="Resource" id="Resource_cv1xv"]
+script = ExtResource("1_x5217")
+word = "CARBONE"
+hint = "Elément chimique dont la symbole est C."
+
+[sub_resource type="Resource" id="Resource_qv4dx"]
+script = ExtResource("1_x5217")
+word = "CR"
+hint = "Symbole chimique du chrome."
+
+[sub_resource type="Resource" id="Resource_tw8mp"]
+script = ExtResource("1_x5217")
+word = "AS"
+hint = "Symbole chimique de l'arsenic."
+
+[sub_resource type="Resource" id="Resource_gk7ll"]
+script = ExtResource("1_x5217")
+word = "AZOTE"
+hint = "Elément chimique dont la symbole est N."
+
+[sub_resource type="Resource" id="Resource_66ekd"]
+script = ExtResource("1_x5217")
+word = "SOLVANT"
+hint = "Se dit d'une substance qui permet de dissoudre, comme l'eau."
+
+[sub_resource type="Resource" id="Resource_afnq2"]
+script = ExtResource("1_x5217")
+word = "FLUOR"
+hint = "Elément chimique dont la symbole est F."
+
+[resource]
+script = ExtResource("2_v75sw")
+clues = Array[ExtResource("1_x5217")]([SubResource("Resource_3mbbi"), SubResource("Resource_4qbdh"), SubResource("Resource_uy36k"), SubResource("Resource_dfsvc"), SubResource("Resource_njp1t"), SubResource("Resource_20t46"), SubResource("Resource_bs54x"), SubResource("Resource_trgev"), SubResource("Resource_cv1xv"), SubResource("Resource_qv4dx"), SubResource("Resource_tw8mp"), SubResource("Resource_gk7ll"), SubResource("Resource_66ekd"), SubResource("Resource_afnq2")])

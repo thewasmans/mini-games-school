@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://by46jy1y2er2c"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_f1gaw"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_t2q5p"]
+
+[sub_resource type="Resource" id="Resource_n5abv"]
+script = ExtResource("1_f1gaw")
+word = "HYPOTONIQUE"
+hint = "Se dit d'une solution faiblement concentrée en solutés."
+
+[sub_resource type="Resource" id="Resource_yq630"]
+script = ExtResource("1_f1gaw")
+word = "METHYLENE"
+hint = "Indicateur coloré bleu qui dérive d'un alcool."
+
+[sub_resource type="Resource" id="Resource_xl3qd"]
+script = ExtResource("1_f1gaw")
+word = "MICROSCOPE"
+hint = "Instrument d'optique qui permet de voir des objets invisibles à l'œil nu par agrandissement grâce à un système de lentilles."
+
+[sub_resource type="Resource" id="Resource_w7lng"]
+script = ExtResource("1_f1gaw")
+word = "PHOTOSYNTHESE"
+hint = "Processus de conversion de l'énergie lumineuse en molécules organiques, principalement le glucose (glucide)."
+
+[sub_resource type="Resource" id="Resource_odp28"]
+script = ExtResource("1_f1gaw")
+word = "VACUOLE"
+hint = "Grande vésicule remplie d'eau présente chez les végétaux et les champignons."
+
+[sub_resource type="Resource" id="Resource_hdkkx"]
+script = ExtResource("1_f1gaw")
+word = "MINERALE"
+hint = "Type de sève contenant de l'eau et des éléments minéraux prélevés dans le sol."
+
+[sub_resource type="Resource" id="Resource_frb5n"]
+script = ExtResource("1_f1gaw")
+word = "DIFFUSION"
+hint = "Mode de transport par lequel les molécules se déplacent d'une région à une autre."
+
+[sub_resource type="Resource" id="Resource_vr3os"]
+script = ExtResource("1_f1gaw")
+word = "BRUTE"
+hint = "Type de sève qui transporte les nutriments et les substances organiques élaborées entre les organes des plantes."
+
+[sub_resource type="Resource" id="Resource_gd118"]
+script = ExtResource("1_f1gaw")
+word = "RESEAU"
+hint = "Ensemble de chaines alimentaires dans un environnement."
+
+[sub_resource type="Resource" id="Resource_53vnf"]
+script = ExtResource("1_f1gaw")
+word = "SCHEMA"
+hint = "Figure donnant une représentation simplifiée et fonctionnelle."
+
+[sub_resource type="Resource" id="Resource_dxmdd"]
+script = ExtResource("1_f1gaw")
+word = "HYPERTONIQUE"
+hint = "Se dit d'une solution fortement concentrée en solutés."
+
+[sub_resource type="Resource" id="Resource_pligx"]
+script = ExtResource("1_f1gaw")
+word = "OSMOSE"
+hint = "Passage de molécules de solvants à travers une membrane semi-perméable, depuis le milieu le moins concentré en solutés vers celui le plus concentré."
+
+[resource]
+script = ExtResource("2_t2q5p")
+clues = Array[ExtResource("1_f1gaw")]([SubResource("Resource_n5abv"), SubResource("Resource_yq630"), SubResource("Resource_xl3qd"), SubResource("Resource_w7lng"), SubResource("Resource_odp28"), SubResource("Resource_hdkkx"), SubResource("Resource_frb5n"), SubResource("Resource_vr3os"), SubResource("Resource_gd118"), SubResource("Resource_53vnf"), SubResource("Resource_dxmdd"), SubResource("Resource_pligx")])

@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://c2nividrub0k"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_86lpp"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_txu7q"]
+
+[sub_resource type="Resource" id="Resource_0eomh"]
+script = ExtResource("1_86lpp")
+word = "TIGE"
+hint = "Partie allongée des plantes qui porte les feuilles."
+
+[sub_resource type="Resource" id="Resource_4v6vp"]
+script = ExtResource("1_86lpp")
+word = "PLANTE"
+hint = "Etre vivant qui est capable d'utiliser la lumière du Soleil pour se développer."
+
+[sub_resource type="Resource" id="Resource_c8i6y"]
+script = ExtResource("1_86lpp")
+word = "GERMINATION"
+hint = "Etapes par lesquelles une graine se développe et devient une plante."
+
+[sub_resource type="Resource" id="Resource_r0hnc"]
+script = ExtResource("1_86lpp")
+word = "FRUIT"
+hint = "Partie de la plante qui contient les graines et qui peut être comestible."
+
+[sub_resource type="Resource" id="Resource_xsw2i"]
+script = ExtResource("1_86lpp")
+word = "FLEUR"
+hint = "Partie de la plante qui est souvent odorante et contenant les organes reproducteurs."
+
+[sub_resource type="Resource" id="Resource_eymc4"]
+script = ExtResource("1_86lpp")
+word = "SEMIS"
+hint = "Opération qui consiste à mettre en terre les graines ou semences."
+
+[sub_resource type="Resource" id="Resource_60sik"]
+script = ExtResource("1_86lpp")
+word = "GRAINE"
+hint = "Partie de la plante qui, après avoir germé, assure sa reproduction."
+
+[sub_resource type="Resource" id="Resource_6wssq"]
+script = ExtResource("1_86lpp")
+word = "RACINE"
+hint = "Partie invisible de la plante, qui s'enfonce dans le sol et lui permet de tenir."
+
+[sub_resource type="Resource" id="Resource_dojx2"]
+script = ExtResource("1_86lpp")
+word = "FEUILLE"
+hint = "Organe, partie de la plante qui capte la lumière."
+
+[sub_resource type="Resource" id="Resource_eficl"]
+script = ExtResource("1_86lpp")
+word = "ARBUSTE"
+hint = "Arbre de petite taille, ne dépassant pas 10 mètres de haut."
+
+[resource]
+script = ExtResource("2_txu7q")
+clues = Array[ExtResource("1_86lpp")]([SubResource("Resource_0eomh"), SubResource("Resource_4v6vp"), SubResource("Resource_c8i6y"), SubResource("Resource_r0hnc"), SubResource("Resource_xsw2i"), SubResource("Resource_eymc4"), SubResource("Resource_60sik"), SubResource("Resource_6wssq"), SubResource("Resource_dojx2"), SubResource("Resource_eficl")])

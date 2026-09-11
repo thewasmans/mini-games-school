@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bx5h5jljmvggd"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_xogj3"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_uc2lo"]
+
+[sub_resource type="Resource" id="Resource_rlnhp"]
+script = ExtResource("1_xogj3")
+word = "VENN"
+hint = "Diagramme permettant de représenter des ensembles d'objets qui ont des caractéristiques communes."
+
+[sub_resource type="Resource" id="Resource_7g1l0"]
+script = ExtResource("1_xogj3")
+word = "PERIODE"
+hint = "Groupe d'éléments de la ligne horizontale du tableau périodique, ils ont le même nombre de couches électroniques."
+
+[sub_resource type="Resource" id="Resource_f7ew3"]
+script = ExtResource("1_xogj3")
+word = "NUCLEIDES"
+hint = "Classes d'atomes dont le noyau possède le même nombre de protons, le même nombre de neutrons et le même état énergétique."
+
+[sub_resource type="Resource" id="Resource_1527x"]
+script = ExtResource("1_xogj3")
+word = "DESINTEGRATION"
+hint = "Transformation spontanée d'un noyau atomique par perte de masse."
+
+[sub_resource type="Resource" id="Resource_4oobr"]
+script = ExtResource("1_xogj3")
+word = "FISSION"
+hint = "Réaction de désintégration d’un noyau lourd en plusieurs noyaux plus légers avec libération d’énergie."
+
+[sub_resource type="Resource" id="Resource_1d7uu"]
+script = ExtResource("1_xogj3")
+word = "NUCLEONS"
+hint = "Constituants du noyau (protons et neutrons)."
+
+[sub_resource type="Resource" id="Resource_ktjho"]
+script = ExtResource("1_xogj3")
+word = "CARNOT"
+hint = "Théorème basé sur les principes du transfert de chaleur, de l'élasticité et des processus non réversibles."
+
+[sub_resource type="Resource" id="Resource_s05op"]
+script = ExtResource("1_xogj3")
+word = "RADIOACTIVITE"
+hint = "Phénomène physique par lequel des noyaux d’atomes instables se transforment spontanément en d'autres atomes."
+
+[sub_resource type="Resource" id="Resource_u6ytf"]
+script = ExtResource("1_xogj3")
+word = "EINSTEIN"
+hint = "Relation entre la masse d'une particule et la vitesse de la lumière dans le vide."
+
+[sub_resource type="Resource" id="Resource_1eqsx"]
+script = ExtResource("1_xogj3")
+word = "ISOTOPES"
+hint = "Eléments chimiques qui possèdent le même nombre de protons (et d'électrons), mais qui diffèrent par le nombre de neutrons."
+
+[sub_resource type="Resource" id="Resource_m1wvh"]
+script = ExtResource("1_xogj3")
+word = "FUSION"
+hint = "Réaction nucléaire au cours de laquelle deux noyaux légers fusionnent en un noyau plus lourd avec libération d’énergie."
+
+[resource]
+script = ExtResource("2_uc2lo")
+clues = Array[ExtResource("1_xogj3")]([SubResource("Resource_rlnhp"), SubResource("Resource_7g1l0"), SubResource("Resource_f7ew3"), SubResource("Resource_1527x"), SubResource("Resource_4oobr"), SubResource("Resource_1d7uu"), SubResource("Resource_ktjho"), SubResource("Resource_s05op"), SubResource("Resource_u6ytf"), SubResource("Resource_1eqsx"), SubResource("Resource_m1wvh")])

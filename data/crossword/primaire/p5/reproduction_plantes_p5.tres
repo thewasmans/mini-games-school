@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dkqk08m7hwtk7"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_27kml"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_vghy2"]
+
+[sub_resource type="Resource" id="Resource_hi0i6"]
+script = ExtResource("1_27kml")
+word = "FLEUR"
+hint = "Partie de la plante qui est souvent odorante et contenant les organes reproducteurs."
+
+[sub_resource type="Resource" id="Resource_fmhcr"]
+script = ExtResource("1_27kml")
+word = "POIRIER"
+hint = "Arbre dont le fruit est la poire."
+
+[sub_resource type="Resource" id="Resource_3lkya"]
+script = ExtResource("1_27kml")
+word = "ETAMINE"
+hint = "Partie mâle de la fleur contenant les grains de pollen."
+
+[sub_resource type="Resource" id="Resource_rk3ae"]
+script = ExtResource("1_27kml")
+word = "POLLINISATION"
+hint = "Transport du pollen des étamines (partie mâle des fleurs) au pistil (partie femelle)."
+
+[sub_resource type="Resource" id="Resource_xo0mc"]
+script = ExtResource("1_27kml")
+word = "POMMIER"
+hint = "Arbre dont le fruit est la pomme."
+
+[sub_resource type="Resource" id="Resource_shugc"]
+script = ExtResource("1_27kml")
+word = "GRAINE"
+hint = "Partie de la plante qui, après avoir germé, assure sa reproduction."
+
+[sub_resource type="Resource" id="Resource_qgha3"]
+script = ExtResource("1_27kml")
+word = "RACINE"
+hint = "Partie invisible de la plante, qui s'enfonce dans le sol et lui permet de tenir."
+
+[sub_resource type="Resource" id="Resource_kghl3"]
+script = ExtResource("1_27kml")
+word = "PISTIL"
+hint = "Partie femelle de la fleur contenant l'ovaire."
+
+[resource]
+script = ExtResource("2_vghy2")
+clues = Array[ExtResource("1_27kml")]([SubResource("Resource_hi0i6"), SubResource("Resource_fmhcr"), SubResource("Resource_3lkya"), SubResource("Resource_rk3ae"), SubResource("Resource_xo0mc"), SubResource("Resource_shugc"), SubResource("Resource_qgha3"), SubResource("Resource_kghl3")])

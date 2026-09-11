@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://2blfevnnprjk"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_kxpl4"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_gaihq"]
+
+[sub_resource type="Resource" id="Resource_i5vb8"]
+script = ExtResource("1_kxpl4")
+word = "ZOOPHAGE"
+hint = "Être vivant qui se nourrit d'animaux et de dérivés."
+
+[sub_resource type="Resource" id="Resource_g56dg"]
+script = ExtResource("1_kxpl4")
+word = "ADAPTATION"
+hint = "Changements biologiques et/ou physiques d'une espèce par rapport à son environnement."
+
+[sub_resource type="Resource" id="Resource_48s27"]
+script = ExtResource("1_kxpl4")
+word = "RESEAU"
+hint = "Ensemble de chaines alimentaires."
+
+[sub_resource type="Resource" id="Resource_rvk42"]
+script = ExtResource("1_kxpl4")
+word = "REGIME"
+hint = "Terme utilisé pour définir le mode d'alimentation d'un animal."
+
+[sub_resource type="Resource" id="Resource_tdjld"]
+script = ExtResource("1_kxpl4")
+word = "OMNIVORE"
+hint = "Être vivant qui se nourrit de viandes et d'herbes."
+
+[sub_resource type="Resource" id="Resource_ybrnh"]
+script = ExtResource("1_kxpl4")
+word = "PRODUCTEUR"
+hint = "Organisme qui est à la base de la chaine alimentaire."
+
+[sub_resource type="Resource" id="Resource_2h0bh"]
+script = ExtResource("1_kxpl4")
+word = "DECOMPOSEUR"
+hint = "Organisme qui transforme la matière organique."
+
+[sub_resource type="Resource" id="Resource_1ytwo"]
+script = ExtResource("1_kxpl4")
+word = "PISCIVORE"
+hint = "Être vivant qui se nourrit de poissons."
+
+[sub_resource type="Resource" id="Resource_s5nvs"]
+script = ExtResource("1_kxpl4")
+word = "ESPECE"
+hint = "Terme utilisé en biologie pour caractériser un être vivant."
+
+[sub_resource type="Resource" id="Resource_dwwos"]
+script = ExtResource("1_kxpl4")
+word = "MAILLON"
+hint = "Partie, étage dans la chaine alimentaire."
+
+[sub_resource type="Resource" id="Resource_e0ef4"]
+script = ExtResource("1_kxpl4")
+word = "EAU"
+hint = "Peut être en surface ou souterraine dans son cycle."
+
+[resource]
+script = ExtResource("2_gaihq")
+clues = Array[ExtResource("1_kxpl4")]([SubResource("Resource_i5vb8"), SubResource("Resource_g56dg"), SubResource("Resource_48s27"), SubResource("Resource_rvk42"), SubResource("Resource_tdjld"), SubResource("Resource_ybrnh"), SubResource("Resource_2h0bh"), SubResource("Resource_1ytwo"), SubResource("Resource_s5nvs"), SubResource("Resource_dwwos"), SubResource("Resource_e0ef4")])

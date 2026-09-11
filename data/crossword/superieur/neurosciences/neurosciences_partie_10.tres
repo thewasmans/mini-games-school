@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cy7rbighbspns"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_k62kv"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_v5k03"]
+
+[sub_resource type="Resource" id="Resource_7ro8t"]
+script = ExtResource("1_k62kv")
+word = "MIGRAINE"
+hint = "Maladie neurologique qui provoque des maux de tête et des scintillements."
+
+[sub_resource type="Resource" id="Resource_qoirh"]
+script = ExtResource("1_k62kv")
+word = "BALINT"
+hint = "Syndrome qui provoque une apraxie du regard."
+
+[sub_resource type="Resource" id="Resource_c7ljk"]
+script = ExtResource("1_k62kv")
+word = "AKINETOPSIE"
+hint = "Agnosie visuelle du mouvement."
+
+[sub_resource type="Resource" id="Resource_wyluu"]
+script = ExtResource("1_k62kv")
+word = "RESILIENCE"
+hint = "Capacité à se reconstruire après un choc émotionnel."
+
+[sub_resource type="Resource" id="Resource_8rl2q"]
+script = ExtResource("1_k62kv")
+word = "CLASSIQUE"
+hint = "Forme de conditionnement qui implique un stimulus neutre et une réponse conditionnelle."
+
+[sub_resource type="Resource" id="Resource_xeiik"]
+script = ExtResource("1_k62kv")
+word = "BROCA"
+hint = "Forme d'aphasie où le sujet parle en se répétant."
+
+[sub_resource type="Resource" id="Resource_phlr1"]
+script = ExtResource("1_k62kv")
+word = "PROCEDURALE"
+hint = "Mémoire concernant les savoirs faire, comme l'apprentissage du vélo."
+
+[sub_resource type="Resource" id="Resource_f3ojt"]
+script = ExtResource("1_k62kv")
+word = "RASMUSSEN"
+hint = "Forme d'épilepsie qui touche les enfants."
+
+[sub_resource type="Resource" id="Resource_vkgty"]
+script = ExtResource("1_k62kv")
+word = "ANTEROGRADE"
+hint = "Amnésie de type trouble de la consolidation."
+
+[sub_resource type="Resource" id="Resource_xe5gq"]
+script = ExtResource("1_k62kv")
+word = "SYLLABIQUE"
+hint = "Méthode de lecture où on enseigne les lettres, puis les mots."
+
+[sub_resource type="Resource" id="Resource_43lex"]
+script = ExtResource("1_k62kv")
+word = "WERNICKE"
+hint = "Forme d'aphasie où le sujet utilise beaucoup de mots mais formulent des phrases insensées."
+
+[sub_resource type="Resource" id="Resource_5i16c"]
+script = ExtResource("1_k62kv")
+word = "EXPLICITE"
+hint = "Comprend les mémoires sémantique et épisodique."
+
+[sub_resource type="Resource" id="Resource_xjwyq"]
+script = ExtResource("1_k62kv")
+word = "OPERANT"
+hint = "Forme de conditionnement qui implique des récompenses et des punitions."
+
+[sub_resource type="Resource" id="Resource_v8cy0"]
+script = ExtResource("1_k62kv")
+word = "EMPAN"
+hint = "Nombre d'éléments que l'on peut restituer après mémorisation."
+
+[sub_resource type="Resource" id="Resource_o3lob"]
+script = ExtResource("1_k62kv")
+word = "OUBLI"
+hint = "Processus naturel de la mémoire permettant de laisser la place à de nouveaux souvenirs."
+
+[resource]
+script = ExtResource("2_v5k03")
+clues = Array[ExtResource("1_k62kv")]([SubResource("Resource_7ro8t"), SubResource("Resource_qoirh"), SubResource("Resource_c7ljk"), SubResource("Resource_wyluu"), SubResource("Resource_8rl2q"), SubResource("Resource_xeiik"), SubResource("Resource_phlr1"), SubResource("Resource_f3ojt"), SubResource("Resource_vkgty"), SubResource("Resource_xe5gq"), SubResource("Resource_43lex"), SubResource("Resource_5i16c"), SubResource("Resource_xjwyq"), SubResource("Resource_v8cy0"), SubResource("Resource_o3lob")])

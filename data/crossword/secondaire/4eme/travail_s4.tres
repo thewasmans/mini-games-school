@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bx5qih0cg10cj"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_jigfl"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_nywmn"]
+
+[sub_resource type="Resource" id="Resource_x5gai"]
+script = ExtResource("1_jigfl")
+word = "CINETIQUE"
+hint = "Se dit d'une énergie liée au mouvement."
+
+[sub_resource type="Resource" id="Resource_jgr3j"]
+script = ExtResource("1_jigfl")
+word = "TRAVAIL"
+hint = "Energie fournie par une force lorsque son point d'application se déplace."
+
+[sub_resource type="Resource" id="Resource_jixsh"]
+script = ExtResource("1_jigfl")
+word = "RESISTANT"
+hint = "Forme de travail négatif lorsque la force et le déplacement vont dans le sens opposé."
+
+[sub_resource type="Resource" id="Resource_76mo3"]
+script = ExtResource("1_jigfl")
+word = "ACCELERATION"
+hint = "Correspond à la variation de la vitesse au cours du temps."
+
+[sub_resource type="Resource" id="Resource_0g5w4"]
+script = ExtResource("1_jigfl")
+word = "VITESSE"
+hint = "Rapport entre la distance parcourue et le temps."
+
+[sub_resource type="Resource" id="Resource_4dx7g"]
+script = ExtResource("1_jigfl")
+word = "MOTEUR"
+hint = "Forme de travail positif lorsque la force et le déplacement vont dans le même sens."
+
+[sub_resource type="Resource" id="Resource_dbg10"]
+script = ExtResource("1_jigfl")
+word = "PUISSANCE"
+hint = "Rapport entre le travail et l'unité de temps."
+
+[sub_resource type="Resource" id="Resource_lob0h"]
+script = ExtResource("1_jigfl")
+word = "CHARLES"
+hint = "Loi disant que le volume d'un gaz est proportionnel à sa température absolue lorsque le nombre de particules et la pression sont constants."
+
+[sub_resource type="Resource" id="Resource_xq655"]
+script = ExtResource("1_jigfl")
+word = "TRANSLATION"
+hint = "Déplacement d'une figure dont toutes les parties vont dans la même direction."
+
+[sub_resource type="Resource" id="Resource_84kns"]
+script = ExtResource("1_jigfl")
+word = "POTENTIELLE"
+hint = "Se dit d'une énergie liée à la position."
+
+[sub_resource type="Resource" id="Resource_2hm4o"]
+script = ExtResource("1_jigfl")
+word = "MECANIQUE"
+hint = "Somme de l'énergie potentielle et de l'énergie cinétique."
+
+[sub_resource type="Resource" id="Resource_o8vte"]
+script = ExtResource("1_jigfl")
+word = "HOOKE"
+hint = "Loi de comportement des solides soumis à une déformation élastique de faible amplitude."
+
+[resource]
+script = ExtResource("2_nywmn")
+clues = Array[ExtResource("1_jigfl")]([SubResource("Resource_x5gai"), SubResource("Resource_jgr3j"), SubResource("Resource_jixsh"), SubResource("Resource_76mo3"), SubResource("Resource_0g5w4"), SubResource("Resource_4dx7g"), SubResource("Resource_dbg10"), SubResource("Resource_lob0h"), SubResource("Resource_xq655"), SubResource("Resource_84kns"), SubResource("Resource_2hm4o"), SubResource("Resource_o8vte")])

@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://b1qoaa3mvox1b"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_e4igp"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_pf4gf"]
+
+[sub_resource type="Resource" id="Resource_tac6i"]
+script = ExtResource("1_e4igp")
+word = "MITOSE"
+hint = "Processus de division cellulaire permettant d'obtenir des cellules filles génétiquement identiques."
+
+[sub_resource type="Resource" id="Resource_qlft8"]
+script = ExtResource("1_e4igp")
+word = "RECOMBINES"
+hint = "Caractérise les individus qui sont différents des parents au niveau génétique."
+
+[sub_resource type="Resource" id="Resource_b81xc"]
+script = ExtResource("1_e4igp")
+word = "ATP"
+hint = "Adénosine TriPhosphate."
+
+[sub_resource type="Resource" id="Resource_2if4m"]
+script = ExtResource("1_e4igp")
+word = "CARACTERE"
+hint = "Terme utilisé par Mendel avant la découverte des gènes."
+
+[sub_resource type="Resource" id="Resource_fic3a"]
+script = ExtResource("1_e4igp")
+word = "DISJONCTION"
+hint = "Séparation des allèles au moment de la formation des gamètes."
+
+[sub_resource type="Resource" id="Resource_v43kf"]
+script = ExtResource("1_e4igp")
+word = "VARIABILITE"
+hint = "Caractérise l'ensemble des différences entre les matériels génétiques des êtres vivants."
+
+[sub_resource type="Resource" id="Resource_iykft"]
+script = ExtResource("1_e4igp")
+word = "MONOHYBRIDISME"
+hint = "L'étude de la transmission d’un caractère."
+
+[sub_resource type="Resource" id="Resource_w17sc"]
+script = ExtResource("1_e4igp")
+word = "GRISE"
+hint = "Substance associée à la substance blanche dans le cerveau."
+
+[sub_resource type="Resource" id="Resource_a5fq4"]
+script = ExtResource("1_e4igp")
+word = "GENOTYPE"
+hint = "Information portée par le génome d'un organisme, différente du phénotype."
+
+[sub_resource type="Resource" id="Resource_jkdln"]
+script = ExtResource("1_e4igp")
+word = "PUNNETT"
+hint = "Echiquier, diagramme qui permet de prédire le patrimoine génétique résultant d’un croisement entre parents."
+
+[sub_resource type="Resource" id="Resource_u7q3d"]
+script = ExtResource("1_e4igp")
+word = "ENJAMBEMENT"
+hint = "Autre terme utilisé pour les crossing-over, lorsque les chromatides s’entrecroisent et échangent des fragments."
+
+[sub_resource type="Resource" id="Resource_ufpoy"]
+script = ExtResource("1_e4igp")
+word = "HYBRIDE"
+hint = "Organisme issu du croisement de deux individus d'espèces différentes."
+
+[sub_resource type="Resource" id="Resource_2ib8d"]
+script = ExtResource("1_e4igp")
+word = "OGM"
+hint = "Organisme vivant dont le patrimoine génétique a été modifié par l'intervention humaine."
+
+[sub_resource type="Resource" id="Resource_swt54"]
+script = ExtResource("1_e4igp")
+word = "SAUVAGE"
+hint = "Phénotype que l'on caractérise comme étant le plus répandu."
+
+[sub_resource type="Resource" id="Resource_ehsbl"]
+script = ExtResource("1_e4igp")
+word = "AUTOFECONDATION"
+hint = "Capacité de la plante à se reproduire seule de manière sexuée."
+
+[resource]
+script = ExtResource("2_pf4gf")
+clues = Array[ExtResource("1_e4igp")]([SubResource("Resource_tac6i"), SubResource("Resource_qlft8"), SubResource("Resource_b81xc"), SubResource("Resource_2if4m"), SubResource("Resource_fic3a"), SubResource("Resource_v43kf"), SubResource("Resource_iykft"), SubResource("Resource_w17sc"), SubResource("Resource_a5fq4"), SubResource("Resource_jkdln"), SubResource("Resource_u7q3d"), SubResource("Resource_ufpoy"), SubResource("Resource_2ib8d"), SubResource("Resource_swt54"), SubResource("Resource_ehsbl")])
