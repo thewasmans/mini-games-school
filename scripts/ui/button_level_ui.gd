@@ -10,6 +10,7 @@ func initialize(level_index_value: int, is_unlocked: bool) -> void:
 	text = str(level_index + 1)
 	disabled = not is_unlocked
 	pressed.connect(_on_pressed)
+	ButtonPressAnimation.attach(self)
 
 func set_unlocked(is_unlocked: bool) -> void:
 	disabled = not is_unlocked

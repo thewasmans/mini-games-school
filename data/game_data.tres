@@ -41,17 +41,7 @@ name = "Primaire"
 levels = Array[ExtResource("2_r34r7")]([SubResource("Resource_pftn3"), SubResource("Resource_yqv0c"), SubResource("Resource_k2o1c")])
 metadata/_custom_type_script = "uid://dqstlvldata01"
 
-[sub_resource type="Resource" id="StudyLevel_secondaire"]
-script = ExtResource("7_stdylvl")
-name = "Secondaire"
-metadata/_custom_type_script = "uid://dqstlvldata01"
-
-[sub_resource type="Resource" id="StudyLevel_superieur"]
-script = ExtResource("7_stdylvl")
-name = "Supérieur"
-metadata/_custom_type_script = "uid://dqstlvldata01"
-
 [resource]
 script = ExtResource("1_urpql")
-study_levels = Array[ExtResource("7_stdylvl")]([SubResource("StudyLevel_primaire"), SubResource("StudyLevel_secondaire"), SubResource("StudyLevel_superieur")])
+study_levels = Array[ExtResource("7_stdylvl")]([SubResource("StudyLevel_primaire")])
 metadata/_custom_type_script = "uid://cp2inhinnjjop"
