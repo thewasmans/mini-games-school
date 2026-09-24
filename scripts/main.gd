@@ -4,6 +4,7 @@ extends Node
 @export var game_manager: GameManager
 
 func _ready() -> void:
+	ButtonPressAnimation.watch_default_theme_buttons(get_tree())
 	game_manager.initialize()
 	_spawn_debug_helper()
 

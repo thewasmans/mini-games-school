@@ -23,10 +23,10 @@ region_rect = Rect2(19, 702, 304, 304)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u386j"]
 texture = ExtResource("2_u386j")
-texture_margin_left = 71.94
-texture_margin_top = 53.24002
+texture_margin_left = 60.0
+texture_margin_top = 51.289482
 texture_margin_right = 56.87002
-texture_margin_bottom = 72.60003
+texture_margin_bottom = 67.142235
 region_rect = Rect2(361, 704, 301, 300)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pq3oh"]

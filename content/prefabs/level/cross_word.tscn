@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c3upgh7dpfrhf" path="res://content/sprites/ui/ui_background.png" id="3_yoao0"]
 [ext_resource type="PackedScene" uid="uid://bmemouiscn012" path="res://content/prefabs/mini_games/memo_ui.tscn" id="4_memo"]
 [ext_resource type="PackedScene" uid="uid://ccryptuiscn12" path="res://content/prefabs/mini_games/crypto_ui.tscn" id="5_crypto"]
+[ext_resource type="Texture2D" uid="uid://bssxvehr8hskc" path="res://content/sprites/ui/icon_return.png" id="6_back"]
 
 [node name="Level" type="Control" unique_id=1301094388 node_paths=PackedStringArray("mini_game_label", "mini_game_container", "validate_button", "back_button")]
 layout_mode = 3
@@ -14,13 +15,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8od4f")
-mini_game_label = NodePath("MiniGameLabel")
-mini_game_container = NodePath("MiniGameContainer")
+mini_game_label = NodePath("Layout/MiniGameLabel")
+mini_game_container = NodePath("Layout/MiniGameContainer")
 crossword_prefab = ExtResource("2_xword")
 memo_prefab = ExtResource("4_memo")
 crypto_prefab = ExtResource("5_crypto")
-validate_button = NodePath("ValidateButton")
-back_button = NodePath("BackButton")
+validate_button = NodePath("Layout/ValidateButton")
+back_button = NodePath("Layout/TopBar/BackButton")
 
 [node name="Background" type="TextureRect" parent="." unique_id=2094036631]
 layout_mode = 1
@@ -33,21 +34,7 @@ texture = ExtResource("3_yoao0")
 expand_mode = 3
 stretch_mode = 6
 
-[node name="MiniGameLabel" type="Label" parent="." unique_id=86546250]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -167.0
-offset_top = 28.0
-offset_right = 167.0
-offset_bottom = 84.0
-grow_horizontal = 2
-text = "CROSS WORD"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MiniGameContainer" type="Control" parent="." unique_id=1215192136]
+[node name="Layout" type="VBoxContainer" parent="." unique_id=937368516]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -55,27 +42,32 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="BackButton" type="Button" parent="." unique_id=676017118]
-layout_mode = 1
-offset_left = 50.0
-offset_top = 50.0
-offset_right = 328.0
-offset_bottom = 184.0
+[node name="TopBar" type="Control" parent="Layout" unique_id=2005981840]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="Layout/TopBar" unique_id=731727699]
+layout_mode = 0
+offset_right = 214.0
+offset_bottom = 194.0
 scale = Vector2(0.525, 0.525)
 theme_override_font_sizes/font_size = 39
-text = "RETURN"
+icon = ExtResource("6_back")
+icon_alignment = 1
 
-[node name="ValidateButton" type="Button" parent="." unique_id=893230505]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -100.0
-offset_top = -80.0
-offset_right = 100.0
-offset_bottom = -30.0
-grow_horizontal = 2
-grow_vertical = 0
+[node name="MiniGameLabel" type="Label" parent="Layout" unique_id=1895217850]
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+text = "CROSS WORD"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MiniGameContainer" type="Control" parent="Layout" unique_id=1891193126]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ValidateButton" type="Button" parent="Layout" unique_id=1310090121]
+custom_minimum_size = Vector2(300, 125)
+layout_mode = 2
+size_flags_horizontal = 4
 text = "Valider le niveau"
