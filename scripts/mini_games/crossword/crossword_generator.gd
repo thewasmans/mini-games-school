@@ -1,7 +1,19 @@
+@tool
 class_name CrosswordGenerator
 extends RefCounted
 
 const MAX_ATTEMPTS := 100
+
+static func regenerate(crossword_data: CrosswordData) -> void:
+	var placements := generate(crossword_data.clues)
+	if placements.is_empty():
+		return
+	var origin := placements[0].start
+	for placement in placements:
+		origin = Vector2i(mini(origin.x, placement.start.x), mini(origin.y, placement.start.y))
+	for placement in placements:
+		placement.word_data.grid_position = placement.start - origin
+		placement.word_data.is_horizontal = placement.is_horizontal
 
 static func generate(clues: Array[WordData]) -> Array[CrosswordWordPlacement]:
 	var best_placements: Array[CrosswordWordPlacement] = []

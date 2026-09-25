@@ -183,6 +183,7 @@ func _build_crossword_data(rows: Array[PackedStringArray]) -> CrosswordData:
 		return null
 	var crossword_data := CrosswordData.new()
 	crossword_data.clues = clues
+	CrosswordGenerator.regenerate(crossword_data)
 	return crossword_data
 
 func _build_memo_data(csv_path: String, rows: Array[PackedStringArray]) -> MemoData:
