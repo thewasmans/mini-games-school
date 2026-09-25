@@ -38,7 +38,7 @@ The project uses a **manager pattern**: a central `GameManager` owns a list of `
 - `data/`: `GameData` `.tres` instances.
 - `scripts/`: mirrors the conceptual layers — `managers/`, `state/`, `data/`, `ui/`.
 - `scripts/mini_games/`: one folder per mini-game (`crossword/`, `memo/`, `crypto/`) holding that game's runtime logic and `Resource` data classes; `mini_game_data.gd` (the shared `MiniGameData` base) sits at the folder root. The matching `*_ui.gd` scripts live in `scripts/ui/` with the rest of the UI scripts.
-- Crossword grids are generated in the editor, not at runtime: each `WordData` stores its `grid_position` and `is_horizontal`, written by `CrosswordGenerator.regenerate()` from the "Mots croisés" main-screen plugin (`addons/crossword_editor/`) or the CSV importer. `CrosswordUI` only reads them via `CrosswordData.build_placements()`. Scripts used by the plugin (crossword data, generator, placement, `MiniGameData`) are `@tool`.
+- Crossword grids are generated in the editor, not at runtime: each `WordData` stores its `grid_position` and `is_horizontal`, written by `CrosswordGenerator.regenerate()` from the "Crossword" main-screen plugin (`addons/crossword/`) or the CSV importer. `CrosswordUI` only reads them via `CrosswordData.build_placements()`. Scripts used by the plugin (crossword data, generator, placement, `MiniGameData`) are `@tool`.
 
 ## Key conventions
 

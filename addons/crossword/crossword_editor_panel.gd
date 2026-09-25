@@ -1,9 +1,10 @@
 @tool
 extends VBoxContainer
 
-const CrosswordGridPreview := preload("res://addons/crossword_editor/crossword_grid_preview.gd")
-const SETTINGS_SECTION := "crossword_editor"
+const CrosswordGridPreview := preload("res://addons/crossword/crossword_grid_preview.gd")
+const SETTINGS_SECTION := "crossword"
 const SETTINGS_LAST_PATH := "last_path"
+const SETTINGS_SHOW_FULL_GRID := "show_full_grid"
 const ISOLATED_TEXT_COLOR := Color(1.0, 0.7, 0.4)
 const ERROR_TEXT_COLOR := Color(1.0, 0.45, 0.45)
 
@@ -12,8 +13,10 @@ var _file_dialog: EditorFileDialog
 var _path_label: Label
 var _status_label: Label
 var _regenerate_button: Button
+var _full_grid_toggle: CheckButton
 var _grid_preview: CrosswordGridPreview
 var _clue_list: ItemList
+var _placements: Array[CrosswordWordPlacement] = []
 
 func _ready() -> void:
 	size_flags_vertical = SIZE_EXPAND_FILL
@@ -39,6 +42,10 @@ func _build_toolbar() -> void:
 	_regenerate_button.icon = _editor_icon("Reload")
 	_regenerate_button.pressed.connect(_on_regenerate_pressed)
 	toolbar.add_child(_regenerate_button)
+	_full_grid_toggle = CheckButton.new()
+	_full_grid_toggle.text = "Grille complète"
+	_full_grid_toggle.toggled.connect(_on_full_grid_toggled)
+	toolbar.add_child(_full_grid_toggle)
 	_path_label = Label.new()
 	_path_label.size_flags_horizontal = SIZE_EXPAND_FILL
 	_path_label.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
@@ -59,8 +66,11 @@ func _build_body() -> void:
 	scroll.add_child(center)
 	_grid_preview = CrosswordGridPreview.new()
 	center.add_child(_grid_preview)
+	_full_grid_toggle.button_pressed = EditorInterface.get_editor_settings().get_project_metadata(SETTINGS_SECTION, SETTINGS_SHOW_FULL_GRID, false)
 	_clue_list = ItemList.new()
 	_clue_list.custom_minimum_size.x = 360
+	_clue_list.item_selected.connect(_on_clue_selected)
+	_clue_list.empty_clicked.connect(_on_clue_list_empty_clicked)
 	split.add_child(_clue_list)
 
 func _build_file_dialog() -> void:
@@ -101,25 +111,41 @@ func _on_regenerate_pressed() -> void:
 		return
 	_refresh()
 
+func _on_full_grid_toggled(is_pressed: bool) -> void:
+	_grid_preview.show_full_grid = is_pressed
+	EditorInterface.get_editor_settings().set_project_metadata(SETTINGS_SECTION, SETTINGS_SHOW_FULL_GRID, is_pressed)
+
+func _on_clue_selected(index: int) -> void:
+	_grid_preview.highlighted_placement = _placements[index]
+
+func _on_clue_list_empty_clicked(_position: Vector2, _mouse_button_index: int) -> void:
+	_clue_list.deselect_all()
+	_grid_preview.highlighted_placement = null
+
 func _refresh() -> void:
 	var has_data := _crossword_data != null
 	_regenerate_button.disabled = not has_data
 	_path_label.text = _crossword_data.resource_path if has_data else "Aucun mot croisé ouvert"
+	var selected_items := _clue_list.get_selected_items()
 	_clue_list.clear()
 	_status_label.remove_theme_color_override("font_color")
 	if not has_data:
-		_grid_preview.set_placements([])
+		_placements.clear()
+		_grid_preview.set_placements(_placements)
 		_status_label.text = ""
 		return
-	var placements := _crossword_data.build_placements()
-	_grid_preview.set_placements(placements)
-	for index in placements.size():
-		var placement := placements[index]
+	_placements = _crossword_data.build_placements()
+	_grid_preview.set_placements(_placements)
+	for index in _placements.size():
+		var placement := _placements[index]
 		var arrow := "→" if placement.is_horizontal else "↓"
 		var item_index := _clue_list.add_item("%d. %s %s (%d, %d) — %s" % [index + 1, arrow, placement.word_data.word, placement.start.x, placement.start.y, placement.word_data.hint])
 		if placement in _grid_preview.isolated_placements:
 			_clue_list.set_item_custom_fg_color(item_index, ISOLATED_TEXT_COLOR)
-	_status_label.text = "%d mot(s) · %d isolé(s) · %d case(s) en conflit" % [placements.size(), _grid_preview.isolated_placements.size(), _grid_preview.conflict_cells.size()]
+	if not selected_items.is_empty() and selected_items[0] < _placements.size():
+		_clue_list.select(selected_items[0])
+		_on_clue_selected(selected_items[0])
+	_status_label.text = "%d mot(s) · %d isolé(s) · %d case(s) en conflit" % [_placements.size(), _grid_preview.isolated_placements.size(), _grid_preview.conflict_cells.size()]
 
 func _show_error(message: String) -> void:
 	_status_label.text = message
