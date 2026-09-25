@@ -42,6 +42,66 @@ word = "Spider-Man"
 hint = "Spider-Man"
 metadata/_custom_type_script = "uid://cygosmrxwmpq0"
 
+[sub_resource type="Resource" id="Resource_word01"]
+script = ExtResource("1_882to")
+word = "EAU"
+hint = "liquide essentiel à la vie."
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[sub_resource type="Resource" id="Resource_word02"]
+script = ExtResource("1_882to")
+word = "GLACE"
+hint = "eau à l'état solide."
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[sub_resource type="Resource" id="Resource_word03"]
+script = ExtResource("1_882to")
+word = "VAPEUR"
+hint = "eau à l'état gazeux."
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[sub_resource type="Resource" id="Resource_word04"]
+script = ExtResource("1_882to")
+word = "FUSION"
+hint = "passage de l'état solide à l'état liquide."
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[sub_resource type="Resource" id="Resource_word05"]
+script = ExtResource("1_882to")
+word = "GEL"
+hint = "l'eau le devient sous zéro degré."
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[sub_resource type="Resource" id="Resource_word06"]
+script = ExtResource("1_882to")
+word = "NUAGE"
+hint = "amas de gouttelettes dans le ciel."
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[sub_resource type="Resource" id="Resource_word07"]
+script = ExtResource("1_882to")
+word = "PLUIE"
+hint = "eau qui tombe des nuages."
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[sub_resource type="Resource" id="Resource_word08"]
+script = ExtResource("1_882to")
+word = "MATIERE"
+hint = "tout ce qui a une masse et occupe un volume."
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[sub_resource type="Resource" id="Resource_word09"]
+script = ExtResource("1_882to")
+word = "CHALEUR"
+hint = "elle fait fondre la glace."
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[sub_resource type="Resource" id="Resource_word10"]
+script = ExtResource("1_882to")
+word = "ATOME"
+hint = "plus petite brique de la matière."
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
 [resource]
 script = ExtResource("2_t20gs")
-clues = Array[ExtResource("1_882to")]([SubResource("Resource_qw841"), SubResource("Resource_p46xh"), SubResource("Resource_gy38v"), SubResource("Resource_lhs1r"), SubResource("Resource_pftn3"), SubResource("Resource_7lvw4"), SubResource("Resource_2ewf2")])
+clues = Array[ExtResource("1_882to")]([SubResource("Resource_qw841"), SubResource("Resource_p46xh"), SubResource("Resource_gy38v"), SubResource("Resource_lhs1r"), SubResource("Resource_pftn3"), SubResource("Resource_7lvw4"), SubResource("Resource_2ewf2"), SubResource("Resource_word01"), SubResource("Resource_word02"), SubResource("Resource_word03"), SubResource("Resource_word04"), SubResource("Resource_word05"), SubResource("Resource_word06"), SubResource("Resource_word07"), SubResource("Resource_word08"), SubResource("Resource_word09"), SubResource("Resource_word10")])
