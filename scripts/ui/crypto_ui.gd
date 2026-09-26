@@ -6,10 +6,12 @@ signal completed
 const NORMAL_COLOR := Color.WHITE
 const CORRECT_COLOR := Color(0.5, 1.0, 0.5)
 const INCORRECT_COLOR := Color(1.0, 0.5, 0.5)
-const SLOT_SIZE := Vector2(32, 44)
-const LETTER_SIZE := Vector2(24, 44)
+const SLOT_SIZE := Vector2(26, 38)
+const LETTER_SIZE := Vector2(0, 44)
 const SPACE_SIZE := Vector2(16, 44)
 const REVEAL_DELAY := 0.6
+const HIDDEN_BOX_STYLES: Array[StringName] = [&"normal", &"read_only"]
+const LETTER_COLOR_NAMES: Array[StringName] = [&"font_color", &"font_uneditable_color"]
 
 @export var flow_container: FlowContainer
 @export var hint_label: Label
@@ -18,6 +20,7 @@ var _crypto_data: CryptoData
 var _puzzle_index: int = 0
 var _puzzle: CryptoPuzzle
 var _slots: Dictionary = {}
+var _hidden_box_style := StyleBoxEmpty.new()
 
 func initialize(crypto_data: CryptoData) -> void:
 	_crypto_data = crypto_data
@@ -59,22 +62,80 @@ func _create_letter(letter: String) -> Label:
 	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	return label
 
-func _create_slot(character_index: int) -> LineEdit:
-	var slot := LineEdit.new()
+func _create_slot(character_index: int) -> CryptoSlot:
+	var slot := CryptoSlot.new()
 	slot.custom_minimum_size = SLOT_SIZE
+	slot.minimum_click_width = SLOT_SIZE.x
 	slot.max_length = 1
 	slot.alignment = HORIZONTAL_ALIGNMENT_CENTER
 	slot.context_menu_enabled = false
+	slot.select_all_on_focus = true
 	slot.text_changed.connect(_on_slot_text_changed.bind(character_index))
+	slot.gui_input.connect(_on_slot_gui_input.bind(character_index))
+	slot.focus_entered.connect(_refresh_slot_box.bind(slot))
+	slot.focus_exited.connect(_refresh_slot_box.bind(slot))
 	_slots[character_index] = slot
 	return slot
+
+func _refresh_slot_box(slot: LineEdit) -> void:
+	if slot.has_focus() or slot.text == "":
+		_show_slot_box(slot)
+	else:
+		_show_slot_as_letter(slot)
+
+func _show_slot_box(slot: LineEdit) -> void:
+	slot.custom_minimum_size = SLOT_SIZE
+	slot.expand_to_text_length = false
+	slot.remove_theme_constant_override("minimum_character_width")
+	slot.remove_theme_constant_override("outline_size")
+	slot.remove_theme_color_override("font_outline_color")
+	slot.remove_theme_font_override("font")
+	slot.remove_theme_font_size_override("font_size")
+	for color_name in LETTER_COLOR_NAMES:
+		slot.remove_theme_color_override(color_name)
+	for style_name in HIDDEN_BOX_STYLES:
+		slot.remove_theme_stylebox_override(style_name)
+
+func _show_slot_as_letter(slot: LineEdit) -> void:
+	slot.custom_minimum_size = LETTER_SIZE
+	slot.expand_to_text_length = true
+	slot.add_theme_constant_override("minimum_character_width", 0)
+	slot.add_theme_constant_override("outline_size", slot.get_theme_constant("outline_size", "Label"))
+	slot.add_theme_color_override("font_outline_color", slot.get_theme_color("font_outline_color", "Label"))
+	slot.add_theme_font_override("font", slot.get_theme_font("font", "Label"))
+	slot.add_theme_font_size_override("font_size", slot.get_theme_font_size("font_size", "Label"))
+	for color_name in LETTER_COLOR_NAMES:
+		slot.add_theme_color_override(color_name, slot.get_theme_color("font_color", "Label"))
+	for style_name in HIDDEN_BOX_STYLES:
+		slot.add_theme_stylebox_override(style_name, _hidden_box_style)
 
 func _on_slot_text_changed(new_text: String, character_index: int) -> void:
 	_set_slots_color(NORMAL_COLOR)
 	if new_text != "":
 		_focus_next_slot(character_index)
+	_refresh_slot_box(_slots[character_index])
 	if _is_complete():
 		_validate()
+
+func _on_slot_gui_input(event: InputEvent, character_index: int) -> void:
+	var slot: LineEdit = _slots[character_index]
+	var key_event := event as InputEventKey
+	if key_event == null or not key_event.pressed or key_event.keycode != KEY_BACKSPACE:
+		return
+	if not slot.editable or slot.text != "":
+		return
+	slot.accept_event()
+	_clear_previous_slot(character_index)
+
+func _clear_previous_slot(character_index: int) -> void:
+	var indices := _sorted_slot_indices()
+	var pos := indices.find(character_index)
+	if pos <= 0:
+		return
+	var previous_slot: LineEdit = _slots[indices[pos - 1]]
+	previous_slot.text = ""
+	_set_slots_color(NORMAL_COLOR)
+	previous_slot.grab_focus()
 
 func _focus_next_slot(character_index: int) -> void:
 	var indices := _sorted_slot_indices()
@@ -83,6 +144,7 @@ func _focus_next_slot(character_index: int) -> void:
 		if _slots[indices[offset]].text == "":
 			_slots[indices[offset]].grab_focus()
 			return
+	_slots[character_index].release_focus()
 
 func _is_complete() -> bool:
 	for character_index in _slots:

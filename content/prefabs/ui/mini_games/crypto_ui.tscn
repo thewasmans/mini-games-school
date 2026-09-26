@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ccryptuiscn12"]
 
 [ext_resource type="Script" uid="uid://ccryptouigd12" path="res://scripts/ui/crypto_ui.gd" id="1_crypto"]
+[ext_resource type="PackedScene" path="res://content/prefabs/ui/mini_games/placeholders/crypto_placeholder_phrase.tscn" id="2_placeholder_phrase"]
 
 [node name="CryptoUI" type="Control" unique_id=763304351 node_paths=PackedStringArray("flow_container", "hint_label")]
 layout_mode = 3
@@ -27,15 +28,12 @@ grow_vertical = 2
 theme_override_constants/separation = 24
 alignment = 1
 
-[node name="FlowContainer" type="HFlowContainer" parent="VBoxContainer" unique_id=243756574]
+[node name="FlowContainer" parent="VBoxContainer" unique_id=243756574 instance=ExtResource("2_placeholder_phrase")]
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/h_separation = 4
-theme_override_constants/v_separation = 8
-alignment = 1
 
 [node name="HintLabel" type="Label" parent="VBoxContainer" unique_id=800877155]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
+text = "Un animal fait la sieste"
 horizontal_alignment = 1
 vertical_alignment = 1

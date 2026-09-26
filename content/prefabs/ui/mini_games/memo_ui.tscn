@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://bmemouiscn012"]
+
+[ext_resource type="Script" uid="uid://bmemouigd0012" path="res://scripts/ui/memo_ui.gd" id="1_memo"]
+[ext_resource type="StyleBox" path="res://content/theme/mini_games/memo/style_choice_button_orange.tres" id="2_style_orange"]
+[ext_resource type="StyleBox" path="res://content/theme/mini_games/memo/style_choice_button_green.tres" id="3_style_green"]
+[ext_resource type="StyleBox" path="res://content/theme/mini_games/memo/style_choice_button_purple.tres" id="4_style_purple"]
+[ext_resource type="StyleBox" path="res://content/theme/mini_games/memo/style_choice_button_yellow.tres" id="5_style_yellow"]
+
+[node name="MemoUI" type="Control" unique_id=706038612 node_paths=PackedStringArray("question_label", "image_rect", "choice_buttons")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_memo")
+question_label = NodePath("VBoxContainer/QuestionLabel")
+image_rect = NodePath("VBoxContainer/ImageRect")
+choice_buttons = [NodePath("VBoxContainer/ChoicesGrid/ChoiceButton1"), NodePath("VBoxContainer/ChoicesGrid/ChoiceButton2"), NodePath("VBoxContainer/ChoicesGrid/ChoiceButton3"), NodePath("VBoxContainer/ChoicesGrid/ChoiceButton4")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=607911068]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 130.0
+offset_right = -60.0
+offset_bottom = -130.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="QuestionLabel" type="Label" parent="VBoxContainer" unique_id=585392985]
+layout_mode = 2
+text = "Quizz placeholder question  ?"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ImageRect" type="TextureRect" parent="VBoxContainer" unique_id=2118647481]
+custom_minimum_size = Vector2(0, 240)
+layout_mode = 2
+expand_mode = 3
+stretch_mode = 5
+
+[node name="ChoicesGrid" type="GridContainer" parent="VBoxContainer" unique_id=1918372646]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 2
+
+[node name="ChoiceButton1" type="Button" parent="VBoxContainer/ChoicesGrid" unique_id=645037521]
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = ExtResource("2_style_orange")
+theme_override_styles/pressed = ExtResource("2_style_orange")
+theme_override_styles/hover = ExtResource("2_style_orange")
+theme_override_styles/disabled = ExtResource("2_style_orange")
+text = "Answer 1"
+autowrap_mode = 3
+clip_text = true
+
+[node name="ChoiceButton2" type="Button" parent="VBoxContainer/ChoicesGrid" unique_id=950862200]
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = ExtResource("3_style_green")
+theme_override_styles/pressed = ExtResource("3_style_green")
+theme_override_styles/hover = ExtResource("3_style_green")
+theme_override_styles/disabled = ExtResource("3_style_green")
+text = "Answer 2"
+autowrap_mode = 3
+clip_text = true
+
+[node name="ChoiceButton3" type="Button" parent="VBoxContainer/ChoicesGrid" unique_id=175635401]
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = ExtResource("4_style_purple")
+theme_override_styles/pressed = ExtResource("4_style_purple")
+theme_override_styles/hover = ExtResource("4_style_purple")
+theme_override_styles/disabled = ExtResource("4_style_purple")
+text = "Answer 3"
+autowrap_mode = 3
+clip_text = true
+
+[node name="ChoiceButton4" type="Button" parent="VBoxContainer/ChoicesGrid" unique_id=1962449982]
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = ExtResource("5_style_yellow")
+theme_override_styles/pressed = ExtResource("5_style_yellow")
+theme_override_styles/hover = ExtResource("5_style_yellow")
+theme_override_styles/disabled = ExtResource("5_style_yellow")
+text = "Answer 4"
+autowrap_mode = 3
+clip_text = true

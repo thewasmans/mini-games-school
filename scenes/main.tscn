@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://wrkponuspoej" path="res://scripts/managers/game_ui_manager.gd" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dgxh18nboxsck" path="res://content/prefabs/ui/game_ui.tscn" id="5_tbgi4"]
 [ext_resource type="Script" uid="uid://biod1yqhch7nv" path="res://scripts/managers/level_manager.gd" id="8_lvlmgr"]
-[ext_resource type="PackedScene" uid="uid://b4qqoy48s4na1" path="res://content/prefabs/level/cross_word.tscn" id="9_lvlprfb"]
+[ext_resource type="PackedScene" uid="uid://b4qqoy48s4na1" path="res://content/prefabs/ui/level/level.tscn" id="9_lvlprfb"]
 
 [node name="Main" type="Node" unique_id=727947993 node_paths=PackedStringArray("game_manager")]
 script = ExtResource("1_sugp2")

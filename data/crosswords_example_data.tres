@@ -7,36 +7,33 @@
 script = ExtResource("1_882to")
 word = "LIQUIDE"
 hint = "ce qui la rend déformable."
-grid_position = Vector2i(5, 12)
-is_horizontal = false
+grid_position = Vector2i(8, 13)
 
 [sub_resource type="Resource" id="Resource_p46xh"]
 script = ExtResource("1_882to")
 word = "GAZ"
 hint = "les atomes sont quasi indépendants."
-grid_position = Vector2i(3, 5)
-is_horizontal = false
+grid_position = Vector2i(13, 11)
 
 [sub_resource type="Resource" id="Resource_gy38v"]
 script = ExtResource("1_882to")
 word = "SOLIDE"
 hint = "ce qui rend le composé résistant."
-grid_position = Vector2i(12, 11)
+grid_position = Vector2i(6, 9)
 is_horizontal = false
 
 [sub_resource type="Resource" id="Resource_lhs1r"]
 script = ExtResource("1_882to")
 word = "ARAIGNÉ"
 hint = "Araigné"
-grid_position = Vector2i(8, 11)
-is_horizontal = false
+grid_position = Vector2i(13, 8)
 metadata/_custom_type_script = "uid://cygosmrxwmpq0"
 
 [sub_resource type="Resource" id="Resource_pftn3"]
 script = ExtResource("1_882to")
 word = "FROMAGE"
 hint = "Fromage"
-grid_position = Vector2i(7, 0)
+grid_position = Vector2i(14, 7)
 is_horizontal = false
 metadata/_custom_type_script = "uid://cygosmrxwmpq0"
 
@@ -44,71 +41,73 @@ metadata/_custom_type_script = "uid://cygosmrxwmpq0"
 script = ExtResource("1_882to")
 word = "GIRAFE"
 hint = "Girafe"
-grid_position = Vector2i(4, 18)
-is_horizontal = false
+grid_position = Vector2i(3, 16)
 metadata/_custom_type_script = "uid://cygosmrxwmpq0"
 
 [sub_resource type="Resource" id="Resource_2ewf2"]
 script = ExtResource("1_882to")
 word = "SPIDER-MAN"
 hint = "Spider-Man"
-grid_position = Vector2i(0, 3)
+grid_position = Vector2i(9, 0)
+is_horizontal = false
 metadata/_custom_type_script = "uid://cygosmrxwmpq0"
 
 [sub_resource type="Resource" id="Resource_word01"]
 script = ExtResource("1_882to")
 word = "EAU"
 hint = "liquide essentiel à la vie."
-grid_position = Vector2i(3, 15)
+grid_position = Vector2i(6, 14)
 metadata/_custom_type_script = "uid://cygosmrxwmpq0"
 
 [sub_resource type="Resource" id="Resource_word02"]
 script = ExtResource("1_882to")
 word = "GLACE"
 hint = "eau à l'état solide."
-grid_position = Vector2i(7, 5)
+grid_position = Vector2i(0, 19)
 metadata/_custom_type_script = "uid://cygosmrxwmpq0"
 
 [sub_resource type="Resource" id="Resource_word03"]
 script = ExtResource("1_882to")
 word = "VAPEUR"
 hint = "eau à l'état gazeux."
-grid_position = Vector2i(2, 1)
+grid_position = Vector2i(7, 1)
 metadata/_custom_type_script = "uid://cygosmrxwmpq0"
 
 [sub_resource type="Resource" id="Resource_word04"]
 script = ExtResource("1_882to")
 word = "FUSION"
 hint = "passage de l'état solide à l'état liquide."
-grid_position = Vector2i(3, 9)
+grid_position = Vector2i(4, 9)
 metadata/_custom_type_script = "uid://cygosmrxwmpq0"
 
 [sub_resource type="Resource" id="Resource_word05"]
 script = ExtResource("1_882to")
 word = "GEL"
 hint = "l'eau le devient sous zéro degré."
-grid_position = Vector2i(4, 18)
+grid_position = Vector2i(4, 11)
 metadata/_custom_type_script = "uid://cygosmrxwmpq0"
 
 [sub_resource type="Resource" id="Resource_word06"]
 script = ExtResource("1_882to")
 word = "NUAGE"
 hint = "amas de gouttelettes dans le ciel."
-grid_position = Vector2i(8, 16)
+grid_position = Vector2i(11, 12)
+is_horizontal = false
 metadata/_custom_type_script = "uid://cygosmrxwmpq0"
 
 [sub_resource type="Resource" id="Resource_word07"]
 script = ExtResource("1_882to")
 word = "PLUIE"
 hint = "eau qui tombe des nuages."
-grid_position = Vector2i(0, 23)
+grid_position = Vector2i(8, 12)
+is_horizontal = false
 metadata/_custom_type_script = "uid://cygosmrxwmpq0"
 
 [sub_resource type="Resource" id="Resource_word08"]
 script = ExtResource("1_882to")
 word = "MATIERE"
 hint = "tout ce qui a une masse et occupe un volume."
-grid_position = Vector2i(6, 6)
+grid_position = Vector2i(4, 13)
 is_horizontal = false
 metadata/_custom_type_script = "uid://cygosmrxwmpq0"
 
@@ -116,14 +115,15 @@ metadata/_custom_type_script = "uid://cygosmrxwmpq0"
 script = ExtResource("1_882to")
 word = "CHALEUR"
 hint = "elle fait fondre la glace."
-grid_position = Vector2i(2, 12)
+grid_position = Vector2i(5, 4)
 metadata/_custom_type_script = "uid://cygosmrxwmpq0"
 
 [sub_resource type="Resource" id="Resource_word10"]
 script = ExtResource("1_882to")
 word = "ATOME"
 hint = "plus petite brique de la matière."
-grid_position = Vector2i(3, 6)
+grid_position = Vector2i(6, 16)
+is_horizontal = false
 metadata/_custom_type_script = "uid://cygosmrxwmpq0"
 
 [resource]

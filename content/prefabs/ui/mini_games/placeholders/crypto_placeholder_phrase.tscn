@@ -1,0 +1,170 @@
+[gd_scene format=3 uid="uid://dyyetxjnkus7c"]
+
+[node name="FlowContainer" type="HFlowContainer" unique_id=1957794254]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 96.0
+grow_horizontal = 2
+theme_override_constants/h_separation = 4
+theme_override_constants/v_separation = 8
+alignment = 1
+
+[node name="Letter_0" type="Label" parent="." unique_id=786459205]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+text = "L"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letter_1" type="Label" parent="." unique_id=1023864420]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Space_2" type="Control" parent="." unique_id=749916468]
+custom_minimum_size = Vector2(16, 44)
+layout_mode = 2
+
+[node name="Slot_3" type="LineEdit" parent="." unique_id=1580659305]
+custom_minimum_size = Vector2(26, 38)
+layout_mode = 2
+alignment = 1
+max_length = 1
+context_menu_enabled = false
+
+[node name="Letter_4" type="Label" parent="." unique_id=1860604745]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+text = "H"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot_5" type="LineEdit" parent="." unique_id=1292719829]
+custom_minimum_size = Vector2(26, 38)
+layout_mode = 2
+alignment = 1
+max_length = 1
+context_menu_enabled = false
+
+[node name="Letter_6" type="Label" parent="." unique_id=743321365]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+text = "T"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Space_7" type="Control" parent="." unique_id=802119055]
+custom_minimum_size = Vector2(16, 44)
+layout_mode = 2
+
+[node name="Letter_8" type="Label" parent="." unique_id=229812424]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+text = "D"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot_9" type="LineEdit" parent="." unique_id=208012772]
+custom_minimum_size = Vector2(26, 38)
+layout_mode = 2
+alignment = 1
+max_length = 1
+context_menu_enabled = false
+
+[node name="Letter_10" type="Label" parent="." unique_id=1041589947]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+text = "R"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot_11" type="LineEdit" parent="." unique_id=575452253]
+custom_minimum_size = Vector2(26, 38)
+layout_mode = 2
+alignment = 1
+max_length = 1
+context_menu_enabled = false
+
+[node name="Space_12" type="Control" parent="." unique_id=1420543491]
+custom_minimum_size = Vector2(16, 44)
+layout_mode = 2
+
+[node name="Letter_13" type="Label" parent="." unique_id=1405227727]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+text = "S"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot_14" type="LineEdit" parent="." unique_id=317918548]
+custom_minimum_size = Vector2(26, 38)
+layout_mode = 2
+alignment = 1
+max_length = 1
+context_menu_enabled = false
+
+[node name="Letter_15" type="Label" parent="." unique_id=1059120366]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+text = "R"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Space_16" type="Control" parent="." unique_id=274806521]
+custom_minimum_size = Vector2(16, 44)
+layout_mode = 2
+
+[node name="Letter_17" type="Label" parent="." unique_id=1046888651]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+text = "L"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Letter_18" type="Label" parent="." unique_id=1487275077]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Space_19" type="Control" parent="." unique_id=949713743]
+custom_minimum_size = Vector2(16, 44)
+layout_mode = 2
+
+[node name="Letter_20" type="Label" parent="." unique_id=1727689065]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+text = "T"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot_21" type="LineEdit" parent="." unique_id=1240830071]
+custom_minimum_size = Vector2(26, 38)
+layout_mode = 2
+alignment = 1
+max_length = 1
+context_menu_enabled = false
+
+[node name="Letter_22" type="Label" parent="." unique_id=1309311337]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+text = "P"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot_23" type="LineEdit" parent="." unique_id=421755240]
+custom_minimum_size = Vector2(26, 38)
+layout_mode = 2
+alignment = 1
+max_length = 1
+context_menu_enabled = false
+
+[node name="Letter_24" type="Label" parent="." unique_id=1384495001]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+text = "S"
+horizontal_alignment = 1
+vertical_alignment = 1
