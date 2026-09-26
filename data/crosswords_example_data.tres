@@ -7,41 +7,125 @@
 script = ExtResource("1_882to")
 word = "LIQUIDE"
 hint = "ce qui la rend déformable."
+grid_position = Vector2i(5, 12)
+is_horizontal = false
 
 [sub_resource type="Resource" id="Resource_p46xh"]
 script = ExtResource("1_882to")
 word = "GAZ"
 hint = "les atomes sont quasi indépendants."
+grid_position = Vector2i(3, 5)
+is_horizontal = false
 
 [sub_resource type="Resource" id="Resource_gy38v"]
 script = ExtResource("1_882to")
 word = "SOLIDE"
 hint = "ce qui rend le composé résistant."
+grid_position = Vector2i(12, 11)
+is_horizontal = false
 
 [sub_resource type="Resource" id="Resource_lhs1r"]
 script = ExtResource("1_882to")
-word = "Araigné"
+word = "ARAIGNÉ"
 hint = "Araigné"
+grid_position = Vector2i(8, 11)
+is_horizontal = false
 metadata/_custom_type_script = "uid://cygosmrxwmpq0"
 
 [sub_resource type="Resource" id="Resource_pftn3"]
 script = ExtResource("1_882to")
-word = "Fromage"
+word = "FROMAGE"
 hint = "Fromage"
+grid_position = Vector2i(7, 0)
+is_horizontal = false
 metadata/_custom_type_script = "uid://cygosmrxwmpq0"
 
 [sub_resource type="Resource" id="Resource_7lvw4"]
 script = ExtResource("1_882to")
-word = "Girafe"
+word = "GIRAFE"
 hint = "Girafe"
+grid_position = Vector2i(4, 18)
+is_horizontal = false
 metadata/_custom_type_script = "uid://cygosmrxwmpq0"
 
 [sub_resource type="Resource" id="Resource_2ewf2"]
 script = ExtResource("1_882to")
-word = "Spider-Man"
+word = "SPIDER-MAN"
 hint = "Spider-Man"
+grid_position = Vector2i(0, 3)
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[sub_resource type="Resource" id="Resource_word01"]
+script = ExtResource("1_882to")
+word = "EAU"
+hint = "liquide essentiel à la vie."
+grid_position = Vector2i(3, 15)
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[sub_resource type="Resource" id="Resource_word02"]
+script = ExtResource("1_882to")
+word = "GLACE"
+hint = "eau à l'état solide."
+grid_position = Vector2i(7, 5)
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[sub_resource type="Resource" id="Resource_word03"]
+script = ExtResource("1_882to")
+word = "VAPEUR"
+hint = "eau à l'état gazeux."
+grid_position = Vector2i(2, 1)
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[sub_resource type="Resource" id="Resource_word04"]
+script = ExtResource("1_882to")
+word = "FUSION"
+hint = "passage de l'état solide à l'état liquide."
+grid_position = Vector2i(3, 9)
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[sub_resource type="Resource" id="Resource_word05"]
+script = ExtResource("1_882to")
+word = "GEL"
+hint = "l'eau le devient sous zéro degré."
+grid_position = Vector2i(4, 18)
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[sub_resource type="Resource" id="Resource_word06"]
+script = ExtResource("1_882to")
+word = "NUAGE"
+hint = "amas de gouttelettes dans le ciel."
+grid_position = Vector2i(8, 16)
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[sub_resource type="Resource" id="Resource_word07"]
+script = ExtResource("1_882to")
+word = "PLUIE"
+hint = "eau qui tombe des nuages."
+grid_position = Vector2i(0, 23)
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[sub_resource type="Resource" id="Resource_word08"]
+script = ExtResource("1_882to")
+word = "MATIERE"
+hint = "tout ce qui a une masse et occupe un volume."
+grid_position = Vector2i(6, 6)
+is_horizontal = false
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[sub_resource type="Resource" id="Resource_word09"]
+script = ExtResource("1_882to")
+word = "CHALEUR"
+hint = "elle fait fondre la glace."
+grid_position = Vector2i(2, 12)
+metadata/_custom_type_script = "uid://cygosmrxwmpq0"
+
+[sub_resource type="Resource" id="Resource_word10"]
+script = ExtResource("1_882to")
+word = "ATOME"
+hint = "plus petite brique de la matière."
+grid_position = Vector2i(3, 6)
 metadata/_custom_type_script = "uid://cygosmrxwmpq0"
 
 [resource]
 script = ExtResource("2_t20gs")
-clues = Array[ExtResource("1_882to")]([SubResource("Resource_qw841"), SubResource("Resource_p46xh"), SubResource("Resource_gy38v"), SubResource("Resource_lhs1r"), SubResource("Resource_pftn3"), SubResource("Resource_7lvw4"), SubResource("Resource_2ewf2")])
+clues = Array[ExtResource("1_882to")]([SubResource("Resource_qw841"), SubResource("Resource_p46xh"), SubResource("Resource_gy38v"), SubResource("Resource_lhs1r"), SubResource("Resource_pftn3"), SubResource("Resource_7lvw4"), SubResource("Resource_2ewf2"), SubResource("Resource_word01"), SubResource("Resource_word02"), SubResource("Resource_word03"), SubResource("Resource_word04"), SubResource("Resource_word05"), SubResource("Resource_word06"), SubResource("Resource_word07"), SubResource("Resource_word08"), SubResource("Resource_word09"), SubResource("Resource_word10")])

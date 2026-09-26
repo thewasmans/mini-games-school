@@ -25,7 +25,7 @@ var _word_count: int
 var _solved_count: int = 0
 
 func initialize(crossword_data: CrosswordData) -> void:
-	var placements := CrosswordGenerator.generate(crossword_data.clues)
+	var placements := crossword_data.build_placements()
 	_word_count = placements.size()
 	_render_grid(placements)
 	input.text_changed.connect(_on_word_input_changed)
