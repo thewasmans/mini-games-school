@@ -31,7 +31,13 @@ func initialize(crossword_data: CrosswordData) -> void:
 	input.text_changed.connect(_on_word_input_changed)
 	input.text_submitted.connect(_on_word_input_submitted)
 
+func _clear_grid() -> void:
+	for child in grid_container.get_children():
+		grid_container.remove_child(child)
+		child.queue_free()
+
 func _render_grid(placements: Array[CrosswordWordPlacement]) -> void:
+	_clear_grid()
 	var letter_positions: Dictionary = {}
 	for placement in placements:
 		for letter_index in placement.word_data.word.length():

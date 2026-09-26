@@ -1,0 +1,377 @@
+[gd_scene format=3]
+
+[ext_resource type="Theme" uid="uid://bj5fo081gmi4i" path="res://content/theme/mini_games/crossword/theme_tile_letter.tres" id="2_tile_letter"]
+
+[node name="CrosswordPlaceholderGrid" type="GridContainer" unique_id=1683873686]
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 10
+
+[node name="Empty_0_0" type="Control" parent="." unique_id=250230772]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_1_0" type="Control" parent="." unique_id=1070559695]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_2_0" type="Control" parent="." unique_id=1376902674]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_3_0" type="Control" parent="." unique_id=1001090937]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_4_0" type="Control" parent="." unique_id=292002934]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Cell_5_0" type="Button" parent="." unique_id=642752232]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_tile_letter")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "L"
+
+[node name="Empty_6_0" type="Control" parent="." unique_id=1993267887]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_7_0" type="Control" parent="." unique_id=2062559254]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_8_0" type="Control" parent="." unique_id=1476466442]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_9_0" type="Control" parent="." unique_id=1277949885]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Cell_0_1" type="Button" parent="." unique_id=879987847]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_tile_letter")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "G"
+
+[node name="Cell_1_1" type="Button" parent="." unique_id=521814805]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_tile_letter")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "R"
+
+[node name="Cell_2_1" type="Button" parent="." unique_id=546129333]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_tile_letter")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "I"
+
+[node name="Cell_3_1" type="Button" parent="." unique_id=1051971572]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_tile_letter")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "L"
+
+[node name="Cell_4_1" type="Button" parent="." unique_id=1032129944]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_tile_letter")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "L"
+
+[node name="Cell_5_1" type="Button" parent="." unique_id=1444537282]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_tile_letter")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "E"
+
+[node name="Empty_6_1" type="Control" parent="." unique_id=1251535871]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_7_1" type="Control" parent="." unique_id=1624947855]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_8_1" type="Control" parent="." unique_id=1325910634]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_9_1" type="Control" parent="." unique_id=508670876]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_0_2" type="Control" parent="." unique_id=1720673108]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_1_2" type="Control" parent="." unique_id=1552705289]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Cell_2_2" type="Button" parent="." unique_id=934449772]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_tile_letter")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "N"
+
+[node name="Empty_3_2" type="Control" parent="." unique_id=1994569179]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_4_2" type="Control" parent="." unique_id=905297136]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Cell_5_2" type="Button" parent="." unique_id=1828385625]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_tile_letter")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "T"
+
+[node name="Empty_6_2" type="Control" parent="." unique_id=602753216]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_7_2" type="Control" parent="." unique_id=856707515]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_8_2" type="Control" parent="." unique_id=564963360]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_9_2" type="Control" parent="." unique_id=101358829]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_0_3" type="Control" parent="." unique_id=497175958]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_1_3" type="Control" parent="." unique_id=2109660986]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Cell_2_3" type="Button" parent="." unique_id=867350424]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_tile_letter")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "D"
+
+[node name="Empty_3_3" type="Control" parent="." unique_id=1387929015]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_4_3" type="Control" parent="." unique_id=1716981257]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Cell_5_3" type="Button" parent="." unique_id=2073344943]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_tile_letter")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "T"
+
+[node name="Cell_6_3" type="Button" parent="." unique_id=1106354839]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_tile_letter")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "I"
+
+[node name="Cell_7_3" type="Button" parent="." unique_id=1318655846]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_tile_letter")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "T"
+
+[node name="Cell_8_3" type="Button" parent="." unique_id=1812158969]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_tile_letter")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "R"
+
+[node name="Cell_9_3" type="Button" parent="." unique_id=1424482520]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_tile_letter")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "E"
+
+[node name="Empty_0_4" type="Control" parent="." unique_id=516155833]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_1_4" type="Control" parent="." unique_id=829080625]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Cell_2_4" type="Button" parent="." unique_id=649428247]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_tile_letter")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "I"
+
+[node name="Empty_3_4" type="Control" parent="." unique_id=1214721878]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_4_4" type="Control" parent="." unique_id=1968793196]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Cell_5_4" type="Button" parent="." unique_id=482542727]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_tile_letter")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "R"
+
+[node name="Empty_6_4" type="Control" parent="." unique_id=1364228964]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_7_4" type="Control" parent="." unique_id=266373421]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_8_4" type="Control" parent="." unique_id=1974617169]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_9_4" type="Control" parent="." unique_id=1322599923]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_0_5" type="Control" parent="." unique_id=886993043]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_1_5" type="Control" parent="." unique_id=1976417857]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Cell_2_5" type="Button" parent="." unique_id=1639568979]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_tile_letter")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "C"
+
+[node name="Cell_3_5" type="Button" parent="." unique_id=1381669782]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_tile_letter")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "A"
+
+[node name="Cell_4_5" type="Button" parent="." unique_id=1655286799]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_tile_letter")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "S"
+
+[node name="Cell_5_5" type="Button" parent="." unique_id=206185930]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_tile_letter")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "E"
+
+[node name="Empty_6_5" type="Control" parent="." unique_id=1986017645]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_7_5" type="Control" parent="." unique_id=1184082496]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_8_5" type="Control" parent="." unique_id=513396115]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_9_5" type="Control" parent="." unique_id=1893667169]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_0_6" type="Control" parent="." unique_id=821458404]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_1_6" type="Control" parent="." unique_id=1434828618]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Cell_2_6" type="Button" parent="." unique_id=874858736]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_tile_letter")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "E"
+
+[node name="Empty_3_6" type="Control" parent="." unique_id=1508926962]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_4_6" type="Control" parent="." unique_id=370583703]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_5_6" type="Control" parent="." unique_id=1399860869]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_6_6" type="Control" parent="." unique_id=262134288]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_7_6" type="Control" parent="." unique_id=1182219838]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_8_6" type="Control" parent="." unique_id=870699785]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Empty_9_6" type="Control" parent="." unique_id=709924176]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2

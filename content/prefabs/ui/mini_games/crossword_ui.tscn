@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://caxlfire3r11w" path="res://scripts/ui/crossword_ui.gd" id="1_crossword"]
 [ext_resource type="Theme" uid="uid://bj5fo081gmi4i" path="res://content/theme/mini_games/crossword/theme_tile_letter.tres" id="2_tile_letter"]
 [ext_resource type="Theme" uid="uid://cpx7am23p62r1" path="res://content/theme/mini_games/crossword/theme_tile_letter_validated.tres" id="3_tile_letter_validated"]
+[ext_resource type="PackedScene" path="res://content/prefabs/ui/mini_games/crossword_placeholder_grid.tscn" id="4_placeholder_grid"]
 
 [node name="CrosswordUI" type="Control" unique_id=1160996909 node_paths=PackedStringArray("grid_container", "hint_label", "input")]
 layout_mode = 3
@@ -14,7 +15,7 @@ grow_vertical = 2
 script = ExtResource("1_crossword")
 grid_container = NodePath("VBoxContainer/GridContainer")
 hint_label = NodePath("VBoxContainer/HintLabel")
-input = NodePath("HiddenInput")
+input = NodePath("HiddenCrosswordInput")
 tile_letter_theme = ExtResource("2_tile_letter")
 tile_letter_validated_theme = ExtResource("3_tile_letter_validated")
 
@@ -27,11 +28,8 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=925921772]
+[node name="GridContainer" parent="VBoxContainer" unique_id=779271912 instance=ExtResource("4_placeholder_grid")]
 layout_mode = 2
-size_flags_horizontal = 4
-theme_override_constants/h_separation = 2
-theme_override_constants/v_separation = 2
 
 [node name="HintLabel" type="Label" parent="VBoxContainer" unique_id=656257587]
 custom_minimum_size = Vector2(0, 50)
@@ -40,7 +38,7 @@ text = "Cliquez sur une case pour commencer"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HiddenInput" type="LineEdit" parent="." unique_id=597246007]
+[node name="HiddenCrosswordInput" type="LineEdit" parent="." unique_id=597246007]
 modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(1, 1)
 layout_mode = 0
