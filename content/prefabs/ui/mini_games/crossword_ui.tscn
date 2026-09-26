@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://caxlfire3r11w" path="res://scripts/ui/crossword_ui.gd" id="1_crossword"]
 [ext_resource type="Theme" uid="uid://bj5fo081gmi4i" path="res://content/theme/mini_games/crossword/theme_tile_letter.tres" id="2_tile_letter"]
 [ext_resource type="Theme" uid="uid://cpx7am23p62r1" path="res://content/theme/mini_games/crossword/theme_tile_letter_validated.tres" id="3_tile_letter_validated"]
-[ext_resource type="PackedScene" path="res://content/prefabs/ui/mini_games/crossword_placeholder_grid.tscn" id="4_placeholder_grid"]
+[ext_resource type="PackedScene" path="res://content/prefabs/ui/mini_games/placeholders/crossword_placeholder_grid.tscn" id="4_placeholder_grid"]
 
 [node name="CrosswordUI" type="Control" unique_id=1160996909 node_paths=PackedStringArray("grid_container", "hint_label", "input")]
 layout_mode = 3
