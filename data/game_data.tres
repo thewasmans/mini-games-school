@@ -9,6 +9,11 @@
 [ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="6_lhs1r"]
 [ext_resource type="Script" uid="uid://dqstlvldata01" path="res://scripts/data/study_level_data.gd" id="7_stdylvl"]
 
+[sub_resource type="Resource" id="Resource_yqv0c"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("3_k2o1c")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
 [sub_resource type="Resource" id="Resource_85g3d"]
 script = ExtResource("5_yqv0c")
 text = "Mdr les foughères en l'air"
@@ -30,15 +35,10 @@ script = ExtResource("2_r34r7")
 mini_games = Array[ExtResource("1_vllua")]([ExtResource("3_7fe16")])
 metadata/_custom_type_script = "uid://br5q0sg4b052d"
 
-[sub_resource type="Resource" id="Resource_yqv0c"]
-script = ExtResource("2_r34r7")
-mini_games = Array[ExtResource("1_vllua")]([ExtResource("3_k2o1c")])
-metadata/_custom_type_script = "uid://br5q0sg4b052d"
-
 [sub_resource type="Resource" id="StudyLevel_primaire"]
 script = ExtResource("7_stdylvl")
 name = "Primaire"
-levels = Array[ExtResource("2_r34r7")]([SubResource("Resource_pftn3"), SubResource("Resource_k2o1c"), SubResource("Resource_yqv0c")])
+levels = Array[ExtResource("2_r34r7")]([SubResource("Resource_yqv0c"), SubResource("Resource_pftn3"), SubResource("Resource_k2o1c")])
 metadata/_custom_type_script = "uid://dqstlvldata01"
 
 [resource]

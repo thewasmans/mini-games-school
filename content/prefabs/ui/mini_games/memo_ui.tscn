@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bmemouiscn012"]
 
 [ext_resource type="Script" uid="uid://bmemouigd0012" path="res://scripts/ui/memo_ui.gd" id="1_memo"]
+[ext_resource type="Texture2D" uid="uid://hy07bcnj8qs7" path="res://content/sprites/icon_quizz.png" id="2_5d1n3"]
 [ext_resource type="StyleBox" path="res://content/theme/mini_games/memo/style_choice_button_orange.tres" id="2_style_orange"]
 [ext_resource type="StyleBox" path="res://content/theme/mini_games/memo/style_choice_button_green.tres" id="3_style_green"]
 [ext_resource type="StyleBox" path="res://content/theme/mini_games/memo/style_choice_button_purple.tres" id="4_style_purple"]
@@ -14,7 +15,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_memo")
-question_label = NodePath("VBoxContainer/QuestionLabel")
+question_label = NodePath("VBoxContainer/Button/QuestionLabel")
 image_rect = NodePath("VBoxContainer/ImageRect")
 choice_buttons = [NodePath("VBoxContainer/ChoicesGrid/ChoiceButton1"), NodePath("VBoxContainer/ChoicesGrid/ChoiceButton2"), NodePath("VBoxContainer/ChoicesGrid/ChoiceButton3"), NodePath("VBoxContainer/ChoicesGrid/ChoiceButton4")]
 
@@ -32,15 +33,27 @@ grow_vertical = 2
 theme_override_constants/separation = 16
 alignment = 1
 
-[node name="QuestionLabel" type="Label" parent="VBoxContainer" unique_id=585392985]
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=2001326278]
+custom_minimum_size = Vector2(0, 143.535)
 layout_mode = 2
+mouse_filter = 2
+
+[node name="QuestionLabel" type="Label" parent="VBoxContainer/Button" unique_id=585392985]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "Quizz placeholder question  ?"
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="ImageRect" type="TextureRect" parent="VBoxContainer" unique_id=2118647481]
 custom_minimum_size = Vector2(0, 240)
 layout_mode = 2
+texture = ExtResource("2_5d1n3")
 expand_mode = 3
 stretch_mode = 5
 

@@ -13,9 +13,11 @@ const NEXT_DELAY := 0.6
 
 var _questions: Array[MemoQuestionData] = []
 var _question_index: int = 0
+var _default_image: Texture2D
 
 func initialize(memo_data: MemoData) -> void:
 	_questions = memo_data.questions
+	_default_image = image_rect.texture
 	for choice_index in choice_buttons.size():
 		choice_buttons[choice_index].pressed.connect(_on_choice_pressed.bind(choice_index))
 	_show_question()
@@ -23,8 +25,7 @@ func initialize(memo_data: MemoData) -> void:
 func _show_question() -> void:
 	var question_data := _questions[_question_index]
 	question_label.text = question_data.question
-	image_rect.texture = question_data.image
-	image_rect.visible = question_data.image != null
+	image_rect.texture = question_data.image if question_data.image != null else _default_image
 	for choice_index in choice_buttons.size():
 		var button := choice_buttons[choice_index]
 		button.text = question_data.choices[choice_index]
