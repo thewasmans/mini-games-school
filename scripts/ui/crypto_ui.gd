@@ -62,14 +62,16 @@ func _create_letter(letter: String) -> Label:
 	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	return label
 
-func _create_slot(character_index: int) -> LineEdit:
-	var slot := LineEdit.new()
+func _create_slot(character_index: int) -> CryptoSlot:
+	var slot := CryptoSlot.new()
 	slot.custom_minimum_size = SLOT_SIZE
+	slot.minimum_click_width = SLOT_SIZE.x
 	slot.max_length = 1
 	slot.alignment = HORIZONTAL_ALIGNMENT_CENTER
 	slot.context_menu_enabled = false
 	slot.select_all_on_focus = true
 	slot.text_changed.connect(_on_slot_text_changed.bind(character_index))
+	slot.gui_input.connect(_on_slot_gui_input.bind(character_index))
 	slot.focus_entered.connect(_refresh_slot_box.bind(slot))
 	slot.focus_exited.connect(_refresh_slot_box.bind(slot))
 	_slots[character_index] = slot
@@ -114,6 +116,26 @@ func _on_slot_text_changed(new_text: String, character_index: int) -> void:
 	_refresh_slot_box(_slots[character_index])
 	if _is_complete():
 		_validate()
+
+func _on_slot_gui_input(event: InputEvent, character_index: int) -> void:
+	var slot: LineEdit = _slots[character_index]
+	var key_event := event as InputEventKey
+	if key_event == null or not key_event.pressed or key_event.keycode != KEY_BACKSPACE:
+		return
+	if not slot.editable or slot.text != "":
+		return
+	slot.accept_event()
+	_clear_previous_slot(character_index)
+
+func _clear_previous_slot(character_index: int) -> void:
+	var indices := _sorted_slot_indices()
+	var pos := indices.find(character_index)
+	if pos <= 0:
+		return
+	var previous_slot: LineEdit = _slots[indices[pos - 1]]
+	previous_slot.text = ""
+	_set_slots_color(NORMAL_COLOR)
+	previous_slot.grab_focus()
 
 func _focus_next_slot(character_index: int) -> void:
 	var indices := _sorted_slot_indices()
