@@ -9,12 +9,12 @@ const SELECTED_COLOR := Color(0.7, 0.85, 1.0)
 const CURRENT_COLOR := Color(1.0, 0.8, 0.3)
 const HOVER_COLOR := Color(0.88, 0.94, 1.0)
 const INCORRECT_COLOR := Color(1.0, 0.5, 0.5)
-const TILE_LETTER_THEME := preload("res://content/theme/tile_letter/theme_tile_letter.tres")
-const TILE_LETTER_VALIDATED_THEME := preload("res://content/theme/tile_letter/theme_tile_letter_validated.tres")
 
 @export var grid_container: GridContainer
 @export var hint_label: Label
 @export var input: LineEdit
+@export var tile_letter_theme: Theme
+@export var tile_letter_validated_theme: Theme
 
 var _cells: Dictionary = {}
 var _cell_backgrounds: Dictionary = {}
@@ -67,7 +67,7 @@ func _create_cell(pos: Vector2i) -> Button:
 	var cell := Button.new()
 	cell.custom_minimum_size = CELL_SIZE
 	cell.focus_mode = Control.FOCUS_NONE
-	cell.theme = TILE_LETTER_THEME
+	cell.theme = tile_letter_theme
 	_apply_letter_color(cell)
 	cell.pressed.connect(_on_cell_pressed.bind(pos))
 	cell.mouse_entered.connect(_on_cell_mouse_entered.bind(pos))
@@ -177,7 +177,7 @@ func _validate_word(submitted_text: String) -> void:
 	for letter_index in _selected_placement.word_data.word.length():
 		var pos := _selected_placement.cell_position(letter_index)
 		if _cells.has(pos):
-			_cells[pos].theme = TILE_LETTER_VALIDATED_THEME
+			_cells[pos].theme = tile_letter_validated_theme
 	_selected_placement = null
 	hint_label.text = ""
 	input.text = ""
