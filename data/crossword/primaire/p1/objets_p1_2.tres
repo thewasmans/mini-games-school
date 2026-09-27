@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://741mm4isv1lm"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_oaip3"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_01wbc"]
+
+[sub_resource type="Resource" id="Resource_t4kfj"]
+script = ExtResource("1_oaip3")
+word = "RUER"
+hint = "Se précipiter avec violence sur quelqu'un, sur quelque chose."
+
+[sub_resource type="Resource" id="Resource_scw2a"]
+script = ExtResource("1_oaip3")
+word = "APPUYER"
+hint = "Réaliser une pression sur un objet, un bouton d'une manette par exemple."
+
+[sub_resource type="Resource" id="Resource_cufs5"]
+script = ExtResource("1_oaip3")
+word = "AIMANT"
+hint = "Objet métallique qui permet d'en attirer ou d'en repousser d'autres."
+
+[sub_resource type="Resource" id="Resource_tucex"]
+script = ExtResource("1_oaip3")
+word = "FORCE"
+hint = "Caractérise une interaction entre des objets."
+
+[sub_resource type="Resource" id="Resource_jlf6i"]
+script = ExtResource("1_oaip3")
+word = "POUSSER"
+hint = "Action d'exercer une pression sur un objet qui le déplace."
+
+[sub_resource type="Resource" id="Resource_q1hsi"]
+script = ExtResource("1_oaip3")
+word = "INTERPRETER"
+hint = "Expliquer un phénomène afin de lui donner du sens."
+
+[sub_resource type="Resource" id="Resource_dt5a6"]
+script = ExtResource("1_oaip3")
+word = "DEFORMER"
+hint = "Changer la forme d’un objet."
+
+[sub_resource type="Resource" id="Resource_g4edc"]
+script = ExtResource("1_oaip3")
+word = "CASSER"
+hint = "Abîmer définitivement un objet."
+
+[sub_resource type="Resource" id="Resource_fm2m8"]
+script = ExtResource("1_oaip3")
+word = "LIER"
+hint = "Connecter des éléments, des objets ensemble."
+
+[resource]
+script = ExtResource("2_01wbc")
+clues = Array[ExtResource("1_oaip3")]([SubResource("Resource_t4kfj"), SubResource("Resource_scw2a"), SubResource("Resource_cufs5"), SubResource("Resource_tucex"), SubResource("Resource_jlf6i"), SubResource("Resource_q1hsi"), SubResource("Resource_dt5a6"), SubResource("Resource_g4edc"), SubResource("Resource_fm2m8")])

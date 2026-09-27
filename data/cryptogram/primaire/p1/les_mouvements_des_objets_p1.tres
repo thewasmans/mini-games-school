@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://b36y05bn5agoq"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_0setc"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_7c5rg"]
+
+[sub_resource type="Resource" id="Resource_com3y"]
+script = ExtResource("1_0setc")
+text = "L'aimant attire les objets métalliques."
+
+[sub_resource type="Resource" id="Resource_dhyb3"]
+script = ExtResource("1_0setc")
+text = "Pousser et tirer sont des manières d'agir sur un objet."
+
+[sub_resource type="Resource" id="Resource_pv5uo"]
+script = ExtResource("1_0setc")
+text = "Une force peut agir par contact ou à distance."
+
+[sub_resource type="Resource" id="Resource_kiaav"]
+script = ExtResource("1_0setc")
+text = "On peut changer la forme d'un objet."
+
+[sub_resource type="Resource" id="Resource_n7pl6"]
+script = ExtResource("1_0setc")
+text = "On peut pousser un objet en soufflant dessus."
+
+[sub_resource type="Resource" id="Resource_s02b2"]
+script = ExtResource("1_0setc")
+text = "On peut modifier la forme de la plasticine."
+
+[resource]
+script = ExtResource("2_7c5rg")
+phrases = Array[ExtResource("1_0setc")]([SubResource("Resource_com3y"), SubResource("Resource_dhyb3"), SubResource("Resource_pv5uo"), SubResource("Resource_kiaav"), SubResource("Resource_n7pl6"), SubResource("Resource_s02b2")])

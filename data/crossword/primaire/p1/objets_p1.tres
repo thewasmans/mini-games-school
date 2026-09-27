@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://usdkumbsb12n"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_plgdp"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_qusr4"]
+
+[sub_resource type="Resource" id="Resource_xq6ad"]
+script = ExtResource("1_plgdp")
+word = "METAL"
+hint = "Objet qui peut conduire à la fois la chaleur et l'électricité."
+
+[sub_resource type="Resource" id="Resource_4ndov"]
+script = ExtResource("1_plgdp")
+word = "TIRER"
+hint = "Action d'amener un objet dans une direction précise."
+
+[sub_resource type="Resource" id="Resource_8tvpi"]
+script = ExtResource("1_plgdp")
+word = "ATTIRER"
+hint = "Action d'amener un objet vers soi, de le rapprocher."
+
+[sub_resource type="Resource" id="Resource_waaag"]
+script = ExtResource("1_plgdp")
+word = "OTER"
+hint = "Action d'enlever un objet ou un élément du corps humain."
+
+[sub_resource type="Resource" id="Resource_f1xds"]
+script = ExtResource("1_plgdp")
+word = "DEPLACER"
+hint = "Action d'amener un objet d'un point à un autre."
+
+[sub_resource type="Resource" id="Resource_vaawh"]
+script = ExtResource("1_plgdp")
+word = "PORTER"
+hint = "Maintenir, soutenir un objet ou une personne."
+
+[sub_resource type="Resource" id="Resource_nha8q"]
+script = ExtResource("1_plgdp")
+word = "ESSAI"
+hint = "Réaliser un test avant de passer à la version finale."
+
+[sub_resource type="Resource" id="Resource_lj767"]
+script = ExtResource("1_plgdp")
+word = "REPOUSSER"
+hint = "Action d'éloigner un objet, de mettre de la distance."
+
+[resource]
+script = ExtResource("2_qusr4")
+clues = Array[ExtResource("1_plgdp")]([SubResource("Resource_xq6ad"), SubResource("Resource_4ndov"), SubResource("Resource_8tvpi"), SubResource("Resource_waaag"), SubResource("Resource_f1xds"), SubResource("Resource_vaawh"), SubResource("Resource_nha8q"), SubResource("Resource_lj767")])

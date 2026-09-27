@@ -1,0 +1,107 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://xpa27etk1hwc"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_x8aqs"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_u3e65"]
+
+[sub_resource type="Resource" id="Resource_w2tla"]
+script = ExtResource("1_x8aqs")
+question = "Parmi ces animaux, lequel vit dans la forêt ?"
+choices = Array[String](["Le requin.", "L'écureuil.", "Le poisson rouge.", "La vache."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_pldqx"]
+script = ExtResource("1_x8aqs")
+question = "Où vit l'ours polaire ?"
+choices = Array[String](["Dans le désert chaud.", "Dans la mer.", "Sur la glace.", "Dans la forêt tropicale."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_7jp2y"]
+script = ExtResource("1_x8aqs")
+question = "Dans quel milieu vit le poisson ?"
+choices = Array[String](["Dans l'air.", "Dans l'eau.", "Dans le sable.", "Sur la terre."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_4uerf"]
+script = ExtResource("1_x8aqs")
+question = "Quel animal vit dans le désert ?"
+choices = Array[String](["Le chameau.", "La vache.", "Le canard.", "Le hérisson."])
+
+[sub_resource type="Resource" id="Resource_np3x1"]
+script = ExtResource("1_x8aqs")
+question = "Que mange la vache ?"
+choices = Array[String](["De la viande.", "De l'herbe.", "Du chocolat.", "Du poisson."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_a1ebd"]
+script = ExtResource("1_x8aqs")
+question = "Quel animal vole ?"
+choices = Array[String](["Le chien.", "La vache.", "L'oiseau.", "Le serpent."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_8cnbb"]
+script = ExtResource("1_x8aqs")
+question = "Que mange le lion ?"
+choices = Array[String](["De l'herbe.", "De la viande.", "Des fruits.", "Des fleurs."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_n5l5m"]
+script = ExtResource("1_x8aqs")
+question = "Comment appelle-t-on le petit du chat ?"
+choices = Array[String](["Le chiot.", "Le chaton.", "L'oisillon.", "Le veau."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_0ytcy"]
+script = ExtResource("1_x8aqs")
+question = "Comment se déplace le serpent ?"
+choices = Array[String](["Il marche.", "Il rampe.", "Il vole.", "Il nage."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_bijef"]
+script = ExtResource("1_x8aqs")
+question = "Avec quoi le poisson nage-t-il ?"
+choices = Array[String](["Ses pattes.", "Ses ailes.", "Ses nageoires.", "Son bec."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_y6stg"]
+script = ExtResource("1_x8aqs")
+question = "Que fait le hérisson en hiver ?"
+choices = Array[String](["Il danse.", "Il hiberne.", "Il nage.", "Il s'envole."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ws0sk"]
+script = ExtResource("1_x8aqs")
+question = "Quel animal pond des œufs ?"
+choices = Array[String](["Le chien.", "La poule.", "Le chat.", "La vache."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_4t7au"]
+script = ExtResource("1_x8aqs")
+question = "Combien de pattes possède une abeille ?"
+choices = Array[String](["2 pattes.", "4 pattes.", "6 pattes.", "8 pattes."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_mk6am"]
+script = ExtResource("1_x8aqs")
+question = "Quel animal a un très long cou ?"
+choices = Array[String](["La girafe.", "La souris.", "Le chat.", "Le chien."])
+
+[sub_resource type="Resource" id="Resource_i0qda"]
+script = ExtResource("1_x8aqs")
+question = "Combien de pattes possède une araignée ?"
+choices = Array[String](["2 pattes.", "4 pattes.", "6 pattes.", "8 pattes."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_2ilw0"]
+script = ExtResource("1_x8aqs")
+question = "Que retrouvons-nous dans la forêt ?"
+choices = Array[String](["De la lumière.", "De l'air.", "Des arbres.", "L'ensemble de ces éléments."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_0goph"]
+script = ExtResource("1_x8aqs")
+question = "Quelle est la différence entre un milieu aquatique et un milieu terrestre ?"
+choices = Array[String](["L'eau.", "La présence des plantes.", "La présences des animaux.", "La lumière."])
+
+[resource]
+script = ExtResource("2_u3e65")
+questions = Array[ExtResource("1_x8aqs")]([SubResource("Resource_w2tla"), SubResource("Resource_pldqx"), SubResource("Resource_7jp2y"), SubResource("Resource_4uerf"), SubResource("Resource_np3x1"), SubResource("Resource_a1ebd"), SubResource("Resource_8cnbb"), SubResource("Resource_n5l5m"), SubResource("Resource_0ytcy"), SubResource("Resource_bijef"), SubResource("Resource_y6stg"), SubResource("Resource_ws0sk"), SubResource("Resource_4t7au"), SubResource("Resource_mk6am"), SubResource("Resource_i0qda"), SubResource("Resource_2ilw0"), SubResource("Resource_0goph")])

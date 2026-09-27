@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bsr213xjs3vjd"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_ny3j2"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_b4cfk"]
+
+[sub_resource type="Resource" id="Resource_qxywm"]
+script = ExtResource("1_ny3j2")
+word = "CHAMPIGNON"
+hint = "Se dit d'un être vivant qui vit fixé sur un support, mais qui n'est pas un végétal."
+
+[sub_resource type="Resource" id="Resource_o0gf8"]
+script = ExtResource("1_ny3j2")
+word = "VEGETAL"
+hint = "Être vivant qui vit fixé sur un support et utilise le Soleil comme énergie."
+
+[sub_resource type="Resource" id="Resource_ep802"]
+script = ExtResource("1_ny3j2")
+word = "TETE"
+hint = "Attribut qui caractérise l'animal."
+
+[sub_resource type="Resource" id="Resource_r7oan"]
+script = ExtResource("1_ny3j2")
+word = "REPRODUCTION"
+hint = "Etape de la vie d'un vivant qui lui permet d'avoir des enfants."
+
+[sub_resource type="Resource" id="Resource_uj631"]
+script = ExtResource("1_ny3j2")
+word = "VIVANT"
+hint = "Être qui peut naitre, grandir, manger et mourir."
+
+[sub_resource type="Resource" id="Resource_xlrfj"]
+script = ExtResource("1_ny3j2")
+word = "ANTENNE"
+hint = "Attribut que possède un insecte au niveau de sa tête et qui lui permet de réagir à son environnement."
+
+[sub_resource type="Resource" id="Resource_g6fyr"]
+script = ExtResource("1_ny3j2")
+word = "ANIMAL"
+hint = "Se dit d'un être vivant qui possède une bouche et/ou des yeux."
+
+[sub_resource type="Resource" id="Resource_yeah3"]
+script = ExtResource("1_ny3j2")
+word = "OBJET"
+hint = "Caractérise tout élément qui n'est pas vivant, qui peut être naturel ou artificiel."
+
+[resource]
+script = ExtResource("2_b4cfk")
+clues = Array[ExtResource("1_ny3j2")]([SubResource("Resource_qxywm"), SubResource("Resource_o0gf8"), SubResource("Resource_ep802"), SubResource("Resource_r7oan"), SubResource("Resource_uj631"), SubResource("Resource_xlrfj"), SubResource("Resource_g6fyr"), SubResource("Resource_yeah3")])

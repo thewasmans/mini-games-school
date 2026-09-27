@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://1c82maivdq0e"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_a5v7u"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_o511v"]
+
+[sub_resource type="Resource" id="Resource_bjvr8"]
+script = ExtResource("1_a5v7u")
+text = "Le vivant échange de la matière avec l’environnement."
+
+[sub_resource type="Resource" id="Resource_4k4rt"]
+script = ExtResource("1_a5v7u")
+text = "Le vivant échange de l’énergie avec l’environnement."
+
+[sub_resource type="Resource" id="Resource_y6054"]
+script = ExtResource("1_a5v7u")
+text = "Les animaux et les plantes sont des êtres vivants."
+
+[sub_resource type="Resource" id="Resource_1tm0q"]
+script = ExtResource("1_a5v7u")
+text = "On utilise des attributs pour classer les animaux."
+
+[sub_resource type="Resource" id="Resource_l42ur"]
+script = ExtResource("1_a5v7u")
+text = "Trier consiste à séparer en deux groupes."
+
+[sub_resource type="Resource" id="Resource_nxbjo"]
+script = ExtResource("1_a5v7u")
+text = "L’objet est un non vivant."
+
+[resource]
+script = ExtResource("2_o511v")
+phrases = Array[ExtResource("1_a5v7u")]([SubResource("Resource_bjvr8"), SubResource("Resource_4k4rt"), SubResource("Resource_y6054"), SubResource("Resource_1tm0q"), SubResource("Resource_l42ur"), SubResource("Resource_nxbjo")])

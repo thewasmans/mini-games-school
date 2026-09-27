@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cpu5jpbphihhj"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_0ky33"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_1t5iu"]
+
+[sub_resource type="Resource" id="Resource_go2q4"]
+script = ExtResource("1_0ky33")
+word = "CONCOMBRE"
+hint = "Plante potagère dont les fruits verts allongés et aqueux sont consommés en salade."
+
+[sub_resource type="Resource" id="Resource_o3mnj"]
+script = ExtResource("1_0ky33")
+word = "SAISON"
+hint = "Période qui correspond à l'été, l'hiver, l'automne ou le printemps."
+
+[sub_resource type="Resource" id="Resource_6ycnv"]
+script = ExtResource("1_0ky33")
+word = "CULTIVER"
+hint = "Travailler la terre pour lui faire produire des plantes utiles aux besoins humains."
+
+[sub_resource type="Resource" id="Resource_q8d6a"]
+script = ExtResource("1_0ky33")
+word = "SALADE"
+hint = "Plante potagère souvent assaisonnée lors d'un repas."
+
+[sub_resource type="Resource" id="Resource_o4x0p"]
+script = ExtResource("1_0ky33")
+word = "ALIMENT"
+hint = "Se dit d'un élément que l'animal doit manger pour vivre."
+
+[sub_resource type="Resource" id="Resource_qctru"]
+script = ExtResource("1_0ky33")
+word = "TOMATE"
+hint = "Fruit rouge que l'on mange dans une salade."
+
+[sub_resource type="Resource" id="Resource_w6r40"]
+script = ExtResource("1_0ky33")
+word = "POIVRON"
+hint = "Variété de piment doux."
+
+[sub_resource type="Resource" id="Resource_rl3id"]
+script = ExtResource("1_0ky33")
+word = "EAU"
+hint = "Aliment vital à l'être humain et aux êtres vivants de manière générale."
+
+[resource]
+script = ExtResource("2_1t5iu")
+clues = Array[ExtResource("1_0ky33")]([SubResource("Resource_go2q4"), SubResource("Resource_o3mnj"), SubResource("Resource_6ycnv"), SubResource("Resource_q8d6a"), SubResource("Resource_o4x0p"), SubResource("Resource_qctru"), SubResource("Resource_w6r40"), SubResource("Resource_rl3id")])

@@ -3,55 +3,111 @@
 [ext_resource type="Script" uid="uid://cp2inhinnjjop" path="res://scripts/data/game_data.gd" id="1_urpql"]
 [ext_resource type="Script" uid="uid://5t2j51l6wd4l" path="res://scripts/mini_games/mini_game_data.gd" id="1_vllua"]
 [ext_resource type="Script" uid="uid://br5q0sg4b052d" path="res://scripts/data/level_data.gd" id="2_r34r7"]
-[ext_resource type="Resource" uid="uid://bpcudk37ondbf" path="res://data/crosswords_example_data.tres" id="3_7fe16"]
-[ext_resource type="Resource" uid="uid://bx1or1c3ofssb" path="res://data/quizz_example_data.tres" id="3_k2o1c"]
-[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="5_yqv0c"]
-[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="6_lhs1r"]
+[ext_resource type="Resource" uid="uid://b644e6bpq5cl1" path="res://data/crossword/primaire/p1/alimentation_p1.tres" id="5_vy2p8"]
+[ext_resource type="Resource" uid="uid://cpu5jpbphihhj" path="res://data/crossword/primaire/p1/alimentation_p1_2.tres" id="6_1diyi"]
+[ext_resource type="Resource" uid="uid://dyyybn6drngsr" path="res://data/crossword/primaire/p1/animaux_p1.tres" id="7_cog1c"]
 [ext_resource type="Script" uid="uid://dqstlvldata01" path="res://scripts/data/study_level_data.gd" id="7_stdylvl"]
+[ext_resource type="Resource" uid="uid://ofhiwfasjclv" path="res://data/crossword/primaire/p1/animaux_p1_2.tres" id="8_d15be"]
+[ext_resource type="Resource" uid="uid://usdkumbsb12n" path="res://data/crossword/primaire/p1/objets_p1.tres" id="9_c7j1l"]
+[ext_resource type="Resource" uid="uid://741mm4isv1lm" path="res://data/crossword/primaire/p1/objets_p1_2.tres" id="10_ux8ld"]
+[ext_resource type="Resource" uid="uid://c0ciwa2wvp2ka" path="res://data/crossword/primaire/p1/vivant_p1.tres" id="11_l84in"]
+[ext_resource type="Resource" uid="uid://bsr213xjs3vjd" path="res://data/crossword/primaire/p1/vivant_p1_2.tres" id="12_iwpjk"]
+[ext_resource type="Resource" uid="uid://ikqk1ee1lnsm" path="res://data/cryptogram/primaire/p1/alimentation_des_humains_p1.tres" id="13_c7j1l"]
+[ext_resource type="Resource" uid="uid://x5o0i4gigtx6" path="res://data/cryptogram/primaire/p1/les_animaux_et_leur_milieu_de_vie_p1.tres" id="14_ux8ld"]
+[ext_resource type="Resource" uid="uid://b36y05bn5agoq" path="res://data/cryptogram/primaire/p1/les_mouvements_des_objets_p1.tres" id="15_l84in"]
+[ext_resource type="Resource" uid="uid://1c82maivdq0e" path="res://data/cryptogram/primaire/p1/les_vivants_p1.tres" id="16_iwpjk"]
+[ext_resource type="Resource" uid="uid://btt4t7dqk0m6t" path="res://data/quiz/primaire/p1/alimentation_des_humains.tres" id="17_e6v3s"]
+[ext_resource type="Resource" uid="uid://xpa27etk1hwc" path="res://data/quiz/primaire/p1/animaux_et_milieu.tres" id="18_53n6h"]
+[ext_resource type="Resource" uid="uid://du2qchpe8ccfy" path="res://data/quiz/primaire/p1/deformation_objets.tres" id="19_jxnqk"]
+[ext_resource type="Resource" uid="uid://djycg1ipogbni" path="res://data/quiz/primaire/p1/vivant.tres" id="20_b1qmr"]
 
-[sub_resource type="Resource" id="Resource_85g3d"]
-script = ExtResource("5_yqv0c")
-text = "Mdr les foughères en l'air"
-hint = "Okay boomer"
-metadata/_custom_type_script = "uid://dcacf80pyq888"
-
-[sub_resource type="Resource" id="Resource_tipki"]
-script = ExtResource("6_lhs1r")
-phrases = Array[ExtResource("5_yqv0c")]([SubResource("Resource_85g3d")])
-metadata/_custom_type_script = "uid://bd1ufgnv22yot"
-
-[sub_resource type="Resource" id="Resource_pftn3"]
+[sub_resource type="Resource" id="Resource_6fvtn"]
 script = ExtResource("2_r34r7")
-mini_games = Array[ExtResource("1_vllua")]([SubResource("Resource_tipki")])
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("5_vy2p8")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Resource_ny3j2"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("6_1diyi")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Resource_b4cfk"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("7_cog1c")])
 metadata/_custom_type_script = "uid://br5q0sg4b052d"
 
 [sub_resource type="Resource" id="Resource_yqv0c"]
 script = ExtResource("2_r34r7")
-mini_games = Array[ExtResource("1_vllua")]([ExtResource("3_k2o1c")])
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("8_d15be")])
 metadata/_custom_type_script = "uid://br5q0sg4b052d"
 
-[sub_resource type="Resource" id="Resource_k2o1c"]
+[sub_resource type="Resource" id="Resource_lhs1r"]
 script = ExtResource("2_r34r7")
-mini_games = Array[ExtResource("1_vllua")]([ExtResource("3_7fe16")])
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("9_c7j1l")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Resource_pftn3"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("10_ux8ld")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Resource_7lvw4"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("11_l84in")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Resource_2ewf2"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("12_iwpjk")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Resource_wkupc"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("13_c7j1l")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Resource_bvgg2"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("14_ux8ld")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Resource_erw3v"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("15_l84in")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Resource_0h8y3"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("16_iwpjk")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Resource_31cds"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("17_e6v3s")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Resource_qf5v5"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("18_53n6h")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Resource_fsy1g"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("19_jxnqk")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Resource_dk4cw"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("20_b1qmr")])
 metadata/_custom_type_script = "uid://br5q0sg4b052d"
 
 [sub_resource type="Resource" id="StudyLevel_primaire"]
 script = ExtResource("7_stdylvl")
 name = "Primaire"
-levels = Array[ExtResource("2_r34r7")]([SubResource("Resource_pftn3"), SubResource("Resource_yqv0c"), SubResource("Resource_k2o1c")])
-metadata/_custom_type_script = "uid://dqstlvldata01"
-
-[sub_resource type="Resource" id="StudyLevel_secondaire"]
-script = ExtResource("7_stdylvl")
-name = "Secondaire"
-metadata/_custom_type_script = "uid://dqstlvldata01"
-
-[sub_resource type="Resource" id="StudyLevel_superieur"]
-script = ExtResource("7_stdylvl")
-name = "Supérieur"
+levels = Array[ExtResource("2_r34r7")]([SubResource("Resource_6fvtn"), SubResource("Resource_ny3j2"), SubResource("Resource_b4cfk"), SubResource("Resource_yqv0c"), SubResource("Resource_lhs1r"), SubResource("Resource_pftn3"), SubResource("Resource_7lvw4"), SubResource("Resource_2ewf2"), SubResource("Resource_wkupc"), SubResource("Resource_bvgg2"), SubResource("Resource_erw3v"), SubResource("Resource_0h8y3"), SubResource("Resource_31cds"), SubResource("Resource_qf5v5"), SubResource("Resource_fsy1g"), SubResource("Resource_dk4cw")])
 metadata/_custom_type_script = "uid://dqstlvldata01"
 
 [resource]
 script = ExtResource("1_urpql")
-study_levels = Array[ExtResource("7_stdylvl")]([SubResource("StudyLevel_primaire"), SubResource("StudyLevel_secondaire"), SubResource("StudyLevel_superieur")])
+study_levels = Array[ExtResource("7_stdylvl")]([SubResource("StudyLevel_primaire")])
 metadata/_custom_type_script = "uid://cp2inhinnjjop"

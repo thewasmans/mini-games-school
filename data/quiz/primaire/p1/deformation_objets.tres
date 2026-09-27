@@ -1,0 +1,82 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://du2qchpe8ccfy"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_3a7f4"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_wx1do"]
+
+[sub_resource type="Resource" id="Resource_biir2"]
+script = ExtResource("1_3a7f4")
+question = "Que se passe-t-il si on étire un élastique ?"
+choices = Array[String](["Il casse.", "Il s'allonge.", "Il change de couleur.", "Il disparaît."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_adeuv"]
+script = ExtResource("1_3a7f4")
+question = "Que se passe-t-il si on froisse une feuille de papier ?"
+choices = Array[String](["Elle s'allonge.", "Elle reprend sa forme.", "Elle reste froissée.", "Elle devient invisible."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_7qrik"]
+script = ExtResource("1_3a7f4")
+question = "Quel matériau est souple ?"
+choices = Array[String](["La pierre.", "Le métal.", "La gomme.", "Le bois."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_hkf5c"]
+script = ExtResource("1_3a7f4")
+question = "Quel matériau est dur ?"
+choices = Array[String](["Le tissu.", "Le métal.", "La laine.", "L'éponge."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_0u0e7"]
+script = ExtResource("1_3a7f4")
+question = "Qu'est-ce qu'une déformation réversible ?"
+choices = Array[String](["Un objet qui ne change pas.", "Un objet qui casse.", "Un objet qui reprend sa forme.", "Un objet qui devient liquide."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_xqeoy"]
+script = ExtResource("1_3a7f4")
+question = "Qu'est-ce qu'une déformation irréversible ?"
+choices = Array[String](["Un objet qui ne reprend pas sa forme.", "Un objet qui brille.", "Un objet qui fond.", "Un objet qui flotte."])
+
+[sub_resource type="Resource" id="Resource_d13r5"]
+script = ExtResource("1_3a7f4")
+question = "Que fait la pâte à modeler si on appuie dessus ?"
+choices = Array[String](["Elle casse.", "Elle change de forme.", "Elle devient dure.", "Elle s'envole."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ido1e"]
+script = ExtResource("1_3a7f4")
+question = "Que fait un ressort quand on le comprime ?"
+choices = Array[String](["Il s'allonge.", "Il se raccourcit.", "Il change de couleur.", "Il devient mou."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_1lmwl"]
+script = ExtResource("1_3a7f4")
+question = "Quel matériau est souvent utilisé pour sa solidité ?"
+choices = Array[String](["Le tissu.", "Le métal.", "Le papier.", "Le coton."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ljn1t"]
+script = ExtResource("1_3a7f4")
+question = "Comment appelle-t-on une action comme pousser ou tirer ?"
+choices = Array[String](["Une force.", "Un repos.", "Une mesure.", "Une vitesse."])
+
+[sub_resource type="Resource" id="Resource_a7b4g"]
+script = ExtResource("1_3a7f4")
+question = "Que fait le métal si on le chauffe très fort ?"
+choices = Array[String](["Il se déforme.", "Il ne bouge pas.", "Il devient froid.", "Il devient invisible."])
+
+[sub_resource type="Resource" id="Resource_11j4l"]
+script = ExtResource("1_3a7f4")
+question = "Qu'arrive-t-il à une éponge quand on la presse ?"
+choices = Array[String](["Elle se déforme.", "Elle devient dure.", "Elle change de matière.", "Elle ne bouge pas."])
+
+[sub_resource type="Resource" id="Resource_0ce6p"]
+script = ExtResource("1_3a7f4")
+question = "Qu'est-ce qu'une force ?"
+choices = Array[String](["Un déplacement.", "Une action qui permet de modifier l'état d'un objet.", "Une transformation définitive.", "Ce que l'on mesure chez certaines personnes."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_wx1do")
+questions = Array[ExtResource("1_3a7f4")]([SubResource("Resource_biir2"), SubResource("Resource_adeuv"), SubResource("Resource_7qrik"), SubResource("Resource_hkf5c"), SubResource("Resource_0u0e7"), SubResource("Resource_xqeoy"), SubResource("Resource_d13r5"), SubResource("Resource_ido1e"), SubResource("Resource_1lmwl"), SubResource("Resource_ljn1t"), SubResource("Resource_a7b4g"), SubResource("Resource_11j4l"), SubResource("Resource_0ce6p")])
