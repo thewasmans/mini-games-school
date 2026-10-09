@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://k4w4jst6de2n"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_jjhdw"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_f5pqc"]
+
+[sub_resource type="Resource" id="Resource_h1ky8"]
+script = ExtResource("1_jjhdw")
+question = "Qu'est-ce qu'une poulie ?"
+choices = Array[String](["Système de roues dentées qui transmettent un mouvement.", "C'est une roue qui pivote autour d'un essieu, un point d'appui.", "Barre qui permet de soulever des charges lourdes.", "C'est un problème dans le moteur."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_t8h3m"]
+script = ExtResource("1_jjhdw")
+question = "Qu'est-ce qu'un engrenage ?"
+choices = Array[String](["Système de roues dentées qui transmettent un mouvement.", "C'est une roue qui pivote autour d'un essieu, un point d'appui.", "Barre qui permet de soulever des charges lourdes.", "C'est un problème dans le moteur."])
+
+[sub_resource type="Resource" id="Resource_c5ycw"]
+script = ExtResource("1_jjhdw")
+question = "Qu'est-ce qu'un levier ?"
+choices = Array[String](["Système de roues dentées qui transmettent un mouvement.", "C'est une roue qui pivote autour d'un essieu, un point d'appui.", "Barre qui permet de soulever des charges lourdes.", "C'est un problème dans le moteur."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_6uhbg"]
+script = ExtResource("1_jjhdw")
+question = "En quoi consiste l'énergie potentielle ?"
+choices = Array[String](["La somme des énergies cinétique et potentielle.", "L'énergie liée à un mouvement d'un corps.", "L'énergie liée à la position d'un corps.", "L'énergie liée à la température."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_opyde"]
+script = ExtResource("1_jjhdw")
+question = "En quoi consiste l'énergie mécanique ?"
+choices = Array[String](["La somme des énergies cinétique et potentielle.", "L'énergie liée à un mouvement d'un corps.", "L'énergie liée à la position d'un corps.", "L'énergie liée à la température."])
+
+[sub_resource type="Resource" id="Resource_c1rb3"]
+script = ExtResource("1_jjhdw")
+question = "En quoi consiste l'énergie cinétique ?"
+choices = Array[String](["La somme des énergies cinétique et potentielle.", "L'énergie liée à un mouvement d'un corps.", "L'énergie liée à la position d'un corps.", "L'énergie liée à la température."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_2pp8l"]
+script = ExtResource("1_jjhdw")
+question = "Que représente le zéro absolu ?"
+choices = Array[String](["-273,15°C.", "0 Kelvin.", "La température la plus basse de l'univers.", "Toutes ces réponses."])
+correct_choice_index = 3
+
+[resource]
+script = ExtResource("2_f5pqc")
+questions = Array[ExtResource("1_jjhdw")]([SubResource("Resource_h1ky8"), SubResource("Resource_t8h3m"), SubResource("Resource_c5ycw"), SubResource("Resource_6uhbg"), SubResource("Resource_opyde"), SubResource("Resource_c1rb3"), SubResource("Resource_2pp8l")])

@@ -1,0 +1,52 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dduds1fjnppgt"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_apa3j"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_e6hqy"]
+
+[sub_resource type="Resource" id="Resource_wy0m1"]
+script = ExtResource("1_apa3j")
+text = "La lumière se propage en ligne droite dans un milieu homogène."
+
+[sub_resource type="Resource" id="Resource_uawy1"]
+script = ExtResource("1_apa3j")
+text = "La vitesse de la lumière caractérise son déplacement dans le vide."
+
+[sub_resource type="Resource" id="Resource_4rxxd"]
+script = ExtResource("1_apa3j")
+text = "Les lois de Snell-Descartes régissent la réflexion et la réfraction."
+
+[sub_resource type="Resource" id="Resource_y65vy"]
+script = ExtResource("1_apa3j")
+text = "La réflexion spéculaire sur un miroir produit une image symétrique."
+
+[sub_resource type="Resource" id="Resource_fd5lt"]
+script = ExtResource("1_apa3j")
+text = "La réfraction dévie le rayon lumineux lors du changement de milieu."
+
+[sub_resource type="Resource" id="Resource_fecry"]
+script = ExtResource("1_apa3j")
+text = "La fibre optique utilise le phénomène de réflexion totale."
+
+[sub_resource type="Resource" id="Resource_73n0e"]
+script = ExtResource("1_apa3j")
+text = "Les lentilles convergentes concentrent les faisceaux lumineux."
+
+[sub_resource type="Resource" id="Resource_rciq2"]
+script = ExtResource("1_apa3j")
+text = "La distance focale détermine la puissance optique d'une lentille."
+
+[sub_resource type="Resource" id="Resource_a41bj"]
+script = ExtResource("1_apa3j")
+text = "La vergence s'exprime en dioptries et dépend de la distance focale."
+
+[sub_resource type="Resource" id="Resource_5mtje"]
+script = ExtResource("1_apa3j")
+text = "La décomposition de la lumière blanche révèle le spectre lumineux."
+
+[sub_resource type="Resource" id="Resource_sx4xs"]
+script = ExtResource("1_apa3j")
+text = "La couleur d'un objet dépend de l'absorption et de la diffusion."
+
+[resource]
+script = ExtResource("2_e6hqy")
+phrases = Array[ExtResource("1_apa3j")]([SubResource("Resource_wy0m1"), SubResource("Resource_uawy1"), SubResource("Resource_4rxxd"), SubResource("Resource_y65vy"), SubResource("Resource_fd5lt"), SubResource("Resource_fecry"), SubResource("Resource_73n0e"), SubResource("Resource_rciq2"), SubResource("Resource_a41bj"), SubResource("Resource_5mtje"), SubResource("Resource_sx4xs")])

@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://nvabw1bx4nh3"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_3dsvw"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_f8q1u"]
+
+[sub_resource type="Resource" id="Resource_oaxu5"]
+script = ExtResource("1_3dsvw")
+text = "Le cycle cellulaire alterne croissance et division."
+
+[sub_resource type="Resource" id="Resource_onuu2"]
+script = ExtResource("1_3dsvw")
+text = "L'interphase prépare la division cellulaire."
+
+[sub_resource type="Resource" id="Resource_kcjvl"]
+script = ExtResource("1_3dsvw")
+text = "La réplication de l'ADN est semi-conservative."
+
+[sub_resource type="Resource" id="Resource_5rilo"]
+script = ExtResource("1_3dsvw")
+text = "Les yeux de réplication amorcent la copie."
+
+[sub_resource type="Resource" id="Resource_66dwo"]
+script = ExtResource("1_3dsvw")
+text = "La mitose produit deux cellules identiques."
+
+[sub_resource type="Resource" id="Resource_byw2h"]
+script = ExtResource("1_3dsvw")
+text = "La prophase condense la chromatine en chromosomes."
+
+[sub_resource type="Resource" id="Resource_cm5li"]
+script = ExtResource("1_3dsvw")
+text = "La métaphase aligne les chromosomes."
+
+[sub_resource type="Resource" id="Resource_bx2o8"]
+script = ExtResource("1_3dsvw")
+text = "L'anaphase sépare les chromatides sœurs."
+
+[resource]
+script = ExtResource("2_f8q1u")
+phrases = Array[ExtResource("1_3dsvw")]([SubResource("Resource_oaxu5"), SubResource("Resource_onuu2"), SubResource("Resource_kcjvl"), SubResource("Resource_5rilo"), SubResource("Resource_66dwo"), SubResource("Resource_byw2h"), SubResource("Resource_cm5li"), SubResource("Resource_bx2o8")])

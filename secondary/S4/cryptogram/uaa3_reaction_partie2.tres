@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://bht70j0skjyef"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_ts1qm"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_51vjq"]
+
+[sub_resource type="Resource" id="Resource_coloa"]
+script = ExtResource("1_ts1qm")
+text = "La mole représente une quantité de matière précise."
+
+[sub_resource type="Resource" id="Resource_qclyh"]
+script = ExtResource("1_ts1qm")
+text = "Le nombre d'Avogadro relie le macroscopique et le microscopique."
+
+[sub_resource type="Resource" id="Resource_fn1lp"]
+script = ExtResource("1_ts1qm")
+text = "Le volume molaire dépend des conditions de température."
+
+[sub_resource type="Resource" id="Resource_ge0mt"]
+script = ExtResource("1_ts1qm")
+text = "Les calculs de stœchiométrie prédisent les quantités formées."
+
+[sub_resource type="Resource" id="Resource_w72ih"]
+script = ExtResource("1_ts1qm")
+text = "Le réactif limitant stoppe la réaction chimique."
+
+[sub_resource type="Resource" id="Resource_icxod"]
+script = ExtResource("1_ts1qm")
+text = "Le rendement chimique mesure l'efficacité d'une transformation."
+
+[sub_resource type="Resource" id="Resource_hx2i8"]
+script = ExtResource("1_ts1qm")
+text = "Les solutions aqueuses dissolvent divers types de solutés."
+
+[sub_resource type="Resource" id="Resource_4221f"]
+script = ExtResource("1_ts1qm")
+text = "La concentration molaire exprime le nombre de moles par litre."
+
+[resource]
+script = ExtResource("2_51vjq")
+phrases = Array[ExtResource("1_ts1qm")]([SubResource("Resource_coloa"), SubResource("Resource_qclyh"), SubResource("Resource_fn1lp"), SubResource("Resource_ge0mt"), SubResource("Resource_w72ih"), SubResource("Resource_icxod"), SubResource("Resource_hx2i8"), SubResource("Resource_4221f")])

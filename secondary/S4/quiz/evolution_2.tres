@@ -1,0 +1,94 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://cypu56suj7471"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_xw2px"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_51blk"]
+
+[sub_resource type="Resource" id="Resource_47yip"]
+script = ExtResource("1_xw2px")
+question = "Qu'est-ce que la biodiversité ?"
+choices = Array[String](["Diversité des animaux.", "Diversité des plantes.", "Diversité des êtres vivants.", "Correspond au biotope."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_7wnfh"]
+script = ExtResource("1_xw2px")
+question = "Quel point d’ancrage est utilisé pour réaliser un arbre phylogénétique ?"
+choices = Array[String](["L'ancêtre commun.", "La lignée pure.", "Les dates.", "Les fossiles."])
+
+[sub_resource type="Resource" id="Resource_gmrov"]
+script = ExtResource("1_xw2px")
+question = "Quel groupe d’animaux sont utilisés pour la stratigraphie archéologique ?"
+choices = Array[String](["Requins.", "Pieuvres.", "Ammonites.", "Crustacés."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_aq0wi"]
+script = ExtResource("1_xw2px")
+question = "Comment se nomme l'arbre scientifique permettant de classer les espèces selon leur degré d'apparenté ?"
+choices = Array[String](["Phyloharmonique.", "Phylotechnique.", "Phylomorphologique.", "Phylogénétique."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_33bjv"]
+script = ExtResource("1_xw2px")
+question = "En quoi consiste la sélection naturelle ?"
+choices = Array[String](["Théorie liée à l'usage.", "Mécanisme expliquant l'évolution des espèces.", "Loi du plus fort.", "Loi de la reproduction."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ab4hf"]
+script = ExtResource("1_xw2px")
+question = "Que sait-on à propos des dinosaures ?"
+choices = Array[String](["Les descendants sont les oiseaux.", "Ce sont des mammifères.", "Ils ont vécu il y a 65 millions d'années.", "Toutes ces phrases sont justes."])
+
+[sub_resource type="Resource" id="Resource_qfwca"]
+script = ExtResource("1_xw2px")
+question = "En quoi consiste le biomimetisme ?"
+choices = Array[String](["Imiter des concepts en étudiant le monde du vivant.", "Développer des stratégies de survie.", "Mimer des comportements spécifiques.", "Utiliser la nature pour son bien-être."])
+
+[sub_resource type="Resource" id="Resource_3ckac"]
+script = ExtResource("1_xw2px")
+question = "Quelle est la définition exacte d'une espèce ?"
+choices = Array[String](["C'est un individu stérile.", "C'est une population.", "Il n'y a pas une définition exacte.", "C'est une communauté."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_p0icf"]
+script = ExtResource("1_xw2px")
+question = "Qu'est-ce que la spéciation ?"
+choices = Array[String](["Le processus d'extinction.", "Le processus de reproduction.", "Le processus permettant à de nouvelle espèces d'apparaître.", "L'étranglement d'une population."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_c8vax"]
+script = ExtResource("1_xw2px")
+question = "Que peut-on dire à propos de la chronologie de l'évolution ?"
+choices = Array[String](["Elle est linéaire.", "Elle n'est pas linéaire.", "Elle va dans un sens.", "Elle concerne que les bactéries."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_lxl2h"]
+script = ExtResource("1_xw2px")
+question = "Qu'est-ce que la phylogénie ?"
+choices = Array[String](["Le degré de différence entre chaque espèce comparée.", "Un arbre généalogique.", "Relation de parenté entre les espèces.", "Un classement exclusif de plantes."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_f0vsl"]
+script = ExtResource("1_xw2px")
+question = "Que sait-on à propos de notre ancêtre Toumaï ?"
+choices = Array[String](["C’est le plus vieil hominidé connu.", "C'est le premier australopithèque.", "C'est le premier Homo sapiens.", "C'est le nom réel de l'homme actuel."])
+
+[sub_resource type="Resource" id="Resource_n8gg0"]
+script = ExtResource("1_xw2px")
+question = "Quelle est la meilleure définition du dinosaure ?"
+choices = Array[String](["Ce sont des reptiles.", "C'est un clade unique.", "Ce sont des animaux préhistoriques.", "Ils étaient tous carnivores."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_bklr1"]
+script = ExtResource("1_xw2px")
+question = "Que peux-tu dire à propos de l'ancêtre commun de tous ?"
+choices = Array[String](["C'est obligatoirement un animal.", "C'est obligatoirement une plante.", "C'est un être vivant que l'on nomme LUCA.", "C'est obligatoirement un virus."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_y1wqi"]
+script = ExtResource("1_xw2px")
+question = "A quel groupe cladistique appartiennent les oiseaux ?"
+choices = Array[String](["Paraphylétique.", "Polyphylétique.", "Monophylétique.", "Oligophylétique."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("2_51blk")
+questions = Array[ExtResource("1_xw2px")]([SubResource("Resource_47yip"), SubResource("Resource_7wnfh"), SubResource("Resource_gmrov"), SubResource("Resource_aq0wi"), SubResource("Resource_33bjv"), SubResource("Resource_ab4hf"), SubResource("Resource_qfwca"), SubResource("Resource_3ckac"), SubResource("Resource_p0icf"), SubResource("Resource_c8vax"), SubResource("Resource_lxl2h"), SubResource("Resource_f0vsl"), SubResource("Resource_n8gg0"), SubResource("Resource_bklr1"), SubResource("Resource_y1wqi")])
