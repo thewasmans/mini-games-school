@@ -1,0 +1,15 @@
+[gd_resource type="Theme" format=3 uid="uid://csj7am2bfcg1n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_be3fo"]
+bg_color = Color(0.1319848, 0.1319848, 0.13198474, 0.49803922)
+border_width_bottom = 4
+border_color = Color(0.93116945, 0.9311695, 0.93116945, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n3xvn"]
+bg_color = Color(1, 1, 1, 0)
+border_width_bottom = 2
+border_color = Color(0.8560673, 0.8560673, 0.85606724, 1)
+
+[resource]
+LineEdit/styles/focus = SubResource("StyleBoxFlat_be3fo")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_n3xvn")

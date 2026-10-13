@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://d3ohhfpp3xkag"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_4n0eb"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_dlgd8"]
+
+[sub_resource type="Resource" id="Resource_xpgdm"]
+script = ExtResource("1_4n0eb")
+question = "Quelle est la différence entre la cathode et l'anode ?"
+choices = Array[String](["La cathode est chargée positivement.", "La cathode est chargée négativement.", "L'anode est chargée négativement.", "La cathode a la même charge que l'anode."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_r45oc"]
+script = ExtResource("1_4n0eb")
+question = "Qu'est-ce que la concentration massique ?"
+choices = Array[String](["C'est la masse de soluté présente dans un litre de la solution.", "Le nombre d'électrons de l'élément.", "Les différents isotopes d'un élément.", "C'est la quantité de matière dissoute dans un litre de solution."])
+
+[sub_resource type="Resource" id="Resource_gui7b"]
+script = ExtResource("1_4n0eb")
+question = "Que représente chaque ligne horizontale du tableau périodique ?"
+choices = Array[String](["La famille.", "La période.", "La fréquence.", "Le symbole."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_qu4j7"]
+script = ExtResource("1_4n0eb")
+question = "Quel groupe n'est pas une famille du tableau périodique ?"
+choices = Array[String](["Les alcalins.", "Les azotides.", "Les sulfurides.", "Les carbalides."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_5tat6"]
+script = ExtResource("1_4n0eb")
+question = "Combien de familles retrouves-tu dans le tableau périodique ?"
+choices = Array[String](["8.", "2.", "25.", "11."])
+
+[sub_resource type="Resource" id="Resource_8qgvs"]
+script = ExtResource("1_4n0eb")
+question = "Combien de périodes retrouves-tu dans le tableau périodique ?"
+choices = Array[String](["7.", "2.", "25.", "11."])
+
+[sub_resource type="Resource" id="Resource_ocpjv"]
+script = ExtResource("1_4n0eb")
+question = "Que représente le nombre de masse ?"
+choices = Array[String](["C'est la somme du nombre de protons et du nombre de neutrons.", "C'est la somme du nombre de protons et du nombre d'électrons.", "C'est la somme du nombre d'électrons et du nombre de neutrons.", "C'est le nombre de moles."])
+
+[sub_resource type="Resource" id="Resource_qoh14"]
+script = ExtResource("1_4n0eb")
+question = "Qu'est-ce que la couche électronique ?"
+choices = Array[String](["Lieu où les électrons orbitent autour du noyau.", "Lieu où se trouvent les protons.", "Lieu où se trouvent les neutrons.", "Nombre de masse de l'atome."])
+
+[sub_resource type="Resource" id="Resource_6tjmj"]
+script = ExtResource("1_4n0eb")
+question = "Qu'est-ce qu'un isotope ?"
+choices = Array[String](["Un élément chimique chargé.", "Un élément chimique ayant le même nombre de protons.", "Un élément chimique ayant le même nombre de neutrons.", "Un anion."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_aib4a"]
+script = ExtResource("1_4n0eb")
+question = "Qu'est-ce que l'électronégativité ?"
+choices = Array[String](["Une liaison chimique.", "Une solution neutre.", "Des ponts hydrogènes.", "La tendance d'un atome à attirer les électrons."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_ilig2"]
+script = ExtResource("1_4n0eb")
+question = "Que représente le HCl ?"
+choices = Array[String](["Le nitrate de sodium.", "Le chlorure d'hydrogène.", "L'acide sulfurique.", "Le permangante de potassium."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_dlgd8")
+questions = Array[ExtResource("1_4n0eb")]([SubResource("Resource_xpgdm"), SubResource("Resource_r45oc"), SubResource("Resource_gui7b"), SubResource("Resource_qu4j7"), SubResource("Resource_5tat6"), SubResource("Resource_8qgvs"), SubResource("Resource_ocpjv"), SubResource("Resource_qoh14"), SubResource("Resource_6tjmj"), SubResource("Resource_aib4a"), SubResource("Resource_ilig2")])

@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bgrjebv8ovrbm"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_nbp1v"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_wt1nq"]
+
+[sub_resource type="Resource" id="Resource_mi45y"]
+script = ExtResource("1_nbp1v")
+question = "Que représente le NaOH ?"
+choices = Array[String](["Le nitrate de sodium.", "Le chlorure d'hydrogène.", "L'hydroxyde de sodium.", "Le permangante de potassium."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_ckmh1"]
+script = ExtResource("1_nbp1v")
+question = "Quel est le corps composé binaire ?"
+choices = Array[String](["CO.", "NaOH.", "L'acétylcholine.", "Aucun des trois."])
+
+[sub_resource type="Resource" id="Resource_v6fx4"]
+script = ExtResource("1_nbp1v")
+question = "Quel est le corps composé ternaire ?"
+choices = Array[String](["CO.", "NaOH.", "L'acétylcholine.", "Aucun des trois."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_mkyi8"]
+script = ExtResource("1_nbp1v")
+question = "Quel est le corps composé quaternaire ?"
+choices = Array[String](["CO.", "NaOH.", "L'acétylcholine.", "Aucun des trois."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_i578w"]
+script = ExtResource("1_nbp1v")
+question = "Quelle est la loi de Lavoisier ?"
+choices = Array[String](["Dans toute réaction chimique, la masse totale des réactifs est égale à la masse totale des produits.", "Dans toute réaction chimique, la masse totale des réactifs est égale à la masse totale des réactifs.", "Dans toute réaction chimique, il y a équilibre.", "Dans toute réaction chimique, on perd de la matière."])
+
+[sub_resource type="Resource" id="Resource_c8bxt"]
+script = ExtResource("1_nbp1v")
+question = "Qu'est-ce que pondérer ?"
+choices = Array[String](["Attribuer des éventuels coefficients pour équilibrer une équation.", "Equilibrer en ajoutant de l'eau.", "Equilibrer en retirant de l'eau.", "Equilibrer en diluant."])
+
+[sub_resource type="Resource" id="Resource_l71vb"]
+script = ExtResource("1_nbp1v")
+question = "Qu'est-ce que la mole ?"
+choices = Array[String](["C'est une quantité de matière exprimée en grammes.", "C'est une unité.", "C'est la quantité de moles d'un soluté par litre de solution.", "C'est la loi des gaz parfaits."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_qf14o"]
+script = ExtResource("1_nbp1v")
+question = "Qu'est-ce que la masse ?"
+choices = Array[String](["C'est une quantité de matière exprimée en grammes.", "C'est une unité.", "C'est la quantité de moles d'un soluté par litre de solution.", "C'est la loi des gaz parfaits."])
+
+[sub_resource type="Resource" id="Resource_ctd85"]
+script = ExtResource("1_nbp1v")
+question = "Qu'est-ce que la concentration molaire ?"
+choices = Array[String](["C'est une quantité de matière exprimée en grammes.", "C'est une unité.", "C'est la quantité de moles d'un soluté par litre de solution.", "C'est la loi des gaz parfaits."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_qa7jd"]
+script = ExtResource("1_nbp1v")
+question = "Qu'est-ce que le nombre d’Avogadro ?"
+choices = Array[String](["Une valeur constante.", "Une masse qui varie selon l'atome.", "Une valeur qui dépend de la température.", "Une masse précise."])
+
+[sub_resource type="Resource" id="Resource_vamm0"]
+script = ExtResource("1_nbp1v")
+question = "Qu'est-ce que la stoechiométrie ?"
+choices = Array[String](["Etude des proportions selon lesquelles les substances interagissent dans une réaction chimique.", "Tableau d'éléments chimiques.", "Tableau des risques chimiques.", "Etude de l'électrolyse."])
+
+[sub_resource type="Resource" id="Resource_28rrw"]
+script = ExtResource("1_nbp1v")
+question = "Que représente la concentration massique ?"
+choices = Array[String](["Le rapport entre la masse et le volume.", "Le rapport entre le nombre de moles et le volume.", "L'équation des gaz parfaits.", "Le facteur de dilution."])
+
+[resource]
+script = ExtResource("2_wt1nq")
+questions = Array[ExtResource("1_nbp1v")]([SubResource("Resource_mi45y"), SubResource("Resource_ckmh1"), SubResource("Resource_v6fx4"), SubResource("Resource_mkyi8"), SubResource("Resource_i578w"), SubResource("Resource_c8bxt"), SubResource("Resource_l71vb"), SubResource("Resource_qf14o"), SubResource("Resource_ctd85"), SubResource("Resource_qa7jd"), SubResource("Resource_vamm0"), SubResource("Resource_28rrw")])

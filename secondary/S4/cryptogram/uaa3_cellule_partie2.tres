@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dvvhac66bjt6e"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_q8mte"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_egotw"]
+
+[sub_resource type="Resource" id="Resource_1nmh5"]
+script = ExtResource("1_q8mte")
+text = "Le microscope électronique montre les organites."
+
+[sub_resource type="Resource" id="Resource_mhjvm"]
+script = ExtResource("1_q8mte")
+text = "Le noyau cellulaire abrite l'ADN."
+
+[sub_resource type="Resource" id="Resource_ph6gt"]
+script = ExtResource("1_q8mte")
+text = "Les mitochondries produisent l'énergie."
+
+[sub_resource type="Resource" id="Resource_w231v"]
+script = ExtResource("1_q8mte")
+text = "La cellule animale possède une membrane souple."
+
+[sub_resource type="Resource" id="Resource_vmiw3"]
+script = ExtResource("1_q8mte")
+text = "La cellule végétale contient des chloroplastes."
+
+[sub_resource type="Resource" id="Resource_y0raw"]
+script = ExtResource("1_q8mte")
+text = "Les bactéries ne possèdent pas de noyau."
+
+[sub_resource type="Resource" id="Resource_xvwfy"]
+script = ExtResource("1_q8mte")
+text = "La membrane plasmique est double."
+
+[sub_resource type="Resource" id="Resource_be8dk"]
+script = ExtResource("1_q8mte")
+text = "Les échanges traversent la membrane."
+
+[resource]
+script = ExtResource("2_egotw")
+phrases = Array[ExtResource("1_q8mte")]([SubResource("Resource_1nmh5"), SubResource("Resource_mhjvm"), SubResource("Resource_ph6gt"), SubResource("Resource_w231v"), SubResource("Resource_vmiw3"), SubResource("Resource_y0raw"), SubResource("Resource_xvwfy"), SubResource("Resource_be8dk")])

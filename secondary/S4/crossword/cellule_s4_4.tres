@@ -1,0 +1,79 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://tin0bplqyr66"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_80kri"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_026r3"]
+
+[sub_resource type="Resource" id="Resource_k4ekr"]
+script = ExtResource("1_80kri")
+word = "FLAGELLE"
+hint = "Prolongement sous forme d'un filament mobile présent chez certaines cellules."
+grid_position = Vector2i(9, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_dytmn"]
+script = ExtResource("1_80kri")
+word = "MICROSCOPE"
+hint = "Outil permettant d'agrandir l'image d'un objet."
+grid_position = Vector2i(7, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_takag"]
+script = ExtResource("1_80kri")
+word = "TRIGLYCERIDES"
+hint = "Graisses qui constituent des réserves d’énergie dans le monde animal."
+grid_position = Vector2i(5, 4)
+
+[sub_resource type="Resource" id="Resource_qkd1w"]
+script = ExtResource("1_80kri")
+word = "VIRUS"
+hint = "Agent infectieux nécessitant un hôte."
+grid_position = Vector2i(13, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_3bcrb"]
+script = ExtResource("1_80kri")
+word = "MICROMETRE"
+hint = "Echelle de taille de la bactérie."
+grid_position = Vector2i(11, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_pqqsf"]
+script = ExtResource("1_80kri")
+word = "ELECTRONIQUE"
+hint = "Technique de microscopie basée sur l'utilisation d'un faisceau d'électrons."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ah6q7"]
+script = ExtResource("1_80kri")
+word = "ADN"
+hint = "Molécule formée de deux brins enroulés en une double hélice."
+grid_position = Vector2i(3, 7)
+
+[sub_resource type="Resource" id="Resource_d60cv"]
+script = ExtResource("1_80kri")
+word = "EXOCYTOSE"
+hint = "Processus qui correspond à la sortie de molécules par fusion de vésicules avec la membrane plasmique."
+grid_position = Vector2i(16, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_wvkpt"]
+script = ExtResource("1_80kri")
+word = "OSMOSE"
+hint = "Passage de molécules à travers une membrane semi-perméable depuis le milieu hypotonique en solutés vers celui hypertonique."
+
+[sub_resource type="Resource" id="Resource_3a53w"]
+script = ExtResource("1_80kri")
+word = "PORE"
+hint = "Trou au niveau de l'enveloppe nucléaire."
+grid_position = Vector2i(2, 2)
+
+[sub_resource type="Resource" id="Resource_3t6sc"]
+script = ExtResource("1_80kri")
+word = "GENE"
+hint = "Portion d'ADN."
+grid_position = Vector2i(2, 11)
+
+[resource]
+script = ExtResource("2_026r3")
+clues = Array[ExtResource("1_80kri")]([SubResource("Resource_k4ekr"), SubResource("Resource_dytmn"), SubResource("Resource_takag"), SubResource("Resource_qkd1w"), SubResource("Resource_3bcrb"), SubResource("Resource_pqqsf"), SubResource("Resource_ah6q7"), SubResource("Resource_d60cv"), SubResource("Resource_wvkpt"), SubResource("Resource_3a53w"), SubResource("Resource_3t6sc")])
