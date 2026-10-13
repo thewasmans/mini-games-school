@@ -12,6 +12,7 @@ const SPACE_SIZE := Vector2(16, 44)
 const REVEAL_DELAY := 0.6
 const HIDDEN_BOX_STYLES: Array[StringName] = [&"normal", &"read_only"]
 const LETTER_COLOR_NAMES: Array[StringName] = [&"font_color", &"font_uneditable_color"]
+const THEME_LETTER_EMPTY: Theme = preload("res://content/theme/mini_games/crypto/theme_crypto.tres")
 
 @export var flow_container: FlowContainer
 @export var hint_label: Label
@@ -64,6 +65,7 @@ func _create_letter(letter: String) -> Label:
 
 func _create_slot(character_index: int) -> CryptoSlot:
 	var slot := CryptoSlot.new()
+	slot.theme = THEME_LETTER_EMPTY
 	slot.custom_minimum_size = SLOT_SIZE
 	slot.minimum_click_width = SLOT_SIZE.x
 	slot.max_length = 1
