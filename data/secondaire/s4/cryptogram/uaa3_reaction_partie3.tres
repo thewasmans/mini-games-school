@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://b5b20rivhofgo"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_o4u45"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_oj8j6"]
+
+[sub_resource type="Resource" id="Resource_dbwnb"]
+script = ExtResource("1_o4u45")
+text = "La dilution permet de diminuer la concentration d'une solution."
+
+[sub_resource type="Resource" id="Resource_84sxc"]
+script = ExtResource("1_o4u45")
+text = "Les concentrations massiques et molaires sont reliées."
+
+[sub_resource type="Resource" id="Resource_2yah8"]
+script = ExtResource("1_o4u45")
+text = "Le dosage chimique détermine la concentration d'une solution."
+
+[sub_resource type="Resource" id="Resource_le467"]
+script = ExtResource("1_o4u45")
+text = "Le point d'équivalence marque la fin de la réaction totale."
+
+[sub_resource type="Resource" id="Resource_ykovo"]
+script = ExtResource("1_o4u45")
+text = "La densité caractérise la masse volumique d'une solution."
+
+[sub_resource type="Resource" id="Resource_5vm2d"]
+script = ExtResource("1_o4u45")
+text = "Le pourcentage en masse indique la proportion de soluté."
+
+[sub_resource type="Resource" id="Resource_t0uem"]
+script = ExtResource("1_o4u45")
+text = "La neutralisation acide-base équilibre les charges."
+
+[sub_resource type="Resource" id="Resource_ntxkw"]
+script = ExtResource("1_o4u45")
+text = "L'analyse quantitative valide les lois de la chimie."
+
+[resource]
+script = ExtResource("2_oj8j6")
+hidden_letter_ratio = 0.05
+phrases = Array[ExtResource("1_o4u45")]([SubResource("Resource_dbwnb"), SubResource("Resource_84sxc"), SubResource("Resource_2yah8"), SubResource("Resource_le467"), SubResource("Resource_ykovo"), SubResource("Resource_5vm2d"), SubResource("Resource_t0uem"), SubResource("Resource_ntxkw")])

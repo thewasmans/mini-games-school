@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://ejdl3wl4uwm"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_sy1hf"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_ve6dp"]
+
+[sub_resource type="Resource" id="Resource_n3c54"]
+script = ExtResource("1_sy1hf")
+text = "L'identification expérimentale caractérise les espèces chimiques."
+
+[sub_resource type="Resource" id="Resource_lhba5"]
+script = ExtResource("1_sy1hf")
+text = "La combustion du dioxygène dégage de l'énergie et des oxydes."
+
+[sub_resource type="Resource" id="Resource_snh1q"]
+script = ExtResource("1_sy1hf")
+text = "Le test à l'eau de chaux met en évidence le dioxyde de carbone."
+
+[sub_resource type="Resource" id="Resource_wgdrf"]
+script = ExtResource("1_sy1hf")
+text = "L'électrolyse de l'eau libère du dihydrogène et du dioxygène."
+
+[sub_resource type="Resource" id="Resource_2d0er"]
+script = ExtResource("1_sy1hf")
+text = "L'action des acides sur les métaux produit du dihydrogène."
+
+[sub_resource type="Resource" id="Resource_uiths"]
+script = ExtResource("1_sy1hf")
+text = "Les tests d'identification confirment la présence de gaz spécifiques."
+
+[sub_resource type="Resource" id="Resource_qm3vj"]
+script = ExtResource("1_sy1hf")
+text = "Les réactions de précipitation forment des composés insolubles."
+
+[sub_resource type="Resource" id="Resource_x48u7"]
+script = ExtResource("1_sy1hf")
+text = "Le tableau de solubilité prédit la formation de précipités."
+
+[sub_resource type="Resource" id="Resource_buptq"]
+script = ExtResource("1_sy1hf")
+text = "Les ions spectateurs n'interviennent pas dans la réaction chimique."
+
+[sub_resource type="Resource" id="Resource_glkfe"]
+script = ExtResource("1_sy1hf")
+text = "L'équation ionique nette simplifie le bilan de la réaction."
+
+[sub_resource type="Resource" id="Resource_20kku"]
+script = ExtResource("1_sy1hf")
+text = "Le calcul de masse de précipité s'appuie sur la stœchiométrie."
+
+[resource]
+script = ExtResource("2_ve6dp")
+hidden_letter_ratio = 0.05
+phrases = Array[ExtResource("1_sy1hf")]([SubResource("Resource_n3c54"), SubResource("Resource_lhba5"), SubResource("Resource_snh1q"), SubResource("Resource_wgdrf"), SubResource("Resource_2d0er"), SubResource("Resource_uiths"), SubResource("Resource_qm3vj"), SubResource("Resource_x48u7"), SubResource("Resource_buptq"), SubResource("Resource_glkfe"), SubResource("Resource_20kku")])

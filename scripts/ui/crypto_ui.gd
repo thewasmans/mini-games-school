@@ -6,7 +6,7 @@ signal completed
 const NORMAL_COLOR := Color.WHITE
 const CORRECT_COLOR := Color(0.5, 1.0, 0.5)
 const INCORRECT_COLOR := Color(1.0, 0.5, 0.5)
-const SLOT_SIZE := Vector2(26, 38)
+const SLOT_SIZE := Vector2(26,38)
 const LETTER_SIZE := Vector2(0, 44)
 const SPACE_SIZE := Vector2(16, 44)
 const REVEAL_DELAY := 0.6

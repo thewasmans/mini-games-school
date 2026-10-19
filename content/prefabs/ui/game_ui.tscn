@@ -21,6 +21,9 @@ button_level_prefab = ExtResource("2_npsjx")
 [node name="MenuStartUI" parent="." unique_id=1191208820 instance=ExtResource("4_mpxm1")]
 layout_mode = 1
 
+[node name="PlayButton" parent="MenuStartUI" index="1" unique_id=1518565421]
+text = "JOUER"
+
 [node name="MenuStudyLevelsUI" parent="." unique_id=1191208821 instance=ExtResource("5_stdylvl")]
 visible = false
 layout_mode = 1
