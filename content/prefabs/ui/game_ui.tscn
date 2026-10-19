@@ -21,6 +21,46 @@ button_level_prefab = ExtResource("2_npsjx")
 [node name="MenuStartUI" parent="." unique_id=1191208820 instance=ExtResource("4_mpxm1")]
 layout_mode = 1
 
+[node name="Title" type="Label" parent="MenuStartUI" unique_id=1498676791]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.0
+offset_top = -449.0
+offset_right = 213.0
+offset_bottom = -282.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 1, 0.4, 1)
+theme_override_font_sizes/font_size = 70
+text = "     Atome"
+
+[node name="PlayButton" parent="MenuStartUI" index="2" unique_id=1518565421]
+offset_left = -212.0
+offset_top = -195.0
+offset_right = 213.0
+offset_bottom = -28.0
+text = "JOUER"
+
+[node name="ExitButton" type="Button" parent="MenuStartUI" unique_id=1090617620]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.0
+offset_top = 49.0
+offset_right = 213.0
+offset_bottom = 216.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "CREDITS"
+
 [node name="MenuStudyLevelsUI" parent="." unique_id=1191208821 instance=ExtResource("5_stdylvl")]
 visible = false
 layout_mode = 1
@@ -30,5 +70,6 @@ visible = false
 layout_mode = 1
 
 [connection signal="pressed" from="MenuStartUI/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MenuStartUI/ExitButton" to="." method="_on_play_button_pressed"]
 
 [editable path="MenuStartUI"]
