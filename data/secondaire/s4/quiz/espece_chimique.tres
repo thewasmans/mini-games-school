@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://b0dp0srbw0oth"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_hvsy8"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_0kctn"]
+
+[sub_resource type="Resource" id="Resource_g26t4"]
+script = ExtResource("1_hvsy8")
+question = "Comment se nomme un ion formé à partir de plusieurs atomes ?"
+choices = Array[String](["Polyatomique.", "Monoatomique.", "Monosaccharide.", "Polysaccharide."])
+
+[sub_resource type="Resource" id="Resource_o604r"]
+script = ExtResource("1_hvsy8")
+question = "Qu'est-ce qu'une réaction de précipitation ?"
+choices = Array[String](["Réaction où un dépôt se forme..", "Réaction où tout est dissout..", "Lorsque le produit est très soluble..", "Toutes ces phrases sont justes.."])
+
+[sub_resource type="Resource" id="Resource_u51na"]
+script = ExtResource("1_hvsy8")
+question = "Comment se nomme un ion impliqué dans la réaction de précipitation ?"
+choices = Array[String](["Spectateur.", "Acteur.", "Formateur.", "Pondérateur."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_v4dm7"]
+script = ExtResource("1_hvsy8")
+question = "Comment se nomme un ion non impliqué dans la réaction de précipitation ?"
+choices = Array[String](["Spectateur.", "Acteur.", "Formateur.", "Pondérateur."])
+
+[sub_resource type="Resource" id="Resource_mmqdl"]
+script = ExtResource("1_hvsy8")
+question = "Qu'est-ce que l'équation ionique ?"
+choices = Array[String](["Equation de la réaction entre les ions spectateurs..", "Equation de la réaction entre les ions acteurs..", "Equation de la réaction entre les ions pondérateurs..", "Equation de la réaction entre les ions formateurs.."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_s41vk"]
+script = ExtResource("1_hvsy8")
+question = "Quelle solution proposes-tu pour nettoyer le robinet ?"
+choices = Array[String](["Du calcaire.", "Du vinaigre.", "De l'eau.", "De l'alcool."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_0kctn")
+questions = Array[ExtResource("1_hvsy8")]([SubResource("Resource_g26t4"), SubResource("Resource_o604r"), SubResource("Resource_u51na"), SubResource("Resource_v4dm7"), SubResource("Resource_mmqdl"), SubResource("Resource_s41vk")])

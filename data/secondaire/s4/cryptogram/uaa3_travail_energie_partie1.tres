@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://c4f5fkfqyfjci"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_vhf10"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_ujenh"]
+
+[sub_resource type="Resource" id="Resource_rafx6"]
+script = ExtResource("1_vhf10")
+text = "Le travail d'une force dépend de son intensité et du déplacement."
+
+[sub_resource type="Resource" id="Resource_tcrqe"]
+script = ExtResource("1_vhf10")
+text = "Une force colinéaire au déplacement effectue un travail maximal."
+
+[sub_resource type="Resource" id="Resource_lyvdi"]
+script = ExtResource("1_vhf10")
+text = "La puissance mécanique exprime la rapidité d'un transfert d'énergie."
+
+[sub_resource type="Resource" id="Resource_3oecl"]
+script = ExtResource("1_vhf10")
+text = "Les machines simples facilitent l'exécution d'un travail mécanique."
+
+[sub_resource type="Resource" id="Resource_6rbqc"]
+script = ExtResource("1_vhf10")
+text = "Le moment d'une force caractérise son effet de rotation."
+
+[sub_resource type="Resource" id="Resource_xf1at"]
+script = ExtResource("1_vhf10")
+text = "L'équilibre de rotation nécessite la compensation des moments de force."
+
+[sub_resource type="Resource" id="Resource_ihte3"]
+script = ExtResource("1_vhf10")
+text = "La vitesse moyenne se calcule par le rapport distance sur temps."
+
+[sub_resource type="Resource" id="Resource_ej3bp"]
+script = ExtResource("1_vhf10")
+text = "La vitesse instantanée décrit l'état du mouvement à un instant précis."
+
+[resource]
+script = ExtResource("2_ujenh")
+hidden_letter_ratio = 0.05
+phrases = Array[ExtResource("1_vhf10")]([SubResource("Resource_rafx6"), SubResource("Resource_tcrqe"), SubResource("Resource_lyvdi"), SubResource("Resource_3oecl"), SubResource("Resource_6rbqc"), SubResource("Resource_xf1at"), SubResource("Resource_ihte3"), SubResource("Resource_ej3bp")])

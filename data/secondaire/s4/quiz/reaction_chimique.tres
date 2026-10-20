@@ -1,0 +1,81 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bmvnwlqw8va4k"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_pq0nx"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_rxojx"]
+
+[sub_resource type="Resource" id="Resource_p46kd"]
+script = ExtResource("1_pq0nx")
+question = "Qu'est-ce qu'un corps pur composé ?"
+choices = Array[String](["Atomes liés ensemble suite à une réaction chimique, comme l'eau.", "Deux ou plusieurs substances qui sont physiquement mêlées.", "Se dit d'un mélange si on ne peut pas distinguer ses différents constituants à l’oeil nu.", "Assemblage d’atomes d’un seul élément."])
+
+[sub_resource type="Resource" id="Resource_mietl"]
+script = ExtResource("1_pq0nx")
+question = "Qu'est-ce qu'un mélange homogène ?"
+choices = Array[String](["Atomes liés ensemble suite à une réaction chimique, comme l'eau.", "deux ou plusieurs substances qui sont physiquement mêlées.", "Se dit d'un mélange si on ne peut pas distinguer ses différents constituants à l’oeil nu.", "Assemblage d’atomes d’un seul élément."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_j2yys"]
+script = ExtResource("1_pq0nx")
+question = "Qu'est-ce qu'une solution ?"
+choices = Array[String](["Se dit de la substance qui va être dissoute.", "Se dit de la substance qui va dissoudre le composé.", "Se dit du résultat entre le solvant et le soluté.", "Se dit de la réaction chimique qui se produit pour obtenir une solution complète."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_ef4il"]
+script = ExtResource("1_pq0nx")
+question = "En quoi consiste la décantation ?"
+choices = Array[String](["Cette méthode permet de recueillir le solide dans le filtre et d’obtenir un liquide appelé filtrat.", "Procédé qui consiste à débarrasser un liquide de ses impuretés lourdes en les laissant se déposer sur le fond.", "Procédé qui consiste à faire tourner le mélange autour d’un axe de rotation.", "Procédé par lequel un mélange est chauffé dans un système fermé."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_aah71"]
+script = ExtResource("1_pq0nx")
+question = "Que représente le numéro atomique ?"
+choices = Array[String](["Le nombre d'électrons.", "Le nombre de protons.", "Aucune de ces réponses.", "Le symbole de l'élément."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_6fbe4"]
+script = ExtResource("1_pq0nx")
+question = "Qu'est-ce que la concentration molaire ?"
+choices = Array[String](["C'est la masse de soluté présente dans un litre de la solution.", "Le nombre d'électrons de l'élément.", "Les différents isotopes d'un élément.", "C'est la quantité de matière dissoute dans un litre de solution."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_x6uh0"]
+script = ExtResource("1_pq0nx")
+question = "Quel est l'objectif de la dilution ?"
+choices = Array[String](["Diminuer la concentration d'une solution en y ajoutant du solvant.", "Augmenter la concentration d'une solution en y ajoutant du solvant.", "Augmenter la quantité de solvant.", "Transformer un corps solide en liquide."])
+
+[sub_resource type="Resource" id="Resource_0jlhk"]
+script = ExtResource("1_pq0nx")
+question = "Comment appelons-nous les éléments situés à gauche du tableau périodique ?"
+choices = Array[String](["Les métaux.", "Les non métaux.", "Les sels.", "Les macromolécules."])
+
+[sub_resource type="Resource" id="Resource_7774v"]
+script = ExtResource("1_pq0nx")
+question = "Comment appelons-nous les éléments situés à droite du tableau périodique ?"
+choices = Array[String](["Les métaux.", "Les non métaux.", "Les sels.", "Les macromolécules."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_yp4mu"]
+script = ExtResource("1_pq0nx")
+question = "Comment appelons-nous les éléments chimiques de la dernière famille ?"
+choices = Array[String](["Les gaz perdus.", "Les gaz retrouvés.", "Les gaz nobles.", "Les gaz imparfaits."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_ap2u7"]
+script = ExtResource("1_pq0nx")
+question = "Qu'est-ce qu'un ion ?"
+choices = Array[String](["Un atome chargé.", "Un atome neutre.", "Un gaz rare.", "Une molécule instable."])
+
+[sub_resource type="Resource" id="Resource_ibjpj"]
+script = ExtResource("1_pq0nx")
+question = "Qu'est-ce qu'un cation ?"
+choices = Array[String](["Un atome chargé négativement.", "Un atome chargé positivement.", "Un atome neutre.", "Un atome sans charge."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_j7bui"]
+script = ExtResource("1_pq0nx")
+question = "Qu'est-ce qu'un anion ?"
+choices = Array[String](["Un atome chargé négativement.", "Un atome chargé positivement.", "Un atome neutre.", "Un atome sans charge."])
+
+[resource]
+script = ExtResource("2_rxojx")
+questions = Array[ExtResource("1_pq0nx")]([SubResource("Resource_p46kd"), SubResource("Resource_mietl"), SubResource("Resource_j2yys"), SubResource("Resource_ef4il"), SubResource("Resource_aah71"), SubResource("Resource_6fbe4"), SubResource("Resource_x6uh0"), SubResource("Resource_0jlhk"), SubResource("Resource_7774v"), SubResource("Resource_yp4mu"), SubResource("Resource_ap2u7"), SubResource("Resource_ibjpj"), SubResource("Resource_j7bui")])

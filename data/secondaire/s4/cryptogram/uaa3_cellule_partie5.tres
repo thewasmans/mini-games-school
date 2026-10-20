@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://cvtkti1r1mch2"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_yqpub"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_xr467"]
+
+[sub_resource type="Resource" id="Resource_yuqp2"]
+script = ExtResource("1_yqpub")
+text = "Un gène code pour un caractère."
+
+[sub_resource type="Resource" id="Resource_wp7rd"]
+script = ExtResource("1_yqpub")
+text = "Les allèles sont des versions d'un gène."
+
+[sub_resource type="Resource" id="Resource_euadl"]
+script = ExtResource("1_yqpub")
+text = "Le génotype détermine le phénotype."
+
+[sub_resource type="Resource" id="Resource_xb807"]
+script = ExtResource("1_yqpub")
+text = "L'allèle dominant masque le récessif."
+
+[sub_resource type="Resource" id="Resource_7xs2f"]
+script = ExtResource("1_yqpub")
+text = "Mendel démontre la transmission des caractères."
+
+[sub_resource type="Resource" id="Resource_nkgh0"]
+script = ExtResource("1_yqpub")
+text = "L'échiquier prévoit la descendance."
+
+[sub_resource type="Resource" id="Resource_sbpih"]
+script = ExtResource("1_yqpub")
+text = "Le test-cross identifie le génotype."
+
+[sub_resource type="Resource" id="Resource_tumqa"]
+script = ExtResource("1_yqpub")
+text = "La méiose sépare les allèles."
+
+[resource]
+script = ExtResource("2_xr467")
+hidden_letter_ratio = 0.05
+phrases = Array[ExtResource("1_yqpub")]([SubResource("Resource_yuqp2"), SubResource("Resource_wp7rd"), SubResource("Resource_euadl"), SubResource("Resource_xb807"), SubResource("Resource_7xs2f"), SubResource("Resource_nkgh0"), SubResource("Resource_sbpih"), SubResource("Resource_tumqa")])

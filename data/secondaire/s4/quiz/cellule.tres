@@ -1,0 +1,93 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bryqjylodb8ei"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_15jae"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_8458g"]
+
+[sub_resource type="Resource" id="Resource_t741m"]
+script = ExtResource("1_15jae")
+question = "Quel est l'organite végétal qui stocke la matière que la cellule n'utilise pas immédiatement ?"
+choices = Array[String](["La vacuole.", "Le noyau.", "Le réticulum endoplasmique.", "Le cytoplasme."])
+
+[sub_resource type="Resource" id="Resource_8gi2u"]
+script = ExtResource("1_15jae")
+question = "Quel élément est gélatineux et baigne les autres organites cellulaires ?"
+choices = Array[String](["La mitochondrie.", "Le cytoplasme.", "Le noyau.", "La paroi cellulaire."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_11ug0"]
+script = ExtResource("1_15jae")
+question = "Quel organite est le centre de contrôle de la cellule ?"
+choices = Array[String](["Les ribosomes.", "Le centriole.", "L'ARN.", "Le noyau."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_c8afq"]
+script = ExtResource("1_15jae")
+question = "Quel est le rôle de la mitochondrie ?"
+choices = Array[String](["Stocker des réserves.", "Produire de l'énergie.", "Stocker l'ADN nucléaire.", "Rôle de photosynthèse."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_tdpit"]
+script = ExtResource("1_15jae")
+question = "Quel organite n’est pas présent dans la cellule animale ?"
+choices = Array[String](["Le noyau.", "La mitochondrie.", "Le chloroplaste.", "L'appareil de golgi."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_fkcnr"]
+script = ExtResource("1_15jae")
+question = "Quel élément donne la couleur verte aux chloroplastes ?"
+choices = Array[String](["Les carotènes.", "L'hémocyanine.", "L'hémoglobine.", "La chlorophylle."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_i288w"]
+script = ExtResource("1_15jae")
+question = "Comment se nomme le réseau de tubes qui transporte les nutriments dans la cellule ?"
+choices = Array[String](["Le réticulum endoplasmique.", "La mitochondrie.", "Le noyau.", "La vacuole."])
+
+[sub_resource type="Resource" id="Resource_kny2o"]
+script = ExtResource("1_15jae")
+question = "Quel est le site de la photosynthèse ?"
+choices = Array[String](["La mitochondrie.", "Le noyau.", "Le chloroplaste.", "La mitose."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_ym50d"]
+script = ExtResource("1_15jae")
+question = "Qu’est-ce qui permet à la cellule d’absorber les nutriments et d’éliminer les déchets ?"
+choices = Array[String](["La méiose.", "La membrane cellulaire.", "La mitose.", "Les globules blancs."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_vpu0b"]
+script = ExtResource("1_15jae")
+question = "Quelle structure est considérée comme étant l’unité fondamentale du vivant ?"
+choices = Array[String](["Le virus.", "La bactérie.", "La cellule.", "La protéine."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_e6lu0"]
+script = ExtResource("1_15jae")
+question = "Quel élément est commun entre la cellule procaryote et la cellule eucaryote ?"
+choices = Array[String](["L'ADN.", "Le noyau.", "Le chloroplaste.", "La vacuole."])
+
+[sub_resource type="Resource" id="Resource_ps57j"]
+script = ExtResource("1_15jae")
+question = "Quelle particularité les eucaryotes possèdent-ils par rapport aux procaryotes ?"
+choices = Array[String](["L'ADN.", "Des ribosomes.", "Un noyau.", "Une cellule."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_76lbn"]
+script = ExtResource("1_15jae")
+question = "Quel élément est similaire entre le microscope électronique et le microscope optique ?"
+choices = Array[String](["Le pouvoir de résolution.", "Observer des éléments invisibles à l’œil nu.", "Le prix.", "Le fonctionnement."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_s30co"]
+script = ExtResource("1_15jae")
+question = "Comment appelle-t-on la partie liquide du cytoplasme ?"
+choices = Array[String](["Le cytosol.", "Le plasma.", "Le sang.", "La vacuole."])
+
+[sub_resource type="Resource" id="Resource_yu32a"]
+script = ExtResource("1_15jae")
+question = "Pourquoi dit-on que les archées sont extrémophiles ?"
+choices = Array[String](["Car elles survivent dans des conditions extrêmes.", "Car elles se reproduisent vite.", "Car elles grandissent vite.", "Car elles ne mangent pas."])
+
+[resource]
+script = ExtResource("2_8458g")
+questions = Array[ExtResource("1_15jae")]([SubResource("Resource_t741m"), SubResource("Resource_8gi2u"), SubResource("Resource_11ug0"), SubResource("Resource_c8afq"), SubResource("Resource_tdpit"), SubResource("Resource_fkcnr"), SubResource("Resource_i288w"), SubResource("Resource_kny2o"), SubResource("Resource_ym50d"), SubResource("Resource_vpu0b"), SubResource("Resource_e6lu0"), SubResource("Resource_ps57j"), SubResource("Resource_76lbn"), SubResource("Resource_s30co"), SubResource("Resource_yu32a")])
