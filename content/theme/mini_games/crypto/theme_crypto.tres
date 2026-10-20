@@ -11,5 +11,6 @@ border_width_bottom = 2
 border_color = Color(0.8560673, 0.8560673, 0.85606724, 1)
 
 [resource]
+LineEdit/constants/minimum_character_width = 1
 LineEdit/styles/focus = SubResource("StyleBoxFlat_be3fo")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_n3xvn")
