@@ -6,12 +6,14 @@ signal completed
 const NORMAL_COLOR := Color.WHITE
 const CORRECT_COLOR := Color(0.5, 1.0, 0.5)
 const INCORRECT_COLOR := Color(1.0, 0.5, 0.5)
-const SLOT_SIZE := Vector2(26, 38)
+const SLOT_SIZE := Vector2(10, 38)
 const LETTER_SIZE := Vector2(0, 44)
 const SPACE_SIZE := Vector2(16, 44)
 const REVEAL_DELAY := 0.6
+const WORD_LETTER_SEPARATION := 4
 const HIDDEN_BOX_STYLES: Array[StringName] = [&"normal", &"read_only"]
 const LETTER_COLOR_NAMES: Array[StringName] = [&"font_color", &"font_uneditable_color"]
+const THEME_LETTER_EMPTY: Theme = preload("res://content/theme/mini_games/crypto/theme_crypto.tres")
 
 @export var flow_container: FlowContainer
 @export var hint_label: Label
@@ -33,13 +35,19 @@ func _load_puzzle() -> void:
 	_puzzle = CryptoMasker.mask(_crypto_data.phrases[_puzzle_index], _crypto_data.hidden_letter_ratio)
 	hint_label.text = _puzzle.phrase_data.hint
 	var solution := _puzzle.solution()
+	var word_box: HBoxContainer = null
 	for character_index in solution.length():
 		if solution[character_index] == " ":
 			flow_container.add_child(_create_space())
-		elif _puzzle.is_hidden(character_index):
-			flow_container.add_child(_create_slot(character_index))
+			word_box = null
+			continue
+		if word_box == null:
+			word_box = _create_word_box()
+			flow_container.add_child(word_box)
+		if _puzzle.is_hidden(character_index):
+			word_box.add_child(_create_slot(character_index))
 		else:
-			flow_container.add_child(_create_letter(solution[character_index]))
+			word_box.add_child(_create_letter(solution[character_index]))
 	if _slots.is_empty():
 		_advance()
 		return
@@ -54,6 +62,11 @@ func _create_space() -> Control:
 	spacer.custom_minimum_size = SPACE_SIZE
 	return spacer
 
+func _create_word_box() -> HBoxContainer:
+	var box := HBoxContainer.new()
+	box.add_theme_constant_override("separation", WORD_LETTER_SEPARATION)
+	return box
+
 func _create_letter(letter: String) -> Label:
 	var label := Label.new()
 	label.text = letter
@@ -64,6 +77,7 @@ func _create_letter(letter: String) -> Label:
 
 func _create_slot(character_index: int) -> CryptoSlot:
 	var slot := CryptoSlot.new()
+	slot.theme = THEME_LETTER_EMPTY
 	slot.custom_minimum_size = SLOT_SIZE
 	slot.minimum_click_width = SLOT_SIZE.x
 	slot.max_length = 1

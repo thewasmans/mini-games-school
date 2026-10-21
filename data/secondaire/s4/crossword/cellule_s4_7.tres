@@ -1,0 +1,79 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dlpg6kejpns1p"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_yjoos"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_tmw50"]
+
+[sub_resource type="Resource" id="Resource_k14x8"]
+script = ExtResource("1_yjoos")
+word = "CARYOTYPE"
+hint = "Représentation de l'ensemble des chromosomes d'une cellule, classés par paire."
+grid_position = Vector2i(1, 13)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ew866"]
+script = ExtResource("1_yjoos")
+word = "CYCLE"
+hint = "Période durant laquelle l'ADN se présente sous différents aspects."
+grid_position = Vector2i(5, 10)
+
+[sub_resource type="Resource" id="Resource_g6vhy"]
+script = ExtResource("1_yjoos")
+word = "CYTOCINESE"
+hint = "Etape de la mitose où l'on peut voir deux cellules filles formées, génétiquement identiques."
+grid_position = Vector2i(6, 4)
+
+[sub_resource type="Resource" id="Resource_1iml5"]
+script = ExtResource("1_yjoos")
+word = "NUCLEOLE"
+hint = "Région du noyau où se trouve l'ADN."
+grid_position = Vector2i(7, 8)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_vb3e6"]
+script = ExtResource("1_yjoos")
+word = "MITOSE"
+hint = "Processus de division cellulaire permettant d'obtenir des cellules filles génétiquement identiques."
+grid_position = Vector2i(2, 12)
+
+[sub_resource type="Resource" id="Resource_hrfba"]
+script = ExtResource("1_yjoos")
+word = "VACUOLE"
+hint = "Compartiment qui sert surtout au maintien de l’équilibre hydrique."
+grid_position = Vector2i(5, 8)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_6pyct"]
+script = ExtResource("1_yjoos")
+word = "OPTIQUE"
+hint = "Technique de microscopie basée sur l'utilisation de lentilles."
+grid_position = Vector2i(9, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_kdq7k"]
+script = ExtResource("1_yjoos")
+word = "VIRUS"
+hint = "Agent infectieux nécessitant un hôte."
+grid_position = Vector2i(14, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_vf7ep"]
+script = ExtResource("1_yjoos")
+word = "ZYGOTE"
+hint = "Cellule oeuf fécondée résultant de la fusion d'un gamète femelle et d'un gamète mâle."
+grid_position = Vector2i(5, 6)
+
+[sub_resource type="Resource" id="Resource_y12i1"]
+script = ExtResource("1_yjoos")
+word = "HETEROZYGOTE"
+hint = "Individu qui possède deux allèles différents pour un gène donné."
+grid_position = Vector2i(6, 15)
+
+[sub_resource type="Resource" id="Resource_fmw2a"]
+script = ExtResource("1_yjoos")
+word = "GAMETE"
+hint = "Cellule reproductrice appelée spermatozoide ou ovocyte."
+grid_position = Vector2i(0, 14)
+
+[resource]
+script = ExtResource("2_tmw50")
+clues = Array[ExtResource("1_yjoos")]([SubResource("Resource_k14x8"), SubResource("Resource_ew866"), SubResource("Resource_g6vhy"), SubResource("Resource_1iml5"), SubResource("Resource_vb3e6"), SubResource("Resource_hrfba"), SubResource("Resource_6pyct"), SubResource("Resource_kdq7k"), SubResource("Resource_vf7ep"), SubResource("Resource_y12i1"), SubResource("Resource_fmw2a")])

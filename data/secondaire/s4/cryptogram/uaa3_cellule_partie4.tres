@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dcmniitvejhix"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_cgyk6"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_fss77"]
+
+[sub_resource type="Resource" id="Resource_edl2d"]
+script = ExtResource("1_cgyk6")
+text = "Le caryotype classe les chromosomes."
+
+[sub_resource type="Resource" id="Resource_7j5hv"]
+script = ExtResource("1_cgyk6")
+text = "Les cellules somatiques sont diploïdes."
+
+[sub_resource type="Resource" id="Resource_1yrim"]
+script = ExtResource("1_cgyk6")
+text = "Les gamètes sont haploïdes."
+
+[sub_resource type="Resource" id="Resource_txkx7"]
+script = ExtResource("1_cgyk6")
+text = "La méiose réduit de moitié les chromosomes."
+
+[sub_resource type="Resource" id="Resource_0r5j1"]
+script = ExtResource("1_cgyk6")
+text = "Le brassage génétique crée la diversité."
+
+[sub_resource type="Resource" id="Resource_enfq3"]
+script = ExtResource("1_cgyk6")
+text = "La fécondation restaure l'état diploïde."
+
+[sub_resource type="Resource" id="Resource_6w7dp"]
+script = ExtResource("1_cgyk6")
+text = "Des accidents modifient les chromosomes."
+
+[sub_resource type="Resource" id="Resource_luhc6"]
+script = ExtResource("1_cgyk6")
+text = "Les mutations diversifient les espèces."
+
+[resource]
+script = ExtResource("2_fss77")
+hidden_letter_ratio = 0.05
+phrases = Array[ExtResource("1_cgyk6")]([SubResource("Resource_edl2d"), SubResource("Resource_7j5hv"), SubResource("Resource_1yrim"), SubResource("Resource_txkx7"), SubResource("Resource_0r5j1"), SubResource("Resource_enfq3"), SubResource("Resource_6w7dp"), SubResource("Resource_luhc6")])

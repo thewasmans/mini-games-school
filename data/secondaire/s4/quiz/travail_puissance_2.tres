@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bwr1b3t4u4j71"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_sclt3"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_iw72t"]
+
+[sub_resource type="Resource" id="Resource_5m0ap"]
+script = ExtResource("1_sclt3")
+question = "Quelle est la formule de la force poids ?"
+choices = Array[String](["Le produit de la masse et de la gravité.", "Le produit de la force et de la gravité.", "Le produit de la masse et de la force.", "Le rapport entre la masse et la gravité."])
+
+[sub_resource type="Resource" id="Resource_y1wd6"]
+script = ExtResource("1_sclt3")
+question = "En quoi consiste la friction ?"
+choices = Array[String](["C'est une force de frottement.", "C'est un déplacement.", "C'est la force gravitationnelle.", "C'est la force exercée par la personne."])
+
+[sub_resource type="Resource" id="Resource_cuqvb"]
+script = ExtResource("1_sclt3")
+question = "Qu'est-ce que le moment de force ?"
+choices = Array[String](["Une grandeur vectorielle qui décrit l'aptitude d'une force à faire tourner un corps autour d'un axe.", "L'équivalent d'une puissance.", "Une énergie perdue.", "Une énergie cinétique."])
+
+[sub_resource type="Resource" id="Resource_0ffhm"]
+script = ExtResource("1_sclt3")
+question = "En quoi consiste le travail d'une force ?"
+choices = Array[String](["Il n'y a aucune définition précise.", "C'est l'effet d'une force appliquée sur un objet qui entraine son déplacement.", "C'est le transfert d'énergie thermique.", "C'est la force de pesanteur."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_uru2h"]
+script = ExtResource("1_sclt3")
+question = "Quelle est l'unité du travail ?"
+choices = Array[String](["Le watt.", "Le joule.", "Les degrés Celsius.", "La seconde."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_y01m3"]
+script = ExtResource("1_sclt3")
+question = "Quand parlons-nous d'un travail moteur ?"
+choices = Array[String](["Lorsque la force et le déplacement sont dans le même sens.", "Lorsque la force et le déplacement sont dans le sens contraire.", "Lorsque la direction de la force est perpendiculaire à celle du déplacement.", "Lorsque la force annule la masse."])
+
+[sub_resource type="Resource" id="Resource_rxvv2"]
+script = ExtResource("1_sclt3")
+question = "Quand parlons-nous d'un travail résistant ?"
+choices = Array[String](["Lorsque la force et le déplacement sont dans le même sens.", "Lorsque la force et le déplacement sont dans le sens contraire.", "Lorsque la direction de la force est perpendiculaire à celle du déplacement.", "Lorsque la force annule la masse."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_wso0l"]
+script = ExtResource("1_sclt3")
+question = "Quand parlons-nous d'un travail nul ?"
+choices = Array[String](["Lorsque la force et le déplacement sont dans le même sens.", "Lorsque la force et le déplacement sont dans le sens contraire.", "Lorsque la direction de la force est perpendiculaire à celle du déplacement.", "Lorsque la force annule la masse."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_2hdob"]
+script = ExtResource("1_sclt3")
+question = "Qu'est-ce que la vitesse moyenne ?"
+choices = Array[String](["La distance parcourue par rapport au temps.", "Une accélération à un moment précis.", "Le temps de réaction.", "La vitesse moyenne mesurée sur un intervalle de temps très court."])
+
+[sub_resource type="Resource" id="Resource_61xuw"]
+script = ExtResource("1_sclt3")
+question = "Qu'est-ce que la vitesse instantanée ?"
+choices = Array[String](["La distance parcourue par rapport au temps.", "Une accélération à un moment précis.", "Le temps de réaction.", "La vitesse moyenne mesurée sur un intervalle de temps très court."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_y34ya"]
+script = ExtResource("1_sclt3")
+question = "Quelle est la formule de la puissance ?"
+choices = Array[String](["Le rapport entre la tension et l'intensité du courant.", "Le produit de la puissance et du temps.", "Le produit de l'intensité et de la tension.", "Le rapport entre l'énergie et la puissance."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_kfgoc"]
+script = ExtResource("1_sclt3")
+question = "Quelle est l'unité de la puissance ?"
+choices = Array[String](["Le joule.", "Le watt.", "L'ohm.", "Le volt."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_iw72t")
+questions = Array[ExtResource("1_sclt3")]([SubResource("Resource_5m0ap"), SubResource("Resource_y1wd6"), SubResource("Resource_cuqvb"), SubResource("Resource_0ffhm"), SubResource("Resource_uru2h"), SubResource("Resource_y01m3"), SubResource("Resource_rxvv2"), SubResource("Resource_wso0l"), SubResource("Resource_2hdob"), SubResource("Resource_61xuw"), SubResource("Resource_y34ya"), SubResource("Resource_kfgoc")])
