@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://movkvjm3labp"]
+
+[ext_resource type="Script" uid="uid://dkpyk3jfxi308" path="res://scripts/ui/menu_credits_ui.gd" id="1_credits"]
+[ext_resource type="Texture2D" uid="uid://c3upgh7dpfrhf" path="res://content/sprites/ui/ui_background.png" id="2_bg"]
+[ext_resource type="Texture2D" uid="uid://bssxvehr8hskc" path="res://content/sprites/ui/icon_return.png" id="3_back"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_455r3"]
+
+[node name="MenuCreditsUI" type="Control" unique_id=546725621]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_credits")
+
+[node name="Background" type="TextureRect" parent="." unique_id=424734494]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Layout" type="VBoxContainer" parent="." unique_id=2070264997]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="Control" parent="Layout" unique_id=1252648258]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="Layout/TopBar" unique_id=615640229]
+layout_mode = 0
+offset_right = 214.0
+offset_bottom = 194.0
+scale = Vector2(0.525, 0.525)
+theme_override_font_sizes/font_size = 39
+icon = ExtResource("3_back")
+icon_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Layout" unique_id=590462689]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Content" type="VBoxContainer" parent="Layout/ScrollContainer" unique_id=1435238251]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 32
+
+[node name="Title" type="Label" parent="Layout/ScrollContainer/Content" unique_id=341956808]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "CRÉDITS"
+horizontal_alignment = 1
+
+[node name="ContributorsTitle" type="Label" parent="Layout/ScrollContainer/Content" unique_id=1368473627]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Contributeurs"
+horizontal_alignment = 1
+
+[node name="ContributorsList" type="VBoxContainer" parent="Layout/ScrollContainer/Content" unique_id=1952148581]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Contributor1" type="Label" parent="Layout/ScrollContainer/Content/ContributorsList" unique_id=2124713920]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "thewasmans"
+horizontal_alignment = 1
+
+[node name="Contributor2" type="Label" parent="Layout/ScrollContainer/Content/ContributorsList" unique_id=610476734]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "kiacobel"
+horizontal_alignment = 1
+
+[node name="LogosTitle" type="Label" parent="Layout/ScrollContainer/Content" unique_id=937931294]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Écoles et partenaires"
+horizontal_alignment = 1
+
+[node name="LogosContainer" type="HFlowContainer" parent="Layout/ScrollContainer/Content" unique_id=1688737945]
+layout_mode = 2
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 40
+alignment = 1
+
+[node name="LogoSlot1" type="TextureRect" parent="Layout/ScrollContainer/Content/LogosContainer" unique_id=1407048119]
+custom_minimum_size = Vector2(220, 140)
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_455r3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LogoSlot2" type="TextureRect" parent="Layout/ScrollContainer/Content/LogosContainer" unique_id=509404274]
+custom_minimum_size = Vector2(220, 140)
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_455r3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LogoSlot3" type="TextureRect" parent="Layout/ScrollContainer/Content/LogosContainer" unique_id=1785898989]
+custom_minimum_size = Vector2(220, 140)
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_455r3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LogoSlot4" type="TextureRect" parent="Layout/ScrollContainer/Content/LogosContainer" unique_id=2038957174]
+custom_minimum_size = Vector2(220, 140)
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_455r3")
+expand_mode = 1
+stretch_mode = 5
+
+[connection signal="pressed" from="Layout/TopBar/BackButton" to="." method="_on_back_button_pressed"]

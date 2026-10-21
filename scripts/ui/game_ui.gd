@@ -6,6 +6,7 @@ const STUDY_LEVEL_BUTTON_FONT_SIZE := 40
 
 @export var menu_study_levels: MenuStudyLevelsUI
 @export var menu_levels: MenuLevelsUI
+@export var menu_credits: MenuCreditsUI
 @export var button_level_prefab: PackedScene
 
 var _game_manager: GameManager
@@ -15,8 +16,10 @@ func initialize(game_manager: GameManager) -> void:
 	_game_manager = game_manager
 	menu_study_levels.hide()
 	menu_levels.hide()
+	menu_credits.hide()
 	menu_study_levels.back_pressed.connect(_on_menu_study_levels_back)
 	menu_levels.back_pressed.connect(_on_menu_levels_back)
+	menu_credits.back_pressed.connect(_on_menu_credits_back)
 	_game_manager.game_state.level_unlocked.connect(_on_level_unlocked)
 	_game_manager.game_state.current_level_changed.connect(_on_current_level_changed)
 	_populate_study_levels()
@@ -33,6 +36,12 @@ func _populate_study_levels() -> void:
 
 func _on_play_button_pressed() -> void:
 	menu_study_levels.show()
+
+func _on_credits_button_pressed() -> void:
+	menu_credits.show()
+
+func _on_menu_credits_back() -> void:
+	menu_credits.hide()
 
 func _on_menu_study_levels_back() -> void:
 	menu_study_levels.hide()
