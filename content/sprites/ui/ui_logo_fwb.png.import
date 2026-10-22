@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btmrlh40mh6oy"
-path="res://.godot/imported/college-des-etoiles-new-concept.png-1304d9576f360b6bed3085a62985a287.ctex"
+uid="uid://dhogrwrhvob5g"
+path="res://.godot/imported/ui_logo_fwb.png-40c96b22ff6adaa2d3e0047d58a5566c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://content/sprites/ui/college-des-etoiles-new-concept.png"
-dest_files=["res://.godot/imported/college-des-etoiles-new-concept.png-1304d9576f360b6bed3085a62985a287.ctex"]
+source_file="res://content/sprites/ui/ui_logo_fwb.png"
+dest_files=["res://.godot/imported/ui_logo_fwb.png-40c96b22ff6adaa2d3e0047d58a5566c.ctex"]
 
 [params]
 

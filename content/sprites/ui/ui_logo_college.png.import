@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhogrwrhvob5g"
-path="res://.godot/imported/FWB_VERTI_NEGA_01.png-fc20687f0590f5aea2b7a9a6a13fb735.ctex"
+uid="uid://btmrlh40mh6oy"
+path="res://.godot/imported/ui_logo_college.png-8bfb75f581c9dd67eaee4cd8c453b72a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://content/sprites/ui/FWB_VERTI_NEGA_01.png"
-dest_files=["res://.godot/imported/FWB_VERTI_NEGA_01.png-fc20687f0590f5aea2b7a9a6a13fb735.ctex"]
+source_file="res://content/sprites/ui/ui_logo_college.png"
+dest_files=["res://.godot/imported/ui_logo_college.png-8bfb75f581c9dd67eaee4cd8c453b72a.ctex"]
 
 [params]
 
