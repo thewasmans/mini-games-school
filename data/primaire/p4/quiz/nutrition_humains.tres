@@ -1,0 +1,65 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://dxbi7ghvpqucb"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_t41ib"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_l8ejl"]
+
+[sub_resource type="Resource" id="Resource_e5iem"]
+script = ExtResource("1_t41ib")
+question = "Quel terme désigne l’ensemble du parcours des aliments ?"
+choices = Array[String](["Le tube circulatoire.", "La croissance.", "Le tube digestif.", "La respiration."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_i03te"]
+script = ExtResource("1_t41ib")
+question = "Que signifie nutriment ?"
+choices = Array[String](["Un aliment qu’on mange le matin.", "Un liquide produit par l’estomac.", "Un médicament.", "Une substance extraite des aliments par la digestion."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_ddl1m"]
+script = ExtResource("1_t41ib")
+question = "Que signifie le tube digestif ?"
+choices = Array[String](["L’ensemble des organes qui transportent et font avancer les aliments.", "Un muscle.", "Un organe.", "Un tuyau qui transporte le sang."])
+
+[sub_resource type="Resource" id="Resource_16m5o"]
+script = ExtResource("1_t41ib")
+question = "Que signifie l’alimentation ?"
+choices = Array[String](["Lorsqu’on respire.", "La quantité d’eau qu’on boit.", "Le nombre de repas.", "L’ensemble de ce qu’on mange et boit."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_36gvc"]
+script = ExtResource("1_t41ib")
+question = "Quel est l'organe qui broie et mélange les aliments au début de la digestion ?"
+choices = Array[String](["Intestin.", "Œsophage.", "Estomac.", "Bouche."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_3clla"]
+script = ExtResource("1_t41ib")
+question = "Quel organe fait suite à la bouche et conduit les aliments vers l'estomac ?"
+choices = Array[String](["Intestin.", "Œsophage.", "Estomac.", "Bouche."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_soc2j"]
+script = ExtResource("1_t41ib")
+question = "Dans quel organe les aliments sont-ils brassés et transformés en bouillie ?"
+choices = Array[String](["Intestin.", "Œsophage.", "Estomac.", "Bouche."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_lwsnq"]
+script = ExtResource("1_t41ib")
+question = "Quel est le bon trajet des aliments dans le tube digestif ?"
+choices = Array[String](["De la bouche au gros intestin.", "De la bouche à l’estomac.", "De l’œsophage à la bouche.", "De l’œsophage à l’intestin grêle."])
+
+[sub_resource type="Resource" id="Resource_jffoh"]
+script = ExtResource("1_t41ib")
+question = "Quelle proposition n’est pas une règle d’hygiène de vie ?"
+choices = Array[String](["Alimentation saine.", "Ne pas dormir.", "Une activité physique et régulière.", "La nécessité de boire de l’eau."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_hk3s7"]
+script = ExtResource("1_t41ib")
+question = "De quoi sont constitués les êtres vivants ?"
+choices = Array[String](["Matière.", "Bonbon.", "Terre.", "Graine."])
+
+[resource]
+script = ExtResource("2_l8ejl")
+questions = Array[ExtResource("1_t41ib")]([SubResource("Resource_e5iem"), SubResource("Resource_i03te"), SubResource("Resource_ddl1m"), SubResource("Resource_16m5o"), SubResource("Resource_36gvc"), SubResource("Resource_3clla"), SubResource("Resource_soc2j"), SubResource("Resource_lwsnq"), SubResource("Resource_jffoh"), SubResource("Resource_hk3s7")])

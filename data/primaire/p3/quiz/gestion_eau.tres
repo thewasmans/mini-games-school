@@ -1,0 +1,65 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://crh3d1qp22vi2"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_dqp0s"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_rqhvw"]
+
+[sub_resource type="Resource" id="Resource_nephy"]
+script = ExtResource("1_dqp0s")
+question = "Que se passe-t-il si on laisse un robinet qui goutte ?"
+choices = Array[String](["Cela ne consomme rien.", "Cela gaspille beaucoup d'eau sur une année.", "Cela fait fonctionner le chauffe-eau.", "Cela fait grandir les fleurs du jardin."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ared3"]
+script = ExtResource("1_dqp0s")
+question = "D'où vient l'eau qui sort de notre robinet ?"
+choices = Array[String](["Du ciel directement.", "D'un cycle de traitement provenant de milieux naturels.", "Elle est créée par l'usine.", "Directement des nuages de pluie."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_85mmy"]
+script = ExtResource("1_dqp0s")
+question = "Qu'appelle-t-on de l'eau potable ?"
+choices = Array[String](["De l'eau qu'on peut boire sans danger.", "De l'eau qui sort d'une rivière.", "De l'eau très froide.", "De l'eau qui a un goût de citron."])
+
+[sub_resource type="Resource" id="Resource_6prpw"]
+script = ExtResource("1_dqp0s")
+question = "Comment appelle-t-on le passage de la vapeur d'eau en gouttelettes ?"
+choices = Array[String](["L'évaporation.", "La condensation.", "La solidification.", "L'ébullition."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_al7sg"]
+script = ExtResource("1_dqp0s")
+question = "À quoi servent les barrages sur les rivières ?"
+choices = Array[String](["À retenir l'eau pour créer des réserves.", "À empêcher l'eau de couler.", "À filtrer l'eau polluée.", "À produire de l'électricité avec le vent."])
+
+[sub_resource type="Resource" id="Resource_6hvgh"]
+script = ExtResource("1_dqp0s")
+question = "Comment se nomme l'eau qui tombe du ciel ?"
+choices = Array[String](["La rosée.", "La précipitation.", "La condensation.", "Le vent."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_hdwy8"]
+script = ExtResource("1_dqp0s")
+question = "Pourquoi ne faut-il pas jeter de médicaments dans les toilettes ?"
+choices = Array[String](["Car ils ne sont pas efficaces.", "Car ils polluent l'eau.", "Car cela bouche les égouts.", "Car cela rend l'eau pétillante."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_4lrre"]
+script = ExtResource("1_dqp0s")
+question = "Qu'est-ce qu'une nappe phréatique ?"
+choices = Array[String](["Une rivière qui coule vite.", "Une réserve d'eau sous la terre.", "Un lac artificiel.", "Un nuage très bas dans le ciel."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_fxdb5"]
+script = ExtResource("1_dqp0s")
+question = "Quelle habitude gaspille beaucoup d'eau dans la salle de bain ?"
+choices = Array[String](["Laisser couler l'eau en se brossant les dents.", "Utiliser un gobelet.", "Prendre une douche rapide.", "Prendre des douches courtes."])
+
+[sub_resource type="Resource" id="Resource_k42rn"]
+script = ExtResource("1_dqp0s")
+question = "L'eau des océans est-elle potable ?"
+choices = Array[String](["Oui, car c'est de l'eau.", "Non, car elle est salée.", "Non, car elle est trop froide.", "Oui, après l'avoir chauffée."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_rqhvw")
+questions = Array[ExtResource("1_dqp0s")]([SubResource("Resource_nephy"), SubResource("Resource_ared3"), SubResource("Resource_85mmy"), SubResource("Resource_6prpw"), SubResource("Resource_al7sg"), SubResource("Resource_6hvgh"), SubResource("Resource_hdwy8"), SubResource("Resource_4lrre"), SubResource("Resource_fxdb5"), SubResource("Resource_k42rn")])

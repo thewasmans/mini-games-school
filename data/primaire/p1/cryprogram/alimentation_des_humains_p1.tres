@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://bdelxt7l5srun"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_xxusn"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_pksxw"]
+
+[sub_resource type="Resource" id="Resource_vagt0"]
+script = ExtResource("1_xxusn")
+text = "L’aliment est composé de nutriments."
+
+[sub_resource type="Resource" id="Resource_g81mn"]
+script = ExtResource("1_xxusn")
+text = "L’eau est un aliment."
+
+[sub_resource type="Resource" id="Resource_u7cfm"]
+script = ExtResource("1_xxusn")
+text = "Les aliments sont nécessaires pour vivre."
+
+[sub_resource type="Resource" id="Resource_horrm"]
+script = ExtResource("1_xxusn")
+text = "Il faut manger des légumes et des fruits."
+
+[sub_resource type="Resource" id="Resource_5n3jk"]
+script = ExtResource("1_xxusn")
+text = "Les aliments sont classés dans une pyramide."
+
+[sub_resource type="Resource" id="Resource_rq6tw"]
+script = ExtResource("1_xxusn")
+text = "Les bonbons ne sont pas nécessaires à notre survie."
+
+[sub_resource type="Resource" id="Resource_blfw3"]
+script = ExtResource("1_xxusn")
+text = "Nous avons besoin de sucres et de graisses."
+
+[resource]
+script = ExtResource("2_pksxw")
+phrases = Array[ExtResource("1_xxusn")]([SubResource("Resource_vagt0"), SubResource("Resource_g81mn"), SubResource("Resource_u7cfm"), SubResource("Resource_horrm"), SubResource("Resource_5n3jk"), SubResource("Resource_rq6tw"), SubResource("Resource_blfw3")])

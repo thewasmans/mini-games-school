@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dl3q82ky2rnoi"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_p4i8x"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_wkodr"]
+
+[sub_resource type="Resource" id="Resource_85fnq"]
+script = ExtResource("1_p4i8x")
+text = "Un phénomène physique n’entraîne pas un changement de la matière."
+
+[sub_resource type="Resource" id="Resource_rclpm"]
+script = ExtResource("1_p4i8x")
+text = "Un phénomène chimique entraîne un changement de la matière."
+
+[sub_resource type="Resource" id="Resource_hsgd2"]
+script = ExtResource("1_p4i8x")
+text = "La combustion nécessite de l’air."
+
+[sub_resource type="Resource" id="Resource_gysbu"]
+script = ExtResource("1_p4i8x")
+text = "La combustion entraîne la libération de chaleur."
+
+[sub_resource type="Resource" id="Resource_y3s88"]
+script = ExtResource("1_p4i8x")
+text = "L’eau permet d’éteindre le feu."
+
+[sub_resource type="Resource" id="Resource_wq71q"]
+script = ExtResource("1_p4i8x")
+text = "La chaleur est de l’énergie thermique."
+
+[resource]
+script = ExtResource("2_wkodr")
+phrases = Array[ExtResource("1_p4i8x")]([SubResource("Resource_85fnq"), SubResource("Resource_rclpm"), SubResource("Resource_hsgd2"), SubResource("Resource_gysbu"), SubResource("Resource_y3s88"), SubResource("Resource_wq71q")])

@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://bjim523rypnyo"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_nq4gi"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_1q5tn"]
+
+[sub_resource type="Resource" id="Resource_4bpjc"]
+script = ExtResource("1_nq4gi")
+text = "La rotation de la Terre se déroule en 24h."
+
+[sub_resource type="Resource" id="Resource_5b7b3"]
+script = ExtResource("1_nq4gi")
+text = "La révolution de la Terre se déroule en 365jours."
+
+[sub_resource type="Resource" id="Resource_136fo"]
+script = ExtResource("1_nq4gi")
+text = "Le Soleil est une étoile."
+
+[sub_resource type="Resource" id="Resource_31tto"]
+script = ExtResource("1_nq4gi")
+text = "La Terre est une planète."
+
+[sub_resource type="Resource" id="Resource_rvx6x"]
+script = ExtResource("1_nq4gi")
+text = "La Lune est un satellite."
+
+[sub_resource type="Resource" id="Resource_idbs3"]
+script = ExtResource("1_nq4gi")
+text = "La Lune tourne autour de la Terre."
+
+[sub_resource type="Resource" id="Resource_0f5a8"]
+script = ExtResource("1_nq4gi")
+text = "Le modèle est une représentation simplifiée."
+
+[sub_resource type="Resource" id="Resource_kfu0c"]
+script = ExtResource("1_nq4gi")
+text = "Le système solaire comprend la Terre."
+
+[resource]
+script = ExtResource("2_1q5tn")
+phrases = Array[ExtResource("1_nq4gi")]([SubResource("Resource_4bpjc"), SubResource("Resource_5b7b3"), SubResource("Resource_136fo"), SubResource("Resource_31tto"), SubResource("Resource_rvx6x"), SubResource("Resource_idbs3"), SubResource("Resource_0f5a8"), SubResource("Resource_kfu0c")])

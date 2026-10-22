@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://c228u2gmmi4p0"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_7jsjb"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_r3l0c"]
+
+[sub_resource type="Resource" id="Resource_m38cb"]
+script = ExtResource("1_7jsjb")
+text = "La fructification est la formation d’un fruit."
+
+[sub_resource type="Resource" id="Resource_yhxfo"]
+script = ExtResource("1_7jsjb")
+text = "La pollinisation est le transport du pollen."
+
+[sub_resource type="Resource" id="Resource_3njgr"]
+script = ExtResource("1_7jsjb")
+text = "La plante peut se reproduire de manière asexuée."
+
+[sub_resource type="Resource" id="Resource_rkrwq"]
+script = ExtResource("1_7jsjb")
+text = "Le fruit contient les graines."
+
+[sub_resource type="Resource" id="Resource_6wo3p"]
+script = ExtResource("1_7jsjb")
+text = "L’anémogamie est le transport du pollen par le vent."
+
+[sub_resource type="Resource" id="Resource_c0cja"]
+script = ExtResource("1_7jsjb")
+text = "La fleur est un organe de la plante."
+
+[resource]
+script = ExtResource("2_r3l0c")
+phrases = Array[ExtResource("1_7jsjb")]([SubResource("Resource_m38cb"), SubResource("Resource_yhxfo"), SubResource("Resource_3njgr"), SubResource("Resource_rkrwq"), SubResource("Resource_6wo3p"), SubResource("Resource_c0cja")])

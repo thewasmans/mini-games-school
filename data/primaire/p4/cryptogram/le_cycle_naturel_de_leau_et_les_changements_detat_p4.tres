@@ -1,0 +1,52 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dmjsmgym2ijgd"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_tmjhh"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_nbdif"]
+
+[sub_resource type="Resource" id="Resource_vtxhg"]
+script = ExtResource("1_tmjhh")
+text = "L’évaporation n’est pas synonyme de fusion."
+
+[sub_resource type="Resource" id="Resource_8pb34"]
+script = ExtResource("1_tmjhh")
+text = "La condensation est un changement d’état."
+
+[sub_resource type="Resource" id="Resource_8lat8"]
+script = ExtResource("1_tmjhh")
+text = "Les précipitations concernant la pluie et la neige."
+
+[sub_resource type="Resource" id="Resource_u4vvj"]
+script = ExtResource("1_tmjhh")
+text = "Les eaux de surface ne sont pas les eaux souterraines."
+
+[sub_resource type="Resource" id="Resource_rvown"]
+script = ExtResource("1_tmjhh")
+text = "Le gaz est une matière."
+
+[sub_resource type="Resource" id="Resource_88drc"]
+script = ExtResource("1_tmjhh")
+text = "Un changement d’état se produit suite à une variation de température."
+
+[sub_resource type="Resource" id="Resource_gxeml"]
+script = ExtResource("1_tmjhh")
+text = "L’eau bout à partir de 99°C."
+
+[sub_resource type="Resource" id="Resource_1bfk8"]
+script = ExtResource("1_tmjhh")
+text = "Le gramme est une unité de mesure."
+
+[sub_resource type="Resource" id="Resource_vv52m"]
+script = ExtResource("1_tmjhh")
+text = "Une série d’étapes à suivre se nomme un protocole."
+
+[sub_resource type="Resource" id="Resource_i38fs"]
+script = ExtResource("1_tmjhh")
+text = "Le cycle de l’eau est un phénomène naturel."
+
+[sub_resource type="Resource" id="Resource_lbg64"]
+script = ExtResource("1_tmjhh")
+text = "Le thermomètre est un instrument de mesure."
+
+[resource]
+script = ExtResource("2_nbdif")
+phrases = Array[ExtResource("1_tmjhh")]([SubResource("Resource_vtxhg"), SubResource("Resource_8pb34"), SubResource("Resource_8lat8"), SubResource("Resource_u4vvj"), SubResource("Resource_rvown"), SubResource("Resource_88drc"), SubResource("Resource_gxeml"), SubResource("Resource_1bfk8"), SubResource("Resource_vv52m"), SubResource("Resource_i38fs"), SubResource("Resource_lbg64")])

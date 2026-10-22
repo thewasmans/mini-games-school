@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dfr800o7jdou8"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_kstxs"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_m2j2f"]
+
+[sub_resource type="Resource" id="Resource_abkm4"]
+script = ExtResource("1_kstxs")
+text = "La fécondation est la fusion entre le spermatozoïde et l’ovocyte."
+
+[sub_resource type="Resource" id="Resource_os387"]
+script = ExtResource("1_kstxs")
+text = "La puberté correspond aux changements biologiques d’un enfant."
+
+[sub_resource type="Resource" id="Resource_a4c8d"]
+script = ExtResource("1_kstxs")
+text = "L’appareil reproducteur masculin contient les testicules."
+
+[sub_resource type="Resource" id="Resource_v86qf"]
+script = ExtResource("1_kstxs")
+text = "L’appareil reproducteur féminin contient les ovaires."
+
+[sub_resource type="Resource" id="Resource_127jm"]
+script = ExtResource("1_kstxs")
+text = "La pilosité est un caractère sexuel."
+
+[resource]
+script = ExtResource("2_m2j2f")
+phrases = Array[ExtResource("1_kstxs")]([SubResource("Resource_abkm4"), SubResource("Resource_os387"), SubResource("Resource_a4c8d"), SubResource("Resource_v86qf"), SubResource("Resource_127jm")])

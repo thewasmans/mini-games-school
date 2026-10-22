@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dv0jhew1ohjjv"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_2uamy"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_ws82m"]
+
+[sub_resource type="Resource" id="Resource_w55rg"]
+script = ExtResource("1_2uamy")
+text = "La vue est un sens."
+
+[sub_resource type="Resource" id="Resource_evprr"]
+script = ExtResource("1_2uamy")
+text = "L’oeil est un organe."
+
+[sub_resource type="Resource" id="Resource_4n217"]
+script = ExtResource("1_2uamy")
+text = "Le cerveau est le chef d’orchestre de nos sens."
+
+[sub_resource type="Resource" id="Resource_upgec"]
+script = ExtResource("1_2uamy")
+text = "L’oreille et la peau sont des organes."
+
+[sub_resource type="Resource" id="Resource_8b7c6"]
+script = ExtResource("1_2uamy")
+text = "Les nerfs servent à communiquer."
+
+[sub_resource type="Resource" id="Resource_xy8ug"]
+script = ExtResource("1_2uamy")
+text = "Un son est une vibration qui se propage dans un milieu."
+
+[sub_resource type="Resource" id="Resource_nnkl0"]
+script = ExtResource("1_2uamy")
+text = "Le récepteur capte le son émis par une source."
+
+[sub_resource type="Resource" id="Resource_6vkvw"]
+script = ExtResource("1_2uamy")
+text = "Un son peut être gave ou aigu."
+
+[sub_resource type="Resource" id="Resource_so4or"]
+script = ExtResource("1_2uamy")
+text = "L’oeil est un récepteur de lumière."
+
+[sub_resource type="Resource" id="Resource_gn6ef"]
+script = ExtResource("1_2uamy")
+text = "La lumière se propage dans le vide"
+hint = "en ligne droite."
+
+[sub_resource type="Resource" id="Resource_0o6ol"]
+script = ExtResource("1_2uamy")
+text = "Le miroir est un instrument d’optique"
+hint = "comme la loupe."
+
+[sub_resource type="Resource" id="Resource_xuko4"]
+script = ExtResource("1_2uamy")
+text = "Il faut se protéger des rayons lasers."
+
+[sub_resource type="Resource" id="Resource_d0dpn"]
+script = ExtResource("1_2uamy")
+text = "Lors d’une éclipse"
+hint = "on met des lunettes de protection."
+
+[resource]
+script = ExtResource("2_ws82m")
+phrases = Array[ExtResource("1_2uamy")]([SubResource("Resource_w55rg"), SubResource("Resource_evprr"), SubResource("Resource_4n217"), SubResource("Resource_upgec"), SubResource("Resource_8b7c6"), SubResource("Resource_xy8ug"), SubResource("Resource_nnkl0"), SubResource("Resource_6vkvw"), SubResource("Resource_so4or"), SubResource("Resource_gn6ef"), SubResource("Resource_0o6ol"), SubResource("Resource_xuko4"), SubResource("Resource_d0dpn")])

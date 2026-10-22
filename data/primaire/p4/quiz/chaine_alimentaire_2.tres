@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://b2n7y3l5rksr0"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_negqk"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_8fc8o"]
+
+[sub_resource type="Resource" id="Resource_wwo4s"]
+script = ExtResource("1_negqk")
+question = "Qu'est-ce qu'une chaîne alimentaire ?"
+choices = Array[String](["Une liste de courses.", "Un lien entre des êtres vivants qui se nourrissent les uns des autres.", "Une chaîne en métal.", "Une recette de cuisine."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_l2yuo"]
+script = ExtResource("1_negqk")
+question = "Comment appelle-t-on les plantes qui produisent leur propre nourriture ?"
+choices = Array[String](["Les consommateurs.", "Les producteurs.", "Les prédateurs.", "Les décomposeurs."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_nv0ys"]
+script = ExtResource("1_negqk")
+question = "Les animaux qui mangent des plantes sont appelés ?"
+choices = Array[String](["Carnivores.", "Herbivores.", "Omnivores.", "Décomposeurs."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_5nsu8"]
+script = ExtResource("1_negqk")
+question = "Comment appelle-t-on un animal qui en mange un autre ?"
+choices = Array[String](["Une proie.", "Un prédateur.", "Un producteur.", "Une plante."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_eai73"]
+script = ExtResource("1_negqk")
+question = "Les animaux qui mangent de la viande sont appelés ?"
+choices = Array[String](["Herbivores.", "Carnivores.", "Omnivores.", "Producteurs."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_b1q0v"]
+script = ExtResource("1_negqk")
+question = "Que mange un animal omnivore ?"
+choices = Array[String](["Seulement des plantes.", "Seulement de la viande.", "Des plantes et de la viande.", "Rien."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_sqsg1"]
+script = ExtResource("1_negqk")
+question = "Quel rôle jouent les champignons et les vers dans la chaîne ?"
+choices = Array[String](["Ils sont des producteurs.", "Ils sont des prédateurs.", "Ils sont des décomposeurs.", "Ils ne servent à rien."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_8jrex"]
+script = ExtResource("1_negqk")
+question = "Quelle est la source d'énergie primaire ?"
+choices = Array[String](["La lumière du soleil.", "Le vent.", "La pluie.", "Le sol."])
+
+[sub_resource type="Resource" id="Resource_1iwub"]
+script = ExtResource("1_negqk")
+question = "Les végétaux sont-ils des consommateurs ?"
+choices = Array[String](["Oui, toujours.", "Non, ce sont des producteurs.", "Parfois.", "Seulement la nuit."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_8fc8o")
+questions = Array[ExtResource("1_negqk")]([SubResource("Resource_wwo4s"), SubResource("Resource_l2yuo"), SubResource("Resource_nv0ys"), SubResource("Resource_5nsu8"), SubResource("Resource_eai73"), SubResource("Resource_b1q0v"), SubResource("Resource_sqsg1"), SubResource("Resource_8jrex"), SubResource("Resource_1iwub")])

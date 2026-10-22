@@ -1,0 +1,67 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://btndyiysen37x"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_vyoca"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_jdef0"]
+
+[sub_resource type="Resource" id="Resource_g70qp"]
+script = ExtResource("1_vyoca")
+question = "Le loup qui mange un lapin est un ?"
+choices = Array[String](["Consommateur primaire.", "Consommateur secondaire.", "Producteur.", "Décomposeur."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_62iu5"]
+script = ExtResource("1_vyoca")
+question = "Que signifie le terme 'maillon' dans une chaîne ?"
+choices = Array[String](["Un anneau de fer.", "Un être vivant de la chaîne.", "Une plante.", "Le soleil."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_pfwio"]
+script = ExtResource("1_vyoca")
+question = "Les décomposeurs transforment la matière organique en ?"
+choices = Array[String](["Plastique.", "Sels minéraux.", "Métal.", "Sucre pur."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_skiuf"]
+script = ExtResource("1_vyoca")
+question = "Dans une chaîne alimentaire, la flèche indique ?"
+choices = Array[String](["Le sens de la digestion.", "Le sens du transfert d'énergie.", "La taille de l'animal.", "La vitesse de l'animal."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_6muq3"]
+script = ExtResource("1_vyoca")
+question = "Si une forêt disparaît, que deviennent les herbivores ?"
+choices = Array[String](["Ils mangent plus.", "Ils ne trouvent plus de nourriture.", "Ils deviennent carnivores.", "Ils volent."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_euldn"]
+script = ExtResource("1_vyoca")
+question = "Les insectes sont-ils importants dans la chaîne alimentaire ?"
+choices = Array[String](["Non.", "Oui, comme nourriture ou décomposeurs.", "Seulement s'ils sont gros.", "Ils sont inutiles."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_cm20o"]
+script = ExtResource("1_vyoca")
+question = "Le soleil est-il un être vivant ?"
+choices = Array[String](["Oui.", "Non.", "Parfois.", "C'est une plante."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_6ftda"]
+script = ExtResource("1_vyoca")
+question = "Les décomposeurs sont-ils indispensables ?"
+choices = Array[String](["Non.", "Oui, pour recycler la matière.", "Seulement en été.", "Ils sont dangereux."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_wtm2c"]
+script = ExtResource("1_vyoca")
+question = "Un réseau alimentaire est composé de ?"
+choices = Array[String](["Plusieurs chaînes alimentaires liées.", "Une seule ligne.", "Des pierres.", "Des voitures."])
+
+[sub_resource type="Resource" id="Resource_xdd3k"]
+script = ExtResource("1_vyoca")
+question = "Le lion est-il un consommateur primaire ?"
+choices = Array[String](["Oui.", "Non, c'est un consommateur secondaire ou tertiaire.", "C'est un producteur.", "C'est un décomposeur."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_jdef0")
+questions = Array[ExtResource("1_vyoca")]([SubResource("Resource_g70qp"), SubResource("Resource_62iu5"), SubResource("Resource_pfwio"), SubResource("Resource_skiuf"), SubResource("Resource_6muq3"), SubResource("Resource_euldn"), SubResource("Resource_cm20o"), SubResource("Resource_6ftda"), SubResource("Resource_wtm2c"), SubResource("Resource_xdd3k")])

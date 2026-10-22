@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://bg2rsncoiu8t"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_yoikg"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_rr4hp"]
+
+[sub_resource type="Resource" id="Resource_dbqm1"]
+script = ExtResource("1_yoikg")
+text = "On peut distinguer les constituants d’un mélange homogène."
+
+[sub_resource type="Resource" id="Resource_7ux6v"]
+script = ExtResource("1_yoikg")
+text = "On ne peut pas distinguer les constituants d’un mélange hétérogène."
+
+[sub_resource type="Resource" id="Resource_pk2mn"]
+script = ExtResource("1_yoikg")
+text = "L’eau et l’huile forment un mélange hétérogène."
+
+[sub_resource type="Resource" id="Resource_1stwc"]
+script = ExtResource("1_yoikg")
+text = "L’eau et la grenadine forment un mélange homogène."
+
+[sub_resource type="Resource" id="Resource_7ihrx"]
+script = ExtResource("1_yoikg")
+text = "Le dioxyde de carbone est un gaz présent dans l’air."
+
+[sub_resource type="Resource" id="Resource_grp5d"]
+script = ExtResource("1_yoikg")
+text = "Des objets de même volume peuvent avoir une masse différente. "
+
+[sub_resource type="Resource" id="Resource_tux6b"]
+script = ExtResource("1_yoikg")
+text = "Le volume d’un objet comme étant l’espace occupé par l’objet."
+
+[sub_resource type="Resource" id="Resource_dt2xc"]
+script = ExtResource("1_yoikg")
+text = "Un décimètre cube correspond à un litre."
+
+[resource]
+script = ExtResource("2_rr4hp")
+phrases = Array[ExtResource("1_yoikg")]([SubResource("Resource_dbqm1"), SubResource("Resource_7ux6v"), SubResource("Resource_pk2mn"), SubResource("Resource_1stwc"), SubResource("Resource_7ihrx"), SubResource("Resource_grp5d"), SubResource("Resource_tux6b"), SubResource("Resource_dt2xc")])

@@ -1,0 +1,77 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://cqiglrv74wnqm"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_pw5or"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_1le78"]
+
+[sub_resource type="Resource" id="Resource_wmmjv"]
+script = ExtResource("1_pw5or")
+question = "À quoi sert le squelette ?"
+choices = Array[String](["À digérer les aliments.", "À soutenir et protéger le corps.", "À respirer.", "À pomper le sang."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_e2or5"]
+script = ExtResource("1_pw5or")
+question = "Combien d'os possède environ le corps humain adulte ?"
+choices = Array[String](["Environ 206 os.", "Environ 10 os.", "Environ 1000 os.", "Environ 50 os."])
+
+[sub_resource type="Resource" id="Resource_n3q0v"]
+script = ExtResource("1_pw5or")
+question = "Quel est le rôle des muscles ?"
+choices = Array[String](["Ils protègent le cerveau.", "Ils permettent le mouvement en se contractant.", "Ils digèrent les aliments.", "Ils fabriquent les os."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_u1yv7"]
+script = ExtResource("1_pw5or")
+question = "Comment appelle-t-on le point de rencontre entre deux os ?"
+choices = Array[String](["Un muscle.", "Une articulation.", "Un nerf.", "Un tendon."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_sef52"]
+script = ExtResource("1_pw5or")
+question = "Quel ensemble d'os protège le cerveau ?"
+choices = Array[String](["Le fémur.", "Le crâne.", "La colonne vertébrale.", "Le bassin."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_4xb5v"]
+script = ExtResource("1_pw5or")
+question = "Quel est le nom de l'os le plus long du corps ?"
+choices = Array[String](["Le tibia.", "Le fémur.", "L'humérus.", "La côte."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_uk4qs"]
+script = ExtResource("1_pw5or")
+question = "Qu'est-ce qui relie le muscle à l'os ?"
+choices = Array[String](["Un cartilage.", "Un tendon.", "Un ligament.", "Une veine."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_f3mt1"]
+script = ExtResource("1_pw5or")
+question = "Quelles sont les deux actions principales d'un muscle ?"
+choices = Array[String](["Sauter et courir.", "Contraction et relâchement.", "Dormir et manger.", "Casser et construire."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_knv31"]
+script = ExtResource("1_pw5or")
+question = "Quelle articulation permet de plier le bras ?"
+choices = Array[String](["Le genou.", "Le coude.", "La cheville.", "Le poignet."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_v2n2a"]
+script = ExtResource("1_pw5or")
+question = "Que protègent les côtes ?"
+choices = Array[String](["Le cerveau.", "Les poumons et le cœur.", "L'estomac uniquement.", "Les pieds."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_205u2"]
+script = ExtResource("1_pw5or")
+question = "Les os sont-ils vivants ?"
+choices = Array[String](["Oui, ils grandissent et se réparent.", "Non, ce sont des objets inertes.", "Seulement chez les enfants.", "Seulement chez les personnes âgées."])
+
+[sub_resource type="Resource" id="Resource_pn4dy"]
+script = ExtResource("1_pw5or")
+question = "Quel est le rôle du cartilage dans une articulation ?"
+choices = Array[String](["Il évite aux os de frotter directement entre eux.", "Il sert à stocker le sang.", "Il produit les muscles.", "Il protège le cerveau."])
+
+[resource]
+script = ExtResource("2_1le78")
+questions = Array[ExtResource("1_pw5or")]([SubResource("Resource_wmmjv"), SubResource("Resource_e2or5"), SubResource("Resource_n3q0v"), SubResource("Resource_u1yv7"), SubResource("Resource_sef52"), SubResource("Resource_4xb5v"), SubResource("Resource_uk4qs"), SubResource("Resource_f3mt1"), SubResource("Resource_knv31"), SubResource("Resource_v2n2a"), SubResource("Resource_205u2"), SubResource("Resource_pn4dy")])

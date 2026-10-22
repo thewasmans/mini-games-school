@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://c0ivq4pnrfnw"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_8xlmy"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_lwwxi"]
+
+[sub_resource type="Resource" id="Resource_mu126"]
+script = ExtResource("1_8xlmy")
+question = "Les insectes ont-ils des pattes ?"
+choices = Array[String](["Non, jamais.", "Oui, ils en ont 6.", "Oui, ils en ont 8.", "Oui, ils en ont 4."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_e14vs"]
+script = ExtResource("1_8xlmy")
+question = "Combien de pattes ont les araignées ?"
+choices = Array[String](["6 pattes.", "4 pattes.", "8 pattes.", "10 pattes."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_ud07e"]
+script = ExtResource("1_8xlmy")
+question = "Le crabe est-il un vertébré ?"
+choices = Array[String](["Oui.", "Non, c'est un insecte.", "Non, c'est un crustacé.", "Non, c'est un céphalopode."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_xt5mm"]
+script = ExtResource("1_8xlmy")
+question = "Les reptiles ont-ils des plumes ?"
+choices = Array[String](["Oui.", "Non, ils ont des écailles.", "Ils ont des poils.", "Ils ont de la peau nue."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ubuoo"]
+script = ExtResource("1_8xlmy")
+question = "Quelle est la particularité de la grenouille ?"
+choices = Array[String](["Elle ne vit que dans l'eau.", "Elle vit sur terre et dans l'eau (amphibien).", "Elle a des plumes.", "Elle est un mammifère."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_mbnsf"]
+script = ExtResource("1_8xlmy")
+question = "Les athropodes sont-ils rares ?"
+choices = Array[String](["Non, ils sont très nombreux.", "Oui, il y en a très peu.", "Seulement dans la mer.", "Seulement dans le désert."])
+
+[sub_resource type="Resource" id="Resource_7bxy8"]
+script = ExtResource("1_8xlmy")
+question = "Dans quel groupe figure la baleine ?"
+choices = Array[String](["Un poisson.", "Un mammifère.", "Un reptile.", "Un amphibien."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_1dapd"]
+script = ExtResource("1_8xlmy")
+question = "Les insectes sont-ils des vertébrés ?"
+choices = Array[String](["Oui.", "Non, ce sont des arthropodes.", "Parfois.", "Non, ce sont des mollusques."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_1pcxw"]
+script = ExtResource("1_8xlmy")
+question = "Quel animal est un insecte ?"
+choices = Array[String](["La vache.", "La mouche.", "Le chat.", "La baleine."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_lwwxi")
+questions = Array[ExtResource("1_8xlmy")]([SubResource("Resource_mu126"), SubResource("Resource_e14vs"), SubResource("Resource_ud07e"), SubResource("Resource_xt5mm"), SubResource("Resource_ubuoo"), SubResource("Resource_mbnsf"), SubResource("Resource_7bxy8"), SubResource("Resource_1dapd"), SubResource("Resource_1pcxw")])

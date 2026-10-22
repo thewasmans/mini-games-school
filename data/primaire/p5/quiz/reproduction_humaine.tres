@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://d0ga0d5m7iy4r"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_7fvp3"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_fb6mg"]
+
+[sub_resource type="Resource" id="Resource_w7mue"]
+script = ExtResource("1_7fvp3")
+question = "Qu’est-ce que la fécondation ?"
+choices = Array[String](["La rencontre entre un spermatozoïde et un ovocyte.", "La naissance d’un bébé.", "Le développement des muscles.", "Le transport du sang."])
+
+[sub_resource type="Resource" id="Resource_k070l"]
+script = ExtResource("1_7fvp3")
+question = "Qui produit le spermatozoïde ?"
+choices = Array[String](["La femme.", "La fleur.", "L’homme.", "Le fruit."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_o0lcj"]
+script = ExtResource("1_7fvp3")
+question = "Quel mot désigne la cellule reproductrice produite par la femme ?"
+choices = Array[String](["Spermatozoïdes.", "Ovocyte.", "Graine.", "Pollen."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_cc54n"]
+script = ExtResource("1_7fvp3")
+question = "Quel mot désigne la cellule reproductrice produite par l’homme ?"
+choices = Array[String](["Ovocyte.", "Graine.", "Spermatozoïdes.", "Fruit."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_4nmbw"]
+script = ExtResource("1_7fvp3")
+question = "Quand est-ce que commence la puberté ?"
+choices = Array[String](["Au même âge pour tout le monde.", "À des âges différents selon les personnes.", "À 40 ans.", "Seulement chez les garçons de 8 ans."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_bjhuu"]
+script = ExtResource("1_7fvp3")
+question = "Que signifie avoir de la pilosité ?"
+choices = Array[String](["La perte des poils.", "Le changement des yeux.", "L’apparition des poils.", "Le changement des dents."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_mtmnl"]
+script = ExtResource("1_7fvp3")
+question = "Que permet la reproduction humaine ?"
+choices = Array[String](["De fabriquer des jouets.", "D’avoir des bébés.", "De faire pousser les plantes.", "De changer de couleur."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_3eeu5"]
+script = ExtResource("1_7fvp3")
+question = "Comment se nomme la cellule issue de la fécondation ?"
+choices = Array[String](["Spermatozoïde.", "Ovule.", "Ovocyte.", "Pollen."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_fb6mg")
+questions = Array[ExtResource("1_7fvp3")]([SubResource("Resource_w7mue"), SubResource("Resource_k070l"), SubResource("Resource_o0lcj"), SubResource("Resource_cc54n"), SubResource("Resource_4nmbw"), SubResource("Resource_bjhuu"), SubResource("Resource_mtmnl"), SubResource("Resource_3eeu5")])

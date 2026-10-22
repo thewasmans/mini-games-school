@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://ce6hyg815tb7t"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_q4dwt"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_y643d"]
+
+[sub_resource type="Resource" id="Resource_tcuav"]
+script = ExtResource("1_q4dwt")
+question = "Pourquoi les êtres humains ont-ils besoin de s’alimenter ?"
+choices = Array[String](["Pour le plaisir.", "Pour produire de la matière et avoir de l’énergie.", "Pour remplacer le sommeil.", "Pour purifier le sang."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_vfuve"]
+script = ExtResource("1_q4dwt")
+question = "En quoi les aliments sont-ils transformés pour pouvoir passer dans le sang ?"
+choices = Array[String](["En nutriments.", "En vitamines.", "En petits morceaux.", "En oxygène."])
+
+[sub_resource type="Resource" id="Resource_u4sfy"]
+script = ExtResource("1_q4dwt")
+question = "Quel organe fait suite à l’œsophage dans le tube digestif ?"
+choices = Array[String](["Le gros intestin.", "L’intestin grêle.", "L’estomac.", "La bouche."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_a3juv"]
+script = ExtResource("1_q4dwt")
+question = "Par quel moyen les nutriments sont-ils transportés jusqu’aux organes ?"
+choices = Array[String](["Par l’air.", "Par les os.", "Par le sang.", "Par les muscles."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_j1uyc"]
+script = ExtResource("1_q4dwt")
+question = "Laquelle de ces propositions est une règle d’hygiène de vie ?"
+choices = Array[String](["Manger le plus vite possible.", "Boire du soda.", "Se coucher tard.", "Avoir une activité physique régulière."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_exnim"]
+script = ExtResource("1_q4dwt")
+question = "Où se fait principalement le passage des nutriments dans le sang ?"
+choices = Array[String](["Dans l’intestin.", "Dans la bouche.", "Dans l’œsophage.", "Dans le cœur."])
+
+[sub_resource type="Resource" id="Resource_3ilw4"]
+script = ExtResource("1_q4dwt")
+question = "Comment doit être une alimentation saine ?"
+choices = Array[String](["Variée et adaptée aux besoins.", "Toujours composée du même aliment.", "Seulement composée de bonbons.", "Uniquement composée de viande."])
+
+[sub_resource type="Resource" id="Resource_8eq4n"]
+script = ExtResource("1_q4dwt")
+question = "Quel est le rôle de la bouche dans la digestion ?"
+choices = Array[String](["Elle n’a pas de rôle digestif.", "Elle commence la transformation des aliments.", "Elle absorbe les nutriments directement.", "Elle transporte le sang."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_dxpg3"]
+script = ExtResource("1_q4dwt")
+question = "Boire de l’eau est-il considéré comme une règle d’hygiène de vie ?"
+choices = Array[String](["Uniquement si on pratique du sport.", "Non, uniquement l’alimentation compte.", "Non, uniquement le sommeil compte.", "Oui, il est nécessaire de boire de l’eau."])
+correct_choice_index = 3
+
+[resource]
+script = ExtResource("2_y643d")
+questions = Array[ExtResource("1_q4dwt")]([SubResource("Resource_tcuav"), SubResource("Resource_vfuve"), SubResource("Resource_u4sfy"), SubResource("Resource_a3juv"), SubResource("Resource_j1uyc"), SubResource("Resource_exnim"), SubResource("Resource_3ilw4"), SubResource("Resource_8eq4n"), SubResource("Resource_dxpg3")])

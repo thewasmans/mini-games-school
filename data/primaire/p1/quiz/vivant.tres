@@ -1,0 +1,86 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://b7yk6f8kqs30k"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_hitgh"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_ye8ji"]
+
+[sub_resource type="Resource" id="Resource_7q2uy"]
+script = ExtResource("1_hitgh")
+question = "Comment appelle-t-on le moment où un animal arrive au monde ?"
+choices = Array[String](["La fécondation.", "La naissance.", "La mort.", "La croissance."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_tm6xw"]
+script = ExtResource("1_hitgh")
+question = "Quelle est la dernière étape de la vie d’un animal ?"
+choices = Array[String](["La naissance.", "La croissance.", "La mort.", "La fécondation."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_k8hpd"]
+script = ExtResource("1_hitgh")
+question = "Quel animal passe par une métamorphose ?"
+choices = Array[String](["Un chat.", "Une girafe.", "Une grenouille.", "Un dromadaire."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_dx7gc"]
+script = ExtResource("1_hitgh")
+question = "En quoi se transforme la chenille ?"
+choices = Array[String](["En un rat.", "En un papillon.", "En une limace.", "En un escargot."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_f6ecc"]
+script = ExtResource("1_hitgh")
+question = "Quelles sont les conditions pour avoir une reproduction sexuée ?"
+choices = Array[String](["Avoir deux mâles.", "Avoir deux femelles.", "Avoir un mâle et une femelle.", "Aucune de ces réponses."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_0yryj"]
+script = ExtResource("1_hitgh")
+question = "Comment appelle-t-on un animal qui naît à partir d'un œuf ?"
+choices = Array[String](["Un animal adulte.", "Un animal ovipare.", "Un animal vivipare.", "Un animal qui ne mange pas."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_n6m3f"]
+script = ExtResource("1_hitgh")
+question = "Comment appelle-t-on un animal qui donne naissance à des petits ?"
+choices = Array[String](["Un animal qui pond.", "Un animal vivipare.", "Un animal qui ne grandit pas.", "Un animal ovipare."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_kl16h"]
+script = ExtResource("1_hitgh")
+question = "Comment appelle-t-on le mâle de la poule ?"
+choices = Array[String](["Un poussin.", "Un coq.", "Une poule.", "Un insecte."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_c2msp"]
+script = ExtResource("1_hitgh")
+question = "Qu'est-ce que la mort pour un être vivant ?"
+choices = Array[String](["Le moment où l'animal nait.", "Le moment où l'animal mange.", "Le moment où l'animal grandit.", "La fin de la vie de l'animal."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_apf2d"]
+script = ExtResource("1_hitgh")
+question = "Parmi ces éléments, lequel est un être vivant ?"
+choices = Array[String](["Une pierre.", "Un arbre.", "Une voiture.", "Une table."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_lgfeu"]
+script = ExtResource("1_hitgh")
+question = "De quoi un être vivant a-t-il besoin pour vivre ?"
+choices = Array[String](["De jouets et de soleil.", "D'eau et de nourriture.", "De télévision et de bonbons.", "Seulement de dormir."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_yjllu"]
+script = ExtResource("1_hitgh")
+question = "Est-ce que l'on peut dire que le robot est un être vivant ?"
+choices = Array[String](["Oui, car il bouge tout seul.", "Non, car il ne respire pas et ne grandit pas.", "Oui, car il est fabriqué par l'homme.", "Non, car il mange tout seul."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_yf84i"]
+script = ExtResource("1_hitgh")
+question = "Quelle est la différence entre l'objet et le vivant ?"
+choices = Array[String](["L'objet se déplace.", "Le vivant grandit.", "L'objet respire.", "Le vivant ne réagit pas dans son environnement."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_ye8ji")
+questions = Array[ExtResource("1_hitgh")]([SubResource("Resource_7q2uy"), SubResource("Resource_tm6xw"), SubResource("Resource_k8hpd"), SubResource("Resource_dx7gc"), SubResource("Resource_f6ecc"), SubResource("Resource_0yryj"), SubResource("Resource_n6m3f"), SubResource("Resource_kl16h"), SubResource("Resource_c2msp"), SubResource("Resource_apf2d"), SubResource("Resource_lgfeu"), SubResource("Resource_yjllu"), SubResource("Resource_yf84i")])

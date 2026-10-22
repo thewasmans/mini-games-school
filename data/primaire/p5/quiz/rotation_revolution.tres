@@ -1,0 +1,72 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://pagybatv2dw8"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_0yasq"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_7ilk3"]
+
+[sub_resource type="Resource" id="Resource_t6gti"]
+script = ExtResource("1_0yasq")
+question = "Quel élément est une planète ?"
+choices = Array[String](["Soleil.", "Terre.", "Lune.", "Etoile filante."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_rya32"]
+script = ExtResource("1_0yasq")
+question = "De quoi est composé le système solaire ?"
+choices = Array[String](["Du Soleil, des planètes et de la Lune.", "Seulement du Soleil.", "Seulement des planètes.", "Seulement de la Terre."])
+
+[sub_resource type="Resource" id="Resource_yjoub"]
+script = ExtResource("1_0yasq")
+question = "Combien de temps dure la révolution complète de la terre autour du Soleil ?"
+choices = Array[String](["1 heure.", "1 jour.", "1 semaine.", "1 an."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_gy1b8"]
+script = ExtResource("1_0yasq")
+question = "À quoi correspond la révolution de la Terre ?"
+choices = Array[String](["Le mouvement de la Terre sur elle-même.", "Le mouvement de la Lune sur elle-même.", "Le mouvement de la Terre autour du Soleil.", "Le mouvement du Soleil autour de la Terre."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_mkewa"]
+script = ExtResource("1_0yasq")
+question = "Pendant la révolution, la Terre tourne autour de quoi ?"
+choices = Array[String](["De la Lune.", "Du Soleil.", "De Mars.", "Des étoiles."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_onc4d"]
+script = ExtResource("1_0yasq")
+question = "Que peut-on dire à propos des scientifiques au cours de l'Histoire ?"
+choices = Array[String](["Ils ont toujours eu la même idée du système solaire.", "Ils ont arrêté d’étudier l’espace.", "Ils ont changé leurs modèles scientifiques.", "Ils ont découvert que le Soleil est une planète."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_o7pn4"]
+script = ExtResource("1_0yasq")
+question = "Comment s’appelle le mouvement de la Lune autour de la Terre ?"
+choices = Array[String](["La révolution.", "La rotation.", "La germination.", "La combustion."])
+
+[sub_resource type="Resource" id="Resource_bcsyj"]
+script = ExtResource("1_0yasq")
+question = "Comment fait-il lorsqu'une partie de la Terre est tournée vers le Soleil ?"
+choices = Array[String](["Nuit.", "Jour.", "Hiver.", "Noir partout."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_rnq02"]
+script = ExtResource("1_0yasq")
+question = "Pourquoi le jour et la nuit alternent-ils ?"
+choices = Array[String](["Parce que la Lune tourne autour de la Terre.", "Parce que le Soleil disparait la nuit.", "Parce que la Terre tourne sur elle-même.", "Parce que les nuages cachent le Soleil."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_klrng"]
+script = ExtResource("1_0yasq")
+question = "Que se passe-t-il pendant que la Terre tourne sur elle-même ?"
+choices = Array[String](["Il fait toujours jour partout.", "Il fait toujours nuit partout.", "Certaines régions sont éclairées et d’autres non.", "Le Soleil tourne autour de le Terre."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_ivs25"]
+script = ExtResource("1_0yasq")
+question = "À quoi sert un modèle scientifique ?"
+choices = Array[String](["Décorer une classe.", "Représenter et comprendre un réalité.", "Mesurer la température.", "Jouer."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_7ilk3")
+questions = Array[ExtResource("1_0yasq")]([SubResource("Resource_t6gti"), SubResource("Resource_rya32"), SubResource("Resource_yjoub"), SubResource("Resource_gy1b8"), SubResource("Resource_mkewa"), SubResource("Resource_onc4d"), SubResource("Resource_o7pn4"), SubResource("Resource_bcsyj"), SubResource("Resource_rnq02"), SubResource("Resource_klrng"), SubResource("Resource_ivs25")])

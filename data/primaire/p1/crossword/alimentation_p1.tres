@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cxxlnsj1fuvoh"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_cs0nl"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_d4gdn"]
+
+[sub_resource type="Resource" id="Resource_flcnn"]
+script = ExtResource("1_cs0nl")
+word = "RADIS"
+hint = "Plante potagère à racine comestible (généralement rose)."
+grid_position = Vector2i(10, 6)
+
+[sub_resource type="Resource" id="Resource_ty1ex"]
+script = ExtResource("1_cs0nl")
+word = "AGRUME"
+hint = "Terme général du genre Citrus qui comprend l'orange, le citron, le pamplemousse et le kumquat."
+grid_position = Vector2i(6, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_6iwcn"]
+script = ExtResource("1_cs0nl")
+word = "LOCAL"
+hint = "Se dit d'un aliment que l'on retrouve dans nos régions, que l'on cultive chez nous."
+grid_position = Vector2i(5, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_t6t5s"]
+script = ExtResource("1_cs0nl")
+word = "POMMIER"
+hint = "Arbre qui produit des pommes."
+grid_position = Vector2i(0, 2)
+
+[sub_resource type="Resource" id="Resource_kcii7"]
+script = ExtResource("1_cs0nl")
+word = "FRUIT"
+hint = "Produit que l'on récupère chez certaines plantes et que l'on mange surtout en été."
+grid_position = Vector2i(8, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_qbvk5"]
+script = ExtResource("1_cs0nl")
+word = "CERISIER"
+hint = "Arbre qui produit des cerises."
+grid_position = Vector2i(10, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_fjxcs"]
+script = ExtResource("1_cs0nl")
+word = "POTAGER"
+hint = "Espace de culture de légumes et de fruits frais."
+grid_position = Vector2i(3, 0)
+
+[sub_resource type="Resource" id="Resource_nygj4"]
+script = ExtResource("1_cs0nl")
+word = "LEGUME"
+hint = "Partie d'une plante que l'on peut manger et que l'on retrouve dans le potager."
+grid_position = Vector2i(5, 5)
+
+[resource]
+script = ExtResource("2_d4gdn")
+clues = Array[ExtResource("1_cs0nl")]([SubResource("Resource_flcnn"), SubResource("Resource_ty1ex"), SubResource("Resource_6iwcn"), SubResource("Resource_t6t5s"), SubResource("Resource_kcii7"), SubResource("Resource_qbvk5"), SubResource("Resource_fjxcs"), SubResource("Resource_nygj4")])

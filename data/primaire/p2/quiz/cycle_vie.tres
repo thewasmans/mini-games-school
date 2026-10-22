@@ -1,0 +1,96 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://c8e67wk1q1s7b"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_dt6er"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_iit5r"]
+
+[sub_resource type="Resource" id="Resource_sawxx"]
+script = ExtResource("1_dt6er")
+question = "Qu'est-ce qu'un animal ovipare ?"
+choices = Array[String](["Un animal qui se développe dans le ventre de la mère.", "Un animal qui pond des œufs.", "Un animal qui naît déjà adulte.", "Un animal qui ne se reproduit pas."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ianv0"]
+script = ExtResource("1_dt6er")
+question = "Quelles sont les étapes de la vie d'un animal ?"
+choices = Array[String](["Naissance, jeu, adulte, mort.", "Naissance, croissance, reproduction, mort.", "Fécondation, naissance, vie, mort.", "Naissance, reproduction, migration, mort."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_aqi83"]
+script = ExtResource("1_dt6er")
+question = "Qu'est-ce qu'une métamorphose chez un animal ?"
+choices = Array[String](["Une transformation importante de l'aspect au cours de la croissance.", "Le fait de grandir régulièrement.", "Le moment où l'animal mange pour la première fois.", "Le processus de naissance."])
+
+[sub_resource type="Resource" id="Resource_tjtru"]
+script = ExtResource("1_dt6er")
+question = "Quelle est la condition nécessaire pour la reproduction sexuée chez les animaux ?"
+choices = Array[String](["Présence d'un mâle et d'une femelle.", "Présence d'eau uniquement.", "Présence de nourriture.", "Présence d'un nid."])
+
+[sub_resource type="Resource" id="Resource_obexr"]
+script = ExtResource("1_dt6er")
+question = "Quel terme désigne la rencontre des cellules reproductrices ?"
+choices = Array[String](["La croissance.", "La naissance.", "La fécondation.", "La métamorphose."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_cdk7i"]
+script = ExtResource("1_dt6er")
+question = "Quel est l'ordre du cycle de vie de la grenouille ?"
+choices = Array[String](["Naissance, croissance, mort.", "Ponte, têtard, grenouille adulte.", "Naissance, adulte, naissance.", "Croissance directe uniquement."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_y5wca"]
+script = ExtResource("1_dt6er")
+question = "Parmi ces animaux, lequel est vivipare ?"
+choices = Array[String](["La poule.", "Le chat.", "La tortue.", "Le poisson rouge."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_x05al"]
+script = ExtResource("1_dt6er")
+question = "Parmi ces animaux, lequel est ovipare ?"
+choices = Array[String](["Le chien.", "L'éléphant.", "Le canard.", "Le lapin."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_7wkn6"]
+script = ExtResource("1_dt6er")
+question = "Quel est le rôle de la reproduction dans le cycle de vie ?"
+choices = Array[String](["Permettre la croissance.", "Assurer la survie de l'espèce.", "Permettre de manger.", "Déterminer la durée de vie."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_di7ll"]
+script = ExtResource("1_dt6er")
+question = "Quel animal donne naissance à ses petits déjà formés ?"
+choices = Array[String](["Le crocodile.", "Le requin.", "L'humain.", "L'autruche."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_37sf3"]
+script = ExtResource("1_dt6er")
+question = "Que devient un animal après sa mort dans le cycle naturel ?"
+choices = Array[String](["Il redevient un bébé.", "Il fait partie de la chaîne alimentaire et se décompose.", "Il reste immobile éternellement.", "Il n'a plus aucune utilité."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_mjcjf"]
+script = ExtResource("1_dt6er")
+question = "Quel facteur influence la vitesse de croissance ?"
+choices = Array[String](["La couleur du ciel.", "La quantité et la qualité de nourriture.", "Le nom de l'animal.", "Le type de chant."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_mn6qd"]
+script = ExtResource("1_dt6er")
+question = "Où se développe le petit chez les oiseaux ?"
+choices = Array[String](["Dans le ventre de la mère.", "Dans un œuf.", "Dans l'eau.", "Dans la terre."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_dluy6"]
+script = ExtResource("1_dt6er")
+question = "Pourquoi classer les animaux selon leurs attributs ?"
+choices = Array[String](["Pour le plaisir.", "Pour montrer les liens de parenté entre les espèces.", "Pour savoir lesquels manger.", "C'est inutile."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_dnjuj"]
+script = ExtResource("1_dt6er")
+question = "Quel est le but de la démarche d'investigation  ?"
+choices = Array[String](["Apprendre par cœur.", "Observer, questionner et construire des savoirs.", "Copier le voisin.", "Ne rien faire."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_iit5r")
+questions = Array[ExtResource("1_dt6er")]([SubResource("Resource_sawxx"), SubResource("Resource_ianv0"), SubResource("Resource_aqi83"), SubResource("Resource_tjtru"), SubResource("Resource_obexr"), SubResource("Resource_cdk7i"), SubResource("Resource_y5wca"), SubResource("Resource_x05al"), SubResource("Resource_7wkn6"), SubResource("Resource_di7ll"), SubResource("Resource_37sf3"), SubResource("Resource_mjcjf"), SubResource("Resource_mn6qd"), SubResource("Resource_dluy6"), SubResource("Resource_dnjuj")])

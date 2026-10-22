@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://yjvjpd6d5yht"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_2456h"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_qi02g"]
+
+[sub_resource type="Resource" id="Resource_rqkdm"]
+script = ExtResource("1_2456h")
+text = "Les humains sont constitués de matière."
+
+[sub_resource type="Resource" id="Resource_3o1f6"]
+script = ExtResource("1_2456h")
+text = "S’alimenter permet de  produire de la matière et de l’énergie."
+
+[sub_resource type="Resource" id="Resource_jjdkv"]
+script = ExtResource("1_2456h")
+text = "Il est important d’avoir une alimentation saine."
+
+[sub_resource type="Resource" id="Resource_23o45"]
+script = ExtResource("1_2456h")
+text = "Le sommeil est indispensable à notre bien-être."
+
+[sub_resource type="Resource" id="Resource_353g5"]
+script = ExtResource("1_2456h")
+text = "La digestion est un processus de transformation."
+
+[sub_resource type="Resource" id="Resource_h5lbl"]
+script = ExtResource("1_2456h")
+text = "Le sang permet de transporter les nutriments."
+
+[sub_resource type="Resource" id="Resource_53j5o"]
+script = ExtResource("1_2456h")
+text = "Le tube digestif va de la bouche à l’anus."
+
+[sub_resource type="Resource" id="Resource_dkx5q"]
+script = ExtResource("1_2456h")
+text = "L’estomac est un organe de stockage."
+
+[sub_resource type="Resource" id="Resource_o2o5c"]
+script = ExtResource("1_2456h")
+text = "L’intestin est un organe d’absorption"
+
+[sub_resource type="Resource" id="Resource_8y6y4"]
+script = ExtResource("1_2456h")
+text = "La foie fabrique la bile."
+
+[resource]
+script = ExtResource("2_qi02g")
+phrases = Array[ExtResource("1_2456h")]([SubResource("Resource_rqkdm"), SubResource("Resource_3o1f6"), SubResource("Resource_jjdkv"), SubResource("Resource_23o45"), SubResource("Resource_353g5"), SubResource("Resource_h5lbl"), SubResource("Resource_53j5o"), SubResource("Resource_dkx5q"), SubResource("Resource_o2o5c"), SubResource("Resource_8y6y4")])

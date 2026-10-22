@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bhm4nrx0g2u3n"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_jyi2r"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_sj387"]
+
+[sub_resource type="Resource" id="Resource_65y2n"]
+script = ExtResource("1_jyi2r")
+question = "Qu'est-ce qui illustre un agent pollinisateur ?"
+choices = Array[String](["L'abeille sur une fleur.", "Le poisson dans l’eau.", "Le vélo.", "Le ballon."])
+
+[sub_resource type="Resource" id="Resource_tohhw"]
+script = ExtResource("1_jyi2r")
+question = "Qu’est-ce que la dissémination des graines ?"
+choices = Array[String](["C’est le transport des graines.", "C’est la fabrication des feuilles.", "C’est la mort d’une plante.", "C’est la production de pollen."])
+
+[sub_resource type="Resource" id="Resource_p0wfn"]
+script = ExtResource("1_jyi2r")
+question = "Qui peut aider à disséminer les graines ?"
+choices = Array[String](["Le vent.", "L’eau.", "Les animaux.", "Toutes ces réponses."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_gxhfy"]
+script = ExtResource("1_jyi2r")
+question = "Quel mot désigne le début de croissance d’une graine ?"
+choices = Array[String](["La fécondation.", "La germination.", "La pollinisation.", "La dissémination."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_mr2ny"]
+script = ExtResource("1_jyi2r")
+question = "Quelle plante produit un fruit que l’on mange ?"
+choices = Array[String](["Le pommier.", "Le chêne.", "Le sapin.", "La mousse."])
+
+[sub_resource type="Resource" id="Resource_oaif0"]
+script = ExtResource("1_jyi2r")
+question = "Qu'est-ce que la germination ?"
+choices = Array[String](["Une graine qui germe.", "Une fleur.", "Un fruit.", "Une plante morte."])
+
+[sub_resource type="Resource" id="Resource_gepmx"]
+script = ExtResource("1_jyi2r")
+question = "Pourquoi les insectes pollinisateurs sont-ils importants ?"
+choices = Array[String](["Ils fabriquent des racines.", "Ils empêchent les fruits de pousser.", "Ils produisent de l’eau.", "Ils aident les plantes à se reproduire."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_h6xaw"]
+script = ExtResource("1_jyi2r")
+question = "Si un jour les insectes pollinisateurs disparaissent, que va-t-il se passer ?"
+choices = Array[String](["Les plantes pousseront plus vite.", "Tous les fruits deviendront géants.", "Certaines plantes auront du mal à produire des fruits.", "Les graines disparaitront immédiatement."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_d1nwa"]
+script = ExtResource("1_jyi2r")
+question = "Quelle étape succède immédiatement à la fécondation de la fleur ?"
+choices = Array[String](["Une fleur.", "Un fruit.", "Une graine.", "Une jeune plante."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_16gvr"]
+script = ExtResource("1_jyi2r")
+question = "Comment nomme-t-on le processus de transformation de la fleur en fruit ?"
+choices = Array[String](["La fructification.", "La chute des feuilles.", "La mort de la plante.", "La fabrication des racines."])
+
+[resource]
+script = ExtResource("2_sj387")
+questions = Array[ExtResource("1_jyi2r")]([SubResource("Resource_65y2n"), SubResource("Resource_tohhw"), SubResource("Resource_p0wfn"), SubResource("Resource_gxhfy"), SubResource("Resource_mr2ny"), SubResource("Resource_oaif0"), SubResource("Resource_gepmx"), SubResource("Resource_h6xaw"), SubResource("Resource_d1nwa"), SubResource("Resource_16gvr")])

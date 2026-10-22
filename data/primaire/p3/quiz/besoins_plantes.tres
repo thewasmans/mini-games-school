@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://ckkmrevwkwev"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_t4wrx"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_g6gv7"]
+
+[sub_resource type="Resource" id="Resource_2t8yw"]
+script = ExtResource("1_t4wrx")
+question = "Qu’est-ce que la croissance d’une plante ?"
+choices = Array[String](["Le moment où elle meurt.", "Le moment où elle grandit.", "Le moment où elle dort.", "Le moment où elle tombe."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_do6j4"]
+script = ExtResource("1_t4wrx")
+question = "Quel être vivant possède un tronc robuste ?"
+choices = Array[String](["Le rosier.", "Le chêne.", "Le pissenlit.", "L'herbe."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_v7pmj"]
+script = ExtResource("1_t4wrx")
+question = "Que possède obligatoirement un arbre pour le différencier d'une herbe ?"
+choices = Array[String](["Des pattes.", "Un tronc ligneux.", "Des nageoires.", "Des yeux."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_23nxs"]
+script = ExtResource("1_t4wrx")
+question = "Quel élément du sol aide la plante à bien grandir ?"
+choices = Array[String](["Le plastique.", "Les minéraux.", "Le verre.", "Le métal."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_cusu3"]
+script = ExtResource("1_t4wrx")
+question = "Que devient la fleur une fois fécondée chez beaucoup de plantes ?"
+choices = Array[String](["Une racine.", "Une feuille.", "Un fruit.", "Une tige."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_63u8o"]
+script = ExtResource("1_t4wrx")
+question = "À quoi sert le fruit pour la plante ?"
+choices = Array[String](["À décorer.", "À protéger les graines.", "À boire de l'eau.", "À faire de l'ombre."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_rbhq1"]
+script = ExtResource("1_t4wrx")
+question = "Lequel de ces éléments est indispensable à la plante pour réaliser ses échanges gazeux ?"
+choices = Array[String](["Le noir.", "L'air.", "Le bruit.", "La fumée."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_qj6ay"]
+script = ExtResource("1_t4wrx")
+question = "Quelle est la couleur principale des plantes qui captent la lumière ?"
+choices = Array[String](["Bleue.", "Rouge.", "Verte.", "Jaune."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_5dfkg"]
+script = ExtResource("1_t4wrx")
+question = "Si on place une plante dans un placard fermé sans lumière, que va-t-il se passer ?"
+choices = Array[String](["Elle va grandir.", "Elle va jaunir et s'affaiblir.", "Elle va fleurir.", "Elle va devenir bleue."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_51av4"]
+script = ExtResource("1_t4wrx")
+question = "À quoi servent les racines ?"
+choices = Array[String](["Faire de la lumière.", "Fixer la plante au sol.", "Faire des fruits.", "Attraper des insectes."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_g6gv7")
+questions = Array[ExtResource("1_t4wrx")]([SubResource("Resource_2t8yw"), SubResource("Resource_do6j4"), SubResource("Resource_v7pmj"), SubResource("Resource_23nxs"), SubResource("Resource_cusu3"), SubResource("Resource_63u8o"), SubResource("Resource_rbhq1"), SubResource("Resource_qj6ay"), SubResource("Resource_5dfkg"), SubResource("Resource_51av4")])
