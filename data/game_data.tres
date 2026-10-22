@@ -25,6 +25,11 @@
 [ext_resource type="Resource" uid="uid://io7c7grok1t5" path="res://data/secondaire/s4/crossword/magie_image_s4_2.tres" id="23_wmfrq"]
 [ext_resource type="Resource" uid="uid://bx5qih0cg10cj" path="res://data/secondaire/s4/crossword/travail_s4.tres" id="24_x34ux"]
 
+[sub_resource type="Resource" id="Resource_uc345"]
+script = ExtResource("7_stdylvl")
+name = "Primaire"
+metadata/_custom_type_script = "uid://dqstlvldata01"
+
 [sub_resource type="Resource" id="Resource_qxcu0"]
 script = ExtResource("2_r34r7")
 mini_games = Array[ExtResource("1_vllua")]([ExtResource("5_r4uws")])
@@ -131,7 +136,12 @@ name = "Secondaire"
 levels = Array[ExtResource("2_r34r7")]([SubResource("Resource_qxcu0"), SubResource("Resource_2dcmy"), SubResource("Resource_yqv0c"), SubResource("Resource_pftn3"), SubResource("Resource_k2o1c"), SubResource("Resource_nhd81"), SubResource("Resource_txme5"), SubResource("Resource_us8hq"), SubResource("Resource_afujh"), SubResource("Resource_px30l"), SubResource("Resource_frjtr"), SubResource("Resource_58nyo"), SubResource("Resource_ca4gj"), SubResource("Resource_i0cih"), SubResource("Resource_dd7yo"), SubResource("Resource_b8ba4"), SubResource("Resource_vjkum"), SubResource("Resource_joy1j"), SubResource("Resource_0bmhh"), SubResource("Resource_b1r1l")])
 metadata/_custom_type_script = "uid://dqstlvldata01"
 
+[sub_resource type="Resource" id="Resource_y3jf8"]
+script = ExtResource("7_stdylvl")
+name = "Supérieur"
+metadata/_custom_type_script = "uid://dqstlvldata01"
+
 [resource]
 script = ExtResource("1_urpql")
-study_levels = Array[ExtResource("7_stdylvl")]([SubResource("StudyLevel_primaire")])
+study_levels = Array[ExtResource("7_stdylvl")]([SubResource("Resource_uc345"), SubResource("StudyLevel_primaire"), SubResource("Resource_y3jf8")])
 metadata/_custom_type_script = "uid://cp2inhinnjjop"

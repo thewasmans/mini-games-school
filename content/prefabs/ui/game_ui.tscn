@@ -5,8 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://dy4o76u7t5tkx" path="res://content/prefabs/ui/menu_levels_ui.tscn" id="3_hpqhx"]
 [ext_resource type="PackedScene" uid="uid://d0h5gr0h7xhcu" path="res://content/prefabs/ui/menu_start_ui.tscn" id="4_mpxm1"]
 [ext_resource type="PackedScene" uid="uid://cmenustudyscn" path="res://content/prefabs/ui/menu_study_levels_ui.tscn" id="5_stdylvl"]
+[ext_resource type="PackedScene" uid="uid://movkvjm3labp" path="res://content/prefabs/ui/menu_credits_ui.tscn" id="6_credits"]
 
-[node name="GameUi" type="Control" unique_id=137618360 node_paths=PackedStringArray("menu_study_levels", "menu_levels")]
+[node name="GameUi" type="Control" unique_id=137618360 node_paths=PackedStringArray("menu_start", "menu_study_levels", "menu_levels", "menu_credits")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,15 +15,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7e7t2")
+menu_start = NodePath("MenuStartUI")
 menu_study_levels = NodePath("MenuStudyLevelsUI")
 menu_levels = NodePath("MenuLevelsUI")
+menu_credits = NodePath("MenuCreditsUI")
 button_level_prefab = ExtResource("2_npsjx")
 
 [node name="MenuStartUI" parent="." unique_id=1191208820 instance=ExtResource("4_mpxm1")]
 layout_mode = 1
-
-[node name="PlayButton" parent="MenuStartUI" index="1" unique_id=1518565421]
-text = "JOUER"
 
 [node name="MenuStudyLevelsUI" parent="." unique_id=1191208821 instance=ExtResource("5_stdylvl")]
 visible = false
@@ -32,6 +32,6 @@ layout_mode = 1
 visible = false
 layout_mode = 1
 
-[connection signal="pressed" from="MenuStartUI/PlayButton" to="." method="_on_play_button_pressed"]
-
-[editable path="MenuStartUI"]
+[node name="MenuCreditsUI" parent="." unique_id=1292304948 instance=ExtResource("6_credits")]
+visible = false
+layout_mode = 1
