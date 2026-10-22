@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://o4l0y56sbdmp"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_jldfp"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_rl5yi"]
+
+[sub_resource type="Resource" id="Resource_hvo1g"]
+script = ExtResource("1_jldfp")
+text = "L’interrupteur est un composant du circuit électrique."
+
+[sub_resource type="Resource" id="Resource_1rj2s"]
+script = ExtResource("1_jldfp")
+text = "Le circuit fermé permet d’allumer la lampe."
+
+[sub_resource type="Resource" id="Resource_mp5nd"]
+script = ExtResource("1_jldfp")
+text = "Le circuit ouvert empêche le courant de passer."
+
+[sub_resource type="Resource" id="Resource_n5di1"]
+script = ExtResource("1_jldfp")
+text = "Les isolants sont différents des conducteurs."
+
+[sub_resource type="Resource" id="Resource_jmqbl"]
+script = ExtResource("1_jldfp")
+text = "On peut représenter le circuit simple par un schéma."
+
+[sub_resource type="Resource" id="Resource_h5a4r"]
+script = ExtResource("1_jldfp")
+text = "Il est important d’identifier les symboles dans un circuit."
+
+[resource]
+script = ExtResource("2_rl5yi")
+phrases = Array[ExtResource("1_jldfp")]([SubResource("Resource_hvo1g"), SubResource("Resource_1rj2s"), SubResource("Resource_mp5nd"), SubResource("Resource_n5di1"), SubResource("Resource_jmqbl"), SubResource("Resource_h5a4r")])

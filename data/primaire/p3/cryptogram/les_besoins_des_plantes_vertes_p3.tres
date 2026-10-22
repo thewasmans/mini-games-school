@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://b623f72akfii6"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_jbsv7"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_yynxf"]
+
+[sub_resource type="Resource" id="Resource_2glhm"]
+script = ExtResource("1_jbsv7")
+text = "La plante possèdes des tiges"
+hint = "feuilles et racines."
+
+[sub_resource type="Resource" id="Resource_gi4we"]
+script = ExtResource("1_jbsv7")
+text = "La plante possède des organes."
+
+[sub_resource type="Resource" id="Resource_7gf8o"]
+script = ExtResource("1_jbsv7")
+text = "La plante utilise le soleil comme source d’énergie."
+
+[sub_resource type="Resource" id="Resource_ygrv8"]
+script = ExtResource("1_jbsv7")
+text = "Les graines sont contenues dans un fruit."
+
+[sub_resource type="Resource" id="Resource_vwjqc"]
+script = ExtResource("1_jbsv7")
+text = "La germination dépend de conditions."
+
+[sub_resource type="Resource" id="Resource_1wagl"]
+script = ExtResource("1_jbsv7")
+text = "La plante a besoin d’eau et d’air."
+
+[sub_resource type="Resource" id="Resource_io312"]
+script = ExtResource("1_jbsv7")
+text = "Les arbustes sont plus petits que les arbres."
+
+[sub_resource type="Resource" id="Resource_0x03u"]
+script = ExtResource("1_jbsv7")
+text = "Il existe des plantes à fleurs"
+hint = "comme la rose."
+
+[sub_resource type="Resource" id="Resource_vb58j"]
+script = ExtResource("1_jbsv7")
+text = "Il existe des plantes sans fleur"
+hint = "comme le sapin."
+
+[resource]
+script = ExtResource("2_yynxf")
+phrases = Array[ExtResource("1_jbsv7")]([SubResource("Resource_2glhm"), SubResource("Resource_gi4we"), SubResource("Resource_7gf8o"), SubResource("Resource_ygrv8"), SubResource("Resource_vwjqc"), SubResource("Resource_1wagl"), SubResource("Resource_io312"), SubResource("Resource_0x03u"), SubResource("Resource_vb58j")])

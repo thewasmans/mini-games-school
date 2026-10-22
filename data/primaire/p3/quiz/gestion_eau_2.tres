@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://r6dybyty0ebh"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_3h642"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_o33l8"]
+
+[sub_resource type="Resource" id="Resource_o1nlq"]
+script = ExtResource("1_3h642")
+question = "Pourquoi est-il important d'économiser l'eau potable ?"
+choices = Array[String](["Parce qu'elle coûte trop cher.", "Parce que c'est une ressource rare et précieuse.", "Parce qu'elle n'est pas utile.", "Parce qu'elle est infinie sur la Terre."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_luiaf"]
+script = ExtResource("1_3h642")
+question = "Quel geste permet d'économiser le plus d'eau à la maison ?"
+choices = Array[String](["Laisser couler le robinet.", "Prendre une douche plutôt qu'un bain.", "Remplir une piscine.", "Laver sa voiture tous les jours."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_nv1c0"]
+script = ExtResource("1_3h642")
+question = "Que devient l'eau après avoir été utilisée dans nos maisons ?"
+choices = Array[String](["Elle disparaît dans la terre.", "Elle va vers une station d'épuration.", "Elle retourne directement dans les rivières sans traitement.", "Elle retourne directement dans les nuages."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_346eg"]
+script = ExtResource("1_3h642")
+question = "Comment appelle-t-on le processus où l'eau liquide devient de la vapeur ?"
+choices = Array[String](["La solidification.", "L'évaporation.", "La condensation.", "La fusion."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ymm3i"]
+script = ExtResource("1_3h642")
+question = "Pourquoi ne faut-il pas jeter de l'huile dans l'évier ?"
+choices = Array[String](["Parce que cela bouche les tuyaux et pollue l'eau.", "Parce que cela sent mauvais.", "Parce que c'est interdit par la loi.", "Parce que l'huile se mélange très bien à l'eau."])
+
+[sub_resource type="Resource" id="Resource_3o3eg"]
+script = ExtResource("1_3h642")
+question = "Où trouve-t-on l'eau douce la plus accessible ?"
+choices = Array[String](["Dans les océans.", "Dans les rivières et les nappes souterraines.", "Dans les nuages uniquement.", "Dans les déserts arides."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_qt72l"]
+script = ExtResource("1_3h642")
+question = "Qu'est-ce qu'une station d'épuration ?"
+choices = Array[String](["Une usine pour fabriquer de l'eau.", "Une usine qui nettoie les eaux usées.", "Un réservoir pour l'eau de pluie.", "Une machine pour fabriquer du plastique."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_sft0w"]
+script = ExtResource("1_3h642")
+question = "Quelle est la forme solide de l'eau ?"
+choices = Array[String](["La vapeur.", "La glace.", "Le liquide.", "Le gaz."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_o33l8")
+questions = Array[ExtResource("1_3h642")]([SubResource("Resource_o1nlq"), SubResource("Resource_luiaf"), SubResource("Resource_nv1c0"), SubResource("Resource_346eg"), SubResource("Resource_ymm3i"), SubResource("Resource_3o3eg"), SubResource("Resource_qt72l"), SubResource("Resource_sft0w")])

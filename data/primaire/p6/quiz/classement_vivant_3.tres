@@ -1,0 +1,77 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://c8dpff7gabayy"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_ddnfm"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_04qjm"]
+
+[sub_resource type="Resource" id="Resource_dmi2x"]
+script = ExtResource("1_ddnfm")
+question = "De quoi sont constitués les vertébrés ?"
+choices = Array[String](["Une carapace.", "Un squelette interne (colonne vertébrale).", "Des tentacules.", "Une peau nue."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_hn10o"]
+script = ExtResource("1_ddnfm")
+question = "Laquelle de ces caractéristiques est propre aux mammifères ?"
+choices = Array[String](["La présence de poils.", "La présence d'écailles.", "La respiration branchiale.", "La ponte d'œufs."])
+
+[sub_resource type="Resource" id="Resource_yrlfd"]
+script = ExtResource("1_ddnfm")
+question = "Dans quel groupe figure le serpent ?"
+choices = Array[String](["Mammifère.", "Oiseau.", "Squamate.", "Insecte."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_of0c8"]
+script = ExtResource("1_ddnfm")
+question = "L'escargot est-il un vertébré ?"
+choices = Array[String](["Oui.", "Non, c'est un mollusque.", "Non, c'est un bivalve.", "Non, c'est un chélonien."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_nlw8i"]
+script = ExtResource("1_ddnfm")
+question = "Quelle est la fonction d'une clé de détermination ?"
+choices = Array[String](["Ouvrir une porte.", "Aider à classer les êtres vivants.", "Mesurer la taille.", "Décorer la classe."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_meko7"]
+script = ExtResource("1_ddnfm")
+question = "Les animaux qui n'ont pas de squelette interne sont ?"
+choices = Array[String](["Les vertébrés.", "Les arthropodes.", "Les mammifères.", "Les oiseaux."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_3plep"]
+script = ExtResource("1_ddnfm")
+question = "Dans quel groupe figure la chauve-souris ?"
+choices = Array[String](["Oiseau.", "Mammifère.", "Insecte.", "Reptile."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_24c1s"]
+script = ExtResource("1_ddnfm")
+question = "Dans quel groupe figure le requin ?"
+choices = Array[String](["Poisson.", "Mammifère.", "Reptile.", "Oiseau."])
+
+[sub_resource type="Resource" id="Resource_a4fwl"]
+script = ExtResource("1_ddnfm")
+question = "Un animal qui change de couleur est ?"
+choices = Array[String](["Forcément un reptile.", "Un insecte.", "Cela dépend de l'espèce.", "Un mammifère."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_4ak8u"]
+script = ExtResource("1_ddnfm")
+question = "Dans quel groupe figure la fourmi ?"
+choices = Array[String](["Vertébré.", "Insecte.", "Mammifère.", "Poisson."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_n3abp"]
+script = ExtResource("1_ddnfm")
+question = "Pourquoi classe-t-on les animaux ?"
+choices = Array[String](["Pour mieux les étudier et les comprendre.", "Pour les manger.", "Parce qu'ils sont beaux.", "Pour les colorier."])
+
+[sub_resource type="Resource" id="Resource_ic1pq"]
+script = ExtResource("1_ddnfm")
+question = "Qu'est-ce que le classement phylogénétique ?"
+choices = Array[String](["Classer les espèces selon leur âge.", "Classer les espèces selon leur milieu de vie.", "Classer les espèces selon leur degré de parenté.", "Classer les espèces selon leur couleur."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("2_04qjm")
+questions = Array[ExtResource("1_ddnfm")]([SubResource("Resource_dmi2x"), SubResource("Resource_hn10o"), SubResource("Resource_yrlfd"), SubResource("Resource_of0c8"), SubResource("Resource_nlw8i"), SubResource("Resource_meko7"), SubResource("Resource_3plep"), SubResource("Resource_24c1s"), SubResource("Resource_a4fwl"), SubResource("Resource_4ak8u"), SubResource("Resource_n3abp"), SubResource("Resource_ic1pq")])

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dlcvsrewj433d"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_g3ayf"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_bkekp"]
+
+[sub_resource type="Resource" id="Resource_ri6n6"]
+script = ExtResource("1_g3ayf")
+text = "L’eau est une énergie renouvelable."
+
+[sub_resource type="Resource" id="Resource_3iwql"]
+script = ExtResource("1_g3ayf")
+text = "La chaleur se transfère du chaud au froid."
+
+[sub_resource type="Resource" id="Resource_0to8e"]
+script = ExtResource("1_g3ayf")
+text = "Les isolants retiennent la chaleur."
+
+[sub_resource type="Resource" id="Resource_msmor"]
+script = ExtResource("1_g3ayf")
+text = "Les conducteurs transmettent la chaleur."
+
+[sub_resource type="Resource" id="Resource_u65gf"]
+script = ExtResource("1_g3ayf")
+text = "L’électricité n’est pas une énergie renouvelable."
+
+[sub_resource type="Resource" id="Resource_x1ttk"]
+script = ExtResource("1_g3ayf")
+text = "Il faut toujours contrôler une taque allumée."
+
+[resource]
+script = ExtResource("2_bkekp")
+phrases = Array[ExtResource("1_g3ayf")]([SubResource("Resource_ri6n6"), SubResource("Resource_3iwql"), SubResource("Resource_0to8e"), SubResource("Resource_msmor"), SubResource("Resource_u65gf"), SubResource("Resource_x1ttk")])

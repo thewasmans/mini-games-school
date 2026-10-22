@@ -1,0 +1,80 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://k3085u5pn3fk"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_3ts3k"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_vhv1p"]
+
+[sub_resource type="Resource" id="Resource_o2uul"]
+script = ExtResource("1_3ts3k")
+question = "Peut-on bouger sans muscle ?"
+choices = Array[String](["Oui, c'est facile.", "Non, les muscles sont indispensables au mouvement.", "Seulement si on est un enfant.", "Seulement dans l'eau."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_t1eoj"]
+script = ExtResource("1_3ts3k")
+question = "Comment appelle-t-on les muscles qui travaillent ensemble ?"
+choices = Array[String](["Des muscles antagonistes.", "Des muscles solitaires.", "Des muscles inutiles.", "Des os."])
+
+[sub_resource type="Resource" id="Resource_xlxfa"]
+script = ExtResource("1_3ts3k")
+question = "Quelle est la fonction principale de la cheville ?"
+choices = Array[String](["Protéger le cœur.", "Permettre le mouvement du pied.", "Digérer.", "Produire de l'énergie."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_w2v4e"]
+script = ExtResource("1_3ts3k")
+question = "Les os sont reliés entre eux par ?"
+choices = Array[String](["Des ligaments.", "De la colle.", "Des cheveux.", "De la peau."])
+
+[sub_resource type="Resource" id="Resource_gnfqy"]
+script = ExtResource("1_3ts3k")
+question = "Quelle partie du corps soutient tout le poids du squelette debout ?"
+choices = Array[String](["Les bras.", "Le crâne.", "La colonne vertébrale et les jambes.", "Les doigts."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_ypoa1"]
+script = ExtResource("1_3ts3k")
+question = "Que se passe-t-il quand un muscle se contracte ?"
+choices = Array[String](["Il s'allonge.", "Il raccourcit et durcit.", "Il disparaît.", "Il change de couleur."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_8evii"]
+script = ExtResource("1_3ts3k")
+question = "Le fémur se trouve dans ?"
+choices = Array[String](["Le bras.", "La main.", "La cuisse.", "Le pied."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_caflt"]
+script = ExtResource("1_3ts3k")
+question = "Quelle articulation permet de tourner la tête ?"
+choices = Array[String](["Le cou (vertèbres cervicales).", "Le genou.", "Le coude.", "La cheville."])
+
+[sub_resource type="Resource" id="Resource_x0sg1"]
+script = ExtResource("1_3ts3k")
+question = "Qu'est-ce qu'une fracture ?"
+choices = Array[String](["Un muscle fatigué.", "Un os cassé.", "Une articulation bloquée.", "Une peau abîmée."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_t6rny"]
+script = ExtResource("1_3ts3k")
+question = "Qu'est-ce qu'une entorse ?"
+choices = Array[String](["Une blessure des ligaments.", "Un os qui grandit.", "Un muscle qui pousse.", "Une fracture."])
+
+[sub_resource type="Resource" id="Resource_38ijh"]
+script = ExtResource("1_3ts3k")
+question = "Le biceps est un muscle du ?"
+choices = Array[String](["Bras.", "Pied.", "Visage.", "Dos."])
+
+[sub_resource type="Resource" id="Resource_8i8jq"]
+script = ExtResource("1_3ts3k")
+question = "L'humérus est un os situé dans ?"
+choices = Array[String](["Le bras.", "La jambe.", "Le pied.", "La tête."])
+
+[sub_resource type="Resource" id="Resource_jph3x"]
+script = ExtResource("1_3ts3k")
+question = "De quoi est composé l'intérieur de certains os ?"
+choices = Array[String](["D'air.", "De moelle osseuse.", "D'eau pure.", "De muscles."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_vhv1p")
+questions = Array[ExtResource("1_3ts3k")]([SubResource("Resource_o2uul"), SubResource("Resource_t1eoj"), SubResource("Resource_xlxfa"), SubResource("Resource_w2v4e"), SubResource("Resource_gnfqy"), SubResource("Resource_ypoa1"), SubResource("Resource_8evii"), SubResource("Resource_caflt"), SubResource("Resource_x0sg1"), SubResource("Resource_t6rny"), SubResource("Resource_38ijh"), SubResource("Resource_8i8jq"), SubResource("Resource_jph3x")])

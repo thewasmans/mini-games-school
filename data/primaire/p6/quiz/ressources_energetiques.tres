@@ -1,0 +1,66 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bfrii7r24mk2t"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_u0jtu"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_g3hfm"]
+
+[sub_resource type="Resource" id="Resource_pwry0"]
+script = ExtResource("1_u0jtu")
+question = "Qu'est-ce qu'une ressource énergétique ?"
+choices = Array[String](["Un matériau pour construire.", "Une source d'énergie utilisable.", "Un type de nourriture.", "Un outil de mesure."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_jnfti"]
+script = ExtResource("1_u0jtu")
+question = "Quelles sont les énergies fossiles ?"
+choices = Array[String](["Le soleil et le vent.", "Le charbon, le pétrole, le gaz.", "L'eau et la vapeur.", "Le bois et le soleil."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_pgmdp"]
+script = ExtResource("1_u0jtu")
+question = "Pourquoi dit-on que les énergies fossiles sont non renouvelables ?"
+choices = Array[String](["Elles s'épuisent rapidement.", "Elles sont gratuites.", "Elles sont propres.", "Elles ne servent à rien."])
+
+[sub_resource type="Resource" id="Resource_h2x2i"]
+script = ExtResource("1_u0jtu")
+question = "Quelle énergie provient du rayonnement du soleil ?"
+choices = Array[String](["L'énergie éolienne.", "L'énergie solaire.", "L'énergie hydraulique.", "Le pétrole."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ps4sm"]
+script = ExtResource("1_u0jtu")
+question = "Que produit une éolienne ?"
+choices = Array[String](["De la chaleur.", "De l'électricité grâce au vent.", "Du pétrole.", "De la vapeur."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_4onw8"]
+script = ExtResource("1_u0jtu")
+question = "L'énergie hydraulique utilise quelle ressource ?"
+choices = Array[String](["Le pétrole.", "Le vent.", "L'eau en mouvement.", "Le soleil."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_u6rvk"]
+script = ExtResource("1_u0jtu")
+question = "Le charbon est une énergie ?"
+choices = Array[String](["Renouvelable.", "Non renouvelable (fossile).", "Infinie.", "Propre."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_5bn7c"]
+script = ExtResource("1_u0jtu")
+question = "Quelle est la principale conséquence de la combustion des énergies fossiles ?"
+choices = Array[String](["Le refroidissement de la Terre.", "L'augmentation des gaz à effet de serre.", "La création de nouvelles plantes.", "La purification de l'air."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_sd3uq"]
+script = ExtResource("1_u0jtu")
+question = "Qu'est-ce que la biomasse ?"
+choices = Array[String](["L'énergie tirée des matières organiques.", "Le pétrole brut.", "L'énergie du vent.", "L'uranium."])
+
+[sub_resource type="Resource" id="Resource_rcbwd"]
+script = ExtResource("1_u0jtu")
+question = "Le soleil est une source d'énergie ?"
+choices = Array[String](["Fossile.", "Renouvelable.", "En voie de disparition.", "Polluante."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_g3hfm")
+questions = Array[ExtResource("1_u0jtu")]([SubResource("Resource_pwry0"), SubResource("Resource_jnfti"), SubResource("Resource_pgmdp"), SubResource("Resource_h2x2i"), SubResource("Resource_ps4sm"), SubResource("Resource_4onw8"), SubResource("Resource_u6rvk"), SubResource("Resource_5bn7c"), SubResource("Resource_sd3uq"), SubResource("Resource_rcbwd")])

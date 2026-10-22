@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://dvpkpg6wnri53"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_xsmvv"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_ll2v3"]
+
+[sub_resource type="Resource" id="Resource_4adgf"]
+script = ExtResource("1_xsmvv")
+question = "Qu’est-ce qu’un mélange homogène ?"
+choices = Array[String](["C’est lorsque l’on voit plusieurs parties différentes.", "C’est lorsque les constituants sont bien mélangés et difficiles à distinguer.", "C’est ce qui contient uniquement de l’eau.", "C’est ce qui est toujours solide."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_1layf"]
+script = ExtResource("1_xsmvv")
+question = "Qu’est-ce qu’un mélange hétérogène ?"
+choices = Array[String](["C’est lorsque l’on distingue plusieurs constituants.", "C’est ce qui contient uniquement des gaz.", "C’est ce qui est invisible.", "C’est ce qu’on ne peut pas mélanger."])
+
+[sub_resource type="Resource" id="Resource_4nk13"]
+script = ExtResource("1_xsmvv")
+question = "Quelle est la nature du mélange de l'eau et du sel ?"
+choices = Array[String](["Hétérogène.", "Homogène.", "Solide.", "Impossible."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_c3s5h"]
+script = ExtResource("1_xsmvv")
+question = "Quelle est la nature du mélange de l'eau et de l'huile ?"
+choices = Array[String](["Homogène.", "Invisible.", "Hétérogène.", "Gazeux."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_x27if"]
+script = ExtResource("1_xsmvv")
+question = "Qu'est-ce que l'air ?"
+choices = Array[String](["Un solide.", "Un mélange homogène de gaz.", "Un liquide.", "Un mélange hétérogène."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_63dk7"]
+script = ExtResource("1_xsmvv")
+question = "Quel gaz est indispensable pour respirer ?"
+choices = Array[String](["Le dioxyde de carbone.", "La diazote.", "La vapeur d’eau.", "Le dioxygène."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_h43oo"]
+script = ExtResource("1_xsmvv")
+question = "Quel est le principal constituant de l’air ?"
+choices = Array[String](["Le dioxyde de carbone.", "Le dioxygène.", "Le diazote.", "L’hélium."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_y3hpi"]
+script = ExtResource("1_xsmvv")
+question = "Qu'est-ce que le volume d'un objet ?"
+choices = Array[String](["Sa couleur.", "Son poids.", "L’espace qu’il occupe.", "Sa température."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_vqudx"]
+script = ExtResource("1_xsmvv")
+question = "Deux objets de même volume peuvent ?"
+choices = Array[String](["Toujours avoir la même masse.", "Avoir des masses différentes.", "Toujours être identiques.", "Être invisibles."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_ll2v3")
+questions = Array[ExtResource("1_xsmvv")]([SubResource("Resource_4adgf"), SubResource("Resource_1layf"), SubResource("Resource_4nk13"), SubResource("Resource_c3s5h"), SubResource("Resource_x27if"), SubResource("Resource_63dk7"), SubResource("Resource_h43oo"), SubResource("Resource_y3hpi"), SubResource("Resource_vqudx")])

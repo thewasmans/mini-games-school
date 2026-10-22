@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://c2myu8l42bx3h"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_ny8rt"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_8da1c"]
+
+[sub_resource type="Resource" id="Resource_d1u1p"]
+script = ExtResource("1_ny8rt")
+text = "Un milieu de vie est composé d’éléments"
+hint = "comme l’air."
+
+[sub_resource type="Resource" id="Resource_tgs72"]
+script = ExtResource("1_ny8rt")
+text = "Le poisson vit dans l’eau."
+
+[sub_resource type="Resource" id="Resource_eu27h"]
+script = ExtResource("1_ny8rt")
+text = "La baleine vit dans l’océan."
+
+[sub_resource type="Resource" id="Resource_wilb3"]
+script = ExtResource("1_ny8rt")
+text = "L’écureuil vit dans une forêt."
+
+[sub_resource type="Resource" id="Resource_ljo3n"]
+script = ExtResource("1_ny8rt")
+text = "Beaucoup d’animaux ont besoin de lumière."
+
+[sub_resource type="Resource" id="Resource_5u5sd"]
+script = ExtResource("1_ny8rt")
+text = "L’ours polaire vit là où il y a de la glace."
+
+[sub_resource type="Resource" id="Resource_ue7vf"]
+script = ExtResource("1_ny8rt")
+text = "Les abeilles fournissent du miel."
+
+[sub_resource type="Resource" id="Resource_30g0u"]
+script = ExtResource("1_ny8rt")
+text = "Les poules pondent des œufs."
+
+[resource]
+script = ExtResource("2_8da1c")
+phrases = Array[ExtResource("1_ny8rt")]([SubResource("Resource_d1u1p"), SubResource("Resource_tgs72"), SubResource("Resource_eu27h"), SubResource("Resource_wilb3"), SubResource("Resource_ljo3n"), SubResource("Resource_5u5sd"), SubResource("Resource_ue7vf"), SubResource("Resource_30g0u")])

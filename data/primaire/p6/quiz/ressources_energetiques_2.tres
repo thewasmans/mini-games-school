@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://df4cnbwm6fmbn"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_t1mvu"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_3ddgn"]
+
+[sub_resource type="Resource" id="Resource_bfjj1"]
+script = ExtResource("1_t1mvu")
+question = "L'énergie géothermique provient de ?"
+choices = Array[String](["La chaleur du sous-sol terrestre.", "La mer.", "Le vent.", "Le pétrole."])
+
+[sub_resource type="Resource" id="Resource_t4wfa"]
+script = ExtResource("1_t1mvu")
+question = "Comment économiser l'énergie à la maison ?"
+choices = Array[String](["Laisser les lumières allumées.", "Éteindre les appareils en veille.", "Chauffer à 30 degrés.", "Utiliser le chauffage avec les fenêtres ouvertes."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_xwppq"]
+script = ExtResource("1_t1mvu")
+question = "Qu'est-ce qui cause le réchauffement climatique ?"
+choices = Array[String](["L'excès de gaz à effet de serre.", "Trop de vent.", "L'utilisation du soleil.", "Le recyclage du papier."])
+
+[sub_resource type="Resource" id="Resource_4d7mj"]
+script = ExtResource("1_t1mvu")
+question = "Les énergies renouvelables sont-elles polluantes ?"
+choices = Array[String](["Oui, très polluantes.", "Non, elles sont plus propres.", "Seulement en hiver.", "Oui, autant que le pétrole."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_a3kkl"]
+script = ExtResource("1_t1mvu")
+question = "L'énergie nucléaire utilise quel minerai ?"
+choices = Array[String](["Le pétrole.", "L'uranium.", "Le charbon.", "Le bois."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_bxm4c"]
+script = ExtResource("1_t1mvu")
+question = "Le pétrole est principalement utilisé pour ?"
+choices = Array[String](["Le transport et le chauffage.", "Produire de l'électricité propre.", "La culture des légumes.", "Le refroidissement des maisons."])
+
+[sub_resource type="Resource" id="Resource_t2w2x"]
+script = ExtResource("1_t1mvu")
+question = "Qu'est-ce qu'une énergie renouvelable ?"
+choices = Array[String](["Une source qui se renouvelle naturellement.", "Une source qui disparaît vite.", "Une source créée par l'homme uniquement.", "Un produit chimique."])
+
+[sub_resource type="Resource" id="Resource_8vb1f"]
+script = ExtResource("1_t1mvu")
+question = "Les barrages hydroélectriques utilisent ?"
+choices = Array[String](["La force de l'eau.", "La chaleur du soleil.", "Le vent.", "Le pétrole."])
+
+[sub_resource type="Resource" id="Resource_wxg1h"]
+script = ExtResource("1_t1mvu")
+question = "Quel est l'avantage du soleil comme source d'énergie ?"
+choices = Array[String](["Il est inépuisable.", "Il est payant.", "Il ne fonctionne que la nuit.", "Il pollue beaucoup."])
+
+[sub_resource type="Resource" id="Resource_52fmv"]
+script = ExtResource("1_t1mvu")
+question = "Qu'est-ce que l'effet de serre ?"
+choices = Array[String](["Un phénomène naturel amplifié par la pollution.", "Une méthode pour chauffer les serres agricoles.", "Le refroidissement de la planète.", "Un type d'énergie fossile."])
+
+[resource]
+script = ExtResource("2_3ddgn")
+questions = Array[ExtResource("1_t1mvu")]([SubResource("Resource_bfjj1"), SubResource("Resource_t4wfa"), SubResource("Resource_xwppq"), SubResource("Resource_4d7mj"), SubResource("Resource_a3kkl"), SubResource("Resource_bxm4c"), SubResource("Resource_t2w2x"), SubResource("Resource_8vb1f"), SubResource("Resource_wxg1h"), SubResource("Resource_52fmv")])

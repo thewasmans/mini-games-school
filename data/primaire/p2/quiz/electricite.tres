@@ -1,0 +1,54 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bese60os64gow"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_3lqxp"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_l4yas"]
+
+[sub_resource type="Resource" id="Resource_42y3l"]
+script = ExtResource("1_3lqxp")
+question = "Quel appareil utilise de l'électricité ?"
+choices = Array[String](["Une lampe.", "Une chaise.", "Une pierre.", "Un stylo."])
+
+[sub_resource type="Resource" id="Resource_538mf"]
+script = ExtResource("1_3lqxp")
+question = "À quoi sert une batterie ?"
+choices = Array[String](["À écrire.", "À laver les vêtements.", "À manger.", "À faire fonctionner un appareil électrique."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_wi5cs"]
+script = ExtResource("1_3lqxp")
+question = "Que peut produire l'électricité ?"
+choices = Array[String](["De la lumière.", "Du mouvement.", "De la chaleur.", "Toutes ces propositions."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_48jsi"]
+script = ExtResource("1_3lqxp")
+question = "À quoi sert un interrupteur ?"
+choices = Array[String](["À faire de la musique.", "À ouvrir et fermer un circuit électrique.", "À écrire.", "À appeler à l'aide."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_3iqnn"]
+script = ExtResource("1_3lqxp")
+question = "Où doit-on déposer les piles usées ?"
+choices = Array[String](["Dans la poubelle classique.", "Dans la nature.", "Dans un point de recyclage.", "Dans la rue."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_guym5"]
+script = ExtResource("1_3lqxp")
+question = "À quoi sert l'électricité au quotidien ?"
+choices = Array[String](["À fabriquer des nuages.", "À faire fonctionner des appareils.", "À faire pousser les plantes.", "À remonter le temps."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_k2mmo"]
+script = ExtResource("1_3lqxp")
+question = "Comment peut-on économiser l'électricité ?"
+choices = Array[String](["Laisser les lampes allumées.", "Casser les interrupteurs.", "Allumer tous les appareils.", "Éteindre la lumière en quittant une pièce."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_wyqxw"]
+script = ExtResource("1_3lqxp")
+question = "Qu'est-ce qu'un circuit électrique ?"
+choices = Array[String](["Un chemin pour le courant.", "Un jeu de société.", "Un plat cuisiné.", "Un vêtement."])
+
+[resource]
+script = ExtResource("2_l4yas")
+questions = Array[ExtResource("1_3lqxp")]([SubResource("Resource_42y3l"), SubResource("Resource_538mf"), SubResource("Resource_wi5cs"), SubResource("Resource_48jsi"), SubResource("Resource_3iqnn"), SubResource("Resource_guym5"), SubResource("Resource_k2mmo"), SubResource("Resource_wyqxw")])

@@ -1,0 +1,66 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://ds78laakngi42"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_5c0w0"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_5l3am"]
+
+[sub_resource type="Resource" id="Resource_71rdf"]
+script = ExtResource("1_5c0w0")
+text = "En été"
+hint = "il y a du Soleil."
+
+[sub_resource type="Resource" id="Resource_yy8qk"]
+script = ExtResource("1_5c0w0")
+text = "En hiver"
+hint = "il fait froid."
+
+[sub_resource type="Resource" id="Resource_c1gar"]
+script = ExtResource("1_5c0w0")
+text = "En automne"
+hint = "les feuilles tombent des arbres."
+
+[sub_resource type="Resource" id="Resource_cbicv"]
+script = ExtResource("1_5c0w0")
+text = "La neige est de l’eau solide."
+
+[sub_resource type="Resource" id="Resource_isq3b"]
+script = ExtResource("1_5c0w0")
+text = "Lorsque le tonnerre gronde"
+hint = "il y a un éclair après."
+
+[sub_resource type="Resource" id="Resource_d6hgx"]
+script = ExtResource("1_5c0w0")
+text = "La pluie est de l’eau liquide."
+
+[sub_resource type="Resource" id="Resource_ag5mq"]
+script = ExtResource("1_5c0w0")
+text = "La matière possède une masse et occupe un espace."
+
+[sub_resource type="Resource" id="Resource_4j6xk"]
+script = ExtResource("1_5c0w0")
+text = "L’eau peut changer d’état."
+
+[sub_resource type="Resource" id="Resource_6e6iw"]
+script = ExtResource("1_5c0w0")
+text = "La matière peut être solide"
+hint = "liquide ou gazeuse."
+
+[sub_resource type="Resource" id="Resource_vkcms"]
+script = ExtResource("1_5c0w0")
+text = "Le gaz est invisible."
+
+[sub_resource type="Resource" id="Resource_ni6po"]
+script = ExtResource("1_5c0w0")
+text = "Pour connaître la météo"
+hint = "on peut regarder le ciel."
+
+[sub_resource type="Resource" id="Resource_k3rkt"]
+script = ExtResource("1_5c0w0")
+text = "Les solides ont des formes."
+
+[sub_resource type="Resource" id="Resource_saire"]
+script = ExtResource("1_5c0w0")
+text = "Les liquides n’ont pas de forme."
+
+[resource]
+script = ExtResource("2_5l3am")
+phrases = Array[ExtResource("1_5c0w0")]([SubResource("Resource_71rdf"), SubResource("Resource_yy8qk"), SubResource("Resource_c1gar"), SubResource("Resource_cbicv"), SubResource("Resource_isq3b"), SubResource("Resource_d6hgx"), SubResource("Resource_ag5mq"), SubResource("Resource_4j6xk"), SubResource("Resource_6e6iw"), SubResource("Resource_vkcms"), SubResource("Resource_ni6po"), SubResource("Resource_k3rkt"), SubResource("Resource_saire")])

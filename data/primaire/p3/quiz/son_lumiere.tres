@@ -1,0 +1,78 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://caulq3iai1dbf"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_0a3li"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_ocwc3"]
+
+[sub_resource type="Resource" id="Resource_ael5s"]
+script = ExtResource("1_0a3li")
+question = "Comment pouvons-nous protéger nos oreilles du bruit excessif ?"
+choices = Array[String](["Porter des lunettes.", "Porter un casque antibruit.", "Crier.", "Mettre de la musique forte."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ng4q8"]
+script = ExtResource("1_0a3li")
+question = "À quoi sert principalement la lumière ?"
+choices = Array[String](["À voir.", "À sentir.", "À marcher.", "À sauter."])
+
+[sub_resource type="Resource" id="Resource_hvhy7"]
+script = ExtResource("1_0a3li")
+question = "Comment la lumière se propage-t-elle dans le vide ou l'air ?"
+choices = Array[String](["En rond.", "En zigzag.", "Lentement.", "En ligne droite."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_52tdb"]
+script = ExtResource("1_0a3li")
+question = "Quel est le rôle principal de l’œil ?"
+choices = Array[String](["Produire de la lumière.", "Faire du son.", "Sentir.", "Recevoir de la lumière."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_gdifl"]
+script = ExtResource("1_0a3li")
+question = "Quel organe sert à entendre ?"
+choices = Array[String](["La langue.", "L’œil.", "Le nez.", "L’oreille."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_wh82j"]
+script = ExtResource("1_0a3li")
+question = "Que peut provoquer une lumière trop forte ou éblouissante ?"
+choices = Array[String](["Des problèmes de peau.", "Des problèmes de langue.", "Des problèmes d'oreilles.", "Des problèmes de vue."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_6t4tv"]
+script = ExtResource("1_0a3li")
+question = "Comment protéger nos yeux du soleil très fort ?"
+choices = Array[String](["Fixer le soleil.", "Courir vite.", "Mettre des lunettes de vue.", "Mettre des lunettes de soleil."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_vgl4k"]
+script = ExtResource("1_0a3li")
+question = "Que fait un miroir avec la lumière ?"
+choices = Array[String](["Il l'absorbe.", "Il la transforme.", "Il la renvoie (réflexion).", "Il change sa couleur."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_xfltw"]
+script = ExtResource("1_0a3li")
+question = "Comment peut être l'intensité de la lumière ?"
+choices = Array[String](["Bruyante.", "Salée.", "Lente.", "Forte ou faible."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_v6rte"]
+script = ExtResource("1_0a3li")
+question = "Qu'est-ce qu'une lampe ou une bougie ?"
+choices = Array[String](["Un câble électrique.", "Une source de lumière.", "Un organe humain.", "Un sens."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_pxybe"]
+script = ExtResource("1_0a3li")
+question = "Quel organe utilise-t-on pour goûter les aliments ?"
+choices = Array[String](["La langue.", "La main.", "L'oreille.", "Le nez."])
+
+[sub_resource type="Resource" id="Resource_0gx6o"]
+script = ExtResource("1_0a3li")
+question = "Quel sens utilise-t-on pour sentir la texture ou la température d'un objet ?"
+choices = Array[String](["Le goût.", "La vue.", "Le toucher.", "L'ouïe."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("2_ocwc3")
+questions = Array[ExtResource("1_0a3li")]([SubResource("Resource_ael5s"), SubResource("Resource_ng4q8"), SubResource("Resource_hvhy7"), SubResource("Resource_52tdb"), SubResource("Resource_gdifl"), SubResource("Resource_wh82j"), SubResource("Resource_6t4tv"), SubResource("Resource_vgl4k"), SubResource("Resource_xfltw"), SubResource("Resource_v6rte"), SubResource("Resource_pxybe"), SubResource("Resource_0gx6o")])

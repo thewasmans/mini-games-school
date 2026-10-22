@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://dfuxpxkqoj61h"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_g55ou"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_483wn"]
+
+[sub_resource type="Resource" id="Resource_3dhis"]
+script = ExtResource("1_g55ou")
+question = "Dans une eau sucrée, quel est le soluté ?"
+choices = Array[String](["L'eau.", "Le sucre.", "Le verre.", "L'air."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_j8qeq"]
+script = ExtResource("1_g55ou")
+question = "Dans une eau sucrée, quel est le solvant ?"
+choices = Array[String](["L'eau.", "Le sucre.", "La cuillère.", "Le sirop."])
+
+[sub_resource type="Resource" id="Resource_a85hw"]
+script = ExtResource("1_g55ou")
+question = "Quel ustensile utilise-t-on pour la filtration ?"
+choices = Array[String](["Un entonnoir et un papier filtre.", "Une louche.", "Une passoire.", "Un verre gradué."])
+
+[sub_resource type="Resource" id="Resource_gjhb7"]
+script = ExtResource("1_g55ou")
+question = "Qu'est-ce qu'une transformation physique ?"
+choices = Array[String](["La matière change de nature.", "La matière change d'état ou de forme mais garde sa nature.", "C'est une explosion.", "C'est la création d'un nouveau produit."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_g4l6f"]
+script = ExtResource("1_g55ou")
+question = "Laquelle de ces transformations est réversible ?"
+choices = Array[String](["Brûler du papier.", "La fusion de la glace.", "Cuire un œuf.", "La rouille du fer."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_gd763"]
+script = ExtResource("1_g55ou")
+question = "Laquelle de ces transformations est irréversible ?"
+choices = Array[String](["La solidification de l'eau.", "La fusion du chocolat.", "La combustion du bois.", "Le pliage du papier."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_bv6a4"]
+script = ExtResource("1_g55ou")
+question = "Que se passe-t-il quand on chauffe de l'eau à 100°C ?"
+choices = Array[String](["Elle devient solide.", "Elle s'évapore.", "Elle devient du métal.", "Elle ne change pas."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ttr2o"]
+script = ExtResource("1_g55ou")
+question = "Quelle est la particularité d'un mélange ?"
+choices = Array[String](["Il est composé d'une seule substance.", "Il est composé de plusieurs substances.", "Il est toujours gazeux.", "Il est toujours solide."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_8qgvc"]
+script = ExtResource("1_g55ou")
+question = "L'air est-il un mélange ?"
+choices = Array[String](["Oui, c'est un mélange de gaz.", "Non, c'est une substance pure.", "Oui, c'est un solide.", "Non, c'est un liquide."])
+
+[sub_resource type="Resource" id="Resource_d0yu2"]
+script = ExtResource("1_g55ou")
+question = "Qu'est-ce que la décantation ?"
+choices = Array[String](["Laisser reposer pour séparer les composants par densité.", "Chauffer le mélange.", "Refroidir le mélange.", "Filtrer avec un papier."])
+
+[sub_resource type="Resource" id="Resource_7ohyu"]
+script = ExtResource("1_g55ou")
+question = "Pourquoi l'eau bout-elle à 100°C ?"
+choices = Array[String](["C'est une règle de la nature.", "Parce qu'on ajoute du sel.", "Parce qu'il fait froid.", "Parce qu'on est en montagne."])
+
+[resource]
+script = ExtResource("2_483wn")
+questions = Array[ExtResource("1_g55ou")]([SubResource("Resource_3dhis"), SubResource("Resource_j8qeq"), SubResource("Resource_a85hw"), SubResource("Resource_gjhb7"), SubResource("Resource_g4l6f"), SubResource("Resource_gd763"), SubResource("Resource_bv6a4"), SubResource("Resource_ttr2o"), SubResource("Resource_8qgvc"), SubResource("Resource_d0yu2"), SubResource("Resource_7ohyu")])

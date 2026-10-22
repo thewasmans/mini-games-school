@@ -1,0 +1,67 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://do283i158cknt"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_vb802"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_83flq"]
+
+[sub_resource type="Resource" id="Resource_8grub"]
+script = ExtResource("1_vb802")
+question = "Que doit-on faire pour qu'un glaçon fonde ?"
+choices = Array[String](["Le refroidir.", "Le chauffer.", "Le casser.", "Le cacher."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_io63s"]
+script = ExtResource("1_vb802")
+question = "Comment appelle-t-on l'état de l'eau que l'on peut boire au robinet ?"
+choices = Array[String](["L'eau solide.", "L'eau gazeuse.", "L'eau liquide.", "L'eau glacée."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_01vyr"]
+script = ExtResource("1_vb802")
+question = "Quel vêtement met-on pour se protéger de la pluie ?"
+choices = Array[String](["Un imperméable.", "Un maillot de bain.", "Une écharpe.", "Des lunettes de soleil."])
+
+[sub_resource type="Resource" id="Resource_tt8ms"]
+script = ExtResource("1_vb802")
+question = "Pourquoi l'eau liquide change-t-elle de forme dans un verre ?"
+choices = Array[String](["Parce qu'elle disparait.", "Parce qu'elle devient dure.", "Parce qu'elle prend la forme du récipient.", "Parce qu'elle s'évapore."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_3ahc1"]
+script = ExtResource("1_vb802")
+question = "Quel phénomène météorologique fait du bruit et de la lumière dans le ciel ?"
+choices = Array[String](["Le brouillard.", "L'orage.", "La neige.", "Le soleil."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_oww6r"]
+script = ExtResource("1_vb802")
+question = "Parmi ces propositions, laquelle est un liquide ?"
+choices = Array[String](["Le bois.", "Le jus de pomme.", "La pierre.", "Le sable."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_br4a3"]
+script = ExtResource("1_vb802")
+question = "Quel vêtement est le plus adapté pour jouer dehors en hiver ?"
+choices = Array[String](["Un short.", "Un manteau chaud.", "Des sandales.", "Un T-shirt."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_75aad"]
+script = ExtResource("1_vb802")
+question = "Que peut-on voir dans le ciel s'il pleut et qu'il y a du soleil en même temps ?"
+choices = Array[String](["Une étoile filante.", "Un arc-en-ciel.", "La lune.", "Un éclair."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ii8ti"]
+script = ExtResource("1_vb802")
+question = "De quoi sont faits les nuages dans le ciel ?"
+choices = Array[String](["De fumée de cheminée.", "De coton.", "De fines gouttes d'eau ou de glace.", "De poussière blanche."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_46dql"]
+script = ExtResource("1_vb802")
+question = "Quel temps fait-il quand on ne voit pas du tout le ciel bleu à cause des nuages ?"
+choices = Array[String](["Il fait grand soleil.", "Il y a du brouillard.", "Le ciel est gris.", "Il neige obligatoirement."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("2_83flq")
+questions = Array[ExtResource("1_vb802")]([SubResource("Resource_8grub"), SubResource("Resource_io63s"), SubResource("Resource_01vyr"), SubResource("Resource_tt8ms"), SubResource("Resource_3ahc1"), SubResource("Resource_oww6r"), SubResource("Resource_br4a3"), SubResource("Resource_75aad"), SubResource("Resource_ii8ti"), SubResource("Resource_46dql")])

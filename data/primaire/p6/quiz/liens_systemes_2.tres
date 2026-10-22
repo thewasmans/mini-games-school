@@ -1,0 +1,66 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://dlrndrxyriq40"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_7fbbq"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_vlrx6"]
+
+[sub_resource type="Resource" id="Resource_i1n7e"]
+script = ExtResource("1_7fbbq")
+question = "Quelle partie du poumon assure les échanges gazeux ?"
+choices = Array[String](["Les vaisseaux sanguins.", "Les veines pulmonaires.", "Le poumon droit.", "Les alvéoles pulmonaires."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_6fc75"]
+script = ExtResource("1_7fbbq")
+question = "Pourquoi devons-nous respirer ?"
+choices = Array[String](["Pour renouveler l’oxygène et évacuer le CO2.", "Pour digérer plus rapidement les aliments.", "Pour se réchauffer.", "Pour renouveler le CO2 et évacuer l’oxygène."])
+
+[sub_resource type="Resource" id="Resource_wywhq"]
+script = ExtResource("1_7fbbq")
+question = "Quelle partie du squelette protège les poumons ?"
+choices = Array[String](["La colonne vertébrale.", "La cage thoracique.", "L’humérus.", "Le fémur."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_583dt"]
+script = ExtResource("1_7fbbq")
+question = "Comment se nomme le mouvement respiratoire durant lequel l’air entre dans les poumons ?"
+choices = Array[String](["L’expiration.", "La digestion.", "L’inspiration.", "La circulation."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_3dbrm"]
+script = ExtResource("1_7fbbq")
+question = "Comment se nomme le mouvement respiratoire durant lequel l’air sort des poumons ?"
+choices = Array[String](["La digestion.", "L’expiration.", "L’inspiration.", "La circulation."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_nstpr"]
+script = ExtResource("1_7fbbq")
+question = "Quel terme désigne les conduits où circule le sang ?"
+choices = Array[String](["Les vaisseaux sanguins.", "Les bronches.", "Les poumons.", "Les os."])
+
+[sub_resource type="Resource" id="Resource_kd57g"]
+script = ExtResource("1_7fbbq")
+question = "Quelles sont les quatre cavités principales qui forment le cœur ?"
+choices = Array[String](["Artère aorte, oreillette gauche, muscle cardiaque et veine.", "Oreillette droite, oreillette gauche, ventricule droit et ventricule gauche.", "Poumons, cœur, muscles et ventricule droit.", "Ventricule gauche, oreillette droite, artère aorte et muscle."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_rqqop"]
+script = ExtResource("1_7fbbq")
+question = "Quel type de sang les artères transportent-elles généralement ?"
+choices = Array[String](["Du sang désoxygéné.", "Du sang.", "Du sang oxygéné.", "Les artères ne transportent pas de sang."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_o1hp3"]
+script = ExtResource("1_7fbbq")
+question = "Quel type de sang les veines transportent-elles généralement ?"
+choices = Array[String](["Les veines ne transportent pas de sang.", "Du sang oxygéné.", "Du sang.", "Du sang désoxygéné."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_1aqoi"]
+script = ExtResource("1_7fbbq")
+question = "Quel est le plus long organe du système digestif, situé entre l’estomac et le gros intestin ?"
+choices = Array[String](["L’œsophage.", "L’intestin grêle.", "Le foie.", "Le pancréas."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_vlrx6")
+questions = Array[ExtResource("1_7fbbq")]([SubResource("Resource_i1n7e"), SubResource("Resource_6fc75"), SubResource("Resource_wywhq"), SubResource("Resource_583dt"), SubResource("Resource_3dbrm"), SubResource("Resource_nstpr"), SubResource("Resource_kd57g"), SubResource("Resource_rqqop"), SubResource("Resource_o1hp3"), SubResource("Resource_1aqoi")])

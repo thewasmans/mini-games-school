@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://c6njrdfudm3t7"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_1ket0"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_7oy2p"]
+
+[sub_resource type="Resource" id="Resource_jylct"]
+script = ExtResource("1_1ket0")
+text = "Le squelette humain est composé d’environ 206 os."
+
+[sub_resource type="Resource" id="Resource_ikxxk"]
+script = ExtResource("1_1ket0")
+text = "Le fémur est l’os de la cuisse."
+
+[sub_resource type="Resource" id="Resource_w1j0c"]
+script = ExtResource("1_1ket0")
+text = "L’humérus est l’os du bras."
+
+[sub_resource type="Resource" id="Resource_rsxmc"]
+script = ExtResource("1_1ket0")
+text = "Le genou est une articulation."
+
+[sub_resource type="Resource" id="Resource_f67na"]
+script = ExtResource("1_1ket0")
+text = "Le cerveau est le centre de commande du corps."
+
+[sub_resource type="Resource" id="Resource_0vvov"]
+script = ExtResource("1_1ket0")
+text = "Le nerf permet à l’information de circuler."
+
+[sub_resource type="Resource" id="Resource_hd4gc"]
+script = ExtResource("1_1ket0")
+text = "Le tendon attache le muscle à l’os."
+
+[sub_resource type="Resource" id="Resource_75oju"]
+script = ExtResource("1_1ket0")
+text = "Le squelette sert de protection et de locomotion."
+
+[sub_resource type="Resource" id="Resource_n58ax"]
+script = ExtResource("1_1ket0")
+text = "La flexion est l’opposé de l’extension."
+
+[sub_resource type="Resource" id="Resource_mmvfe"]
+script = ExtResource("1_1ket0")
+text = "Le muscle est formé de fibres."
+
+[resource]
+script = ExtResource("2_7oy2p")
+phrases = Array[ExtResource("1_1ket0")]([SubResource("Resource_jylct"), SubResource("Resource_ikxxk"), SubResource("Resource_w1j0c"), SubResource("Resource_rsxmc"), SubResource("Resource_f67na"), SubResource("Resource_0vvov"), SubResource("Resource_hd4gc"), SubResource("Resource_75oju"), SubResource("Resource_n58ax"), SubResource("Resource_mmvfe")])

@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://dwp6is1xrf70u"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_1rmkg"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_vk6ri"]
+
+[sub_resource type="Resource" id="Resource_ly2hn"]
+script = ExtResource("1_1rmkg")
+question = "Si on mélange de l'huile et de l'eau, que se passe-t-il ?"
+choices = Array[String](["Ils se mélangent parfaitement (homogène).", "Ils forment un mélange hétérogène.", "L'huile disparaît.", "L'eau devient huile."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_nqkf7"]
+script = ExtResource("1_1rmkg")
+question = "La glace qui fond est une ?"
+choices = Array[String](["Transformation chimique.", "Transformation physique.", "Explosion.", "Synthèse."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_qodhl"]
+script = ExtResource("1_1rmkg")
+question = "Le fer qui rouille est une ?"
+choices = Array[String](["Transformation physique.", "Transformation chimique.", "Fusion.", "Solidification."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_y1gqq"]
+script = ExtResource("1_1rmkg")
+question = "Comment appelle-t-on la substance dissoute dans un solvant ?"
+choices = Array[String](["Un soluté.", "Un mélange.", "Une solution.", "Un résidu."])
+
+[sub_resource type="Resource" id="Resource_gch68"]
+script = ExtResource("1_1rmkg")
+question = "Qu'est-ce qu'une solution saturée ?"
+choices = Array[String](["Une solution où on ne peut plus dissoudre de soluté.", "Une solution très chaude.", "Une solution très froide.", "Une solution sans soluté."])
+
+[sub_resource type="Resource" id="Resource_3lyub"]
+script = ExtResource("1_1rmkg")
+question = "Le cycle de l'eau utilise quelles transformations ?"
+choices = Array[String](["Fusion, évaporation, condensation.", "Solidification seulement.", "Fusion seulement.", "Combustion."])
+
+[sub_resource type="Resource" id="Resource_c1lhq"]
+script = ExtResource("1_1rmkg")
+question = "Que se passe-t-il quand on met du sel dans de l'eau ?"
+choices = Array[String](["Il flotte.", "Il se dissout.", "Il devient gazeux.", "Il ne se passe rien."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_7wshv"]
+script = ExtResource("1_1rmkg")
+question = "Un glaçon dans un verre de jus d'orange est-il un mélange ?"
+choices = Array[String](["Oui, hétérogène.", "Non.", "C'est une réaction chimique.", "C'est une solution saturée."])
+
+[sub_resource type="Resource" id="Resource_124i4"]
+script = ExtResource("1_1rmkg")
+question = "Pour récupérer le sel d'une eau salée, on utilise ?"
+choices = Array[String](["La filtration.", "La décantation.", "L'évaporation.", "Le tri manuel."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_e0vrf"]
+script = ExtResource("1_1rmkg")
+question = "Laquelle de ces propositions est une matière ?"
+choices = Array[String](["La chaleur.", "L'air.", "La lumière.", "La pensée."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_vk6ri")
+questions = Array[ExtResource("1_1rmkg")]([SubResource("Resource_ly2hn"), SubResource("Resource_nqkf7"), SubResource("Resource_qodhl"), SubResource("Resource_y1gqq"), SubResource("Resource_gch68"), SubResource("Resource_3lyub"), SubResource("Resource_c1lhq"), SubResource("Resource_7wshv"), SubResource("Resource_124i4"), SubResource("Resource_e0vrf")])

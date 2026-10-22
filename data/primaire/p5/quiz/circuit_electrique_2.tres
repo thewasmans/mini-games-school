@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://dqu17d13qf1u"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_cj3tw"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_ggv4v"]
+
+[sub_resource type="Resource" id="Resource_a0o1d"]
+script = ExtResource("1_cj3tw")
+question = "Quel élément fournit l’énergie électrique dans un circuit ?"
+choices = Array[String](["Le fil électrique.", "Le générateur.", "Le récepteur.", "L’interrupteur."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_c60dj"]
+script = ExtResource("1_cj3tw")
+question = "Quel objet est un générateur ?"
+choices = Array[String](["Une ampoule.", "Un fil électrique.", "Un clou.", "Une pile."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_rc6x3"]
+script = ExtResource("1_cj3tw")
+question = "Dans un circuit électrique, qu’est-ce que l’ampoule ?"
+choices = Array[String](["Un générateur.", "Un interrupteur.", "Un récepteur.", "Un conducteur."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_h047h"]
+script = ExtResource("1_cj3tw")
+question = "À quoi sert le fil électrique ?"
+choices = Array[String](["Transporter le courant.", "Éclairer.", "Couper le courant.", "Produire de l’électricité."])
+
+[sub_resource type="Resource" id="Resource_wtoe2"]
+script = ExtResource("1_cj3tw")
+question = "Quel élément permet d’ouvrir ou fermer un circuit ?"
+choices = Array[String](["La pile.", "L’interrupteur.", "Le fil électrique.", "L’ampoule."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_b71fu"]
+script = ExtResource("1_cj3tw")
+question = "Que permet un circuit fermé ?"
+choices = Array[String](["À l’électricité de circuler.", "D’éteindre définitivement une lampe.", "De casser le circuit.", "D’arrêter la pile."])
+
+[sub_resource type="Resource" id="Resource_1875x"]
+script = ExtResource("1_cj3tw")
+question = "Que peux-tu dire à propos du circuit ouvert ?"
+choices = Array[String](["L’ampoule s’allume.", "Le courant circule.", "Le courant ne circule pas.", "La pile disparaît."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_qap12"]
+script = ExtResource("1_cj3tw")
+question = "Quelle option montre un circuit fermé ?"
+choices = Array[String](["Circuit fermé avec ampoule allumée.", "Circuit ouvert avec ampoule éteinte.", "Une pile seule.", "Un fil coupé."])
+
+[sub_resource type="Resource" id="Resource_r8yta"]
+script = ExtResource("1_cj3tw")
+question = "Que fait un matériau conducteur électrique ?"
+choices = Array[String](["Bloque le courant.", "Produit de la lumière.", "Laisser passer le courant.", "Ça n’existe pas."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("2_ggv4v")
+questions = Array[ExtResource("1_cj3tw")]([SubResource("Resource_a0o1d"), SubResource("Resource_c60dj"), SubResource("Resource_rc6x3"), SubResource("Resource_h047h"), SubResource("Resource_wtoe2"), SubResource("Resource_b71fu"), SubResource("Resource_1875x"), SubResource("Resource_qap12"), SubResource("Resource_r8yta")])

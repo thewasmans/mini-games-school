@@ -1,0 +1,70 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://cdcv56l20guj3"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_7ekgf"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_3kl7n"]
+
+[sub_resource type="Resource" id="Resource_bvqxa"]
+script = ExtResource("1_7ekgf")
+question = "Quel matériau est conducteur électrique ?"
+choices = Array[String](["Le métal.", "Le bois.", "Le plastique.", "Le carton."])
+
+[sub_resource type="Resource" id="Resource_ijexy"]
+script = ExtResource("1_7ekgf")
+question = "Quel matériau est isolant électrique ?"
+choices = Array[String](["Le cuivre.", "Le plastique.", "Le métal.", "L’aluminium."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_abiqv"]
+script = ExtResource("1_7ekgf")
+question = "Que se passe-t-il si on remplace un fil métallique par du bois dans un circuit ?"
+choices = Array[String](["L’ampoule brillera plus fort.", "Le courant passera facilement.", "La pile changera de couleur.", "Le bois agira comme isolant."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_g73fo"]
+script = ExtResource("1_7ekgf")
+question = "Quel objet est conducteur ?"
+choices = Array[String](["Cuillère en métal.", "Règle en plastique.", "Morceau de bois.", "Bouchon en liège."])
+
+[sub_resource type="Resource" id="Resource_wchua"]
+script = ExtResource("1_7ekgf")
+question = "Que signifie « courant électrique » ?"
+choices = Array[String](["Un trajet fermé parcouru par le courant.", "Une lampe cassée.", "Une pile vide.", "Un aimant."])
+
+[sub_resource type="Resource" id="Resource_yraba"]
+script = ExtResource("1_7ekgf")
+question = "Que faut-il pour allumer une ampoule ?"
+choices = Array[String](["Un circuit ouvert.", "Un circuit fermé.", "Un morceau de bois.", "Un aimant."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_exty5"]
+script = ExtResource("1_7ekgf")
+question = "Pourquoi faut-il tester différents matériaux dans un circuit ?"
+choices = Array[String](["Distinguer les conducteurs et les isolants.", "Décorer le circuit.", "Changer la couleur de l'électricité.", "Fabriquer une pile."])
+
+[sub_resource type="Resource" id="Resource_ynay0"]
+script = ExtResource("1_7ekgf")
+question = "Pourquoi utilise-t-on des symboles pour représenter un circuit ?"
+choices = Array[String](["Pour décorer.", "Pour mesurer la température.", "Pour fabriquer de l'électricité.", "Pour schématiser simplement le circuit."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_ffgx2"]
+script = ExtResource("1_7ekgf")
+question = "Que se passe-t-il si un fil électrique est coupé ?"
+choices = Array[String](["L’ampoule brille plus fort.", "La pile se recharge.", "Le circuit devient plus rapide.", "Le courant ne circule plus."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_g6ndb"]
+script = ExtResource("1_7ekgf")
+question = "Pourquoi le cuivre est souvent utilisé dans les fils électriques ?"
+choices = Array[String](["Il est isolant.", "Il est transparent.", "Il est conducteur.", "Il est léger."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_t1di4"]
+script = ExtResource("1_7ekgf")
+question = "À quoi sert le plastique autour des fils électriques ?"
+choices = Array[String](["Conduire l’électricité.", "Produire de la lumière.", "Isoler et protéger.", "Remplacer la pile."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("2_3kl7n")
+questions = Array[ExtResource("1_7ekgf")]([SubResource("Resource_bvqxa"), SubResource("Resource_ijexy"), SubResource("Resource_abiqv"), SubResource("Resource_g73fo"), SubResource("Resource_wchua"), SubResource("Resource_yraba"), SubResource("Resource_exty5"), SubResource("Resource_ynay0"), SubResource("Resource_ffgx2"), SubResource("Resource_g6ndb"), SubResource("Resource_t1di4")])
