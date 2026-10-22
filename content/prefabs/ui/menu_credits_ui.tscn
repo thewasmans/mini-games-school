@@ -3,8 +3,10 @@
 [ext_resource type="Script" uid="uid://dkpyk3jfxi308" path="res://scripts/ui/menu_credits_ui.gd" id="1_credits"]
 [ext_resource type="Texture2D" uid="uid://c3upgh7dpfrhf" path="res://content/sprites/ui/ui_background.png" id="2_bg"]
 [ext_resource type="Texture2D" uid="uid://bssxvehr8hskc" path="res://content/sprites/ui/icon_return.png" id="3_back"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_455r3"]
+[ext_resource type="Texture2D" uid="uid://btmrlh40mh6oy" path="res://content/sprites/ui/college-des-etoiles-new-concept.png" id="4_147b2"]
+[ext_resource type="Texture2D" uid="uid://bkioto70i8787" path="res://content/sprites/ui/Heldb_logo_vertic-coul.png" id="5_kvowr"]
+[ext_resource type="Texture2D" uid="uid://bjqe6de6rddw0" path="res://content/sprites/ui/EN_Funded_by_the_European_Union_RGB_POS.png" id="6_eqogt"]
+[ext_resource type="Texture2D" uid="uid://dhogrwrhvob5g" path="res://content/sprites/ui/FWB_VERTI_NEGA_01.png" id="7_rcj63"]
 
 [node name="MenuCreditsUI" type="Control" unique_id=546725621]
 layout_mode = 3
@@ -100,28 +102,28 @@ alignment = 1
 [node name="LogoSlot1" type="TextureRect" parent="Layout/ScrollContainer/Content/LogosContainer" unique_id=1407048119]
 custom_minimum_size = Vector2(220, 140)
 layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_455r3")
+texture = ExtResource("4_147b2")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="LogoSlot2" type="TextureRect" parent="Layout/ScrollContainer/Content/LogosContainer" unique_id=509404274]
 custom_minimum_size = Vector2(220, 140)
 layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_455r3")
+texture = ExtResource("5_kvowr")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="LogoSlot3" type="TextureRect" parent="Layout/ScrollContainer/Content/LogosContainer" unique_id=1785898989]
 custom_minimum_size = Vector2(220, 140)
 layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_455r3")
+texture = ExtResource("6_eqogt")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="LogoSlot4" type="TextureRect" parent="Layout/ScrollContainer/Content/LogosContainer" unique_id=2038957174]
 custom_minimum_size = Vector2(220, 140)
 layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_455r3")
+texture = ExtResource("7_rcj63")
 expand_mode = 1
 stretch_mode = 5
 
