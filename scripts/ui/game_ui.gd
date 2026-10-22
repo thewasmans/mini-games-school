@@ -4,6 +4,7 @@ extends Control
 const STUDY_LEVEL_BUTTON_MIN_SIZE := Vector2(360, 90)
 const STUDY_LEVEL_BUTTON_FONT_SIZE := 40
 
+@export var menu_start: MenuStartUI
 @export var menu_study_levels: MenuStudyLevelsUI
 @export var menu_levels: MenuLevelsUI
 @export var menu_credits: MenuCreditsUI
@@ -17,6 +18,8 @@ func initialize(game_manager: GameManager) -> void:
 	menu_study_levels.hide()
 	menu_levels.hide()
 	menu_credits.hide()
+	menu_start.play_pressed.connect(_on_play_button_pressed)
+	menu_start.credits_pressed.connect(_on_credits_button_pressed)
 	menu_study_levels.back_pressed.connect(_on_menu_study_levels_back)
 	menu_levels.back_pressed.connect(_on_menu_levels_back)
 	menu_credits.back_pressed.connect(_on_menu_credits_back)

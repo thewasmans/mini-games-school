@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://d0h5gr0h7xhcu"]
 
+[ext_resource type="Script" path="res://scripts/ui/menu_start_ui.gd" id="3_menu_start"]
 [ext_resource type="Texture2D" uid="uid://c3upgh7dpfrhf" path="res://content/sprites/ui/ui_background.png" id="1_u3nx5"]
+[ext_resource type="Texture2D" uid="uid://btcnwkudckkyw" path="res://content/sprites/ui/titre.png" id="2_oxxbk"]
 
 [node name="MenuStartUI" type="Control" unique_id=1192116906]
 layout_mode = 3
@@ -9,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("3_menu_start")
 
 [node name="Background" type="TextureRect" parent="." unique_id=705124679]
 layout_mode = 1
@@ -21,18 +24,36 @@ texture = ExtResource("1_u3nx5")
 expand_mode = 3
 stretch_mode = 6
 
-[node name="PlayButton" type="Button" parent="." unique_id=1518565421]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=449111718]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 13
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -212.5
-offset_top = -83.5
-offset_right = 212.5
-offset_bottom = 83.5
+anchor_bottom = 1.0
+offset_left = -210.5
+offset_right = 210.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 127
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer" unique_id=261438544]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_oxxbk")
+stretch_mode = 4
+
+[node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=1518565421]
+layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "PLAY"
+
+[node name="CreditsButton" type="Button" parent="VBoxContainer" unique_id=1581750645]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 50
+text = "CREDITS"
+
+[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
