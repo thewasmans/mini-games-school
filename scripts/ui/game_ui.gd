@@ -40,7 +40,9 @@ func _populate_study_levels() -> void:
 func _populate_subjects(study_level_index: int) -> void:
 	for child in menu_subjects.buttons_container.get_children():
 		child.queue_free()
-	var subjects := _game_manager.game_data.study_levels[study_level_index].subjects
+	var study_level := _game_manager.game_data.study_levels[study_level_index]
+	menu_subjects.title_label.text = study_level.name
+	var subjects := study_level.subjects
 	for subject_index in subjects.size():
 		var button := _create_choice_button(subjects[subject_index].name)
 		button.pressed.connect(_on_subject_selected.bind(subject_index))
@@ -77,6 +79,8 @@ func _on_menu_subjects_back() -> void:
 
 func _on_subject_selected(subject_index: int) -> void:
 	_game_manager.game_state.select_subject(subject_index)
+	var study_level := _game_manager.game_data.study_levels[_game_manager.game_state.current_study_level]
+	menu_levels.title_label.text = "%s - %s" % [study_level.name, study_level.subjects[subject_index].name]
 	menu_subjects.hide()
 	_build_level_grid()
 	menu_levels.show()

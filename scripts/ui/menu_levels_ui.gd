@@ -3,6 +3,7 @@ extends Control
 
 signal back_pressed
 
+@export var title_label: Label
 @export var scrol_container: ScrollContainer
 @export var grid_container: GridContainer
 

@@ -45,9 +45,11 @@ func initialize(_level_index: int, _level_data: LevelData, game_manager: GameMan
 		DebugHelper.instance.bind(mini_game_ui, self)
 
 func _mini_game_title(mini_game: MiniGameData) -> String:
-	var study_level := _game_manager.game_data.study_levels[_game_manager.game_state.current_study_level]
+	var game_state := _game_manager.game_state
+	var study_level := _game_manager.game_data.study_levels[game_state.current_study_level]
+	var subject := study_level.subjects[game_state.current_subject]
 	var title_parts := PackedStringArray()
-	for title_part in [study_level.name, mini_game.school_year, mini_game.title]:
+	for title_part in [study_level.name, mini_game.school_year, subject.name, mini_game.title]:
 		if not title_part.is_empty():
 			title_parts.append(title_part)
 	return " - ".join(title_parts)
