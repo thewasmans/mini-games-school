@@ -39,3 +39,5 @@ text = "La structure tridimensionnelle active la protéine."
 script = ExtResource("2_qtujn")
 hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_ocgis")]([SubResource("Resource_gyacf"), SubResource("Resource_q71qp"), SubResource("Resource_ycm8t"), SubResource("Resource_wgepc"), SubResource("Resource_cnw2c"), SubResource("Resource_i2s7w"), SubResource("Resource_xny73"), SubResource("Resource_i3ohy")])
+school_year = "S4"
+title = "La cellule"

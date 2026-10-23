@@ -72,4 +72,6 @@ correct_choice_index = 1
 
 [resource]
 script = ExtResource("2_iw72t")
+school_year = "S4"
+title = "Travail et puissance"
 questions = Array[ExtResource("1_sclt3")]([SubResource("Resource_5m0ap"), SubResource("Resource_y1wd6"), SubResource("Resource_cuqvb"), SubResource("Resource_0ffhm"), SubResource("Resource_uru2h"), SubResource("Resource_y01m3"), SubResource("Resource_rxvv2"), SubResource("Resource_wso0l"), SubResource("Resource_2hdob"), SubResource("Resource_61xuw"), SubResource("Resource_y34ya"), SubResource("Resource_kfgoc")])

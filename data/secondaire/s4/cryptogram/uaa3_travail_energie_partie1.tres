@@ -37,5 +37,7 @@ text = "La vitesse instantanée décrit l'état du mouvement à un instant préc
 
 [resource]
 script = ExtResource("2_ujenh")
+school_year = "S4"
+title = "Travail et énergie"
 hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_vhf10")]([SubResource("Resource_rafx6"), SubResource("Resource_tcrqe"), SubResource("Resource_lyvdi"), SubResource("Resource_3oecl"), SubResource("Resource_6rbqc"), SubResource("Resource_xf1at"), SubResource("Resource_ihte3"), SubResource("Resource_ej3bp")])

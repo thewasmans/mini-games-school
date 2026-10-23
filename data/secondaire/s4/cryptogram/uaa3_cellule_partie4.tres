@@ -37,5 +37,7 @@ text = "Les mutations diversifient les espèces."
 
 [resource]
 script = ExtResource("2_fss77")
+school_year = "S4"
+title = "La cellule"
 hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_cgyk6")]([SubResource("Resource_edl2d"), SubResource("Resource_7j5hv"), SubResource("Resource_1yrim"), SubResource("Resource_txkx7"), SubResource("Resource_0r5j1"), SubResource("Resource_enfq3"), SubResource("Resource_6w7dp"), SubResource("Resource_luhc6")])

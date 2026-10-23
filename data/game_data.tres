@@ -6,6 +6,7 @@
 [ext_resource type="Resource" uid="uid://dihkdp4gkv3sb" path="res://data/secondaire/s4/cryptogram/uaa3_cellule_partie1.tres" id="5_r4uws"]
 [ext_resource type="Resource" uid="uid://bryqjylodb8ei" path="res://data/secondaire/s4/quiz/cellule.tres" id="6_4ls4r"]
 [ext_resource type="Script" uid="uid://dqstlvldata01" path="res://scripts/data/study_level_data.gd" id="7_stdylvl"]
+[ext_resource type="Script" path="res://scripts/data/subject_data.gd" id="25_subject"]
 [ext_resource type="Resource" uid="uid://ccvhq4tbhmbgn" path="res://data/secondaire/s4/crossword/cellule_s4.tres" id="7_xbtbc"]
 [ext_resource type="Resource" uid="uid://b8001eoh6safi" path="res://data/secondaire/s4/crossword/cellule_s4_2.tres" id="8_028tp"]
 [ext_resource type="Resource" uid="uid://dtq3lxbkhvlki" path="res://data/secondaire/s4/crossword/cellule_s4_3.tres" id="9_t72jb"]
@@ -130,10 +131,25 @@ script = ExtResource("2_r34r7")
 mini_games = Array[ExtResource("1_vllua")]([ExtResource("24_x34ux")])
 metadata/_custom_type_script = "uid://br5q0sg4b052d"
 
+[sub_resource type="Resource" id="Subject_biologie"]
+script = ExtResource("25_subject")
+name = "Biologie"
+levels = Array[ExtResource("2_r34r7")]([SubResource("Resource_qxcu0"), SubResource("Resource_2dcmy"), SubResource("Resource_yqv0c"), SubResource("Resource_pftn3"), SubResource("Resource_k2o1c"), SubResource("Resource_nhd81"), SubResource("Resource_txme5"), SubResource("Resource_us8hq"), SubResource("Resource_afujh"), SubResource("Resource_px30l"), SubResource("Resource_frjtr"), SubResource("Resource_58nyo"), SubResource("Resource_dd7yo"), SubResource("Resource_b8ba4"), SubResource("Resource_vjkum")])
+
+[sub_resource type="Resource" id="Subject_chimie"]
+script = ExtResource("25_subject")
+name = "Chimie"
+levels = Array[ExtResource("2_r34r7")]([SubResource("Resource_ca4gj"), SubResource("Resource_i0cih")])
+
+[sub_resource type="Resource" id="Subject_physique"]
+script = ExtResource("25_subject")
+name = "Physique"
+levels = Array[ExtResource("2_r34r7")]([SubResource("Resource_joy1j"), SubResource("Resource_0bmhh"), SubResource("Resource_b1r1l")])
+
 [sub_resource type="Resource" id="StudyLevel_primaire"]
 script = ExtResource("7_stdylvl")
 name = "Secondaire"
-levels = Array[ExtResource("2_r34r7")]([SubResource("Resource_qxcu0"), SubResource("Resource_2dcmy"), SubResource("Resource_yqv0c"), SubResource("Resource_pftn3"), SubResource("Resource_k2o1c"), SubResource("Resource_nhd81"), SubResource("Resource_txme5"), SubResource("Resource_us8hq"), SubResource("Resource_afujh"), SubResource("Resource_px30l"), SubResource("Resource_frjtr"), SubResource("Resource_58nyo"), SubResource("Resource_ca4gj"), SubResource("Resource_i0cih"), SubResource("Resource_dd7yo"), SubResource("Resource_b8ba4"), SubResource("Resource_vjkum"), SubResource("Resource_joy1j"), SubResource("Resource_0bmhh"), SubResource("Resource_b1r1l")])
+subjects = Array[ExtResource("25_subject")]([SubResource("Subject_biologie"), SubResource("Subject_chimie"), SubResource("Subject_physique")])
 metadata/_custom_type_script = "uid://dqstlvldata01"
 
 [sub_resource type="Resource" id="Resource_y3jf8"]

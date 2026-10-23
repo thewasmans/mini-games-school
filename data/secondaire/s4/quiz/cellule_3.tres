@@ -68,4 +68,6 @@ choices = Array[String](["Semi-conservatif.", "Conservatif.", "Replicatif.", "In
 
 [resource]
 script = ExtResource("2_no3qh")
+school_year = "S4"
+title = "La cellule"
 questions = Array[ExtResource("1_f8mft")]([SubResource("Resource_rrtft"), SubResource("Resource_nmawo"), SubResource("Resource_x2dwi"), SubResource("Resource_qntnp"), SubResource("Resource_ypxgg"), SubResource("Resource_3g7m8"), SubResource("Resource_wemi6"), SubResource("Resource_85jir"), SubResource("Resource_ebd18"), SubResource("Resource_j5ehx"), SubResource("Resource_g3upj")])

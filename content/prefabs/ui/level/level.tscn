@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ccryptuiscn12" path="res://content/prefabs/ui/mini_games/crypto_ui.tscn" id="5_crypto"]
 [ext_resource type="Texture2D" uid="uid://bssxvehr8hskc" path="res://content/sprites/ui/ui_icon_return.png" id="6_back"]
 
-[node name="Level" type="Control" unique_id=1301094388 node_paths=PackedStringArray("mini_game_label", "mini_game_container", "validate_button", "back_button")]
+[node name="Level" type="Control" unique_id=1301094388 node_paths=PackedStringArray("mini_game_label", "mini_game_container", "progress_bar", "validate_button", "back_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,6 +17,7 @@ grow_vertical = 2
 script = ExtResource("1_8od4f")
 mini_game_label = NodePath("Layout/MiniGameLabel")
 mini_game_container = NodePath("Layout/MiniGameContainer")
+progress_bar = NodePath("Layout/ProgressBar")
 crossword_prefab = ExtResource("2_xword")
 memo_prefab = ExtResource("4_memo")
 crypto_prefab = ExtResource("5_crypto")
@@ -39,6 +40,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = -27.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -61,6 +63,16 @@ layout_mode = 2
 text = "LEVEL"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ProgressBar" type="ProgressBar" parent="Layout" unique_id=1075584870]
+custom_minimum_size = Vector2(420, 24)
+layout_mode = 2
+size_flags_horizontal = 4
+max_value = 3.0
+step = 0.0
+value = 1.0
+show_percentage = false
 
 [node name="MiniGameContainer" type="Control" parent="Layout" unique_id=1891193126]
 layout_mode = 2

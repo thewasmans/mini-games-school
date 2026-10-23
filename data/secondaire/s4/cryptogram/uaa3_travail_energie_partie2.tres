@@ -37,5 +37,7 @@ text = "La puissance dissipée en chaleur limite le rendement énergétique."
 
 [resource]
 script = ExtResource("2_cti2k")
+school_year = "S4"
+title = "Travail et énergie"
 hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_nuh11")]([SubResource("Resource_8y23p"), SubResource("Resource_alldq"), SubResource("Resource_1msxk"), SubResource("Resource_twssj"), SubResource("Resource_sctkd"), SubResource("Resource_c8mvq"), SubResource("Resource_2jkpa"), SubResource("Resource_lt0hr")])
