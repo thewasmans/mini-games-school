@@ -28,14 +28,22 @@ func initialize(_level_index: int, _level_data: LevelData, game_manager: GameMan
 	if mini_game_prefab == null:
 		mini_game_label.text = "Level %d - %s" % [level_index + 1, mini_game.get_script().get_global_name()]
 		return
-	mini_game_label.text = mini_game.title
-	mini_game_label.visible = not mini_game.title.is_empty()
+	mini_game_label.text = _mini_game_title(mini_game)
+	mini_game_label.visible = not mini_game_label.text.is_empty()
 	var mini_game_ui := mini_game_prefab.instantiate()
 	mini_game_container.add_child(mini_game_ui)
 	mini_game_ui.completed.connect(_on_mini_game_completed)
 	mini_game_ui.initialize(mini_game)
 	if DebugHelper.instance != null:
 		DebugHelper.instance.bind(mini_game_ui, self)
+
+func _mini_game_title(mini_game: MiniGameData) -> String:
+	var study_level := _game_manager.game_data.study_levels[_game_manager.game_state.current_study_level]
+	var title_parts := PackedStringArray()
+	for title_part in [study_level.name, mini_game.school_year, mini_game.title]:
+		if not title_part.is_empty():
+			title_parts.append(title_part)
+	return " - ".join(title_parts)
 
 func validate() -> void:
 	_on_validate_button_pressed()

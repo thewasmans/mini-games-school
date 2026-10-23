@@ -45,5 +45,6 @@ correct_choice_index = 1
 
 [resource]
 script = ExtResource("2_k6b0d")
+school_year = "S4"
 title = "Les espèces chimiques"
 questions = Array[ExtResource("1_nli63")]([SubResource("Resource_0as10"), SubResource("Resource_w1ebf"), SubResource("Resource_osv5m"), SubResource("Resource_1it20"), SubResource("Resource_cfuxp"), SubResource("Resource_angf6"), SubResource("Resource_35eh2")])

@@ -70,5 +70,6 @@ choices = Array[String](["Le rapport entre la masse et le volume.", "Le rapport 
 
 [resource]
 script = ExtResource("2_wt1nq")
+school_year = "S4"
 title = "Les réactions chimiques"
 questions = Array[ExtResource("1_nbp1v")]([SubResource("Resource_mi45y"), SubResource("Resource_ckmh1"), SubResource("Resource_v6fx4"), SubResource("Resource_mkyi8"), SubResource("Resource_i578w"), SubResource("Resource_c8bxt"), SubResource("Resource_l71vb"), SubResource("Resource_qf14o"), SubResource("Resource_ctd85"), SubResource("Resource_qa7jd"), SubResource("Resource_vamm0"), SubResource("Resource_28rrw")])
