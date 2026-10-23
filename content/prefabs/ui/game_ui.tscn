@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://chfxvwlqr0oqm" path="res://scripts/ui/game_ui.gd" id="1_7e7t2"]
 [ext_resource type="PackedScene" uid="uid://0gapd7wm8ydd" path="res://content/prefabs/ui/button_level_ui.tscn" id="2_npsjx"]
-[ext_resource type="PackedScene" uid="uid://dy4o76u7t5tkx" path="res://content/prefabs/ui/menu_levels_ui.tscn" id="3_hpqhx"]
+[ext_resource type="PackedScene" uid="uid://dy4o76u7t5tkx" path="res://content/prefabs/ui/menu_select_levels_ui.tscn" id="3_hpqhx"]
 [ext_resource type="PackedScene" uid="uid://d0h5gr0h7xhcu" path="res://content/prefabs/ui/menu_start_ui.tscn" id="4_mpxm1"]
 [ext_resource type="PackedScene" uid="uid://cmenustudyscn" path="res://content/prefabs/ui/menu_study_levels_ui.tscn" id="5_stdylvl"]
 [ext_resource type="PackedScene" uid="uid://movkvjm3labp" path="res://content/prefabs/ui/menu_credits_ui.tscn" id="6_credits"]
