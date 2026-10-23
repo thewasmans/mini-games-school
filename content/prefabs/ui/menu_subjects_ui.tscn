@@ -1,0 +1,56 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/menu_subjects_ui.gd" id="1_subjects"]
+[ext_resource type="Texture2D" uid="uid://c3upgh7dpfrhf" path="res://content/sprites/ui/ui_background.png" id="2_bg"]
+[ext_resource type="Texture2D" uid="uid://bssxvehr8hskc" path="res://content/sprites/ui/ui_icon_return.png" id="3_back"]
+
+[node name="MenuSubjectsUI" type="Control" unique_id=849938833 node_paths=PackedStringArray("buttons_container")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_subjects")
+buttons_container = NodePath("Layout/ButtonsContainer")
+
+[node name="Background" type="TextureRect" parent="." unique_id=584682608]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Layout" type="VBoxContainer" parent="." unique_id=1608468239]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="Control" parent="Layout" unique_id=166776775]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="Layout/TopBar" unique_id=1152690852]
+layout_mode = 0
+offset_right = 214.0
+offset_bottom = 194.0
+scale = Vector2(0.525, 0.525)
+theme_override_font_sizes/font_size = 39
+icon = ExtResource("3_back")
+icon_alignment = 1
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="Layout" unique_id=1644748327]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+alignment = 1
+theme_override_constants/separation = 40
+
+[connection signal="pressed" from="Layout/TopBar/BackButton" to="." method="_on_back_button_pressed"]
