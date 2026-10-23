@@ -2,6 +2,7 @@ class_name CryptoUI
 extends Control
 
 signal completed
+signal progress_changed(completed_count: int, total_count: int)
 
 const NORMAL_COLOR := Color.WHITE
 const CORRECT_COLOR := Color(0.5, 1.0, 0.5)
@@ -28,6 +29,7 @@ var _hidden_box_style := StyleBoxEmpty.new()
 
 func initialize(crypto_data: CryptoData) -> void:
 	_crypto_data = crypto_data
+	progress_changed.emit(_puzzle_index, _crypto_data.phrases.size())
 	fix_errors_button.pressed.connect(_correct_errors)
 	validate_button.pressed.connect(_on_validate_button_pressed)
 	_load_puzzle()
@@ -224,6 +226,7 @@ func _on_validate_button_pressed() -> void:
 
 func _advance() -> void:
 	_puzzle_index += 1
+	progress_changed.emit(_puzzle_index, _crypto_data.phrases.size())
 	if _puzzle_index >= _crypto_data.phrases.size():
 		completed.emit()
 		return

@@ -2,6 +2,7 @@ class_name CrosswordUI
 extends Control
 
 signal completed
+signal progress_changed(completed_count: int, total_count: int)
 
 const CELL_SIZE := Vector2(40, 40)
 const NORMAL_COLOR := Color.WHITE
@@ -28,6 +29,7 @@ var _solved_count: int = 0
 func initialize(crossword_data: CrosswordData) -> void:
 	var placements := crossword_data.build_placements()
 	_word_count = placements.size()
+	progress_changed.emit(_solved_count, _word_count)
 	_render_grid(placements)
 	grid_area.resized.connect(_fit_grid_to_area)
 	grid_container.minimum_size_changed.connect(_fit_grid_to_area)
@@ -201,5 +203,6 @@ func _validate_word(submitted_text: String) -> void:
 	hint_label.text = ""
 	input.text = ""
 	_solved_count += 1
+	progress_changed.emit(_solved_count, _word_count)
 	if _solved_count == _word_count:
 		completed.emit()

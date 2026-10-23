@@ -3,11 +3,14 @@ extends Control
 
 @export var mini_game_label: Label
 @export var mini_game_container: Control
+@export var progress_bar: ProgressBar
 @export var crossword_prefab: PackedScene
 @export var memo_prefab: PackedScene
 @export var crypto_prefab: PackedScene
 @export var validate_button: Button
 @export var back_button: Button
+
+const PROGRESS_TWEEN_DURATION := 0.3
 
 var level_index: int
 var level_data: LevelData
@@ -20,6 +23,8 @@ func initialize(_level_index: int, _level_data: LevelData, game_manager: GameMan
 	validate_button.hide()
 	validate_button.pressed.connect(_on_validate_button_pressed)
 	back_button.pressed.connect(_on_back_button_pressed)
+	progress_bar.hide()
+	progress_bar.value = 0
 	if level_data.mini_games.is_empty():
 		mini_game_label.text = "Level %d - Aucun mini-jeu" % (level_index + 1)
 		return
@@ -33,6 +38,8 @@ func initialize(_level_index: int, _level_data: LevelData, game_manager: GameMan
 	var mini_game_ui := mini_game_prefab.instantiate()
 	mini_game_container.add_child(mini_game_ui)
 	mini_game_ui.completed.connect(_on_mini_game_completed)
+	mini_game_ui.progress_changed.connect(_on_mini_game_progress_changed)
+	progress_bar.show()
 	mini_game_ui.initialize(mini_game)
 	if DebugHelper.instance != null:
 		DebugHelper.instance.bind(mini_game_ui, self)
@@ -56,6 +63,10 @@ func _prefab_for(mini_game: MiniGameData) -> PackedScene:
 	if mini_game is CryptoData:
 		return crypto_prefab
 	return null
+
+func _on_mini_game_progress_changed(completed_count: int, total_count: int) -> void:
+	progress_bar.max_value = total_count
+	create_tween().tween_property(progress_bar, "value", completed_count, PROGRESS_TWEEN_DURATION)
 
 func _on_mini_game_completed() -> void:
 	validate_button.show()
