@@ -9,7 +9,6 @@ const INCORRECT_COLOR := Color(1.0, 0.5, 0.5)
 const SLOT_SIZE := Vector2(10, 38)
 const LETTER_SIZE := Vector2(0, 44)
 const SPACE_SIZE := Vector2(16, 44)
-const REVEAL_DELAY := 0.6
 const WORD_LETTER_SEPARATION := 4
 const HIDDEN_BOX_STYLES: Array[StringName] = [&"normal", &"read_only"]
 const LETTER_COLOR_NAMES: Array[StringName] = [&"font_color", &"font_uneditable_color"]
@@ -17,21 +16,29 @@ const THEME_LETTER_EMPTY: Theme = preload("res://content/theme/mini_games/crypto
 
 @export var flow_container: FlowContainer
 @export var hint_label: Label
+@export var fix_errors_button: Button
+@export var validate_button: Button
 
 var _crypto_data: CryptoData
 var _puzzle_index: int = 0
 var _puzzle: CryptoPuzzle
 var _slots: Dictionary = {}
+var _incorrect_indices: Dictionary = {}
 var _hidden_box_style := StyleBoxEmpty.new()
 
 func initialize(crypto_data: CryptoData) -> void:
 	_crypto_data = crypto_data
+	fix_errors_button.pressed.connect(_correct_errors)
+	validate_button.pressed.connect(_on_validate_button_pressed)
 	_load_puzzle()
 
 func _load_puzzle() -> void:
 	for child in flow_container.get_children():
 		child.queue_free()
 	_slots.clear()
+	_incorrect_indices.clear()
+	_update_fix_errors_button()
+	validate_button.hide()
 	_puzzle = CryptoMasker.mask(_crypto_data.phrases[_puzzle_index], _crypto_data.hidden_letter_ratio)
 	hint_label.text = _puzzle.phrase_data.hint
 	var solution := _puzzle.solution()
@@ -51,11 +58,35 @@ func _load_puzzle() -> void:
 	if _slots.is_empty():
 		_advance()
 		return
+	_focus_first_slot()
+
+func _focus_first_slot() -> void:
 	var first_slot: LineEdit = _slots[_sorted_slot_indices()[0]]
 	if first_slot.is_inside_tree():
 		first_slot.grab_focus()
 	else:
 		first_slot.grab_focus.call_deferred()
+
+func _correct_errors() -> void:
+	var incorrect_indices := _incorrect_indices.keys()
+	incorrect_indices.sort()
+	for character_index in incorrect_indices:
+		var slot: LineEdit = _slots[character_index]
+		slot.text = ""
+		slot.modulate = NORMAL_COLOR
+		_refresh_slot_box(slot)
+	_incorrect_indices.clear()
+	_update_fix_errors_button()
+	if not incorrect_indices.is_empty():
+		_slots[incorrect_indices[0]].grab_focus()
+
+func _mark_slot_edited(character_index: int) -> void:
+	_slots[character_index].modulate = NORMAL_COLOR
+	_incorrect_indices.erase(character_index)
+	_update_fix_errors_button()
+
+func _update_fix_errors_button() -> void:
+	fix_errors_button.visible = not _incorrect_indices.is_empty()
 
 func _create_space() -> Control:
 	var spacer := Control.new()
@@ -124,7 +155,7 @@ func _show_slot_as_letter(slot: LineEdit) -> void:
 		slot.add_theme_stylebox_override(style_name, _hidden_box_style)
 
 func _on_slot_text_changed(new_text: String, character_index: int) -> void:
-	_set_slots_color(NORMAL_COLOR)
+	_mark_slot_edited(character_index)
 	if new_text != "":
 		_focus_next_slot(character_index)
 	_refresh_slot_box(_slots[character_index])
@@ -148,7 +179,7 @@ func _clear_previous_slot(character_index: int) -> void:
 		return
 	var previous_slot: LineEdit = _slots[indices[pos - 1]]
 	previous_slot.text = ""
-	_set_slots_color(NORMAL_COLOR)
+	_mark_slot_edited(indices[pos - 1])
 	previous_slot.grab_focus()
 
 func _focus_next_slot(character_index: int) -> void:
@@ -168,14 +199,27 @@ func _is_complete() -> bool:
 
 func _validate() -> void:
 	var solution := _puzzle.solution()
+	_incorrect_indices.clear()
 	for character_index in _slots:
-		if _slots[character_index].text.to_upper() != solution[character_index].to_upper():
-			_set_slots_color(INCORRECT_COLOR)
-			return
-	_set_slots_color(CORRECT_COLOR)
+		var slot: LineEdit = _slots[character_index]
+		if slot.text.to_upper() == solution[character_index].to_upper():
+			slot.modulate = CORRECT_COLOR
+		else:
+			slot.modulate = INCORRECT_COLOR
+			_incorrect_indices[character_index] = true
+	_update_fix_errors_button()
+	if not _incorrect_indices.is_empty():
+		return
 	for character_index in _slots:
 		_slots[character_index].editable = false
-	await get_tree().create_timer(REVEAL_DELAY).timeout
+	if _puzzle_index == _crypto_data.phrases.size() - 1:
+		_advance()
+		return
+	validate_button.show()
+	validate_button.grab_focus()
+
+func _on_validate_button_pressed() -> void:
+	validate_button.hide()
 	_advance()
 
 func _advance() -> void:
@@ -184,10 +228,6 @@ func _advance() -> void:
 		completed.emit()
 		return
 	_load_puzzle()
-
-func _set_slots_color(color: Color) -> void:
-	for character_index in _slots:
-		_slots[character_index].modulate = color
 
 func _sorted_slot_indices() -> Array:
 	var indices := _slots.keys()

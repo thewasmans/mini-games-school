@@ -17,6 +17,8 @@ func autofill() -> void:
 			await _wait(CHAR_INTERVAL)
 			if not _running():
 				return
+		if ui.validate_button.visible:
+			ui._on_validate_button_pressed()
 		var guard := 0
 		while _running() and ui._puzzle_index == current_index and guard < 600:
 			await ui.get_tree().process_frame
