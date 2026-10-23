@@ -66,4 +66,5 @@ correct_choice_index = 1
 
 [resource]
 script = ExtResource("2_dlgd8")
+title = "Les réactions chimiques"
 questions = Array[ExtResource("1_4n0eb")]([SubResource("Resource_xpgdm"), SubResource("Resource_r45oc"), SubResource("Resource_gui7b"), SubResource("Resource_qu4j7"), SubResource("Resource_5tat6"), SubResource("Resource_8qgvs"), SubResource("Resource_ocpjv"), SubResource("Resource_qoh14"), SubResource("Resource_6tjmj"), SubResource("Resource_aib4a"), SubResource("Resource_ilig2")])

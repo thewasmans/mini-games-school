@@ -10,6 +10,7 @@ const CURRENT_COLOR := Color(1.0, 0.8, 0.3)
 const HOVER_COLOR := Color(0.88, 0.94, 1.0)
 const INCORRECT_COLOR := Color(1.0, 0.5, 0.5)
 
+@export var grid_area: Control
 @export var grid_container: GridContainer
 @export var hint_label: Label
 @export var input: LineEdit
@@ -28,8 +29,20 @@ func initialize(crossword_data: CrosswordData) -> void:
 	var placements := crossword_data.build_placements()
 	_word_count = placements.size()
 	_render_grid(placements)
+	grid_area.resized.connect(_fit_grid_to_area)
+	grid_container.minimum_size_changed.connect(_fit_grid_to_area)
+	_fit_grid_to_area()
 	input.text_changed.connect(_on_word_input_changed)
 	input.text_submitted.connect(_on_word_input_submitted)
+
+func _fit_grid_to_area() -> void:
+	var grid_size := grid_container.get_combined_minimum_size()
+	if grid_size.x <= 0.0 or grid_size.y <= 0.0:
+		return
+	grid_container.set_anchors_and_offsets_preset(Control.PRESET_CENTER, Control.PRESET_MODE_MINSIZE)
+	var fit_scale := minf(1.0, minf(grid_area.size.x / grid_size.x, grid_area.size.y / grid_size.y))
+	grid_container.pivot_offset = grid_size / 2.0
+	grid_container.scale = Vector2.ONE * fit_scale
 
 func _clear_grid() -> void:
 	for child in grid_container.get_children():

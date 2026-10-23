@@ -37,5 +37,6 @@ text = "L'évolution se lit à travers les générations."
 
 [resource]
 script = ExtResource("2_rtgly")
+title = "L'évolution"
 hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_me2c2")]([SubResource("Resource_r1e1s"), SubResource("Resource_p7ec8"), SubResource("Resource_82wjv"), SubResource("Resource_qx1ep"), SubResource("Resource_ecicr"), SubResource("Resource_3xm0p"), SubResource("Resource_aphkc"), SubResource("Resource_om03n")])

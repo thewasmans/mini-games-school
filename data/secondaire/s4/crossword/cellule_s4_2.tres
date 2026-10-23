@@ -79,3 +79,4 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_y3jf8")
 clues = Array[ExtResource("1_uc345")]([SubResource("Resource_5yyf8"), SubResource("Resource_hs41t"), SubResource("Resource_m1o4u"), SubResource("Resource_q66j2"), SubResource("Resource_33bts"), SubResource("Resource_g3x4n"), SubResource("Resource_c7rik"), SubResource("Resource_o05p8"), SubResource("Resource_nneis"), SubResource("Resource_k15i4"), SubResource("Resource_6b2ou")])
+title = "La cellule"

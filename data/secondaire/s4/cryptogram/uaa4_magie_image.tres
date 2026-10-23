@@ -49,5 +49,6 @@ text = "La couleur d'un objet dépend de l'absorption et de la diffusion."
 
 [resource]
 script = ExtResource("2_e6hqy")
+title = "La magie de l'image"
 hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_apa3j")]([SubResource("Resource_wy0m1"), SubResource("Resource_uawy1"), SubResource("Resource_4rxxd"), SubResource("Resource_y65vy"), SubResource("Resource_fd5lt"), SubResource("Resource_fecry"), SubResource("Resource_73n0e"), SubResource("Resource_rciq2"), SubResource("Resource_a41bj"), SubResource("Resource_5mtje"), SubResource("Resource_sx4xs")])

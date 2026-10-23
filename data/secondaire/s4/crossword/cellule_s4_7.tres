@@ -77,3 +77,4 @@ grid_position = Vector2i(0, 14)
 [resource]
 script = ExtResource("2_tmw50")
 clues = Array[ExtResource("1_yjoos")]([SubResource("Resource_k14x8"), SubResource("Resource_ew866"), SubResource("Resource_g6vhy"), SubResource("Resource_1iml5"), SubResource("Resource_vb3e6"), SubResource("Resource_hrfba"), SubResource("Resource_6pyct"), SubResource("Resource_kdq7k"), SubResource("Resource_vf7ep"), SubResource("Resource_y12i1"), SubResource("Resource_fmw2a")])
+title = "La cellule"

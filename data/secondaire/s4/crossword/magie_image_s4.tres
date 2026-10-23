@@ -65,3 +65,4 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_egogl")
 clues = Array[ExtResource("1_ig6re")]([SubResource("Resource_pmj25"), SubResource("Resource_eg6ud"), SubResource("Resource_052hj"), SubResource("Resource_wojlx"), SubResource("Resource_h6w8s"), SubResource("Resource_hbk22"), SubResource("Resource_2r5du"), SubResource("Resource_0gu3q"), SubResource("Resource_6cdk4")])
+title = "La magie de l'image"

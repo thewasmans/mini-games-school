@@ -91,3 +91,4 @@ choices = Array[String](["Car elles survivent dans des conditions extrêmes.", "
 [resource]
 script = ExtResource("2_8458g")
 questions = Array[ExtResource("1_15jae")]([SubResource("Resource_t741m"), SubResource("Resource_8gi2u"), SubResource("Resource_11ug0"), SubResource("Resource_c8afq"), SubResource("Resource_tdpit"), SubResource("Resource_fkcnr"), SubResource("Resource_i288w"), SubResource("Resource_kny2o"), SubResource("Resource_ym50d"), SubResource("Resource_vpu0b"), SubResource("Resource_e6lu0"), SubResource("Resource_ps57j"), SubResource("Resource_76lbn"), SubResource("Resource_s30co"), SubResource("Resource_yu32a")])
+title = "La cellule"

@@ -28,7 +28,8 @@ func initialize(_level_index: int, _level_data: LevelData, game_manager: GameMan
 	if mini_game_prefab == null:
 		mini_game_label.text = "Level %d - %s" % [level_index + 1, mini_game.get_script().get_global_name()]
 		return
-	mini_game_label.hide()
+	mini_game_label.text = mini_game.title
+	mini_game_label.visible = not mini_game.title.is_empty()
 	var mini_game_ui := mini_game_prefab.instantiate()
 	mini_game_container.add_child(mini_game_ui)
 	mini_game_ui.completed.connect(_on_mini_game_completed)

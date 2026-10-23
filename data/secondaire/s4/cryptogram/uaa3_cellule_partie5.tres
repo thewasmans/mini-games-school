@@ -37,5 +37,6 @@ text = "La méiose sépare les allèles."
 
 [resource]
 script = ExtResource("2_xr467")
+title = "La cellule"
 hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_yqpub")]([SubResource("Resource_yuqp2"), SubResource("Resource_wp7rd"), SubResource("Resource_euadl"), SubResource("Resource_xb807"), SubResource("Resource_7xs2f"), SubResource("Resource_nkgh0"), SubResource("Resource_sbpih"), SubResource("Resource_tumqa")])
