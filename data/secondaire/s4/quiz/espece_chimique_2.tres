@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://dpfevuhminh7d"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_nli63"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_k6b0d"]
+
+[sub_resource type="Resource" id="Resource_0as10"]
+script = ExtResource("1_nli63")
+question = "Qu'est-ce que la conductibilité ?"
+choices = Array[String](["La capacité d'une espèce à conduire le courant..", "La capacité d'une espèce à absorber la chaleur..", "La transformation d'un métal en un non métal..", "La transformation d'un non métal en un métal.."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_w1ebf"]
+script = ExtResource("1_nli63")
+question = "Qu'est-ce qu'un électrolyte ?"
+choices = Array[String](["Un corps qui se transforme en ions libres.", "Un proton.", "Un électron.", "De l'antimatière."])
+
+[sub_resource type="Resource" id="Resource_osv5m"]
+script = ExtResource("1_nli63")
+question = "Que représente le Na ?"
+choices = Array[String](["Le sodium.", "Le magnésium.", "Le calcium.", "Le chlore."])
+
+[sub_resource type="Resource" id="Resource_1it20"]
+script = ExtResource("1_nli63")
+question = "Que représente le Mg ?"
+choices = Array[String](["Le sodium.", "Le magnésium.", "Le calcium.", "Le chlore."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_cfuxp"]
+script = ExtResource("1_nli63")
+question = "Que représente le Ca ?"
+choices = Array[String](["Le sodium.", "Le magnésium.", "Le calcium.", "Le chlore."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_angf6"]
+script = ExtResource("1_nli63")
+question = "Que représente le Cl ?"
+choices = Array[String](["Le sodium.", "Le magnésium.", "Le calcium.", "Le chlore."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_35eh2"]
+script = ExtResource("1_nli63")
+question = "Comment se nomme un ion formé à partir d'un seul atome ?"
+choices = Array[String](["Polyatomique.", "Monoatomique.", "Monosaccharide.", "Polysaccharide."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_k6b0d")
+questions = Array[ExtResource("1_nli63")]([SubResource("Resource_0as10"), SubResource("Resource_w1ebf"), SubResource("Resource_osv5m"), SubResource("Resource_1it20"), SubResource("Resource_cfuxp"), SubResource("Resource_angf6"), SubResource("Resource_35eh2")])

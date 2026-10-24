@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d3mg8c4udidsw" path="res://scripts/ui/menu_levels_ui.gd" id="1_lc1qx"]
 [ext_resource type="Texture2D" uid="uid://c3upgh7dpfrhf" path="res://content/sprites/ui/ui_background.png" id="2_o0cqt"]
-[ext_resource type="Texture2D" uid="uid://bssxvehr8hskc" path="res://content/sprites/ui/icon_return.png" id="3_2u3hs"]
+[ext_resource type="Texture2D" uid="uid://bssxvehr8hskc" path="res://content/sprites/ui/ui_icon_return.png" id="3_2u3hs"]
 
 [node name="MenuLevelsUI" type="Control" unique_id=502033001 node_paths=PackedStringArray("scrol_container", "grid_container")]
 layout_mode = 3
@@ -26,7 +26,7 @@ texture = ExtResource("2_o0cqt")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="Layout" type="VBoxContainer" parent="."]
+[node name="Layout" type="VBoxContainer" parent="." unique_id=1158995569]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -34,11 +34,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TopBar" type="Control" parent="Layout"]
+[node name="TopBar" type="Control" parent="Layout" unique_id=1314131821]
 custom_minimum_size = Vector2(0, 140)
 layout_mode = 2
 
-[node name="BackButton" type="Button" parent="Layout/TopBar"]
+[node name="BackButton" type="Button" parent="Layout/TopBar" unique_id=342913528]
 layout_mode = 0
 offset_right = 214.0
 offset_bottom = 194.0
@@ -47,19 +47,22 @@ theme_override_font_sizes/font_size = 39
 icon = ExtResource("3_2u3hs")
 icon_alignment = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Layout"]
-custom_minimum_size = Vector2(386, 0)
+[node name="ScrollContainer" type="ScrollContainer" parent="Layout" unique_id=2033932151]
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
-horizontal_scroll_mode = 0
 
-[node name="GridContainer" type="GridContainer" parent="Layout/ScrollContainer"]
+[node name="GridContainer" type="GridContainer" parent="Layout/ScrollContainer" unique_id=982214691]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/h_separation = 50
 theme_override_constants/v_separation = 50
-columns = 5
+columns = 3
+
+[node name="BottomSpace" type="Control" parent="Layout" unique_id=1229535586]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
 
 [connection signal="pressed" from="Layout/TopBar/BackButton" to="." method="_on_back_button_pressed"]

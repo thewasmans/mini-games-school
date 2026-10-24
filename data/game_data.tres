@@ -2,14 +2,31 @@
 
 [ext_resource type="Script" uid="uid://cp2inhinnjjop" path="res://scripts/data/game_data.gd" id="1_urpql"]
 [ext_resource type="Script" uid="uid://br5q0sg4b052d" path="res://scripts/data/level_data.gd" id="2_r34r7"]
-[ext_resource type="Script" uid="uid://dqstlvldata01" path="res://scripts/data/study_level_data.gd" id="7_stdylvl"]
 
-[sub_resource type="Resource" id="StudyLevel_primaire"]
-script = ExtResource("7_stdylvl")
-name = "Primaire"
+[ext_resource type="Script" uid="uid://dqstlvldata01" path="res://scripts/data/study_level_data.gd" id="7_stdylvl"]
+[ext_resource type="Resource" uid="uid://ccvhq4tbhmbgn" path="res://data/secondaire/s4/crossword/cellule_s4.tres" id="7_xbtbc"]
+[ext_resource type="Resource" uid="uid://b8001eoh6safi" path="res://data/secondaire/s4/crossword/cellule_s4_2.tres" id="8_028tp"]
+[ext_resource type="Resource" uid="uid://dtq3lxbkhvlki" path="res://data/secondaire/s4/crossword/cellule_s4_3.tres" id="9_t72jb"]
+[ext_resource type="Resource" uid="uid://tin0bplqyr66" path="res://data/secondaire/s4/crossword/cellule_s4_4.tres" id="10_4dg1r"]
+[ext_resource type="Resource" uid="uid://bp1cmu6llunwa" path="res://data/secondaire/s4/crossword/cellule_s4_5.tres" id="11_1qin8"]
+[ext_resource type="Resource" uid="uid://cweaarkge7cqg" path="res://data/secondaire/s4/crossword/cellule_s4_6.tres" id="12_5vau3"]
+[ext_resource type="Resource" uid="uid://dlpg6kejpns1p" path="res://data/secondaire/s4/crossword/cellule_s4_7.tres" id="13_nx75h"]
+[ext_resource type="Resource" uid="uid://druqctxgvgv5q" path="res://data/secondaire/s4/crossword/cellule_s4_8.tres" id="14_y2ecj"]
+[ext_resource type="Resource" uid="uid://c1sa507jifqdy" path="res://data/secondaire/s4/crossword/cellule_s4_9.tres" id="15_hk146"]
+[ext_resource type="Resource" uid="uid://cp8w8ropl2qsn" path="res://data/secondaire/s4/crossword/cellule_s4_10.tres" id="16_ct2cd"]
+[ext_resource type="Resource" uid="uid://biiydxp66gpbu" path="res://data/secondaire/s4/crossword/espece_chimique_s4.tres" id="17_pg0xh"]
+[ext_resource type="Resource" uid="uid://dyr3ydbfxykyr" path="res://data/secondaire/s4/crossword/espece_chimique_s4_2.tres" id="18_sudy3"]
+[ext_resource type="Resource" uid="uid://c5ccqx3lp5wpk" path="res://data/secondaire/s4/crossword/evolution_s4.tres" id="19_d2i17"]
+[ext_resource type="Resource" uid="uid://cwpom3qnxpv5d" path="res://data/secondaire/s4/crossword/evolution_s4_2.tres" id="20_wjy3c"]
+[ext_resource type="Resource" uid="uid://crngcktovljm7" path="res://data/secondaire/s4/crossword/evolution_s4_3.tres" id="21_o0qo7"]
+[ext_resource type="Resource" uid="uid://cjas5npd6mpqq" path="res://data/secondaire/s4/crossword/magie_image_s4.tres" id="22_hxihq"]
+[ext_resource type="Resource" uid="uid://io7c7grok1t5" path="res://data/secondaire/s4/crossword/magie_image_s4_2.tres" id="23_wmfrq"]
+[ext_resource type="Resource" uid="uid://bx5qih0cg10cj" path="res://data/secondaire/s4/crossword/travail_s4.tres" id="24_x34ux"]
+
+develop
 metadata/_custom_type_script = "uid://dqstlvldata01"
 
 [resource]
 script = ExtResource("1_urpql")
-study_levels = Array[ExtResource("7_stdylvl")]([SubResource("StudyLevel_primaire")])
+study_levels = Array[ExtResource("7_stdylvl")]([SubResource("Resource_uc345"), SubResource("StudyLevel_primaire"), SubResource("Resource_y3jf8")])
 metadata/_custom_type_script = "uid://cp2inhinnjjop"

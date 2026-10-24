@@ -1,0 +1,74 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dyr3ydbfxykyr"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_i7hnv"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_ed22p"]
+
+[sub_resource type="Resource" id="Resource_acmnm"]
+script = ExtResource("1_i7hnv")
+word = "SPECTATEUR"
+hint = "Se dit d'un ion qui n'est pas impliqué dans la réaction de précipitation."
+grid_position = Vector2i(18, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_5cx4k"]
+script = ExtResource("1_i7hnv")
+word = "AQUEUSE"
+hint = "Se dit d'une solution contenant de l'eau."
+grid_position = Vector2i(0, 4)
+
+[sub_resource type="Resource" id="Resource_pgtcs"]
+script = ExtResource("1_i7hnv")
+word = "ACTEUR"
+hint = "Se dit d'un ion impliqué dans la réaction de précipitation."
+grid_position = Vector2i(13, 14)
+
+[sub_resource type="Resource" id="Resource_mb3bo"]
+script = ExtResource("1_i7hnv")
+word = "CONDUCTIBILITE"
+hint = "Propriété qu'ont les corps de transmettre la chaleur, l'électricité, autre terme que la conductivité."
+grid_position = Vector2i(6, 5)
+
+[sub_resource type="Resource" id="Resource_cw3vg"]
+script = ExtResource("1_i7hnv")
+word = "PRECIPITATION"
+hint = "Réaction chimique durant laquelle un produit très peu soluble est formé."
+grid_position = Vector2i(6, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_tmodb"]
+script = ExtResource("1_i7hnv")
+word = "ELECTROLYTE"
+hint = "Substance chimique capable de transporter ou de conduire une charge électrique."
+grid_position = Vector2i(11, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_xgw6b"]
+script = ExtResource("1_i7hnv")
+word = "ELECTROLYSE"
+hint = "Procédé par lequel on effectue la décomposition de l'eau en dihydrogène et dioxygène."
+grid_position = Vector2i(16, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_yv57g"]
+script = ExtResource("1_i7hnv")
+word = "SOLUBILITE"
+hint = "Quantité maximale de soluté qu'on peut dissoudre dans un solvant."
+grid_position = Vector2i(13, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_644p5"]
+script = ExtResource("1_i7hnv")
+word = "IONIQUE"
+hint = "Se dit d'une réaction entre les ions acteurs, type de liaison chimique forte."
+grid_position = Vector2i(3, 12)
+
+[sub_resource type="Resource" id="Resource_0d8le"]
+script = ExtResource("1_i7hnv")
+word = "TERNAIRE"
+hint = "Corps composé de trois éléments chimiques, comme le NaOH."
+grid_position = Vector2i(8, 2)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_ed22p")
+clues = Array[ExtResource("1_i7hnv")]([SubResource("Resource_acmnm"), SubResource("Resource_5cx4k"), SubResource("Resource_pgtcs"), SubResource("Resource_mb3bo"), SubResource("Resource_cw3vg"), SubResource("Resource_tmodb"), SubResource("Resource_xgw6b"), SubResource("Resource_yv57g"), SubResource("Resource_644p5"), SubResource("Resource_0d8le")])

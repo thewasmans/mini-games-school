@@ -1,0 +1,137 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://cfte5b370lchc"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_fxcfb"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_trlsp"]
+
+[sub_resource type="Resource" id="Resource_c7fa8"]
+script = ExtResource("1_fxcfb")
+question = "Quel théorème permet de déterminer la taille de l’image ?"
+choices = Array[String](["Thalès.", "Pythagore.", "Archimède.", "Hercule."])
+
+[sub_resource type="Resource" id="Resource_pw0f0"]
+script = ExtResource("1_fxcfb")
+question = "Quelle est la vitesse de la lumière dans le vide ?"
+choices = Array[String](["300.000 km/s.", "340 m/s.", "1500 m/s.", "zéro."])
+
+[sub_resource type="Resource" id="Resource_r8py4"]
+script = ExtResource("1_fxcfb")
+question = "Quelle est la vitesse du son dans l'air ?"
+choices = Array[String](["300.000 km/s.", "340 m/s.", "1500 m/s.", "zéro."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_57pra"]
+script = ExtResource("1_fxcfb")
+question = "Quelle est la vitesse du son dans l'eau ?"
+choices = Array[String](["300.000 km/s.", "340 m/s.", "1500 m/s.", "zéro."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_lu7ow"]
+script = ExtResource("1_fxcfb")
+question = "Quelle est la vitesse du son dans le vide ?"
+choices = Array[String](["300.000 km/s.", "340 m/s.", "1500 m/s.", "zéro."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_ve3uc"]
+script = ExtResource("1_fxcfb")
+question = "Que représente le laser hélium ?"
+choices = Array[String](["Une source polychromatique.", "Une source monochromatique.", "Un objet éclairé.", "Un objet noir."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_82xyp"]
+script = ExtResource("1_fxcfb")
+question = "Que représente la lumière blanche ?"
+choices = Array[String](["Une source polychromatique.", "Une source monochromatique.", "Un objet éclairé.", "Un objet noir."])
+
+[sub_resource type="Resource" id="Resource_wj6lc"]
+script = ExtResource("1_fxcfb")
+question = "De quoi est composée la lumière blanche ?"
+choices = Array[String](["Des couleurs de l'Arc-en-ciel.", "Du bleu et du rouge.", "Du noir et du vert.", "Du bleu et du vert."])
+
+[sub_resource type="Resource" id="Resource_w57bp"]
+script = ExtResource("1_fxcfb")
+question = "Comment Newton a-t-il découvert la composition de la lumière blanche ?"
+choices = Array[String](["Grâce à un télescope.", "Grâce à un microscope.", "Grâce à un prisme.", "Grâce à une loupe."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_xuli0"]
+script = ExtResource("1_fxcfb")
+question = "Quelle est l'unité de mesure de l'éclairement ?"
+choices = Array[String](["Le watt.", "Le lumen.", "La seconde.", "Le joule."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_v2sb4"]
+script = ExtResource("1_fxcfb")
+question = "On dit qu'une image est réelle si..."
+choices = Array[String](["Elle est observée uniquement à travers un appareil optique.", "Elle se voit sur un écran ou un mur.", "Elle se voit uniquement par une loupe.", "Elle se voit uniquement par un microscope."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_440po"]
+script = ExtResource("1_fxcfb")
+question = "On dit qu'une image est virtuelle si..."
+choices = Array[String](["Elle est observée uniquement à travers un appareil optique.", "Elle se voit sur un écran ou un mur.", "Elle se voit uniquement par une loupe.", "Elle se voit uniquement par un microscope."])
+
+[sub_resource type="Resource" id="Resource_ucxw7"]
+script = ExtResource("1_fxcfb")
+question = "Qu'est-ce qu'un dioptre ?"
+choices = Array[String](["Une surface séparant deux milieux transparents.", "La surface d'un lac.", "Une unité de mesure de la vergence des lentilles.", "Toutes ces réponses."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_lxeax"]
+script = ExtResource("1_fxcfb")
+question = "Comment se nomme la capacité de réfracter la lumière ?"
+choices = Array[String](["La divergence.", "La réfringence.", "La circonstance.", "La distance focale."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_dm857"]
+script = ExtResource("1_fxcfb")
+question = "Quel est le rôle de la lentille convergente ?"
+choices = Array[String](["Orienter les rayons lumineux vers un même point.", "Séparer les rayons lumineux à partir d'un point.", "Détruire les rayons lumineux.", "Couper les rayons lumineux."])
+
+[sub_resource type="Resource" id="Resource_312r1"]
+script = ExtResource("1_fxcfb")
+question = "Quel est le rôle de la lentille divergente ?"
+choices = Array[String](["Orienter les rayons lumineux vers un même point.", "Séparer les rayons lumineux à partir d'un point.", "Détruire les rayons lumineux.", "Couper les rayons lumineux."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_v65rj"]
+script = ExtResource("1_fxcfb")
+question = "Qui a besoin de lentilles convergentes ?"
+choices = Array[String](["Le myope.", "L'hypermétrope.", "Pour la cataracte.", "Pour le glaucome."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_wuxtm"]
+script = ExtResource("1_fxcfb")
+question = "Qui a besoin de lentilles divergentes ?"
+choices = Array[String](["Le myope.", "L'hypermétrope.", "Pour la cataracte.", "Pour le glaucome."])
+
+[sub_resource type="Resource" id="Resource_rsn6d"]
+script = ExtResource("1_fxcfb")
+question = "Qu'est-ce que le foyer objet ?"
+choices = Array[String](["Le point de départ des rayons.", "Le point d'arrivée des rayons.", "La distance qui sépare le centre de la lentille du foyer image.", "La distance qui sépare les deux foyers."])
+
+[sub_resource type="Resource" id="Resource_met7s"]
+script = ExtResource("1_fxcfb")
+question = "Qu'est-ce que le foyer image ?"
+choices = Array[String](["Le point de départ des rayons.", "Le point d'arrivée des rayons.", "La distance qui sépare le centre de la lentille du foyer image.", "La distance qui sépare les deux foyers."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_6cv0g"]
+script = ExtResource("1_fxcfb")
+question = "Qu'est-ce que la distance focale ?"
+choices = Array[String](["Le point de départ des rayons.", "Le point d'arrivée des rayons.", "La distance qui sépare le centre de la lentille du foyer image.", "La distance qui sépare les deux foyers."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_52usp"]
+script = ExtResource("1_fxcfb")
+question = "Comment se nomme la capacité d'une lentille à faire dévier les rayons lumineux ?"
+choices = Array[String](["La divergence.", "La réfringence.", "La vergence.", "La distance focale."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_k5m07"]
+script = ExtResource("1_fxcfb")
+question = "Quel est le rôle des lentilles ?"
+choices = Array[String](["Focaliser correctement la lumière sur la rétine.", "Modifier les propriétés de la lumière.", "Changer le spectre de la lumière.", "Changer la taille de la rétine."])
+
+[resource]
+script = ExtResource("2_trlsp")
+questions = Array[ExtResource("1_fxcfb")]([SubResource("Resource_c7fa8"), SubResource("Resource_pw0f0"), SubResource("Resource_r8py4"), SubResource("Resource_57pra"), SubResource("Resource_lu7ow"), SubResource("Resource_ve3uc"), SubResource("Resource_82xyp"), SubResource("Resource_wj6lc"), SubResource("Resource_w57bp"), SubResource("Resource_xuli0"), SubResource("Resource_v2sb4"), SubResource("Resource_440po"), SubResource("Resource_ucxw7"), SubResource("Resource_lxeax"), SubResource("Resource_dm857"), SubResource("Resource_312r1"), SubResource("Resource_v65rj"), SubResource("Resource_wuxtm"), SubResource("Resource_rsn6d"), SubResource("Resource_met7s"), SubResource("Resource_6cv0g"), SubResource("Resource_52usp"), SubResource("Resource_k5m07")])

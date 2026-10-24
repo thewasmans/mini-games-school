@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c3upgh7dpfrhf" path="res://content/sprites/ui/ui_background.png" id="3_yoao0"]
 [ext_resource type="PackedScene" uid="uid://bmemouiscn012" path="res://content/prefabs/ui/mini_games/memo_ui.tscn" id="4_memo"]
 [ext_resource type="PackedScene" uid="uid://ccryptuiscn12" path="res://content/prefabs/ui/mini_games/crypto_ui.tscn" id="5_crypto"]
-[ext_resource type="Texture2D" uid="uid://bssxvehr8hskc" path="res://content/sprites/ui/icon_return.png" id="6_back"]
+[ext_resource type="Texture2D" uid="uid://bssxvehr8hskc" path="res://content/sprites/ui/ui_icon_return.png" id="6_back"]
 
 [node name="Level" type="Control" unique_id=1301094388 node_paths=PackedStringArray("mini_game_label", "mini_game_container", "validate_button", "back_button")]
 layout_mode = 3

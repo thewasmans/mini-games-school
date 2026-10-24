@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://c2rhhybaibiln"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_f8mft"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_no3qh"]
+
+[sub_resource type="Resource" id="Resource_rrtft"]
+script = ExtResource("1_f8mft")
+question = "Combien de brins possèdent l’ADN ?"
+choices = Array[String](["6.", "2.", "8.", "4."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_nmawo"]
+script = ExtResource("1_f8mft")
+question = "Combien l’Homme a-t-il de gènes ?"
+choices = Array[String](["220000.", "364.", "21000.", "1292."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_x2dwi"]
+script = ExtResource("1_f8mft")
+question = "Qu’est-ce qu’une mutation ?"
+choices = Array[String](["Une maladie.", "Une modification génétique.", "Un problème génétique.", "Une conséquence héréditaire."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_qntnp"]
+script = ExtResource("1_f8mft")
+question = "Qu’est-ce que l’apoptose ?"
+choices = Array[String](["La naissance d’une cellule.", "La mort programmée d’une cellule.", "Le même que la nécrose.", "La division de deux cellules."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ypxgg"]
+script = ExtResource("1_f8mft")
+question = "Quels sont les organites spécifiques à la cellule végétale ?"
+choices = Array[String](["Paroi cellulaire-Vacuole-Chloroplaste.", "Paroi cellulaire-Mitochondrie-Chloroplaste.", "Lysosome-Vacuole-Chloroplaste.", "Paroi cellulaire-Vacuole-Ribosome."])
+
+[sub_resource type="Resource" id="Resource_3g7m8"]
+script = ExtResource("1_f8mft")
+question = "De quoi est composé le gène ?"
+choices = Array[String](["Cellule.", "Organe.", "ADN.", "Tissu."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_wemi6"]
+script = ExtResource("1_f8mft")
+question = "Que se passe-t-il lors de la métaphase ?"
+choices = Array[String](["Les chromosomes s’alignent sur une plaque théorique.", "Les ribosomes s’effacent.", "Le noyau apparait.", "Deux cellules se forment."])
+
+[sub_resource type="Resource" id="Resource_85jir"]
+script = ExtResource("1_f8mft")
+question = "Qu’est-ce que l’ADN ?"
+choices = Array[String](["Une cellule.", "Une macromolécule.", "Un gène.", "Un chromosome."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ebd18"]
+script = ExtResource("1_f8mft")
+question = "Qu’est-ce qu’une bactérie ?"
+choices = Array[String](["Un virus.", "Une maladie.", "Un être vivant.", "Une protéine."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_j5ehx"]
+script = ExtResource("1_f8mft")
+question = "Quel est le rôle de la division cellulaire ?"
+choices = Array[String](["La reproduction d'une bactérie.", "La formation de nouvelles cellules.", "La mort d'une cellule.", "La mort de plusieurs cellules."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_g3upj"]
+script = ExtResource("1_f8mft")
+question = "Quel est le mode de réplication de l'ADN ?"
+choices = Array[String](["Semi-conservatif.", "Conservatif.", "Replicatif.", "Indépendant."])
+
+[resource]
+script = ExtResource("2_no3qh")
+questions = Array[ExtResource("1_f8mft")]([SubResource("Resource_rrtft"), SubResource("Resource_nmawo"), SubResource("Resource_x2dwi"), SubResource("Resource_qntnp"), SubResource("Resource_ypxgg"), SubResource("Resource_3g7m8"), SubResource("Resource_wemi6"), SubResource("Resource_85jir"), SubResource("Resource_ebd18"), SubResource("Resource_j5ehx"), SubResource("Resource_g3upj")])
