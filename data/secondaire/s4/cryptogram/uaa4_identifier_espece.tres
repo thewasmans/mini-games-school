@@ -49,7 +49,7 @@ text = "Le calcul de masse de précipité s'appuie sur la stœchiométrie."
 
 [resource]
 script = ExtResource("2_ve6dp")
-school_year = "S4"
-title = "Les espèces chimiques"
 hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_sy1hf")]([SubResource("Resource_n3c54"), SubResource("Resource_lhba5"), SubResource("Resource_snh1q"), SubResource("Resource_wgdrf"), SubResource("Resource_2d0er"), SubResource("Resource_uiths"), SubResource("Resource_qm3vj"), SubResource("Resource_x48u7"), SubResource("Resource_buptq"), SubResource("Resource_glkfe"), SubResource("Resource_20kku")])
+school_year = "S4"
+title = "Les espèces chimiques"

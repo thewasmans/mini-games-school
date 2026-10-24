@@ -37,7 +37,7 @@ text = "La concentration molaire exprime le nombre de moles par litre."
 
 [resource]
 script = ExtResource("2_51vjq")
-school_year = "S4"
-title = "Les réactions chimiques"
 hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_ts1qm")]([SubResource("Resource_coloa"), SubResource("Resource_qclyh"), SubResource("Resource_fn1lp"), SubResource("Resource_ge0mt"), SubResource("Resource_w72ih"), SubResource("Resource_icxod"), SubResource("Resource_hx2i8"), SubResource("Resource_4221f")])
+school_year = "S4"
+title = "Les réactions chimiques"

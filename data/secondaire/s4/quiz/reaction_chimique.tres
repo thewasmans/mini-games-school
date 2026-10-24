@@ -78,6 +78,6 @@ choices = Array[String](["Un atome chargé négativement.", "Un atome chargé po
 
 [resource]
 script = ExtResource("2_rxojx")
+questions = Array[ExtResource("1_pq0nx")]([SubResource("Resource_p46kd"), SubResource("Resource_mietl"), SubResource("Resource_j2yys"), SubResource("Resource_ef4il"), SubResource("Resource_aah71"), SubResource("Resource_6fbe4"), SubResource("Resource_x6uh0"), SubResource("Resource_0jlhk"), SubResource("Resource_7774v"), SubResource("Resource_yp4mu"), SubResource("Resource_ap2u7"), SubResource("Resource_ibjpj"), SubResource("Resource_j7bui")])
 school_year = "S4"
 title = "Les réactions chimiques"
-questions = Array[ExtResource("1_pq0nx")]([SubResource("Resource_p46kd"), SubResource("Resource_mietl"), SubResource("Resource_j2yys"), SubResource("Resource_ef4il"), SubResource("Resource_aah71"), SubResource("Resource_6fbe4"), SubResource("Resource_x6uh0"), SubResource("Resource_0jlhk"), SubResource("Resource_7774v"), SubResource("Resource_yp4mu"), SubResource("Resource_ap2u7"), SubResource("Resource_ibjpj"), SubResource("Resource_j7bui")])

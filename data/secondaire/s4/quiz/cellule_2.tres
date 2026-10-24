@@ -87,6 +87,6 @@ correct_choice_index = 1
 
 [resource]
 script = ExtResource("2_bsccl")
+questions = Array[ExtResource("1_h08qq")]([SubResource("Resource_kejpy"), SubResource("Resource_2gh12"), SubResource("Resource_hvlv2"), SubResource("Resource_gynf1"), SubResource("Resource_t7qyx"), SubResource("Resource_1bxfn"), SubResource("Resource_48kjb"), SubResource("Resource_3jnv3"), SubResource("Resource_241ju"), SubResource("Resource_j6kgr"), SubResource("Resource_y80wn"), SubResource("Resource_8teu6"), SubResource("Resource_et8ol"), SubResource("Resource_lcwnb")])
 school_year = "S4"
 title = "La cellule"
-questions = Array[ExtResource("1_h08qq")]([SubResource("Resource_kejpy"), SubResource("Resource_2gh12"), SubResource("Resource_hvlv2"), SubResource("Resource_gynf1"), SubResource("Resource_t7qyx"), SubResource("Resource_1bxfn"), SubResource("Resource_48kjb"), SubResource("Resource_3jnv3"), SubResource("Resource_241ju"), SubResource("Resource_j6kgr"), SubResource("Resource_y80wn"), SubResource("Resource_8teu6"), SubResource("Resource_et8ol"), SubResource("Resource_lcwnb")])
