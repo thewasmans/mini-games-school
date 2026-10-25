@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://o3w2v6kauu6t"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_2hadp"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_62utf"]
+
+[sub_resource type="Resource" id="Resource_qnlco"]
+script = ExtResource("1_2hadp")
+text = "La sélection naturelle favorise les individus les mieux adaptés."
+
+[sub_resource type="Resource" id="Resource_n56wl"]
+script = ExtResource("1_2hadp")
+text = "La dérive génétique modifie la fréquence des allèles par hasard."
+
+[sub_resource type="Resource" id="Resource_llgpm"]
+script = ExtResource("1_2hadp")
+text = "La spéciation engendre de nouvelles espèces vivantes."
+
+[sub_resource type="Resource" id="Resource_puff2"]
+script = ExtResource("1_2hadp")
+text = "Les populations évoluent au fil des générations."
+
+[sub_resource type="Resource" id="Resource_g6bsf"]
+script = ExtResource("1_2hadp")
+text = "L'isolement reproducteur sépare les populations d'une espèce."
+
+[sub_resource type="Resource" id="Resource_f3d6m"]
+script = ExtResource("1_2hadp")
+text = "L'adaptation est le fruit de pressions environnementales."
+
+[sub_resource type="Resource" id="Resource_0w6bt"]
+script = ExtResource("1_2hadp")
+text = "La diversité des phénotypes assure la survie de l'espèce."
+
+[sub_resource type="Resource" id="Resource_ac1v4"]
+script = ExtResource("1_2hadp")
+text = "Les mutations aléatoires alimentent la variabilité évolutive."
+
+[resource]
+script = ExtResource("2_62utf")
+phrases = Array[ExtResource("1_2hadp")]([SubResource("Resource_qnlco"), SubResource("Resource_n56wl"), SubResource("Resource_llgpm"), SubResource("Resource_puff2"), SubResource("Resource_g6bsf"), SubResource("Resource_f3d6m"), SubResource("Resource_0w6bt"), SubResource("Resource_ac1v4")])

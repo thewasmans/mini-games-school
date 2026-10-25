@@ -1,0 +1,72 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://ctudcm4yd08vu"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_xwc00"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_hwd78"]
+
+[sub_resource type="Resource" id="Resource_gg6yp"]
+script = ExtResource("1_xwc00")
+word = "VECTEUR"
+hint = "Objet mathématique qui a une grandeur, une direction et un sens, représenté par une flèche."
+grid_position = Vector2i(13, 12)
+
+[sub_resource type="Resource" id="Resource_skvgj"]
+script = ExtResource("1_xwc00")
+word = "MRU"
+hint = "Mouvement en ligne droite (rectiligne), à vitesse constante (uniforme)."
+grid_position = Vector2i(9, 18)
+
+[sub_resource type="Resource" id="Resource_hq744"]
+script = ExtResource("1_xwc00")
+word = "TANGENTE"
+hint = "Droite qui touche une ligne, une surface en un seul point."
+grid_position = Vector2i(3, 13)
+
+[sub_resource type="Resource" id="Resource_uqlep"]
+script = ExtResource("1_xwc00")
+word = "ACCELERATION"
+hint = "Variation de la vitesse au cours du temps."
+grid_position = Vector2i(0, 16)
+
+[sub_resource type="Resource" id="Resource_mad2h"]
+script = ExtResource("1_xwc00")
+word = "CHUTE"
+hint = "Mouvement, dans le vide, d'un objet uniquement soumis à la pesanteur."
+grid_position = Vector2i(10, 14)
+
+[sub_resource type="Resource" id="Resource_82o7d"]
+script = ExtResource("1_xwc00")
+word = "CENTRIPETE"
+hint = "Force agissant vers le centre d'un cercle."
+grid_position = Vector2i(7, 9)
+
+[sub_resource type="Resource" id="Resource_v17fa"]
+script = ExtResource("1_xwc00")
+word = "REFERENTIEL"
+hint = "Objet de référence fixe auquel on attache un système d’axes et par rapport auquel on étudie un mouvement."
+grid_position = Vector2i(8, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_d10c5"]
+script = ExtResource("1_xwc00")
+word = "TRAJECTOIRE"
+hint = "Ensemble des points successivement occupés par le mobile au cours de son mouvement."
+grid_position = Vector2i(10, 9)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_v6xoy"]
+script = ExtResource("1_xwc00")
+word = "VITESSE"
+hint = "Rapport entre la distance parcourue par unité de temps."
+grid_position = Vector2i(13, 12)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_g3etw"]
+script = ExtResource("1_xwc00")
+word = "MRUA"
+hint = "Mouvement en ligne droite à accélération constante."
+grid_position = Vector2i(4, 10)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_hwd78")
+clues = Array[ExtResource("1_xwc00")]([SubResource("Resource_gg6yp"), SubResource("Resource_skvgj"), SubResource("Resource_hq744"), SubResource("Resource_uqlep"), SubResource("Resource_mad2h"), SubResource("Resource_82o7d"), SubResource("Resource_v17fa"), SubResource("Resource_d10c5"), SubResource("Resource_v6xoy"), SubResource("Resource_g3etw")])

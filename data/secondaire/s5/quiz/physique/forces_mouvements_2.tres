@@ -1,0 +1,100 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bw5p653qqbscm"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_js5wo"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_nrjtf"]
+
+[sub_resource type="Resource" id="Resource_g1mnk"]
+script = ExtResource("1_js5wo")
+question = "Qu’est-ce qu’une force en physique ?"
+choices = Array[String](["C’est une grandeur scalaire qui mesure la vitesse.", "C’est une action capable de modifier le mouvement ou la forme d’un objet.", "C’est une énergie accumulée par un objet.", "C’est le poids d’un objet en kilogrammes."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_mcobe"]
+script = ExtResource("1_js5wo")
+question = "Quelle est l’unité de mesure internationale d’une force ?"
+choices = Array[String](["Le kilogramme.", "Le joule.", "Le newton.", "Le mètre par seconde."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_fvtfq"]
+script = ExtResource("1_js5wo")
+question = "Que stipule la première loi de Newton (principe d’inertie) ?"
+choices = Array[String](["Un objet au repos reste au repos si aucune force ne s’exerce sur lui.", "La force est égale à la masse multipliée par l’accélération.", "L’action est toujours égale à la réaction.", "L’accélération est proportionnelle à la force."])
+
+[sub_resource type="Resource" id="Resource_el48q"]
+script = ExtResource("1_js5wo")
+question = "Quelle est la formule de la deuxième loi de Newton (principe fondamental de la dynamique) ?"
+choices = Array[String](["La force est égale à la masse divisée par l’accélération.", "La force est égale à la masse multipliée par l’accélération.", "La force est égale à la masse au carré.", "La force est égale à l’accélération divisée par la masse."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_02mwr"]
+script = ExtResource("1_js5wo")
+question = "Que stipule la troisième loi de Newton (principe des actions réciproques) ?"
+choices = Array[String](["Les forces de frottement sont toujours nulles.", "La somme des forces est toujours égale à zéro.", "Pour chaque action, il existe une réaction égale et opposée.", "La masse d’un objet ne change jamais."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_yg27w"]
+script = ExtResource("1_js5wo")
+question = "Quelle est la différence entre la masse et le poids ?"
+choices = Array[String](["La masse dépend du lieu, le poids est constant.", "Le poids est une force, la masse est une quantité de matière.", "Il n’y a aucune différence, ce sont des synonymes.", "La masse se mesure en newtons, le poids en kilogrammes."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_6x48p"]
+script = ExtResource("1_js5wo")
+question = "Sur quoi agit la force de pesanteur (poids) ?"
+choices = Array[String](["Elle agit uniquement sur les objets en mouvement.", "Elle agit sur tous les objets ayant une masse dans un champ gravitationnel.", "Elle agit uniquement sur les gaz.", "Elle n’agit que dans le vide."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_nv8dy"]
+script = ExtResource("1_js5wo")
+question = "Quel instrument utilise-t-on pour mesurer une force ?"
+choices = Array[String](["Une balance à plateaux.", "Un thermomètre.", "Un dynamomètre.", "Un chronomètre."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_k4su6"]
+script = ExtResource("1_js5wo")
+question = "Que représente le vecteur force ?"
+choices = Array[String](["Il représente uniquement la valeur de la force.", "Il représente la direction, le sens et l’intensité de la force.", "Il représente uniquement la position de l’objet.", "Il représente la masse de l’objet."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_rmffm"]
+script = ExtResource("1_js5wo")
+question = "Qu’est-ce que l’équilibre d’un objet ?"
+choices = Array[String](["C’est quand l’objet est en mouvement circulaire uniforme.", "C’est quand la somme vectorielle des forces appliquées est nulle.", "C’est quand l’objet est soumis à une seule force.", "C’est quand l’accélération de l’objet est maximale."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_l50hb"]
+script = ExtResource("1_js5wo")
+question = "Quelle est la valeur de l’accélération de la pesanteur sur Terre (g) ?"
+choices = Array[String](["Environ 9,81 mètres par seconde au carré.", "Environ 1,0 mètre par seconde au carré.", "Environ 100 mètres par seconde au carré.", "Environ 0 mètres par seconde au carré."])
+
+[sub_resource type="Resource" id="Resource_d8va0"]
+script = ExtResource("1_js5wo")
+question = "Qu’est-ce que la force normale ?"
+choices = Array[String](["Une force exercée par un support sur un objet posé dessus.", "Une force qui tire toujours vers le bas.", "Une force liée à la résistance de l’air.", "Une force qui dépend de la température."])
+
+[sub_resource type="Resource" id="Resource_mtw75"]
+script = ExtResource("1_js5wo")
+question = "Comment évolue la force de frottement sur une surface rugueuse ?"
+choices = Array[String](["Elle est toujours nulle.", "Elle s’oppose au mouvement de l’objet.", "Elle facilite le mouvement de l’objet.", "Elle est proportionnelle au temps de parcours."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_phaqr"]
+script = ExtResource("1_js5wo")
+question = "Dans un mouvement rectiligne uniforme (MRU), comment est l’accélération ?"
+choices = Array[String](["Elle est constante et positive.", "Elle est constante et négative.", "Elle est nulle.", "Elle varie en fonction de la force."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_il0ey"]
+script = ExtResource("1_js5wo")
+question = "Quel est l’effet d’une force non nulle sur un objet au repos ?"
+choices = Array[String](["L’objet reste au repos.", "L’objet se met en mouvement ou se déforme.", "L’objet disparaît.", "L’objet perd sa masse."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_vlk6k"]
+script = ExtResource("1_js5wo")
+question = "Que signifie le terme inertie ?"
+choices = Array[String](["La tendance d’un objet à s’opposer à tout changement de son état de mouvement.", "La capacité d’un objet à produire de la chaleur.", "La capacité d’un objet à attirer les autres corps.", "La vitesse maximale d’un objet."])
+
+[resource]
+script = ExtResource("2_nrjtf")
+questions = Array[ExtResource("1_js5wo")]([SubResource("Resource_g1mnk"), SubResource("Resource_mcobe"), SubResource("Resource_fvtfq"), SubResource("Resource_el48q"), SubResource("Resource_02mwr"), SubResource("Resource_yg27w"), SubResource("Resource_6x48p"), SubResource("Resource_nv8dy"), SubResource("Resource_k4su6"), SubResource("Resource_rmffm"), SubResource("Resource_l50hb"), SubResource("Resource_d8va0"), SubResource("Resource_mtw75"), SubResource("Resource_phaqr"), SubResource("Resource_il0ey"), SubResource("Resource_vlk6k")])

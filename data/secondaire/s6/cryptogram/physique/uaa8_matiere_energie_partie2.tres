@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://2atff5ew7fk7"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_wkfia"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_paoyk"]
+
+[sub_resource type="Resource" id="Resource_kul3n"]
+script = ExtResource("1_wkfia")
+text = "Les changements d'état absorbent ou libèrent de l'énergie."
+
+[sub_resource type="Resource" id="Resource_ypjuv"]
+script = ExtResource("1_wkfia")
+text = "La fusion et la vaporisation nécessitent de l'énergie."
+
+[sub_resource type="Resource" id="Resource_ofp0j"]
+script = ExtResource("1_wkfia")
+text = "La solidification et la condensation libèrent de l'énergie."
+
+[sub_resource type="Resource" id="Resource_1texo"]
+script = ExtResource("1_wkfia")
+text = "Le rayonnement thermique se propage sans support."
+
+[sub_resource type="Resource" id="Resource_pa1a5"]
+script = ExtResource("1_wkfia")
+text = "La thermodynamique étudie les transferts énergétiques."
+
+[sub_resource type="Resource" id="Resource_yb218"]
+script = ExtResource("1_wkfia")
+text = "L'entropie mesure le désordre d'un système."
+
+[resource]
+script = ExtResource("2_paoyk")
+phrases = Array[ExtResource("1_wkfia")]([SubResource("Resource_kul3n"), SubResource("Resource_ypjuv"), SubResource("Resource_ofp0j"), SubResource("Resource_1texo"), SubResource("Resource_pa1a5"), SubResource("Resource_yb218")])

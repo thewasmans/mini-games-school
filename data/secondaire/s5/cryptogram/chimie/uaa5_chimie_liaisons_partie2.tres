@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://ccde65ehivhid"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_gtpa0"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_xeycn"]
+
+[sub_resource type="Resource" id="Resource_c1712"]
+script = ExtResource("1_gtpa0")
+text = "La théorie VSEPR prédit la géométrie spatiale des molécules."
+
+[sub_resource type="Resource" id="Resource_0oakg"]
+script = ExtResource("1_gtpa0")
+text = "La répulsion des doublets électroniques minimise l'énergie moléculaire."
+
+[sub_resource type="Resource" id="Resource_fsdb3"]
+script = ExtResource("1_gtpa0")
+text = "Une structure tétraédrique présente un angle d'environ 109"
+hint = "5°."
+
+[sub_resource type="Resource" id="Resource_otdnq"]
+script = ExtResource("1_gtpa0")
+text = "La géométrie pyramidale trigonale découle d'un doublet non liant."
+
+[sub_resource type="Resource" id="Resource_7h5qq"]
+script = ExtResource("1_gtpa0")
+text = "La forme coudée résulte de la présence de doublets libres."
+
+[sub_resource type="Resource" id="Resource_knqm4"]
+script = ExtResource("1_gtpa0")
+text = "Les forces intermoléculaires influencent les points de fusion."
+
+[sub_resource type="Resource" id="Resource_nr4xc"]
+script = ExtResource("1_gtpa0")
+text = "Les liaisons hydrogène assurent la cohésion de l'eau."
+
+[sub_resource type="Resource" id="Resource_w72u1"]
+script = ExtResource("1_gtpa0")
+text = "La solubilité dépend de la polarité des solvants et des solutés."
+
+[resource]
+script = ExtResource("2_xeycn")
+phrases = Array[ExtResource("1_gtpa0")]([SubResource("Resource_c1712"), SubResource("Resource_0oakg"), SubResource("Resource_fsdb3"), SubResource("Resource_otdnq"), SubResource("Resource_7h5qq"), SubResource("Resource_knqm4"), SubResource("Resource_nr4xc"), SubResource("Resource_w72u1")])

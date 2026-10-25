@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://c2gcj6strbjwc"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_6nvaf"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_7j2gd"]
+
+[sub_resource type="Resource" id="Resource_8xy0d"]
+script = ExtResource("1_6nvaf")
+text = "La nidation de l'embryon s'effectue dans la paroi utérine."
+
+[sub_resource type="Resource" id="Resource_5tqa5"]
+script = ExtResource("1_6nvaf")
+text = "L'hCG hormonale maintient le corps jaune pendant la grossesse."
+
+[sub_resource type="Resource" id="Resource_3ry6j"]
+script = ExtResource("1_6nvaf")
+text = "Le placenta assure les échanges nutritifs et respiratoires fœtaux."
+
+[sub_resource type="Resource" id="Resource_fyc6l"]
+script = ExtResource("1_6nvaf")
+text = "La contraception hormonale bloque l'ovulation ou la nidation."
+
+[sub_resource type="Resource" id="Resource_ahdhm"]
+script = ExtResource("1_6nvaf")
+text = "La contraception d'urgence empêche la fécondation ou la nidation."
+
+[sub_resource type="Resource" id="Resource_gbf53"]
+script = ExtResource("1_6nvaf")
+text = "Les IST (infections sexuellement transmissibles) menacent la fertilité."
+
+[sub_resource type="Resource" id="Resource_j1dln"]
+script = ExtResource("1_6nvaf")
+text = "La procréation médicalement assistée (PMA) aide les couples infertiles."
+
+[sub_resource type="Resource" id="Resource_hp2ld"]
+script = ExtResource("1_6nvaf")
+text = "La fécondation in vitro (FIV) se réalise en laboratoire."
+
+[resource]
+script = ExtResource("2_7j2gd")
+phrases = Array[ExtResource("1_6nvaf")]([SubResource("Resource_8xy0d"), SubResource("Resource_5tqa5"), SubResource("Resource_3ry6j"), SubResource("Resource_fyc6l"), SubResource("Resource_ahdhm"), SubResource("Resource_gbf53"), SubResource("Resource_j1dln"), SubResource("Resource_hp2ld")])

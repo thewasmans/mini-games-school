@@ -1,0 +1,84 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://ctuot602wlmfa"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_puo22"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_sbbm3"]
+
+[sub_resource type="Resource" id="Resource_3unp2"]
+script = ExtResource("1_puo22")
+question = "Que représente la configuration spatiale ?"
+choices = Array[String](["La géométrie de la molécule.", "Le nombre de liaisons moléculaires.", "L'orientation des atomes d'hydrogène.", "L'ensemble de ces caractéristiques."])
+
+[sub_resource type="Resource" id="Resource_nt1co"]
+script = ExtResource("1_puo22")
+question = "Qu'est-ce que la molécule CH4 ?"
+choices = Array[String](["L'ammoniac.", "Le dioxyde de carbone.", "L'eau.", "Le méthane."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_kg7qf"]
+script = ExtResource("1_puo22")
+question = "Qu'est-ce que la molécule NH3 ?"
+choices = Array[String](["L'ammoniac.", "Le dioxyde de carbone.", "L'eau.", "Le méthane."])
+
+[sub_resource type="Resource" id="Resource_ki025"]
+script = ExtResource("1_puo22")
+question = "Qu'est-ce que la molécule CO2 ?"
+choices = Array[String](["L'ammoniac.", "Le dioxyde de carbone.", "L'eau.", "Le méthane."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_j4c1o"]
+script = ExtResource("1_puo22")
+question = "Qu'est-ce qu'un solvant polaire ?"
+choices = Array[String](["Molécule dont les liaisons entre les atomes ont des électronégativités très différentes (OH).", "Molécule dont les liaisons entre les atomes ont des électronégativités similaires (CH).", "Molécule dont les liaisons entre les atomes ont des électronégativités nulles.", "Molécule dont les liaisons entre les atomes ont des électronégativités qui se bloquent."])
+
+[sub_resource type="Resource" id="Resource_rosxr"]
+script = ExtResource("1_puo22")
+question = "Qu'est-ce qu'un solvant apolaire ?"
+choices = Array[String](["Molécule dont les liaisons entre les atomes ont des électronégativités très différentes (OH).", "Molécule dont les liaisons entre les atomes ont des électronégativités similaires (CH).", "Molécule dont les liaisons entre les atomes ont des électronégativités nulles.", "Molécule dont les liaisons entre les atomes ont des électronégativités qui se bloquent."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_nyrbf"]
+script = ExtResource("1_puo22")
+question = "En quoi consiste le pont hydrogène ?"
+choices = Array[String](["Une liaison entre un atome d'oxygène et un atome d'hydrogène.", "Une liaison entre deux atomes d'oxygène.", "Une liaison entre deux atomes d'hydrogène.", "Une liaison entre deux atomes de même électronégativité."])
+
+[sub_resource type="Resource" id="Resource_31xga"]
+script = ExtResource("1_puo22")
+question = "Quelle est la température de fusion du fer ?"
+choices = Array[String](["Environ 1500°C.", "Environ 15°C.", "Environ 15 000°C.", "Environ 150°C."])
+
+[sub_resource type="Resource" id="Resource_j700w"]
+script = ExtResource("1_puo22")
+question = "Quelle est la température de fusion de l'aluminium ?"
+choices = Array[String](["Environ 65 000°C.", "Environ 65°C.", "Environ 6500°C.", "Environ 650°C."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_yawtp"]
+script = ExtResource("1_puo22")
+question = "Quelle est la température de dégradation du papier sulfurisé ?"
+choices = Array[String](["Environ 220°C.", "Environ 2200°C.", "Environ 22 000°C.", "Environ 22°C."])
+
+[sub_resource type="Resource" id="Resource_sa762"]
+script = ExtResource("1_puo22")
+question = "En quoi consiste l'allotropie ?"
+choices = Array[String](["Plusieurs éléments de la même forme.", "Plusieurs formes pour un même élément.", "Plusieurs formes de plusieurs éléments.", "Une forme pour un élément."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_apd3n"]
+script = ExtResource("1_puo22")
+question = "Quelle est la différence entre le diamant et le graphite ?"
+choices = Array[String](["Les liaisons chimiques.", "La composition des atomes.", "L'électronégativité entre les atomes.", "L'ensemble de ces éléments."])
+
+[sub_resource type="Resource" id="Resource_nyxcc"]
+script = ExtResource("1_puo22")
+question = "Quelle structure possède une forme sphérique ?"
+choices = Array[String](["Graphite.", "Fullerène.", "Diamant.", "Les trois."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_xqwx7"]
+script = ExtResource("1_puo22")
+question = "Quelle est la définition du nombre d'oxydation ?"
+choices = Array[String](["C'est la charge d'un atome.", "C'est le poids d'un atome.", "C'est la position d'un atome.", "C'est le déplacement d'un atome."])
+
+[resource]
+script = ExtResource("2_sbbm3")
+questions = Array[ExtResource("1_puo22")]([SubResource("Resource_3unp2"), SubResource("Resource_nt1co"), SubResource("Resource_kg7qf"), SubResource("Resource_ki025"), SubResource("Resource_j4c1o"), SubResource("Resource_rosxr"), SubResource("Resource_nyrbf"), SubResource("Resource_31xga"), SubResource("Resource_j700w"), SubResource("Resource_yawtp"), SubResource("Resource_sa762"), SubResource("Resource_apd3n"), SubResource("Resource_nyxcc"), SubResource("Resource_xqwx7")])

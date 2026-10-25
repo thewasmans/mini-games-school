@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://cq532orr2ts8f"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_c4ukg"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_fhxhy"]
+
+[sub_resource type="Resource" id="Resource_ioypi"]
+script = ExtResource("1_c4ukg")
+text = "La matière possède une énergie interne propre."
+
+[sub_resource type="Resource" id="Resource_f4phx"]
+script = ExtResource("1_c4ukg")
+text = "L'énergie thermique se transfère par chaleur."
+
+[sub_resource type="Resource" id="Resource_uibec"]
+script = ExtResource("1_c4ukg")
+text = "Le premier principe énonce la conservation de l'énergie."
+
+[sub_resource type="Resource" id="Resource_2617o"]
+script = ExtResource("1_c4ukg")
+text = "Un système isolé n'échange ni matière ni énergie."
+
+[sub_resource type="Resource" id="Resource_dt2y7"]
+script = ExtResource("1_c4ukg")
+text = "La température traduit l'agitation thermique microscopique."
+
+[sub_resource type="Resource" id="Resource_vnmtr"]
+script = ExtResource("1_c4ukg")
+text = "La capacité thermique caractérise un corps."
+
+[resource]
+script = ExtResource("2_fhxhy")
+phrases = Array[ExtResource("1_c4ukg")]([SubResource("Resource_ioypi"), SubResource("Resource_f4phx"), SubResource("Resource_uibec"), SubResource("Resource_2617o"), SubResource("Resource_dt2y7"), SubResource("Resource_vnmtr")])

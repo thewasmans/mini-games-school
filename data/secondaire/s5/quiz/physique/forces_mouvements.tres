@@ -1,0 +1,88 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://cuu10hbfpwtct"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_cjx8r"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_e7nke"]
+
+[sub_resource type="Resource" id="Resource_7ireb"]
+script = ExtResource("1_cjx8r")
+question = "Si on double la masse d’un objet tout en conservant la même accélération, que se passe-t-il pour la force ?"
+choices = Array[String](["La force est divisée par deux.", "La force reste identique.", "La force est multipliée par deux.", "La force est multipliée par quatre."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_qtqje"]
+script = ExtResource("1_cjx8r")
+question = "Quel est le sens du vecteur poids par rapport à la surface terrestre ?"
+choices = Array[String](["Il est parallèle à la surface.", "Il est perpendiculaire et dirigé vers le centre de la Terre.", "Il est dirigé vers le haut.", "Il n’a pas de direction fixe."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_8yetm"]
+script = ExtResource("1_cjx8r")
+question = "Qu’est-ce qu’une force de tension ?"
+choices = Array[String](["Une force exercée par une corde ou un câble tendu.", "Une force exercée par un aimant.", "Une force qui empêche la lumière de passer.", "Une force liée à l’électricité statique."])
+
+[sub_resource type="Resource" id="Resource_dct7c"]
+script = ExtResource("1_cjx8r")
+question = "Dans un mouvement rectiligne uniformément accéléré (MRUA), l’accélération est :"
+choices = Array[String](["Nulle.", "Constante et non nulle.", "Variable.", "Proportionnelle à la vitesse."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_sny7m"]
+script = ExtResource("1_cjx8r")
+question = "Quelle est la différence entre la vitesse et l’accélération ?"
+choices = Array[String](["La vitesse est le changement de position, l’accélération est le changement de vitesse.", "La vitesse et l’accélération sont la même chose.", "L’accélération est le changement de position, la vitesse est le changement de force.", "Il n’y a aucune différence physique."])
+
+[sub_resource type="Resource" id="Resource_e15w6"]
+script = ExtResource("1_cjx8r")
+question = "Quelle loi explique pourquoi un passager est projeté vers l’avant lors d’un freinage brusque ?"
+choices = Array[String](["La deuxième loi de Newton.", "La troisième loi de Newton.", "Le principe d’inertie (première loi).", "La loi de la gravitation universelle."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_j2jv1"]
+script = ExtResource("1_cjx8r")
+question = "Qu’est-ce que la résultante des forces ?"
+choices = Array[String](["La somme de toutes les forces appliquées à un objet.", "La différence entre la masse et le poids.", "Le produit de la vitesse par la masse.", "La force exercée par le sol uniquement."])
+
+[sub_resource type="Resource" id="Resource_n1ngk"]
+script = ExtResource("1_cjx8r")
+question = "Si deux forces égales et opposées s’exercent sur un même objet, que se passe-t-il ?"
+choices = Array[String](["L’objet accélère.", "L’objet ralentit.", "L’objet reste immobile ou à vitesse constante.", "L’objet change de forme."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_d2bi3"]
+script = ExtResource("1_cjx8r")
+question = "La résistance de l’air est un type de force de :"
+choices = Array[String](["Gravitation.", "Frottement.", "Inertie.", "Tension."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_pv41v"]
+script = ExtResource("1_cjx8r")
+question = "Sur la Lune, un objet a-t-il le même poids que sur la Terre ?"
+choices = Array[String](["Oui, car sa masse est la même.", "Non, car le champ gravitationnel lunaire est différent.", "Oui, car le poids est une propriété immuable.", "Non, car l’objet change de volume."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_nxy1y"]
+script = ExtResource("1_cjx8r")
+question = "Comment peut-on représenter graphiquement une force ?"
+choices = Array[String](["Par un point.", "Par un rectangle.", "Par une flèche (vecteur).", "Par un cercle."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_4ntr4"]
+script = ExtResource("1_cjx8r")
+question = "La loi de Hooke concerne quel type de force ?"
+choices = Array[String](["La force de frottement.", "La force de rappel d’un ressort.", "La force de pesanteur.", "La force de tension d’une corde."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_82g6y"]
+script = ExtResource("1_cjx8r")
+question = "Quelle force est responsable de la chute des corps vers le sol ?"
+choices = Array[String](["La force électromagnétique.", "La force de pesanteur.", "La force centrifuge.", "La force de tension."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_h6oxk"]
+script = ExtResource("1_cjx8r")
+question = "Que se passe-t-il si la force résultante sur un objet est nulle ?"
+choices = Array[String](["L’objet est en équilibre.", "L’objet accélère forcément.", "L’objet doit être au repos.", "L’objet tourne sur lui-même."])
+
+[resource]
+script = ExtResource("2_e7nke")
+questions = Array[ExtResource("1_cjx8r")]([SubResource("Resource_7ireb"), SubResource("Resource_qtqje"), SubResource("Resource_8yetm"), SubResource("Resource_dct7c"), SubResource("Resource_sny7m"), SubResource("Resource_e15w6"), SubResource("Resource_j2jv1"), SubResource("Resource_n1ngk"), SubResource("Resource_d2bi3"), SubResource("Resource_pv41v"), SubResource("Resource_nxy1y"), SubResource("Resource_4ntr4"), SubResource("Resource_82g6y"), SubResource("Resource_h6oxk")])

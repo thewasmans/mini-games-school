@@ -1,0 +1,100 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://dcgpldgyfk2h1"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_8j7yp"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_m12n1"]
+
+[sub_resource type="Resource" id="Resource_u7emf"]
+script = ExtResource("1_8j7yp")
+question = "Comment définit-on l’énergie en physique ?"
+choices = Array[String](["C’est la capacité d’un système à produire un travail.", "C’est une force qui s’applique sur un objet.", "C’est la vitesse d’un objet en mouvement.", "C’est la température d’un corps."])
+
+[sub_resource type="Resource" id="Resource_jexhk"]
+script = ExtResource("1_8j7yp")
+question = "Quelle est l’unité internationale de l’énergie ?"
+choices = Array[String](["Le watt.", "Le newton.", "Le joule.", "Le degré Celsius."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_dxtvk"]
+script = ExtResource("1_8j7yp")
+question = "Quelle est la formule de l’énergie cinétique d’un objet ?"
+choices = Array[String](["La masse fois la vitesse.", "Un demi fois la masse fois la vitesse au carré.", "La masse fois la hauteur.", "La force fois la distance."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_fs5tl"]
+script = ExtResource("1_8j7yp")
+question = "De quoi dépend principalement l’énergie potentielle de pesanteur ?"
+choices = Array[String](["De la vitesse de l’objet.", "De la masse et de la hauteur.", "De la couleur de l’objet.", "De la forme de l’objet."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_wwbr7"]
+script = ExtResource("1_8j7yp")
+question = "Quel principe stipule que l’énergie ne peut être ni créée ni détruite ?"
+choices = Array[String](["Le principe d’inertie.", "Le principe de conservation de l’énergie.", "Le principe d’action et réaction.", "Le principe de la thermodynamique."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_mf7xi"]
+script = ExtResource("1_8j7yp")
+question = "Qu’est-ce que la puissance en physique ?"
+choices = Array[String](["C’est la quantité d’énergie totale.", "C’est le travail effectué par unité de temps.", "C’est la force appliquée sur un ressort.", "C’est la distance parcourue par un objet."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_q5s4e"]
+script = ExtResource("1_8j7yp")
+question = "Quelle est l’unité de mesure de la puissance ?"
+choices = Array[String](["Le joule.", "Le volt.", "Le watt.", "Le coulomb."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_vajym"]
+script = ExtResource("1_8j7yp")
+question = "Qu’appelle-t-on énergie mécanique totale ?"
+choices = Array[String](["La somme de l’énergie cinétique et de l’énergie potentielle.", "La somme de la chaleur et du travail.", "La différence entre la masse et le poids.", "Le produit de la force par la vitesse."])
+
+[sub_resource type="Resource" id="Resource_1kilu"]
+script = ExtResource("1_8j7yp")
+question = "Quel mode de transfert de chaleur se produit par contact direct ?"
+choices = Array[String](["La convection.", "La conduction.", "Le rayonnement.", "L’évaporation."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_kbvvb"]
+script = ExtResource("1_8j7yp")
+question = "Comment se propage la chaleur dans les fluides (liquides ou gaz) ?"
+choices = Array[String](["Par conduction thermique.", "Par convection.", "Par rayonnement électromagnétique.", "Par absorption sonore."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ruwb0"]
+script = ExtResource("1_8j7yp")
+question = "Quel transfert de chaleur peut se produire dans le vide ?"
+choices = Array[String](["La conduction.", "La convection.", "Le rayonnement.", "L’agitation moléculaire."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_583xh"]
+script = ExtResource("1_8j7yp")
+question = "Qu’est-ce que le rendement énergétique d’un système ?"
+choices = Array[String](["Le rapport entre l’énergie utile et l’énergie totale consommée.", "La somme de toutes les pertes d’énergie.", "La différence entre l’énergie entrante et sortante.", "Le temps nécessaire pour consommer l’énergie."])
+
+[sub_resource type="Resource" id="Resource_yh5uy"]
+script = ExtResource("1_8j7yp")
+question = "Quel type d’énergie est stockée dans les liaisons chimiques des aliments ?"
+choices = Array[String](["L’énergie cinétique.", "L’énergie potentielle chimique.", "L’énergie mécanique.", "L’énergie thermique."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_16r7a"]
+script = ExtResource("1_8j7yp")
+question = "Que devient généralement l’énergie dissipée par frottement ?"
+choices = Array[String](["De l’énergie potentielle.", "De l’énergie thermique.", "De l’énergie électrique.", "De l’énergie lumineuse."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_yb02t"]
+script = ExtResource("1_8j7yp")
+question = "À quoi correspond la chaleur latente ?"
+choices = Array[String](["À la température de l’objet.", "À l’énergie nécessaire pour changer d’état physique.", "À la vitesse de vibration des molécules.", "À la pression exercée sur le corps."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_7emkb"]
+script = ExtResource("1_8j7yp")
+question = "Quelle est la relation entre le travail et l’énergie ?"
+choices = Array[String](["Le travail est le transfert d’énergie par une force.", "Le travail est une forme d’énergie potentielle.", "Le travail est toujours égal à la puissance.", "Il n’y a aucun lien entre le travail et l’énergie."])
+
+[resource]
+script = ExtResource("2_m12n1")
+questions = Array[ExtResource("1_8j7yp")]([SubResource("Resource_u7emf"), SubResource("Resource_jexhk"), SubResource("Resource_dxtvk"), SubResource("Resource_fs5tl"), SubResource("Resource_wwbr7"), SubResource("Resource_mf7xi"), SubResource("Resource_q5s4e"), SubResource("Resource_vajym"), SubResource("Resource_1kilu"), SubResource("Resource_kbvvb"), SubResource("Resource_ruwb0"), SubResource("Resource_583xh"), SubResource("Resource_yh5uy"), SubResource("Resource_16r7a"), SubResource("Resource_yb02t"), SubResource("Resource_7emkb")])

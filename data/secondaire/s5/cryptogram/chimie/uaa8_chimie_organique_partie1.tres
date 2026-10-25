@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://bgn2wnvw6yh0o"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_grruk"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_g6jte"]
+
+[sub_resource type="Resource" id="Resource_evj23"]
+script = ExtResource("1_grruk")
+text = "La chimie organique étudie les composés à base de carbone."
+
+[sub_resource type="Resource" id="Resource_03pf4"]
+script = ExtResource("1_grruk")
+text = "Les hydrogénocarbones ne contiennent que du carbone et de l'hydrogène."
+
+[sub_resource type="Resource" id="Resource_r4urb"]
+script = ExtResource("1_grruk")
+text = "Les alcanes sont des hydrocarbures saturés à liaisons simples."
+
+[sub_resource type="Resource" id="Resource_7j7uf"]
+script = ExtResource("1_grruk")
+text = "Les alcènes possèdent au moins une double liaison carbone."
+
+[sub_resource type="Resource" id="Resource_c5glo"]
+script = ExtResource("1_grruk")
+text = "Les alcynes comportent au moins une triple liaison carbone."
+
+[sub_resource type="Resource" id="Resource_jd52p"]
+script = ExtResource("1_grruk")
+text = "La formule brute indique la nature et le nombre d'atomes."
+
+[sub_resource type="Resource" id="Resource_cymu3"]
+script = ExtResource("1_grruk")
+text = "Les formules développées et semi-développées montrent l'enchaînement."
+
+[sub_resource type="Resource" id="Resource_ydhw0"]
+script = ExtResource("1_grruk")
+text = "La nomenclature IUPAC permet de nommer précisément les molécules."
+
+[resource]
+script = ExtResource("2_g6jte")
+phrases = Array[ExtResource("1_grruk")]([SubResource("Resource_evj23"), SubResource("Resource_03pf4"), SubResource("Resource_r4urb"), SubResource("Resource_7j7uf"), SubResource("Resource_c5glo"), SubResource("Resource_jd52p"), SubResource("Resource_cymu3"), SubResource("Resource_ydhw0")])

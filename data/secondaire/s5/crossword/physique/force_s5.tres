@@ -1,0 +1,79 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://q4u6mf787pnm"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_ixm0b"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_gcl32"]
+
+[sub_resource type="Resource" id="Resource_dytrj"]
+script = ExtResource("1_ixm0b")
+word = "MCU"
+hint = "Mouvement sur un cercle avec une vitesse de valeur constante."
+grid_position = Vector2i(13, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_a1lc5"]
+script = ExtResource("1_ixm0b")
+word = "KEPLER"
+hint = "Lois qui décrivent les propriétés principales du mouvement des planètes autour du Soleil."
+grid_position = Vector2i(5, 18)
+
+[sub_resource type="Resource" id="Resource_000en"]
+script = ExtResource("1_ixm0b")
+word = "CENTRIFUGE"
+hint = "Force qui amène un corps à s'éloigner du centre de rotation d'un mouvement circulaire."
+grid_position = Vector2i(6, 9)
+
+[sub_resource type="Resource" id="Resource_815s5"]
+script = ExtResource("1_ixm0b")
+word = "POIDS"
+hint = "Force liée à la masse et à la gravité."
+grid_position = Vector2i(5, 3)
+
+[sub_resource type="Resource" id="Resource_q1t1f"]
+script = ExtResource("1_ixm0b")
+word = "INERTIE"
+hint = "Premier principe de Newton, tendance naturelle d'un objet à garder la vitesse du mobile qui le transporte."
+grid_position = Vector2i(15, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_hetum"]
+script = ExtResource("1_ixm0b")
+word = "CENTRIPETE"
+hint = "Force agissant vers le centre d'un cercle."
+grid_position = Vector2i(6, 9)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_xumtp"]
+script = ExtResource("1_ixm0b")
+word = "GRAVITE"
+hint = "Phénomène de réaction physique qui cause l'attraction mutuelle entre deux corps."
+grid_position = Vector2i(0, 10)
+
+[sub_resource type="Resource" id="Resource_ws5u8"]
+script = ExtResource("1_ixm0b")
+word = "RECIPROQUE"
+hint = "Troisième loi de Newton, lorsqu'une force de même direction, de valeur égale mais de sens opposé est appliquée."
+grid_position = Vector2i(7, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_abgf8"]
+script = ExtResource("1_ixm0b")
+word = "FREQUENCE"
+hint = "Nombre de tours effectués par unité de temps."
+grid_position = Vector2i(10, 8)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_nkmxm"]
+script = ExtResource("1_ixm0b")
+word = "PERIODE"
+hint = "Durée nécessaire pour que l’objet effectue un tour du cercle."
+grid_position = Vector2i(4, 13)
+
+[sub_resource type="Resource" id="Resource_qpvyl"]
+script = ExtResource("1_ixm0b")
+word = "ELLIPSE"
+hint = "Courbe qu'une planète effectue autour du Soleil."
+grid_position = Vector2i(2, 15)
+
+[resource]
+script = ExtResource("2_gcl32")
+clues = Array[ExtResource("1_ixm0b")]([SubResource("Resource_dytrj"), SubResource("Resource_a1lc5"), SubResource("Resource_000en"), SubResource("Resource_815s5"), SubResource("Resource_q1t1f"), SubResource("Resource_hetum"), SubResource("Resource_xumtp"), SubResource("Resource_ws5u8"), SubResource("Resource_abgf8"), SubResource("Resource_nkmxm"), SubResource("Resource_qpvyl")])

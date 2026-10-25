@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dpbpqxpd0141x"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_jh84h"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_hjwp0"]
+
+[sub_resource type="Resource" id="Resource_1q3tw"]
+script = ExtResource("1_jh84h")
+text = "L'immunité adaptative prend le relais si besoin."
+
+[sub_resource type="Resource" id="Resource_1lkqm"]
+script = ExtResource("1_jh84h")
+text = "Un antigène déclenche une réponse immunitaire spécifique."
+
+[sub_resource type="Resource" id="Resource_yhet5"]
+script = ExtResource("1_jh84h")
+text = "Les lymphocytes B produisent des anticorps humoraux."
+
+[sub_resource type="Resource" id="Resource_qeymm"]
+script = ExtResource("1_jh84h")
+text = "Les anticorps neutralisent spécifiquement les antigènes."
+
+[sub_resource type="Resource" id="Resource_a4qm7"]
+script = ExtResource("1_jh84h")
+text = "Les lymphocytes T assurent l'immunité cellulaire."
+
+[sub_resource type="Resource" id="Resource_3tgc8"]
+script = ExtResource("1_jh84h")
+text = "Les lymphocytes T cytotoxiques détruisent les cellules infectées."
+
+[sub_resource type="Resource" id="Resource_g2u7t"]
+script = ExtResource("1_jh84h")
+text = "La mémoire immunitaire garantit une réponse rapide secondaire."
+
+[sub_resource type="Resource" id="Resource_2mvpp"]
+script = ExtResource("1_jh84h")
+text = "La vaccination repose sur cette mémoire immunitaire."
+
+[resource]
+script = ExtResource("2_hjwp0")
+phrases = Array[ExtResource("1_jh84h")]([SubResource("Resource_1q3tw"), SubResource("Resource_1lkqm"), SubResource("Resource_yhet5"), SubResource("Resource_qeymm"), SubResource("Resource_a4qm7"), SubResource("Resource_3tgc8"), SubResource("Resource_g2u7t"), SubResource("Resource_2mvpp")])

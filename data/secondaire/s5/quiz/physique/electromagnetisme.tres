@@ -1,0 +1,88 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://b2knmk0akn8n5"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_58iur"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_fo8ij"]
+
+[sub_resource type="Resource" id="Resource_fym61"]
+script = ExtResource("1_58iur")
+question = "Quelle est la fréquence du courant alternatif distribué dans les prises en Europe ?"
+choices = Array[String](["25 Hertz.", "50 Hertz.", "100 Hertz.", "220 Hertz."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_c4a61"]
+script = ExtResource("1_58iur")
+question = "Quelle est la différence entre un courant continu et un courant alternatif ?"
+choices = Array[String](["Le courant continu change de sens périodiquement.", "Le courant alternatif change de sens périodiquement.", "Le courant alternatif a une tension constante.", "Le courant continu est utilisé par les centrales électriques."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_lyh7u"]
+script = ExtResource("1_58iur")
+question = "Que devient une aiguille aimantée si elle est placée dans un champ magnétique ?"
+choices = Array[String](["Elle s’oriente selon les lignes de champ.", "Elle commence à tourner indéfiniment.", "Elle perd son aimantation.", "Elle s’échauffe brutalement."])
+
+[sub_resource type="Resource" id="Resource_hdjiv"]
+script = ExtResource("1_58iur")
+question = "Comment appelle-t-on un aimant qui ne fonctionne que lorsqu’il est parcouru par un courant ?"
+choices = Array[String](["Un aimant naturel.", "Un aimant permanent.", "Un électroaimant.", "Une boussole."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_ogfwu"]
+script = ExtResource("1_58iur")
+question = "Que se passe-t-il si l’on inverse le sens du courant dans un électroaimant ?"
+choices = Array[String](["Les pôles Nord et Sud s’inversent.", "L’aimant devient neutre.", "La force augmente indéfiniment.", "L’aimant explose."])
+
+[sub_resource type="Resource" id="Resource_lfu40"]
+script = ExtResource("1_58iur")
+question = "Quelle est la caractéristique des lignes de champ magnétique ?"
+choices = Array[String](["Elles sont toujours fermées sur elles-mêmes.", "Elles se croisent toujours.", "Elles sont ouvertes aux extrémités.", "Elles ne sortent jamais des pôles."])
+
+[sub_resource type="Resource" id="Resource_qbskb"]
+script = ExtResource("1_58iur")
+question = "Quel est le rôle d’un alternateur dans une centrale électrique ?"
+choices = Array[String](["Convertir l’énergie thermique en énergie électrique.", "Convertir l’énergie mécanique en énergie électrique.", "Convertir l’énergie chimique en énergie électrique.", "Convertir l’énergie électrique en chaleur."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_tdge0"]
+script = ExtResource("1_58iur")
+question = "Dans un moteur électrique, qu’est-ce qui permet d’inverser le sens du courant pour maintenir la rotation ?"
+choices = Array[String](["Le transformateur.", "Le collecteur à balais.", "Le solénoïde.", "La résistance."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_tnkj6"]
+script = ExtResource("1_58iur")
+question = "Que signifie le terme « courant induit » ?"
+choices = Array[String](["Un courant créé par une pile.", "Un courant créé par une variation de flux magnétique.", "Un courant qui chauffe le fil conducteur.", "Un courant qui est statique."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_jvm7j"]
+script = ExtResource("1_58iur")
+question = "Quelle est la fonction d’un disjoncteur différentiel en lien avec l’électromagnétisme ?"
+choices = Array[String](["Il mesure la résistance des appareils.", "Il détecte une fuite de courant par induction.", "Il amplifie le courant.", "Il transforme le courant continu."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_jqldd"]
+script = ExtResource("1_58iur")
+question = "Qu’est-ce qui arrive si un fil conducteur est parallèle aux lignes d’un champ magnétique ?"
+choices = Array[String](["La force de Laplace est maximale.", "La force de Laplace est nulle.", "Le courant augmente.", "Le fil s’échauffe instantanément."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_shbf7"]
+script = ExtResource("1_58iur")
+question = "Quel matériau est dit ferromagnétique ?"
+choices = Array[String](["Le cuivre.", "L’aluminium.", "Le fer.", "Le plastique."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_omiik"]
+script = ExtResource("1_58iur")
+question = "Quel est l’effet d’un courant électrique circulant dans une bobine sans noyau ?"
+choices = Array[String](["Il crée un champ magnétique très faible.", "Il crée un champ magnétique intense.", "Il annule le champ magnétique terrestre.", "Il ne crée aucun effet magnétique."])
+
+[sub_resource type="Resource" id="Resource_bf3ip"]
+script = ExtResource("1_58iur")
+question = "Pourquoi les lignes à haute tension transportent-elles le courant sous une tension très élevée ?"
+choices = Array[String](["Pour augmenter la vitesse du courant.", "Pour réduire les pertes par effet Joule.", "Pour éviter les interférences radio.", "Pour faciliter la connexion aux prises domestiques."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_fo8ij")
+questions = Array[ExtResource("1_58iur")]([SubResource("Resource_fym61"), SubResource("Resource_c4a61"), SubResource("Resource_lyh7u"), SubResource("Resource_hdjiv"), SubResource("Resource_ogfwu"), SubResource("Resource_lfu40"), SubResource("Resource_qbskb"), SubResource("Resource_tdge0"), SubResource("Resource_tnkj6"), SubResource("Resource_jvm7j"), SubResource("Resource_jqldd"), SubResource("Resource_shbf7"), SubResource("Resource_omiik"), SubResource("Resource_bf3ip")])

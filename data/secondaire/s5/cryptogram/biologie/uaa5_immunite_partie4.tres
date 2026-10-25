@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://cfelsj2i6r50h"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_guh0k"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_wwldx"]
+
+[sub_resource type="Resource" id="Resource_w53ex"]
+script = ExtResource("1_guh0k")
+text = "L'allergie est une hypersensibilité face à un allergène."
+
+[sub_resource type="Resource" id="Resource_uol6k"]
+script = ExtResource("1_guh0k")
+text = "Les maladies auto-immunes attaquent les propres tissus."
+
+[sub_resource type="Resource" id="Resource_stm62"]
+script = ExtResource("1_guh0k")
+text = "Le VIH cible et détruit les lymphocytes T CD4+."
+
+[sub_resource type="Resource" id="Resource_tdeip"]
+script = ExtResource("1_guh0k")
+text = "Le SIDA correspond au stade ultime de l'infection par le VIH."
+
+[sub_resource type="Resource" id="Resource_pqmbo"]
+script = ExtResource("1_guh0k")
+text = "L'utilisation de barrières prévient les infections sexuellement transmissibles."
+
+[sub_resource type="Resource" id="Resource_76ltp"]
+script = ExtResource("1_guh0k")
+text = "L'immunité peut être passive (sérums) ou active (vaccins)."
+
+[sub_resource type="Resource" id="Resource_r3krm"]
+script = ExtResource("1_guh0k")
+text = "Une bonne hygiène de vie soutient le système immunitaire."
+
+[sub_resource type="Resource" id="Resource_58n8r"]
+script = ExtResource("1_guh0k")
+text = "L'abus d'antibiotiques favorise les résistances bactériennes."
+
+[resource]
+script = ExtResource("2_wwldx")
+phrases = Array[ExtResource("1_guh0k")]([SubResource("Resource_w53ex"), SubResource("Resource_uol6k"), SubResource("Resource_stm62"), SubResource("Resource_tdeip"), SubResource("Resource_pqmbo"), SubResource("Resource_76ltp"), SubResource("Resource_r3krm"), SubResource("Resource_58n8r")])

@@ -1,0 +1,80 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://b148h3lusxjkf"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_3u1vi"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_8ds0r"]
+
+[sub_resource type="Resource" id="Resource_sinub"]
+script = ExtResource("1_3u1vi")
+word = "COMPLETE"
+hint = "Se dit d'une réaction irréversible dont au moins un de ses réactifs est complètement consommé."
+grid_position = Vector2i(0, 3)
+
+[sub_resource type="Resource" id="Resource_qiqyc"]
+script = ExtResource("1_3u1vi")
+word = "IRREVERSIBLE"
+hint = "Se dit d'une réaction chimique qui ne se produit que dans un seul sens."
+grid_position = Vector2i(12, 8)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_cuclh"]
+script = ExtResource("1_3u1vi")
+word = "THERMOLYSE"
+hint = "Décomposition chimique causée par la chaleur."
+grid_position = Vector2i(6, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ci5y6"]
+script = ExtResource("1_3u1vi")
+word = "CHATELIER"
+hint = "Loi selon laquelle un système d'équilibre évolue si on impose une modification pour rester en équilibre."
+grid_position = Vector2i(18, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_b4yvq"]
+script = ExtResource("1_3u1vi")
+word = "INCOMPLETE"
+hint = "Se dit d'une réaction réversible dont aucun des réactifs n'est complètement consommé."
+grid_position = Vector2i(10, 6)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_chkcq"]
+script = ExtResource("1_3u1vi")
+word = "METALLIQUE"
+hint = "Liaison forte entre les cations et les électrons dans les métaux."
+grid_position = Vector2i(14, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_farh2"]
+script = ExtResource("1_3u1vi")
+word = "ALLOTROPIE"
+hint = "Propriété d'un corps d'exister sous différentes formes physiques."
+grid_position = Vector2i(16, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_2ookx"]
+script = ExtResource("1_3u1vi")
+word = "COVALENTE"
+hint = "Se dit d'une liaison chimique qui correspond à la liaison entre deux atomes, généralement non métalliques."
+grid_position = Vector2i(8, 18)
+
+[sub_resource type="Resource" id="Resource_2pvwe"]
+script = ExtResource("1_3u1vi")
+word = "CONDUCTIBILITE"
+hint = "Propriété que possèdent les corps de transmettre la chaleur, l'électricité."
+grid_position = Vector2i(5, 8)
+
+[sub_resource type="Resource" id="Resource_6juta"]
+script = ExtResource("1_3u1vi")
+word = "CRISTAL"
+hint = "Solide à structure microscopique ordonnée."
+grid_position = Vector2i(8, 6)
+
+[sub_resource type="Resource" id="Resource_pdpjk"]
+script = ExtResource("1_3u1vi")
+word = "IONISATION"
+hint = "Action d'ajouter ou d'enlever des charges électriques à un atome ou à une molécule formant des ions."
+grid_position = Vector2i(12, 16)
+
+[resource]
+script = ExtResource("2_8ds0r")
+clues = Array[ExtResource("1_3u1vi")]([SubResource("Resource_sinub"), SubResource("Resource_qiqyc"), SubResource("Resource_cuclh"), SubResource("Resource_ci5y6"), SubResource("Resource_b4yvq"), SubResource("Resource_chkcq"), SubResource("Resource_farh2"), SubResource("Resource_2ookx"), SubResource("Resource_2pvwe"), SubResource("Resource_6juta"), SubResource("Resource_pdpjk")])

@@ -1,0 +1,99 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bll0rj41ygcci"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_d51b1"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_eof2t"]
+
+[sub_resource type="Resource" id="Resource_q8oew"]
+script = ExtResource("1_d51b1")
+question = "Selon la définition de Brønsted, qu’est-ce qu’un acide ?"
+choices = Array[String](["C’est une espèce chimique capable de céder un proton.", "C’est une espèce chimique capable de céder un électron.", "C’est une espèce chimique capable de capter un proton.", "C’est une espèce chimique capable de capter un électron."])
+
+[sub_resource type="Resource" id="Resource_2jqw2"]
+script = ExtResource("1_d51b1")
+question = "Selon la définition de Brønsted, qu’est-ce qu’une base ?"
+choices = Array[String](["C’est une espèce chimique capable de céder un proton.", "C’est une espèce chimique capable de céder un électron.", "C’est une espèce chimique capable de capter un proton.", "C’est une espèce chimique capable de capter un électron."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_kqblc"]
+script = ExtResource("1_d51b1")
+question = "Qu’est-ce qu’une espèce chimique amphotère ou ampholyte ?"
+choices = Array[String](["C’est une espèce chimique qui ne peut pas réagir.", "C’est une espèce chimique qui peut agir soit comme un acide, soit comme une base.", "C’est une espèce chimique qui est totalement insoluble dans l’eau.", "C’est une espèce chimique qui ne contient jamais d’atome d’hydrogène."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_hvk45"]
+script = ExtResource("1_d51b1")
+question = "Quelle est la définition usuelle du pH ?"
+choices = Array[String](["C’est le logarithme négatif de la concentration en ions hydronium.", "C’est le logarithme de la concentration en ions hydronium.", "C’est le logarithme négatif de la concentration en ions hydroxyde.", "C’est la valeur 14 moins le log de la concentration en ions hydronium."])
+
+[sub_resource type="Resource" id="Resource_3x83d"]
+script = ExtResource("1_d51b1")
+question = "Quel est le pH d’une solution aqueuse neutre à 25 °C ?"
+choices = Array[String](["Le pH est égal à zéro.", "Le pH est égal à un.", "Le pH est égal à sept.", "Le pH est égal à quatorze."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_cwj4o"]
+script = ExtResource("1_d51b1")
+question = "Quels sont les produits formés lors de la réaction entre un acide et une base ?"
+choices = Array[String](["Il se forme un dégagement gazeux et de l’eau.", "Il se forme un sel et de l’eau.", "Il se forme uniquement un précipité.", "Il se forme une molécule d’ester."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ttl77"]
+script = ExtResource("1_d51b1")
+question = "Dans le couple acide-base HCl / Cl⁻, quelle est la base conjuguée ?"
+choices = Array[String](["La base conjuguée est l’ion hydrogène.", "La base conjuguée est la molécule d’eau.", "La base conjuguée est l’ion chlorure.", "La base conjuguée est la molécule d’acide chlorhydrique."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_srfxf"]
+script = ExtResource("1_d51b1")
+question = "Comment nomme-t-on la réaction de l’eau sur elle-même ?"
+choices = Array[String](["On appelle cela l’hydratation.", "On appelle cela l’autoprotolyse.", "On appelle cela l’hydrolyse.", "On appelle cela la condensation."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_d0e0w"]
+script = ExtResource("1_d51b1")
+question = "Quel indicateur coloré vire au rose en milieu basique ?"
+choices = Array[String](["Le bleu de bromothymol.", "Le rouge de méthyle.", "La phénolphtaléine.", "L’hélianthine."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_2gsib"]
+script = ExtResource("1_d51b1")
+question = "Quel est le rôle d’une solution titrante lors d’un titrage acido-basique ?"
+choices = Array[String](["Elle sert à ajouter des ions supplémentaires.", "Elle sert à déterminer la concentration d’un analyte inconnu.", "Elle sert à changer uniquement la couleur du milieu.", "Elle sert à précipiter les ions en solution."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_f3mmn"]
+script = ExtResource("1_d51b1")
+question = "Qu’est-ce qu’un acide dit fort ?"
+choices = Array[String](["C’est un acide qui réagit totalement avec l’eau.", "C’est un acide qui réagit très peu avec l’eau.", "C’est un acide qui est très concentré.", "C’est un acide qui ne contient aucun proton."])
+
+[sub_resource type="Resource" id="Resource_stl4s"]
+script = ExtResource("1_d51b1")
+question = "Quelle est la valeur du pKe de l’eau à 25 °C ?"
+choices = Array[String](["La valeur du pKe est de un.", "La valeur du pKe est de sept.", "La valeur du pKe est de dix.", "La valeur du pKe est de quatorze."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_a3457"]
+script = ExtResource("1_d51b1")
+question = "Qu’implique nécessairement une réaction d’oxydoréduction ?"
+choices = Array[String](["Elle implique un transfert de protons.", "Elle implique un transfert d’électrons.", "Elle implique une production d’eau.", "Elle implique une neutralisation."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ft42y"]
+script = ExtResource("1_d51b1")
+question = "À quoi correspond le phénomène d’oxydation ?"
+choices = Array[String](["L’oxydation correspond à un gain d’électrons.", "L’oxydation correspond à une perte d’électrons.", "L’oxydation correspond à une perte de protons.", "L’oxydation correspond à un gain de protons."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_dm7e4"]
+script = ExtResource("1_d51b1")
+question = "À quoi correspond le phénomène de réduction ?"
+choices = Array[String](["La réduction correspond à un gain d’électrons.", "La réduction correspond à une perte d’électrons.", "La réduction correspond à une perte de protons.", "La réduction correspond à un gain de protons."])
+
+[sub_resource type="Resource" id="Resource_o5kiv"]
+script = ExtResource("1_d51b1")
+question = "Comment nomme-t-on l’espèce chimique qui gagne des électrons ?"
+choices = Array[String](["On l’appelle un oxydant.", "On l’appelle un réducteur.", "On l’appelle un catalyseur.", "On l’appelle un produit."])
+
+[resource]
+script = ExtResource("2_eof2t")
+questions = Array[ExtResource("1_d51b1")]([SubResource("Resource_q8oew"), SubResource("Resource_2jqw2"), SubResource("Resource_kqblc"), SubResource("Resource_hvk45"), SubResource("Resource_3x83d"), SubResource("Resource_cwj4o"), SubResource("Resource_ttl77"), SubResource("Resource_srfxf"), SubResource("Resource_d0e0w"), SubResource("Resource_2gsib"), SubResource("Resource_f3mmn"), SubResource("Resource_stl4s"), SubResource("Resource_a3457"), SubResource("Resource_ft42y"), SubResource("Resource_dm7e4"), SubResource("Resource_o5kiv")])

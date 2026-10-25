@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://df38qqopdqg6a"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_s66me"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_l6ual"]
+
+[sub_resource type="Resource" id="Resource_diolk"]
+script = ExtResource("1_s66me")
+question = "En quoi consiste la biomanipulation ?"
+choices = Array[String](["Modification d'un écosystème en ajoutant ou en supprimant des espèces.", "Manipuler des espèces pour les transformer physiquement.", "Manipuler des espèces pour les transformer physiologiquement.", "Manipuler des espèces pour les transformer génétiquement."])
+
+[sub_resource type="Resource" id="Resource_6h8gt"]
+script = ExtResource("1_s66me")
+question = "Qu'est-ce qu'un service écologique ?"
+choices = Array[String](["Un bénéfice fournit par l'écosystème à l'être humain.", "Un bénéfice fournit par l'être humain à l'écosystème.", "Un service issu de la sélection artificielle.", "Un bénéfice sans retour de l'environnement."])
+
+[sub_resource type="Resource" id="Resource_osds6"]
+script = ExtResource("1_s66me")
+question = "A quoi correspond l'empreinte écologique ?"
+choices = Array[String](["C'est la surface de la Terre nécessaire pour rendre possible notre mode de vie.", "C'est la surface de la Terre nécessaire à la reproduction.", "C'est la surface de la Terre nécessaire au développement durable.", "C'est la partie de la Terre où l'on vit."])
+
+[sub_resource type="Resource" id="Resource_8dbeo"]
+script = ExtResource("1_s66me")
+question = "Qu'est-ce que la convergence évolutive ?"
+choices = Array[String](["C'est la même chose que les structures analogues.", "C'est un synonyme de la théorie de l'évolution.", "C'est le principe de la loi de l'usage.", "Une méthode de coévolution."])
+
+[sub_resource type="Resource" id="Resource_gi1hn"]
+script = ExtResource("1_s66me")
+question = "Pourquoi parlons-nous de chaînon manquant en biologie évolutive ?"
+choices = Array[String](["Car il existe toujours des formes intermédiaires entre des espèces.", "Car la chaîne se casse toujours lors de l'évolution.", "Car peu d'espèces sont correctement identifiées.", "Car il existe toujours une absence de fonction dans l'évolution."])
+
+[sub_resource type="Resource" id="Resource_ulsra"]
+script = ExtResource("1_s66me")
+question = "Quelle hypothèse peut-être défendue à propos de l'évolution des chiens domestiques ?"
+choices = Array[String](["Ce sont des dauphins domestiqués.", "Ce sont des loups domestiqués.", "Ils n'ont aucun ancêtre commun.", "C'est l'homme qui a fabriqué le chien."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_wu21w"]
+script = ExtResource("1_s66me")
+question = "Quelle solution a été utilisée pour lutter contre la prolifération des lapins en Australie ?"
+choices = Array[String](["Introduire des moustiques.", "Introduire des renards.", "Introduire des guépards.", "Introduire des mouches."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_facgk"]
+script = ExtResource("1_s66me")
+question = "Quel concept traduit le déplacement d'espèces pour la reproduction ?"
+choices = Array[String](["La biomanipulation.", "La genèse.", "L'évolution.", "La migration."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_88cle"]
+script = ExtResource("1_s66me")
+question = "Que signifie LUCA ?"
+choices = Array[String](["Le dernier ancêtre commun naturel.", "Le premier ancêtre commun universel.", "Le dernier ancêtre commun universel.", "Le premier ancêtre commun naturel."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_ohgcp"]
+script = ExtResource("1_s66me")
+question = "Pourquoi est-il faux de parler de race humaine ?"
+choices = Array[String](["On peut tout à fait en parler.", "Car le terme est ancien.", "Car le terme n'est pas juste.", "Car le terme est en discussion."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_lo44p"]
+script = ExtResource("1_s66me")
+question = "En quoi consiste la loi de l'usage ?"
+choices = Array[String](["Théorie proposée par Darwin.", "Adaptation des espèces piscicoles.", "Mécanisme expliquant l'évolution des espèces selon leur utilisation.", "Sélection des espèces les plus fortes."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("2_l6ual")
+questions = Array[ExtResource("1_s66me")]([SubResource("Resource_diolk"), SubResource("Resource_6h8gt"), SubResource("Resource_osds6"), SubResource("Resource_8dbeo"), SubResource("Resource_gi1hn"), SubResource("Resource_ulsra"), SubResource("Resource_wu21w"), SubResource("Resource_facgk"), SubResource("Resource_88cle"), SubResource("Resource_ohgcp"), SubResource("Resource_lo44p")])

@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://doy00kcyt57jn"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_vgfld"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_ouj12"]
+
+[sub_resource type="Resource" id="Resource_eumcb"]
+script = ExtResource("1_vgfld")
+text = "La peau et les muqueuses forment une barrière protectrice."
+
+[sub_resource type="Resource" id="Resource_cyp36"]
+script = ExtResource("1_vgfld")
+text = "La sueur et le suc gastrique ont un pH acide inhibiteur."
+
+[sub_resource type="Resource" id="Resource_tl8tf"]
+script = ExtResource("1_vgfld")
+text = "Le mucus des voies respiratoires piège les poussières."
+
+[sub_resource type="Resource" id="Resource_hhfpg"]
+script = ExtResource("1_vgfld")
+text = "Les cils vibratiles éliminent le mucus vers le pharynx."
+
+[sub_resource type="Resource" id="Resource_jhm8p"]
+script = ExtResource("1_vgfld")
+text = "Le lysozyme des larmes et de la salive détruit les bactéries."
+
+[sub_resource type="Resource" id="Resource_byanb"]
+script = ExtResource("1_vgfld")
+text = "Le microbiote résident concurrence les agents pathogènes."
+
+[sub_resource type="Resource" id="Resource_ul0ls"]
+script = ExtResource("1_vgfld")
+text = "Une effraction cutanée ouvre la voie aux infections."
+
+[sub_resource type="Resource" id="Resource_ncsrm"]
+script = ExtResource("1_vgfld")
+text = "Les flores cutanées et muqueuses bloquent les germes opportunistes."
+
+[resource]
+script = ExtResource("2_ouj12")
+phrases = Array[ExtResource("1_vgfld")]([SubResource("Resource_eumcb"), SubResource("Resource_cyp36"), SubResource("Resource_tl8tf"), SubResource("Resource_hhfpg"), SubResource("Resource_jhm8p"), SubResource("Resource_byanb"), SubResource("Resource_ul0ls"), SubResource("Resource_ncsrm")])

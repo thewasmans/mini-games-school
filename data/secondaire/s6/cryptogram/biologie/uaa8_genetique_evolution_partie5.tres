@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://boxrobcwjyshv"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_1bajo"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_uefqo"]
+
+[sub_resource type="Resource" id="Resource_q7lut"]
+script = ExtResource("1_1bajo")
+text = "L'évolution humaine montre une lignée buissonnante."
+
+[sub_resource type="Resource" id="Resource_yfdub"]
+script = ExtResource("1_1bajo")
+text = "Le genre Homo se caractérise par un volume crânien accru."
+
+[sub_resource type="Resource" id="Resource_oub6s"]
+script = ExtResource("1_1bajo")
+text = "La bipédie est une innovation majeure des hominines."
+
+[sub_resource type="Resource" id="Resource_lcy8v"]
+script = ExtResource("1_1bajo")
+text = "L'utilisation d'outils façonne l'évolution culturelle humaine."
+
+[sub_resource type="Resource" id="Resource_xe3jd"]
+script = ExtResource("1_1bajo")
+text = "La diversité humaine actuelle reflète une origine africaine commune."
+
+[sub_resource type="Resource" id="Resource_mp3tq"]
+script = ExtResource("1_1bajo")
+text = "Les pressions de sélection s'exercent aussi sur l'humain moderne."
+
+[sub_resource type="Resource" id="Resource_homkl"]
+script = ExtResource("1_1bajo")
+text = "La culture et la technique influencent l'évolution humaine."
+
+[sub_resource type="Resource" id="Resource_qc7nb"]
+script = ExtResource("1_1bajo")
+text = "La génétique des populations étudie l'évolution des gènes humains."
+
+[resource]
+script = ExtResource("2_uefqo")
+phrases = Array[ExtResource("1_1bajo")]([SubResource("Resource_q7lut"), SubResource("Resource_yfdub"), SubResource("Resource_oub6s"), SubResource("Resource_lcy8v"), SubResource("Resource_xe3jd"), SubResource("Resource_mp3tq"), SubResource("Resource_homkl"), SubResource("Resource_qc7nb")])

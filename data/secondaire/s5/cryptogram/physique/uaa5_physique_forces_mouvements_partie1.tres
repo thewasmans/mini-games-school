@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dw23nnlrio80p"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_ayp1w"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_wn0eq"]
+
+[sub_resource type="Resource" id="Resource_ito8h"]
+script = ExtResource("1_ayp1w")
+text = "Une force modifie le mouvement d'un corps."
+
+[sub_resource type="Resource" id="Resource_wibn0"]
+script = ExtResource("1_ayp1w")
+text = "Le principe d'inertie régit l'équilibre."
+
+[sub_resource type="Resource" id="Resource_kq54j"]
+script = ExtResource("1_ayp1w")
+text = "La masse exprime la quantité de matière."
+
+[sub_resource type="Resource" id="Resource_4xfub"]
+script = ExtResource("1_ayp1w")
+text = "Le poids est la force de pesanteur."
+
+[sub_resource type="Resource" id="Resource_3wa3x"]
+script = ExtResource("1_ayp1w")
+text = "La force gravitationnelle s'exerce à distance."
+
+[sub_resource type="Resource" id="Resource_r6857"]
+script = ExtResource("1_ayp1w")
+text = "La force de frottement s'oppose au mouvement."
+
+[resource]
+script = ExtResource("2_wn0eq")
+phrases = Array[ExtResource("1_ayp1w")]([SubResource("Resource_ito8h"), SubResource("Resource_wibn0"), SubResource("Resource_kq54j"), SubResource("Resource_4xfub"), SubResource("Resource_3wa3x"), SubResource("Resource_r6857")])

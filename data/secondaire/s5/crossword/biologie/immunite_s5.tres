@@ -1,0 +1,107 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://yaaclkek7rss"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_yfb0e"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_xc642"]
+
+[sub_resource type="Resource" id="Resource_8f8e7"]
+script = ExtResource("1_yfb0e")
+word = "TEP"
+hint = "Acronyme de la tomographie par émission de positons."
+grid_position = Vector2i(5, 1)
+
+[sub_resource type="Resource" id="Resource_jiccn"]
+script = ExtResource("1_yfb0e")
+word = "GRIPPE"
+hint = "Maladie provoquée par le virus Influenza."
+grid_position = Vector2i(0, 11)
+
+[sub_resource type="Resource" id="Resource_6nh25"]
+script = ExtResource("1_yfb0e")
+word = "IRM"
+hint = "Acronyme d'imagerie par résonance magnétique."
+grid_position = Vector2i(7, 8)
+
+[sub_resource type="Resource" id="Resource_nvfvt"]
+script = ExtResource("1_yfb0e")
+word = "VECTEUR"
+hint = "Véhicule de transport d'un parasite, par exemple."
+grid_position = Vector2i(15, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_1n072"]
+script = ExtResource("1_yfb0e")
+word = "TRYPANOSOME"
+hint = "Parasite unicellulaire responsable de la maladie du sommeil, dont le vecteur est la mouche tsé-tsé."
+grid_position = Vector2i(5, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_d4x7n"]
+script = ExtResource("1_yfb0e")
+word = "RAGE"
+hint = "Infection virale grave transmise en cas de morsure et provoquant de fortes fièvres."
+grid_position = Vector2i(0, 9)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ralsw"]
+script = ExtResource("1_yfb0e")
+word = "ANTIBIOTIQUE"
+hint = "Médicament utilisé pour agir contre une bactérie."
+grid_position = Vector2i(5, 5)
+
+[sub_resource type="Resource" id="Resource_vr7ub"]
+script = ExtResource("1_yfb0e")
+word = "ANTIVIRAL"
+hint = "Médicament utilisé pour agir contre un virus."
+grid_position = Vector2i(7, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_1rmi1"]
+script = ExtResource("1_yfb0e")
+word = "MICROBE"
+hint = "Synonyme de micro-organisme, être vivant microscopique."
+grid_position = Vector2i(9, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_vuwem"]
+script = ExtResource("1_yfb0e")
+word = "VIH"
+hint = "Virus de l'immunodéficience humaine."
+grid_position = Vector2i(2, 10)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_vpba4"]
+script = ExtResource("1_yfb0e")
+word = "PATHOGENE"
+hint = "Se dit d'un agent infectieux qui est responsable d'une maladie."
+grid_position = Vector2i(11, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_mrh54"]
+script = ExtResource("1_yfb0e")
+word = "DIABETE"
+hint = "Maladie qui se caractérise par une variation anormale de la glycémie."
+grid_position = Vector2i(13, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_rdlap"]
+script = ExtResource("1_yfb0e")
+word = "VACCIN"
+hint = "Stratégie médicale permettant de stimuler le système immunitaire pour fabriquer une mémoire immunologique."
+grid_position = Vector2i(0, 6)
+
+[sub_resource type="Resource" id="Resource_8i5kg"]
+script = ExtResource("1_yfb0e")
+word = "GALE"
+hint = "Maladie parasitaire (acarien) de la peau très contagieuse qui provoque des démangeaisons intenses."
+grid_position = Vector2i(1, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_qwc6l"]
+script = ExtResource("1_yfb0e")
+word = "MOELLE"
+hint = "Structure contenant des os et intervenant dans la fabrication des cellules du sang."
+grid_position = Vector2i(13, 1)
+
+[resource]
+script = ExtResource("2_xc642")
+clues = Array[ExtResource("1_yfb0e")]([SubResource("Resource_8f8e7"), SubResource("Resource_jiccn"), SubResource("Resource_6nh25"), SubResource("Resource_nvfvt"), SubResource("Resource_1n072"), SubResource("Resource_d4x7n"), SubResource("Resource_ralsw"), SubResource("Resource_vr7ub"), SubResource("Resource_1rmi1"), SubResource("Resource_vuwem"), SubResource("Resource_vpba4"), SubResource("Resource_mrh54"), SubResource("Resource_rdlap"), SubResource("Resource_8i5kg"), SubResource("Resource_qwc6l")])

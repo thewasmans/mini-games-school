@@ -1,0 +1,88 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://c8v1p5qxs21qd"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_3sbim"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_k6cp1"]
+
+[sub_resource type="Resource" id="Resource_yyv4g"]
+script = ExtResource("1_3sbim")
+question = "Les ondes électromagnétiques ont-elles besoin d’un support matériel pour se propager ?"
+choices = Array[String](["Oui, toujours.", "Oui, sauf dans l’eau.", "Non, elles peuvent se propager dans le vide.", "Non, seulement dans les métaux."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_u8mds"]
+script = ExtResource("1_3sbim")
+question = "Quelle est la vitesse de la lumière dans le vide ?"
+choices = Array[String](["Environ 300 000 kilomètres par seconde.", "Environ 340 mètres par seconde.", "Environ 10 mètres par seconde.", "Environ 3 millions de kilomètres par seconde."])
+
+[sub_resource type="Resource" id="Resource_2a1ki"]
+script = ExtResource("1_3sbim")
+question = "Pourquoi le son ne se propage-t-il pas dans le vide ?"
+choices = Array[String](["Parce qu’il n’y a pas de molécules pour transmettre la vibration.", "Parce que la lumière empêche le son.", "Parce que le son est une onde électromagnétique.", "Parce que la température est trop basse."])
+
+[sub_resource type="Resource" id="Resource_dhjd6"]
+script = ExtResource("1_3sbim")
+question = "Quel paramètre détermine la hauteur (le grave ou l’aigu) d’un son ?"
+choices = Array[String](["L’amplitude.", "La fréquence.", "La vitesse de propagation.", "La forme de la source sonore."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_6hoqj"]
+script = ExtResource("1_3sbim")
+question = "Quel paramètre détermine l’intensité (le volume) d’un son ?"
+choices = Array[String](["La fréquence.", "La longueur d’onde.", "L’amplitude.", "La période."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_73xyn"]
+script = ExtResource("1_3sbim")
+question = "Que signifie le principe de superposition des ondes ?"
+choices = Array[String](["Deux ondes ne peuvent jamais se croiser.", "Le déplacement résultant est la somme algébrique des déplacements individuels.", "L’onde la plus forte détruit toujours l’onde la plus faible.", "Les ondes fusionnent pour créer une nouvelle matière."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_715hc"]
+script = ExtResource("1_3sbim")
+question = "Qu’est-ce qu’une onde stationnaire ?"
+choices = Array[String](["Une onde qui se propage à l’infini.", "Une onde résultant de la superposition d’ondes voyageant en sens opposés.", "Une onde qui n’a pas d’amplitude.", "Une onde qui se déplace uniquement verticalement."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_n6mcd"]
+script = ExtResource("1_3sbim")
+question = "Qu’appelle-t-on le front d’onde ?"
+choices = Array[String](["La partie la plus rapide de l’onde.", "L’ensemble des points de l’onde ayant le même état vibratoire.", "La queue de l’onde.", "La fréquence minimale de l’onde."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_imbnd"]
+script = ExtResource("1_3sbim")
+question = "Quelle est la conséquence de la réfraction d’une onde ?"
+choices = Array[String](["La vitesse change et la direction est modifiée lors du changement de milieu.", "L’onde s’arrête à la frontière des deux milieux.", "L’onde devient électromagnétique.", "La longueur d’onde devient nulle."])
+
+[sub_resource type="Resource" id="Resource_02o14"]
+script = ExtResource("1_3sbim")
+question = "Quel est le phénomène responsable de l’effet Doppler ?"
+choices = Array[String](["Le changement de fréquence perçu dû au mouvement relatif de la source et de l’observateur.", "L’augmentation de la vitesse de la lumière.", "La réflexion des ondes sur un miroir.", "L’arrêt des ondes lors d’une collision."])
+
+[sub_resource type="Resource" id="Resource_7ocsx"]
+script = ExtResource("1_3sbim")
+question = "Dans quel état de la matière le son se propage-t-il généralement le plus vite ?"
+choices = Array[String](["Dans le vide.", "Dans les gaz.", "Dans les liquides.", "Dans les solides."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_enium"]
+script = ExtResource("1_3sbim")
+question = "Comment qualifie-t-on une onde dont la source vibre de manière périodique ?"
+choices = Array[String](["Onde impulsionnelle.", "Onde harmonique.", "Onde désordonnée.", "Onde unique."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_jgnp4"]
+script = ExtResource("1_3sbim")
+question = "Que représente la phase d’une onde ?"
+choices = Array[String](["La vitesse de l’onde.", "L’état de vibration à un instant précis dans le cycle.", "La longueur totale de l’onde.", "La masse de l’onde."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_oth86"]
+script = ExtResource("1_3sbim")
+question = "Quelle propriété physique est transportée par une onde ?"
+choices = Array[String](["De la matière.", "De l’énergie.", "Des électrons uniquement.", "Des atomes de carbone."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_k6cp1")
+questions = Array[ExtResource("1_3sbim")]([SubResource("Resource_yyv4g"), SubResource("Resource_u8mds"), SubResource("Resource_2a1ki"), SubResource("Resource_dhjd6"), SubResource("Resource_6hoqj"), SubResource("Resource_73xyn"), SubResource("Resource_715hc"), SubResource("Resource_n6mcd"), SubResource("Resource_imbnd"), SubResource("Resource_02o14"), SubResource("Resource_7ocsx"), SubResource("Resource_enium"), SubResource("Resource_jgnp4"), SubResource("Resource_oth86")])

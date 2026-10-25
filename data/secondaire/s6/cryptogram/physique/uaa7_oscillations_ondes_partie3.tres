@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://cf27vr28r8fw1"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_2mwps"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_p4d6b"]
+
+[sub_resource type="Resource" id="Resource_m0ces"]
+script = ExtResource("1_2mwps")
+text = "Le son est une onde mécanique longitudinale."
+
+[sub_resource type="Resource" id="Resource_qe8jo"]
+script = ExtResource("1_2mwps")
+text = "La hauteur d'un son dépend de sa fréquence."
+
+[sub_resource type="Resource" id="Resource_top2l"]
+script = ExtResource("1_2mwps")
+text = "L'intensité sonore se mesure en décibels."
+
+[sub_resource type="Resource" id="Resource_50g12"]
+script = ExtResource("1_2mwps")
+text = "Le phénomène de résonance amplifie les vibrations."
+
+[sub_resource type="Resource" id="Resource_xerrf"]
+script = ExtResource("1_2mwps")
+text = "Les interférences superposent deux ondes."
+
+[sub_resource type="Resource" id="Resource_yghqn"]
+script = ExtResource("1_2mwps")
+text = "La diffraction contourne les obstacles."
+
+[resource]
+script = ExtResource("2_p4d6b")
+phrases = Array[ExtResource("1_2mwps")]([SubResource("Resource_m0ces"), SubResource("Resource_qe8jo"), SubResource("Resource_top2l"), SubResource("Resource_50g12"), SubResource("Resource_xerrf"), SubResource("Resource_yghqn")])
