@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://c6acpncmds2rc"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_qlphd"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_ca2mo"]
+
+[sub_resource type="Resource" id="Resource_gsrvc"]
+script = ExtResource("1_qlphd")
+question = "Qu'est-ce que le CO2 ?"
+choices = Array[String](["Dioxyde de carbone.", "Dioxyde de soufre.", "Dioxyde de fer.", "Un gaz rare."])
+
+[sub_resource type="Resource" id="Resource_lexo8"]
+script = ExtResource("1_qlphd")
+question = "Qu'est-ce que le chlorure de sodium ?"
+choices = Array[String](["Corps pur simple.", "Corps pur composé.", "Mélange hétérogène.", "Une cellule."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_lcdho"]
+script = ExtResource("1_qlphd")
+question = "Que représente l'indice \"2\" dans le CO2 ?"
+choices = Array[String](["Nb atomes carbone.", "Nb atomes oxygène.", "Nb électrons.", "Masse molaire."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_87ny7"]
+script = ExtResource("1_qlphd")
+question = "Qu'est-ce que la concentration massique ?"
+choices = Array[String](["C'est la masse de soluté présente dans un litre de la solution.", "Nbre électrons.", "Les différents isotopes d'un élément.", "C'est la quantité de matière dissoute dans un litre de solution."])
+
+[sub_resource type="Resource" id="Resource_i87f7"]
+script = ExtResource("1_qlphd")
+question = "Qu'est-ce que la concentration molaire ?"
+choices = Array[String](["C'est la masse de soluté présente dans un litre de la solution.", "Nbre électrons.", "Les différents isotopes d'un élément.", "C'est la quantité de matière dissoute dans un litre de solution."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_la34h"]
+script = ExtResource("1_qlphd")
+question = "Quel est l'objectif de la dilution ?"
+choices = Array[String](["Diminuer la concentration d'une solution en y ajoutant du solvant.", "Augmenter la concentration d'une solution en y ajoutant du solvant.", "Augmenter la quantité de solvant.", "Transformer un corps solide en liquide."])
+
+[sub_resource type="Resource" id="Resource_nwb6i"]
+script = ExtResource("1_qlphd")
+question = "Quel est l'objectif de la dissolution ?"
+choices = Array[String](["Diminuer la concentration d'une solution en y ajoutant du solvant.", "Augmenter la concentration d'une solution en y ajoutant du solvant.", "Augmenter la quantité de solvant.", "Transformer un corps solide en liquide."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_8dxl5"]
+script = ExtResource("1_qlphd")
+question = "Que peux-tu dire à propos de l'eau ?"
+choices = Array[String](["Solvant.", "Atome.", "Incompatible avec la vie.", "Se divise (mitose)."])
+
+[sub_resource type="Resource" id="Resource_tk4bn"]
+script = ExtResource("1_qlphd")
+question = "Que faut-il faire lors d'un labo ?"
+choices = Array[String](["Manger.", "Porter son tablier.", "Etre toujours proche du bec de Bunsen.", "Ne pas prendre des gants."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_n2rpe"]
+script = ExtResource("1_qlphd")
+question = "Que peut-on dire à propos du NaCl ?"
+choices = Array[String](["C'est un sel.", "Chlorure de sodium.", "Une molécule.", "Toutes ces phrases."])
+correct_choice_index = 3
+
+[resource]
+script = ExtResource("2_ca2mo")
+questions = Array[ExtResource("1_qlphd")]([SubResource("Resource_gsrvc"), SubResource("Resource_lexo8"), SubResource("Resource_lcdho"), SubResource("Resource_87ny7"), SubResource("Resource_i87f7"), SubResource("Resource_la34h"), SubResource("Resource_nwb6i"), SubResource("Resource_8dxl5"), SubResource("Resource_tk4bn"), SubResource("Resource_n2rpe")])

@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://dj5db08ofrjsx"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_ppwl2"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_nkhw7"]
+
+[sub_resource type="Resource" id="Resource_1bmrm"]
+script = ExtResource("1_ppwl2")
+question = "Quelle est la composition de l'air ?"
+choices = Array[String](["Azote, oxygène et gaz rares.", "Azote, fer et aluminium.", "Azote, carbone et chlore.", "Principalement du CO2."])
+
+[sub_resource type="Resource" id="Resource_dnmen"]
+script = ExtResource("1_ppwl2")
+question = "Que peux-tu dire à propos de l'air ?"
+choices = Array[String](["Corps pur.", "Mélange.", "Odeur unique.", "Toutes ces phrases."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_yru7m"]
+script = ExtResource("1_ppwl2")
+question = "Que représente le numéro atomique ?"
+choices = Array[String](["Nbre d'électrons.", "Nbre de protons.", "Aucune.", "Symbole."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_sauue"]
+script = ExtResource("1_ppwl2")
+question = "Que représente le nombre de masse ?"
+choices = Array[String](["Nbre d'électrons.", "Nbre de protons.", "Aucune.", "Nbre de nucléons."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_gp2vk"]
+script = ExtResource("1_ppwl2")
+question = "Élément chimique n° atomique 1 ?"
+choices = Array[String](["Néon.", "Carbone.", "Hydrogène.", "Fer."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_va7pp"]
+script = ExtResource("1_ppwl2")
+question = "Quel est le symbole de l'azote ?"
+choices = Array[String](["O.", "He.", "A.", "N."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_c8qk0"]
+script = ExtResource("1_ppwl2")
+question = "Quel est le symbole du soufre ?"
+choices = Array[String](["O.", "He.", "S.", "N."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_20kup"]
+script = ExtResource("1_ppwl2")
+question = "Quel est le symbole de l'hélium ?"
+choices = Array[String](["O.", "He.", "S.", "N."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_smcmx"]
+script = ExtResource("1_ppwl2")
+question = "Qu'est-ce que le dioxyde de soufre ?"
+choices = Array[String](["Un atome.", "Élément chimique.", "Une molécule.", "Corps pur simple."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("2_nkhw7")
+questions = Array[ExtResource("1_ppwl2")]([SubResource("Resource_1bmrm"), SubResource("Resource_dnmen"), SubResource("Resource_yru7m"), SubResource("Resource_sauue"), SubResource("Resource_gp2vk"), SubResource("Resource_va7pp"), SubResource("Resource_c8qk0"), SubResource("Resource_20kup"), SubResource("Resource_smcmx")])

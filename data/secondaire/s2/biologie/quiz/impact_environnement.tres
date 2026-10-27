@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bi2eaiuc37p80"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_cksw0"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_x6p50"]
+
+[sub_resource type="Resource" id="Resource_ewjnp"]
+script = ExtResource("1_cksw0")
+question = "Quel impact de l'homme se traduit par la destruction d'habitats d'espèces ?"
+choices = Array[String](["La deforestation.", "La pollution.", "La surpêche.", "L'introduction d'espèces invasives."])
+
+[sub_resource type="Resource" id="Resource_c1sfl"]
+script = ExtResource("1_cksw0")
+question = "Quel impact de l'homme se traduit par la contamination d'un environnement ?"
+choices = Array[String](["La deforestation.", "La pollution.", "La surpêche.", "L'introduction d'espèces invasives."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_hcuw5"]
+script = ExtResource("1_cksw0")
+question = "Quel impact de l'homme se traduit par la surexploitation des ressources ?"
+choices = Array[String](["La deforestation.", "La pollution.", "La surpêche.", "L'introduction d'espèces invasives."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_4hons"]
+script = ExtResource("1_cksw0")
+question = "Quel impact de l'homme se traduit par le changement de la chaîne alimentaire ?"
+choices = Array[String](["La deforestation.", "La pollution.", "La surpêche.", "L'introduction d'espèces invasives."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_jt7r3"]
+script = ExtResource("1_cksw0")
+question = "Quelle mesure de sauvegarde de la nature est-elle mise en place ?"
+choices = Array[String](["Le déplacement des animaux.", "Les réserves naturelles.", "La création d'un potager.", "Le développement de piscines industrielles."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_qjjte"]
+script = ExtResource("1_cksw0")
+question = "En quoi consiste les zones Natura 2000 ?"
+choices = Array[String](["Des aires protégées.", "Des zones avec des animaux cachés.", "Un zoo hautement sécurisé.", "Un lieu où seulement la femme peut entrer."])
+
+[sub_resource type="Resource" id="Resource_0shgn"]
+script = ExtResource("1_cksw0")
+question = "Qu'est-ce que la biodiversité ?"
+choices = Array[String](["Diversité des animaux.", "Diversité des plantes.", "Diversité des êtres vivants.", "Correspond au biotope."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_5h35y"]
+script = ExtResource("1_cksw0")
+question = "Quel phénomène naturel est renforcé par les activités humaines ?"
+choices = Array[String](["L'effet de serre.", "L'érosion des sols.", "La tectonique des plaques.", "L'inversion magnétique."])
+
+[sub_resource type="Resource" id="Resource_5tklt"]
+script = ExtResource("1_cksw0")
+question = "Que mesure l'indicateur appelé \"empreinte écologique\" ?"
+choices = Array[String](["La quantité de déchets plastiques dans les océans.", "La surface nécessaire pour produire ce qu'un individu consomme et absorber ses déchets.", "Le taux de dioxyde de carbone rejeté par une usine.", "Le nombre d'espèces animales menacées d'extinction."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_wtmq5"]
+script = ExtResource("1_cksw0")
+question = "Quel est l'objectif principal du développement durable ?"
+choices = Array[String](["Répondre aux besoins du présent.", "Stopper totalement toute industrialisation humaine.", "Maximiser les profits économiques à court terme.", "Remplacer toutes les forêts par des cultures agricoles."])
+
+[sub_resource type="Resource" id="Resource_2dp28"]
+script = ExtResource("1_cksw0")
+question = "Quelle infrastructure humaine est la cause majeure de la fragmentation des habitats naturels ?"
+choices = Array[String](["La construction de routes et d'autoroutes.", "L'installation de panneaux solaires dans les déserts.", "La plantation d'arbres fruitiers dans les jardins.", "Le développement de sentiers pédestres balisés."])
+
+[sub_resource type="Resource" id="Resource_ciogn"]
+script = ExtResource("1_cksw0")
+question = "Pourquoi l'introduction d'une espèce exotique envahissante perturbe-t-elle l'écosystème local ?"
+choices = Array[String](["Elle nettoie les rivières de toute pollution.", "Elle concurrence et menace les espèces indigènes locales.", "Elle diminue automatiquement la température de l'eau.", "Elle augmente la fertilité des sols en quelques semaines."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_x6p50")
+questions = Array[ExtResource("1_cksw0")]([SubResource("Resource_ewjnp"), SubResource("Resource_c1sfl"), SubResource("Resource_hcuw5"), SubResource("Resource_4hons"), SubResource("Resource_jt7r3"), SubResource("Resource_qjjte"), SubResource("Resource_0shgn"), SubResource("Resource_5h35y"), SubResource("Resource_5tklt"), SubResource("Resource_wtmq5"), SubResource("Resource_2dp28"), SubResource("Resource_ciogn")])

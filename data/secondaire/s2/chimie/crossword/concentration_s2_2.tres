@@ -1,0 +1,98 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://mvygdviuje4t"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_8jgwt"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_32rer"]
+
+[sub_resource type="Resource" id="Resource_mtnqn"]
+script = ExtResource("1_8jgwt")
+word = "FE"
+hint = "Symbole chimique du fer."
+grid_position = Vector2i(4, 4)
+
+[sub_resource type="Resource" id="Resource_00os4"]
+script = ExtResource("1_8jgwt")
+word = "HYDROXYDE"
+hint = "Fonction chimique qui se note -OH."
+grid_position = Vector2i(0, 15)
+
+[sub_resource type="Resource" id="Resource_w3lul"]
+script = ExtResource("1_8jgwt")
+word = "SODIUM"
+hint = "Elément chimique dont la symbole est Na."
+grid_position = Vector2i(7, 13)
+
+[sub_resource type="Resource" id="Resource_piuy5"]
+script = ExtResource("1_8jgwt")
+word = "OR"
+hint = "Elément chimique dont la symbole est Au."
+grid_position = Vector2i(4, 15)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_q7bto"]
+script = ExtResource("1_8jgwt")
+word = "CONCENTRATION"
+hint = "Rapport entre la quantité de soluté présente dans une quantité donnée de solution."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_uryjl"]
+script = ExtResource("1_8jgwt")
+word = "HELIUM"
+hint = "Elément chimique dont la symbole est He."
+grid_position = Vector2i(0, 15)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_mgu3d"]
+script = ExtResource("1_8jgwt")
+word = "NB"
+hint = "Symbole chimique du niobium."
+grid_position = Vector2i(5, 2)
+
+[sub_resource type="Resource" id="Resource_xmhic"]
+script = ExtResource("1_8jgwt")
+word = "MG"
+hint = "Symbole chimique du magnésium."
+grid_position = Vector2i(12, 13)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_n8b8q"]
+script = ExtResource("1_8jgwt")
+word = "CARBONE"
+hint = "Elément chimique dont la symbole est C."
+grid_position = Vector2i(5, 0)
+
+[sub_resource type="Resource" id="Resource_ai08k"]
+script = ExtResource("1_8jgwt")
+word = "CR"
+hint = "Symbole chimique du chrome."
+grid_position = Vector2i(3, 14)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_06agd"]
+script = ExtResource("1_8jgwt")
+word = "AS"
+hint = "Symbole chimique de l'arsenic."
+grid_position = Vector2i(5, 8)
+
+[sub_resource type="Resource" id="Resource_wep00"]
+script = ExtResource("1_8jgwt")
+word = "AZOTE"
+hint = "Elément chimique dont la symbole est N."
+grid_position = Vector2i(8, 11)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_b1sep"]
+script = ExtResource("1_8jgwt")
+word = "SOLVANT"
+hint = "Se dit d'une substance qui permet de dissoudre, comme l'eau."
+grid_position = Vector2i(4, 11)
+
+[sub_resource type="Resource" id="Resource_0jcgl"]
+script = ExtResource("1_8jgwt")
+word = "FLUOR"
+hint = "Elément chimique dont la symbole est F."
+grid_position = Vector2i(1, 7)
+
+[resource]
+script = ExtResource("2_32rer")
+clues = Array[ExtResource("1_8jgwt")]([SubResource("Resource_mtnqn"), SubResource("Resource_00os4"), SubResource("Resource_w3lul"), SubResource("Resource_piuy5"), SubResource("Resource_q7bto"), SubResource("Resource_uryjl"), SubResource("Resource_mgu3d"), SubResource("Resource_xmhic"), SubResource("Resource_n8b8q"), SubResource("Resource_ai08k"), SubResource("Resource_06agd"), SubResource("Resource_wep00"), SubResource("Resource_b1sep"), SubResource("Resource_0jcgl")])

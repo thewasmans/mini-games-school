@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://jvycb5gjusd"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_gtj2b"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_nwn22"]
+
+[sub_resource type="Resource" id="Resource_k3ain"]
+script = ExtResource("1_gtj2b")
+question = "Qu'est-ce qu'une dissolution ?"
+choices = Array[String](["Se dit de la substance qui va être dissoute.", "Se dit de la substance qui va dissoudre le composé.", "Se dit du résultat entre le solvant et le soluté.", "Se dit de la réaction chimique qui se produit pour obtenir une solution complète."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_kvcgr"]
+script = ExtResource("1_gtj2b")
+question = "Qu'est-ce qu'une solution ?"
+choices = Array[String](["Se dit de la substance qui va être dissoute.", "Se dit de la substance qui va dissoudre le composé.", "Se dit du résultat entre le solvant et le soluté.", "Se dit de la réaction chimique qui se produit pour obtenir une solution complète."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_gtgot"]
+script = ExtResource("1_gtj2b")
+question = "En quoi consiste la filtration ?"
+choices = Array[String](["Cette méthode permet de recueillir le solide dans le filtre et d’obtenir un liquide appelé filtrat.", "Procédé qui consiste à débarrasser un liquide de ses impuretés lourdes en les laissant se déposer sur le fond..", "Procédé qui consiste à faire tourner le mélange autour d’un axe de rotation.", "Procédé par lequel un mélange est chauffé dans un système fermé."])
+
+[sub_resource type="Resource" id="Resource_fd2e0"]
+script = ExtResource("1_gtj2b")
+question = "En quoi consiste la décantation ?"
+choices = Array[String](["Cette méthode permet de recueillir le solide dans le filtre et d’obtenir un liquide appelé filtrat.", "Procédé qui consiste à débarrasser un liquide de ses impuretés lourdes en les laissant se déposer sur le fond..", "Procédé qui consiste à faire tourner le mélange autour d’un axe de rotation.", "Procédé par lequel un mélange est chauffé dans un système fermé."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_0edcn"]
+script = ExtResource("1_gtj2b")
+question = "En quoi consiste la centrigufation ?"
+choices = Array[String](["Cette méthode permet de recueillir le solide dans le filtre et d’obtenir un liquide appelé filtrat.", "Procédé qui consiste à débarrasser un liquide de ses impuretés lourdes en les laissant se déposer sur le fond..", "Procédé qui consiste à faire tourner le mélange autour d’un axe de rotation.", "Procédé par lequel un mélange est chauffé dans un système fermé."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_4i3mp"]
+script = ExtResource("1_gtj2b")
+question = "En quoi consiste la distillation ?"
+choices = Array[String](["Cette méthode permet de recueillir le solide dans le filtre et d’obtenir un liquide appelé filtrat.", "Procédé qui consiste à débarrasser un liquide de ses impuretés lourdes en les laissant se déposer sur le fond..", "Procédé qui consiste à faire tourner le mélange autour d’un axe de rotation.", "Procédé par lequel un mélange est chauffé dans un système fermé."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_7uc24"]
+script = ExtResource("1_gtj2b")
+question = "Que peux-tu dire à propos du fer ?"
+choices = Array[String](["C'est un corps pur simple.", "C'est un corps pur composé.", "C'est un mélange homogène.", "C'est un mélange hétérogène."])
+
+[resource]
+script = ExtResource("2_nwn22")
+questions = Array[ExtResource("1_gtj2b")]([SubResource("Resource_k3ain"), SubResource("Resource_kvcgr"), SubResource("Resource_gtgot"), SubResource("Resource_fd2e0"), SubResource("Resource_0edcn"), SubResource("Resource_4i3mp"), SubResource("Resource_7uc24")])

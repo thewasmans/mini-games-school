@@ -1,0 +1,88 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cvtxh75lplqqx"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_3rpa1"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_ffcnh"]
+
+[sub_resource type="Resource" id="Resource_2ab3r"]
+script = ExtResource("1_3rpa1")
+word = "ABIOTIQUES"
+hint = "Se dit des facteurs d'un environnement qui ne font pas partie du vivant (température, pH…)."
+grid_position = Vector2i(10, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_mwske"]
+script = ExtResource("1_3rpa1")
+word = "SEVE"
+hint = "Equivalent du sang qui coule dans les tissus des plantes."
+grid_position = Vector2i(0, 7)
+
+[sub_resource type="Resource" id="Resource_0k8ba"]
+script = ExtResource("1_3rpa1")
+word = "ECOSYSTEME"
+hint = "Ensemble formé par une communauté d'êtres vivants en interaction avec leur environnement."
+grid_position = Vector2i(17, 11)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_6jxc7"]
+script = ExtResource("1_3rpa1")
+word = "CHLOROPHYLLE"
+hint = "Pigment vert des végétaux qui joue un rôle essentiel dans la photosynthèse."
+grid_position = Vector2i(6, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_1w7m7"]
+script = ExtResource("1_3rpa1")
+word = "BIOTIQUES"
+hint = "Se dit des facteurs d'un environnement qui font partie du vivant (prédateurs...)."
+grid_position = Vector2i(12, 10)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ideni"]
+script = ExtResource("1_3rpa1")
+word = "LIN"
+hint = "Herbe cultivée surtout pour les fibres textiles de sa tige."
+grid_position = Vector2i(6, 2)
+
+[sub_resource type="Resource" id="Resource_6m3qa"]
+script = ExtResource("1_3rpa1")
+word = "MIEL"
+hint = "Service écologique fournit par les abeilles."
+grid_position = Vector2i(14, 10)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_jbs08"]
+script = ExtResource("1_3rpa1")
+word = "ESPECE"
+hint = "Taxon de base dont la définition n'est pas unanime entre les scientifiques."
+grid_position = Vector2i(2, 0)
+
+[sub_resource type="Resource" id="Resource_50v4u"]
+script = ExtResource("1_3rpa1")
+word = "INTERSPECIFIQUE"
+hint = "Type de relation entre des organismes d'espèces différentes."
+grid_position = Vector2i(3, 11)
+
+[sub_resource type="Resource" id="Resource_an4ox"]
+script = ExtResource("1_3rpa1")
+word = "RESEAU"
+hint = "Ensemble de chaines alimentaires."
+grid_position = Vector2i(16, 6)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ffyo1"]
+script = ExtResource("1_3rpa1")
+word = "COOPERATION"
+hint = "Travail d'équipe entre les mêmes espèces pour assurer leur survie, se dit également pour un jeu de société."
+grid_position = Vector2i(3, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_lc76t"]
+script = ExtResource("1_3rpa1")
+word = "PARASITISME"
+hint = "Association entre deux espèces dans laquelle le parasite vit aux dépens de l'hôte."
+grid_position = Vector2i(8, 7)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_ffcnh")
+clues = Array[ExtResource("1_3rpa1")]([SubResource("Resource_2ab3r"), SubResource("Resource_mwske"), SubResource("Resource_0k8ba"), SubResource("Resource_6jxc7"), SubResource("Resource_1w7m7"), SubResource("Resource_ideni"), SubResource("Resource_6m3qa"), SubResource("Resource_jbs08"), SubResource("Resource_50v4u"), SubResource("Resource_an4ox"), SubResource("Resource_ffyo1"), SubResource("Resource_lc76t")])

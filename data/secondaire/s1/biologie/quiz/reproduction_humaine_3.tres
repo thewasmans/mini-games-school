@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://c4mywbjnv68xg"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_gbsko"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_nxoij"]
+
+[sub_resource type="Resource" id="Resource_hk3b1"]
+script = ExtResource("1_gbsko")
+question = "Quel organe se développe chez la femme durant la grossesse ?"
+choices = Array[String](["Le coeur.", "Le cerveau.", "Le placenta.", "Le foie."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_e06fg"]
+script = ExtResource("1_gbsko")
+question = "Comment se nomme le premier stade après la fécondation ?"
+choices = Array[String](["Le nouveau né.", "Le foetus.", "L'embryon.", "Le bébé."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_8cp8r"]
+script = ExtResource("1_gbsko")
+question = "Quel est le premier organe qui se développe chez l'embryon ?"
+choices = Array[String](["Le cerveau.", "Le sexe.", "Le coeur.", "Le poumon."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_bugxr"]
+script = ExtResource("1_gbsko")
+question = "Comment se nomme l'hormone masculine ?"
+choices = Array[String](["Oestradiol.", "Dopamine.", "Insuline.", "Testostérone."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_oc4dh"]
+script = ExtResource("1_gbsko")
+question = "Comment se nomme l'hormone féminine ?"
+choices = Array[String](["Oestradiol.", "Dopamine.", "Insuline.", "Testostérone."])
+
+[resource]
+script = ExtResource("2_nxoij")
+questions = Array[ExtResource("1_gbsko")]([SubResource("Resource_hk3b1"), SubResource("Resource_e06fg"), SubResource("Resource_8cp8r"), SubResource("Resource_bugxr"), SubResource("Resource_oc4dh")])

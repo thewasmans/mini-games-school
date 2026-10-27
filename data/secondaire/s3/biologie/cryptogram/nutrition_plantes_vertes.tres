@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://l5tnecsy5aea"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_kyi40"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_06fws"]
+
+[sub_resource type="Resource" id="Resource_t4bxq"]
+script = ExtResource("1_kyi40")
+text = "Les plantes vertes fabriquent leur propre matière organique."
+
+[sub_resource type="Resource" id="Resource_richp"]
+script = ExtResource("1_kyi40")
+text = "La photosynthèse nécessite de l'eau"
+hint = "du dioxyde de carbone et de la lumière."
+
+[sub_resource type="Resource" id="Resource_4dx8d"]
+script = ExtResource("1_kyi40")
+text = "Les racines absorbent l'eau et les sels minéraux du sol."
+
+[sub_resource type="Resource" id="Resource_5rr1q"]
+script = ExtResource("1_kyi40")
+text = "Les feuilles captent l'énergie lumineuse grâce à la chlorophylle."
+
+[sub_resource type="Resource" id="Resource_6j2kt"]
+script = ExtResource("1_kyi40")
+text = "Les stomates permettent les échanges de gaz avec l'atmosphère."
+
+[sub_resource type="Resource" id="Resource_r083s"]
+script = ExtResource("1_kyi40")
+text = "La plante absorbe du dioxyde de carbone et rejette du dioxygène."
+
+[sub_resource type="Resource" id="Resource_glh2u"]
+script = ExtResource("1_kyi40")
+text = "La sève brute transporte l'eau et les minéraux des racines vers les feuilles."
+
+[sub_resource type="Resource" id="Resource_e1tm1"]
+script = ExtResource("1_kyi40")
+text = "La sève élaborée distribue les nutriments organiques dans toute la plante."
+
+[sub_resource type="Resource" id="Resource_s856l"]
+script = ExtResource("1_kyi40")
+text = "La lumière du soleil est la source d'énergie indispensable à la photosynthèse."
+
+[sub_resource type="Resource" id="Resource_brgu5"]
+script = ExtResource("1_kyi40")
+text = "Les végétaux verts sont les principaux producteurs des écosystèmes."
+
+[resource]
+script = ExtResource("2_06fws")
+phrases = Array[ExtResource("1_kyi40")]([SubResource("Resource_t4bxq"), SubResource("Resource_richp"), SubResource("Resource_4dx8d"), SubResource("Resource_5rr1q"), SubResource("Resource_6j2kt"), SubResource("Resource_r083s"), SubResource("Resource_glh2u"), SubResource("Resource_e1tm1"), SubResource("Resource_s856l"), SubResource("Resource_brgu5")])

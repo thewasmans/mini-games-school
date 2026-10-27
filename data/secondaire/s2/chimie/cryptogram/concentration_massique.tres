@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://c48utcotjwa56"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_rtt4k"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_k05lt"]
+
+[sub_resource type="Resource" id="Resource_7lsck"]
+script = ExtResource("1_rtt4k")
+text = "Une solution est obtenue par dissolution d'un soluté dans un solvant."
+
+[sub_resource type="Resource" id="Resource_op04w"]
+script = ExtResource("1_rtt4k")
+text = "Le soluté est la substance dissoute et le solvant est le liquide."
+
+[sub_resource type="Resource" id="Resource_rtd5m"]
+script = ExtResource("1_rtt4k")
+text = "La concentration massique indique la masse de soluté par litre de solution."
+
+[sub_resource type="Resource" id="Resource_ps4ib"]
+script = ExtResource("1_rtt4k")
+text = "L'unité usuelle de la concentration massique est le gramme par litre."
+
+[sub_resource type="Resource" id="Resource_dxice"]
+script = ExtResource("1_rtt4k")
+text = "Pour calculer la concentration"
+hint = "on divise la masse par le volume."
+
+[sub_resource type="Resource" id="Resource_hx6if"]
+script = ExtResource("1_rtt4k")
+text = "Une solution saturée ne peut plus dissoudre de soluté supplémentaire."
+
+[sub_resource type="Resource" id="Resource_dbnro"]
+script = ExtResource("1_rtt4k")
+text = "La dilution consiste à ajouter du solvant pour diminuer la concentration."
+
+[sub_resource type="Resource" id="Resource_ray2i"]
+script = ExtResource("1_rtt4k")
+text = "Lors d'une dilution"
+hint = "la masse de soluté dissous reste constante."
+
+[sub_resource type="Resource" id="Resource_hynf1"]
+script = ExtResource("1_rtt4k")
+text = "Plus une solution est concentrée"
+hint = "plus sa couleur est intense."
+
+[sub_resource type="Resource" id="Resource_1s6do"]
+script = ExtResource("1_rtt4k")
+text = "Le volume total de la solution est égal au volume de solvant ajouté."
+
+[resource]
+script = ExtResource("2_k05lt")
+phrases = Array[ExtResource("1_rtt4k")]([SubResource("Resource_7lsck"), SubResource("Resource_op04w"), SubResource("Resource_rtd5m"), SubResource("Resource_ps4ib"), SubResource("Resource_dxice"), SubResource("Resource_hx6if"), SubResource("Resource_dbnro"), SubResource("Resource_ray2i"), SubResource("Resource_hynf1"), SubResource("Resource_1s6do")])

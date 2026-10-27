@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://b7oujvu0hm2lm"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_3je2x"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_eh1e4"]
+
+[sub_resource type="Resource" id="Resource_an0k1"]
+script = ExtResource("1_3je2x")
+text = "L'être humain modifie profondément les écosystèmes par ses activités."
+
+[sub_resource type="Resource" id="Resource_sj8vh"]
+script = ExtResource("1_3je2x")
+text = "La pollution de l'air"
+hint = "de l'eau et des sols fragilise la nature."
+
+[sub_resource type="Resource" id="Resource_hupkm"]
+script = ExtResource("1_3je2x")
+text = "La déforestation détruit les habitats naturels de nombreuses espèces."
+
+[sub_resource type="Resource" id="Resource_o2lmc"]
+script = ExtResource("1_3je2x")
+text = "L'urbanisation croissante réduit les espaces sauvages et naturels."
+
+[sub_resource type="Resource" id="Resource_nafpa"]
+script = ExtResource("1_3je2x")
+text = "L'introduction d'espèces invasives perturbe les équilibres locaux."
+
+[sub_resource type="Resource" id="Resource_3vfto"]
+script = ExtResource("1_3je2x")
+text = "La surpêche et la chasse excessive menacent la biodiversité marine et terrestre."
+
+[sub_resource type="Resource" id="Resource_4ro2k"]
+script = ExtResource("1_3je2x")
+text = "Le changement climatique mondial impacte l'ensemble des milieux de vie."
+
+[sub_resource type="Resource" id="Resource_buc4y"]
+script = ExtResource("1_3je2x")
+text = "La protection de la nature permet de restaurer les habitats dégradés."
+
+[sub_resource type="Resource" id="Resource_lbmkn"]
+script = ExtResource("1_3je2x")
+text = "Le développement durable concilie besoins humains et respect de l'environnement."
+
+[sub_resource type="Resource" id="Resource_aw5an"]
+script = ExtResource("1_3je2x")
+text = "Chaque citoyen peut agir au quotidien pour préserver la planète."
+
+[resource]
+script = ExtResource("2_eh1e4")
+phrases = Array[ExtResource("1_3je2x")]([SubResource("Resource_an0k1"), SubResource("Resource_sj8vh"), SubResource("Resource_hupkm"), SubResource("Resource_o2lmc"), SubResource("Resource_nafpa"), SubResource("Resource_3vfto"), SubResource("Resource_4ro2k"), SubResource("Resource_buc4y"), SubResource("Resource_lbmkn"), SubResource("Resource_aw5an")])

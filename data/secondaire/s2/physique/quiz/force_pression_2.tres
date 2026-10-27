@@ -1,0 +1,93 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bl8m6o2ud6b7x"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_hrqp6"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_a8ov2"]
+
+[sub_resource type="Resource" id="Resource_tltpx"]
+script = ExtResource("1_hrqp6")
+question = "Quelles sont les caractéristiques d'une force ?"
+choices = Array[String](["Sens.", "Direction.", "Point d'application.", "L'ensemble de ces éléments."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_fjd3e"]
+script = ExtResource("1_hrqp6")
+question = "Comment se mesure une force ?"
+choices = Array[String](["Grâce à un dynamomètre.", "En soulevant un objet.", "En pesant une personne forte.", "En tirant sur un objet."])
+
+[sub_resource type="Resource" id="Resource_wn0oo"]
+script = ExtResource("1_hrqp6")
+question = "Quelle est l'unité de la force ?"
+choices = Array[String](["Le Pascal.", "Le Newton.", "Le kilogramme.", "Le degré Celsius."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_oxe5i"]
+script = ExtResource("1_hrqp6")
+question = "Qu'est-ce que la force ?"
+choices = Array[String](["C'est le produit de la masse et de l'accélération d'un corps.", "C'est le travail effectué sur une période de temps.", "C'est la capacité de tenir un objet en hauteur.", "C'est la capacité de repousser des objets."])
+
+[sub_resource type="Resource" id="Resource_sa0qu"]
+script = ExtResource("1_hrqp6")
+question = "Comment se nomme une force qui fait appel à un aimant ?"
+choices = Array[String](["La gravité.", "Le magnétisme.", "La friction.", "L'électrostatique."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_q2ugo"]
+script = ExtResource("1_hrqp6")
+question = "Comment se nomme une force qui se traduit par une chute ?"
+choices = Array[String](["La gravité.", "Le magnétisme.", "La friction.", "L'électrostatique."])
+
+[sub_resource type="Resource" id="Resource_7mhr1"]
+script = ExtResource("1_hrqp6")
+question = "Quelle est la principale découverte de Newton ?"
+choices = Array[String](["Le trou noir.", "La gravitation universelle.", "Les lois de Kepler.", "L'électromagnétisme."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_gi178"]
+script = ExtResource("1_hrqp6")
+question = "En quoi consiste l'inertie ?"
+choices = Array[String](["C'est la loi des actions réciproques.", "La seconde loi de Newton.", "La tendance naturelle de garder la vitesse du mobile dans lequel le corps se trouve.", "La loi de ségrégation des allèles."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_1lcuf"]
+script = ExtResource("1_hrqp6")
+question = "Quelle est la troisième loi de Newton ?"
+choices = Array[String](["C'est la loi des actions réciproques.", "La seconde loi de Newton.", "La tendance naturelle de garder la vitesse du mobile dans lequel le corps se trouve.", "La loi de ségrégation des allèles."])
+
+[sub_resource type="Resource" id="Resource_2a1yy"]
+script = ExtResource("1_hrqp6")
+question = "Que peux-tu dire à propos du principe fondamental de la dynamique ?"
+choices = Array[String](["C'est la loi des actions réciproques.", "C'est la seconde loi de Newton.", "C'est la tendance naturelle de garder la vitesse du mobile dans lequel le corps se trouve.", "C'est la loi de ségrégation des allèles."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_yvmnv"]
+script = ExtResource("1_hrqp6")
+question = "On peut dire d'une force qu'elle possède..."
+choices = Array[String](["Une longueur.", "Une intensité.", "L'ensemble de ces éléments.", "Une origine."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_8hif3"]
+script = ExtResource("1_hrqp6")
+question = "La force est..."
+choices = Array[String](["Un vecteur.", "Une puissance.", "Une énergie.", "Un courant."])
+
+[sub_resource type="Resource" id="Resource_ficmt"]
+script = ExtResource("1_hrqp6")
+question = "Quelle est l'unité de la masse ?"
+choices = Array[String](["Le bar.", "Le kilogramme.", "Le degré Celsius.", "Le Kelvin."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_3uhd0"]
+script = ExtResource("1_hrqp6")
+question = "Quelle est la différence entre le poids et la masse ?"
+choices = Array[String](["Aucune différence.", "Le poids est une force.", "La masse est une force.", "La masse varie selon l'endroit."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_kfuod"]
+script = ExtResource("1_hrqp6")
+question = "Quelle est l'unité du poids ?"
+choices = Array[String](["Le gramme.", "Le kilogramme.", "Le Newton.", "Le Kelvin."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("2_a8ov2")
+questions = Array[ExtResource("1_hrqp6")]([SubResource("Resource_tltpx"), SubResource("Resource_fjd3e"), SubResource("Resource_wn0oo"), SubResource("Resource_oxe5i"), SubResource("Resource_sa0qu"), SubResource("Resource_q2ugo"), SubResource("Resource_7mhr1"), SubResource("Resource_gi178"), SubResource("Resource_1lcuf"), SubResource("Resource_2a1yy"), SubResource("Resource_yvmnv"), SubResource("Resource_8hif3"), SubResource("Resource_ficmt"), SubResource("Resource_3uhd0"), SubResource("Resource_kfuod")])

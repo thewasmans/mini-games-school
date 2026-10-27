@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://clss6m8nkb130"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_qw2q8"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_l7vdk"]
+
+[sub_resource type="Resource" id="Resource_bo2nd"]
+script = ExtResource("1_qw2q8")
+text = "La pression correspond à une force exercée sur une surface."
+
+[sub_resource type="Resource" id="Resource_dsepn"]
+script = ExtResource("1_qw2q8")
+text = "L'unité légale de pression est le pascal."
+
+[sub_resource type="Resource" id="Resource_my0hq"]
+script = ExtResource("1_qw2q8")
+text = "Plus la surface de contact est petite"
+hint = "plus la pression est grande."
+
+[sub_resource type="Resource" id="Resource_2ev4o"]
+script = ExtResource("1_qw2q8")
+text = "La pression atmosphérique est due au poids de l'air environnant."
+
+[sub_resource type="Resource" id="Resource_kntsg"]
+script = ExtResource("1_qw2q8")
+text = "La pression dans les liquides augmente avec la profondeur."
+
+[sub_resource type="Resource" id="Resource_c7s2c"]
+script = ExtResource("1_qw2q8")
+text = "Un gaz exerce une pression en frappant les parois du récipient."
+
+[sub_resource type="Resource" id="Resource_gtghu"]
+script = ExtResource("1_qw2q8")
+text = "Le baromètre est l'instrument utilisé pour mesurer la pression atmosphérique."
+
+[sub_resource type="Resource" id="Resource_dcqyq"]
+script = ExtResource("1_qw2q8")
+text = "Les plongeurs subissent une pression croissante sous l'eau."
+
+[sub_resource type="Resource" id="Resource_rqf0k"]
+script = ExtResource("1_qw2q8")
+text = "Une force pressante se calcule en divisant la force par la surface."
+
+[sub_resource type="Resource" id="Resource_3qc3m"]
+script = ExtResource("1_qw2q8")
+text = "Les variations de pression influencent la météo et les conditions de vol."
+
+[resource]
+script = ExtResource("2_l7vdk")
+phrases = Array[ExtResource("1_qw2q8")]([SubResource("Resource_bo2nd"), SubResource("Resource_dsepn"), SubResource("Resource_my0hq"), SubResource("Resource_2ev4o"), SubResource("Resource_kntsg"), SubResource("Resource_c7s2c"), SubResource("Resource_gtghu"), SubResource("Resource_dcqyq"), SubResource("Resource_rqf0k"), SubResource("Resource_3qc3m")])

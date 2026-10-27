@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://b618tiwk2r3mk"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_l0klu"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_joir6"]
+
+[sub_resource type="Resource" id="Resource_y66wx"]
+script = ExtResource("1_l0klu")
+question = "Qui a formulé la théorie atomique de base ?"
+choices = Array[String](["Bohr.", "Dalton.", "Thomson.", "Rutherford."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_5txu3"]
+script = ExtResource("1_l0klu")
+question = "Quel est le premier modèle à parler d'électrons et de protons ?"
+choices = Array[String](["Bohr.", "Dalton.", "Thomson.", "Rutherford."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_oetmo"]
+script = ExtResource("1_l0klu")
+question = "Qui a formulé l'idée d'électrons qui gravitent autour du noyau ?"
+choices = Array[String](["Bohr.", "Dalton.", "Thomson.", "Rutherford."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_p3csh"]
+script = ExtResource("1_l0klu")
+question = "Qui propose l'existence de couches électroniques ?"
+choices = Array[String](["Bohr.", "Dalton.", "Thomson.", "Rutherford."])
+
+[sub_resource type="Resource" id="Resource_aa71c"]
+script = ExtResource("1_l0klu")
+question = "Que représente la valence ?"
+choices = Array[String](["Le nombre maximal de liaisons chimiques q'un atome peut faire.", "La capacité d'un atome à attirer les électrons.", "La capacité d'un atome à se déplacer.", "La capacité d'un atome à changer ses protons."])
+
+[sub_resource type="Resource" id="Resource_nnjdk"]
+script = ExtResource("1_l0klu")
+question = "Qu'est-ce que la structure de Lewis ?"
+choices = Array[String](["La représentation d'un atome par son symbole et ses électrons de valence.", "Le modèle tridimensionnel d'un atome.", "La représentation des pôles d'une molécule.", "La formule liée à la masse molaire."])
+
+[sub_resource type="Resource" id="Resource_uv6la"]
+script = ExtResource("1_l0klu")
+question = "Comment se nomme un élément chimique chargé positivement ?"
+choices = Array[String](["Anion.", "Cation.", "Anode.", "Électrode."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_o3b6k"]
+script = ExtResource("1_l0klu")
+question = "Comment se nomme un élément chimique chargé négativement ?"
+choices = Array[String](["Anion.", "Cation.", "Anode.", "Électrode."])
+
+[sub_resource type="Resource" id="Resource_i0aeb"]
+script = ExtResource("1_l0klu")
+question = "Comment se nomme l'élément chimique noté Na ?"
+choices = Array[String](["Calcium.", "Sodium.", "Phosphore.", "Potassium."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_4560y"]
+script = ExtResource("1_l0klu")
+question = "Comment se nomme l'élément chimique noté Ca ?"
+choices = Array[String](["Calcium.", "Sodium.", "Phosphore.", "Potassium."])
+
+[sub_resource type="Resource" id="Resource_hmny2"]
+script = ExtResource("1_l0klu")
+question = "Comment se nomme l'élément chimique noté P ?"
+choices = Array[String](["Calcium.", "Sodium.", "Phosphore.", "Potassium."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_etid2"]
+script = ExtResource("1_l0klu")
+question = "Comment se nomme l'élément chimique noté K ?"
+choices = Array[String](["Calcium.", "Sodium.", "Phosphore.", "Potassium."])
+correct_choice_index = 3
+
+[resource]
+script = ExtResource("2_joir6")
+questions = Array[ExtResource("1_l0klu")]([SubResource("Resource_y66wx"), SubResource("Resource_5txu3"), SubResource("Resource_oetmo"), SubResource("Resource_p3csh"), SubResource("Resource_aa71c"), SubResource("Resource_nnjdk"), SubResource("Resource_uv6la"), SubResource("Resource_o3b6k"), SubResource("Resource_i0aeb"), SubResource("Resource_4560y"), SubResource("Resource_hmny2"), SubResource("Resource_etid2")])

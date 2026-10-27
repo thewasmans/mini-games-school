@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://btnnhjoitxaee"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_ejdus"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_0iap1"]
+
+[sub_resource type="Resource" id="Resource_8lb5p"]
+script = ExtResource("1_ejdus")
+question = "On dit que la matière est solide lorsque..."
+choices = Array[String](["Les molécules sont très proches et quasiment immobiles.", "Les molécules sont liées mais peuvent se déplacer les unes par rapport aux autres.", "Les molécules sont désordonnées et s'éloignent.", "Du gaz ionisé avec des particules chargées se forment."])
+
+[sub_resource type="Resource" id="Resource_3yf0p"]
+script = ExtResource("1_ejdus")
+question = "On dit que la matière est liquide lorsque..."
+choices = Array[String](["Les molécules sont très proches et quasiment immobiles.", "Les molécules sont liées mais peuvent se déplacer les unes par rapport aux autres.", "Les molécules sont désordonnées et s'éloignent.", "Du gaz ionisé avec des particules chargées se forment."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_a2aot"]
+script = ExtResource("1_ejdus")
+question = "On dit que la matière est du gaz lorsque..."
+choices = Array[String](["Les molécules sont très proches et quasiment immobiles.", "Les molécules sont liées mais peuvent se déplacer les unes par rapport aux autres.", "Les molécules sont désordonnées et s'éloignent.", "Du gaz ionisé avec des particules chargées se forment."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_464ko"]
+script = ExtResource("1_ejdus")
+question = "On dit que la matière est du plasma lorsque..."
+choices = Array[String](["Les molécules sont très proches et quasiment immobiles.", "Les molécules sont liées mais peuvent se déplacer les unes par rapport aux autres.", "Les molécules sont désordonnées et s'éloignent.", "Du gaz ionisé avec des particules chargées se forment."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_4hgbh"]
+script = ExtResource("1_ejdus")
+question = "Dans quel état se trouve la matière lorsque la température est la plus basse ?"
+choices = Array[String](["Liquide.", "Solide.", "Gaz.", "Plasma."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ihjf8"]
+script = ExtResource("1_ejdus")
+question = "Dans quel état se trouve la matière lorsque la température est la plus haute ?"
+choices = Array[String](["Liquide.", "Solide.", "Gaz.", "Plasma."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_3u45l"]
+script = ExtResource("1_ejdus")
+question = "De quoi dépend l'état physique d'un corps ?"
+choices = Array[String](["De sa position.", "De sa température.", "Du biotope.", "De sa source."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ko2np"]
+script = ExtResource("1_ejdus")
+question = "Qu'est-ce que la température ?"
+choices = Array[String](["C'est l'agitation moléculaire d'un corps.", "C'est le produit de la masse et de l'accélération.", "C'est le travail réalisé d'une force.", "C'est la distance par rapport aux temps."])
+
+[sub_resource type="Resource" id="Resource_un63s"]
+script = ExtResource("1_ejdus")
+question = "Quelle est l'unité de la température ?"
+choices = Array[String](["Le Celsius.", "Le Fahrenheit.", "Le Kelvin.", "Les trois réponses."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_xppkw"]
+script = ExtResource("1_ejdus")
+question = "Quelle est la différence entre la chaleur et la température ?"
+choices = Array[String](["La chaleur est l'unité.", "La chaleur est l'énergie.", "La température est l'énergie.", "La température est uniquement un concept théorique."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ymytn"]
+script = ExtResource("1_ejdus")
+question = "Comment s'effectue le transfert thermique ?"
+choices = Array[String](["Toujours du froid vers le chaud.", "Toujours du chaud vers le froid.", "Dans tous les sens.", "C'est le chaud qui absorbe toujours la chaleur."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_cwti6"]
+script = ExtResource("1_ejdus")
+question = "Comment se nomme le passage du solide au liquide ?"
+choices = Array[String](["La fusion.", "La condensation.", "L'évaporation.", "La solidification."])
+
+[sub_resource type="Resource" id="Resource_lb28s"]
+script = ExtResource("1_ejdus")
+question = "Comment se nomme le passage du gaz au solide ?"
+choices = Array[String](["La fusion.", "La condensation solide.", "L'évaporation.", "La solidification."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_0iap1")
+questions = Array[ExtResource("1_ejdus")]([SubResource("Resource_8lb5p"), SubResource("Resource_3yf0p"), SubResource("Resource_a2aot"), SubResource("Resource_464ko"), SubResource("Resource_4hgbh"), SubResource("Resource_ihjf8"), SubResource("Resource_3u45l"), SubResource("Resource_ko2np"), SubResource("Resource_un63s"), SubResource("Resource_xppkw"), SubResource("Resource_ymytn"), SubResource("Resource_cwti6"), SubResource("Resource_lb28s")])

@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dlswu2aketnx6"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_umpw5"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_73u3h"]
+
+[sub_resource type="Resource" id="Resource_dx1yv"]
+script = ExtResource("1_umpw5")
+text = "Les ressources naturelles proviennent de la Terre."
+
+[sub_resource type="Resource" id="Resource_ig67y"]
+script = ExtResource("1_umpw5")
+text = "Les matières premières sont d'origine animale"
+hint = "végétale ou minérale."
+
+[sub_resource type="Resource" id="Resource_6f1mj"]
+script = ExtResource("1_umpw5")
+text = "L'exploitation minière extrait les minerais du sol."
+
+[sub_resource type="Resource" id="Resource_r6mps"]
+script = ExtResource("1_umpw5")
+text = "L'eau est une ressource naturelle vitale et limitée."
+
+[sub_resource type="Resource" id="Resource_4pi3r"]
+script = ExtResource("1_umpw5")
+text = "Les ressources renouvelables se reconstituent naturellement."
+
+[sub_resource type="Resource" id="Resource_sin20"]
+script = ExtResource("1_umpw5")
+text = "Les énergies fossiles sont des ressources non renouvelables."
+
+[sub_resource type="Resource" id="Resource_wsmd2"]
+script = ExtResource("1_umpw5")
+text = "La transformation industrielle crée des produits finis."
+
+[sub_resource type="Resource" id="Resource_imnos"]
+script = ExtResource("1_umpw5")
+text = "La surconsommation épuise les ressources de la planète."
+
+[sub_resource type="Resource" id="Resource_broae"]
+script = ExtResource("1_umpw5")
+text = "Le recyclage permet de récupérer des matières utiles."
+
+[sub_resource type="Resource" id="Resource_trbhe"]
+script = ExtResource("1_umpw5")
+text = "Une gestion durable préserve l'avenir des ressources."
+
+[resource]
+script = ExtResource("2_73u3h")
+phrases = Array[ExtResource("1_umpw5")]([SubResource("Resource_dx1yv"), SubResource("Resource_ig67y"), SubResource("Resource_6f1mj"), SubResource("Resource_r6mps"), SubResource("Resource_4pi3r"), SubResource("Resource_sin20"), SubResource("Resource_wsmd2"), SubResource("Resource_imnos"), SubResource("Resource_broae"), SubResource("Resource_trbhe")])

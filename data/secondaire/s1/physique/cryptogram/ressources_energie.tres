@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://bpd756agqal0l"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_jv04s"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_ffab0"]
+
+[sub_resource type="Resource" id="Resource_44tnh"]
+script = ExtResource("1_jv04s")
+text = "L'énergie est nécessaire pour effectuer un travail ou produire de la chaleur."
+
+[sub_resource type="Resource" id="Resource_wuejq"]
+script = ExtResource("1_jv04s")
+text = "Les sources d'énergie renouvelables se régénèrent naturellement."
+
+[sub_resource type="Resource" id="Resource_sfb0y"]
+script = ExtResource("1_jv04s")
+text = "Le soleil"
+hint = "le vent et l'eau fournissent des énergies renouvelables."
+
+[sub_resource type="Resource" id="Resource_x2cnn"]
+script = ExtResource("1_jv04s")
+text = "Les combustibles fossiles sont issus de la décomposition d'organismes."
+
+[sub_resource type="Resource" id="Resource_p3enr"]
+script = ExtResource("1_jv04s")
+text = "Le pétrole"
+hint = "le charbon et le gaz sont des énergies non renouvelables."
+
+[sub_resource type="Resource" id="Resource_13abd"]
+script = ExtResource("1_jv04s")
+text = "L'énergie nucléaire provient de la fission d'atomes d'uranium."
+
+[sub_resource type="Resource" id="Resource_1j4m1"]
+script = ExtResource("1_jv04s")
+text = "L'électricité est une forme d'énergie secondaire très utilisée."
+
+[sub_resource type="Resource" id="Resource_x8rwn"]
+script = ExtResource("1_jv04s")
+text = "La consommation d'énergie fossile émet des gaz à effet de serre."
+
+[sub_resource type="Resource" id="Resource_bgcqg"]
+script = ExtResource("1_jv04s")
+text = "La transition énergétique vise à privilégier les énergies propres."
+
+[sub_resource type="Resource" id="Resource_5j265"]
+script = ExtResource("1_jv04s")
+text = "L'efficacité énergétique permet d'économiser nos ressources."
+
+[resource]
+script = ExtResource("2_ffab0")
+phrases = Array[ExtResource("1_jv04s")]([SubResource("Resource_44tnh"), SubResource("Resource_wuejq"), SubResource("Resource_sfb0y"), SubResource("Resource_x2cnn"), SubResource("Resource_p3enr"), SubResource("Resource_13abd"), SubResource("Resource_1j4m1"), SubResource("Resource_x8rwn"), SubResource("Resource_bgcqg"), SubResource("Resource_5j265")])

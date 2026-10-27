@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://cp0jq637phagv"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_p1uxn"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_pfthu"]
+
+[sub_resource type="Resource" id="Resource_gmabr"]
+script = ExtResource("1_p1uxn")
+text = "La puberté marque l'acquisition de la puberté et de la fertilité."
+
+[sub_resource type="Resource" id="Resource_22gbh"]
+script = ExtResource("1_p1uxn")
+text = "L'appareil reproducteur masculin produit des spermatozoïdes."
+
+[sub_resource type="Resource" id="Resource_urjkh"]
+script = ExtResource("1_p1uxn")
+text = "L'appareil reproducteur féminin produit des ovules."
+
+[sub_resource type="Resource" id="Resource_3i7qq"]
+script = ExtResource("1_p1uxn")
+text = "La fécondation unit un spermatozoïde et un ovule."
+
+[sub_resource type="Resource" id="Resource_dp2ni"]
+script = ExtResource("1_p1uxn")
+text = "La nidation permet l'implantation de l'embryon dans l'utérus."
+
+[sub_resource type="Resource" id="Resource_kbsmr"]
+script = ExtResource("1_p1uxn")
+text = "La grossesse dure environ neuf mois chez l'humain."
+
+[sub_resource type="Resource" id="Resource_mkco5"]
+script = ExtResource("1_p1uxn")
+text = "La contraception prévient efficacement les grossesses non désirées."
+
+[sub_resource type="Resource" id="Resource_wtqce"]
+script = ExtResource("1_p1uxn")
+text = "Les préservatifs protègent contre les infections sexuellement transmissibles."
+
+[sub_resource type="Resource" id="Resource_1isr8"]
+script = ExtResource("1_p1uxn")
+text = "Le dépistage régulier est essentiel pour la santé sexuelle."
+
+[sub_resource type="Resource" id="Resource_n75of"]
+script = ExtResource("1_p1uxn")
+text = "Le choix responsable implique information et prévention."
+
+[resource]
+script = ExtResource("2_pfthu")
+phrases = Array[ExtResource("1_p1uxn")]([SubResource("Resource_gmabr"), SubResource("Resource_22gbh"), SubResource("Resource_urjkh"), SubResource("Resource_3i7qq"), SubResource("Resource_dp2ni"), SubResource("Resource_kbsmr"), SubResource("Resource_mkco5"), SubResource("Resource_wtqce"), SubResource("Resource_1isr8"), SubResource("Resource_n75of")])

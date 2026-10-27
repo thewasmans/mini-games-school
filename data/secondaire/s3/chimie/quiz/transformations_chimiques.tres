@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bi5xgtd0yqhsi"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_4mplb"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_wokkf"]
+
+[sub_resource type="Resource" id="Resource_1t32v"]
+script = ExtResource("1_4mplb")
+question = "Comment appelons-nous les éléments de droite de la réaction ?"
+choices = Array[String](["Les produits.", "Les réactifs.", "Les coefficients.", "Les indices."])
+
+[sub_resource type="Resource" id="Resource_vcdb2"]
+script = ExtResource("1_4mplb")
+question = "Que propose Lavoisier ?"
+choices = Array[String](["Le principe de la conservation de la matière.", "Le principe des transferts thermiques.", "Le principe de l'électrocution.", "Le principe des vases communicants."])
+
+[sub_resource type="Resource" id="Resource_btg4t"]
+script = ExtResource("1_4mplb")
+question = "Que représente le \"2\" devant l'HCl ?"
+choices = Array[String](["Le coefficient stoechiométrique.", "Un chiffre permettant de pondérer.", "Une valeur ajoutée pour équilibrer l'équation.", "Toutes ces phrases sont justes."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_mbh36"]
+script = ExtResource("1_4mplb")
+question = "Qu'est-ce que l'énergie d'activation ?"
+choices = Array[String](["L'énergie minimale pour qu'une réaction se déclenche.", "L'énergie maximale pour qu'une réaction se déclenche.", "L'énergie nécessaire à une transformation chimique.", "L'énergie nécessaire à une transformation physique."])
+
+[sub_resource type="Resource" id="Resource_1h5od"]
+script = ExtResource("1_4mplb")
+question = "Qu'est-ce qu'un protocole ?"
+choices = Array[String](["Des règles à suivre.", "Un schéma à dessiner.", "Un mécanisme à analyser.", "Des croquis à comparer."])
+
+[sub_resource type="Resource" id="Resource_yxj05"]
+script = ExtResource("1_4mplb")
+question = "Quelle est la différence entre un acide et une base ?"
+choices = Array[String](["L'acide peut donner des protons, la base prend les protons.", "La base donne les protons et l'acide les récupère.", "Aucune différence.", "L'acide se comporte comme une base en milieu neutre."])
+
+[sub_resource type="Resource" id="Resource_mu8x2"]
+script = ExtResource("1_4mplb")
+question = "Dans quel cas parlons-nous d'une transformation chimique ?"
+choices = Array[String](["Lorsque la situation est réversible (eau en glace).", "Lorsque la situation est irréversible (eau en vin).", "Lorsque le produit est différent des réactifs.", "Lorsque deux molécules s'associent."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_xwlym"]
+script = ExtResource("1_4mplb")
+question = "Comment appelons-nous les éléments de gauche de la réaction ?"
+choices = Array[String](["Les produits.", "Les réactifs.", "Les coefficients.", "Les indices."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_wokkf")
+questions = Array[ExtResource("1_4mplb")]([SubResource("Resource_1t32v"), SubResource("Resource_vcdb2"), SubResource("Resource_btg4t"), SubResource("Resource_mbh36"), SubResource("Resource_1h5od"), SubResource("Resource_yxj05"), SubResource("Resource_mu8x2"), SubResource("Resource_xwlym")])

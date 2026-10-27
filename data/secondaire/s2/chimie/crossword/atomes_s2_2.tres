@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bt7fve6e47w5x"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_wxxmw"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_62mmy"]
+
+[sub_resource type="Resource" id="Resource_y0yf3"]
+script = ExtResource("1_wxxmw")
+word = "ATOME"
+hint = "Plus petit élément chimique que l'on ne peut pas diviser, particule qui compose la molécule."
+grid_position = Vector2i(6, 7)
+
+[sub_resource type="Resource" id="Resource_8r43f"]
+script = ExtResource("1_wxxmw")
+word = "ZINC"
+hint = "Elément chimique dont le symbole est Zn."
+grid_position = Vector2i(7, 1)
+
+[sub_resource type="Resource" id="Resource_am7eg"]
+script = ExtResource("1_wxxmw")
+word = "AIR"
+hint = "Mélange de gaz contenant de l'azote, oxygène et hélium."
+grid_position = Vector2i(6, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_odo5g"]
+script = ExtResource("1_wxxmw")
+word = "LI"
+hint = "Symbole chimique du lithium."
+grid_position = Vector2i(5, 8)
+
+[sub_resource type="Resource" id="Resource_no5uw"]
+script = ExtResource("1_wxxmw")
+word = "SN"
+hint = "Symbole chimique de l'étain."
+grid_position = Vector2i(10, 6)
+
+[sub_resource type="Resource" id="Resource_qi8a5"]
+script = ExtResource("1_wxxmw")
+word = "MN"
+hint = "Symbole chimique du manganèse."
+grid_position = Vector2i(9, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_rsseq"]
+script = ExtResource("1_wxxmw")
+word = "IODE"
+hint = "Elément chimique dont le symbole est I."
+grid_position = Vector2i(8, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ysobg"]
+script = ExtResource("1_wxxmw")
+word = "DIOXYGENE"
+hint = "Corps pur simple présent dans l'air et qui nous permet de respirer."
+grid_position = Vector2i(0, 4)
+
+[sub_resource type="Resource" id="Resource_vpson"]
+script = ExtResource("1_wxxmw")
+word = "COMPOSE"
+hint = "Se dit d'un corps pur qui possède plusieurs types d'atomes, comme le NaCl."
+grid_position = Vector2i(10, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_388jv"]
+script = ExtResource("1_wxxmw")
+word = "XENON"
+hint = "Gaz rare dont le symbole chimique est Xe."
+grid_position = Vector2i(2, 1)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_62mmy")
+clues = Array[ExtResource("1_wxxmw")]([SubResource("Resource_y0yf3"), SubResource("Resource_8r43f"), SubResource("Resource_am7eg"), SubResource("Resource_odo5g"), SubResource("Resource_no5uw"), SubResource("Resource_qi8a5"), SubResource("Resource_rsseq"), SubResource("Resource_ysobg"), SubResource("Resource_vpson"), SubResource("Resource_388jv")])

@@ -1,0 +1,97 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://djuoh0b1sojxp"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_wxbci"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_xu30v"]
+
+[sub_resource type="Resource" id="Resource_h7dq3"]
+script = ExtResource("1_wxbci")
+question = "Quelle structure n'appartient pas à la cellule végétale ?"
+choices = Array[String](["La paroi cellulaire.", "La vacuole.", "Le chloroplaste.", "Le centrosome."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_jdyio"]
+script = ExtResource("1_wxbci")
+question = "Quelle structure permet à la cellule végétale d'effectuer la photosynthèse ?"
+choices = Array[String](["La paroi cellulaire.", "La vacuole.", "Le chloroplaste.", "Le centrosome."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_7cf2o"]
+script = ExtResource("1_wxbci")
+question = "Comment les plantes se reproduisent-elles ?"
+choices = Array[String](["Grâce à des spores.", "Grâce à des graines.", "Par les fleurs.", "Tout est juste."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_0sigv"]
+script = ExtResource("1_wxbci")
+question = "Comment se nomme la respiration chez les plantes ?"
+choices = Array[String](["La phototransduction.", "La photorespiration.", "La photosynthèse.", "Les plantes ne respirent pas."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_3dshw"]
+script = ExtResource("1_wxbci")
+question = "Quel est le site de la photosynthèse ?"
+choices = Array[String](["La mitochondrie.", "Le noyau.", "Le chloroplaste.", "La mitose."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_wfq3w"]
+script = ExtResource("1_wxbci")
+question = "Qu'est-ce que la photosynthèse ?"
+choices = Array[String](["La conversion de l'énergie lumineuse en énergie chimique.", "La conversion de l'énergie lumineuse en énergie mécanique.", "La conversion de l'énergie thermique en énergie chimique.", "La conversion de l'énergie électrique en énergie chimique."])
+
+[sub_resource type="Resource" id="Resource_ghgkh"]
+script = ExtResource("1_wxbci")
+question = "Comment se nomme la substance de réserve chez les plantes vertes ?"
+choices = Array[String](["Le glycogène.", "L'amidon.", "La mélanine.", "La dopamine."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_6cyjb"]
+script = ExtResource("1_wxbci")
+question = "De quoi dépend la photosynthèse ?"
+choices = Array[String](["De la lumière.", "De l'eau.", "Du dioxyde de carbone.", "De l'ensemble de ces éléments."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_aj0no"]
+script = ExtResource("1_wxbci")
+question = "Pourquoi l'organisme humain doit-il consommer des aliments ?"
+choices = Array[String](["Pour le plaisir gustatif.", "Pour l'énergie et la survie.", "Pour grossir.", "Pour rien, c'est une habitude."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_13vld"]
+script = ExtResource("1_wxbci")
+question = "Comment qualifie-t-on une alimentation qui couvre tous les besoins nutritionnels ?"
+choices = Array[String](["Monotone.", "Équilibrée et variée.", "Exclusivement végétalienne.", "Riche en graisses."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_pvhcy"]
+script = ExtResource("1_wxbci")
+question = "Quelle est la place des produits sucrés et gras dans la pyramide alimentaire ?"
+choices = Array[String](["À la base.", "Au milieu.", "Au sommet (à limiter).", "Ils n'y sont pas."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_ni6qf"]
+script = ExtResource("1_wxbci")
+question = "Quel est le rôle principal des glucides complexes (féculents) ?"
+choices = Array[String](["Construire les tissus.", "Fournir de l'énergie durable.", "Hydrater les cellules.", "Améliorer la vue."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_2j8b7"]
+script = ExtResource("1_wxbci")
+question = "À quoi servent principalement les protéines ?"
+choices = Array[String](["Stocker les graisses.", "Apporter des vitamines.", "Construire et réparer les tissus.", "Digérer plus vite."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_kvw5q"]
+script = ExtResource("1_wxbci")
+question = "Que nous apportent principalement les fruits et légumes ?"
+choices = Array[String](["Des calories vides.", "Des fibres, vitamines et minéraux.", "Uniquement du sucre.", "Des graisses saturées."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_sd7vu"]
+script = ExtResource("1_wxbci")
+question = "Pourquoi limiter les produits \"ultra-transformés\" ?"
+choices = Array[String](["Car ils sont trop fades.", "Car ils sont trop riches en additifs, sel et sucre.", "Car ils sont trop rares.", "Car ils ne sont pas rassasiants."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_xu30v")
+questions = Array[ExtResource("1_wxbci")]([SubResource("Resource_h7dq3"), SubResource("Resource_jdyio"), SubResource("Resource_7cf2o"), SubResource("Resource_0sigv"), SubResource("Resource_3dshw"), SubResource("Resource_wfq3w"), SubResource("Resource_ghgkh"), SubResource("Resource_6cyjb"), SubResource("Resource_aj0no"), SubResource("Resource_13vld"), SubResource("Resource_pvhcy"), SubResource("Resource_ni6qf"), SubResource("Resource_2j8b7"), SubResource("Resource_kvw5q"), SubResource("Resource_sd7vu")])

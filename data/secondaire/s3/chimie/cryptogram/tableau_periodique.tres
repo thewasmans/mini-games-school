@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://calry03bt071t"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_wpwi2"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_lcwqs"]
+
+[sub_resource type="Resource" id="Resource_j7i38"]
+script = ExtResource("1_wpwi2")
+text = "Le tableau périodique classe les éléments chimiques par numéro atomique croissant."
+
+[sub_resource type="Resource" id="Resource_5or2p"]
+script = ExtResource("1_wpwi2")
+text = "Mendeleïev a conçu la première classification périodique des éléments."
+
+[sub_resource type="Resource" id="Resource_0uq80"]
+script = ExtResource("1_wpwi2")
+text = "Les éléments d'une même colonne possèdent des propriétés chimiques similaires."
+
+[sub_resource type="Resource" id="Resource_45vqn"]
+script = ExtResource("1_wpwi2")
+text = "Le numéro atomique correspond au nombre de protons dans le noyau."
+
+[sub_resource type="Resource" id="Resource_dswvd"]
+script = ExtResource("1_wpwi2")
+text = "L'atome est électriquement neutre car il contient autant de protons que d'électrons."
+
+[sub_resource type="Resource" id="Resource_pcwew"]
+script = ExtResource("1_wpwi2")
+text = "Le modèle de Bohr représente les électrons sur des orbites circulaires définies."
+
+[sub_resource type="Resource" id="Resource_cxyml"]
+script = ExtResource("1_wpwi2")
+text = "Le noyau atomique rassemble des protons et des neutrons très serrés."
+
+[sub_resource type="Resource" id="Resource_8siuf"]
+script = ExtResource("1_wpwi2")
+text = "Les électrons se répartissent en couches électroniques autour du noyau."
+
+[sub_resource type="Resource" id="Resource_dss8m"]
+script = ExtResource("1_wpwi2")
+text = "La masse de l'atome est presque entièrement concentrée dans son noyau central."
+
+[sub_resource type="Resource" id="Resource_xc3ca"]
+script = ExtResource("1_wpwi2")
+text = "Chaque élément chimique possède un symbole unique composé d'une ou deux lettres."
+
+[resource]
+script = ExtResource("2_lcwqs")
+phrases = Array[ExtResource("1_wpwi2")]([SubResource("Resource_j7i38"), SubResource("Resource_5or2p"), SubResource("Resource_0uq80"), SubResource("Resource_45vqn"), SubResource("Resource_dswvd"), SubResource("Resource_pcwew"), SubResource("Resource_cxyml"), SubResource("Resource_8siuf"), SubResource("Resource_dss8m"), SubResource("Resource_xc3ca")])

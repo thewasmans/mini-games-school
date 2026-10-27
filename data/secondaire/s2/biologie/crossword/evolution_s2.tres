@@ -1,0 +1,97 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://t7e46fj4hmqf"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_x15g1"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_bs4xv"]
+
+[sub_resource type="Resource" id="Resource_i6lsi"]
+script = ExtResource("1_x15g1")
+word = "MAISON"
+hint = "E.T. Téléphone..."
+grid_position = Vector2i(1, 13)
+
+[sub_resource type="Resource" id="Resource_w2eqv"]
+script = ExtResource("1_x15g1")
+word = "EXTINCTION"
+hint = "Disparition majeure d'espèces dans un environnement."
+grid_position = Vector2i(5, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_2mbel"]
+script = ExtResource("1_x15g1")
+word = "ECORCE"
+hint = "Surface dure constituant la couche externe de la terre."
+grid_position = Vector2i(0, 5)
+
+[sub_resource type="Resource" id="Resource_0gp16"]
+script = ExtResource("1_x15g1")
+word = "ATTRIBUT"
+hint = "Caractère de ce qui appartient à une espèce."
+grid_position = Vector2i(13, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_bujxn"]
+script = ExtResource("1_x15g1")
+word = "PHYLOGENIE"
+hint = "Science qui étudie les relations de parenté génétique entre les espèces (taxons)."
+grid_position = Vector2i(8, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_d31an"]
+script = ExtResource("1_x15g1")
+word = "EVOLUTION"
+hint = "Fait scientifique qui se caractérise par des changements au cours du temps."
+grid_position = Vector2i(10, 8)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_uahjn"]
+script = ExtResource("1_x15g1")
+word = "DATE"
+hint = "Terme permettant de situer une espèce en étudiant la radioactivité du carbone."
+grid_position = Vector2i(12, 4)
+
+[sub_resource type="Resource" id="Resource_mnsia"]
+script = ExtResource("1_x15g1")
+word = "MANTEAU"
+hint = "Couche intermédiaire entre le noyau terrestre et la croûte terrestre, l'écorce."
+grid_position = Vector2i(2, 11)
+
+[sub_resource type="Resource" id="Resource_fvtys"]
+script = ExtResource("1_x15g1")
+word = "BIODIVERSITE"
+hint = "Ensemble de la diversité des espèces dans un milieu."
+grid_position = Vector2i(4, 8)
+
+[sub_resource type="Resource" id="Resource_fq67c"]
+script = ExtResource("1_x15g1")
+word = "ECOLOGIE"
+hint = "Science qui a pour objet l'étude des espèces en interaction avec leur environnement."
+grid_position = Vector2i(15, 8)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_3whf6"]
+script = ExtResource("1_x15g1")
+word = "DARWIN"
+hint = "Chercheur naturaliste à l'origine de la théorie sur la sélection naturelle."
+grid_position = Vector2i(5, 16)
+
+[sub_resource type="Resource" id="Resource_lxxvt"]
+script = ExtResource("1_x15g1")
+word = "SEISME"
+hint = "Secousse du sol, tremblement de terre."
+grid_position = Vector2i(8, 14)
+
+[sub_resource type="Resource" id="Resource_5i3m1"]
+script = ExtResource("1_x15g1")
+word = "VOLCAN"
+hint = "Montagne formée de roches magmatiques dans laquelle se trouve la lave."
+grid_position = Vector2i(6, 3)
+
+[sub_resource type="Resource" id="Resource_o1yw7"]
+script = ExtResource("1_x15g1")
+word = "NOYAU"
+hint = "Partie centrale de la Terre essentiellement constituée de fer métallique."
+grid_position = Vector2i(9, 10)
+
+[resource]
+script = ExtResource("2_bs4xv")
+clues = Array[ExtResource("1_x15g1")]([SubResource("Resource_i6lsi"), SubResource("Resource_w2eqv"), SubResource("Resource_2mbel"), SubResource("Resource_0gp16"), SubResource("Resource_bujxn"), SubResource("Resource_d31an"), SubResource("Resource_uahjn"), SubResource("Resource_mnsia"), SubResource("Resource_fvtys"), SubResource("Resource_fq67c"), SubResource("Resource_3whf6"), SubResource("Resource_lxxvt"), SubResource("Resource_5i3m1"), SubResource("Resource_o1yw7")])

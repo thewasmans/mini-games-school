@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dfhrlkeangpbq"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_epmu4"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_gjd40"]
+
+[sub_resource type="Resource" id="Resource_gvdb0"]
+script = ExtResource("1_epmu4")
+text = "L'énergie thermique se transmet d'un corps chaud vers un corps froid."
+
+[sub_resource type="Resource" id="Resource_gtumg"]
+script = ExtResource("1_epmu4")
+text = "La température mesure le degré d'agitation des particules."
+
+[sub_resource type="Resource" id="Resource_w3beg"]
+script = ExtResource("1_epmu4")
+text = "La dilatation thermique augmente le volume d'un corps lorsqu'il chauffe."
+
+[sub_resource type="Resource" id="Resource_rud0h"]
+script = ExtResource("1_epmu4")
+text = "La matière existe sous trois états principaux : solide"
+hint = "liquide et gazeux."
+
+[sub_resource type="Resource" id="Resource_v3dob"]
+script = ExtResource("1_epmu4")
+text = "La fusion est le passage de l'état solide à l'état liquide."
+
+[sub_resource type="Resource" id="Resource_cxhps"]
+script = ExtResource("1_epmu4")
+text = "La solidification transforme un liquide en solide par refroidissement."
+
+[sub_resource type="Resource" id="Resource_klsvj"]
+script = ExtResource("1_epmu4")
+text = "La vaporisation correspond au passage d'un liquide à l'état de gaz."
+
+[sub_resource type="Resource" id="Resource_12m2x"]
+script = ExtResource("1_epmu4")
+text = "La condensation est le passage de l'état gazeux à l'état liquide."
+
+[sub_resource type="Resource" id="Resource_emvl3"]
+script = ExtResource("1_epmu4")
+text = "Les changements d'état s'effectuent à température constante pour un corps pur."
+
+[sub_resource type="Resource" id="Resource_rpkdj"]
+script = ExtResource("1_epmu4")
+text = "L'apport ou la libération d'énergie thermique provoque les changements d'état."
+
+[resource]
+script = ExtResource("2_gjd40")
+phrases = Array[ExtResource("1_epmu4")]([SubResource("Resource_gvdb0"), SubResource("Resource_gtumg"), SubResource("Resource_w3beg"), SubResource("Resource_rud0h"), SubResource("Resource_v3dob"), SubResource("Resource_cxhps"), SubResource("Resource_klsvj"), SubResource("Resource_12m2x"), SubResource("Resource_emvl3"), SubResource("Resource_rpkdj")])

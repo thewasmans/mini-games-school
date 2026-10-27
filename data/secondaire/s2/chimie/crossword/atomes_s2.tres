@@ -1,0 +1,72 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://buox0i0tfa6x6"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_6l1bw"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_srkc6"]
+
+[sub_resource type="Resource" id="Resource_4itxk"]
+script = ExtResource("1_6l1bw")
+word = "MAGNESIUM"
+hint = "Elément chimique dont le symbole est Mg."
+grid_position = Vector2i(0, 9)
+
+[sub_resource type="Resource" id="Resource_b8kxa"]
+script = ExtResource("1_6l1bw")
+word = "ARGON"
+hint = "Gaz rare dont le symbole chimique est l'Ar."
+grid_position = Vector2i(6, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_s356f"]
+script = ExtResource("1_6l1bw")
+word = "OZONE"
+hint = "Couche de gaz qui absorbe les UVs."
+grid_position = Vector2i(6, 3)
+
+[sub_resource type="Resource" id="Resource_sm24c"]
+script = ExtResource("1_6l1bw")
+word = "ELECTROLYSE"
+hint = "Procédé par lequel on effectue la décomposition de l'eau en dihydrogène et dioxygène."
+grid_position = Vector2i(8, 12)
+
+[sub_resource type="Resource" id="Resource_7wgp8"]
+script = ExtResource("1_6l1bw")
+word = "INDICE"
+hint = "Chiffre qui apparait après un symbole chimique dans une formule chimique."
+grid_position = Vector2i(9, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_xc8yn"]
+script = ExtResource("1_6l1bw")
+word = "SIMPLE"
+hint = "Se dit d'un corps pur qui possède un seul type d'atomes, comme le diazote."
+grid_position = Vector2i(8, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_8knvg"]
+script = ExtResource("1_6l1bw")
+word = "NE"
+hint = "Symbole chimique du néon."
+grid_position = Vector2i(10, 11)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_6frip"]
+script = ExtResource("1_6l1bw")
+word = "CU"
+hint = "Symbole chimique du cuivre."
+grid_position = Vector2i(9, 6)
+
+[sub_resource type="Resource" id="Resource_4hq0p"]
+script = ExtResource("1_6l1bw")
+word = "PB"
+hint = "Symbole chimique du plomb."
+grid_position = Vector2i(8, 10)
+
+[sub_resource type="Resource" id="Resource_ma6dk"]
+script = ExtResource("1_6l1bw")
+word = "SE"
+hint = "Symbole chimique du sélénium."
+grid_position = Vector2i(8, 7)
+
+[resource]
+script = ExtResource("2_srkc6")
+clues = Array[ExtResource("1_6l1bw")]([SubResource("Resource_4itxk"), SubResource("Resource_b8kxa"), SubResource("Resource_s356f"), SubResource("Resource_sm24c"), SubResource("Resource_7wgp8"), SubResource("Resource_xc8yn"), SubResource("Resource_8knvg"), SubResource("Resource_6frip"), SubResource("Resource_4hq0p"), SubResource("Resource_ma6dk")])

@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://bp52nayt7k4vn"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_taqhf"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_yy6f0"]
+
+[sub_resource type="Resource" id="Resource_2bea4"]
+script = ExtResource("1_taqhf")
+text = "Un écosystème associe un milieu et des êtres vivants."
+
+[sub_resource type="Resource" id="Resource_wn8b3"]
+script = ExtResource("1_taqhf")
+text = "Les êtres vivants interagissent dans leur milieu."
+
+[sub_resource type="Resource" id="Resource_rmoib"]
+script = ExtResource("1_taqhf")
+text = "La biodiversité désigne la variété du vivant."
+
+[sub_resource type="Resource" id="Resource_ja7yf"]
+script = ExtResource("1_taqhf")
+text = "Les chaînes alimentaires lient les organismes."
+
+[sub_resource type="Resource" id="Resource_6531l"]
+script = ExtResource("1_taqhf")
+text = "Les végétaux producteurs fabriquent leur matière."
+
+[sub_resource type="Resource" id="Resource_b28sq"]
+script = ExtResource("1_taqhf")
+text = "Les consommateurs se nourrissent d'autres êtres."
+
+[sub_resource type="Resource" id="Resource_xth16"]
+script = ExtResource("1_taqhf")
+text = "Les décomposeurs recyclent la matière organique."
+
+[sub_resource type="Resource" id="Resource_tpwiv"]
+script = ExtResource("1_taqhf")
+text = "L'équilibre des milieux est dynamique."
+
+[sub_resource type="Resource" id="Resource_rnpp6"]
+script = ExtResource("1_taqhf")
+text = "L'humain modifie les équilibres naturels."
+
+[sub_resource type="Resource" id="Resource_xvjea"]
+script = ExtResource("1_taqhf")
+text = "Protéger la nature préserve la biodiversité."
+
+[resource]
+script = ExtResource("2_yy6f0")
+phrases = Array[ExtResource("1_taqhf")]([SubResource("Resource_2bea4"), SubResource("Resource_wn8b3"), SubResource("Resource_rmoib"), SubResource("Resource_ja7yf"), SubResource("Resource_6531l"), SubResource("Resource_b28sq"), SubResource("Resource_xth16"), SubResource("Resource_tpwiv"), SubResource("Resource_rnpp6"), SubResource("Resource_xvjea")])

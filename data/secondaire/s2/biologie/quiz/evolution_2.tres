@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://8ls5g0b82243"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_qdkx3"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_1tcal"]
+
+[sub_resource type="Resource" id="Resource_2qaxp"]
+script = ExtResource("1_qdkx3")
+question = "Comment se nomme la partie de la Terre sur laquelle nous marchons ?"
+choices = Array[String](["Le noyau.", "Le manteau.", "La croûte.", "L'hydrosphère."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_ik4kw"]
+script = ExtResource("1_qdkx3")
+question = "Comment se nomme la partie de la Terre où la température est d'environ 4000°C ?"
+choices = Array[String](["Le noyau.", "Le manteau.", "La croûte.", "L'hydrosphère."])
+
+[sub_resource type="Resource" id="Resource_ajskf"]
+script = ExtResource("1_qdkx3")
+question = "Comment se nomme la partie de la Terre qui recouvre le noyau ?"
+choices = Array[String](["Le noyau.", "Le manteau.", "La croûte.", "L'hydrosphère."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_jdx5y"]
+script = ExtResource("1_qdkx3")
+question = "Comment se nomme la partie de la Terre contenant l'eau ?"
+choices = Array[String](["Le noyau.", "Le manteau.", "La croûte.", "L'hydrosphère."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_0ekfg"]
+script = ExtResource("1_qdkx3")
+question = "Quelles sont les deux conséquences du mouvement des plaques tectoniques ?"
+choices = Array[String](["Les séismes et la spéciation.", "Les tremblements de terre et les éruptions volcaniques.", "Les volcans et la biodiversité.", "Les tremblements de terre et la spéciation."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_7ltmj"]
+script = ExtResource("1_qdkx3")
+question = "Qu'est-ce qu'un volcan ?"
+choices = Array[String](["Une montagne de roches.", "Une montagne de lave.", "Un geyser.", "Une montagne d'astéroïdes."])
+
+[sub_resource type="Resource" id="Resource_k7jyf"]
+script = ExtResource("1_qdkx3")
+question = "Quels sont les deux types de volcans ?"
+choices = Array[String](["Il existe une centaine de types.", "Les brûleurs et les consommateurs.", "Les rouges et les gris.", "Il n'existe qu'un type."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_j12fx"]
+script = ExtResource("1_qdkx3")
+question = "Comment se nomme le grand nuage formé à la sortie du volcan ?"
+choices = Array[String](["La buée.", "La nuée.", "La fumée.", "La poussière."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_udtbj"]
+script = ExtResource("1_qdkx3")
+question = "En quoi consiste la sélection naturelle ?"
+choices = Array[String](["Théorie liée à l'usage.", "Mécanisme expliquant l'évolution des espèces.", "Loi du plus fort.", "Loi de la reproduction."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_1k4gl"]
+script = ExtResource("1_qdkx3")
+question = "Qu'est-ce que la phylogénie ?"
+choices = Array[String](["Le degré de différence entre chaque espèce comparée.", "Un arbre généalogique.", "Relation de parenté entre les espèces.", "Un classement exclusif de plantes."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_020uv"]
+script = ExtResource("1_qdkx3")
+question = "Quel point d’ancrage est utilisé pour réaliser un arbre phylogénétique ?"
+choices = Array[String](["L'ancêtre commun.", "La lignée pure.", "Les dates.", "Les fossiles."])
+
+[resource]
+script = ExtResource("2_1tcal")
+questions = Array[ExtResource("1_qdkx3")]([SubResource("Resource_2qaxp"), SubResource("Resource_ik4kw"), SubResource("Resource_ajskf"), SubResource("Resource_jdx5y"), SubResource("Resource_0ekfg"), SubResource("Resource_7ltmj"), SubResource("Resource_k7jyf"), SubResource("Resource_j12fx"), SubResource("Resource_udtbj"), SubResource("Resource_1k4gl"), SubResource("Resource_020uv")])
