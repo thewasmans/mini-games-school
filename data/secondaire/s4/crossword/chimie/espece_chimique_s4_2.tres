@@ -72,3 +72,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_ed22p")
 clues = Array[ExtResource("1_i7hnv")]([SubResource("Resource_acmnm"), SubResource("Resource_5cx4k"), SubResource("Resource_pgtcs"), SubResource("Resource_mb3bo"), SubResource("Resource_cw3vg"), SubResource("Resource_tmodb"), SubResource("Resource_xgw6b"), SubResource("Resource_yv57g"), SubResource("Resource_644p5"), SubResource("Resource_0d8le")])
+school_year = "S4"
+title = "Les espèces chimiques"

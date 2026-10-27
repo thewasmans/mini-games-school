@@ -2,6 +2,7 @@ class_name MemoUI
 extends Control
 
 signal completed
+signal progress_changed(completed_count: int, total_count: int)
 
 const CORRECT_COLOR := Color(0.5, 1.0, 0.5)
 const INCORRECT_COLOR := Color(1.0, 0.5, 0.5)
@@ -18,6 +19,7 @@ var _default_image: Texture2D
 func initialize(memo_data: MemoData) -> void:
 	_questions = memo_data.questions
 	_default_image = image_rect.texture
+	progress_changed.emit(_question_index, _questions.size())
 	for choice_index in choice_buttons.size():
 		choice_buttons[choice_index].pressed.connect(_on_choice_pressed.bind(choice_index))
 	_show_question()
@@ -43,6 +45,7 @@ func _on_choice_pressed(choice_index: int) -> void:
 		button.disabled = true
 	choice_buttons[question_data.correct_choice_index].modulate = CORRECT_COLOR
 	_question_index += 1
+	progress_changed.emit(_question_index, _questions.size())
 	if _question_index >= _questions.size():
 		completed.emit()
 		return

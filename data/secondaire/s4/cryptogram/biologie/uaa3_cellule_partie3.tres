@@ -39,3 +39,5 @@ text = "L'anaphase sépare les chromatides sœurs."
 script = ExtResource("2_f8q1u")
 hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_3dsvw")]([SubResource("Resource_oaxu5"), SubResource("Resource_onuu2"), SubResource("Resource_kcjvl"), SubResource("Resource_5rilo"), SubResource("Resource_66dwo"), SubResource("Resource_byw2h"), SubResource("Resource_cm5li"), SubResource("Resource_bx2o8")])
+school_year = "S4"
+title = "La cellule"

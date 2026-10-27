@@ -39,3 +39,5 @@ text = "L'analyse quantitative valide les lois de la chimie."
 script = ExtResource("2_oj8j6")
 hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_o4u45")]([SubResource("Resource_dbwnb"), SubResource("Resource_84sxc"), SubResource("Resource_2yah8"), SubResource("Resource_le467"), SubResource("Resource_ykovo"), SubResource("Resource_5vm2d"), SubResource("Resource_t0uem"), SubResource("Resource_ntxkw")])
+school_year = "S4"
+title = "Les réactions chimiques"
