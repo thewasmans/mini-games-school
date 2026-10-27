@@ -15,7 +15,7 @@ var _level_counts: Dictionary = {}
 
 var current_level: int:
 	get:
-		return _current_levels[_progress_key()]
+		return _current_levels.get(_progress_key(), 0)
 
 func _init(game_data: GameData) -> void:
 	current_study_level = 0

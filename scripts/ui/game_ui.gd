@@ -6,6 +6,9 @@ const STUDY_LEVEL_BUTTON_FONT_SIZE := 40
 const STUDY_LEVEL_PROGRESS_HEIGHT := 28
 const STUDY_LEVEL_ENTRY_SEPARATION := 8
 const SCHOOL_YEAR_BUTTON_MIN_SIZE := Vector2(200, 90)
+const COMING_SOON_TEXT := "Bientôt disponible"
+const COMING_SOON_FONT_SIZE := 24
+const COMING_SOON_COLOR := Color(1.0, 1.0, 1.0, 0.7)
 
 @export var menu_start: MenuStartUI
 @export var menu_study_levels: MenuStudyLevelsUI
@@ -41,13 +44,11 @@ func initialize(game_manager: GameManager) -> void:
 func _populate_study_levels() -> void:
 	var study_levels := _game_manager.game_data.study_levels
 	for study_level_index in study_levels.size():
-		var entry := VBoxContainer.new()
-		entry.add_theme_constant_override("separation", STUDY_LEVEL_ENTRY_SEPARATION)
-		var button := _create_choice_button(study_levels[study_level_index].name, STUDY_LEVEL_BUTTON_MIN_SIZE)
-		button.pressed.connect(_on_study_level_selected.bind(study_level_index))
-		entry.add_child(button)
+		var study_level := study_levels[study_level_index]
+		var entry := _create_choice_entry(study_level.name, STUDY_LEVEL_BUTTON_MIN_SIZE, study_level.has_levels(), _on_study_level_selected.bind(study_level_index))
 		var progress_bar := ProgressBar.new()
 		progress_bar.custom_minimum_size = Vector2(STUDY_LEVEL_BUTTON_MIN_SIZE.x, STUDY_LEVEL_PROGRESS_HEIGHT)
+		progress_bar.visible = study_level.has_levels()
 		entry.add_child(progress_bar)
 		_study_level_progress_bars.append(progress_bar)
 		menu_study_levels.buttons_container.add_child(entry)
@@ -67,9 +68,9 @@ func _populate_school_years(study_level_index: int) -> void:
 	menu_school_years.title_label.text = study_level.name
 	var school_years := study_level.school_years
 	for school_year_index in school_years.size():
-		var button := _create_choice_button(school_years[school_year_index].name, SCHOOL_YEAR_BUTTON_MIN_SIZE)
-		button.pressed.connect(_on_school_year_selected.bind(school_year_index))
-		menu_school_years.buttons_container.add_child(button)
+		var school_year := school_years[school_year_index]
+		var entry := _create_choice_entry(school_year.name, SCHOOL_YEAR_BUTTON_MIN_SIZE, school_year.has_levels(), _on_school_year_selected.bind(school_year_index))
+		menu_school_years.buttons_container.add_child(entry)
 
 func _populate_subjects() -> void:
 	for child in menu_subjects.buttons_container.get_children():
@@ -80,16 +81,31 @@ func _populate_subjects() -> void:
 	menu_subjects.title_label.text = "%s - %s" % [study_level.name, school_year.name]
 	var subjects := school_year.subjects
 	for subject_index in subjects.size():
-		var button := _create_choice_button(subjects[subject_index].name, STUDY_LEVEL_BUTTON_MIN_SIZE)
-		button.pressed.connect(_on_subject_selected.bind(subject_index))
-		menu_subjects.buttons_container.add_child(button)
+		var subject := subjects[subject_index]
+		var entry := _create_choice_entry(subject.name, STUDY_LEVEL_BUTTON_MIN_SIZE, subject.has_levels(), _on_subject_selected.bind(subject_index))
+		menu_subjects.buttons_container.add_child(entry)
 
-func _create_choice_button(button_text: String, minimum_size: Vector2) -> Button:
+func _create_choice_entry(button_text: String, minimum_size: Vector2, is_available: bool, on_pressed: Callable) -> VBoxContainer:
+	var entry := VBoxContainer.new()
+	entry.add_theme_constant_override("separation", STUDY_LEVEL_ENTRY_SEPARATION)
 	var button := Button.new()
 	button.text = button_text
 	button.custom_minimum_size = minimum_size
 	button.add_theme_font_size_override("font_size", STUDY_LEVEL_BUTTON_FONT_SIZE)
-	return button
+	button.disabled = not is_available
+	button.pressed.connect(on_pressed)
+	entry.add_child(button)
+	if not is_available:
+		entry.add_child(_create_coming_soon_label())
+	return entry
+
+func _create_coming_soon_label() -> Label:
+	var label := Label.new()
+	label.text = COMING_SOON_TEXT
+	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	label.add_theme_font_size_override("font_size", COMING_SOON_FONT_SIZE)
+	label.add_theme_color_override("font_color", COMING_SOON_COLOR)
+	return label
 
 func _on_play_button_pressed() -> void:
 	_show_study_levels_menu()
