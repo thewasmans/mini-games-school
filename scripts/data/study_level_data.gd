@@ -1,5 +1,9 @@
 class_name StudyLevelData
-extends Resource
+extends RefCounted
 
-@export var name: String = ""
-@export var school_years: Array[SchoolYearData] = []
+var name: String
+var school_years: Array[SchoolYearData]
+
+func _init(study_level_name: String, study_level_school_years: Array[SchoolYearData]) -> void:
+	name = study_level_name
+	school_years = study_level_school_years

@@ -3,6 +3,10 @@ extends Node
 
 @export var game_manager: GameManager
 
+@export_category("Main Category")
+@export var number = 3
+@export var string = ""
+
 func _ready() -> void:
 	ButtonPressAnimation.watch_default_theme_buttons(get_tree())
 	game_manager.initialize()
