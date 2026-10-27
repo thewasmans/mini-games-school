@@ -5,9 +5,11 @@ const STUDY_LEVEL_BUTTON_MIN_SIZE := Vector2(360, 90)
 const STUDY_LEVEL_BUTTON_FONT_SIZE := 40
 const STUDY_LEVEL_PROGRESS_HEIGHT := 28
 const STUDY_LEVEL_ENTRY_SEPARATION := 8
+const SCHOOL_YEAR_BUTTON_MIN_SIZE := Vector2(200, 90)
 
 @export var menu_start: MenuStartUI
 @export var menu_study_levels: MenuStudyLevelsUI
+@export var menu_school_years: MenuSchoolYearsUI
 @export var menu_subjects: MenuSubjectsUI
 @export var menu_levels: MenuLevelsUI
 @export var menu_credits: MenuCreditsUI
@@ -20,12 +22,14 @@ var _study_level_progress_bars: Array[ProgressBar] = []
 func initialize(game_manager: GameManager) -> void:
 	_game_manager = game_manager
 	menu_study_levels.hide()
+	menu_school_years.hide()
 	menu_subjects.hide()
 	menu_levels.hide()
 	menu_credits.hide()
 	menu_start.play_pressed.connect(_on_play_button_pressed)
 	menu_start.credits_pressed.connect(_on_credits_button_pressed)
 	menu_study_levels.back_pressed.connect(_on_menu_study_levels_back)
+	menu_school_years.back_pressed.connect(_on_menu_school_years_back)
 	menu_subjects.back_pressed.connect(_on_menu_subjects_back)
 	menu_levels.back_pressed.connect(_on_menu_levels_back)
 	menu_credits.back_pressed.connect(_on_menu_credits_back)
@@ -39,7 +43,7 @@ func _populate_study_levels() -> void:
 	for study_level_index in study_levels.size():
 		var entry := VBoxContainer.new()
 		entry.add_theme_constant_override("separation", STUDY_LEVEL_ENTRY_SEPARATION)
-		var button := _create_choice_button(study_levels[study_level_index].name)
+		var button := _create_choice_button(study_levels[study_level_index].name, STUDY_LEVEL_BUTTON_MIN_SIZE)
 		button.pressed.connect(_on_study_level_selected.bind(study_level_index))
 		entry.add_child(button)
 		var progress_bar := ProgressBar.new()
@@ -56,21 +60,34 @@ func _show_study_levels_menu() -> void:
 		progress_bar.value = game_state.completed_level_count(study_level_index)
 	menu_study_levels.show()
 
-func _populate_subjects(study_level_index: int) -> void:
-	for child in menu_subjects.buttons_container.get_children():
+func _populate_school_years(study_level_index: int) -> void:
+	for child in menu_school_years.buttons_container.get_children():
 		child.queue_free()
 	var study_level := _game_manager.game_data.study_levels[study_level_index]
-	menu_subjects.title_label.text = study_level.name
-	var subjects := study_level.subjects
+	menu_school_years.title_label.text = study_level.name
+	var school_years := study_level.school_years
+	for school_year_index in school_years.size():
+		var button := _create_choice_button(school_years[school_year_index].name, SCHOOL_YEAR_BUTTON_MIN_SIZE)
+		button.pressed.connect(_on_school_year_selected.bind(school_year_index))
+		menu_school_years.buttons_container.add_child(button)
+
+func _populate_subjects() -> void:
+	for child in menu_subjects.buttons_container.get_children():
+		child.queue_free()
+	var game_state := _game_manager.game_state
+	var study_level := _game_manager.game_data.study_levels[game_state.current_study_level]
+	var school_year := study_level.school_years[game_state.current_school_year]
+	menu_subjects.title_label.text = "%s - %s" % [study_level.name, school_year.name]
+	var subjects := school_year.subjects
 	for subject_index in subjects.size():
-		var button := _create_choice_button(subjects[subject_index].name)
+		var button := _create_choice_button(subjects[subject_index].name, STUDY_LEVEL_BUTTON_MIN_SIZE)
 		button.pressed.connect(_on_subject_selected.bind(subject_index))
 		menu_subjects.buttons_container.add_child(button)
 
-func _create_choice_button(button_text: String) -> Button:
+func _create_choice_button(button_text: String, minimum_size: Vector2) -> Button:
 	var button := Button.new()
 	button.text = button_text
-	button.custom_minimum_size = STUDY_LEVEL_BUTTON_MIN_SIZE
+	button.custom_minimum_size = minimum_size
 	button.add_theme_font_size_override("font_size", STUDY_LEVEL_BUTTON_FONT_SIZE)
 	return button
 
@@ -89,17 +106,39 @@ func _on_menu_study_levels_back() -> void:
 func _on_study_level_selected(study_level_index: int) -> void:
 	_game_manager.game_state.select_study_level(study_level_index)
 	menu_study_levels.hide()
-	_populate_subjects(study_level_index)
+	if _has_school_year_choice():
+		_populate_school_years(study_level_index)
+		menu_school_years.show()
+		return
+	_on_school_year_selected(0)
+
+func _has_school_year_choice() -> bool:
+	var study_level := _game_manager.game_data.study_levels[_game_manager.game_state.current_study_level]
+	return study_level.school_years.size() != 1
+
+func _on_menu_school_years_back() -> void:
+	menu_school_years.hide()
+	_show_study_levels_menu()
+
+func _on_school_year_selected(school_year_index: int) -> void:
+	_game_manager.game_state.select_school_year(school_year_index)
+	menu_school_years.hide()
+	_populate_subjects()
 	menu_subjects.show()
 
 func _on_menu_subjects_back() -> void:
 	menu_subjects.hide()
+	if _has_school_year_choice():
+		menu_school_years.show()
+		return
 	_show_study_levels_menu()
 
 func _on_subject_selected(subject_index: int) -> void:
-	_game_manager.game_state.select_subject(subject_index)
-	var study_level := _game_manager.game_data.study_levels[_game_manager.game_state.current_study_level]
-	menu_levels.title_label.text = "%s - %s" % [study_level.name, study_level.subjects[subject_index].name]
+	var game_state := _game_manager.game_state
+	game_state.select_subject(subject_index)
+	var study_level := _game_manager.game_data.study_levels[game_state.current_study_level]
+	var school_year := study_level.school_years[game_state.current_school_year]
+	menu_levels.title_label.text = "%s - %s - %s" % [study_level.name, school_year.name, school_year.subjects[subject_index].name]
 	menu_subjects.hide()
 	_build_level_grid()
 	menu_levels.show()
@@ -114,7 +153,7 @@ func _build_level_grid() -> void:
 		child.queue_free()
 	var columns := menu_levels.grid_container.columns
 	var game_state := _game_manager.game_state
-	var levels := _game_manager.game_data.levels_of(game_state.current_study_level, game_state.current_subject)
+	var levels := _game_manager.game_data.levels_of(game_state.current_study_level, game_state.current_school_year, game_state.current_subject)
 	_level_buttons.resize(levels.size())
 	var rows: Array[Array] = []
 	var index := 0
