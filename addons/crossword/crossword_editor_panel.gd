@@ -23,6 +23,7 @@ func _ready() -> void:
 	_build_toolbar()
 	_build_body()
 	_build_file_dialog()
+	_forward_drops_from(self)
 	_open_last_crossword()
 
 func _notification(what: int) -> void:
@@ -92,16 +93,60 @@ func _on_open_pressed() -> void:
 	_file_dialog.popup_centered_ratio(0.5)
 
 func _on_file_selected(path: String) -> void:
-	var resource := load(path)
-	if not resource is CrosswordData:
-		_show_error("%s n'est pas une ressource CrosswordData." % path)
+	var crossword_data := _crossword_from(load(path))
+	if crossword_data == null:
+		_show_error("%s ne contient pas de mot croisé." % path)
 		return
-	EditorInterface.get_editor_settings().set_project_metadata(SETTINGS_SECTION, SETTINGS_LAST_PATH, path)
+	open_crossword(crossword_data)
+
+func open_crossword(crossword_data: CrosswordData) -> void:
+	EditorInterface.get_editor_settings().set_project_metadata(SETTINGS_SECTION, SETTINGS_LAST_PATH, crossword_data.resource_path)
 	if _crossword_data != null:
 		_crossword_data.changed.disconnect(_refresh)
-	_crossword_data = resource
+	_crossword_data = crossword_data
 	_crossword_data.changed.connect(_refresh)
 	_refresh()
+
+func _crossword_from(resource: Resource) -> CrosswordData:
+	if resource is CrosswordData:
+		return resource
+	if resource is LevelData:
+		for mini_game in resource.mini_games:
+			if mini_game is CrosswordData:
+				return mini_game
+	return null
+
+func _forward_drops_from(control: Control) -> void:
+	for child in control.get_children():
+		if child is Control:
+			child.set_drag_forwarding(Callable(), _can_drop_data, _drop_data)
+			_forward_drops_from(child)
+
+func _dropped_resources(data: Variant) -> Array[Resource]:
+	var resources: Array[Resource] = []
+	if not data is Dictionary:
+		return resources
+	match data.get("type"):
+		"resource":
+			resources.append(data["resource"])
+		"files":
+			for path: String in data["files"]:
+				if ResourceLoader.exists(path):
+					resources.append(load(path))
+	return resources
+
+func _dropped_crossword(data: Variant) -> CrosswordData:
+	for resource in _dropped_resources(data):
+		var crossword_data := _crossword_from(resource)
+		if crossword_data != null:
+			return crossword_data
+	return null
+
+func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
+	return _dropped_crossword(data) != null
+
+func _drop_data(_at_position: Vector2, data: Variant) -> void:
+	open_crossword(_dropped_crossword(data))
 
 func _on_regenerate_pressed() -> void:
 	CrosswordGenerator.regenerate(_crossword_data)
@@ -125,7 +170,7 @@ func _on_clue_list_empty_clicked(_position: Vector2, _mouse_button_index: int) -
 func _refresh() -> void:
 	var has_data := _crossword_data != null
 	_regenerate_button.disabled = not has_data
-	_path_label.text = _crossword_data.resource_path if has_data else "Aucun mot croisé ouvert"
+	_path_label.text = _crossword_data.resource_path if has_data else "Aucun mot croisé ouvert — glisse un level ou un mot croisé ici"
 	var selected_items := _clue_list.get_selected_items()
 	_clue_list.clear()
 	_status_label.remove_theme_color_override("font_color")

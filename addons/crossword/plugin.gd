@@ -16,6 +16,15 @@ func _exit_tree() -> void:
 func _has_main_screen() -> bool:
 	return true
 
+func _handles(object: Object) -> bool:
+	return object is CrosswordData
+
+func _edit(object: Object) -> void:
+	if object == null:
+		return
+	EditorInterface.set_main_screen_editor(_get_plugin_name())
+	_panel.open_crossword(object)
+
 func _make_visible(visible: bool) -> void:
 	if _panel != null:
 		_panel.visible = visible
