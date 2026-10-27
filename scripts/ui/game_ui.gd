@@ -3,6 +3,8 @@ extends Control
 
 const STUDY_LEVEL_BUTTON_MIN_SIZE := Vector2(360, 90)
 const STUDY_LEVEL_BUTTON_FONT_SIZE := 40
+const STUDY_LEVEL_PROGRESS_HEIGHT := 28
+const STUDY_LEVEL_ENTRY_SEPARATION := 8
 
 @export var menu_start: MenuStartUI
 @export var menu_study_levels: MenuStudyLevelsUI
@@ -13,6 +15,7 @@ const STUDY_LEVEL_BUTTON_FONT_SIZE := 40
 
 var _game_manager: GameManager
 var _level_buttons: Array[ButtonLevelUI] = []
+var _study_level_progress_bars: Array[ProgressBar] = []
 
 func initialize(game_manager: GameManager) -> void:
 	_game_manager = game_manager
@@ -33,9 +36,24 @@ func initialize(game_manager: GameManager) -> void:
 func _populate_study_levels() -> void:
 	var study_levels := _game_manager.game_data.study_levels
 	for study_level_index in study_levels.size():
+		var entry := VBoxContainer.new()
+		entry.add_theme_constant_override("separation", STUDY_LEVEL_ENTRY_SEPARATION)
 		var button := _create_choice_button(study_levels[study_level_index].name)
 		button.pressed.connect(_on_study_level_selected.bind(study_level_index))
-		menu_study_levels.buttons_container.add_child(button)
+		entry.add_child(button)
+		var progress_bar := ProgressBar.new()
+		progress_bar.custom_minimum_size = Vector2(STUDY_LEVEL_BUTTON_MIN_SIZE.x, STUDY_LEVEL_PROGRESS_HEIGHT)
+		entry.add_child(progress_bar)
+		_study_level_progress_bars.append(progress_bar)
+		menu_study_levels.buttons_container.add_child(entry)
+
+func _show_study_levels_menu() -> void:
+	var game_state := _game_manager.game_state
+	for study_level_index in _study_level_progress_bars.size():
+		var progress_bar := _study_level_progress_bars[study_level_index]
+		progress_bar.max_value = maxi(1, game_state.level_count(study_level_index))
+		progress_bar.value = game_state.completed_level_count(study_level_index)
+	menu_study_levels.show()
 
 func _populate_subjects(study_level_index: int) -> void:
 	for child in menu_subjects.buttons_container.get_children():
@@ -56,7 +74,7 @@ func _create_choice_button(button_text: String) -> Button:
 	return button
 
 func _on_play_button_pressed() -> void:
-	menu_study_levels.show()
+	_show_study_levels_menu()
 
 func _on_credits_button_pressed() -> void:
 	menu_credits.show()
@@ -75,7 +93,7 @@ func _on_study_level_selected(study_level_index: int) -> void:
 
 func _on_menu_subjects_back() -> void:
 	menu_subjects.hide()
-	menu_study_levels.show()
+	_show_study_levels_menu()
 
 func _on_subject_selected(subject_index: int) -> void:
 	_game_manager.game_state.select_subject(subject_index)
