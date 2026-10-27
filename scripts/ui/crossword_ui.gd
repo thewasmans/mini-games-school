@@ -10,6 +10,13 @@ const SELECTED_COLOR := Color(0.7, 0.85, 1.0)
 const CURRENT_COLOR := Color(1.0, 0.8, 0.3)
 const HOVER_COLOR := Color(0.88, 0.94, 1.0)
 const INCORRECT_COLOR := Color(1.0, 0.5, 0.5)
+const SUCCESS_POP_SCALE := 1.35
+const SUCCESS_FLASH_COLOR := Color(1.6, 1.6, 1.6)
+const SUCCESS_LETTER_STAGGER := 0.05
+const VICTORY_POP_SCALE := 1.25
+const VICTORY_FLASH_COLOR := Color(1.5, 1.3, 0.6)
+const VICTORY_WAVE_STAGGER := 0.04
+const VICTORY_END_DELAY := 0.6
 
 @export var grid_area: Control
 @export var grid_container: GridContainer
@@ -165,18 +172,33 @@ func _update_word_cells(new_text: String, animate: bool = true) -> void:
 		cell.text = letter
 
 func _animate_letter(cell: Control) -> void:
-	if cell.has_meta("bounce_tween"):
-		var previous_tween: Tween = cell.get_meta("bounce_tween")
-		if previous_tween != null and previous_tween.is_valid():
-			previous_tween.kill()
-	cell.pivot_offset = CELL_SIZE / 2.0
+	var tween := UIFeedback.create_tween_for(cell)
 	cell.scale = Vector2(0.4, 0.4)
 	cell.modulate.a = 0.0
-	var tween := create_tween()
 	tween.set_parallel(true)
 	tween.tween_property(cell, "scale", Vector2.ONE, 0.25).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	tween.tween_property(cell, "modulate:a", 1.0, .15)
-	cell.set_meta("bounce_tween", tween)
+
+func _play_incorrect_feedback(placement: CrosswordWordPlacement) -> void:
+	for letter_index in placement.word_data.word.length():
+		UIFeedback.shake(_cells[placement.cell_position(letter_index)])
+
+func _play_success_feedback(placement: CrosswordWordPlacement) -> void:
+	for letter_index in placement.word_data.word.length():
+		var cell: Control = _cells[placement.cell_position(letter_index)]
+		UIFeedback.pop(cell, letter_index * SUCCESS_LETTER_STAGGER, SUCCESS_POP_SCALE, SUCCESS_FLASH_COLOR, NORMAL_COLOR)
+
+func _play_victory_feedback() -> float:
+	var positions: Array = _cells.keys()
+	var min_diagonal: int = positions[0].x + positions[0].y
+	var max_diagonal: int = min_diagonal
+	for pos in positions:
+		min_diagonal = mini(min_diagonal, pos.x + pos.y)
+		max_diagonal = maxi(max_diagonal, pos.x + pos.y)
+	for pos in positions:
+		UIFeedback.pop(_cells[pos], (pos.x + pos.y - min_diagonal) * VICTORY_WAVE_STAGGER, VICTORY_POP_SCALE, VICTORY_FLASH_COLOR, NORMAL_COLOR)
+	UIFeedback.spawn_confetti(self, UIFeedback.center_in(self, grid_area))
+	return (max_diagonal - min_diagonal) * VICTORY_WAVE_STAGGER + UIFeedback.POP_DURATION + VICTORY_END_DELAY
 
 func _on_word_input_changed(new_text: String) -> void:
 	if _selected_placement == null:
@@ -192,6 +214,7 @@ func _on_word_input_submitted(_new_text: String) -> void:
 func _validate_word(submitted_text: String) -> void:
 	if submitted_text.strip_edges().to_upper() != _selected_placement.word_data.word:
 		_set_word_color(_selected_placement, INCORRECT_COLOR)
+		_play_incorrect_feedback(_selected_placement)
 		return
 	_placement_attempts[_selected_placement] = _selected_placement.word_data.word
 	_clear_selection_color()
@@ -199,10 +222,13 @@ func _validate_word(submitted_text: String) -> void:
 		var pos := _selected_placement.cell_position(letter_index)
 		if _cells.has(pos):
 			_cells[pos].theme = tile_letter_validated_theme
+	_play_success_feedback(_selected_placement)
 	_selected_placement = null
 	hint_label.text = ""
 	input.text = ""
 	_solved_count += 1
 	progress_changed.emit(_solved_count, _word_count)
 	if _solved_count == _word_count:
+		var victory_duration := _play_victory_feedback()
+		await get_tree().create_timer(victory_duration).timeout
 		completed.emit()
