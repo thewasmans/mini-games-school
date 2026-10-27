@@ -39,3 +39,5 @@ text = "La spéciation engendre de nouvelles espèces."
 script = ExtResource("2_t71l6")
 hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_b1gx6")]([SubResource("Resource_p0k21"), SubResource("Resource_033hd"), SubResource("Resource_08pqn"), SubResource("Resource_7c4nm"), SubResource("Resource_r2od2"), SubResource("Resource_umrce"), SubResource("Resource_ph5vq"), SubResource("Resource_5fc53")])
+school_year = "S4"
+title = "L'évolution"

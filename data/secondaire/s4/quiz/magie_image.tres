@@ -135,3 +135,5 @@ choices = Array[String](["Focaliser correctement la lumière sur la rétine.", "
 [resource]
 script = ExtResource("2_trlsp")
 questions = Array[ExtResource("1_fxcfb")]([SubResource("Resource_c7fa8"), SubResource("Resource_pw0f0"), SubResource("Resource_r8py4"), SubResource("Resource_57pra"), SubResource("Resource_lu7ow"), SubResource("Resource_ve3uc"), SubResource("Resource_82xyp"), SubResource("Resource_wj6lc"), SubResource("Resource_w57bp"), SubResource("Resource_xuli0"), SubResource("Resource_v2sb4"), SubResource("Resource_440po"), SubResource("Resource_ucxw7"), SubResource("Resource_lxeax"), SubResource("Resource_dm857"), SubResource("Resource_312r1"), SubResource("Resource_v65rj"), SubResource("Resource_wuxtm"), SubResource("Resource_rsn6d"), SubResource("Resource_met7s"), SubResource("Resource_6cv0g"), SubResource("Resource_52usp"), SubResource("Resource_k5m07")])
+school_year = "S4"
+title = "La magie de l'image"

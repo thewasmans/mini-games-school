@@ -3,6 +3,8 @@ class_name CrosswordGenerator
 extends RefCounted
 
 const MAX_ATTEMPTS := 100
+const MAX_GRID_COLUMNS := 12
+const COLUMN_OVERFLOW_PENALTY := 1000
 
 static func regenerate(crossword_data: CrosswordData) -> void:
 	var placements := generate(crossword_data.clues)
@@ -22,21 +24,25 @@ static func generate(clues: Array[WordData]) -> Array[CrosswordWordPlacement]:
 		return best_placements
 	var ordered_clues: Array[WordData] = clues.duplicate()
 	ordered_clues.sort_custom(func(a: WordData, b: WordData) -> bool: return a.word.length() > b.word.length())
+	var best_score := 0
 	for attempt in MAX_ATTEMPTS:
 		var unplaced: Array[WordData] = []
-		var placements := _place_connected_words(ordered_clues, unplaced)
-		if attempt == 0 or unplaced.size() < best_unplaced.size():
+		var is_first_word_horizontal := attempt % 2 == 0
+		var placements := _place_connected_words(ordered_clues, unplaced, is_first_word_horizontal)
+		var score := _layout_score(_placements_bounds(placements))
+		var has_fewer_unplaced := unplaced.size() < best_unplaced.size()
+		var is_more_compact := unplaced.size() == best_unplaced.size() and score < best_score
+		if attempt == 0 or has_fewer_unplaced or is_more_compact:
 			best_placements = placements
 			best_unplaced = unplaced
-		if best_unplaced.is_empty():
-			break
+			best_score = score
 		ordered_clues.shuffle()
 	for word_data in best_unplaced:
 		best_placements.append(_find_fallback_placement(word_data, best_placements))
 	return best_placements
 
-static func _place_connected_words(ordered_clues: Array[WordData], unplaced: Array[WordData]) -> Array[CrosswordWordPlacement]:
-	var placements: Array[CrosswordWordPlacement] = [CrosswordWordPlacement.new(ordered_clues[0], Vector2i.ZERO, true)]
+static func _place_connected_words(ordered_clues: Array[WordData], unplaced: Array[WordData], is_first_word_horizontal: bool) -> Array[CrosswordWordPlacement]:
+	var placements: Array[CrosswordWordPlacement] = [CrosswordWordPlacement.new(ordered_clues[0], Vector2i.ZERO, is_first_word_horizontal)]
 	unplaced.append_array(ordered_clues.slice(1))
 	var has_progress := true
 	while has_progress and not unplaced.is_empty():
@@ -54,6 +60,9 @@ static func _find_crossing_placement(word_data: WordData, placements: Array[Cros
 	var letters := _build_letter_grid(placements)
 	var horizontal_cells := _build_direction_cells(placements, true)
 	var vertical_cells := _build_direction_cells(placements, false)
+	var bounds := _placements_bounds(placements)
+	var best_candidate: CrosswordWordPlacement = null
+	var best_score := 0
 	for existing in placements:
 		for existing_index in existing.word_data.word.length():
 			var existing_letter := existing.word_data.word[existing_index]
@@ -69,9 +78,28 @@ static func _find_crossing_placement(word_data: WordData, placements: Array[Cros
 					start = cell - Vector2i(0, letter_index)
 				var candidate := CrosswordWordPlacement.new(word_data, start, is_horizontal)
 				var same_direction_cells := horizontal_cells if is_horizontal else vertical_cells
-				if _is_valid_placement(candidate, letters, same_direction_cells):
-					return candidate
-	return null
+				if not _is_valid_placement(candidate, letters, same_direction_cells):
+					continue
+				var score := _layout_score(bounds.merge(_placement_rect(candidate)))
+				if best_candidate == null or score < best_score:
+					best_candidate = candidate
+					best_score = score
+	return best_candidate
+
+static func _placement_rect(placement: CrosswordWordPlacement) -> Rect2i:
+	var length := placement.word_data.word.length()
+	var rect_size := Vector2i(length, 1) if placement.is_horizontal else Vector2i(1, length)
+	return Rect2i(placement.start, rect_size)
+
+static func _placements_bounds(placements: Array[CrosswordWordPlacement]) -> Rect2i:
+	var bounds := _placement_rect(placements[0])
+	for placement in placements:
+		bounds = bounds.merge(_placement_rect(placement))
+	return bounds
+
+static func _layout_score(bounds: Rect2i) -> int:
+	var column_overflow := maxi(0, bounds.size.x - MAX_GRID_COLUMNS)
+	return column_overflow * COLUMN_OVERFLOW_PENALTY + bounds.get_area()
 
 static func _is_valid_placement(candidate: CrosswordWordPlacement, letters: Dictionary, same_direction_cells: Dictionary) -> bool:
 	var word := candidate.word_data.word

@@ -1,44 +1,53 @@
 extends Object
 class_name GameState
 
-signal level_unlocked(study_level_index: int, level_index: int)
+signal level_unlocked(level_index: int)
 signal current_level_changed(level_index: int)
 
 var current_study_level: int
-var current_levels: Array[int] = []
-var unlocked_level_counts: Array[int] = []
-var level_counts: Array[int] = []
+var current_subject: int
+var _current_levels: Dictionary = {}
+var _unlocked_level_counts: Dictionary = {}
+var _level_counts: Dictionary = {}
 
 var current_level: int:
 	get:
-		return current_levels[current_study_level]
+		return _current_levels[_progress_key()]
 
 func _init(game_data: GameData) -> void:
 	current_study_level = 0
-	current_levels.resize(game_data.study_levels.size())
-	current_levels.fill(0)
-	unlocked_level_counts.resize(game_data.study_levels.size())
-	unlocked_level_counts.fill(1)
-	level_counts.resize(game_data.study_levels.size())
+	current_subject = 0
 	for study_level_index in game_data.study_levels.size():
-		level_counts[study_level_index] = game_data.study_levels[study_level_index].levels.size()
+		var subjects := game_data.study_levels[study_level_index].subjects
+		for subject_index in subjects.size():
+			var key := Vector2i(study_level_index, subject_index)
+			_current_levels[key] = 0
+			_unlocked_level_counts[key] = 1
+			_level_counts[key] = subjects[subject_index].levels.size()
 
 func select_study_level(study_level_index: int) -> void:
 	current_study_level = study_level_index
 
-func is_level_unlocked(study_level_index: int, level_index: int) -> bool:
-	return level_index < unlocked_level_counts[study_level_index]
+func select_subject(subject_index: int) -> void:
+	current_subject = subject_index
+
+func is_level_unlocked(level_index: int) -> bool:
+	return level_index < _unlocked_level_counts[_progress_key()]
 
 func select_level(level_index: int) -> void:
-	current_levels[current_study_level] = level_index
+	_current_levels[_progress_key()] = level_index
 	current_level_changed.emit(level_index)
 
 func complete_level(level_index: int) -> void:
-	if level_index != unlocked_level_counts[current_study_level] - 1:
+	var key := _progress_key()
+	if level_index != _unlocked_level_counts[key] - 1:
 		return
-	if unlocked_level_counts[current_study_level] >= level_counts[current_study_level]:
+	if _unlocked_level_counts[key] >= _level_counts[key]:
 		return
-	unlocked_level_counts[current_study_level] += 1
-	var unlocked_index := unlocked_level_counts[current_study_level] - 1
-	level_unlocked.emit(current_study_level, unlocked_index)
+	_unlocked_level_counts[key] += 1
+	var unlocked_index: int = _unlocked_level_counts[key] - 1
+	level_unlocked.emit(unlocked_index)
 	select_level(unlocked_index)
+
+func _progress_key() -> Vector2i:
+	return Vector2i(current_study_level, current_subject)

@@ -39,3 +39,5 @@ text = "La masse molaire correspond à la masse d'une mole de substance."
 script = ExtResource("2_g2wdw")
 hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_23jyl")]([SubResource("Resource_2ma66"), SubResource("Resource_xodp5"), SubResource("Resource_gng46"), SubResource("Resource_dmr7u"), SubResource("Resource_20dm6"), SubResource("Resource_li6x8"), SubResource("Resource_3uubx"), SubResource("Resource_x1u3k")])
+school_year = "S4"
+title = "Les réactions chimiques"

@@ -39,3 +39,5 @@ text = "Les échanges traversent la membrane."
 script = ExtResource("2_egotw")
 hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_q8mte")]([SubResource("Resource_1nmh5"), SubResource("Resource_mhjvm"), SubResource("Resource_ph6gt"), SubResource("Resource_w231v"), SubResource("Resource_vmiw3"), SubResource("Resource_y0raw"), SubResource("Resource_xvwfy"), SubResource("Resource_be8dk")])
+school_year = "S4"
+title = "La cellule"
