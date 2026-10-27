@@ -31,6 +31,7 @@ func initialize(game_manager: GameManager) -> void:
 	menu_credits.back_pressed.connect(_on_menu_credits_back)
 	_game_manager.game_state.level_unlocked.connect(_on_level_unlocked)
 	_game_manager.game_state.current_level_changed.connect(_on_current_level_changed)
+	_game_manager.game_state.all_levels_unlocked.connect(_on_all_levels_unlocked)
 	_populate_study_levels()
 
 func _populate_study_levels() -> void:
@@ -173,6 +174,10 @@ func _add_level_button(level_index: int) -> void:
 
 func _on_level_unlocked(level_index: int) -> void:
 	_level_buttons[level_index].set_unlocked(true)
+
+func _on_all_levels_unlocked() -> void:
+	if menu_levels.visible:
+		_build_level_grid()
 
 func _on_current_level_changed(level_index: int) -> void:
 	for button_level in _level_buttons:

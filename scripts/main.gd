@@ -11,4 +11,4 @@ func _ready() -> void:
 func _spawn_debug_helper() -> void:
 	if not OS.has_feature("editor"):
 		return
-	add_child(DebugHelper.new())
+	add_child(DebugHelper.new(game_manager))
