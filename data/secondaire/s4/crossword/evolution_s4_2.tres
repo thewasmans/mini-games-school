@@ -7,85 +7,84 @@
 script = ExtResource("1_t4lkn")
 word = "ANATOMIE"
 hint = "Science qui étudie la structure et l'organisation des parties d'un être vivant."
-grid_position = Vector2i(0, 3)
+grid_position = Vector2i(7, 10)
+is_horizontal = false
 
 [sub_resource type="Resource" id="Resource_b0ns4"]
 script = ExtResource("1_t4lkn")
 word = "VERTEBRE"
 hint = "Taxon d'animaux possédant un crâne et une colonne vertébrale."
-grid_position = Vector2i(0, 10)
+grid_position = Vector2i(2, 0)
 
 [sub_resource type="Resource" id="Resource_6ttb0"]
 script = ExtResource("1_t4lkn")
 word = "ANALOGUES"
 hint = "Structures qui se ressemblent (et qui remplissent éventuellement la même fonction), mais ont deux origines évolutives complètement distinctes."
-grid_position = Vector2i(9, 3)
+grid_position = Vector2i(2, 10)
 is_horizontal = false
 
 [sub_resource type="Resource" id="Resource_kah4v"]
 script = ExtResource("1_t4lkn")
 word = "EVOLUTION"
 hint = "Fait scientifique qui se caractérise par des changements au cours du temps, que l'on peut étudier chez des bactéries."
-grid_position = Vector2i(11, 7)
-is_horizontal = false
+grid_position = Vector2i(0, 14)
 
 [sub_resource type="Resource" id="Resource_hkjbi"]
 script = ExtResource("1_t4lkn")
 word = "MATRICE"
 hint = "Tableau de comparaisons des caractéristiques entre espèces."
-grid_position = Vector2i(12, 5)
+grid_position = Vector2i(1, 6)
 
 [sub_resource type="Resource" id="Resource_egm25"]
 script = ExtResource("1_t4lkn")
 word = "CLADE"
 hint = "Groupe de taxons ayant une origine phylétique commune."
-grid_position = Vector2i(0, 1)
-is_horizontal = false
+grid_position = Vector2i(5, 10)
 
 [sub_resource type="Resource" id="Resource_kpg6u"]
 script = ExtResource("1_t4lkn")
 word = "WWF"
 hint = "Acronyme de \"World Wildlife Fund\"."
-grid_position = Vector2i(5, 17)
+grid_position = Vector2i(6, 20)
 
 [sub_resource type="Resource" id="Resource_ab4m3"]
 script = ExtResource("1_t4lkn")
 word = "ABIOTIQUE"
 hint = "Terme qui caractérise des facteurs physico-chimiques comme le pH."
-grid_position = Vector2i(13, 5)
+grid_position = Vector2i(9, 2)
 is_horizontal = false
 
 [sub_resource type="Resource" id="Resource_ayhmu"]
 script = ExtResource("1_t4lkn")
 word = "BIOME"
 hint = "Vaste région biogéographique s'étendant sous un même climat."
-grid_position = Vector2i(5, 0)
-is_horizontal = false
+grid_position = Vector2i(6, 16)
 
 [sub_resource type="Resource" id="Resource_u4lte"]
 script = ExtResource("1_t4lkn")
 word = "MITOSE"
 hint = "Processus de division cellulaire permettant d'obtenir des cellules filles génétiquement identiques."
-grid_position = Vector2i(3, 1)
+grid_position = Vector2i(10, 11)
 is_horizontal = false
 
 [sub_resource type="Resource" id="Resource_1rmje"]
 script = ExtResource("1_t4lkn")
 word = "PHYLOGENIE"
 hint = "Science de classification de l'ensemble du vivant, effectuée en fonction des liens de parenté de chaque espèce dans un arbre."
-grid_position = Vector2i(5, 7)
+grid_position = Vector2i(1, 4)
 
 [sub_resource type="Resource" id="Resource_h226v"]
 script = ExtResource("1_t4lkn")
 word = "ANALOGUES"
 hint = "Structures qui se ressemblent (et qui remplissent éventuellement la même fonction), mais ont deux origines évolutives complètement distinctes."
-grid_position = Vector2i(0, 12)
+grid_position = Vector2i(0, 7)
+is_horizontal = false
 
 [sub_resource type="Resource" id="Resource_xyrw7"]
 script = ExtResource("1_t4lkn")
 word = "ECOSYSTEME"
 hint = "Ensemble formé par une communauté d'êtres vivants en interaction avec leur environnement."
-grid_position = Vector2i(7, 3)
+grid_position = Vector2i(3, 0)
 is_horizontal = false
 
 [resource]

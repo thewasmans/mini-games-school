@@ -91,6 +91,7 @@ func _on_menu_levels_back() -> void:
 
 func _build_level_grid() -> void:
 	for child in menu_levels.grid_container.get_children():
+		menu_levels.grid_container.remove_child(child)
 		child.queue_free()
 	var columns := menu_levels.grid_container.columns
 	var game_state := _game_manager.game_state
@@ -111,6 +112,8 @@ func _build_level_grid() -> void:
 				row.append(-1)
 		for level_index in row_level_indices:
 			row.append(level_index)
+		for _column in columns - row.size():
+			row.append(-1)
 		rows.append(row)
 		index += row_size
 		var connector_on_right := content_row % 2 == 0
