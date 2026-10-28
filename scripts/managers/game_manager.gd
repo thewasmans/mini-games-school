@@ -40,6 +40,13 @@ func study_progress(study: int) -> Vector2i:
 	return Vector2i(done, data.count_study_levels(study))
 
 
+func total_progress() -> Vector2i:
+	var total := Vector2i.ZERO
+	for study in GameData.STUDY_NAMES.size():
+		total += study_progress(study)
+	return total
+
+
 func subject_progress(study: int, year: int, subject: int) -> Vector2i:
 	var s := data.get_subject(study, year, subject)
 	var total := s.count_levels() if s != null else 0

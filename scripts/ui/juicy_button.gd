@@ -1,56 +1,91 @@
 class_name JuicyButton
 extends Button
-## Bouton épais façon jeu mobile : écrasement à l'appui, rebond élastique, reflet, son.
+## Bouton épais façon jeu mobile : dégradé, liseré clair, bord sombre, reflet, étincelles,
+## icônes vectorielles, écrasement à l'appui et rebond élastique.
+## Le texte est dessiné à la main (le texte natif sert seulement au calcul de taille).
 
-## Icône dessinée : "", "back", "check".
-var icon_kind := ""
-## Reflet lumineux qui balaie le bouton à intervalle régulier.
-var shine := false
 var sound := "click"
+## Icône seule au centre (bouton sans texte) : voir UIDraw.icon().
+var icon_kind := "":
+	set(value):
+		icon_kind = value
+		_apply_margins()
+var icon_left := "":
+	set(value):
+		icon_left = value
+		_apply_margins()
+var icon_right := "":
+	set(value):
+		icon_right = value
+		_apply_margins()
 var color: Color = UIStyle.BLUE:
 	set(value):
 		color = value
-		_apply_styles()
-## Marge intérieure gauche/droite du texte.
+		queue_redraw()
+## Couleur du bas du dégradé. Transparent = dérivée de `color`.
+var color_bottom := Color(0, 0, 0, 0):
+	set(value):
+		color_bottom = value
+		queue_redraw()
+var text_color := Color.WHITE
+## Contour du texte : -1 = automatique, 0 = aucun.
+var text_outline := -1
 var padding := 22:
 	set(value):
 		padding = value
-		_apply_styles()
+		_apply_margins()
+var depth := 9.0
+var radius := 24.0
+var sparkles := false:
+	set(value):
+		sparkles = value
+		_update_process()
+var shine := false
 
-var _depth := 8
-var _radius := 22
+var _t := 0.0
 var _shine_t := 0.0
 var _scale_tween: Tween
 
 
 func _init(text_ := "", color_ := UIStyle.BLUE, font_size := 30) -> void:
 	text = text_
+	color = color_
 	focus_mode = FOCUS_NONE
 	mouse_default_cursor_shape = CURSOR_POINTING_HAND
 	add_theme_font_size_override("font_size", font_size)
-	color = color_
+	for c in ["font_color", "font_hover_color", "font_pressed_color", "font_hover_pressed_color", "font_focus_color",
+			"font_disabled_color", "font_outline_color", "font_shadow_color"]:
+		add_theme_color_override(c, Color(0, 0, 0, 0))
+	add_theme_constant_override("outline_size", 0)
+	add_theme_constant_override("shadow_outline_size", 0)
+	_apply_margins()
 
 
 func _ready() -> void:
 	pivot_offset = size / 2
 	resized.connect(func() -> void: pivot_offset = size / 2)
-	button_down.connect(func() -> void: _tween_scale(Vector2(0.9, 0.86), 0.08, Tween.TRANS_QUAD))
+	button_down.connect(func() -> void: _tween_scale(Vector2(0.92, 0.88), 0.08, Tween.TRANS_QUAD))
 	button_up.connect(func() -> void: _tween_scale(Vector2.ONE, 0.5, Tween.TRANS_ELASTIC))
 	mouse_entered.connect(func() -> void:
 		if not disabled:
 			_tween_scale(Vector2(1.04, 1.04), 0.25, Tween.TRANS_BACK))
 	mouse_exited.connect(func() -> void: _tween_scale(Vector2.ONE, 0.25, Tween.TRANS_BACK))
 	pressed.connect(func() -> void: Sfx.play(sound))
-	set_process(shine)
+	_update_process()
 
 
 func set_shine(on: bool) -> void:
 	shine = on
-	set_process(on)
+	_update_process()
+
+
+func _update_process() -> void:
+	set_process(shine or sparkles)
 
 
 func _process(delta: float) -> void:
-	_shine_t = fmod(_shine_t + delta, 2.6)
+	_t += delta
+	_shine_t = fmod(_shine_t + delta, 2.8)
 	queue_redraw()
 
 
@@ -61,58 +96,84 @@ func _tween_scale(target: Vector2, duration: float, trans: Tween.TransitionType)
 	_scale_tween.tween_property(self, "scale", target, duration).set_trans(trans).set_ease(Tween.EASE_OUT)
 
 
-func _apply_styles() -> void:
-	var normal := _style(color)
-	add_theme_stylebox_override("normal", normal)
-	add_theme_stylebox_override("hover", _style(color.lightened(0.1)))
-	var pressed_sb := _style(color.darkened(0.06))
-	pressed_sb.border_width_bottom = 4
-	pressed_sb.content_margin_top += 4
-	add_theme_stylebox_override("pressed", pressed_sb)
-	add_theme_stylebox_override("hover_pressed", pressed_sb)
-	add_theme_stylebox_override("disabled", _style(color.darkened(0.12)))
-	add_theme_stylebox_override("focus", StyleBoxEmpty.new())
+func _icon_size() -> float:
+	return get_theme_font_size("font_size") * 1.5
+
+
+func _apply_margins() -> void:
+	var sb := StyleBoxEmpty.new()
+	var icon_w := _icon_size() + 8
+	sb.content_margin_left = padding + (icon_w if icon_left != "" else 0.0)
+	sb.content_margin_right = padding + (icon_w if icon_right != "" else 0.0)
+	sb.content_margin_top = 10
+	sb.content_margin_bottom = 12 + depth
+	for state in ["normal", "hover", "pressed", "hover_pressed", "disabled", "focus"]:
+		add_theme_stylebox_override(state, sb)
 	queue_redraw()
 
 
-func _style(c: Color) -> StyleBoxFlat:
-	var sb := UIStyle.box(c, _radius, _depth, 3, c.darkened(0.42))
-	sb.shadow_color = Color(0, 0, 0, 0.3)
-	sb.shadow_size = 6
-	sb.shadow_offset = Vector2(0, 5)
-	sb.content_margin_left = padding
-	sb.content_margin_right = padding
-	sb.content_margin_top = 10
-	sb.content_margin_bottom = 12
-	return sb
-
-
 func _draw() -> void:
-	var face_h := size.y - _depth - 3
-	# Reflet sur la moitié haute
-	var gloss := StyleBoxFlat.new()
-	gloss.bg_color = Color(1, 1, 1, 0.22 if not disabled else 0.08)
-	gloss.set_corner_radius_all(_radius - 6)
-	gloss.corner_detail = 6
-	draw_style_box(gloss, Rect2(8, 6, size.x - 16, face_h * 0.42))
-	if shine and not disabled:
-		var x := (_shine_t / 1.2) * (size.x + 200) - 100
-		if _shine_t < 1.2:
-			var pts := PackedVector2Array([
-				Vector2(x, 6), Vector2(x + 40, 6), Vector2(x + 10, face_h), Vector2(x - 30, face_h)])
-			for i in pts.size():
-				pts[i].x = clampf(pts[i].x, 10, size.x - 10)
-			draw_colored_polygon(pts, Color(1, 1, 1, 0.35))
-	match icon_kind:
-		"back":
-			var c := Vector2(size.x / 2 - 3, face_h / 2 + 3)
-			var s := minf(size.x, face_h) * 0.22
-			var pts := PackedVector2Array([c + Vector2(s * 0.6, -s), c + Vector2(-s * 0.5, 0), c + Vector2(s * 0.6, s)])
-			draw_polyline(pts, UIStyle.INK, s * 0.75, true)
-			draw_polyline(pts, Color.WHITE, s * 0.42, true)
-		"check":
-			var c := Vector2(size.x / 2, face_h / 2 + 3)
-			var s := minf(size.x, face_h) * 0.22
-			var pts := PackedVector2Array([c + Vector2(-s, 0), c + Vector2(-s * 0.3, s * 0.7), c + Vector2(s, -s * 0.7)])
-			draw_polyline(pts, UIStyle.INK, s * 0.75, true)
-			draw_polyline(pts, Color.WHITE, s * 0.42, true)
+	var mode := get_draw_mode()
+	var is_down := mode == DRAW_PRESSED or mode == DRAW_HOVER_PRESSED
+	var hover := mode == DRAW_HOVER
+	var d := 3.0 if is_down else depth
+	var off := depth - d
+	var top := color.lightened(0.2 + (0.06 if hover else 0.0))
+	var bottom := color_bottom if color_bottom.a > 0 else color.darkened(0.08)
+	if hover and color_bottom.a > 0:
+		bottom = bottom.lightened(0.06)
+	var edge := bottom.darkened(0.45)
+
+	UIDraw.rrect(self, Rect2(3, 7, size.x - 6, size.y - 3), radius, Color(0.02, 0.05, 0.2, 0.3))
+	UIDraw.rrect(self, Rect2(0, off, size.x, size.y - off), radius, edge)
+	var face := Rect2(0, off, size.x, size.y - depth)
+	UIDraw.rrect(self, face, radius, top, bottom, top.lightened(0.4), 2.5)
+	UIDraw.rrect(self, Rect2(9, off + 5, size.x - 18, face.size.y * 0.42), radius * 0.7, Color(1, 1, 1, 0.34), Color(1, 1, 1, 0.04))
+
+	if shine and not disabled and _shine_t < 1.2:
+		var x := (_shine_t / 1.2) * (size.x + 160) - 80
+		var pts := PackedVector2Array([Vector2(x, off + 6), Vector2(x + 34, off + 6), Vector2(x + 8, off + face.size.y - 6), Vector2(x - 26, off + face.size.y - 6)])
+		for i in pts.size():
+			pts[i].x = clampf(pts[i].x, 12, size.x - 12)
+		draw_colored_polygon(pts, Color(1, 1, 1, 0.3))
+
+	var fs := get_theme_font_size("font_size")
+	var isz := _icon_size()
+	var cy := off + face.size.y / 2
+	if icon_kind != "":
+		UIDraw.icon(self, icon_kind, Vector2(size.x / 2, cy), minf(size.x, face.size.y) * 0.62)
+	if icon_left != "":
+		UIDraw.icon(self, icon_left, Vector2(padding + isz / 2, cy), isz)
+	if icon_right != "":
+		UIDraw.icon(self, icon_right, Vector2(size.x - padding - isz / 2, cy), isz)
+
+	if text != "":
+		var f := get_theme_font("font")
+		var ml := padding + (isz + 8 if icon_left != "" else 0.0)
+		var mr := padding + (isz + 8 if icon_right != "" else 0.0)
+		var area := Rect2(ml, off, size.x - ml - mr, face.size.y)
+		var oc := bottom.darkened(0.62)
+		var ow := int(fs * 0.22) if text_outline < 0 else text_outline
+		var tc := text_color
+		if disabled:
+			tc.a = 0.85
+		var hal := alignment
+		if autowrap_mode != TextServer.AUTOWRAP_OFF:
+			var sz := f.get_multiline_string_size(text, hal, area.size.x, fs)
+			var pos := Vector2(area.position.x, area.position.y + (area.size.y - sz.y) / 2 + f.get_ascent(fs))
+			if ow > 0:
+				draw_multiline_string_outline(f, pos + Vector2(0, fs * 0.09), text, hal, area.size.x, fs, -1, ow, Color(0.02, 0.05, 0.2, 0.35))
+				draw_multiline_string_outline(f, pos, text, hal, area.size.x, fs, -1, ow, oc)
+			draw_multiline_string(f, pos, text, hal, area.size.x, fs, -1, tc)
+		else:
+			var pos := Vector2(area.position.x, cy + (f.get_ascent(fs) - f.get_descent(fs)) / 2)
+			if ow > 0:
+				draw_string_outline(f, pos + Vector2(0, fs * 0.09), text, hal, area.size.x, fs, ow, Color(0.02, 0.05, 0.2, 0.35))
+				draw_string_outline(f, pos, text, hal, area.size.x, fs, ow, oc)
+			draw_string(f, pos, text, hal, area.size.x, fs, tc)
+
+	if sparkles and not disabled:
+		var spots: Array[Vector3] = [Vector3(0.07, 0.2, 0.0), Vector3(0.93, 0.28, 1.7), Vector3(0.86, 0.78, 3.1), Vector3(0.15, 0.8, 4.4)]
+		for sp in spots:
+			var k := 0.5 + 0.5 * sin(_t * 3.0 + sp.z)
+			UIDraw.sparkle(self, Vector2(sp.x * size.x, off + sp.y * face.size.y), (6.0 + 9.0 * k) * (size.y / 120.0 + 0.4), Color(1, 1, 0.92, 0.5 + 0.5 * k))

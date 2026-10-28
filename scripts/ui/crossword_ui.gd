@@ -31,34 +31,51 @@ func setup(data: MiniGameData) -> void:
 	root.add_theme_constant_override("separation", 14)
 	add_child(root)
 
+	# Panneau « Indice » : cadre bleu titré, intérieur bleu nuit (comme les panneaux « Clue »).
 	_clue_panel = PanelContainer.new()
-	var sb := UIStyle.panel_box(UIStyle.PANEL, 22)
-	sb.set_content_margin_all(16)
+	var sb := UIStyle.frame_box()
+	sb.content_margin_top = 8
+	sb.content_margin_bottom = 14
 	_clue_panel.add_theme_stylebox_override("panel", sb)
 	root.add_child(_clue_panel)
-	var clue_box := VBoxContainer.new()
-	clue_box.add_theme_constant_override("separation", 6)
-	_clue_panel.add_child(clue_box)
+	var frame_box := VBoxContainer.new()
+	frame_box.add_theme_constant_override("separation", 6)
+	_clue_panel.add_child(frame_box)
 	var head := HBoxContainer.new()
-	head.add_theme_constant_override("separation", 10)
-	clue_box.add_child(head)
-	var num_pill := UIStyle.pill("1", UIStyle.GOLD.darkened(0.1), 26)
-	_clue_number = num_pill.get_child(0)
-	head.add_child(num_pill)
+	head.alignment = BoxContainer.ALIGNMENT_CENTER
+	head.add_theme_constant_override("separation", 12)
+	frame_box.add_child(head)
+	head.add_child(UIStyle.label("Indice", 32, Color.WHITE, 10))
 	var dir_pill := UIStyle.pill("", UIStyle.PANEL_DARK, 22)
 	_clue_dir = dir_pill.get_child(0)
 	head.add_child(dir_pill)
+	var inner := PanelContainer.new()
+	inner.add_theme_stylebox_override("panel", UIStyle.inner_box())
+	frame_box.add_child(inner)
+	var clue_row := HBoxContainer.new()
+	clue_row.add_theme_constant_override("separation", 12)
+	inner.add_child(clue_row)
+	_clue_number = UIStyle.label("1.", 30, UIStyle.YELLOW, 8)
+	_clue_number.vertical_alignment = VERTICAL_ALIGNMENT_TOP
+	clue_row.add_child(_clue_number)
+	var text_col := VBoxContainer.new()
+	text_col.size_flags_horizontal = SIZE_EXPAND_FILL
+	clue_row.add_child(text_col)
+	var clue_box := text_col
 	_clue_text = UIStyle.label("", 28)
 	_clue_text.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
 	_clue_text.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_clue_text.custom_minimum_size = Vector2(0, 72)
+	_clue_text.custom_minimum_size = Vector2(0, 76)
 	clue_box.add_child(_clue_text)
 	_clue_answer = UIStyle.label("", 22, UIStyle.YELLOW, 6)
 	_clue_answer.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
 	_clue_answer.visible = false
 	clue_box.add_child(_clue_answer)
 
-	_grid_area = Control.new()
+	# Plateau translucide sous la grille
+	_grid_area = Panel.new()
+	var board := UIStyle.box(Color(0.06, 0.12, 0.4, 0.55), 24, 0, 2, Color(0.6, 0.8, 1.0, 0.35))
+	_grid_area.add_theme_stylebox_override("panel", board)
 	_grid_area.size_flags_vertical = SIZE_EXPAND_FILL
 	_grid_area.resized.connect(_layout_grid)
 	root.add_child(_grid_area)
@@ -95,11 +112,12 @@ func _build_grid() -> void:
 func _layout_grid() -> void:
 	if _data.grid_width <= 0:
 		return
-	var avail := _grid_area.size
+	var pad := 12.0
+	var avail := _grid_area.size - Vector2(pad, pad) * 2
 	var cs := floorf(minf(avail.x / _data.grid_width, avail.y / _data.grid_height))
 	cs = minf(cs, 86.0)
 	var gap := maxf(2.0, cs * 0.07)
-	var origin := (avail - Vector2(_data.grid_width, _data.grid_height) * cs) / 2
+	var origin := Vector2(pad, pad) + (avail - Vector2(_data.grid_width, _data.grid_height) * cs) / 2
 	for p: Vector2i in _cells:
 		var cell: CrosswordCell = _cells[p]
 		cell.position = origin + Vector2(p) * cs + Vector2(gap, gap) / 2
@@ -152,7 +170,7 @@ func _select_word(index: int, at := Vector2i(-1, -1)) -> void:
 	var cells: Array[Vector2i] = w.cells
 	_cursor = cells.find(at) if at in cells else _first_empty(w)
 	var e: CrosswordEntry = w.entry
-	_clue_number.text = str(e.number)
+	_clue_number.text = "%d." % e.number
 	_clue_dir.text = "→  HORIZONTAL" if e.horizontal else "↓  VERTICAL"
 	_clue_text.text = e.clue
 	_clue_answer.text = "Réponse : " + e.answer

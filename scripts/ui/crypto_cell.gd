@@ -46,47 +46,56 @@ func shake() -> void:
 
 
 func _draw() -> void:
+	if size.x < 4:
+		return
 	draw_set_transform(Vector2(_shake, 0), 0, Vector2.ONE)
 	var fs := int(size.y * 0.58)
-	var center := Vector2(size.x / 2, size.y / 2 - 2)
 	if state == State.SYMBOL:
-		UIStyle.draw_text(self, original, center, fs, Color.WHITE, 8)
+		UIStyle.draw_text(self, original, Vector2(size.x / 2, size.y / 2 - 2), fs, Color.WHITE, 8)
 		return
 	var depth := 5.0
-	var radius := 10
-	var face := Color("f4f6ff")
+	var radius := 10.0
+	var top := Color("f4f1ff")
+	var bottom := Color("d6cdfb")
 	var text := original
 	var text_color := UIStyle.INK
 	var outline := 0
+	var outline_color := UIStyle.INK
 	match state:
-		State.EMPTY:
-			face = Color(1, 1, 1, 0.16)
-			text = ""
 		State.FILLED:
 			text = typed
 		State.CORRECT:
-			face = Color("3fd06a")
+			top = Color("7be86a")
+			bottom = Color("22a83a")
 			text_color = Color.WHITE
 			outline = 8
+			outline_color = Color("0f5a1e")
 		State.WRONG:
-			face = Color("ff5a64")
+			top = Color("ff8088")
+			bottom = Color("e8323f")
 			text = typed
 			text_color = Color.WHITE
 			outline = 8
+			outline_color = Color("7a0f1a")
+		State.EMPTY:
+			text = ""
+	var face := Rect2(0, 0, size.x, size.y - depth)
 	if is_cursor:
-		face = Color("ffe14d")
+		var a := 0.55 + 0.45 * sin(_t * 6.0)
+		UIDraw.glow(self, face, radius, Color(0.5, 0.95, 1.0, a), 10.0, 4)
+		top = Color("fff6c4")
+		bottom = Color("ffd84a")
 	if state == State.EMPTY and not is_cursor:
-		draw_style_box(UIStyle.box(face, radius, 0, 2, Color(1, 1, 1, 0.45)), Rect2(0, 0, size.x, size.y - depth))
-		draw_line(Vector2(8, size.y - depth - 9), Vector2(size.x - 8, size.y - depth - 9), Color(1, 1, 1, 0.6), 3)
+		UIDraw.rrect(self, face, radius, Color(0.03, 0.08, 0.3, 0.7), Color(0.05, 0.12, 0.38, 0.7), Color(0.55, 0.75, 1.0, 0.6), 2.0)
+		draw_line(Vector2(8, face.size.y - 9), Vector2(size.x - 8, face.size.y - 9), Color(0.7, 0.85, 1.0, 0.7), 3)
 	else:
-		draw_style_box(UIStyle.box(face.darkened(0.3), radius), Rect2(Vector2.ZERO, size))
-		draw_style_box(UIStyle.box(face, radius), Rect2(0, 0, size.x, size.y - depth))
-	if is_cursor:
+		UIDraw.rrect(self, Rect2(Vector2.ZERO, size), radius, bottom.darkened(0.35))
+		UIDraw.rrect(self, face, radius, top, bottom, top.lightened(0.5), 1.5)
+		UIDraw.rrect(self, Rect2(size.x * 0.14, 4, size.x * 0.72, face.size.y * 0.3), radius * 0.6, Color(1, 1, 1, 0.45), Color(1, 1, 1, 0.05))
+	if is_cursor and text == "":
 		var a := 0.5 + 0.5 * sin(_t * 8.0)
-		draw_style_box(UIStyle.box(Color(0, 0, 0, 0), radius + 2, 0, 3, Color(1, 1, 1, a)), Rect2(-3, -3, size.x + 6, size.y - depth + 6))
-		if text == "":
-			draw_line(Vector2(size.x / 2, 12), Vector2(size.x / 2, size.y - depth - 14), Color(UIStyle.INK, a), 3)
+		draw_line(Vector2(size.x / 2, 12), Vector2(size.x / 2, face.size.y - 12), Color(UIStyle.INK, a), 3)
 	if text != "":
-		UIStyle.draw_text(self, text, Vector2(size.x / 2, (size.y - depth) / 2 + 1), fs, text_color, outline)
+		UIStyle.draw_text(self, text, Vector2(size.x / 2, face.size.y / 2 + 1), fs, text_color, outline, outline_color)
 	elif hint:
-		UIStyle.draw_text(self, original, Vector2(size.x / 2, (size.y - depth) / 2 + 1), fs, Color(1, 1, 1, 0.3))
+		UIStyle.draw_text(self, original, Vector2(size.x / 2, face.size.y / 2 + 1), fs, Color(1, 1, 1, 0.3))

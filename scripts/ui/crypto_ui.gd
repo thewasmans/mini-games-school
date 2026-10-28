@@ -26,21 +26,28 @@ func setup(data: MiniGameData) -> void:
 	root.add_theme_constant_override("separation", 16)
 	add_child(root)
 
+	# Panneau « Indice » : cadre bleu titré, intérieur bleu nuit.
 	var hint_panel := PanelContainer.new()
-	var sb := UIStyle.panel_box(Color("6b3fc4"), 22)
-	sb.border_color = Color("3d1f80")
-	sb.set_content_margin_all(16)
+	var sb := UIStyle.frame_box()
+	sb.content_margin_top = 8
 	hint_panel.add_theme_stylebox_override("panel", sb)
 	root.add_child(hint_panel)
-	var hint_box := VBoxContainer.new()
-	hint_panel.add_child(hint_box)
+	var frame_col := VBoxContainer.new()
+	frame_col.add_theme_constant_override("separation", 6)
+	hint_panel.add_child(frame_col)
 	var head := HBoxContainer.new()
-	head.add_theme_constant_override("separation", 10)
-	hint_box.add_child(head)
-	head.add_child(UIStyle.pill("INDICE", UIStyle.GOLD.darkened(0.1), 22))
-	var counter_pill := UIStyle.pill("", Color("3d1f80"), 22)
+	head.alignment = BoxContainer.ALIGNMENT_CENTER
+	head.add_theme_constant_override("separation", 12)
+	frame_col.add_child(head)
+	head.add_child(UIStyle.label("Indice", 32, Color.WHITE, 10))
+	var counter_pill := UIStyle.pill("", UIStyle.PANEL_DARK, 22)
 	_counter = counter_pill.get_child(0)
 	head.add_child(counter_pill)
+	var inner := PanelContainer.new()
+	inner.add_theme_stylebox_override("panel", UIStyle.inner_box())
+	frame_col.add_child(inner)
+	var hint_box := VBoxContainer.new()
+	inner.add_child(hint_box)
 	_hint_label = UIStyle.label("", 28)
 	_hint_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	_hint_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
@@ -52,7 +59,7 @@ func setup(data: MiniGameData) -> void:
 
 	_sentence_panel = PanelContainer.new()
 	_sentence_panel.size_flags_vertical = SIZE_EXPAND_FILL
-	var sp := UIStyle.panel_box(UIStyle.PANEL_DARK, 26)
+	var sp := UIStyle.frame_box(Color("1c3080"), 26)
 	sp.set_content_margin_all(18)
 	_sentence_panel.add_theme_stylebox_override("panel", sp)
 	root.add_child(_sentence_panel)
@@ -69,12 +76,16 @@ func setup(data: MiniGameData) -> void:
 	buttons.alignment = BoxContainer.ALIGNMENT_CENTER
 	buttons.custom_minimum_size = Vector2(0, 96)
 	root.add_child(buttons)
-	_fix_button = JuicyButton.new("Corriger les erreurs", UIStyle.RED, 30)
+	_fix_button = JuicyButton.new("Corriger les erreurs", Color("ff6b74"), 30)
+	_fix_button.color_bottom = Color("d42a38")
 	_fix_button.custom_minimum_size = Vector2(420, 90)
 	_fix_button.visible = false
 	_fix_button.pressed.connect(_fix_errors)
 	buttons.add_child(_fix_button)
-	_next_button = JuicyButton.new("Valider", UIStyle.GREEN, 34)
+	_next_button = JuicyButton.new("Valider", Color("6bd85a"), 34)
+	_next_button.color_bottom = Color("2fa83e")
+	_next_button.icon_right = "next"
+	_next_button.sparkles = true
 	_next_button.custom_minimum_size = Vector2(320, 90)
 	_next_button.visible = false
 	_next_button.set_shine(true)

@@ -24,27 +24,22 @@ func _ready() -> void:
 	margin.set_anchors_and_offsets_preset(PRESET_FULL_RECT)
 	for side in ["left", "right"]:
 		margin.add_theme_constant_override("margin_" + side, 24)
-	margin.add_theme_constant_override("margin_top", 28)
+	margin.add_theme_constant_override("margin_top", 24)
 	margin.add_theme_constant_override("margin_bottom", 24)
 	add_child(margin)
 	var root := VBoxContainer.new()
 	root.add_theme_constant_override("separation", 14)
 	margin.add_child(root)
 
-	var header := HBoxContainer.new()
-	header.add_theme_constant_override("separation", 14)
-	root.add_child(header)
-	var back := JuicyButton.new("", UIStyle.BLUE)
-	back.icon_kind = "back"
-	back.custom_minimum_size = Vector2(84, 84)
-	back.size_flags_vertical = SIZE_SHRINK_BEGIN
-	back.pressed.connect(func() -> void: exited.emit())
-	header.add_child(back)
-	var banner := UIStyle.banner(_title, UIStyle.BLUE, 26)
-	banner.size_flags_horizontal = SIZE_EXPAND_FILL
-	header.add_child(banner)
+	var bar := TopBar.new(true)
+	bar.back_pressed.connect(func() -> void: exited.emit())
+	root.add_child(bar)
+	var banner := UIStyle.banner(_title, UIStyle.BLUE, 27)
+	banner.size_flags_horizontal = SIZE_SHRINK_CENTER
+	banner.custom_minimum_size = Vector2(560, 0)
+	root.add_child(banner)
 
-	_progress = JuicyProgressBar.new(UIStyle.GREEN, 38)
+	_progress = JuicyProgressBar.new(UIStyle.GREEN, 34)
 	_progress.stripes = true
 	root.add_child(_progress)
 
@@ -56,8 +51,11 @@ func _ready() -> void:
 		_game.completed.connect(_on_completed)
 		root.add_child(_game)
 
-	_validate = JuicyButton.new("VALIDER", UIStyle.GREEN, 44)
-	_validate.icon_kind = ""
+	_validate = JuicyButton.new("VALIDER", Color("5fd35a"), 46)
+	_validate.color_bottom = Color("2f9a3a")
+	_validate.icon_left = "check"
+	_validate.icon_right = "star"
+	_validate.sparkles = true
 	_validate.custom_minimum_size = Vector2(0, 110)
 	_validate.sound = "pop"
 	_validate.visible = false

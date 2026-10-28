@@ -23,7 +23,8 @@ Godot 4.7, GDScript, portrait 720×1280 (`canvas_items`, `expand`). Le fonctionn
 - `game_ui.gd` : navigation par pile (`go_to` / `go_back`), chaque écran est reconstruit à l'affichage.
 - `level/level.gd` : écran de level (titre, barre de progression, mini-jeu, Valider).
 - Mini-jeux : `MiniGameUI` (base : signaux `progress_changed`, `completed`, hooks `debug_autofill` / `set_show_hints`), `crossword_ui.gd`, `memo_ui.gd`, `crypto_ui.gd`.
-- Briques « juicy » : `UIStyle` (palette, police, thème), `JuicyButton`, `JuicyProgressBar`, `UIFeedback` (pop, punch, shake, breathe, texte flottant), `Confetti`, `AnimatedBackground`.
+- Briques « juicy » : `UIStyle` (palette, police Fredoka, thème, panneaux `frame_box` / `inner_box` / `container_box` / `glass_box`, bannière), `UIDraw` (rectangles arrondis en dégradé, halos, icônes vectorielles, île-château), `JuicyButton` (dégradé, icônes gauche/droite, étincelles ; texte dessiné à la main), `TopBar`, `IconView`, `JuicyProgressBar`, `UIFeedback` (pop, punch, shake, breathe, texte flottant), `Confetti`, `AnimatedBackground` (décor : ciel, château, îles, livres).
+- Aucune image n'est nécessaire pour l'UI : tout est dessiné en code. Police : `assets/fonts/Fredoka.ttf` (licence OFL, `assets/fonts/OFL.txt`).
 
 ## Conventions
 
