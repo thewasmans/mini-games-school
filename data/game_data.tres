@@ -5,7 +5,6 @@
 [ext_resource type="Script" uid="uid://br5q0sg4b052d" path="res://scripts/data/level_data.gd" id="2_r34r7"]
 [ext_resource type="Resource" uid="uid://dihkdp4gkv3sb" path="res://data/secondaire/s4/cryptogram/uaa3_cellule_partie1.tres" id="5_r4uws"]
 [ext_resource type="Resource" uid="uid://bryqjylodb8ei" path="res://data/secondaire/s4/quiz/cellule.tres" id="6_4ls4r"]
-[ext_resource type="Script" uid="uid://dqstlvldata01" path="res://scripts/data/study_level_data.gd" id="7_stdylvl"]
 [ext_resource type="Resource" uid="uid://ccvhq4tbhmbgn" path="res://data/secondaire/s4/crossword/cellule_s4.tres" id="7_xbtbc"]
 [ext_resource type="Resource" uid="uid://b8001eoh6safi" path="res://data/secondaire/s4/crossword/cellule_s4_2.tres" id="8_028tp"]
 [ext_resource type="Resource" uid="uid://dtq3lxbkhvlki" path="res://data/secondaire/s4/crossword/cellule_s4_3.tres" id="9_t72jb"]
@@ -31,6 +30,7 @@
 [ext_resource type="Resource" uid="uid://bx5qih0cg10cj" path="res://data/secondaire/s4/crossword/travail_s4.tres" id="24_x34ux"]
 [ext_resource type="Resource" uid="uid://bgyq1fy5rsgxt" path="res://data/secondaire/s4/cryptogram/uaa4_evolution_partie2.tres" id="25_14trb"]
 [ext_resource type="Script" uid="uid://mjs6wa16j8bi" path="res://scripts/data/subject_data.gd" id="25_subject"]
+[ext_resource type="Script" uid="uid://dvqf0ovwg1l73" path="res://scripts/data/school_year_data.gd" id="26_school_year"]
 [ext_resource type="Resource" uid="uid://ckf4tcum87k4e" path="res://data/secondaire/s4/quiz/cellule_2.tres" id="27_rtx2q"]
 [ext_resource type="Resource" uid="uid://c2rhhybaibiln" path="res://data/secondaire/s4/quiz/cellule_3.tres" id="28_e4wa0"]
 [ext_resource type="Resource" uid="uid://cy1o356q8x6p6" path="res://data/secondaire/s4/quiz/evolution.tres" id="29_8ygdl"]
@@ -50,11 +50,6 @@
 [ext_resource type="Resource" uid="uid://cfte5b370lchc" path="res://data/secondaire/s4/quiz/magie_image.tres" id="48_d4hl7"]
 [ext_resource type="Resource" uid="uid://k4w4jst6de2n" path="res://data/secondaire/s4/quiz/travail_puissance.tres" id="49_w3x1x"]
 [ext_resource type="Resource" uid="uid://bwr1b3t4u4j71" path="res://data/secondaire/s4/quiz/travail_puissance_2.tres" id="50_etlxc"]
-
-[sub_resource type="Resource" id="Resource_uc345"]
-script = ExtResource("7_stdylvl")
-name = "Primaire"
-metadata/_custom_type_script = "uid://dqstlvldata01"
 
 [sub_resource type="Resource" id="Resource_vjkum"]
 script = ExtResource("2_r34r7")
@@ -296,18 +291,12 @@ script = ExtResource("25_subject")
 name = "Physique"
 levels = Array[ExtResource("2_r34r7")]([SubResource("Resource_joy1j"), SubResource("Resource_0bmhh"), SubResource("Resource_b1r1l"), SubResource("Resource_lggs4"), SubResource("Resource_h2tmv"), SubResource("Resource_2bgpk"), SubResource("Resource_xx6mc"), SubResource("Resource_40vv1"), SubResource("Resource_0ipwn")])
 
-[sub_resource type="Resource" id="StudyLevel_primaire"]
-script = ExtResource("7_stdylvl")
-name = "Secondaire"
+[sub_resource type="Resource" id="SchoolYear_s4"]
+script = ExtResource("26_school_year")
+name = "S4"
 subjects = Array[ExtResource("25_subject")]([SubResource("Subject_biologie"), SubResource("Subject_chimie"), SubResource("Subject_physique")])
-metadata/_custom_type_script = "uid://dqstlvldata01"
-
-[sub_resource type="Resource" id="Resource_y3jf8"]
-script = ExtResource("7_stdylvl")
-name = "Supérieur"
-metadata/_custom_type_script = "uid://dqstlvldata01"
 
 [resource]
 script = ExtResource("1_urpql")
-study_levels = Array[ExtResource("7_stdylvl")]([SubResource("Resource_uc345"), SubResource("StudyLevel_primaire"), SubResource("Resource_y3jf8")])
+secondary_4 = SubResource("SchoolYear_s4")
 metadata/_custom_type_script = "uid://cp2inhinnjjop"
