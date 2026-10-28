@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="CrosswordData" format=3]
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://fojap5vetvtd"]
 
-[ext_resource type="Script" path="res://scripts/data/crossword_entry.gd" id="1_jirki"]
-[ext_resource type="Script" path="res://scripts/data/crossword_data.gd" id="2_ky27d"]
+[ext_resource type="Script" uid="uid://6pk47pd5gtfx" path="res://scripts/data/crossword_entry.gd" id="1_jirki"]
+[ext_resource type="Script" uid="uid://bu7s316sbdqky" path="res://scripts/data/crossword_data.gd" id="2_ky27d"]
 
 [sub_resource type="Resource" id="Resource_yakwy"]
 script = ExtResource("1_jirki")
@@ -11,7 +11,7 @@ answer = "CHATEAU"
 y = 2
 horizontal = false
 placed = true
-number = 3
+number = 5
 
 [sub_resource type="Resource" id="Resource_vo61q"]
 script = ExtResource("1_jirki")
@@ -20,14 +20,15 @@ clue = "Guerrier à cheval au service d'un seigneur"
 answer = "CHEVALIER"
 y = 2
 placed = true
-number = 3
+number = 5
 
 [sub_resource type="Resource" id="Resource_7aawk"]
 script = ExtResource("1_jirki")
 word = "Donjon"
 clue = "La plus haute tour du château"
 answer = "DONJON"
-y = 10
+x = 8
+y = 1
 placed = true
 number = 4
 
@@ -40,7 +41,7 @@ x = 2
 y = 1
 horizontal = false
 placed = true
-number = 2
+number = 3
 
 [sub_resource type="Resource" id="Resource_8s61s"]
 script = ExtResource("1_jirki")
@@ -52,10 +53,21 @@ horizontal = false
 placed = true
 number = 1
 
+[sub_resource type="Resource" id="Resource_jirki"]
+script = ExtResource("1_jirki")
+word = "MDR"
+clue = "MDR"
+answer = "MDR"
+x = 8
+horizontal = false
+placed = true
+number = 2
+metadata/_custom_type_script = "uid://6pk47pd5gtfx"
+
 [resource]
 script = ExtResource("2_ky27d")
-entries = Array[ExtResource("1_jirki")]([SubResource("Resource_yakwy"), SubResource("Resource_vo61q"), SubResource("Resource_7aawk"), SubResource("Resource_suerx"), SubResource("Resource_8s61s")])
-grid_width = 9
-grid_height = 11
+entries = Array[ExtResource("1_jirki")]([SubResource("Resource_yakwy"), SubResource("Resource_vo61q"), SubResource("Resource_7aawk"), SubResource("Resource_suerx"), SubResource("Resource_8s61s"), SubResource("Resource_jirki")])
+grid_width = 14
+grid_height = 9
 school_year = "S1"
 theme_title = "Le Moyen Âge"

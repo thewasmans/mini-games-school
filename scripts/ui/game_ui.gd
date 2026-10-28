@@ -242,6 +242,7 @@ func _build_main_menu() -> Control:
 
 	var play := JuicyButton.new("PLAY", Color("ffa62b"), 76)
 	play.color_bottom = Color("d6449e")
+	play.skin = "button_play"
 	play.custom_minimum_size = Vector2(520, 160)
 	play.radius = 30.0
 	play.depth = 11.0
@@ -329,7 +330,7 @@ func _build_credits() -> Control:
 ## Cadre bleu avec titre (comme les panneaux « Clue ») et intérieur bleu nuit. Renvoie [cadre, contenu].
 func _titled_frame(title: String) -> Array[Control]:
 	var frame := PanelContainer.new()
-	frame.add_theme_stylebox_override("panel", UIStyle.frame_box())
+	frame.add_theme_stylebox_override("panel", UIStyle.titled_box())
 	var col := VBoxContainer.new()
 	col.add_theme_constant_override("separation", 10)
 	frame.add_child(col)

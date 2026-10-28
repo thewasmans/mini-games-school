@@ -28,9 +28,7 @@ func setup(data: MiniGameData) -> void:
 
 	# Panneau « Indice » : cadre bleu titré, intérieur bleu nuit.
 	var hint_panel := PanelContainer.new()
-	var sb := UIStyle.frame_box()
-	sb.content_margin_top = 8
-	hint_panel.add_theme_stylebox_override("panel", sb)
+	hint_panel.add_theme_stylebox_override("panel", UIStyle.titled_box())
 	root.add_child(hint_panel)
 	var frame_col := VBoxContainer.new()
 	frame_col.add_theme_constant_override("separation", 6)
@@ -59,8 +57,8 @@ func setup(data: MiniGameData) -> void:
 
 	_sentence_panel = PanelContainer.new()
 	_sentence_panel.size_flags_vertical = SIZE_EXPAND_FILL
-	var sp := UIStyle.frame_box(Color("1c3080"), 26)
-	sp.set_content_margin_all(18)
+	var sp := UIStyle.container_box()
+	sp.set_content_margin_all(22)
 	_sentence_panel.add_theme_stylebox_override("panel", sp)
 	root.add_child(_sentence_panel)
 	var center := CenterContainer.new()

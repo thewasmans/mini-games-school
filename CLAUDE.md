@@ -24,7 +24,17 @@ Godot 4.7, GDScript, portrait 720×1280 (`canvas_items`, `expand`). Le fonctionn
 - `level/level.gd` : écran de level (titre, barre de progression, mini-jeu, Valider).
 - Mini-jeux : `MiniGameUI` (base : signaux `progress_changed`, `completed`, hooks `debug_autofill` / `set_show_hints`), `crossword_ui.gd`, `memo_ui.gd`, `crypto_ui.gd`.
 - Briques « juicy » : `UIStyle` (palette, police Fredoka, thème, panneaux `frame_box` / `inner_box` / `container_box` / `glass_box`, bannière), `UIDraw` (rectangles arrondis en dégradé, halos, icônes vectorielles, île-château), `JuicyButton` (dégradé, icônes gauche/droite, étincelles ; texte dessiné à la main), `TopBar`, `IconView`, `JuicyProgressBar`, `UIFeedback` (pop, punch, shake, breathe, texte flottant), `Confetti`, `AnimatedBackground` (décor : ciel, château, îles, livres).
-- Aucune image n'est nécessaire pour l'UI : tout est dessiné en code. Police : `assets/fonts/Fredoka.ttf` (licence OFL, `assets/fonts/OFL.txt`).
+- Thème bitmap : `assets/ui/*.png`, extraits des maquettes (`*.jpg` à la racine) par `tools/extract_ui_assets.py`. `UISkin` les charge (boutons et panneaux en 9-slice via `StyleBoxTexture`, sprites pour plateformes, châteaux, île, icônes). `JuicyButton` choisit le skin de bouton le plus proche de sa `color` (ou `skin = "..."` explicite). Si un PNG manque, le dessin vectoriel de `UIDraw` prend le relais.
+- Police : `assets/fonts/Fredoka.ttf` (licence OFL, `assets/fonts/OFL.txt`).
+
+## Régénérer les PNG d'UI
+
+```
+python tools/extract_ui_assets.py             # skins (Pillow + numpy)
+python tools/extract_ui_assets.py --sprites   # + sprites détourés (pip install "rembg[cpu]")
+```
+
+Les boîtes de découpe sont en tête de chaque fonction (`skins()`, `SPRITES`) : à ajuster si les maquettes changent.
 
 ## Conventions
 

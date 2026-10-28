@@ -65,6 +65,11 @@ func _draw() -> void:
 	var c := Vector2(size.x / 2, size.y * 0.52 + bob)
 	var locked := state == State.LOCKED
 
+	var sprite := UISkin.tex("platform_lock" if locked else ("platform_done" if state == State.DONE else "platform_open"))
+	if sprite != null:
+		_draw_sprite_platform(c, sprite)
+		return
+
 	# Rocher sous la plateforme
 	var rock := PackedVector2Array([c + Vector2(-62, 12), c + Vector2(62, 12), c + Vector2(46, 40), c + Vector2(18, 74),
 		c + Vector2(2, 98), c + Vector2(-18, 72), c + Vector2(-48, 40)])
@@ -116,6 +121,31 @@ func _draw() -> void:
 
 	if flash > 0:
 		draw_colored_polygon(UIDraw.ellipse(c, Vector2(68, 30) * (1.0 + (1.0 - flash) * 0.7)), Color(1, 1, 1, flash))
+
+
+## Plateforme extraite des maquettes (assets/ui/platform_*.png) + numéro, étincelles, badge.
+func _draw_sprite_platform(c: Vector2, sprite: Texture2D) -> void:
+	var w := 156.0
+	var sz := Vector2(sprite.get_width(), sprite.get_height()) * (w / sprite.get_width())
+	# Le centre du disque est vers 35 % de la hauteur du sprite.
+	var disc := c + Vector2(0, -16)
+	if state == State.CURRENT:
+		var pulse := 0.5 + 0.5 * sin(_t * 4.0)
+		for k in 3:
+			draw_colored_polygon(UIDraw.ellipse(disc + Vector2(0, 8), Vector2(84, 42) * (1.0 + k * 0.15 + pulse * 0.08)), Color(0.35, 0.9, 1.0, 0.13 - k * 0.035))
+	draw_texture_rect(sprite, Rect2(disc + lock_offset - Vector2(sz.x / 2, sz.y * 0.35), sz), false)
+	match state:
+		State.DONE:
+			UIDraw.icon(self, "star", disc + Vector2(0, -46 + sin(_t * 2.5 + _phase) * 3), 44)
+		State.OPEN, State.CURRENT:
+			UIStyle.draw_text(self, str(index + 1), disc + Vector2(0, -6), 40, Color.WHITE, 12)
+			for k in 3:
+				var a := _t * 1.2 + TAU * k / 3.0 + _phase
+				var tw := 0.5 + 0.5 * sin(_t * 3.0 + k * 2.0)
+				UIDraw.sparkle(self, disc + Vector2(cos(a) * 70, sin(a) * 28), 4.0 + 6.0 * tw, Color(1, 1, 0.9, 0.5 + 0.5 * tw))
+	_draw_kind_badge(disc + Vector2(64, 30))
+	if flash > 0:
+		draw_colored_polygon(UIDraw.ellipse(disc, Vector2(66, 30) * (1.0 + (1.0 - flash) * 0.7)), Color(1, 1, 1, flash))
 
 
 func _draw_kind_badge(c: Vector2) -> void:

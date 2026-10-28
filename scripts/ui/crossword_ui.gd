@@ -33,10 +33,7 @@ func setup(data: MiniGameData) -> void:
 
 	# Panneau « Indice » : cadre bleu titré, intérieur bleu nuit (comme les panneaux « Clue »).
 	_clue_panel = PanelContainer.new()
-	var sb := UIStyle.frame_box()
-	sb.content_margin_top = 8
-	sb.content_margin_bottom = 14
-	_clue_panel.add_theme_stylebox_override("panel", sb)
+	_clue_panel.add_theme_stylebox_override("panel", UIStyle.titled_box())
 	root.add_child(_clue_panel)
 	var frame_box := VBoxContainer.new()
 	frame_box.add_theme_constant_override("separation", 6)

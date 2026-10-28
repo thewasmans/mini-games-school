@@ -48,7 +48,12 @@ static func box(color: Color, radius := 20, depth := 0, border := 0, border_colo
 
 
 ## Cadre bleu à liseré clair et halo (panneaux « Clue », question du quiz).
-static func frame_box(color := PANEL, radius := 26) -> StyleBoxFlat:
+static func frame_box(color := PANEL, radius := 26) -> StyleBox:
+	var skinned := UISkin.style("panel_blue")
+	if skinned != null and color == PANEL:
+		skinned.set_content_margin_all(18)
+		skinned.content_margin_bottom = 24
+		return skinned
 	var sb := box(color, radius, 0, 4, FRAME_LIGHT)
 	sb.border_width_bottom = 6
 	sb.shadow_color = Color(0.45, 0.75, 1.0, 0.45)
@@ -57,15 +62,36 @@ static func frame_box(color := PANEL, radius := 26) -> StyleBoxFlat:
 	return sb
 
 
-## Intérieur bleu nuit d'un cadre (liste d'indices, phrase du cryptogramme).
-static func inner_box(radius := 18) -> StyleBoxFlat:
+## Cadre titré (panneau « Clue ») : bandeau de titre bleu puis intérieur bleu nuit.
+## À remplir avec un titre d'environ 46 px de haut, puis un contenu dans inner_box().
+static func titled_box() -> StyleBox:
+	var skinned := UISkin.style("panel_titled")
+	if skinned == null:
+		return frame_box()
+	skinned.content_margin_left = 14
+	skinned.content_margin_right = 14
+	skinned.content_margin_top = 4
+	skinned.content_margin_bottom = 16
+	return skinned
+
+
+## Intérieur bleu nuit d'un cadre titré (déjà dessiné par titled_box quand le skin existe).
+static func inner_box(radius := 18) -> StyleBox:
+	if UISkin.tex("panel_titled") != null:
+		var empty := StyleBoxEmpty.new()
+		empty.set_content_margin_all(10)
+		return empty
 	var sb := box(PANEL_DARK, radius, 0, 2, Color("0f1d52"))
 	sb.set_content_margin_all(14)
 	return sb
 
 
 ## Grand conteneur bleu nuit translucide à bord lumineux (menu des niveaux).
-static func container_box() -> StyleBoxFlat:
+static func container_box() -> StyleBox:
+	var skinned := UISkin.style("panel_container")
+	if skinned != null:
+		skinned.set_content_margin_all(28)
+		return skinned
 	var sb := box(Color(0.1, 0.17, 0.45, 0.88), 30, 0, 5, Color("4f8fff"))
 	sb.shadow_color = Color(0.35, 0.65, 1.0, 0.55)
 	sb.shadow_size = 16
@@ -81,7 +107,7 @@ static func glass_box() -> StyleBoxFlat:
 
 
 ## Gardé pour compatibilité : panneau = cadre bleu.
-static func panel_box(color := PANEL, radius := 26) -> StyleBoxFlat:
+static func panel_box(color := PANEL, radius := 26) -> StyleBox:
 	return frame_box(color, radius)
 
 
@@ -99,7 +125,7 @@ static func theme() -> Theme:
 		t.set_constant("shadow_offset_x", type, 0)
 		t.set_constant("shadow_offset_y", type, 3)
 		t.set_constant("shadow_outline_size", type, 10)
-	t.set_stylebox("panel", "PanelContainer", frame_box())
+	t.set_stylebox("panel", "PanelContainer", box(PANEL, 26, 0, 4, FRAME_LIGHT))
 	t.set_stylebox("panel", "ScrollContainer", StyleBoxEmpty.new())
 	var grabber := box(Color(1, 1, 1, 0.35), 6)
 	t.set_stylebox("grabber", "VScrollBar", grabber)
@@ -188,6 +214,11 @@ class Banner extends PanelContainer:
 
 	func _draw() -> void:
 		var r := Rect2(Vector2.ZERO, size)
+		var skinned := UISkin.style(UISkin.button_for(color))
+		if skinned != null:
+			UIDraw.rrect(self, Rect2(3, 7, size.x - 6, size.y - 4), 24, Color(0, 0, 0, 0.3))
+			draw_style_box(skinned, r)
+			return
 		var rad := minf(28.0, size.y / 2.0)
 		UIDraw.rrect(self, Rect2(0, 6, size.x, size.y - 4), rad, Color(0, 0, 0, 0.3))
 		UIDraw.rrect(self, r, rad, color.darkened(0.45))

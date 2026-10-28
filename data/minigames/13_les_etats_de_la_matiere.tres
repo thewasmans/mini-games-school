@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="CryptoData" format=3]
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://vux4jwqmdpjc"]
 
-[ext_resource type="Script" path="res://scripts/data/crypto_data.gd" id="1_11441"]
-[ext_resource type="Script" path="res://scripts/data/crypto_sentence.gd" id="2_gkn1o"]
+[ext_resource type="Script" uid="uid://d12jxrx0uuunw" path="res://scripts/data/crypto_data.gd" id="1_11441"]
+[ext_resource type="Script" uid="uid://c4ybdhwj2y7o2" path="res://scripts/data/crypto_sentence.gd" id="2_gkn1o"]
 
 [sub_resource type="Resource" id="Resource_ckutx"]
 script = ExtResource("2_gkn1o")

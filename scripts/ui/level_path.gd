@@ -104,12 +104,19 @@ func _draw() -> void:
 		elif lit:
 			_draw_glow(pts, 1.0)
 
-	var start := _anchor(-1)
-	UIDraw.castle_island(self, start + Vector2(0, sin(_t * 1.2) * 5), CASTLE_SCALE, Color("3b6fd8"))
-	var end := _anchor(nodes.size())
+	var start := _anchor(-1) + Vector2(0, sin(_t * 1.2) * 5)
+	var end := _anchor(nodes.size()) + Vector2(0, sin(_t * 1.2 + 1.5) * 5)
 	if _all_done:
-		draw_circle(end + Vector2(0, -40), 120, Color(1, 0.9, 0.4, 0.12 + 0.06 * sin(_t * 3.0)))
-	UIDraw.castle_island(self, end + Vector2(0, sin(_t * 1.2 + 1.5) * 5), CASTLE_SCALE, Color("6b4fa8"), not _all_done)
+		draw_circle(end + Vector2(0, -40), 130, Color(1, 0.9, 0.4, 0.12 + 0.06 * sin(_t * 3.0)))
+	var start_tex := UISkin.tex("castle_start")
+	var end_tex := UISkin.tex("castle_end")
+	if start_tex != null and end_tex != null:
+		# Sprites extraits : le bas du sprite (l'herbe) se pose sur le point d'ancrage.
+		UISkin.draw_fit(self, start_tex, start + Vector2(0, -50), 190)
+		UISkin.draw_fit(self, end_tex, end + Vector2(0, -50), 210, Color.WHITE if _all_done else Color(0.75, 0.75, 0.85))
+	else:
+		UIDraw.castle_island(self, start, CASTLE_SCALE, Color("3b6fd8"))
+		UIDraw.castle_island(self, end, CASTLE_SCALE, Color("6b4fa8"), not _all_done)
 
 
 func _curve(a: Vector2, b: Vector2, bend: float) -> PackedVector2Array:

@@ -21,6 +21,13 @@ var icon_right := "":
 var color: Color = UIStyle.BLUE:
 	set(value):
 		color = value
+		_skin_style = null
+		queue_redraw()
+## Skin bitmap (assets/ui) : vide = le plus proche de `color`, "none" = dessin vectoriel.
+var skin := "":
+	set(value):
+		skin = value
+		_skin_style = null
 		queue_redraw()
 ## Couleur du bas du dégradé. Transparent = dérivée de `color`.
 var color_bottom := Color(0, 0, 0, 0):
@@ -45,6 +52,7 @@ var shine := false
 var _t := 0.0
 var _shine_t := 0.0
 var _scale_tween: Tween
+var _skin_style: StyleBoxTexture
 
 
 func _init(text_ := "", color_ := UIStyle.BLUE, font_size := 30) -> void:
@@ -96,6 +104,15 @@ func _tween_scale(target: Vector2, duration: float, trans: Tween.TransitionType)
 	_scale_tween.tween_property(self, "scale", target, duration).set_trans(trans).set_ease(Tween.EASE_OUT)
 
 
+func _get_skin_style() -> StyleBoxTexture:
+	if skin == "none":
+		return null
+	if _skin_style == null:
+		var name := skin if skin != "" else UISkin.button_for(color)
+		_skin_style = UISkin.style(name)
+	return _skin_style
+
+
 func _icon_size() -> float:
 	return get_theme_font_size("font_size") * 1.5
 
@@ -123,12 +140,28 @@ func _draw() -> void:
 	if hover and color_bottom.a > 0:
 		bottom = bottom.lightened(0.06)
 	var edge := bottom.darkened(0.45)
-
-	UIDraw.rrect(self, Rect2(3, 7, size.x - 6, size.y - 3), radius, Color(0.02, 0.05, 0.2, 0.3))
-	UIDraw.rrect(self, Rect2(0, off, size.x, size.y - off), radius, edge)
 	var face := Rect2(0, off, size.x, size.y - depth)
-	UIDraw.rrect(self, face, radius, top, bottom, top.lightened(0.4), 2.5)
-	UIDraw.rrect(self, Rect2(9, off + 5, size.x - 18, face.size.y * 0.42), radius * 0.7, Color(1, 1, 1, 0.34), Color(1, 1, 1, 0.04))
+
+	# Bouton-icône entièrement dessiné par un sprite (retour, réglages).
+	var sprite_name: String = UISkin.BUTTON_SPRITES.get(icon_kind, "") if text == "" else ""
+	var sprite := UISkin.tex(sprite_name) if sprite_name != "" else null
+	if sprite != null:
+		var r := Rect2(0, off * 0.5, size.x, size.y - off * 0.5)
+		draw_texture_rect(sprite, r, false, Color(1.08, 1.08, 1.08) if hover else Color.WHITE)
+		if icon_kind == "sound_off":
+			draw_line(r.position + r.size * 0.22, r.position + r.size * 0.72, UIStyle.INK, size.x * 0.13, true)
+			draw_line(r.position + r.size * 0.22, r.position + r.size * 0.72, Color("ff4d5a"), size.x * 0.07, true)
+		return
+
+	var skin_style := _get_skin_style()
+	UIDraw.rrect(self, Rect2(3, 7, size.x - 6, size.y - 3), radius, Color(0.02, 0.05, 0.2, 0.3))
+	if skin_style != null:
+		skin_style.modulate_color = Color(1.1, 1.1, 1.1) if hover else Color.WHITE
+		draw_style_box(skin_style, Rect2(0, off, size.x, size.y - off))
+	else:
+		UIDraw.rrect(self, Rect2(0, off, size.x, size.y - off), radius, edge)
+		UIDraw.rrect(self, face, radius, top, bottom, top.lightened(0.4), 2.5)
+		UIDraw.rrect(self, Rect2(9, off + 5, size.x - 18, face.size.y * 0.42), radius * 0.7, Color(1, 1, 1, 0.34), Color(1, 1, 1, 0.04))
 
 	if shine and not disabled and _shine_t < 1.2:
 		var x := (_shine_t / 1.2) * (size.x + 160) - 80

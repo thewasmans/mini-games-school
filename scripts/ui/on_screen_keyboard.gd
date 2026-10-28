@@ -38,5 +38,6 @@ func _key(letter: String, min_size: Vector2) -> JuicyButton:
 	key.padding = 2
 	key.depth = 5.0
 	key.radius = 12.0
+	key.skin = "key"
 	key.custom_minimum_size = min_size
 	return key

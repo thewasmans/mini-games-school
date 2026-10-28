@@ -85,9 +85,20 @@ func _draw() -> void:
 		UIDraw.glow(self, face, radius, Color(0.5, 0.95, 1.0, a), 10.0, 4)
 		top = Color("fff6c4")
 		bottom = Color("ffd84a")
+	var skin := "cell_word"
+	match state:
+		State.CORRECT:
+			skin = "cell_good"
+		State.WRONG:
+			skin = "cell_wrong"
+	if is_cursor:
+		skin = "cell_cursor"
+	var skin_tex := UISkin.tex(skin)
 	if state == State.EMPTY and not is_cursor:
 		UIDraw.rrect(self, face, radius, Color(0.03, 0.08, 0.3, 0.7), Color(0.05, 0.12, 0.38, 0.7), Color(0.55, 0.75, 1.0, 0.6), 2.0)
 		draw_line(Vector2(8, face.size.y - 9), Vector2(size.x - 8, face.size.y - 9), Color(0.7, 0.85, 1.0, 0.7), 3)
+	elif skin_tex != null:
+		draw_texture_rect(skin_tex, Rect2(Vector2.ZERO, size), false)
 	else:
 		UIDraw.rrect(self, Rect2(Vector2.ZERO, size), radius, bottom.darkened(0.35))
 		UIDraw.rrect(self, face, radius, top, bottom, top.lightened(0.5), 1.5)

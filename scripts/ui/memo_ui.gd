@@ -31,7 +31,8 @@ func setup(data: MiniGameData) -> void:
 	# Carte de question : texte à gauche, anneau de progression à droite.
 	_card = PanelContainer.new()
 	var sb := UIStyle.frame_box()
-	sb.set_content_margin_all(20)
+	sb.set_content_margin_all(22)
+	sb.content_margin_bottom = 28
 	_card.add_theme_stylebox_override("panel", sb)
 	root.add_child(_card)
 	var card_box := VBoxContainer.new()
