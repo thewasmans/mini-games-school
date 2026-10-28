@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="MemoData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/memo_question.gd" id="1_dwhly"]
+[ext_resource type="Texture2D" path="res://assets/images/atome.svg" id="2_vy8si"]
+[ext_resource type="Script" path="res://scripts/data/memo_data.gd" id="3_g1tcn"]
+
+[sub_resource type="Resource" id="Resource_wv6e3"]
+script = ExtResource("1_dwhly")
+question = "Qu'y a-t-il au centre d'un atome ?"
+answers = PackedStringArray("Un électron", "Le noyau", "Un photon", "Rien")
+correct_index = 1
+image = ExtResource("2_vy8si")
+
+[sub_resource type="Resource" id="Resource_7dmlk"]
+script = ExtResource("1_dwhly")
+question = "Quelle particule a une charge négative ?"
+answers = PackedStringArray("Le proton", "Le neutron", "L\'électron", "Le noyau")
+correct_index = 2
+image = ExtResource("2_vy8si")
+
+[resource]
+script = ExtResource("3_g1tcn")
+questions = Array[ExtResource("1_dwhly")]([SubResource("Resource_wv6e3"), SubResource("Resource_7dmlk")])
+school_year = "S4"
+theme_title = "L'atome"

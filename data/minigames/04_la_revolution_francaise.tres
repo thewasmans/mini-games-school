@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="MemoData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/memo_question.gd" id="1_4olef"]
+[ext_resource type="Script" path="res://scripts/data/memo_data.gd" id="2_cjl6r"]
+
+[sub_resource type="Resource" id="Resource_yg2sq"]
+script = ExtResource("1_4olef")
+question = "Quel grand événement a marqué l'année 1789 en France ?"
+answers = PackedStringArray("La prise de la Bastille", "L\'invention du vaccin", "La découverte de l\'Amérique", "Le couronnement de Charlemagne")
+
+[sub_resource type="Resource" id="Resource_q6qii"]
+script = ExtResource("1_4olef")
+question = "Quel roi régnait en France en 1789 ?"
+answers = PackedStringArray("Louis XIV", "Napoléon", "Louis XVI", "Henri IV")
+correct_index = 2
+
+[resource]
+script = ExtResource("2_cjl6r")
+questions = Array[ExtResource("1_4olef")]([SubResource("Resource_yg2sq"), SubResource("Resource_q6qii")])
+school_year = "S1"
+theme_title = "La Révolution française"

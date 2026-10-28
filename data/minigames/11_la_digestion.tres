@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MemoData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/memo_question.gd" id="1_wfjwl"]
+[ext_resource type="Script" path="res://scripts/data/memo_data.gd" id="2_3ehd5"]
+
+[sub_resource type="Resource" id="Resource_2ntg1"]
+script = ExtResource("1_wfjwl")
+question = "Où commence la digestion ?"
+answers = PackedStringArray("Dans l\'estomac", "Dans la bouche", "Dans l\'intestin", "Dans le foie")
+correct_index = 1
+
+[resource]
+script = ExtResource("2_3ehd5")
+questions = Array[ExtResource("1_wfjwl")]([SubResource("Resource_2ntg1")])
+school_year = "S4"
+theme_title = "La digestion"

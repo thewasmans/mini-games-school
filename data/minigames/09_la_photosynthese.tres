@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/crypto_data.gd" id="1_sg5i0"]
+[ext_resource type="Script" path="res://scripts/data/crypto_sentence.gd" id="2_m4s6t"]
+
+[sub_resource type="Resource" id="Resource_3mnxr"]
+script = ExtResource("2_m4s6t")
+sentence = "Les plantes fabriquent leur matière grâce à la lumière du Soleil."
+hint = "Le principe de la photosynthèse"
+
+[sub_resource type="Resource" id="Resource_cic4d"]
+script = ExtResource("2_m4s6t")
+sentence = "La chlorophylle donne aux feuilles leur couleur verte."
+hint = "Un pigment vert"
+
+[resource]
+script = ExtResource("1_sg5i0")
+sentences = Array[ExtResource("2_m4s6t")]([SubResource("Resource_3mnxr"), SubResource("Resource_cic4d")])
+school_year = "S4"
+theme_title = "La photosynthèse"

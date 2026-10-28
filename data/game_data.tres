@@ -1,0 +1,139 @@
+[gd_resource type="Resource" script_class="GameData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/images/logo_partenaire.svg" id="1_iwpjk"]
+[ext_resource type="Script" path="res://scripts/data/credits_data.gd" id="2_e6v3s"]
+[ext_resource type="Script" path="res://scripts/data/school_year_data.gd" id="3_53n6h"]
+[ext_resource type="Script" path="res://scripts/data/subject_data.gd" id="4_jxnqk"]
+[ext_resource type="Script" path="res://scripts/data/level_data.gd" id="5_b1qmr"]
+[ext_resource type="Resource" path="res://data/minigames/01_les_tables_de_multiplication.tres" id="6_r4uws"]
+[ext_resource type="Resource" path="res://data/minigames/02_les_formes_geometriques.tres" id="7_4ls4r"]
+[ext_resource type="Resource" path="res://data/minigames/03_les_animaux_de_la_ferme.tres" id="8_xbtbc"]
+[ext_resource type="Script" path="res://scripts/data/game_data.gd" id="9_028tp"]
+[ext_resource type="Resource" path="res://data/minigames/04_la_revolution_francaise.tres" id="10_t72jb"]
+[ext_resource type="Resource" path="res://data/minigames/05_le_moyen_age.tres" id="11_4dg1r"]
+[ext_resource type="Resource" path="res://data/minigames/06_napoleon.tres" id="12_1qin8"]
+[ext_resource type="Resource" path="res://data/minigames/07_la_cellule.tres" id="13_5vau3"]
+[ext_resource type="Resource" path="res://data/minigames/08_la_cellule.tres" id="14_nx75h"]
+[ext_resource type="Resource" path="res://data/minigames/09_la_photosynthese.tres" id="15_y2ecj"]
+[ext_resource type="Resource" path="res://data/minigames/10_le_corps_humain.tres" id="16_hk146"]
+[ext_resource type="Resource" path="res://data/minigames/11_la_digestion.tres" id="17_ct2cd"]
+[ext_resource type="Resource" path="res://data/minigames/12_l_atome.tres" id="18_pg0xh"]
+[ext_resource type="Resource" path="res://data/minigames/13_les_etats_de_la_matiere.tres" id="19_sudy3"]
+
+[sub_resource type="Resource" id="Resource_d2i17"]
+script = ExtResource("2_e6v3s")
+contributors = PackedStringArray("Conception pédagogique — Équipe enseignante", "Développement — Studio Exemple", "Illustrations — Collectif Graphique", "Tests — Les élèves de 4e B")
+partner_names = PackedStringArray("École Exemple", "Partenaire B", "Partenaire C")
+partner_logos = Array[Texture2D]([ExtResource("1_iwpjk")])
+
+[sub_resource type="Resource" id="Resource_wjy3c"]
+script = ExtResource("5_b1qmr")
+mini_game = ExtResource("6_r4uws")
+
+[sub_resource type="Resource" id="Resource_o0qo7"]
+script = ExtResource("5_b1qmr")
+mini_game = ExtResource("7_4ls4r")
+
+[sub_resource type="Resource" id="Resource_hxihq"]
+script = ExtResource("4_jxnqk")
+name = "Mathématiques"
+levels = Array[ExtResource("5_b1qmr")]([SubResource("Resource_wjy3c"), SubResource("Resource_o0qo7")])
+
+[sub_resource type="Resource" id="Resource_wmfrq"]
+script = ExtResource("5_b1qmr")
+mini_game = ExtResource("8_xbtbc")
+
+[sub_resource type="Resource" id="Resource_x34ux"]
+script = ExtResource("4_jxnqk")
+name = "Français"
+levels = Array[ExtResource("5_b1qmr")]([SubResource("Resource_wmfrq")])
+
+[sub_resource type="Resource" id="Resource_42erl"]
+script = ExtResource("4_jxnqk")
+name = "Éveil"
+
+[sub_resource type="Resource" id="Resource_0wlxu"]
+script = ExtResource("3_53n6h")
+name = "P3"
+subjects = Array[ExtResource("4_jxnqk")]([SubResource("Resource_hxihq"), SubResource("Resource_x34ux"), SubResource("Resource_42erl")])
+
+[sub_resource type="Resource" id="Resource_h7ofl"]
+script = ExtResource("5_b1qmr")
+mini_game = ExtResource("10_t72jb")
+
+[sub_resource type="Resource" id="Resource_8ri8c"]
+script = ExtResource("5_b1qmr")
+mini_game = ExtResource("11_4dg1r")
+
+[sub_resource type="Resource" id="Resource_qqbc6"]
+script = ExtResource("5_b1qmr")
+mini_game = ExtResource("12_1qin8")
+
+[sub_resource type="Resource" id="Resource_o8amu"]
+script = ExtResource("4_jxnqk")
+name = "Histoire"
+levels = Array[ExtResource("5_b1qmr")]([SubResource("Resource_h7ofl"), SubResource("Resource_8ri8c"), SubResource("Resource_qqbc6")])
+
+[sub_resource type="Resource" id="Resource_8380n"]
+script = ExtResource("3_53n6h")
+name = "S1"
+subjects = Array[ExtResource("4_jxnqk")]([SubResource("Resource_o8amu")])
+
+[sub_resource type="Resource" id="Resource_rrd11"]
+script = ExtResource("3_53n6h")
+name = "S2"
+
+[sub_resource type="Resource" id="Resource_swdpf"]
+script = ExtResource("5_b1qmr")
+mini_game = ExtResource("13_5vau3")
+
+[sub_resource type="Resource" id="Resource_jueyb"]
+script = ExtResource("5_b1qmr")
+mini_game = ExtResource("14_nx75h")
+
+[sub_resource type="Resource" id="Resource_qqh8x"]
+script = ExtResource("5_b1qmr")
+mini_game = ExtResource("15_y2ecj")
+
+[sub_resource type="Resource" id="Resource_14trb"]
+script = ExtResource("5_b1qmr")
+mini_game = ExtResource("16_hk146")
+
+[sub_resource type="Resource" id="Resource_rtx2q"]
+script = ExtResource("5_b1qmr")
+mini_game = ExtResource("17_ct2cd")
+
+[sub_resource type="Resource" id="Resource_e4wa0"]
+script = ExtResource("4_jxnqk")
+name = "Biologie"
+levels = Array[ExtResource("5_b1qmr")]([SubResource("Resource_swdpf"), SubResource("Resource_jueyb"), SubResource("Resource_qqh8x"), SubResource("Resource_14trb"), SubResource("Resource_rtx2q")])
+
+[sub_resource type="Resource" id="Resource_8ygdl"]
+script = ExtResource("5_b1qmr")
+mini_game = ExtResource("18_pg0xh")
+
+[sub_resource type="Resource" id="Resource_rdgcf"]
+script = ExtResource("5_b1qmr")
+mini_game = ExtResource("19_sudy3")
+
+[sub_resource type="Resource" id="Resource_siblw"]
+script = ExtResource("4_jxnqk")
+name = "Chimie"
+levels = Array[ExtResource("5_b1qmr")]([SubResource("Resource_8ygdl"), SubResource("Resource_rdgcf")])
+
+[sub_resource type="Resource" id="Resource_m8ttf"]
+script = ExtResource("4_jxnqk")
+name = "Physique"
+
+[sub_resource type="Resource" id="Resource_iywwt"]
+script = ExtResource("3_53n6h")
+name = "S4"
+subjects = Array[ExtResource("4_jxnqk")]([SubResource("Resource_e4wa0"), SubResource("Resource_siblw"), SubResource("Resource_m8ttf")])
+
+[resource]
+script = ExtResource("9_028tp")
+primary_3 = SubResource("Resource_0wlxu")
+secondary_1 = SubResource("Resource_8380n")
+secondary_2 = SubResource("Resource_rrd11")
+secondary_4 = SubResource("Resource_iywwt")
+credits = SubResource("Resource_d2i17")

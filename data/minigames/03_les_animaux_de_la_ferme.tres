@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/crossword_entry.gd" id="1_wsdkr"]
+[ext_resource type="Script" path="res://scripts/data/crossword_data.gd" id="2_ocuij"]
+
+[sub_resource type="Resource" id="Resource_r3cod"]
+script = ExtResource("1_wsdkr")
+word = "Vache"
+clue = "Elle donne du lait"
+answer = "VACHE"
+x = 3
+horizontal = false
+placed = true
+number = 1
+
+[sub_resource type="Resource" id="Resource_y12pc"]
+script = ExtResource("1_wsdkr")
+word = "Cheval"
+clue = "On peut le monter et il hennit"
+answer = "CHEVAL"
+x = 1
+y = 4
+placed = true
+number = 2
+
+[sub_resource type="Resource" id="Resource_ssrr2"]
+script = ExtResource("1_wsdkr")
+word = "Mouton"
+clue = "Sa laine tient chaud"
+answer = "MOUTON"
+y = 11
+placed = true
+number = 5
+
+[sub_resource type="Resource" id="Resource_rhh3e"]
+script = ExtResource("1_wsdkr")
+word = "Poule"
+clue = "Elle pond des œufs"
+answer = "POULE"
+y = 8
+placed = true
+number = 4
+
+[sub_resource type="Resource" id="Resource_2hkjf"]
+script = ExtResource("1_wsdkr")
+word = "Cochon"
+clue = "Il adore se rouler dans la boue"
+answer = "COCHON"
+x = 1
+y = 4
+horizontal = false
+placed = true
+number = 2
+
+[sub_resource type="Resource" id="Resource_v6f0y"]
+script = ExtResource("1_wsdkr")
+word = "Canard"
+clue = "Il fait coin-coin"
+answer = "CANARD"
+x = 1
+y = 6
+placed = true
+number = 3
+
+[resource]
+script = ExtResource("2_ocuij")
+entries = Array[ExtResource("1_wsdkr")]([SubResource("Resource_r3cod"), SubResource("Resource_y12pc"), SubResource("Resource_ssrr2"), SubResource("Resource_rhh3e"), SubResource("Resource_2hkjf"), SubResource("Resource_v6f0y")])
+grid_width = 7
+grid_height = 12
+school_year = "P3"
+theme_title = "Les animaux de la ferme"
