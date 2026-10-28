@@ -4,7 +4,6 @@ extends MiniGameUI
 ## la bonne fait passer à la question suivante.
 
 const ANSWER_COLORS: Array[Color] = [Color("ffa62b"), Color("6bd85a"), Color("c06cf0"), Color("ffd84a")]
-const ANSWER_BOTTOMS: Array[Color] = [Color("f07412"), Color("2fa83e"), Color("8a3fd0"), Color("f0a400")]
 const LETTERS := "ABCD"
 
 var _data: MemoData
@@ -29,11 +28,7 @@ func setup(data: MiniGameData) -> void:
 	add_child(root)
 
 	# Carte de question : texte à gauche, anneau de progression à droite.
-	_card = PanelContainer.new()
-	var sb := UIStyle.frame_box()
-	sb.set_content_margin_all(22)
-	sb.content_margin_bottom = 28
-	_card.add_theme_stylebox_override("panel", sb)
+	_card = UIStyle.panel(&"PanelFrame")
 	root.add_child(_card)
 	var card_box := VBoxContainer.new()
 	card_box.add_theme_constant_override("separation", 8)
@@ -66,7 +61,6 @@ func setup(data: MiniGameData) -> void:
 	root.add_child(_answers_grid)
 	for k in 4:
 		var b := JuicyButton.new("", ANSWER_COLORS[k], 28)
-		b.color_bottom = ANSWER_BOTTOMS[k]
 		b.alignment = HORIZONTAL_ALIGNMENT_LEFT
 		b.padding = 20
 		b.custom_minimum_size = Vector2(0, 130)
@@ -121,7 +115,6 @@ func _show_question(i: int) -> void:
 			continue
 		b.text = "%s. %s" % [LETTERS[k], q.answers[k]]
 		b.color = ANSWER_COLORS[k]
-		b.color_bottom = ANSWER_BOTTOMS[k]
 		b.disabled = false
 		UIFeedback.pop_in(b, 0.15 + k * 0.07, 0.5)
 	UIFeedback.pop_in(_card, 0.0, 0.85)
@@ -137,7 +130,6 @@ func _on_answer(k: int) -> void:
 	var b := _answers[k]
 	if k != q.correct_index:
 		b.color = Color("ff6b74")
-		b.color_bottom = Color("d42a38")
 		b.disabled = true
 		UIFeedback.shake(b)
 		Sfx.play("error")
@@ -145,7 +137,6 @@ func _on_answer(k: int) -> void:
 
 	_locked = true
 	b.color = Color("7be86a")
-	b.color_bottom = Color("22a83a")
 	b.sparkles = true
 	UIFeedback.punch(b, 0.15, 0.6)
 	Sfx.play("good")

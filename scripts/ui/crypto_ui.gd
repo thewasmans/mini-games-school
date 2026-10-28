@@ -27,8 +27,7 @@ func setup(data: MiniGameData) -> void:
 	add_child(root)
 
 	# Panneau « Indice » : cadre bleu titré, intérieur bleu nuit.
-	var hint_panel := PanelContainer.new()
-	hint_panel.add_theme_stylebox_override("panel", UIStyle.titled_box())
+	var hint_panel := UIStyle.panel(&"PanelTitled")
 	root.add_child(hint_panel)
 	var frame_col := VBoxContainer.new()
 	frame_col.add_theme_constant_override("separation", 6)
@@ -38,11 +37,10 @@ func setup(data: MiniGameData) -> void:
 	head.add_theme_constant_override("separation", 12)
 	frame_col.add_child(head)
 	head.add_child(UIStyle.label("Indice", 32, Color.WHITE, 10))
-	var counter_pill := UIStyle.pill("", UIStyle.PANEL_DARK, 22)
+	var counter_pill := UIStyle.pill("", 22)
 	_counter = counter_pill.get_child(0)
 	head.add_child(counter_pill)
-	var inner := PanelContainer.new()
-	inner.add_theme_stylebox_override("panel", UIStyle.inner_box())
+	var inner := UIStyle.panel(&"PanelInner")
 	frame_col.add_child(inner)
 	var hint_box := VBoxContainer.new()
 	inner.add_child(hint_box)
@@ -55,11 +53,8 @@ func setup(data: MiniGameData) -> void:
 	_answer_label.visible = false
 	hint_box.add_child(_answer_label)
 
-	_sentence_panel = PanelContainer.new()
+	_sentence_panel = UIStyle.panel(&"PanelBig")
 	_sentence_panel.size_flags_vertical = SIZE_EXPAND_FILL
-	var sp := UIStyle.container_box()
-	sp.set_content_margin_all(22)
-	_sentence_panel.add_theme_stylebox_override("panel", sp)
 	root.add_child(_sentence_panel)
 	var center := CenterContainer.new()
 	_sentence_panel.add_child(center)
@@ -75,13 +70,11 @@ func setup(data: MiniGameData) -> void:
 	buttons.custom_minimum_size = Vector2(0, 96)
 	root.add_child(buttons)
 	_fix_button = JuicyButton.new("Corriger les erreurs", Color("ff6b74"), 30)
-	_fix_button.color_bottom = Color("d42a38")
 	_fix_button.custom_minimum_size = Vector2(420, 90)
 	_fix_button.visible = false
 	_fix_button.pressed.connect(_fix_errors)
 	buttons.add_child(_fix_button)
 	_next_button = JuicyButton.new("Valider", Color("6bd85a"), 34)
-	_next_button.color_bottom = Color("2fa83e")
 	_next_button.icon_right = "next"
 	_next_button.sparkles = true
 	_next_button.custom_minimum_size = Vector2(320, 90)

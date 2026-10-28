@@ -23,8 +23,8 @@ func _draw() -> void:
 	var c := Vector2(size.x / 2, size.y * 0.58 + sin(_t * 1.4) * s * 0.04)
 	draw_circle(c + Vector2(0, -s * 0.3), s * 1.35, Color(0.5, 0.8, 1.0, 0.08))
 	draw_circle(c + Vector2(0, -s * 0.3), s * 1.05, Color(0.6, 0.85, 1.0, 0.08))
-	var sprite := UISkin.tex("island_castle")
-	if sprite != null:
+	if has_theme_icon("island", "DefaultQuizImage"):
+		var sprite := get_theme_icon("island", "DefaultQuizImage")
 		UISkin.draw_fit(self, sprite, size / 2 + Vector2(0, sin(_t * 1.4) * s * 0.04), minf(size.x, size.y) * 0.95)
 	else:
 		UIDraw.castle_island(self, c, s, roof)

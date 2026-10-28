@@ -22,7 +22,6 @@ var _nav: Array[Dictionary] = []
 
 func _ready() -> void:
 	set_anchors_and_offsets_preset(PRESET_FULL_RECT)
-	theme = UIStyle.theme()
 	_bg = AnimatedBackground.new()
 	add_child(_bg)
 	_holder = Control.new()
@@ -127,10 +126,8 @@ func _screen(title: String, back := Back.TOP, color := UIStyle.BLUE, title_size 
 	col.add_child(body)
 	if back == Back.BOTTOM:
 		var retour := JuicyButton.new("Retour", Color("22357e"), 32)
-		retour.color_bottom = Color("182866")
 		retour.text_color = Color("b9c8f0")
 		retour.icon_left = "back"
-		retour.depth = 6.0
 		retour.custom_minimum_size = Vector2(250, 84)
 		retour.size_flags_horizontal = SIZE_SHRINK_CENTER
 		retour.pressed.connect(go_back)
@@ -141,15 +138,13 @@ func _screen(title: String, back := Back.TOP, color := UIStyle.BLUE, title_size 
 
 ## Grand cadre bleu nuit à bord lumineux, avec un bandeau d'en-tête à étincelles.
 func _menu_container(header: String, expand := false) -> Array[Control]:
-	var panel := PanelContainer.new()
-	panel.add_theme_stylebox_override("panel", UIStyle.container_box())
+	var panel := UIStyle.panel(&"PanelBig")
 	if expand:
 		panel.size_flags_vertical = SIZE_EXPAND_FILL
 	var box := VBoxContainer.new()
 	box.add_theme_constant_override("separation", 22)
 	panel.add_child(box)
 	var head := JuicyButton.new(header, Color("3478ea"), 38)
-	head.color_bottom = Color("2257c9")
 	head.text_color = Color("ffe066")
 	head.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	head.sparkles = true
@@ -222,7 +217,7 @@ func _build_main_menu() -> Control:
 	title.add_theme_color_override("font_outline_color", Color("6a2c00"))
 	title.add_theme_constant_override("shadow_offset_y", 9)
 	logo.add_child(title)
-	var sub := UIStyle.pill(GAME_SUBTITLE, Color("1f3a8f"), 26)
+	var sub := UIStyle.pill(GAME_SUBTITLE, 26, &"PillBlue")
 	sub.size_flags_horizontal = SIZE_SHRINK_CENTER
 	logo.add_child(sub)
 	UIFeedback.pop_in(logo, 0.1, 0.3)
@@ -241,11 +236,8 @@ func _build_main_menu() -> Control:
 	UIFeedback.pop_in(hero, 0.25, 0.4)
 
 	var play := JuicyButton.new("PLAY", Color("ffa62b"), 76)
-	play.color_bottom = Color("d6449e")
-	play.skin = "button_play"
+	play.skin = &"ButtonPlay"
 	play.custom_minimum_size = Vector2(520, 160)
-	play.radius = 30.0
-	play.depth = 11.0
 	play.size_flags_horizontal = SIZE_SHRINK_CENTER
 	play.sound = "pop"
 	play.sparkles = true
@@ -303,10 +295,7 @@ func _build_credits() -> Control:
 	grid.add_theme_constant_override("v_separation", 14)
 	partners[1].add_child(grid)
 	for i in credits.partner_names.size():
-		var tile := PanelContainer.new()
-		var sb := UIStyle.box(Color("f4f6ff"), 20, 6, 3, Color("aab4d9"))
-		sb.set_content_margin_all(14)
-		tile.add_theme_stylebox_override("panel", sb)
+		var tile := UIStyle.panel(&"Tile")
 		tile.custom_minimum_size = Vector2(0, 150)
 		tile.size_flags_horizontal = SIZE_EXPAND_FILL
 		var logo: Texture2D = credits.partner_logos[i] if i < credits.partner_logos.size() else null
@@ -329,14 +318,12 @@ func _build_credits() -> Control:
 
 ## Cadre bleu avec titre (comme les panneaux « Clue ») et intérieur bleu nuit. Renvoie [cadre, contenu].
 func _titled_frame(title: String) -> Array[Control]:
-	var frame := PanelContainer.new()
-	frame.add_theme_stylebox_override("panel", UIStyle.titled_box())
+	var frame := UIStyle.panel(&"PanelTitled")
 	var col := VBoxContainer.new()
 	col.add_theme_constant_override("separation", 10)
 	frame.add_child(col)
 	col.add_child(UIStyle.label(title, 34, Color.WHITE, 10))
-	var inner := PanelContainer.new()
-	inner.add_theme_stylebox_override("panel", UIStyle.inner_box())
+	var inner := UIStyle.panel(&"PanelInner")
 	col.add_child(inner)
 	var content := VBoxContainer.new()
 	content.add_theme_constant_override("separation", 10)
@@ -437,7 +424,7 @@ func _build_level_grid(study: int, year_index: int, subject_index: int) -> Contr
 	var parts := _screen(subject.name)
 	var body: VBoxContainer = parts[1]
 	var info := UIStyle.pill("%s - %s   •   %d / %d" % [GameData.STUDY_NAMES[study], _data().get_year_name(study, year_index),
-		GameState.completed_count(key), levels.size()], Color("1f3a8f"), 24)
+		GameState.completed_count(key), levels.size()], 24, &"PillBlue")
 	info.size_flags_horizontal = SIZE_SHRINK_CENTER
 	body.add_child(info)
 

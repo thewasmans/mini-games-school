@@ -6,6 +6,9 @@ signal clicked
 
 enum State { VISIBLE, EMPTY, FILLED, CORRECT, WRONG, SYMBOL }
 
+## Type du thème qui porte les sprites des cases (word, cursor, good, wrong).
+const THEME_TYPE := &"CryptoCell"
+
 var original := ""   # caractère de la phrase (avec accent éventuel)
 var typed := ""
 var state := State.VISIBLE
@@ -85,15 +88,15 @@ func _draw() -> void:
 		UIDraw.glow(self, face, radius, Color(0.5, 0.95, 1.0, a), 10.0, 4)
 		top = Color("fff6c4")
 		bottom = Color("ffd84a")
-	var skin := "cell_word"
+	var skin := &"word"
 	match state:
 		State.CORRECT:
-			skin = "cell_good"
+			skin = &"good"
 		State.WRONG:
-			skin = "cell_wrong"
+			skin = &"wrong"
 	if is_cursor:
-		skin = "cell_cursor"
-	var skin_tex := UISkin.tex(skin)
+		skin = &"cursor"
+	var skin_tex := get_theme_icon(skin, THEME_TYPE) if has_theme_icon(skin, THEME_TYPE) else null
 	if state == State.EMPTY and not is_cursor:
 		UIDraw.rrect(self, face, radius, Color(0.03, 0.08, 0.3, 0.7), Color(0.05, 0.12, 0.38, 0.7), Color(0.55, 0.75, 1.0, 0.6), 2.0)
 		draw_line(Vector2(8, face.size.y - 9), Vector2(size.x - 8, face.size.y - 9), Color(0.7, 0.85, 1.0, 0.7), 3)

@@ -32,8 +32,7 @@ func setup(data: MiniGameData) -> void:
 	add_child(root)
 
 	# Panneau « Indice » : cadre bleu titré, intérieur bleu nuit (comme les panneaux « Clue »).
-	_clue_panel = PanelContainer.new()
-	_clue_panel.add_theme_stylebox_override("panel", UIStyle.titled_box())
+	_clue_panel = UIStyle.panel(&"PanelTitled")
 	root.add_child(_clue_panel)
 	var frame_box := VBoxContainer.new()
 	frame_box.add_theme_constant_override("separation", 6)
@@ -43,11 +42,10 @@ func setup(data: MiniGameData) -> void:
 	head.add_theme_constant_override("separation", 12)
 	frame_box.add_child(head)
 	head.add_child(UIStyle.label("Indice", 32, Color.WHITE, 10))
-	var dir_pill := UIStyle.pill("", UIStyle.PANEL_DARK, 22)
+	var dir_pill := UIStyle.pill("", 22)
 	_clue_dir = dir_pill.get_child(0)
 	head.add_child(dir_pill)
-	var inner := PanelContainer.new()
-	inner.add_theme_stylebox_override("panel", UIStyle.inner_box())
+	var inner := UIStyle.panel(&"PanelInner")
 	frame_box.add_child(inner)
 	var clue_row := HBoxContainer.new()
 	clue_row.add_theme_constant_override("separation", 12)
@@ -71,8 +69,7 @@ func setup(data: MiniGameData) -> void:
 
 	# Plateau translucide sous la grille
 	_grid_area = Panel.new()
-	var board := UIStyle.box(Color(0.06, 0.12, 0.4, 0.55), 24, 0, 2, Color(0.6, 0.8, 1.0, 0.35))
-	_grid_area.add_theme_stylebox_override("panel", board)
+	_grid_area.theme_type_variation = &"Board"
 	_grid_area.size_flags_vertical = SIZE_EXPAND_FILL
 	_grid_area.resized.connect(_layout_grid)
 	root.add_child(_grid_area)

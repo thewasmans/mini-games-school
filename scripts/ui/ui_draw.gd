@@ -94,9 +94,9 @@ static func sparkle(ci: CanvasItem, p: Vector2, size: float, color := Color(1, 1
 
 ## Icône vectorielle de hauteur ~s centrée sur c.
 static func icon(ci: CanvasItem, name: String, c: Vector2, s: float) -> void:
-	var sprite: String = UISkin.ICON_SPRITES.get(name, "")
-	if sprite != "" and UISkin.tex(sprite) != null:
-		UISkin.draw_fit(ci, UISkin.tex(sprite), c, s * 1.15)
+	var sprite := UISkin.icon(name)
+	if sprite != null:
+		UISkin.draw_fit(ci, sprite, c, s * 1.15)
 		return
 	match name:
 		"book":

@@ -9,7 +9,7 @@ const ROWS: Array[String] = ["AZERTYUIOP", "QSDFGHJKLM", "WXCVBN"]
 
 
 func _init(key_height := 68.0) -> void:
-	add_theme_stylebox_override("panel", UIStyle.glass_box())
+	theme_type_variation = &"PanelGlass"
 	var col := VBoxContainer.new()
 	col.add_theme_constant_override("separation", 8)
 	add_child(col)
@@ -31,13 +31,7 @@ func _init(key_height := 68.0) -> void:
 
 func _key(letter: String, min_size: Vector2) -> JuicyButton:
 	var key := JuicyButton.new(letter, Color("eef0ff"), 30)
-	key.color_bottom = Color("cdd3f0")
-	key.text_color = UIStyle.INK
-	key.text_outline = 0
+	key.skin = &"ButtonKey"
 	key.sound = "type"
-	key.padding = 2
-	key.depth = 5.0
-	key.radius = 12.0
-	key.skin = "key"
 	key.custom_minimum_size = min_size
 	return key

@@ -7,6 +7,9 @@ signal clicked
 
 enum Highlight { NONE, WORD, CURSOR }
 
+## Type du thème qui porte les sprites des cases (empty, word, cursor, done, wrong).
+const THEME_TYPE := &"CrosswordCell"
+
 const EMPTY := [Color("ddd6ff"), Color("b9aef0")]
 const WORD := [Color("f4f1ff"), Color("d6cdfb")]
 const CURSOR := [Color("fff6c4"), Color("ffd84a")]
@@ -75,20 +78,20 @@ func _draw() -> void:
 	var depth := maxf(3.0, size.y * 0.1)
 	var radius := size.x * 0.2
 	var pal: Array = EMPTY
-	var skin := "cell_empty"
+	var skin := &"empty"
 	if validated:
 		pal = DONE
-		skin = "cell_done"
+		skin = &"done"
 	elif wrong:
 		pal = WRONG
-		skin = "cell_wrong"
+		skin = &"wrong"
 	elif highlight == Highlight.CURSOR:
 		pal = CURSOR
-		skin = "cell_cursor"
+		skin = &"cursor"
 	elif highlight == Highlight.WORD:
 		pal = WORD
-		skin = "cell_word"
-	var skin_tex := UISkin.tex(skin)
+		skin = &"word"
+	var skin_tex := get_theme_icon(skin, THEME_TYPE) if has_theme_icon(skin, THEME_TYPE) else null
 	var top: Color = pal[0]
 	var bottom: Color = pal[1]
 	var face := Rect2(0, 0, size.x, size.y - depth)

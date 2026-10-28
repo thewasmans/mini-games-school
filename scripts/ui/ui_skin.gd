@@ -1,73 +1,34 @@
 class_name UISkin
 extends RefCounted
-## Thème bitmap extrait des maquettes : assets/ui/*.png (voir tools/extract_ui_assets.py).
-## Les boutons et panneaux sont utilisés en 9-slice (StyleBoxTexture), les sprites tels quels.
-## Si un PNG manque, les appelants retombent sur le dessin vectoriel de UIDraw.
+## Correspondances entre le code et le thème Godot du jeu (assets/ui/game_theme.tres, généré par
+## tools/build_theme.gd à partir des PNG extraits des maquettes).
+## Boutons : variations « Button<Couleur> », bannières : « Banner<Couleur> ».
 
-const DIR := "res://assets/ui/"
-
-## Couleur représentative de chaque skin de bouton, pour choisir le plus proche d'une couleur.
+## Couleur représentative de chaque skin de bouton (PNG assets/ui/button_<nom>.png),
+## pour choisir la variation la plus proche d'une couleur quelconque.
 const BUTTON_COLORS := {
-	"button_blue": Color("3d84f2"),
-	"button_orange": Color("ff9a1f"),
-	"button_green": Color("4cc24a"),
-	"button_purple": Color("a855e0"),
-	"button_yellow": Color("ffd23f"),
-	"button_red": Color("ff4d5a"),
-	"button_grey": Color("8a93a6"),
-	"button_light": Color("eef0ff"),
-	"button_navy": Color("22357e"),
+	"Blue": Color("3d84f2"),
+	"Orange": Color("ff9a1f"),
+	"Green": Color("4cc24a"),
+	"Purple": Color("a855e0"),
+	"Yellow": Color("ffd23f"),
+	"Red": Color("ff4d5a"),
+	"Grey": Color("8a93a6"),
+	"Light": Color("eef0ff"),
+	"Navy": Color("22357e"),
 }
 
-## Marges 9-slice [gauche, haut, droite, bas] en pixels de texture.
-const MARGINS := {
-	"button": [30, 20, 30, 24],
-	"button_orange": [30, 22, 30, 28],
-	"button_play": [64, 24, 30, 30],
-	"button_navy": [24, 18, 24, 22],
-	"panel_blue": [34, 30, 34, 40],
-	"panel_titled": [20, 58, 20, 22],
-	"panel_container": [44, 44, 44, 44],
-}
+## Boutons-icônes entièrement dessinés par le thème (icône comprise).
+const ICON_BUTTONS := {"back": &"ButtonBack", "gear": &"ButtonGear", "sound_off": &"ButtonGear"}
 
-## Icônes vectorielles remplacées par un sprite extrait.
-const ICON_SPRITES := {
-	"book": "icon_book", "book_blue": "icon_book", "pencil": "icon_pencil", "compass": "icon_compass",
-	"ruler": "icon_ruler", "scroll": "icon_scroll", "microscope": "icon_microscope", "castle": "icon_castle",
-	"crown": "icon_crown", "bulb": "icon_bulb", "coin": "icon_coin", "gem": "icon_gem",
-}
-
-## Boutons-icônes dessinés entièrement par un sprite (icône comprise).
-const BUTTON_SPRITES := {"back": "button_back", "gear": "button_gear", "sound_off": "button_gear"}
-
-static var _tex := {}
+## Type de thème qui porte les icônes-sprites (UIDraw.icon les préfère au dessin vectoriel).
+const ICONS_TYPE := &"GameIcons"
+const ICON_ALIASES := {"book_blue": "book"}
 
 
-static func tex(name: String) -> Texture2D:
-	if not _tex.has(name):
-		var path := DIR + name + ".png"
-		_tex[name] = load(path) if ResourceLoader.exists(path) else null
-	return _tex[name]
-
-
-## StyleBoxTexture 9-slice, ou null si le PNG est absent.
-static func style(name: String) -> StyleBoxTexture:
-	var t := tex(name)
-	if t == null:
-		return null
-	var sb := StyleBoxTexture.new()
-	sb.texture = t
-	var m: Array = MARGINS.get(name, MARGINS["button"] if name.begins_with("button") else [12, 12, 12, 12])
-	sb.texture_margin_left = m[0]
-	sb.texture_margin_top = m[1]
-	sb.texture_margin_right = m[2]
-	sb.texture_margin_bottom = m[3]
-	return sb
-
-
-## Skin de bouton dont la couleur est la plus proche de `c`.
-static func button_for(c: Color) -> String:
-	var best := "button_blue"
+## Nom de la couleur de skin la plus proche de `c` (clé de BUTTON_COLORS).
+static func color_name(c: Color) -> String:
+	var best := "Blue"
 	var best_d := INF
 	for name: String in BUTTON_COLORS:
 		var ref: Color = BUTTON_COLORS[name]
@@ -76,6 +37,13 @@ static func button_for(c: Color) -> String:
 			best_d = d
 			best = name
 	return best
+
+
+## Icône-sprite du thème (type GameIcons), ou null.
+static func icon(name: String) -> Texture2D:
+	var t := UIStyle.theme()
+	var key: StringName = ICON_ALIASES.get(name, name)
+	return t.get_icon(key, ICONS_TYPE) if t.has_icon(key, ICONS_TYPE) else null
 
 
 ## Dessine une texture centrée en c, ajustée dans un carré de côté `side` (proportions gardées).

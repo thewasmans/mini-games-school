@@ -52,7 +52,6 @@ func _ready() -> void:
 		root.add_child(_game)
 
 	_validate = JuicyButton.new("VALIDER", Color("5fd35a"), 46)
-	_validate.color_bottom = Color("2f9a3a")
 	_validate.icon_left = "check"
 	_validate.icon_right = "star"
 	_validate.sparkles = true

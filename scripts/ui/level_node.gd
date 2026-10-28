@@ -65,9 +65,9 @@ func _draw() -> void:
 	var c := Vector2(size.x / 2, size.y * 0.52 + bob)
 	var locked := state == State.LOCKED
 
-	var sprite := UISkin.tex("platform_lock" if locked else ("platform_done" if state == State.DONE else "platform_open"))
-	if sprite != null:
-		_draw_sprite_platform(c, sprite)
+	var skin := &"lock" if locked else (&"done" if state == State.DONE else &"open")
+	if has_theme_icon(skin, "LevelNode"):
+		_draw_sprite_platform(c, get_theme_icon(skin, "LevelNode"))
 		return
 
 	# Rocher sous la plateforme
@@ -123,7 +123,7 @@ func _draw() -> void:
 		draw_colored_polygon(UIDraw.ellipse(c, Vector2(68, 30) * (1.0 + (1.0 - flash) * 0.7)), Color(1, 1, 1, flash))
 
 
-## Plateforme extraite des maquettes (assets/ui/platform_*.png) + numéro, étincelles, badge.
+## Plateforme du thème (icônes open / lock / done du type LevelNode) + numéro, étincelles, badge.
 func _draw_sprite_platform(c: Vector2, sprite: Texture2D) -> void:
 	var w := 156.0
 	var sz := Vector2(sprite.get_width(), sprite.get_height()) * (w / sprite.get_width())

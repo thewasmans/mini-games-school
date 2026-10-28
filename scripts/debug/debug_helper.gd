@@ -11,11 +11,7 @@ var _unlock_all: CheckBox
 
 func _ready() -> void:
 	layer = 90
-	_panel = PanelContainer.new()
-	_panel.theme = UIStyle.theme()
-	var sb := UIStyle.box(Color(0.05, 0.07, 0.2, 0.92), 18, 0, 3, UIStyle.YELLOW)
-	sb.set_content_margin_all(18)
-	_panel.add_theme_stylebox_override("panel", sb)
+	_panel = UIStyle.panel(&"DebugPanel")
 	_panel.position = Vector2(20, 120)
 	_panel.visible = false
 	add_child(_panel)
