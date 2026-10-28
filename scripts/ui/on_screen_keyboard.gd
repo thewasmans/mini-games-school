@@ -1,18 +1,25 @@
 class_name OnScreenKeyboard
 extends PanelContainer
 ## Clavier AZERTY à l'écran, dans un panneau de verre (le clavier physique fonctionne aussi).
+## Prefab : scenes/ui/panels/on_screen_keyboard.tscn ; les touches sont créées au _ready.
 
 signal letter_pressed(letter: String)
 signal backspace_pressed
 
 const ROWS: Array[String] = ["AZERTYUIOP", "QSDFGHJKLM", "WXCVBN"]
+const SCENE := "res://scenes/ui/panels/on_screen_keyboard.tscn"
+
+@export var key_height := 68.0
 
 
-func _init(key_height := 68.0) -> void:
-	theme_type_variation = &"PanelGlass"
-	var col := VBoxContainer.new()
-	col.add_theme_constant_override("separation", 8)
-	add_child(col)
+static func create(key_height_ := 68.0) -> OnScreenKeyboard:
+	var k: OnScreenKeyboard = load(SCENE).instantiate()
+	k.key_height = key_height_
+	return k
+
+
+func _ready() -> void:
+	var col: VBoxContainer = $Rows
 	for r in ROWS.size():
 		var row := HBoxContainer.new()
 		row.alignment = BoxContainer.ALIGNMENT_CENTER

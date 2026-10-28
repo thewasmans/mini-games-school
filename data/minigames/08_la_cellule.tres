@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bje2nvqkyxuas"]
 
 [ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/data/memo_question.gd" id="1_xfhyx"]
-[ext_resource type="Texture2D" uid="uid://37kg462l5swt" path="res://assets/images/cellule.svg" id="2_jbwra"]
+[ext_resource type="Texture2D" uid="uid://37kg462l5swt" path="res://content/images/cellule.svg" id="2_jbwra"]
 [ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/data/memo_data.gd" id="3_fbnp6"]
 
 [sub_resource type="Resource" id="Resource_tpmqk"]

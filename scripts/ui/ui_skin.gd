@@ -1,10 +1,11 @@
+@tool
 class_name UISkin
 extends RefCounted
-## Correspondances entre le code et le thème Godot du jeu (assets/ui/game_theme.tres, généré par
-## tools/build_theme.gd à partir des PNG extraits des maquettes).
+## Correspondances entre le code et le thème Godot du jeu (content/ui/game_theme.tres, généré par
+## addons/dev_tools/theme_builder.gd à partir des PNG extraits des maquettes).
 ## Boutons : variations « Button<Couleur> », bannières : « Banner<Couleur> ».
 
-## Couleur représentative de chaque skin de bouton (PNG assets/ui/button_<nom>.png),
+## Couleur représentative de chaque skin de bouton (PNG content/ui/button_<nom>.png),
 ## pour choisir la variation la plus proche d'une couleur quelconque.
 const BUTTON_COLORS := {
 	"Blue": Color("3d84f2"),

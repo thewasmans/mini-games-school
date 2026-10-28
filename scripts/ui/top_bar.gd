@@ -24,7 +24,7 @@ func _init(show_back := true) -> void:
 	var center := CenterContainer.new()
 	center.size_flags_horizontal = SIZE_EXPAND_FILL
 	add_child(center)
-	center.add_child(_stars_pill())
+	center.add_child(StarsPill.create(GameManager.total_progress()))
 
 	var gear := JuicyButton.new("", UIStyle.BLUE)
 	gear.icon_kind = "sound_off" if Sfx.muted else "gear"
@@ -35,17 +35,3 @@ func _init(show_back := true) -> void:
 		gear.icon_kind = "sound_off" if Sfx.muted else "gear"
 		UIFeedback.float_text(gear, "Son coupé" if Sfx.muted else "Son activé", Color.WHITE, 26))
 	add_child(gear)
-
-
-## Pilule centrale : ⭐ levels terminés / levels disponibles.
-func _stars_pill() -> PanelContainer:
-	var progress := GameManager.total_progress()
-	var pill := UIStyle.panel(&"PillStars")
-	var row := HBoxContainer.new()
-	row.add_theme_constant_override("separation", 8)
-	pill.add_child(row)
-	row.add_child(IconView.new("star", 50))
-	var inner := UIStyle.panel(&"PillStarsInner")
-	inner.add_child(UIStyle.label("%d / %d" % [progress.x, progress.y], 30, Color.WHITE, 8))
-	row.add_child(inner)
-	return pill

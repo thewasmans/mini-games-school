@@ -1,7 +1,9 @@
+@tool
 class_name UIStyle
 extends RefCounted
-## Direction artistique : palette, accès au thème du projet, fabriques de labels / pastilles / bannières.
-## Les styles (boutons, panneaux, sprites) sont dans le thème Godot assets/ui/game_theme.tres.
+## Direction artistique : palette, accès au thème du projet, labels et texte dessiné.
+## Les panneaux sont des prefabs (scenes/ui/panels/*.tscn).
+## Les styles (boutons, panneaux, sprites) sont dans le thème Godot content/ui/game_theme.tres.
 
 const BLUE := Color("3d84f2")
 const ORANGE := Color("ff9a1f")
@@ -21,12 +23,12 @@ const SUBJECT_COLORS: Array[Color] = [Color("3d84f2"), Color("ff9a1f"), Color("4
 const STUDY_COLORS: Array[Color] = [Color("ff9a1f"), Color("4cc24a"), Color("a855e0")]
 const STUDY_ICONS := [["book", "pencil"], ["compass", "ruler"], ["scroll", "microscope"]]
 
-const THEME_PATH := "res://assets/ui/game_theme.tres"
+const THEME_PATH := "res://content/ui/game_theme.tres"
 
 static var _theme: Theme
 
 
-## Thème du projet (assets/ui/game_theme.tres, généré par tools/build_theme.gd).
+## Thème du projet (content/ui/game_theme.tres, généré par addons/dev_tools/theme_builder.gd).
 static func theme() -> Theme:
 	if _theme == null:
 		_theme = ThemeDB.get_project_theme()
@@ -52,13 +54,6 @@ static func box(color: Color, radius := 20, depth := 0, border := 0, border_colo
 	return sb
 
 
-## PanelContainer avec une variation du thème (PanelFrame, PanelTitled, PanelInner, PanelBig, PanelGlass…).
-static func panel(variation: StringName) -> PanelContainer:
-	var p := PanelContainer.new()
-	p.theme_type_variation = variation
-	return p
-
-
 static func label(text: String, size := 28, color := Color.WHITE, outline := 10) -> Label:
 	var l := Label.new()
 	l.text = text
@@ -69,18 +64,6 @@ static func label(text: String, size := 28, color := Color.WHITE, outline := 10)
 	l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	l.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	return l
-
-
-## Bannière de titre (pilule bleue brillante).
-static func banner(text: String, color := BLUE, size := 40, text_color := Color.WHITE) -> Banner:
-	return Banner.new(text, color, size, text_color)
-
-
-## Petite pastille arrondie (compteur, tag) : variation Pill ou PillBlue.
-static func pill(text: String, size := 22, variation := &"Pill") -> PanelContainer:
-	var p := panel(variation)
-	p.add_child(label(text, size, Color.WHITE, 6))
-	return p
 
 
 static func ellipse(center: Vector2, radius: Vector2, steps := 40) -> PackedVector2Array:
@@ -102,19 +85,3 @@ static func draw_text(ci: CanvasItem, text: String, center: Vector2, size: int, 
 		ci.draw_string_outline(f, pos + Vector2(0, size * 0.08), text, HORIZONTAL_ALIGNMENT_LEFT, -1, size, outline, Color(0.02, 0.05, 0.2, 0.4))
 		ci.draw_string_outline(f, pos, text, HORIZONTAL_ALIGNMENT_LEFT, -1, size, outline, outline_color)
 	ci.draw_string(f, pos, text, HORIZONTAL_ALIGNMENT_LEFT, -1, size, color)
-
-
-## Bannière de titre : PanelContainer avec la variation Banner<Couleur> du thème.
-class Banner extends PanelContainer:
-	var color: Color
-	var _label: Label
-
-	func _init(text: String, color_: Color, size: int, text_color: Color) -> void:
-		color = color_
-		theme_type_variation = "Banner" + UISkin.color_name(color)
-		_label = UIStyle.label(text, size, text_color, maxi(6, size / 4))
-		_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		add_child(_label)
-
-	func set_text(t: String) -> void:
-		_label.text = t

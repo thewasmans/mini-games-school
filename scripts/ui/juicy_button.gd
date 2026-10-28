@@ -7,46 +7,46 @@ extends Button
 const STATES := ["normal", "hover", "pressed", "hover_pressed", "disabled", "focus"]
 const FONT_COLORS := ["font_color", "font_hover_color", "font_pressed_color", "font_hover_pressed_color", "font_focus_color"]
 
-var sound := "click"
+@export var sound := "click"
 ## Icône seule au centre (bouton sans texte) : voir UIDraw.icon() et UISkin.ICON_BUTTONS.
-var icon_kind := "":
+@export var icon_kind := "":
 	set(value):
 		icon_kind = value
 		_update_variation()
-var icon_left := "":
+@export var icon_left := "":
 	set(value):
 		icon_left = value
 		_apply_margins()
-var icon_right := "":
+@export var icon_right := "":
 	set(value):
 		icon_right = value
 		_apply_margins()
 ## Choisit la variation Button<Couleur> du thème la plus proche (sauf si `skin` est renseigné).
-var color: Color = UIStyle.BLUE:
+@export var color: Color = UIStyle.BLUE:
 	set(value):
 		color = value
 		_update_variation()
 ## Variation du thème imposée (ex. "ButtonPlay", "ButtonKey") ; vide = déduite de `color`.
-var skin := &"":
+@export var skin := &"":
 	set(value):
 		skin = value
 		_update_variation()
-var text_color := Color.WHITE:
+@export var text_color := Color.WHITE:
 	set(value):
 		text_color = value
 		for c: String in FONT_COLORS:
 			add_theme_color_override(c, value)
 		add_theme_color_override("font_disabled_color", Color(value, 0.85))
 ## Marge horizontale du texte : -1 = celle du thème.
-var padding := -1:
+@export var padding := -1:
 	set(value):
 		padding = value
 		_apply_margins()
-var sparkles := false:
+@export var sparkles := false:
 	set(value):
 		sparkles = value
 		_update_process()
-var shine := false
+@export var shine := false
 
 var _t := 0.0
 var _shine_t := 0.0

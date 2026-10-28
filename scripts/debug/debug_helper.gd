@@ -1,42 +1,26 @@
 class_name DebugHelper
 extends CanvasLayer
-## Panneau de test (F1). Ajouté uniquement quand le jeu est lancé depuis l'éditeur.
+## Barre de test (F1) en bas de la fenêtre, avec le thème par défaut de Godot.
+## Ajoutée uniquement quand le jeu est lancé depuis l'éditeur.
 
-var _panel: PanelContainer
-var _auto_fill: CheckBox
-var _auto_validate: CheckBox
-var _show_hints: CheckBox
-var _unlock_all: CheckBox
+const SCENE := "res://scenes/debug/debug_helper.tscn"
+
+@onready var _bar: PanelContainer = $Bar
+@onready var _auto_fill: CheckBox = $Bar/Row/AutoFill
+@onready var _auto_validate: CheckBox = $Bar/Row/AutoValidate
+@onready var _show_hints: CheckBox = $Bar/Row/ShowHints
+@onready var _unlock_all: CheckBox = $Bar/Row/UnlockAll
+
+
+static func create() -> DebugHelper:
+	return load(SCENE).instantiate()
 
 
 func _ready() -> void:
-	layer = 90
-	_panel = UIStyle.panel(&"DebugPanel")
-	_panel.position = Vector2(20, 120)
-	_panel.visible = false
-	add_child(_panel)
-	var box := VBoxContainer.new()
-	box.add_theme_constant_override("separation", 8)
-	_panel.add_child(box)
-	var title := UIStyle.label("Helper de test (F1)", 26, UIStyle.YELLOW, 6)
-	box.add_child(title)
-	_auto_fill = _check(box, "Auto select / prefill")
-	_auto_validate = _check(box, "Auto validate")
-	_show_hints = _check(box, "Show hints")
-	_unlock_all = _check(box, "Unlock all levels")
-	var note := UIStyle.label("Unlock all : effet visible au prochain\naffichage de la grille.", 16, Color("c8d2ff"), 0)
-	box.add_child(note)
-
-
-func _check(parent: Control, text: String) -> CheckBox:
-	var c := CheckBox.new()
-	c.text = text
-	c.focus_mode = Control.FOCUS_NONE
-	c.add_theme_font_size_override("font_size", 22)
-	c.add_theme_constant_override("outline_size", 4)
-	c.toggled.connect(func(_on: bool) -> void: _apply())
-	parent.add_child(c)
-	return c
+	# Le thème du jeu est le thème du projet : on impose celui de Godot à la barre.
+	_bar.theme = ThemeDB.get_default_theme()
+	for c: CheckBox in [_auto_fill, _auto_validate, _show_hints, _unlock_all]:
+		c.toggled.connect(func(_on: bool) -> void: _apply())
 
 
 func _apply() -> void:
@@ -45,7 +29,5 @@ func _apply() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_F1:
-		_panel.visible = not _panel.visible
-		if _panel.visible:
-			UIFeedback.pop_in(_panel, 0.0, 0.8)
+		_bar.visible = not _bar.visible
 		get_viewport().set_input_as_handled()

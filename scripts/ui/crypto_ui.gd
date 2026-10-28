@@ -13,7 +13,7 @@ var _show_hints := false
 var _counter: Label
 var _hint_label: Label
 var _answer_label: Label
-var _sentence_panel: PanelContainer
+var _sentence_panel: MenuPanel
 var _flow: HFlowContainer
 var _fix_button: JuicyButton
 var _next_button: JuicyButton
@@ -27,23 +27,12 @@ func setup(data: MiniGameData) -> void:
 	add_child(root)
 
 	# Panneau « Indice » : cadre bleu titré, intérieur bleu nuit.
-	var hint_panel := UIStyle.panel(&"PanelTitled")
+	var hint_panel := TitledPanel.create("Indice")
 	root.add_child(hint_panel)
-	var frame_col := VBoxContainer.new()
-	frame_col.add_theme_constant_override("separation", 6)
-	hint_panel.add_child(frame_col)
-	var head := HBoxContainer.new()
-	head.alignment = BoxContainer.ALIGNMENT_CENTER
-	head.add_theme_constant_override("separation", 12)
-	frame_col.add_child(head)
-	head.add_child(UIStyle.label("Indice", 32, Color.WHITE, 10))
-	var counter_pill := UIStyle.pill("", 22)
-	_counter = counter_pill.get_child(0)
-	head.add_child(counter_pill)
-	var inner := UIStyle.panel(&"PanelInner")
-	frame_col.add_child(inner)
-	var hint_box := VBoxContainer.new()
-	inner.add_child(hint_box)
+	var counter_pill := Pill.create()
+	_counter = counter_pill.label
+	hint_panel.header.add_child(counter_pill)
+	var hint_box := hint_panel.content
 	_hint_label = UIStyle.label("", 28)
 	_hint_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	_hint_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
@@ -53,11 +42,12 @@ func setup(data: MiniGameData) -> void:
 	_answer_label.visible = false
 	hint_box.add_child(_answer_label)
 
-	_sentence_panel = UIStyle.panel(&"PanelBig")
+	_sentence_panel = MenuPanel.create()
 	_sentence_panel.size_flags_vertical = SIZE_EXPAND_FILL
 	root.add_child(_sentence_panel)
 	var center := CenterContainer.new()
-	_sentence_panel.add_child(center)
+	center.size_flags_vertical = SIZE_EXPAND_FILL
+	_sentence_panel.content.add_child(center)
 	_flow = HFlowContainer.new()
 	_flow.alignment = FlowContainer.ALIGNMENT_CENTER
 	_flow.add_theme_constant_override("h_separation", 22)
@@ -83,7 +73,7 @@ func setup(data: MiniGameData) -> void:
 	_next_button.pressed.connect(_next_sentence)
 	buttons.add_child(_next_button)
 
-	var keyboard := OnScreenKeyboard.new(68)
+	var keyboard := OnScreenKeyboard.create(68)
 	keyboard.letter_pressed.connect(_type)
 	keyboard.backspace_pressed.connect(_backspace)
 	root.add_child(keyboard)

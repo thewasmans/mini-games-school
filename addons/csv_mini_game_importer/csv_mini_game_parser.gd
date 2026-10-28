@@ -4,7 +4,7 @@ extends RefCounted
 ## Lit un CSV et construit la ressource du mini-jeu correspondant.
 ## Détection : en-tête (mot / question / phrase), ligne « ratio », nombre de colonnes.
 
-const IMAGE_DIR := "res://assets/images"
+const IMAGE_DIR := "res://content/images"
 const IMAGE_EXTENSIONS: Array[String] = ["png", "jpg", "jpeg", "webp", "svg"]
 
 const KIND_CROSSWORD := "Mots croisés"

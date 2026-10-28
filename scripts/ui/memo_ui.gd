@@ -10,7 +10,7 @@ var _data: MemoData
 var _index := 0
 var _locked := false
 
-var _card: PanelContainer
+var _card: FramePanel
 var _ring: ProgressRing
 var _question: Label
 var _hint: Label
@@ -28,11 +28,9 @@ func setup(data: MiniGameData) -> void:
 	add_child(root)
 
 	# Carte de question : texte à gauche, anneau de progression à droite.
-	_card = UIStyle.panel(&"PanelFrame")
+	_card = FramePanel.create()
 	root.add_child(_card)
-	var card_box := VBoxContainer.new()
-	card_box.add_theme_constant_override("separation", 8)
-	_card.add_child(card_box)
+	var card_box := _card.content
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 14)
 	card_box.add_child(row)

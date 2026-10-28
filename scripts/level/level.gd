@@ -34,7 +34,7 @@ func _ready() -> void:
 	var bar := TopBar.new(true)
 	bar.back_pressed.connect(func() -> void: exited.emit())
 	root.add_child(bar)
-	var banner := UIStyle.banner(_title, UIStyle.BLUE, 27)
+	var banner := TitleBanner.create(_title, UIStyle.BLUE, 27)
 	banner.size_flags_horizontal = SIZE_SHRINK_CENTER
 	banner.custom_minimum_size = Vector2(560, 0)
 	root.add_child(banner)

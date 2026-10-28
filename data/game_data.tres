@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="GameData" format=3 uid="uid://dg13xtmbn0w61"]
 
-[ext_resource type="Texture2D" uid="uid://ddbamule2ivgm" path="res://assets/images/logo_partenaire.svg" id="1_iwpjk"]
+[ext_resource type="Texture2D" uid="uid://ddbamule2ivgm" path="res://content/images/logo_partenaire.svg" id="1_iwpjk"]
 [ext_resource type="Script" uid="uid://1glm8whll5s5" path="res://scripts/data/credits_data.gd" id="2_e6v3s"]
 [ext_resource type="Script" uid="uid://ciwcgy3oely0m" path="res://scripts/data/school_year_data.gd" id="3_53n6h"]
 [ext_resource type="Script" uid="uid://slefhuqrt8qe" path="res://scripts/data/subject_data.gd" id="4_jxnqk"]

@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://c6w0drthei6ig"]
+
+[ext_resource type="Script" uid="uid://c5mpd2nsq5nqc" path="res://scripts/debug/debug_helper.gd" id="1_script"]
+
+[node name="DebugHelper" type="CanvasLayer" unique_id=907629242]
+layer = 90
+script = ExtResource("1_script")
+
+[node name="Bar" type="PanelContainer" parent="." unique_id=482589463]
+visible = false
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Row" type="HFlowContainer" parent="Bar" unique_id=330816350]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Bar/Row" unique_id=425529784]
+layout_mode = 2
+text = "Debug (F1)"
+
+[node name="AutoFill" type="CheckBox" parent="Bar/Row" unique_id=1980904845]
+layout_mode = 2
+focus_mode = 0
+text = "Auto select / prefill"
+
+[node name="AutoValidate" type="CheckBox" parent="Bar/Row" unique_id=852555754]
+layout_mode = 2
+focus_mode = 0
+text = "Auto validate"
+
+[node name="ShowHints" type="CheckBox" parent="Bar/Row" unique_id=225071191]
+layout_mode = 2
+focus_mode = 0
+text = "Show hints"
+
+[node name="UnlockAll" type="CheckBox" parent="Bar/Row" unique_id=755273114]
+layout_mode = 2
+tooltip_text = "Effet visible au prochain affichage de la grille."
+focus_mode = 0
+text = "Unlock all levels"

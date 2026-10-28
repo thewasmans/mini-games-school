@@ -33,7 +33,7 @@ Quelle est l'unité de base du vivant ?;L'atome;La cellule;L'organe;Le tissu;B;c
 ```
 
 - **Réponse** : `A`, `B`, `C`, `D`, `1`…`4`, ou le texte exact de la bonne réponse.
-- **nom image** : optionnel. Cherché dans `res://assets/images/` et ses sous-dossiers, avec ou sans extension (`png`, `jpg`, `jpeg`, `webp`, `svg`). Une image introuvable affiche l'image par défaut.
+- **nom image** : optionnel. Cherché dans `res://content/images/` et ses sous-dossiers, avec ou sans extension (`png`, `jpg`, `jpeg`, `webp`, `svg`). Une image introuvable affiche l'image par défaut.
 
 ### Cryptogramme — `phrase ; indice`
 

@@ -2,10 +2,13 @@ class_name IconView
 extends Control
 ## Affiche une icône vectorielle de UIDraw.
 
-var icon := ""
+@export var icon := "":
+	set(value):
+		icon = value
+		queue_redraw()
 
 
-func _init(icon_: String, side := 40.0) -> void:
+func _init(icon_ := "", side := 40.0) -> void:
 	icon = icon_
 	custom_minimum_size = Vector2(side, side)
 	mouse_filter = MOUSE_FILTER_IGNORE

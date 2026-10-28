@@ -1,0 +1,31 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/panels/titled_panel.gd" id="1_script"]
+
+[node name="TitledPanel" type="PanelContainer"]
+theme_type_variation = &"PanelTitled"
+script = ExtResource("1_script")
+
+[node name="Layout" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Header" type="HBoxContainer" parent="Layout"]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="Title" type="Label" parent="Layout/Header"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Titre"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Inner" type="PanelContainer" parent="Layout"]
+layout_mode = 2
+theme_type_variation = &"PanelInner"
+
+[node name="Content" type="VBoxContainer" parent="Layout/Inner"]
+layout_mode = 2
+theme_override_constants/separation = 10

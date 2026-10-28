@@ -33,11 +33,11 @@ window/handheld/orientation=1
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/crossword_editor/plugin.cfg", "res://addons/csv_mini_game_importer/plugin.cfg")
+enabled=PackedStringArray("res://addons/crossword_editor/plugin.cfg", "res://addons/csv_mini_game_importer/plugin.cfg", "res://addons/dev_tools/plugin.cfg")
 
 [gui]
 
-theme/custom="res://assets/ui/game_theme.tres"
+theme/custom="res://content/ui/game_theme.tres"
 
 [rendering]
 

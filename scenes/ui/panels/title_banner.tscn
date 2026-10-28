@@ -1,0 +1,16 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/panels/title_banner.gd" id="1_script"]
+
+[node name="TitleBanner" type="PanelContainer"]
+theme_type_variation = &"BannerBlue"
+script = ExtResource("1_script")
+
+[node name="Text" type="Label" parent="."]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 40
+text = "Titre"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

@@ -29,7 +29,7 @@ func _ready() -> void:
 	_holder.mouse_filter = MOUSE_FILTER_IGNORE
 	add_child(_holder)
 	if OS.has_feature("editor"):
-		add_child(DebugHelper.new())
+		add_child(DebugHelper.create())
 	go_to({"screen": "main"})
 
 
@@ -115,7 +115,7 @@ func _screen(title: String, back := Back.TOP, color := UIStyle.BLUE, title_size 
 	bar.back_pressed.connect(go_back)
 	col.add_child(bar)
 	if title != "":
-		var banner := UIStyle.banner(title, color, title_size)
+		var banner := TitleBanner.create(title, color, title_size)
 		banner.size_flags_horizontal = SIZE_SHRINK_CENTER
 		banner.custom_minimum_size = Vector2(420, 0)
 		col.add_child(banner)
@@ -138,21 +138,11 @@ func _screen(title: String, back := Back.TOP, color := UIStyle.BLUE, title_size 
 
 ## Grand cadre bleu nuit à bord lumineux, avec un bandeau d'en-tête à étincelles.
 func _menu_container(header: String, expand := false) -> Array[Control]:
-	var panel := UIStyle.panel(&"PanelBig")
+	var panel := MenuPanel.create(header)
 	if expand:
 		panel.size_flags_vertical = SIZE_EXPAND_FILL
-	var box := VBoxContainer.new()
-	box.add_theme_constant_override("separation", 22)
-	panel.add_child(box)
-	var head := JuicyButton.new(header, Color("3478ea"), 38)
-	head.text_color = Color("ffe066")
-	head.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	head.sparkles = true
-	head.custom_minimum_size = Vector2(0, 130)
-	head.mouse_filter = MOUSE_FILTER_IGNORE
-	box.add_child(head)
 	UIFeedback.pop_in(panel, 0.1, 0.85)
-	return [panel, box]
+	return [panel, panel.content]
 
 
 func _gauge(progress: Vector2i, color: Color, height := 30.0) -> JuicyProgressBar:
@@ -217,7 +207,7 @@ func _build_main_menu() -> Control:
 	title.add_theme_color_override("font_outline_color", Color("6a2c00"))
 	title.add_theme_constant_override("shadow_offset_y", 9)
 	logo.add_child(title)
-	var sub := UIStyle.pill(GAME_SUBTITLE, 26, &"PillBlue")
+	var sub := Pill.create(GAME_SUBTITLE, 26, &"PillBlue")
 	sub.size_flags_horizontal = SIZE_SHRINK_CENTER
 	logo.add_child(sub)
 	UIFeedback.pop_in(logo, 0.1, 0.3)
@@ -295,22 +285,8 @@ func _build_credits() -> Control:
 	grid.add_theme_constant_override("v_separation", 14)
 	partners[1].add_child(grid)
 	for i in credits.partner_names.size():
-		var tile := UIStyle.panel(&"Tile")
-		tile.custom_minimum_size = Vector2(0, 150)
-		tile.size_flags_horizontal = SIZE_EXPAND_FILL
 		var logo: Texture2D = credits.partner_logos[i] if i < credits.partner_logos.size() else null
-		if logo != null:
-			var tr := TextureRect.new()
-			tr.texture = logo
-			tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-			tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-			tile.add_child(tr)
-		else:
-			var l := UIStyle.label(credits.partner_names[i], 28, UIStyle.INK, 0)
-			l.add_theme_color_override("font_shadow_color", Color(0, 0, 0, 0))
-			l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-			tile.add_child(l)
-		tile.tooltip_text = credits.partner_names[i]
+		var tile := PartnerTile.create(credits.partner_names[i], logo)
 		grid.add_child(tile)
 		UIFeedback.pop_in(tile, 0.3 + i * 0.08, 0.4)
 	return parts[0]
@@ -318,17 +294,8 @@ func _build_credits() -> Control:
 
 ## Cadre bleu avec titre (comme les panneaux « Clue ») et intérieur bleu nuit. Renvoie [cadre, contenu].
 func _titled_frame(title: String) -> Array[Control]:
-	var frame := UIStyle.panel(&"PanelTitled")
-	var col := VBoxContainer.new()
-	col.add_theme_constant_override("separation", 10)
-	frame.add_child(col)
-	col.add_child(UIStyle.label(title, 34, Color.WHITE, 10))
-	var inner := UIStyle.panel(&"PanelInner")
-	col.add_child(inner)
-	var content := VBoxContainer.new()
-	content.add_theme_constant_override("separation", 10)
-	inner.add_child(content)
-	return [frame, content]
+	var frame := TitledPanel.create(title)
+	return [frame, frame.content]
 
 
 # --- Niveau d'études -------------------------------------------------------
@@ -423,7 +390,7 @@ func _build_level_grid(study: int, year_index: int, subject_index: int) -> Contr
 	var levels := _valid_levels(subject)
 	var parts := _screen(subject.name)
 	var body: VBoxContainer = parts[1]
-	var info := UIStyle.pill("%s - %s   •   %d / %d" % [GameData.STUDY_NAMES[study], _data().get_year_name(study, year_index),
+	var info := Pill.create("%s - %s   •   %d / %d" % [GameData.STUDY_NAMES[study], _data().get_year_name(study, year_index),
 		GameState.completed_count(key), levels.size()], 24, &"PillBlue")
 	info.size_flags_horizontal = SIZE_SHRINK_CENTER
 	body.add_child(info)

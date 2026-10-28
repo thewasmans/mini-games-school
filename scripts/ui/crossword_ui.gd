@@ -12,7 +12,7 @@ var _last_clicked := Vector2i(-1, -1)
 var _show_hints := false
 var _autofilling := false
 
-var _clue_panel: PanelContainer
+var _clue_panel: TitledPanel
 var _clue_number: Label
 var _clue_dir: Label
 var _clue_text: Label
@@ -32,24 +32,14 @@ func setup(data: MiniGameData) -> void:
 	add_child(root)
 
 	# Panneau « Indice » : cadre bleu titré, intérieur bleu nuit (comme les panneaux « Clue »).
-	_clue_panel = UIStyle.panel(&"PanelTitled")
+	_clue_panel = TitledPanel.create("Indice")
 	root.add_child(_clue_panel)
-	var frame_box := VBoxContainer.new()
-	frame_box.add_theme_constant_override("separation", 6)
-	_clue_panel.add_child(frame_box)
-	var head := HBoxContainer.new()
-	head.alignment = BoxContainer.ALIGNMENT_CENTER
-	head.add_theme_constant_override("separation", 12)
-	frame_box.add_child(head)
-	head.add_child(UIStyle.label("Indice", 32, Color.WHITE, 10))
-	var dir_pill := UIStyle.pill("", 22)
-	_clue_dir = dir_pill.get_child(0)
-	head.add_child(dir_pill)
-	var inner := UIStyle.panel(&"PanelInner")
-	frame_box.add_child(inner)
+	var dir_pill := Pill.create()
+	_clue_dir = dir_pill.label
+	_clue_panel.header.add_child(dir_pill)
 	var clue_row := HBoxContainer.new()
 	clue_row.add_theme_constant_override("separation", 12)
-	inner.add_child(clue_row)
+	_clue_panel.content.add_child(clue_row)
 	_clue_number = UIStyle.label("1.", 30, UIStyle.YELLOW, 8)
 	_clue_number.vertical_alignment = VERTICAL_ALIGNMENT_TOP
 	clue_row.add_child(_clue_number)
@@ -74,7 +64,7 @@ func setup(data: MiniGameData) -> void:
 	_grid_area.resized.connect(_layout_grid)
 	root.add_child(_grid_area)
 
-	var keyboard := OnScreenKeyboard.new(68)
+	var keyboard := OnScreenKeyboard.create(68)
 	keyboard.letter_pressed.connect(_type)
 	keyboard.backspace_pressed.connect(_backspace)
 	root.add_child(keyboard)
