@@ -5,7 +5,7 @@ const MENU := "Outils du jeu"
 const AUTOSHOT := "res://addons/dev_tools/autoshot/autoshot.tscn"
 const EXTRACT := "res://addons/dev_tools/extract_ui_assets.py"
 
-enum Item { THEME, FAKE_DATA, EXTRACT, EXTRACT_SPRITES, AUTOSHOT }
+enum Item { THEME, EXTRACT, EXTRACT_SPRITES, AUTOSHOT }
 
 var _menu: PopupMenu
 var _confirm: ConfirmationDialog
@@ -15,7 +15,6 @@ var _pending := -1
 func _enter_tree() -> void:
 	_menu = PopupMenu.new()
 	_menu.add_item("Régénérer le thème (game_theme.tres)", Item.THEME)
-	_menu.add_item("Régénérer les données de test (écrase game_data.tres)…", Item.FAKE_DATA)
 	_menu.add_separator()
 	_menu.add_item("Extraire les PNG d'UI des maquettes (Python)", Item.EXTRACT)
 	_menu.add_item("Extraire les PNG d'UI + sprites détourés (Python + rembg)", Item.EXTRACT_SPRITES)
@@ -36,8 +35,6 @@ func _exit_tree() -> void:
 
 func _on_item(id: int) -> void:
 	match id:
-		Item.FAKE_DATA:
-			_ask(id, "Écraser data/game_data.tres et data/minigames/ avec les données de test ?")
 		Item.THEME:
 			_ask(id, "Régénérer content/ui/game_theme.tres ? Les retouches faites dans l'éditeur de thème seront perdues.")
 		_:
@@ -54,8 +51,6 @@ func _run(id: int) -> void:
 	match id:
 		Item.THEME:
 			_report("Thème", ThemeBuilder.run())
-		Item.FAKE_DATA:
-			_report("Données de test", FakeDataBuilder.run())
 		Item.EXTRACT, Item.EXTRACT_SPRITES:
 			var args := [ProjectSettings.globalize_path(EXTRACT)]
 			if id == Item.EXTRACT_SPRITES:

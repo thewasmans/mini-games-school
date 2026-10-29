@@ -1,0 +1,132 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cvl62khkv285u"]
+
+[ext_resource type="Script" uid="uid://6pk47pd5gtfx" path="res://scripts/mini_games/crossword/crossword_entry.gd" id="1_5c0ff"]
+[ext_resource type="Script" uid="uid://bu7s316sbdqky" path="res://scripts/mini_games/crossword/crossword_data.gd" id="2_noaia"]
+
+[sub_resource type="Resource" id="Resource_v5j0u"]
+script = ExtResource("1_5c0ff")
+word = "ANATOMIE"
+clue = "Science qui étudie la structure et l'organisation des parties d'un être vivant."
+answer = "ANATOMIE"
+x = 4
+horizontal = false
+placed = true
+number = 2
+
+[sub_resource type="Resource" id="Resource_h6khw"]
+script = ExtResource("1_5c0ff")
+word = "VERTEBRE"
+clue = "Taxon d'animaux possédant un crâne et une colonne vertébrale."
+answer = "VERTEBRE"
+x = 4
+y = 10
+horizontal = false
+placed = true
+number = 10
+
+[sub_resource type="Resource" id="Resource_7vjnq"]
+script = ExtResource("1_5c0ff")
+word = "ANALOGUES"
+clue = "Structures qui se ressemblent (et qui remplissent éventuellement la même fonction), mais ont deux origines évolutives complètement distinctes."
+answer = "ANALOGUES"
+x = 2
+y = 2
+placed = true
+number = 3
+
+[sub_resource type="Resource" id="Resource_2cm64"]
+script = ExtResource("1_5c0ff")
+word = "EVOLUTION"
+clue = "Fait scientifique qui se caractérise par des changements au cours du temps, que l'on peut étudier chez des bactéries."
+answer = "EVOLUTION"
+x = 6
+y = 7
+horizontal = false
+placed = true
+number = 8
+
+[sub_resource type="Resource" id="Resource_2qphl"]
+script = ExtResource("1_5c0ff")
+word = "MATRICE"
+clue = "Tableau de comparaisons des caractéristiques entre espèces."
+answer = "MATRICE"
+x = 2
+y = 13
+placed = true
+number = 11
+
+[sub_resource type="Resource" id="Resource_dmuhv"]
+script = ExtResource("1_5c0ff")
+word = "CLADE"
+clue = "Groupe de taxons ayant une origine phylétique commune."
+answer = "CLADE"
+y = 17
+placed = true
+number = 12
+
+[sub_resource type="Resource" id="Resource_cbdjv"]
+script = ExtResource("1_5c0ff")
+word = "ABIOTIQUE"
+clue = "Terme qui caractérise des facteurs physico-chimiques comme le pH."
+answer = "ABIOTIQUE"
+y = 6
+horizontal = false
+placed = true
+number = 6
+
+[sub_resource type="Resource" id="Resource_cqcs8"]
+script = ExtResource("1_5c0ff")
+word = "BIOME"
+clue = "Vaste région biogéographique s'étendant sous un même climat."
+answer = "BIOME"
+y = 7
+placed = true
+number = 7
+
+[sub_resource type="Resource" id="Resource_5t251"]
+script = ExtResource("1_5c0ff")
+word = "MITOSE"
+clue = "Processus de division cellulaire permettant d'obtenir des cellules filles génétiquement identiques."
+answer = "MITOSE"
+x = 4
+y = 5
+placed = true
+number = 5
+
+[sub_resource type="Resource" id="Resource_uxqdi"]
+script = ExtResource("1_5c0ff")
+word = "PHYLOGENIE"
+clue = "Science de classification de l'ensemble du vivant, effectuée en fonction des liens de parenté de chaque espèce dans un arbre."
+answer = "PHYLOGENIE"
+x = 8
+y = 7
+horizontal = false
+placed = true
+number = 9
+
+[sub_resource type="Resource" id="Resource_4aa6b"]
+script = ExtResource("1_5c0ff")
+word = "ANALOGUES"
+clue = "Structures qui se ressemblent (et qui remplissent éventuellement la même fonction), mais ont deux origines évolutives complètement distinctes."
+answer = "ANALOGUES"
+x = 2
+placed = true
+number = 1
+
+[sub_resource type="Resource" id="Resource_rasll"]
+script = ExtResource("1_5c0ff")
+word = "ECOSYSTEME"
+clue = "Ensemble formé par une communauté d'êtres vivants en interaction avec leur environnement."
+answer = "ECOSYSTEME"
+x = 2
+y = 5
+horizontal = false
+placed = true
+number = 4
+
+[resource]
+script = ExtResource("2_noaia")
+entries = Array[ExtResource("1_5c0ff")]([SubResource("Resource_v5j0u"), SubResource("Resource_h6khw"), SubResource("Resource_7vjnq"), SubResource("Resource_2cm64"), SubResource("Resource_2qphl"), SubResource("Resource_dmuhv"), SubResource("Resource_cbdjv"), SubResource("Resource_cqcs8"), SubResource("Resource_5t251"), SubResource("Resource_uxqdi"), SubResource("Resource_4aa6b"), SubResource("Resource_rasll")])
+grid_width = 11
+grid_height = 18
+theme_title = "L'évolution"

@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://e6yf5ojt0mei"]
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://dpf0frhd3cecs"]
 
-[ext_resource type="Resource" uid="uid://up64bhc5g40s" path="res://data/secondaire/s4/chimie/01_l_atome.tres" id="1_jhdwc"]
+[ext_resource type="Resource" uid="uid://g5wjq4xsbrs" path="res://data/secondaire/s4/chimie/01_crossword_les_especes_chimiques.tres" id="1_jhdwc"]
 [ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="2_sk7r2"]
 
 [resource]

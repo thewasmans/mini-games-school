@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://dv53avw4v1kh"]
+
+[ext_resource type="Resource" uid="uid://yw3hdtgcugdv" path="res://data/secondaire/s4/physique/07_memo_la_magie_de_l_image.tres" id="1_lls4a"]
+[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="2_j53rp"]
+
+[resource]
+script = ExtResource("2_j53rp")
+mini_game = ExtResource("1_lls4a")

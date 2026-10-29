@@ -1,8 +1,18 @@
-[gd_resource type="Resource" script_class="SubjectData" format=3 uid="uid://b43udmr5c0i6u"]
+[gd_resource type="Resource" script_class="SubjectData" format=3 uid="uid://tesyoqa6wfdb"]
 
-[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="1_7lshg"]
-[ext_resource type="Script" uid="uid://slefhuqrt8qe" path="res://scripts/data/subject_data.gd" id="2_12yyy"]
+[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="1_v1bso"]
+[ext_resource type="Resource" uid="uid://bl4k13lyus2b6" path="res://data/secondaire/s4/physique/level_01.tres" id="2_7twk1"]
+[ext_resource type="Resource" uid="uid://bg517dbg6aqys" path="res://data/secondaire/s4/physique/level_02.tres" id="3_d21xo"]
+[ext_resource type="Resource" uid="uid://ddxdi3metpyre" path="res://data/secondaire/s4/physique/level_03.tres" id="4_3gslw"]
+[ext_resource type="Resource" uid="uid://d1mpyuvlngiaa" path="res://data/secondaire/s4/physique/level_04.tres" id="5_6mjt6"]
+[ext_resource type="Resource" uid="uid://djfkkemfpah83" path="res://data/secondaire/s4/physique/level_05.tres" id="6_y1q3y"]
+[ext_resource type="Resource" uid="uid://cprsgwta63l22" path="res://data/secondaire/s4/physique/level_06.tres" id="7_sy0mt"]
+[ext_resource type="Resource" uid="uid://dv53avw4v1kh" path="res://data/secondaire/s4/physique/level_07.tres" id="8_7r441"]
+[ext_resource type="Resource" uid="uid://bojm760g8tcr2" path="res://data/secondaire/s4/physique/level_08.tres" id="9_hxd8q"]
+[ext_resource type="Resource" uid="uid://bqud6p24ghk2c" path="res://data/secondaire/s4/physique/level_09.tres" id="10_skwok"]
+[ext_resource type="Script" uid="uid://slefhuqrt8qe" path="res://scripts/data/subject_data.gd" id="11_s4x38"]
 
 [resource]
-script = ExtResource("2_12yyy")
+script = ExtResource("11_s4x38")
 name = "Physique"
+levels = Array[ExtResource("1_v1bso")]([ExtResource("2_7twk1"), ExtResource("3_d21xo"), ExtResource("4_3gslw"), ExtResource("5_6mjt6"), ExtResource("6_y1q3y"), ExtResource("7_sy0mt"), ExtResource("8_7r441"), ExtResource("9_hxd8q"), ExtResource("10_skwok")])

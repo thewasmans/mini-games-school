@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="SubjectData" format=3 uid="uid://c1y2jgcuqrx5s"]
-
-[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="1_yuqkk"]
-[ext_resource type="Script" uid="uid://slefhuqrt8qe" path="res://scripts/data/subject_data.gd" id="2_660qf"]
-
-[resource]
-script = ExtResource("2_660qf")
-name = "Éveil"

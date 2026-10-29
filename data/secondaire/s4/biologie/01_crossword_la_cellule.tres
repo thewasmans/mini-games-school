@@ -1,0 +1,126 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bva36qojmdddq"]
+
+[ext_resource type="Script" uid="uid://6pk47pd5gtfx" path="res://scripts/mini_games/crossword/crossword_entry.gd" id="1_7bxi2"]
+[ext_resource type="Script" uid="uid://bu7s316sbdqky" path="res://scripts/mini_games/crossword/crossword_data.gd" id="2_h44vj"]
+
+[sub_resource type="Resource" id="Resource_ehhk1"]
+script = ExtResource("1_7bxi2")
+word = "TRANSGENESE"
+clue = "Méthode de transfert en génétique permettant d’obtenir un OGM."
+answer = "TRANSGENESE"
+x = 5
+y = 7
+placed = true
+number = 7
+
+[sub_resource type="Resource" id="Resource_pgung"]
+script = ExtResource("1_7bxi2")
+word = "NUCLEOIDE"
+clue = "Région des cellules procaryotes où se trouve le matériel génétique."
+answer = "NUCLEOIDE"
+x = 8
+y = 7
+horizontal = false
+placed = true
+number = 8
+
+[sub_resource type="Resource" id="Resource_mnboc"]
+script = ExtResource("1_7bxi2")
+word = "PHAGE"
+clue = "Nom donné à des virus qui n'infectent que des bactéries."
+answer = "PHAGE"
+x = 1
+y = 2
+placed = true
+number = 4
+
+[sub_resource type="Resource" id="Resource_tfnvo"]
+script = ExtResource("1_7bxi2")
+word = "GLUCOSE"
+clue = "Monosaccharide le plus utilisé par la cellule animale."
+answer = "GLUCOSE"
+x = 10
+y = 7
+horizontal = false
+placed = true
+number = 9
+
+[sub_resource type="Resource" id="Resource_mb7hj"]
+script = ExtResource("1_7bxi2")
+word = "THYMINE"
+clue = "Base azotée caractérisée par la lettre T."
+answer = "THYMINE"
+x = 13
+y = 1
+horizontal = false
+placed = true
+number = 2
+
+[sub_resource type="Resource" id="Resource_dqpih"]
+script = ExtResource("1_7bxi2")
+word = "PLASMIDE"
+clue = "Portion d’ADN distincte de l’ADN chromosomique."
+answer = "PLASMIDE"
+x = 11
+horizontal = false
+placed = true
+number = 1
+
+[sub_resource type="Resource" id="Resource_2wliw"]
+script = ExtResource("1_7bxi2")
+word = "GUANINE"
+clue = "Base azotée caractérisée par la lettre G."
+answer = "GUANINE"
+x = 15
+y = 1
+horizontal = false
+placed = true
+number = 3
+
+[sub_resource type="Resource" id="Resource_s2ftq"]
+script = ExtResource("1_7bxi2")
+word = "REIN"
+clue = "Organe de filtration du sang et qui produit l'urine."
+answer = "REIN"
+x = 7
+y = 15
+placed = true
+number = 11
+
+[sub_resource type="Resource" id="Resource_qggbv"]
+script = ExtResource("1_7bxi2")
+word = "SOLVANT"
+clue = "Se dit d’une substance capable de dissoudre un soluté."
+answer = "SOLVANT"
+x = 14
+y = 7
+horizontal = false
+placed = true
+number = 10
+
+[sub_resource type="Resource" id="Resource_lb2em"]
+script = ExtResource("1_7bxi2")
+word = "ESSENTIELS"
+clue = "Se dit des acides aminés qui ne peuvent être synthétisés par l’organisme."
+answer = "ESSENTIELS"
+x = 5
+y = 2
+horizontal = false
+placed = true
+number = 5
+
+[sub_resource type="Resource" id="Resource_2ug7g"]
+script = ExtResource("1_7bxi2")
+word = "AMIDON"
+clue = "Réserve glucidique des végétaux."
+answer = "AMIDON"
+y = 6
+placed = true
+number = 6
+
+[resource]
+script = ExtResource("2_h44vj")
+entries = Array[ExtResource("1_7bxi2")]([SubResource("Resource_ehhk1"), SubResource("Resource_pgung"), SubResource("Resource_mnboc"), SubResource("Resource_tfnvo"), SubResource("Resource_mb7hj"), SubResource("Resource_dqpih"), SubResource("Resource_2wliw"), SubResource("Resource_s2ftq"), SubResource("Resource_qggbv"), SubResource("Resource_lb2em"), SubResource("Resource_2ug7g")])
+grid_width = 16
+grid_height = 16
+theme_title = "La cellule"

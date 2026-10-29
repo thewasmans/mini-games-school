@@ -7,9 +7,7 @@ func _initialize() -> void:
 	match args[0] if not args.is_empty() else "":
 		"theme":
 			err = ThemeBuilder.run()
-		"fake_data":
-			err = FakeDataBuilder.run()
 		_:
-			push_error("Usage : -- theme | fake_data")
+			push_error("Usage : -- theme")
 			err = ERR_INVALID_PARAMETER
 	quit(0 if err == OK else 1)

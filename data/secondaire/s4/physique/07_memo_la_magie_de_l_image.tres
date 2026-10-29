@@ -1,0 +1,138 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://yw3hdtgcugdv"]
+
+[ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/mini_games/memo/memo_question.gd" id="1_nek5d"]
+[ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/mini_games/memo/memo_data.gd" id="2_a4viw"]
+
+[sub_resource type="Resource" id="Resource_ucwrt"]
+script = ExtResource("1_nek5d")
+question = "Quel théorème permet de déterminer la taille de l’image ?"
+answers = PackedStringArray("Thalès.", "Pythagore.", "Archimède.", "Hercule.")
+
+[sub_resource type="Resource" id="Resource_uvvc5"]
+script = ExtResource("1_nek5d")
+question = "Quelle est la vitesse de la lumière dans le vide ?"
+answers = PackedStringArray("300.000 km/s.", "340 m/s.", "1500 m/s.", "zéro.")
+
+[sub_resource type="Resource" id="Resource_ktahd"]
+script = ExtResource("1_nek5d")
+question = "Quelle est la vitesse du son dans l'air ?"
+answers = PackedStringArray("300.000 km/s.", "340 m/s.", "1500 m/s.", "zéro.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_tsaf7"]
+script = ExtResource("1_nek5d")
+question = "Quelle est la vitesse du son dans l'eau ?"
+answers = PackedStringArray("300.000 km/s.", "340 m/s.", "1500 m/s.", "zéro.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_a7aj8"]
+script = ExtResource("1_nek5d")
+question = "Quelle est la vitesse du son dans le vide ?"
+answers = PackedStringArray("300.000 km/s.", "340 m/s.", "1500 m/s.", "zéro.")
+correct_index = 3
+
+[sub_resource type="Resource" id="Resource_x275e"]
+script = ExtResource("1_nek5d")
+question = "Que représente le laser hélium ?"
+answers = PackedStringArray("Une source polychromatique.", "Une source monochromatique.", "Un objet éclairé.", "Un objet noir.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_be3ks"]
+script = ExtResource("1_nek5d")
+question = "Que représente la lumière blanche ?"
+answers = PackedStringArray("Une source polychromatique.", "Une source monochromatique.", "Un objet éclairé.", "Un objet noir.")
+
+[sub_resource type="Resource" id="Resource_3nxut"]
+script = ExtResource("1_nek5d")
+question = "De quoi est composée la lumière blanche ?"
+answers = PackedStringArray("Des couleurs de l\'Arc-en-ciel.", "Du bleu et du rouge.", "Du noir et du vert.", "Du bleu et du vert.")
+
+[sub_resource type="Resource" id="Resource_qkihy"]
+script = ExtResource("1_nek5d")
+question = "Comment Newton a-t-il découvert la composition de la lumière blanche ?"
+answers = PackedStringArray("Grâce à un télescope.", "Grâce à un microscope.", "Grâce à un prisme.", "Grâce à une loupe.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_hgd8h"]
+script = ExtResource("1_nek5d")
+question = "Quelle est l'unité de mesure de l'éclairement ?"
+answers = PackedStringArray("Le watt.", "Le lumen.", "La seconde.", "Le joule.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_pu44w"]
+script = ExtResource("1_nek5d")
+question = "On dit qu'une image est réelle si..."
+answers = PackedStringArray("Elle est observée uniquement à travers un appareil optique.", "Elle se voit sur un écran ou un mur.", "Elle se voit uniquement par une loupe.", "Elle se voit uniquement par un microscope.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_tfguq"]
+script = ExtResource("1_nek5d")
+question = "On dit qu'une image est virtuelle si..."
+answers = PackedStringArray("Elle est observée uniquement à travers un appareil optique.", "Elle se voit sur un écran ou un mur.", "Elle se voit uniquement par une loupe.", "Elle se voit uniquement par un microscope.")
+
+[sub_resource type="Resource" id="Resource_21qsk"]
+script = ExtResource("1_nek5d")
+question = "Qu'est-ce qu'un dioptre ?"
+answers = PackedStringArray("Une surface séparant deux milieux transparents.", "La surface d\'un lac.", "Une unité de mesure de la vergence des lentilles.", "Toutes ces réponses.")
+correct_index = 3
+
+[sub_resource type="Resource" id="Resource_e400f"]
+script = ExtResource("1_nek5d")
+question = "Comment se nomme la capacité de réfracter la lumière ?"
+answers = PackedStringArray("La divergence.", "La réfringence.", "La circonstance.", "La distance focale.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_nad6y"]
+script = ExtResource("1_nek5d")
+question = "Quel est le rôle de la lentille convergente ?"
+answers = PackedStringArray("Orienter les rayons lumineux vers un même point.", "Séparer les rayons lumineux à partir d\'un point.", "Détruire les rayons lumineux.", "Couper les rayons lumineux.")
+
+[sub_resource type="Resource" id="Resource_5pajc"]
+script = ExtResource("1_nek5d")
+question = "Quel est le rôle de la lentille divergente ?"
+answers = PackedStringArray("Orienter les rayons lumineux vers un même point.", "Séparer les rayons lumineux à partir d\'un point.", "Détruire les rayons lumineux.", "Couper les rayons lumineux.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_6aye5"]
+script = ExtResource("1_nek5d")
+question = "Qui a besoin de lentilles convergentes ?"
+answers = PackedStringArray("Le myope.", "L\'hypermétrope.", "Pour la cataracte.", "Pour le glaucome.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_uvud0"]
+script = ExtResource("1_nek5d")
+question = "Qui a besoin de lentilles divergentes ?"
+answers = PackedStringArray("Le myope.", "L\'hypermétrope.", "Pour la cataracte.", "Pour le glaucome.")
+
+[sub_resource type="Resource" id="Resource_u56q1"]
+script = ExtResource("1_nek5d")
+question = "Qu'est-ce que le foyer objet ?"
+answers = PackedStringArray("Le point de départ des rayons.", "Le point d\'arrivée des rayons.", "La distance qui sépare le centre de la lentille du foyer image.", "La distance qui sépare les deux foyers.")
+
+[sub_resource type="Resource" id="Resource_ahw5r"]
+script = ExtResource("1_nek5d")
+question = "Qu'est-ce que le foyer image ?"
+answers = PackedStringArray("Le point de départ des rayons.", "Le point d\'arrivée des rayons.", "La distance qui sépare le centre de la lentille du foyer image.", "La distance qui sépare les deux foyers.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_ps5uh"]
+script = ExtResource("1_nek5d")
+question = "Qu'est-ce que la distance focale ?"
+answers = PackedStringArray("Le point de départ des rayons.", "Le point d\'arrivée des rayons.", "La distance qui sépare le centre de la lentille du foyer image.", "La distance qui sépare les deux foyers.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_412bk"]
+script = ExtResource("1_nek5d")
+question = "Comment se nomme la capacité d'une lentille à faire dévier les rayons lumineux ?"
+answers = PackedStringArray("La divergence.", "La réfringence.", "La vergence.", "La distance focale.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_6nwaw"]
+script = ExtResource("1_nek5d")
+question = "Quel est le rôle des lentilles ?"
+answers = PackedStringArray("Focaliser correctement la lumière sur la rétine.", "Modifier les propriétés de la lumière.", "Changer le spectre de la lumière.", "Changer la taille de la rétine.")
+
+[resource]
+script = ExtResource("2_a4viw")
+questions = Array[ExtResource("1_nek5d")]([SubResource("Resource_ucwrt"), SubResource("Resource_uvvc5"), SubResource("Resource_ktahd"), SubResource("Resource_tsaf7"), SubResource("Resource_a7aj8"), SubResource("Resource_x275e"), SubResource("Resource_be3ks"), SubResource("Resource_3nxut"), SubResource("Resource_qkihy"), SubResource("Resource_hgd8h"), SubResource("Resource_pu44w"), SubResource("Resource_tfguq"), SubResource("Resource_21qsk"), SubResource("Resource_e400f"), SubResource("Resource_nad6y"), SubResource("Resource_5pajc"), SubResource("Resource_6aye5"), SubResource("Resource_uvud0"), SubResource("Resource_u56q1"), SubResource("Resource_ahw5r"), SubResource("Resource_ps5uh"), SubResource("Resource_412bk"), SubResource("Resource_6nwaw")])
+theme_title = "La magie de l'image"

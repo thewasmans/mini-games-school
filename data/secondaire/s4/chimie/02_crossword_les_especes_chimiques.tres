@@ -1,0 +1,115 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://biarm1qn4a07o"]
+
+[ext_resource type="Script" uid="uid://6pk47pd5gtfx" path="res://scripts/mini_games/crossword/crossword_entry.gd" id="1_a8vxk"]
+[ext_resource type="Script" uid="uid://bu7s316sbdqky" path="res://scripts/mini_games/crossword/crossword_data.gd" id="2_nsu10"]
+
+[sub_resource type="Resource" id="Resource_umsal"]
+script = ExtResource("1_a8vxk")
+word = "SPECTATEUR"
+clue = "Se dit d'un ion qui n'est pas impliqué dans la réaction de précipitation."
+answer = "SPECTATEUR"
+x = 18
+y = 1
+horizontal = false
+placed = true
+number = 2
+
+[sub_resource type="Resource" id="Resource_j5h6h"]
+script = ExtResource("1_a8vxk")
+word = "AQUEUSE"
+clue = "Se dit d'une solution contenant de l'eau."
+answer = "AQUEUSE"
+y = 4
+placed = true
+number = 6
+
+[sub_resource type="Resource" id="Resource_r852p"]
+script = ExtResource("1_a8vxk")
+word = "ACTEUR"
+clue = "Se dit d'un ion impliqué dans la réaction de précipitation."
+answer = "ACTEUR"
+x = 13
+y = 14
+placed = true
+number = 10
+
+[sub_resource type="Resource" id="Resource_gqlp6"]
+script = ExtResource("1_a8vxk")
+word = "CONDUCTIBILITE"
+clue = "Propriété qu'ont les corps de transmettre la chaleur, l'électricité, autre terme que la conductivité."
+answer = "CONDUCTIBILITE"
+x = 6
+y = 5
+placed = true
+number = 8
+
+[sub_resource type="Resource" id="Resource_u3hbs"]
+script = ExtResource("1_a8vxk")
+word = "PRECIPITATION"
+clue = "Réaction chimique durant laquelle un produit très peu soluble est formé."
+answer = "PRECIPITATION"
+x = 6
+y = 2
+horizontal = false
+placed = true
+number = 3
+
+[sub_resource type="Resource" id="Resource_548cw"]
+script = ExtResource("1_a8vxk")
+word = "ELECTROLYTE"
+clue = "Substance chimique capable de transporter ou de conduire une charge électrique."
+answer = "ELECTROLYTE"
+x = 11
+y = 2
+horizontal = false
+placed = true
+number = 5
+
+[sub_resource type="Resource" id="Resource_rr4k4"]
+script = ExtResource("1_a8vxk")
+word = "ELECTROLYSE"
+clue = "Procédé par lequel on effectue la décomposition de l'eau en dihydrogène et dioxygène."
+answer = "ELECTROLYSE"
+x = 16
+y = 4
+horizontal = false
+placed = true
+number = 7
+
+[sub_resource type="Resource" id="Resource_84gum"]
+script = ExtResource("1_a8vxk")
+word = "SOLUBILITE"
+clue = "Quantité maximale de soluté qu'on peut dissoudre dans un solvant."
+answer = "SOLUBILITE"
+x = 13
+horizontal = false
+placed = true
+number = 1
+
+[sub_resource type="Resource" id="Resource_qpdjv"]
+script = ExtResource("1_a8vxk")
+word = "IONIQUE"
+clue = "Se dit d'une réaction entre les ions acteurs, type de liaison chimique forte."
+answer = "IONIQUE"
+x = 3
+y = 12
+placed = true
+number = 9
+
+[sub_resource type="Resource" id="Resource_txiao"]
+script = ExtResource("1_a8vxk")
+word = "TERNAIRE"
+clue = "Corps composé de trois éléments chimiques, comme le NaOH."
+answer = "TERNAIRE"
+x = 8
+y = 2
+horizontal = false
+placed = true
+number = 4
+
+[resource]
+script = ExtResource("2_nsu10")
+entries = Array[ExtResource("1_a8vxk")]([SubResource("Resource_umsal"), SubResource("Resource_j5h6h"), SubResource("Resource_r852p"), SubResource("Resource_gqlp6"), SubResource("Resource_u3hbs"), SubResource("Resource_548cw"), SubResource("Resource_rr4k4"), SubResource("Resource_84gum"), SubResource("Resource_qpdjv"), SubResource("Resource_txiao")])
+grid_width = 20
+grid_height = 15
+theme_title = "Les espèces chimiques"

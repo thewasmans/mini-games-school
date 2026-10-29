@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dmsdkgu1st0pl"]
+
+[ext_resource type="Script" uid="uid://d12jxrx0uuunw" path="res://scripts/mini_games/crypto/crypto_data.gd" id="1_wj83c"]
+[ext_resource type="Script" uid="uid://c4ybdhwj2y7o2" path="res://scripts/mini_games/crypto/crypto_sentence.gd" id="2_0ish4"]
+
+[sub_resource type="Resource" id="Resource_jabln"]
+script = ExtResource("2_0ish4")
+sentence = "Darwin explique l'évolution par la sélection naturelle."
+
+[sub_resource type="Resource" id="Resource_64uv7"]
+script = ExtResource("2_0ish4")
+sentence = "Les individus mieux adaptés survivent et se reproduisent."
+
+[sub_resource type="Resource" id="Resource_3fqpk"]
+script = ExtResource("2_0ish4")
+sentence = "La sélection naturelle oriente les populations."
+
+[sub_resource type="Resource" id="Resource_b2wdl"]
+script = ExtResource("2_0ish4")
+sentence = "Les pressions du milieu filtrent les caractères."
+
+[sub_resource type="Resource" id="Resource_a8fva"]
+script = ExtResource("2_0ish4")
+sentence = "La coévolution lie des espèces interdépendantes."
+
+[sub_resource type="Resource" id="Resource_tbxtd"]
+script = ExtResource("2_0ish4")
+sentence = "Les adaptations croisées résultent d'une longue coévolution."
+
+[sub_resource type="Resource" id="Resource_km18g"]
+script = ExtResource("2_0ish4")
+sentence = "Les mutations génétiques alimentent la variabilité."
+
+[sub_resource type="Resource" id="Resource_t6f3e"]
+script = ExtResource("2_0ish4")
+sentence = "La spéciation engendre de nouvelles espèces."
+
+[resource]
+script = ExtResource("1_wj83c")
+sentences = Array[ExtResource("2_0ish4")]([SubResource("Resource_jabln"), SubResource("Resource_64uv7"), SubResource("Resource_3fqpk"), SubResource("Resource_b2wdl"), SubResource("Resource_a8fva"), SubResource("Resource_tbxtd"), SubResource("Resource_km18g"), SubResource("Resource_t6f3e")])
+hidden_ratio = 0.05
+theme_title = "L'évolution"

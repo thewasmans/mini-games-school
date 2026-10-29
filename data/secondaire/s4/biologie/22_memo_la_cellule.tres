@@ -1,0 +1,91 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://b453416jxwc8y"]
+
+[ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/mini_games/memo/memo_question.gd" id="1_4qgl8"]
+[ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/mini_games/memo/memo_data.gd" id="2_h66vp"]
+
+[sub_resource type="Resource" id="Resource_j0f2y"]
+script = ExtResource("1_4qgl8")
+question = "Quel groupe n’appartient pas aux organismes pluricellulaires ?"
+answers = PackedStringArray("Les plantes.", "Les animaux.", "Les bactéries.", "Les champignons.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_qc4mo"]
+script = ExtResource("1_4qgl8")
+question = "Qu’est-ce que la matrice extra-cellulaire ?"
+answers = PackedStringArray("La réserve de la bactérie.", "Le mécanisme de reproduction des champignons.", "Un assemblage de macromolécules.", "Le mécanisme de reproduction des plantes.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_453ep"]
+script = ExtResource("1_4qgl8")
+question = "Qu’est-ce qu’une enzyme ?"
+answers = PackedStringArray("Un glucide.", "Une protéine.", "Un lipide.", "Un sel.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_r57nj"]
+script = ExtResource("1_4qgl8")
+question = "Qu’est-ce que l’osmose ?"
+answers = PackedStringArray("Un phénomène de transport de l’eau.", "Un phénomène de transport de l’air.", "Un phénomène de transport des sucres.", "Une dilution.")
+
+[sub_resource type="Resource" id="Resource_gc105"]
+script = ExtResource("1_4qgl8")
+question = "Que sont les ribosomes ?"
+answers = PackedStringArray("Organite spécifique à la cellule végétale.", "Protéine permettant la mitose.", "Structure permettant la synthèse des protéines.", "Protéine permettant la meiose.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_voe5d"]
+script = ExtResource("1_4qgl8")
+question = "En quoi consiste la mitose ?"
+answers = PackedStringArray("Produire des protéines.", "Produire des graisses.", "Produire des cellules filles identiques à la cellule mère.", "Produire des cellules filles différentes de la cellule mère.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_1k7ix"]
+script = ExtResource("1_4qgl8")
+question = "En quoi consiste la meiose ?"
+answers = PackedStringArray("Produire des protéines.", "Produire des graisses.", "Produire des cellules filles identiques à la cellule mère.", "Produire des cellules filles différentes de la cellule mère.")
+correct_index = 3
+
+[sub_resource type="Resource" id="Resource_oup31"]
+script = ExtResource("1_4qgl8")
+question = "Qu’est-ce que le cytosquelette ?"
+answers = PackedStringArray("Un réseau filamenteux à l\'intérieur d\'une cellule.", "Un réseau de graisses à l\'extérieur d\'une cellule.", "Le contenu du cytoplasme.", "Le contenu du cytosol.")
+
+[sub_resource type="Resource" id="Resource_wxyy7"]
+script = ExtResource("1_4qgl8")
+question = "Quel rôle correspond aux vacuoles des cellules végétales ?"
+answers = PackedStringArray("Assurer la photosynthèse.", "Produire des graisses.", "Stocker les déchets.", "Gérer le sucre.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_qmt7f"]
+script = ExtResource("1_4qgl8")
+question = "Qu’est-ce que l’endosymbiose ?"
+answers = PackedStringArray("Mode de relation lié à la prédation.", "Phénomène où un symbiote est présent à l’intérieur d’un hôte.", "Croissance d\'une cellule.", "Synonyme de la mitose.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_0wbmm"]
+script = ExtResource("1_4qgl8")
+question = "Quelle espèce possède le plasmodesme ?"
+answers = PackedStringArray("Le cloporte.", "Le calmar.", "Le pommier.", "La tortue.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_8f3hh"]
+script = ExtResource("1_4qgl8")
+question = "Qui a proposé les premières lois liées à la génétique ?"
+answers = PackedStringArray("Darwin.", "Mendel.", "Watson.", "Einstein.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_wqopy"]
+script = ExtResource("1_4qgl8")
+question = "En quoi consiste le brassage génétique ?"
+answers = PackedStringArray("Le mélange de plusieurs ethnies.", "La fusion des gamètes.", "Le mélange de bactéries.", "Le mélange du patrimoine génétique de la mère et du père.")
+correct_index = 3
+
+[sub_resource type="Resource" id="Resource_se1tg"]
+script = ExtResource("1_4qgl8")
+question = "Quel élément suivant n’est pas un nucléotide ?"
+answers = PackedStringArray("La thymine.", "L’alanine.", "La guanine.", "La cytosine.")
+correct_index = 1
+
+[resource]
+script = ExtResource("2_h66vp")
+questions = Array[ExtResource("1_4qgl8")]([SubResource("Resource_j0f2y"), SubResource("Resource_qc4mo"), SubResource("Resource_453ep"), SubResource("Resource_r57nj"), SubResource("Resource_gc105"), SubResource("Resource_voe5d"), SubResource("Resource_1k7ix"), SubResource("Resource_oup31"), SubResource("Resource_wxyy7"), SubResource("Resource_qmt7f"), SubResource("Resource_0wbmm"), SubResource("Resource_8f3hh"), SubResource("Resource_wqopy"), SubResource("Resource_se1tg")])
+theme_title = "La cellule"

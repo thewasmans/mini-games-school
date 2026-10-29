@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://besh3ge5p36g8"]
+
+[ext_resource type="Resource" uid="uid://hx28mpjocnq8" path="res://data/secondaire/s4/chimie/04_crypto_les_reactions_chimiques.tres" id="1_p35k1"]
+[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="2_x17jw"]
+
+[resource]
+script = ExtResource("2_x17jw")
+mini_game = ExtResource("1_p35k1")

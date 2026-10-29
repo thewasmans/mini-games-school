@@ -1,0 +1,96 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bvaeu46x2yu7w"]
+
+[ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/mini_games/memo/memo_question.gd" id="1_r341f"]
+[ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/mini_games/memo/memo_data.gd" id="2_rafh7"]
+
+[sub_resource type="Resource" id="Resource_u66nr"]
+script = ExtResource("1_r341f")
+question = "A quel groupe cladistique appartiennent les reptiles ?"
+answers = PackedStringArray("Paraphylétique.", "Polyphylétique.", "Monophylétique.", "Oligophylétique.")
+
+[sub_resource type="Resource" id="Resource_0fakr"]
+script = ExtResource("1_r341f")
+question = "Quelle caractéristique relie les crocodiles aux oiseaux ?"
+answers = PackedStringArray("Ce sont de grands voyageurs.", "Ce sont des prédateurs nocturnes.", "Ils sont vivipares.", "La présence d\'un gésier.")
+correct_index = 3
+
+[sub_resource type="Resource" id="Resource_vcodt"]
+script = ExtResource("1_r341f")
+question = "Qu'est-ce qu'une espèce invasive ?"
+answers = PackedStringArray("Une espèce en voie d\'extinction.", "Une espèce non indigène dont l\'introduction constitue une menace.", "Une espèce indigène dont l\'introduction constitue une menace.", "Une espèce gravement menacée.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_e54rc"]
+script = ExtResource("1_r341f")
+question = "Qu'est-ce que la dérive génétique ?"
+answers = PackedStringArray("La création de nouvelles espèces à partir de populations d\'individus.", "C\'est l\'évolution d\'une population de manière orientée.", "Un principe reposant sur l\'innovation évolutive.", "Des homologies entre espèces.")
+
+[sub_resource type="Resource" id="Resource_mk2vr"]
+script = ExtResource("1_r341f")
+question = "En quoi consiste la loi de l'usage ?"
+answers = PackedStringArray("Théorie proposée par Darwin.", "Adaptation des espèces piscicoles.", "Mécanisme expliquant l\'évolution des espèces selon leur utilisation.", "Sélection des espèces les plus fortes.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_s54vg"]
+script = ExtResource("1_r341f")
+question = "Qu'est-ce que les structures analogues ?"
+answers = PackedStringArray("Une fonction différente d\'origine évolutive différente.", "Une fonction différente d\'origine évolutive identique.", "Une fonction similaire d\'origine évolutive différente.", "Une fonction perdue.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_safy3"]
+script = ExtResource("1_r341f")
+question = "Qu'est-ce que les structures homologues ?"
+answers = PackedStringArray("Une fonction différente d\'origine évolutive différente.", "Une fonction différente d\'origine évolutive identique.", "Une fonction similaire d\'origine évolutive différente.", "Une fonction perdue.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_jsibb"]
+script = ExtResource("1_r341f")
+question = "En quoi consiste l'homoplasie ?"
+answers = PackedStringArray("Caractère du même ancêtre.", "Caractère partagé par plusieurs espèces qui n\'est pas hérité d\'un ancêtre commun.", "Caractère venant d\'une bactérie.", "Méthode en phylogénie.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_vfabl"]
+script = ExtResource("1_r341f")
+question = "Qu'est-ce que la convergence évolutive ?"
+answers = PackedStringArray("C\'est la même chose que les structures analogues.", "C\'est un synonyme de la théorie de l\'évolution.", "C\'est le principe de la loi de l\'usage.", "Une méthode de coévolution.")
+
+[sub_resource type="Resource" id="Resource_eufuk"]
+script = ExtResource("1_r341f")
+question = "Pourquoi parlons-nous de chaînon manquant en biologie évolutive ?"
+answers = PackedStringArray("Car la chaîne se casse toujours lors de l\'évolution.", "Car il existe toujours une absence de fonction dans l\'évolution.", "Car il existe toujours des formes intermédiaires entre des espèces.", "Car peu d\'espèces survivent.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_rm70q"]
+script = ExtResource("1_r341f")
+question = "Quelle hypothèse peut-être défendue à propos de l'évolution des chiens domestiques ?"
+answers = PackedStringArray("Ce sont des dauphins domestiqués.", "Ce sont des loups domestiqués.", "Ils n\'ont aucun ancêtre commun.", "C\'est l\'homme qui a fabriqué le chien.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_vnyet"]
+script = ExtResource("1_r341f")
+question = "Quelle solution a été utilisée pour lutter contre la prolifération des lapins en Australie ?"
+answers = PackedStringArray("Introduire des moustiques.", "Introduire des renards.", "Introduire des guépards.", "Introduire des mouches.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_nybp3"]
+script = ExtResource("1_r341f")
+question = "Quel concept traduit le déplacement d'espèces pour la reproduction ?"
+answers = PackedStringArray("La biomanipulation.", "La genèse.", "L\'évolution.", "La migration.")
+correct_index = 3
+
+[sub_resource type="Resource" id="Resource_waps8"]
+script = ExtResource("1_r341f")
+question = "Pourquoi est-il faux de parler de race humaine ?"
+answers = PackedStringArray("On peut tout à fait en parler.", "Car le terme est ancien.", "Car le terme n\'est pas juste.", "Car le terme est en discussion.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_227km"]
+script = ExtResource("1_r341f")
+question = "Que signifie LUCA ?"
+answers = PackedStringArray("Le dernier ancêtre commun naturel.", "Le premier ancêtre commun universel.", "Le dernier ancêtre commun universel.", "Le premier ancêtre commun naturel.")
+correct_index = 2
+
+[resource]
+script = ExtResource("2_rafh7")
+questions = Array[ExtResource("1_r341f")]([SubResource("Resource_u66nr"), SubResource("Resource_0fakr"), SubResource("Resource_vcodt"), SubResource("Resource_e54rc"), SubResource("Resource_mk2vr"), SubResource("Resource_s54vg"), SubResource("Resource_safy3"), SubResource("Resource_jsibb"), SubResource("Resource_vfabl"), SubResource("Resource_eufuk"), SubResource("Resource_rm70q"), SubResource("Resource_vnyet"), SubResource("Resource_nybp3"), SubResource("Resource_waps8"), SubResource("Resource_227km")])
+theme_title = "L'évolution"

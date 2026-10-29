@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cqj33om84xlbc" path="res://scripts/main.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://bc5ge57cytkgg" path="res://content/prefabs/ui/debug_helper.tscn" id="2"]
 [ext_resource type="Script" uid="uid://br7eyxxa2yhbm" path="res://scripts/managers/game_manager.gd" id="3"]
-[ext_resource type="Resource" uid="uid://dp3vx3tjtgvwo" path="res://data/game_data.tres" id="4"]
+[ext_resource type="Resource" uid="uid://bfefaiopyx6o1" path="res://data/game_data.tres" id="4"]
 [ext_resource type="Script" uid="uid://d0dcc8b7onssg" path="res://scripts/managers/game_ui_manager.gd" id="5"]
 [ext_resource type="PackedScene" uid="uid://druqtbjs8mfxt" path="res://content/prefabs/ui/game_ui.tscn" id="6"]
 [ext_resource type="Script" uid="uid://bo54fw7ghu2s2" path="res://scripts/managers/level_manager.gd" id="7"]

@@ -1,0 +1,124 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bbqsif3uc8xp7"]
+
+[ext_resource type="Script" uid="uid://6pk47pd5gtfx" path="res://scripts/mini_games/crossword/crossword_entry.gd" id="1_yyjgy"]
+[ext_resource type="Script" uid="uid://bu7s316sbdqky" path="res://scripts/mini_games/crossword/crossword_data.gd" id="2_hkgxy"]
+
+[sub_resource type="Resource" id="Resource_rakq7"]
+script = ExtResource("1_yyjgy")
+word = "CARYOTYPE"
+clue = "Représentation de l'ensemble des chromosomes d'une cellule, classés par paire."
+answer = "CARYOTYPE"
+x = 1
+y = 13
+horizontal = false
+placed = true
+number = 9
+
+[sub_resource type="Resource" id="Resource_67jqu"]
+script = ExtResource("1_yyjgy")
+word = "CYCLE"
+clue = "Période durant laquelle l'ADN se présente sous différents aspects."
+answer = "CYCLE"
+x = 5
+y = 10
+placed = true
+number = 7
+
+[sub_resource type="Resource" id="Resource_o01t6"]
+script = ExtResource("1_yyjgy")
+word = "CYTOCINESE"
+clue = "Etape de la mitose où l'on peut voir deux cellules filles formées, génétiquement identiques."
+answer = "CYTOCINESE"
+x = 6
+y = 4
+placed = true
+number = 2
+
+[sub_resource type="Resource" id="Resource_x1w2r"]
+script = ExtResource("1_yyjgy")
+word = "NUCLEOLE"
+clue = "Région du noyau où se trouve l'ADN."
+answer = "NUCLEOLE"
+x = 7
+y = 8
+horizontal = false
+placed = true
+number = 6
+
+[sub_resource type="Resource" id="Resource_jp583"]
+script = ExtResource("1_yyjgy")
+word = "MITOSE"
+clue = "Processus de division cellulaire permettant d'obtenir des cellules filles génétiquement identiques."
+answer = "MITOSE"
+x = 2
+y = 12
+placed = true
+number = 8
+
+[sub_resource type="Resource" id="Resource_ywnbv"]
+script = ExtResource("1_yyjgy")
+word = "VACUOLE"
+clue = "Compartiment qui sert surtout au maintien de l’équilibre hydrique."
+answer = "VACUOLE"
+x = 5
+y = 8
+horizontal = false
+placed = true
+number = 5
+
+[sub_resource type="Resource" id="Resource_jmg7h"]
+script = ExtResource("1_yyjgy")
+word = "OPTIQUE"
+clue = "Technique de microscopie basée sur l'utilisation de lentilles."
+answer = "OPTIQUE"
+x = 9
+y = 4
+horizontal = false
+placed = true
+number = 3
+
+[sub_resource type="Resource" id="Resource_odabt"]
+script = ExtResource("1_yyjgy")
+word = "VIRUS"
+clue = "Agent infectieux nécessitant un hôte."
+answer = "VIRUS"
+x = 14
+horizontal = false
+placed = true
+number = 1
+
+[sub_resource type="Resource" id="Resource_dmc3w"]
+script = ExtResource("1_yyjgy")
+word = "ZYGOTE"
+clue = "Cellule oeuf fécondée résultant de la fusion d'un gamète femelle et d'un gamète mâle."
+answer = "ZYGOTE"
+x = 5
+y = 6
+placed = true
+number = 4
+
+[sub_resource type="Resource" id="Resource_1cvgn"]
+script = ExtResource("1_yyjgy")
+word = "HETEROZYGOTE"
+clue = "Individu qui possède deux allèles différents pour un gène donné."
+answer = "HETEROZYGOTE"
+x = 6
+y = 15
+placed = true
+number = 11
+
+[sub_resource type="Resource" id="Resource_1nkxa"]
+script = ExtResource("1_yyjgy")
+word = "GAMETE"
+clue = "Cellule reproductrice appelée spermatozoide ou ovocyte."
+answer = "GAMETE"
+y = 14
+placed = true
+number = 10
+
+[resource]
+script = ExtResource("2_hkgxy")
+entries = Array[ExtResource("1_yyjgy")]([SubResource("Resource_rakq7"), SubResource("Resource_67jqu"), SubResource("Resource_o01t6"), SubResource("Resource_x1w2r"), SubResource("Resource_jp583"), SubResource("Resource_ywnbv"), SubResource("Resource_jmg7h"), SubResource("Resource_odabt"), SubResource("Resource_dmc3w"), SubResource("Resource_1cvgn"), SubResource("Resource_1nkxa")])
+grid_width = 18
+grid_height = 22
+theme_title = "La cellule"

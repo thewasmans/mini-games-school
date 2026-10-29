@@ -1,0 +1,145 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://ntrg2hw72eok"]
+
+[ext_resource type="Script" uid="uid://6pk47pd5gtfx" path="res://scripts/mini_games/crossword/crossword_entry.gd" id="1_ik4ih"]
+[ext_resource type="Script" uid="uid://bu7s316sbdqky" path="res://scripts/mini_games/crossword/crossword_data.gd" id="2_1bbyu"]
+
+[sub_resource type="Resource" id="Resource_425lj"]
+script = ExtResource("1_ik4ih")
+word = "BIODIVERSITE"
+clue = "Terme reflétant l'ensemble de la diversité du vivant."
+answer = "BIODIVERSITE"
+x = 17
+y = 4
+horizontal = false
+placed = true
+number = 4
+
+[sub_resource type="Resource" id="Resource_yo4ec"]
+script = ExtResource("1_ik4ih")
+word = "EXTINCTION"
+clue = "Terme désignant la disparition définitive d'une espèce."
+answer = "EXTINCTION"
+x = 6
+y = 20
+placed = true
+number = 11
+
+[sub_resource type="Resource" id="Resource_fh8h4"]
+script = ExtResource("1_ik4ih")
+word = "HOMOLOGUES"
+clue = "Structures qui peuvent différer d’apparence et de fonction mais qui dérivent toutes de la même partie du corps d’un ancêtre commun."
+answer = "HOMOLOGUES"
+x = 6
+y = 22
+placed = true
+number = 12
+
+[sub_resource type="Resource" id="Resource_mwx83"]
+script = ExtResource("1_ik4ih")
+word = "INNOVATION"
+clue = "Nouveau caractère avantageux qui permet aux individus de se reproduire davantage, on parle d'... évolutive."
+answer = "INNOVATION"
+x = 4
+y = 5
+placed = true
+number = 5
+
+[sub_resource type="Resource" id="Resource_5saoa"]
+script = ExtResource("1_ik4ih")
+word = "RECHAUFFEMENT"
+clue = "Variation des températures du climat à la hausse."
+answer = "RECHAUFFEMENT"
+x = 9
+y = 1
+horizontal = false
+placed = true
+number = 2
+
+[sub_resource type="Resource" id="Resource_j8elv"]
+script = ExtResource("1_ik4ih")
+word = "ADAPTATION"
+clue = "Mécanisme mis en place par les espèces pour survivre dans un environnement."
+answer = "ADAPTATION"
+y = 12
+placed = true
+number = 10
+
+[sub_resource type="Resource" id="Resource_4fkav"]
+script = ExtResource("1_ik4ih")
+word = "MONOPHYLETIQUE"
+clue = "Taxon comprenant une espèce et tous ses descendants."
+answer = "MONOPHYLETIQUE"
+x = 9
+y = 10
+placed = true
+number = 8
+
+[sub_resource type="Resource" id="Resource_782se"]
+script = ExtResource("1_ik4ih")
+word = "BIODIVERSITE"
+clue = "Terme reflétant l'ensemble de la diversité du vivant."
+answer = "BIODIVERSITE"
+x = 19
+y = 9
+horizontal = false
+placed = true
+number = 7
+
+[sub_resource type="Resource" id="Resource_hk42g"]
+script = ExtResource("1_ik4ih")
+word = "VARIABILITE"
+clue = "Caractère de ce qui peut être changé, propriété de ce qui est instable dans une population."
+answer = "VARIABILITE"
+x = 22
+horizontal = false
+placed = true
+number = 1
+
+[sub_resource type="Resource" id="Resource_75bcq"]
+script = ExtResource("1_ik4ih")
+word = "CLADE"
+clue = "Groupe de taxons ayant une origine phylétique commune."
+answer = "CLADE"
+x = 5
+y = 2
+placed = true
+number = 3
+
+[sub_resource type="Resource" id="Resource_3emo4"]
+script = ExtResource("1_ik4ih")
+word = "CONVERGENCE"
+clue = "Acquisition de structures similaires au sein de lignées différentes, comme les ailes."
+answer = "CONVERGENCE"
+x = 11
+y = 8
+horizontal = false
+placed = true
+number = 6
+
+[sub_resource type="Resource" id="Resource_6l6m7"]
+script = ExtResource("1_ik4ih")
+word = "PARAPHYLETIQUE"
+clue = "Taxon comprenant une espèce et une partie de ses descendants."
+answer = "PARAPHYLETIQUE"
+x = 13
+y = 10
+horizontal = false
+placed = true
+number = 9
+
+[sub_resource type="Resource" id="Resource_rh8ph"]
+script = ExtResource("1_ik4ih")
+word = "RACE"
+clue = "Population animale résultant, par sélection, de la subdivision d'une même espèce pour des critères spécifiques."
+answer = "RACE"
+x = 9
+y = 1
+placed = true
+number = 2
+
+[resource]
+script = ExtResource("2_1bbyu")
+entries = Array[ExtResource("1_ik4ih")]([SubResource("Resource_425lj"), SubResource("Resource_yo4ec"), SubResource("Resource_fh8h4"), SubResource("Resource_mwx83"), SubResource("Resource_5saoa"), SubResource("Resource_j8elv"), SubResource("Resource_4fkav"), SubResource("Resource_782se"), SubResource("Resource_hk42g"), SubResource("Resource_75bcq"), SubResource("Resource_3emo4"), SubResource("Resource_6l6m7"), SubResource("Resource_rh8ph")])
+grid_width = 23
+grid_height = 24
+theme_title = "L'évolution"

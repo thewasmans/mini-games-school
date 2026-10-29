@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://bj8dvkg4hjbee"]
+
+[ext_resource type="Resource" uid="uid://bxlqqirhrkjqt" path="res://data/secondaire/s4/biologie/11_crossword_l_evolution.tres" id="1_w5jw6"]
+[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="2_sogwa"]
+
+[resource]
+script = ExtResource("2_sogwa")
+mini_game = ExtResource("1_w5jw6")

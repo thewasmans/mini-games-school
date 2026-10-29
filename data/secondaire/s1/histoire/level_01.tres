@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://cm72hokbotedq"]
-
-[ext_resource type="Resource" uid="uid://ouhk2as1s8wm" path="res://data/secondaire/s1/histoire/01_la_revolution_francaise.tres" id="1_llrfl"]
-[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="2_fgr0w"]
-
-[resource]
-script = ExtResource("2_fgr0w")
-mini_game = ExtResource("1_llrfl")

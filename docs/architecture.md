@@ -175,7 +175,7 @@ Le registre [`mini_game_prefabs.tres`](../content/prefabs/ui/mini_games/mini_gam
 |---|---|---|
 | **Crossword** (`crossword_editor/`) | Onglet de l'éditeur | Aperçu et génération de la grille, détection des mots isolés et des conflits. |
 | **CSV Mini-Game Importer** (`csv_mini_game_importer/`) | Projet → Outils | Convertit un CSV en `CrosswordData`, `MemoData` ou `CryptoData` (voir son `README.md`). |
-| **Outils du jeu** (`dev_tools/`) | Projet → Outils → Outils du jeu | Régénère le thème et les données de test, extrait les PNG d'UI, lance la visite automatique avec captures. |
+| **Outils du jeu** (`dev_tools/`) | Projet → Outils → Outils du jeu | Régénère le thème, extrait les PNG d'UI, lance la visite automatique avec captures. |
 | **gdUnit4** (`gdUnit4/`, v6.2.2) | Onglet GdUnit | Framework de tests (section 7). |
 
 ---

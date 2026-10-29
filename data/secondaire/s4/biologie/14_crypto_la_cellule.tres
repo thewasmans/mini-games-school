@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dbcf7oi1b7a00"]
+
+[ext_resource type="Script" uid="uid://d12jxrx0uuunw" path="res://scripts/mini_games/crypto/crypto_data.gd" id="1_xio7y"]
+[ext_resource type="Script" uid="uid://c4ybdhwj2y7o2" path="res://scripts/mini_games/crypto/crypto_sentence.gd" id="2_g8tff"]
+
+[sub_resource type="Resource" id="Resource_g2be4"]
+script = ExtResource("2_g8tff")
+sentence = "Les glucides fournissent l'énergie cellulaire."
+
+[sub_resource type="Resource" id="Resource_pd88b"]
+script = ExtResource("2_g8tff")
+sentence = "Les lipides structurent les membranes."
+
+[sub_resource type="Resource" id="Resource_or8t2"]
+script = ExtResource("2_g8tff")
+sentence = "Les protéines assurent les fonctions vitales."
+
+[sub_resource type="Resource" id="Resource_4mqwm"]
+script = ExtResource("2_g8tff")
+sentence = "Les acides aminés constituent les protéines."
+
+[sub_resource type="Resource" id="Resource_5pv3j"]
+script = ExtResource("2_g8tff")
+sentence = "L'ADN forme une double hélice."
+
+[sub_resource type="Resource" id="Resource_b8v7n"]
+script = ExtResource("2_g8tff")
+sentence = "L'adénine s'associe toujours à la thymine."
+
+[sub_resource type="Resource" id="Resource_8aq51"]
+script = ExtResource("2_g8tff")
+sentence = "Les macromolécules résultent de condensations."
+
+[sub_resource type="Resource" id="Resource_8k0t0"]
+script = ExtResource("2_g8tff")
+sentence = "La structure tridimensionnelle active la protéine."
+
+[resource]
+script = ExtResource("1_xio7y")
+sentences = Array[ExtResource("2_g8tff")]([SubResource("Resource_g2be4"), SubResource("Resource_pd88b"), SubResource("Resource_or8t2"), SubResource("Resource_4mqwm"), SubResource("Resource_5pv3j"), SubResource("Resource_b8v7n"), SubResource("Resource_8aq51"), SubResource("Resource_8k0t0")])
+hidden_ratio = 0.05
+theme_title = "La cellule"

@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://ry8ywehvgk5"]
-
-[ext_resource type="Resource" uid="uid://73tst6dc76if" path="res://data/primaire/p3/francais/01_les_animaux_de_la_ferme.tres" id="1_le7vo"]
-[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="2_eajmo"]
-
-[resource]
-script = ExtResource("2_eajmo")
-mini_game = ExtResource("1_le7vo")

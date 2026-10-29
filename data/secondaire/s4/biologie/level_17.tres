@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://dl6fau74xtmxw"]
+
+[ext_resource type="Resource" uid="uid://bnsmklydwhf4q" path="res://data/secondaire/s4/biologie/17_crypto_la_cellule.tres" id="1_3p5gx"]
+[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="2_g26sm"]
+
+[resource]
+script = ExtResource("2_g26sm")
+mini_game = ExtResource("1_3p5gx")

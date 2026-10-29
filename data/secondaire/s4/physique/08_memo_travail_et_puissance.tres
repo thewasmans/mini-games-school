@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://dewyi0qcgwln3"]
+
+[ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/mini_games/memo/memo_question.gd" id="1_2aacm"]
+[ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/mini_games/memo/memo_data.gd" id="2_8qmd1"]
+
+[sub_resource type="Resource" id="Resource_e2g77"]
+script = ExtResource("1_2aacm")
+question = "Qu'est-ce qu'une poulie ?"
+answers = PackedStringArray("Système de roues dentées qui transmettent un mouvement.", "C\'est une roue qui pivote autour d\'un essieu, un point d\'appui.", "Barre qui permet de soulever des charges lourdes.", "C\'est un problème dans le moteur.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_n2yc0"]
+script = ExtResource("1_2aacm")
+question = "Qu'est-ce qu'un engrenage ?"
+answers = PackedStringArray("Système de roues dentées qui transmettent un mouvement.", "C\'est une roue qui pivote autour d\'un essieu, un point d\'appui.", "Barre qui permet de soulever des charges lourdes.", "C\'est un problème dans le moteur.")
+
+[sub_resource type="Resource" id="Resource_pgdpa"]
+script = ExtResource("1_2aacm")
+question = "Qu'est-ce qu'un levier ?"
+answers = PackedStringArray("Système de roues dentées qui transmettent un mouvement.", "C\'est une roue qui pivote autour d\'un essieu, un point d\'appui.", "Barre qui permet de soulever des charges lourdes.", "C\'est un problème dans le moteur.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_erqyb"]
+script = ExtResource("1_2aacm")
+question = "En quoi consiste l'énergie potentielle ?"
+answers = PackedStringArray("La somme des énergies cinétique et potentielle.", "L\'énergie liée à un mouvement d\'un corps.", "L\'énergie liée à la position d\'un corps.", "L\'énergie liée à la température.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_ryapi"]
+script = ExtResource("1_2aacm")
+question = "En quoi consiste l'énergie mécanique ?"
+answers = PackedStringArray("La somme des énergies cinétique et potentielle.", "L\'énergie liée à un mouvement d\'un corps.", "L\'énergie liée à la position d\'un corps.", "L\'énergie liée à la température.")
+
+[sub_resource type="Resource" id="Resource_p7f12"]
+script = ExtResource("1_2aacm")
+question = "En quoi consiste l'énergie cinétique ?"
+answers = PackedStringArray("La somme des énergies cinétique et potentielle.", "L\'énergie liée à un mouvement d\'un corps.", "L\'énergie liée à la position d\'un corps.", "L\'énergie liée à la température.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_x68vr"]
+script = ExtResource("1_2aacm")
+question = "Que représente le zéro absolu ?"
+answers = PackedStringArray("-273,15°C.", "0 Kelvin.", "La température la plus basse de l\'univers.", "Toutes ces réponses.")
+correct_index = 3
+
+[resource]
+script = ExtResource("2_8qmd1")
+questions = Array[ExtResource("1_2aacm")]([SubResource("Resource_e2g77"), SubResource("Resource_n2yc0"), SubResource("Resource_pgdpa"), SubResource("Resource_erqyb"), SubResource("Resource_ryapi"), SubResource("Resource_p7f12"), SubResource("Resource_x68vr")])
+theme_title = "Travail et puissance"

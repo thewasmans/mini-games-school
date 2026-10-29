@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://dj13lb2eg7d1i"]
-
-[ext_resource type="Resource" uid="uid://bpv2wgm0mqxai" path="res://data/secondaire/s1/histoire/02_le_moyen_age.tres" id="1_rr2mp"]
-[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="2_ce5j7"]
-
-[resource]
-script = ExtResource("2_ce5j7")
-mini_game = ExtResource("1_rr2mp")

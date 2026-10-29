@@ -1,0 +1,146 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bxlqqirhrkjqt"]
+
+[ext_resource type="Script" uid="uid://6pk47pd5gtfx" path="res://scripts/mini_games/crossword/crossword_entry.gd" id="1_573lb"]
+[ext_resource type="Script" uid="uid://bu7s316sbdqky" path="res://scripts/mini_games/crossword/crossword_data.gd" id="2_xj2ag"]
+
+[sub_resource type="Resource" id="Resource_w8p4a"]
+script = ExtResource("1_573lb")
+word = "USAGE"
+clue = "Loi de l'évolution proposée par Lamarck."
+answer = "USAGE"
+x = 10
+horizontal = false
+placed = true
+number = 1
+
+[sub_resource type="Resource" id="Resource_kwno0"]
+script = ExtResource("1_573lb")
+word = "MEIOSE"
+clue = "Processus de division cellulaire permettant d'obtenir des cellules filles génétiquement différentes."
+answer = "MEIOSE"
+x = 10
+y = 15
+placed = true
+number = 13
+
+[sub_resource type="Resource" id="Resource_m5p4f"]
+script = ExtResource("1_573lb")
+word = "ANCETRE"
+clue = "Ascendant, se dit d'une espèce dont une autre provient."
+answer = "ANCETRE"
+x = 9
+y = 6
+horizontal = false
+placed = true
+number = 5
+
+[sub_resource type="Resource" id="Resource_mjaxm"]
+script = ExtResource("1_573lb")
+word = "DARWIN"
+clue = "Scientifique à l'origine du mécanisme de la sélection naturelle."
+answer = "DARWIN"
+y = 7
+placed = true
+number = 6
+
+[sub_resource type="Resource" id="Resource_cwbx8"]
+script = ExtResource("1_573lb")
+word = "SELECTION"
+clue = "Peut être naturelle ou artificielle, théorie de l'évolution proposée par Darwin."
+answer = "SELECTION"
+x = 4
+y = 10
+placed = true
+number = 9
+
+[sub_resource type="Resource" id="Resource_qf2d2"]
+script = ExtResource("1_573lb")
+word = "FOSSILE"
+clue = "Trace d'un organisme minéralisé dans une roche sédimentaire."
+answer = "FOSSILE"
+x = 11
+y = 9
+horizontal = false
+placed = true
+number = 7
+
+[sub_resource type="Resource" id="Resource_tsg7l"]
+script = ExtResource("1_573lb")
+word = "CRISES"
+clue = "Périodes durant lesquelles, à l’échelle du globe, un grand nombre d’espèces ont disparu simultanément."
+answer = "CRISES"
+x = 1
+y = 10
+horizontal = false
+placed = true
+number = 8
+
+[sub_resource type="Resource" id="Resource_6q43e"]
+script = ExtResource("1_573lb")
+word = "DINOSAURE"
+clue = "Groupe d'animaux qui ont disparu il y a environ 65 millions d’années."
+answer = "DINOSAURE"
+x = 4
+y = 6
+horizontal = false
+placed = true
+number = 4
+
+[sub_resource type="Resource" id="Resource_xg1f6"]
+script = ExtResource("1_573lb")
+word = "ESPECES"
+clue = "Individus qui se ressemblent physiquement et qui sont capables de se reproduire entre eux. Leurs descendants sont viables et féconds."
+answer = "ESPECES"
+x = 1
+y = 14
+placed = true
+number = 12
+
+[sub_resource type="Resource" id="Resource_xuoph"]
+script = ExtResource("1_573lb")
+word = "SIXIEME"
+clue = "Numéro de l'extinction nommée Holocène."
+answer = "SIXIEME"
+x = 6
+y = 4
+placed = true
+number = 3
+
+[sub_resource type="Resource" id="Resource_dlper"]
+script = ExtResource("1_573lb")
+word = "HASARD"
+clue = "Processus aléatoire pouvant expliquer certains phénomènes biologiques incompris."
+answer = "HASARD"
+x = 7
+y = 12
+horizontal = false
+placed = true
+number = 10
+
+[sub_resource type="Resource" id="Resource_7v4fy"]
+script = ExtResource("1_573lb")
+word = "BIOTIQUE"
+clue = "Caractérise les facteurs vivants d'un milieu."
+answer = "BIOTIQUE"
+x = 7
+y = 3
+horizontal = false
+placed = true
+number = 2
+
+[sub_resource type="Resource" id="Resource_vspfk"]
+script = ExtResource("1_573lb")
+word = "BIOME"
+clue = "Vaste région biogéographique s'étendant sous un même climat."
+answer = "BIOME"
+x = 10
+y = 13
+placed = true
+number = 11
+
+[resource]
+script = ExtResource("2_xj2ag")
+entries = Array[ExtResource("1_573lb")]([SubResource("Resource_w8p4a"), SubResource("Resource_kwno0"), SubResource("Resource_m5p4f"), SubResource("Resource_mjaxm"), SubResource("Resource_cwbx8"), SubResource("Resource_qf2d2"), SubResource("Resource_tsg7l"), SubResource("Resource_6q43e"), SubResource("Resource_xg1f6"), SubResource("Resource_xuoph"), SubResource("Resource_dlper"), SubResource("Resource_7v4fy"), SubResource("Resource_vspfk")])
+grid_width = 16
+grid_height = 18
+theme_title = "L'évolution"

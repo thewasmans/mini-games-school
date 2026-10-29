@@ -70,8 +70,7 @@ Lancés en CI par `.github/workflows/tests.yml`. Rapports dans `reports/` (ignor
 ## Outils (addon `addons/dev_tools`, menu Projet > Outils > Outils du jeu)
 
 - `ThemeBuilder` : régénère le thème et la police (écrase `game_theme.tres`).
-- `FakeDataBuilder` : régénère les données de test dans `data/` (**écrase** `data/game_data.tres` et les fichiers de même nom).
-- `cli.gd` : `godot --headless --path . --script res://addons/dev_tools/cli.gd -- theme|fake_data`
+- `cli.gd` : `godot --headless --path . --script res://addons/dev_tools/cli.gd -- theme`
 - `extract_ui_assets.py` : PNG d'UI extraits des maquettes (`python addons/dev_tools/extract_ui_assets.py [--sprites]`).
 - `autoshot/autoshot.tscn` : visite automatique avec captures (`godot --path . res://addons/dev_tools/autoshot/autoshot.tscn -- <dossier>`).
 - `exemples_csv/` (ignoré par Godot via `.gdignore`) : CSV d'exemple pour l'import.

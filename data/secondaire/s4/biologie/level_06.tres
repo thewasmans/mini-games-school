@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://ldxu2g1r37r8"]
+
+[ext_resource type="Resource" uid="uid://1mfnrydkeupe" path="res://data/secondaire/s4/biologie/06_crossword_la_cellule.tres" id="1_pvkq4"]
+[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="2_foogh"]
+
+[resource]
+script = ExtResource("2_foogh")
+mini_game = ExtResource("1_pvkq4")

@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://jjqwaf3p3a1d"]
+
+[ext_resource type="Script" uid="uid://d12jxrx0uuunw" path="res://scripts/mini_games/crypto/crypto_data.gd" id="1_jd1dg"]
+[ext_resource type="Script" uid="uid://c4ybdhwj2y7o2" path="res://scripts/mini_games/crypto/crypto_sentence.gd" id="2_e3ndf"]
+
+[sub_resource type="Resource" id="Resource_p7yck"]
+script = ExtResource("2_e3ndf")
+sentence = "La nomenclature chimique nomme les substances de manière rigoureuse."
+
+[sub_resource type="Resource" id="Resource_0oqk1"]
+script = ExtResource("2_e3ndf")
+sentence = "Les corps composés binaires associent deux éléments distincts."
+
+[sub_resource type="Resource" id="Resource_55xc8"]
+script = ExtResource("2_e3ndf")
+sentence = "Les fonctions chimiques regroupent des substances aux propriétés analogues."
+
+[sub_resource type="Resource" id="Resource_ng1ca"]
+script = ExtResource("2_e3ndf")
+sentence = "Les acides et les hydroxydes caractérisent les solutions ioniques."
+
+[sub_resource type="Resource" id="Resource_6d3mg"]
+script = ExtResource("2_e3ndf")
+sentence = "La loi de Lavoisier énonce la conservation de la masse."
+
+[sub_resource type="Resource" id="Resource_2ryeh"]
+script = ExtResource("2_e3ndf")
+sentence = "Une équation chimique équilibrée respecte la conservation des atomes."
+
+[sub_resource type="Resource" id="Resource_dwimy"]
+script = ExtResource("2_e3ndf")
+sentence = "Les coefficients stœchiométriques quantifient les réactifs et produits."
+
+[sub_resource type="Resource" id="Resource_6o23g"]
+script = ExtResource("2_e3ndf")
+sentence = "La masse molaire correspond à la masse d'une mole de substance."
+
+[resource]
+script = ExtResource("1_jd1dg")
+sentences = Array[ExtResource("2_e3ndf")]([SubResource("Resource_p7yck"), SubResource("Resource_0oqk1"), SubResource("Resource_55xc8"), SubResource("Resource_ng1ca"), SubResource("Resource_6d3mg"), SubResource("Resource_2ryeh"), SubResource("Resource_dwimy"), SubResource("Resource_6o23g")])
+hidden_ratio = 0.05
+theme_title = "Les réactions chimiques"

@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://c02i0vjk6hh8o"]
-
-[ext_resource type="Resource" uid="uid://ds0i8g31kiqkr" path="res://data/primaire/p3/mathematiques/01_les_tables_de_multiplication.tres" id="1_goand"]
-[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="2_gifmj"]
-
-[resource]
-script = ExtResource("2_gifmj")
-mini_game = ExtResource("1_goand")

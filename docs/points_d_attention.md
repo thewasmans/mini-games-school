@@ -36,7 +36,7 @@ La grille est calculée **dans l'éditeur** (plugin Crossword ou import CSV), ja
 ## 3. Fichiers créés ou modifiés en dehors de l'éditeur
 
 - **UID :** un `.tscn` ou un `.tres` créé hors de l'éditeur (script, copie, merge) n'a pas d'UID tant qu'il n'a pas été enregistré une fois dans Godot ; ses références cassent s'il est déplacé. Le test `tests/content/resource_uid_test.gd` liste les fichiers et références sans UID ou avec un UID périmé.
-- **Ressource ouverte dans l'éditeur :** l'éditeur garde en mémoire les ressources ouvertes. Après une modification externe (merge, script, `FakeDataBuilder`, import), recharger le projet avant d'enregistrer, sinon la version en mémoire écrase celle du disque.
+- **Ressource ouverte dans l'éditeur :** l'éditeur garde en mémoire les ressources ouvertes. Après une modification externe (merge, script, import), recharger le projet avant d'enregistrer, sinon la version en mémoire écrase celle du disque.
 - **`.tscn` écrit à la main :** dans un nœud, les propriétés propres à son script (par exemple `icon_left` d'un `JuicyButton`) doivent venir **après** la ligne `script = ...`, sinon Godot les ignore au chargement. L'éditeur respecte cet ordre de lui-même.
 
 ---

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://bl4k13lyus2b6"]
+
+[ext_resource type="Resource" uid="uid://bjby4uc4yh644" path="res://data/secondaire/s4/physique/01_crossword_la_magie_de_l_image.tres" id="1_8fg4b"]
+[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="2_wa2yh"]
+
+[resource]
+script = ExtResource("2_wa2yh")
+mini_game = ExtResource("1_8fg4b")

@@ -30,8 +30,9 @@ func _ready() -> void:
 	await _wait(1.2)
 	await _shot("03_years")
 
-	_ui.menu_school_years.school_year_selected.emit(SCHOOL_YEAR)
-	await _wait(1.2)
+	if _ui.menu_school_years.visible:
+		_ui.menu_school_years.school_year_selected.emit(SCHOOL_YEAR)
+		await _wait(1.2)
 	await _shot("04_subjects")
 
 	var game_state := _game_manager.game_state
@@ -43,8 +44,8 @@ func _ready() -> void:
 	await _wait(1.5)
 	await _shot("06_grid")
 
-	var crossword := await _open_level(0) as CrosswordUI
-	for letter in "NOYAU":
+	var crossword := await _open_level(_level_of("crossword")) as CrosswordUI
+	for letter in (crossword._words[crossword._selected].entry as CrosswordEntry).answer:
 		crossword._type(letter)
 	await _wait(0.3)
 	var second := crossword._next_open(crossword._selected)
@@ -55,16 +56,17 @@ func _ready() -> void:
 	await _shot("07_crossword")
 	await _close_level()
 
-	var quiz := await _open_level(1) as MemoUI
-	quiz._on_answer(3)
+	var quiz := await _open_level(_level_of("memo")) as MemoUI
+	var right_answer := quiz._data.questions[0].correct_index
+	quiz._on_answer((right_answer + 1) % 4)
 	await _wait(0.6)
 	await _shot("08_quiz")
-	quiz._on_answer(0)
+	quiz._on_answer(right_answer)
 	await _wait(0.3)
 	await _shot("09_quiz_good")
 	await _close_level()
 
-	var crypto := await _open_level(2) as CryptoUI
+	var crypto := await _open_level(_level_of("crypto")) as CryptoUI
 	await _shot("10_crypto")
 	for i in crypto._hidden.size():
 		crypto._type("E" if i % 3 == 0 else TextUtil.normalize_char(crypto._cells[crypto._hidden[i]].original))
@@ -95,6 +97,14 @@ func _ready() -> void:
 	await _wait(1.3)
 	await _shot("16_credits")
 	get_tree().quit()
+
+
+func _level_of(kind_id: String) -> int:
+	var levels := _game_manager.game_state.current_levels
+	for level_index in levels.size():
+		if levels[level_index].mini_game.get_kind_id() == kind_id:
+			return level_index
+	return 0
 
 
 func _open_level(level_index: int) -> MiniGameUI:

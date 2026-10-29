@@ -1,0 +1,54 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://ric5hym4r7i6"]
+
+[ext_resource type="Script" uid="uid://d12jxrx0uuunw" path="res://scripts/mini_games/crypto/crypto_data.gd" id="1_b6s0r"]
+[ext_resource type="Script" uid="uid://c4ybdhwj2y7o2" path="res://scripts/mini_games/crypto/crypto_sentence.gd" id="2_mlrqo"]
+
+[sub_resource type="Resource" id="Resource_po7ka"]
+script = ExtResource("2_mlrqo")
+sentence = "La lumière se propage en ligne droite dans un milieu homogène."
+
+[sub_resource type="Resource" id="Resource_0xnns"]
+script = ExtResource("2_mlrqo")
+sentence = "La vitesse de la lumière caractérise son déplacement dans le vide."
+
+[sub_resource type="Resource" id="Resource_v5hda"]
+script = ExtResource("2_mlrqo")
+sentence = "Les lois de Snell-Descartes régissent la réflexion et la réfraction."
+
+[sub_resource type="Resource" id="Resource_61hqp"]
+script = ExtResource("2_mlrqo")
+sentence = "La réflexion spéculaire sur un miroir produit une image symétrique."
+
+[sub_resource type="Resource" id="Resource_8ufqd"]
+script = ExtResource("2_mlrqo")
+sentence = "La réfraction dévie le rayon lumineux lors du changement de milieu."
+
+[sub_resource type="Resource" id="Resource_t14n3"]
+script = ExtResource("2_mlrqo")
+sentence = "La fibre optique utilise le phénomène de réflexion totale."
+
+[sub_resource type="Resource" id="Resource_6y1b8"]
+script = ExtResource("2_mlrqo")
+sentence = "Les lentilles convergentes concentrent les faisceaux lumineux."
+
+[sub_resource type="Resource" id="Resource_twrd2"]
+script = ExtResource("2_mlrqo")
+sentence = "La distance focale détermine la puissance optique d'une lentille."
+
+[sub_resource type="Resource" id="Resource_i1pw0"]
+script = ExtResource("2_mlrqo")
+sentence = "La vergence s'exprime en dioptries et dépend de la distance focale."
+
+[sub_resource type="Resource" id="Resource_rerbl"]
+script = ExtResource("2_mlrqo")
+sentence = "La décomposition de la lumière blanche révèle le spectre lumineux."
+
+[sub_resource type="Resource" id="Resource_nkyyb"]
+script = ExtResource("2_mlrqo")
+sentence = "La couleur d'un objet dépend de l'absorption et de la diffusion."
+
+[resource]
+script = ExtResource("1_b6s0r")
+sentences = Array[ExtResource("2_mlrqo")]([SubResource("Resource_po7ka"), SubResource("Resource_0xnns"), SubResource("Resource_v5hda"), SubResource("Resource_61hqp"), SubResource("Resource_8ufqd"), SubResource("Resource_t14n3"), SubResource("Resource_6y1b8"), SubResource("Resource_twrd2"), SubResource("Resource_i1pw0"), SubResource("Resource_rerbl"), SubResource("Resource_nkyyb")])
+hidden_ratio = 0.05
+theme_title = "La magie de l'image"
