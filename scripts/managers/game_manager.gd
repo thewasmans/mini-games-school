@@ -24,7 +24,7 @@ func initialize() -> void:
 	initialized.emit()
 
 
-func _manager_of_type(type: Script) -> Variant:
+func _manager_of_type(type: Script) -> Manager:
 	for manager in managers:
 		if is_instance_of(manager, type):
 			return manager
