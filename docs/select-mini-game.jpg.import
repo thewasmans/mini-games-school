@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkywljub0u4lf"
-path="res://.godot/imported/quizz.jpg-14caa6f3a2d87771de2786ca8dbc5ae8.ctex"
+uid="uid://dl6qksmm5wwi1"
+path="res://.godot/imported/select-mini-game.jpg-d157da1c215fe7df6d0cac9eba2fcabc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://quizz.jpg"
-dest_files=["res://.godot/imported/quizz.jpg-14caa6f3a2d87771de2786ca8dbc5ae8.ctex"]
+source_file="res://docs/select-mini-game.jpg"
+dest_files=["res://.godot/imported/select-mini-game.jpg-d157da1c215fe7df6d0cac9eba2fcabc.ctex"]
 
 [params]
 

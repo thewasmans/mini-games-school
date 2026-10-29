@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://co8dm6cvt6on"
-path="res://.godot/imported/crossword.jpg-a2ecae7850ec0b288295fd6cdf334a1b.ctex"
+uid="uid://dkywljub0u4lf"
+path="res://.godot/imported/quizz.jpg-6b86c214df05bde0eb9d51d9b8bc062f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://crossword.jpg"
-dest_files=["res://.godot/imported/crossword.jpg-a2ecae7850ec0b288295fd6cdf334a1b.ctex"]
+source_file="res://docs/quizz.jpg"
+dest_files=["res://.godot/imported/quizz.jpg-6b86c214df05bde0eb9d51d9b8bc062f.ctex"]
 
 [params]
 
