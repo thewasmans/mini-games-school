@@ -2,10 +2,12 @@
 
 [ext_resource type="Script" uid="uid://dvn68cgixp08n" path="res://scripts/ui/panels/frame_panel.gd" id="1_script"]
 
-[node name="FramePanel" type="PanelContainer"]
+[node name="FramePanel" type="PanelContainer" unique_id=1870292265]
+offset_right = 78.0
+offset_bottom = 100.0
 theme_type_variation = &"PanelFrame"
 script = ExtResource("1_script")
 
-[node name="Content" type="VBoxContainer" parent="."]
+[node name="Content" type="VBoxContainer" parent="." unique_id=1896826586]
 layout_mode = 2
 theme_override_constants/separation = 8

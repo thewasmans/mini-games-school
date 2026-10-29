@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c5mpd2nsq5nqc" path="res://scripts/helpers/debug_helper.gd" id="1"]
 
-[node name="DebugHelper" type="CanvasLayer" node_paths=PackedStringArray("bar", "auto_fill_check", "auto_validate_check", "show_hints_check", "unlock_all_button", "hint_label")]
+[node name="DebugHelper" type="CanvasLayer" unique_id=1165960340 node_paths=PackedStringArray("bar", "auto_fill_check", "auto_validate_check", "show_hints_check", "unlock_all_button", "hint_label")]
 layer = 90
 script = ExtResource("1")
 bar = NodePath("Bar")
@@ -12,7 +12,7 @@ show_hints_check = NodePath("Bar/Row/ShowHints")
 unlock_all_button = NodePath("Bar/Row/UnlockAll")
 hint_label = NodePath("Bar/Row/HintLabel")
 
-[node name="Bar" type="PanelContainer" parent="."]
+[node name="Bar" type="PanelContainer" parent="." unique_id=1768986667]
 visible = false
 anchors_preset = 12
 anchor_top = 1.0
@@ -21,34 +21,34 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Row" type="HFlowContainer" parent="Bar"]
+[node name="Row" type="HFlowContainer" parent="Bar" unique_id=2127874407]
 layout_mode = 2
 
-[node name="Title" type="Label" parent="Bar/Row"]
+[node name="Title" type="Label" parent="Bar/Row" unique_id=1852305427]
 layout_mode = 2
 text = "Debug (F1)"
 
-[node name="AutoFill" type="CheckBox" parent="Bar/Row"]
+[node name="AutoFill" type="CheckBox" parent="Bar/Row" unique_id=1663991946]
 layout_mode = 2
 focus_mode = 0
 text = "Auto select / prefill"
 
-[node name="AutoValidate" type="CheckBox" parent="Bar/Row"]
+[node name="AutoValidate" type="CheckBox" parent="Bar/Row" unique_id=1738083284]
 layout_mode = 2
 focus_mode = 0
 text = "Auto validate"
 
-[node name="ShowHints" type="CheckBox" parent="Bar/Row"]
+[node name="ShowHints" type="CheckBox" parent="Bar/Row" unique_id=550364509]
 layout_mode = 2
 focus_mode = 0
 text = "Show hints"
 
-[node name="UnlockAll" type="Button" parent="Bar/Row"]
+[node name="UnlockAll" type="Button" parent="Bar/Row" unique_id=789915765]
 layout_mode = 2
 focus_mode = 0
 text = "Unlock all levels"
 
-[node name="HintLabel" type="Label" parent="Bar/Row"]
+[node name="HintLabel" type="Label" parent="Bar/Row" unique_id=1825435342]
 visible = false
 layout_mode = 2
 text = "Réponse :"

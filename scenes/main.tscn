@@ -10,13 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ce1uu38c55ewe" path="res://content/prefabs/ui/level/level.tscn" id="8"]
 [ext_resource type="Script" uid="uid://b4xilacjnh0fe" path="res://scripts/ui/animated_background.gd" id="9"]
 
-[node name="Main" type="Control" unique_id=1259184002 node_paths=PackedStringArray("game_manager")]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Main" type="Node" unique_id=1965104666 node_paths=PackedStringArray("game_manager")]
 script = ExtResource("1")
 game_manager = NodePath("Global/GameManager")
 debug_helper_prefab = ExtResource("2")
@@ -41,7 +35,6 @@ level_root = NodePath("../../../Level")
 level_prefab = ExtResource("8")
 
 [node name="Background" type="SubViewportContainer" parent="." unique_id=1706682966]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -51,7 +44,7 @@ mouse_filter = 2
 script = ExtResource("9")
 
 [node name="UI" type="Control" parent="." unique_id=1737194069]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -60,7 +53,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="Level" type="Control" parent="." unique_id=2120668901]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

@@ -2,18 +2,20 @@
 
 [ext_resource type="Script" uid="uid://cltc3jc1mwp82" path="res://scripts/ui/panels/partner_tile.gd" id="1_script"]
 
-[node name="PartnerTile" type="PanelContainer"]
+[node name="PartnerTile" type="PanelContainer" unique_id=992479705]
 custom_minimum_size = Vector2(0, 150)
+offset_right = 300.0
+offset_bottom = 150.0
 size_flags_horizontal = 3
 theme_type_variation = &"Tile"
 script = ExtResource("1_script")
 
-[node name="Logo" type="TextureRect" parent="."]
+[node name="Logo" type="TextureRect" parent="." unique_id=1598074032]
 layout_mode = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Name" type="Label" parent="."]
+[node name="Name" type="Label" parent="." unique_id=1586427491]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.0745, 0.1373, 0.3686, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)

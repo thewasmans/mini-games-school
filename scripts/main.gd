@@ -1,5 +1,5 @@
 class_name Main
-extends Control
+extends Node
 
 @export var game_manager: GameManager
 @export var debug_helper_prefab: PackedScene

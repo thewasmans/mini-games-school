@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://dgac5yeoiwq4l"]
 
-
-[node name="ContributorLineUI" type="Label"]
+[node name="ContributorLineUI" type="Label" unique_id=1818839520]
+offset_right = 500.0
+offset_bottom = 318.0
 theme_override_font_sizes/font_size = 26
 text = "Contributeur"
 horizontal_alignment = 1

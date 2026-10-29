@@ -2,11 +2,13 @@
 
 [ext_resource type="Script" uid="uid://3q3xcjpiu3hq" path="res://scripts/ui/panels/pill.gd" id="1_script"]
 
-[node name="Pill" type="PanelContainer"]
+[node name="Pill" type="PanelContainer" unique_id=1069514553]
+offset_right = 125.0
+offset_bottom = 80.0
 theme_type_variation = &"Pill"
 script = ExtResource("1_script")
 
-[node name="Text" type="Label" parent="."]
+[node name="Text" type="Label" parent="." unique_id=1482943266]
 layout_mode = 2
 theme_override_constants/outline_size = 6
 theme_override_constants/shadow_outline_size = 6

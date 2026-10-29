@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://c45v0m5ykanjk" path="res://scripts/ui/juicy_button.gd" id="2_button"]
 
 [node name="MenuPanel" type="PanelContainer" unique_id=1513379824]
+offset_right = 279.0
+offset_bottom = 139.0
 theme_type_variation = &"PanelBig"
 script = ExtResource("1_script")
 
@@ -12,11 +14,17 @@ layout_mode = 2
 theme_override_constants/separation = 22
 
 [node name="Header" type="Button" parent="Content" unique_id=1671570388]
+visible = false
 custom_minimum_size = Vector2(0, 130)
 layout_mode = 2
 mouse_filter = 2
 theme_type_variation = &"ButtonBlue"
 theme_override_colors/font_color = Color(1, 0.8784, 0.4, 1)
+theme_override_colors/font_focus_color = Color(1, 0.8784, 0.4, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.8784, 0.4, 1)
+theme_override_colors/font_hover_color = Color(1, 0.8784, 0.4, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.8784, 0.4, 1)
+theme_override_colors/font_disabled_color = Color(1, 0.8784, 0.4, 0.85)
 theme_override_font_sizes/font_size = 38
 autowrap_mode = 3
 script = ExtResource("2_button")
