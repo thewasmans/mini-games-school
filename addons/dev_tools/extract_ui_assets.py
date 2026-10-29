@@ -1,4 +1,4 @@
-"""Extrait les éléments d'UI des maquettes (*.jpg à la racine du projet) en PNG séparés,
+"""Extrait les éléments d'UI des maquettes (docs/*.jpg) en PNG séparés,
 dans content/ui/. Ces PNG servent ensuite de thème à l'UI Godot (voir scripts/ui/ui_skin.gd).
 
     python addons/dev_tools/extract_ui_assets.py            # skins (boutons, panneaux, cases)
@@ -24,7 +24,7 @@ _cache = {}
 
 def src(name):
     if name not in _cache:
-        _cache[name] = np.asarray(Image.open(os.path.join(ROOT, name + ".jpg")).convert("RGB")).astype(np.float32)
+        _cache[name] = np.asarray(Image.open(os.path.join(ROOT, "docs", name + ".jpg")).convert("RGB")).astype(np.float32)
     return _cache[name]
 
 

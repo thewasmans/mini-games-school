@@ -19,6 +19,8 @@ func start_level(level_index: int) -> void:
 	_level.validated.connect(_on_level_validated)
 	_level.exited.connect(_close_level)
 	level_started.emit(_level)
+	
+	_game_manager._manager_of_type(GameUIManager)
 
 
 func _title_of(level_data: LevelData) -> String:

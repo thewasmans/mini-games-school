@@ -12,7 +12,7 @@ Ce document décrit le parcours du joueur, les règles de chaque mini-jeu, l'org
 Menu principal ─► Niveau d'études ─► Année ─► Matière ─► Grille des levels ─► Level (mini-jeu)
    │                (Primaire,        (P1…P6,   (Biologie,    (chemin de           │
    └─► Crédits       Secondaire,       S1…S6,    Chimie,       levels en serpent)   └─► retour à la grille
-                     Supérieur)        Q1…Q6)    Physique…)
+					 Supérieur)        Q1…Q6)    Physique…)
 ```
 
 1. **Menu principal**
@@ -97,7 +97,7 @@ Le contenu s'emboîte ainsi :
 Année (SchoolYearData : nom, ex. « S4 »)
 └─ Matières (SubjectData : nom, ex. « Biologie »)
    └─ Levels (LevelData)
-      └─ Mini-jeu (CrosswordData, MemoData ou CryptoData : année scolaire et titre du thème)
+	  └─ Mini-jeu (CrosswordData, MemoData ou CryptoData : année scolaire et titre du thème)
 ```
 
 - **Un champ d'année peut rester vide.** L'année apparaît alors dans le menu comme « Bientôt disponible », avec un nom automatique (P1, S2, Q3…).

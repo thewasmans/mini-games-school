@@ -1,6 +1,6 @@
 name: Tests
 
-# Lance les tests gdUnit4 (tests/) a chaque push et sur chaque Pull Request.
+# Lance les tests gdUnit4 (scripts/tests/) a chaque push et sur chaque Pull Request.
 # L'image Godot doit correspondre a la version du projet (config/features dans project.godot).
 
 on:
@@ -24,7 +24,7 @@ jobs:
         run: godot --headless --editor --path . --quit || true
 
       - name: Tests
-        run: godot --headless --path . -s res://addons/gdUnit4/bin/GdUnitCmdTool.gd -a res://tests --ignoreHeadlessMode
+        run: godot --headless --path . -s res://addons/gdUnit4/bin/GdUnitCmdTool.gd -a res://scripts/tests --ignoreHeadlessMode
 
       - uses: actions/upload-artifact@v4
         if: always()

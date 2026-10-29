@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://bo54fw7ghu2s2" path="res://scripts/managers/level_manager.gd" id="7"]
 [ext_resource type="PackedScene" uid="uid://ce1uu38c55ewe" path="res://content/prefabs/ui/level/level.tscn" id="8"]
 [ext_resource type="Script" uid="uid://b4xilacjnh0fe" path="res://scripts/ui/animated_background.gd" id="9"]
+[ext_resource type="Script" uid="uid://vmgx87fwpj4m" path="res://scripts/managers/managers_validator.gd" id="10"]
 
 [node name="Main" type="Node" unique_id=1965104666 node_paths=PackedStringArray("game_manager")]
 script = ExtResource("1")
@@ -17,11 +18,10 @@ debug_helper_prefab = ExtResource("2")
 
 [node name="Global" type="Node" parent="." unique_id=481835987]
 
-[node name="GameManager" type="Node" parent="Global" unique_id=1369628355 node_paths=PackedStringArray("game_ui_manager", "level_manager")]
+[node name="GameManager" type="Node" parent="Global" unique_id=1369628355 node_paths=PackedStringArray("managers")]
 script = ExtResource("3")
 game_data = ExtResource("4")
-game_ui_manager = NodePath("GameUIManager")
-level_manager = NodePath("LevelManager")
+managers = [NodePath("GameUIManager"), NodePath("LevelManager")]
 
 [node name="GameUIManager" type="Node" parent="Global/GameManager" unique_id=365876765 node_paths=PackedStringArray("root_scene", "background")]
 script = ExtResource("5")
@@ -33,6 +33,10 @@ background = NodePath("../../../Background")
 script = ExtResource("7")
 level_root = NodePath("../../../Level")
 level_prefab = ExtResource("8")
+
+[node name="ManagersValidator" type="Node" parent="Global" unique_id=440690946 node_paths=PackedStringArray("game_manager")]
+script = ExtResource("10")
+game_manager = NodePath("../GameManager")
 
 [node name="Background" type="SubViewportContainer" parent="." unique_id=1706682966]
 anchors_preset = 15

@@ -5,8 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://bwrkt3koiub8u" path="res://content/images/partners/logo_europe.png" id="3_pftn3"]
 [ext_resource type="Texture2D" uid="uid://jj4krk3cj3kf" path="res://content/images/partners/logo_fwb.png" id="4_7lvw4"]
 [ext_resource type="Script" uid="uid://1glm8whll5s5" path="res://scripts/data/credits_data.gd" id="5_2ewf2"]
+[ext_resource type="Script" uid="uid://ciwcgy3oely0m" path="res://scripts/data/school_year_data.gd" id="6_pftn3"]
 [ext_resource type="Script" uid="uid://bav08y3ad0myl" path="res://scripts/data/game_data.gd" id="6_vy2p8"]
 [ext_resource type="Resource" uid="uid://cqtfxyyycfr28" path="res://data/secondaire/s4/s4.tres" id="7_1diyi"]
+[ext_resource type="Script" uid="uid://slefhuqrt8qe" path="res://scripts/data/subject_data.gd" id="7_7lvw4"]
 
 [sub_resource type="Resource" id="Resource_cog1c"]
 script = ExtResource("5_2ewf2")
@@ -14,7 +16,13 @@ contributors = PackedStringArray("thewasmans", "kiacobel")
 partner_names = PackedStringArray("Collège des Étoiles", "Haute École Lucia de Brouckère", "Union européenne", "Fédération Wallonie-Bruxelles")
 partner_logos = Array[Texture2D]([ExtResource("1_yqv0c"), ExtResource("2_lhs1r"), ExtResource("3_pftn3"), ExtResource("4_7lvw4")])
 
+[sub_resource type="Resource" id="Resource_yqv0c"]
+script = ExtResource("6_pftn3")
+name = "MDR"
+metadata/_custom_type_script = "uid://ciwcgy3oely0m"
+
 [resource]
 script = ExtResource("6_vy2p8")
+primary_1 = SubResource("Resource_yqv0c")
 secondary_4 = ExtResource("7_1diyi")
 credits = SubResource("Resource_cog1c")

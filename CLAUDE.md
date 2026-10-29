@@ -9,15 +9,16 @@ Godot 4.7, GDScript, portrait 720×1280 (`canvas_items`, `expand`). Le fonctionn
 ```
 Main (main.gd)
 ├─ Global
-│  └─ GameManager (@tool)
-│     ├─ GameUIManager   instancie game_ui.tscn sous UI, pilote la navigation menus <-> level
-│     └─ LevelManager    instancie level.tscn sous Level
+│  ├─ GameManager
+│  │  ├─ GameUIManager   instancie game_ui.tscn sous UI, pilote la navigation menus <-> level
+│  │  └─ LevelManager    instancie level.tscn sous Level
+│  └─ ManagersValidator  (@tool) vérifie la liste des managers dans l'éditeur
 ├─ Background            AnimatedBackground (décor 3D)
 ├─ UI
 └─ Level
 ```
 
-- **Managers** : `Manager` (`@abstract`) expose `game_state` / `game_data`. Un nouveau manager s'ajoute dans les exports de `GameManager` **et** dans son getter `managers` ; un `Manager` enfant oublié dans le getter affiche un avertissement sur le nœud dans l'éditeur.
+- **Managers** : `Manager` (`@abstract`) expose `game_state` / `game_data`. Un nouveau manager s'ajoute dans la liste exportée `managers` de `GameManager` (seule référence, qui fixe aussi l'ordre d'initialisation) ; si d'autres scripts doivent y accéder, ajouter un getter typé comme `level_manager`. Le nœud `Global/ManagersValidator` (`@tool`) affiche un avertissement si un `Manager` enfant manque dans la liste ou y figure deux fois ; `GameManager` n'est pas `@tool`.
 - **Navigation** : `GameUI.level_requested` → `GameUIManager` cache les menus et appelle `LevelManager.start_level()`. `Level` émet `validated(level_index)` / `exited` ; `LevelManager` termine le level dans `GameState`, libère le level et émet `level_closed` → menus réaffichés.
 - **Autoload** : seulement `Sfx` (`scripts/managers/sfx.gd`, sons synthétisés, `Sfx.play("pop")`).
 
@@ -55,14 +56,14 @@ Les écrans sont des scènes modifiables dans l'éditeur ; le code ne fait que l
 - Prefabs plutôt qu'UI construite en code ; comportements ajoutés comme composants visibles dans les prefabs.
 - Ressources du jeu dans `content/`, données dans `data/`.
 - Pas de `add_theme_stylebox_override` pour l'habillage : ajouter une variation dans `addons/dev_tools/theme_builder.gd`.
-- Nouveaux `.tscn` / `.tres` : les enregistrer une fois dans l'éditeur pour qu'ils aient un UID (`tests/content/resource_uid_test.gd` le vérifie).
+- Nouveaux `.tscn` / `.tres` : les enregistrer une fois dans l'éditeur pour qu'ils aient un UID (`scripts/tests/content/resource_uid_test.gd` le vérifie).
 
-## Tests (gdUnit4, `tests/`)
+## Tests (gdUnit4, `scripts/tests/`)
 
 `unit/` (logique pure), `integration/` (prefabs et `main.tscn` pilotés, cheats F1), `content/` (vraies données et UID), `fixtures/` (`TestData`). Onglet GdUnit de l'éditeur, ou :
 
 ```
-godot --headless --path . -s res://addons/gdUnit4/bin/GdUnitCmdTool.gd -a res://tests --ignoreHeadlessMode
+godot --headless --path . -s res://addons/gdUnit4/bin/GdUnitCmdTool.gd -a res://scripts/tests --ignoreHeadlessMode
 ```
 
 Lancés en CI par `.github/workflows/tests.yml`. Rapports dans `reports/` (ignoré par git).

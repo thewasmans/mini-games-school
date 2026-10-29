@@ -29,9 +29,10 @@ Main (_ready)
 ```
 Main (main.gd)
 ├─ Global
-│  └─ GameManager (game_manager.gd)
-│     ├─ GameUIManager (game_ui_manager.gd)
-│     └─ LevelManager (level_manager.gd)
+│  ├─ GameManager (game_manager.gd)
+│  │  ├─ GameUIManager (game_ui_manager.gd)
+│  │  └─ LevelManager (level_manager.gd)
+│  └─ ManagersValidator (managers_validator.gd, @tool)
 ├─ Background       ← AnimatedBackground : décor 3D low poly
 ├─ UI               ← parent de GameUI
 └─ Level            ← parent des levels instanciés
@@ -59,8 +60,9 @@ Le seul autoload est **`Sfx`** : sons synthétisés au démarrage, joués avec `
 
 - **`Manager`** ([manager.gd](../scripts/managers/manager.gd)) : classe `@abstract`. Elle expose `game_state` et `game_data`, qui renvoient vers le `GameManager`. Chaque sous-classe surcharge `initialize(game_manager)` et appelle `super.initialize()` en premier.
 - **`GameManager`** ([game_manager.gd](../scripts/managers/game_manager.gd)) :
-  - Il exporte `game_data` et les managers ; le getter `managers` fixe l'ordre d'initialisation.
-  - **Un nouveau manager doit être ajouté à la fois dans les exports et dans ce getter.** Le script est `@tool` : un `Manager` enfant absent du getter affiche un avertissement sur le nœud dans l'arbre de la scène.
+  - Il exporte `game_data` et la liste `managers`, seule référence aux managers, qui fixe l'ordre d'initialisation (réglable dans l'Inspector).
+  - Les accès typés (`game_ui_manager`, `level_manager`) sont des getters qui retrouvent le manager dans cette liste. **Un nouveau manager s'ajoute dans la liste**, plus un getter typé si d'autres scripts en ont besoin.
+- **`ManagersValidator`** ([managers_validator.gd](../scripts/managers/managers_validator.gd)) : nœud `@tool` posé à côté du `GameManager` (qui, lui, n'est pas `@tool`). Dans l'éditeur, il affiche un avertissement sur lui-même si un `Manager` enfant du `GameManager` manque dans la liste `managers` ou y figure deux fois. En jeu, il ne fait rien.
 - **`GameUIManager`** : instancie `game_ui.tscn` sous `UI`. C'est le **seul responsable de la navigation** entre menus et levels :
   - sur `GameUI.level_requested`, il cache les menus et appelle `LevelManager.start_level()` ;
   - sur `LevelManager.level_closed`, il réaffiche les menus (grille des levels mise à jour) ;
@@ -189,7 +191,7 @@ Le registre [`mini_game_prefabs.tres`](../content/prefabs/ui/mini_games/mini_gam
 
 ---
 
-## 7. Tests (`tests/`)
+## 7. Tests (`scripts/tests/`)
 
 | Dossier | Contenu |
 |---|---|
@@ -201,7 +203,7 @@ Le registre [`mini_game_prefabs.tres`](../content/prefabs/ui/mini_games/mini_gam
 Lancer les tests : onglet **GdUnit** de l'éditeur, ou
 
 ```
-godot --headless --path . -s res://addons/gdUnit4/bin/GdUnitCmdTool.gd -a res://tests --ignoreHeadlessMode
+godot --headless --path . -s res://addons/gdUnit4/bin/GdUnitCmdTool.gd -a res://scripts/tests --ignoreHeadlessMode
 ```
 
 Ils tournent en CI à chaque push (`.github/workflows/tests.yml`).
