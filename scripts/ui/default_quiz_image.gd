@@ -1,7 +1,5 @@
 class_name DefaultQuizImage
 extends Control
-## Île flottante surmontée d'un château, qui flotte doucement entourée d'étincelles.
-## Image par défaut du quiz, et illustration du menu principal.
 
 var roof := Color("3b6fd8")
 var _t := 0.0

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="SchoolYearData" format=3 uid="uid://cq8u5486rolh2"]
+
+[ext_resource type="Script" uid="uid://ciwcgy3oely0m" path="res://scripts/data/school_year_data.gd" id="1_w2v4y"]
+[ext_resource type="Script" uid="uid://slefhuqrt8qe" path="res://scripts/data/subject_data.gd" id="2_5la78"]
+
+[resource]
+script = ExtResource("1_w2v4y")
+name = "S2"

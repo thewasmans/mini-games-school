@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c0t2d3xrlwyhu"]
+
+[ext_resource type="Script" uid="uid://c45v0m5ykanjk" path="res://scripts/ui/juicy_button.gd" id="1"]
+[ext_resource type="Script" uid="uid://c4sgyuaafswdq" path="res://scripts/ui/button_press_animation.gd" id="2"]
+
+[node name="KeyboardKey" type="Button"]
+custom_minimum_size = Vector2(58, 68)
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 30
+text = "A"
+script = ExtResource("1")
+color = Color(0.9333, 0.9412, 1, 1)
+skin = &"ButtonKey"
+
+[node name="ButtonPressAnimation" type="Node" parent="."]
+script = ExtResource("2")
+sound = "type"

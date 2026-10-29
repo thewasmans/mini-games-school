@@ -1,28 +1,24 @@
 class_name CryptoCell
 extends Control
-## Une case du cryptogramme. Une lettre tapée garde le style des lettres visibles.
 
 signal clicked
 
 enum State { VISIBLE, EMPTY, FILLED, CORRECT, WRONG, SYMBOL }
 
-## Type du thème qui porte les sprites des cases (word, cursor, good, wrong).
 const THEME_TYPE := &"CryptoCell"
 
-var original := ""   # caractère de la phrase (avec accent éventuel)
+var original := ""
 var typed := ""
 var state := State.VISIBLE
 var is_cursor := false
-var hint := false
 
 var _t := 0.0
 var _shake := 0.0
 
 
-func _init(ch := "", cell_size := Vector2(44, 58)) -> void:
+func setup(ch: String, cell_size: Vector2) -> void:
 	original = ch
 	custom_minimum_size = cell_size
-	mouse_default_cursor_shape = CURSOR_POINTING_HAND
 
 
 func _gui_input(event: InputEvent) -> void:
@@ -111,5 +107,3 @@ func _draw() -> void:
 		draw_line(Vector2(size.x / 2, 12), Vector2(size.x / 2, face.size.y - 12), Color(UIStyle.INK, a), 3)
 	if text != "":
 		UIStyle.draw_text(self, text, Vector2(size.x / 2, face.size.y / 2 + 1), fs, text_color, outline, outline_color)
-	elif hint:
-		UIStyle.draw_text(self, original, Vector2(size.x / 2, face.size.y / 2 + 1), fs, Color(1, 1, 1, 0.3))

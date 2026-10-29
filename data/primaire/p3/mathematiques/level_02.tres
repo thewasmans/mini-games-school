@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://s3277swdur6j"]
+
+[ext_resource type="Resource" uid="uid://dd7qdekxnvrjt" path="res://data/primaire/p3/mathematiques/02_les_formes_geometriques.tres" id="1_am7y3"]
+[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="2_r4n2q"]
+
+[resource]
+script = ExtResource("2_r4n2q")
+mini_game = ExtResource("1_am7y3")

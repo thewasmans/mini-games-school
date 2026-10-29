@@ -1,7 +1,5 @@
 class_name LowPoly
 extends RefCounted
-## Fabrique de modèles 3D low poly construits en code : facettes à normales plates, sommets
-## légèrement déformés, couleur par face. Sert au décor de fond (AnimatedBackground).
 
 const GRASS := Color("5aa846")
 const GRASS_DARK := Color("3f8f3a")
@@ -18,7 +16,6 @@ static var _material: StandardMaterial3D
 static var _glow_material: StandardMaterial3D
 
 
-## Matériau commun : couleur de sommet, mat.
 static func material() -> StandardMaterial3D:
 	if _material == null:
 		_material = StandardMaterial3D.new()
@@ -28,7 +25,6 @@ static func material() -> StandardMaterial3D:
 	return _material
 
 
-## Matériau lumineux non éclairé (étincelles, fenêtres).
 static func glow_material() -> StandardMaterial3D:
 	if _glow_material == null:
 		_glow_material = StandardMaterial3D.new()
@@ -37,9 +33,6 @@ static func glow_material() -> StandardMaterial3D:
 	return _glow_material
 
 
-## Convertit une primitive en maillage à facettes. `jitter` déforme chaque sommet (même déformation
-## pour les sommets confondus, donc pas de trou), `bottom` dégrade la couleur vers le bas,
-## `vary` fait varier la teinte d'une face à l'autre.
 static func flat(src: PrimitiveMesh, color: Color, jitter := Vector3.ZERO, seed := 0.0, bottom := Color(0, 0, 0, 0), vary := 0.06) -> ArrayMesh:
 	var arrays := src.get_mesh_arrays()
 	var verts: PackedVector3Array = arrays[Mesh.ARRAY_VERTEX]
@@ -70,7 +63,6 @@ static func flat(src: PrimitiveMesh, color: Color, jitter := Vector3.ZERO, seed 
 	return st.commit()
 
 
-## Pseudo-aléatoire stable dans [-1, 1] pour une position.
 static func _hash(p: Vector3, k: float) -> float:
 	var q := p.snappedf(0.001)
 	var d := q.dot(Vector3(12.9898, 78.233, 37.719)) + k * 17.31
@@ -111,9 +103,6 @@ static func sphere(radius: float, segments := 7, rings := 4) -> SphereMesh:
 	return m
 
 
-# --- Modèles ---------------------------------------------------------------
-
-## Île flottante : plateau d'herbe, rocher en pointe, quelques sapins et cailloux.
 static func island(radius: float, seed: float, trees := 3) -> Node3D:
 	var rng := RandomNumberGenerator.new()
 	rng.seed = int(seed * 1000.0)
@@ -144,7 +133,6 @@ static func tree(scale: float, seed: float, pos: Vector3) -> Node3D:
 	return root
 
 
-## Château : donjon central, quatre tours à toits pointus, remparts crénelés, porte et drapeaux.
 static func castle() -> Node3D:
 	var root := Node3D.new()
 	root.add_child(part(flat(box(Vector3(2.6, 1.4, 2.6)), STONE, Vector3.ONE * 0.03, 1.0, STONE_DARK), Vector3(0, 0.7, 0)))
@@ -164,7 +152,6 @@ static func castle() -> Node3D:
 	for p in [Vector3(0, 5.5, -0.2), Vector3(1.3, 3.5, 1.3), Vector3(-1.3, 3.5, -1.3)]:
 		root.add_child(part(flat(cylinder(0.025, 0.025, 0.7, 4), WOOD), p + Vector3(0, 0.35, 0), false))
 		root.add_child(part(flat(box(Vector3(0.45, 0.28, 0.03)), Color("3d84f2"), Vector3.ZERO), p + Vector3(0.24, 0.55, 0), false))
-	# Fenêtres éclairées
 	var window := MeshInstance3D.new()
 	window.mesh = flat(box(Vector3(0.18, 0.3, 0.05)), Color("ffd45c"), Vector3.ZERO, 0.0, Color(0, 0, 0, 0), 0.0)
 	window.material_override = glow_material()
@@ -173,7 +160,6 @@ static func castle() -> Node3D:
 	return root
 
 
-## Petite maison à toit rouge avec cheminée.
 static func house() -> Node3D:
 	var root := Node3D.new()
 	root.add_child(part(flat(box(Vector3(1.4, 1.0, 1.1)), Color("f1e3c8"), Vector3.ONE * 0.02, 20.0), Vector3(0, 0.5, 0)))
@@ -185,7 +171,6 @@ static func house() -> Node3D:
 	return root
 
 
-## Nuage : grappe de sphères à facettes, aplatie en dessous.
 static func cloud(seed: float) -> Node3D:
 	var rng := RandomNumberGenerator.new()
 	rng.seed = int(seed * 100.0)
@@ -201,7 +186,6 @@ static func cloud(seed: float) -> Node3D:
 	return root
 
 
-## Livre : fermé (couverture + pages) ou ouvert (deux moitiés articulées, renvoyées dans `halves`).
 static func book(cover: Color, open: bool, halves: Array[Node3D]) -> Node3D:
 	var root := Node3D.new()
 	if not open:
@@ -217,7 +201,6 @@ static func book(cover: Color, open: bool, halves: Array[Node3D]) -> Node3D:
 	return root
 
 
-## Étincelle : petit octaèdre lumineux.
 static func sparkle() -> MeshInstance3D:
 	var mi := MeshInstance3D.new()
 	mi.mesh = flat(sphere(0.12, 4, 2), Color("fff6c4"), Vector3.ZERO, 0.0, Color(0, 0, 0, 0), 0.0)

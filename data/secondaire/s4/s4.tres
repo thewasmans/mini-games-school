@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SchoolYearData" format=3 uid="uid://dfhruxrvsq510"]
+
+[ext_resource type="Script" uid="uid://ciwcgy3oely0m" path="res://scripts/data/school_year_data.gd" id="1_bos0s"]
+[ext_resource type="Script" uid="uid://slefhuqrt8qe" path="res://scripts/data/subject_data.gd" id="2_4iep2"]
+[ext_resource type="Resource" uid="uid://bxx5t7cvk4c7k" path="res://data/secondaire/s4/biologie/biologie.tres" id="3_6n38m"]
+[ext_resource type="Resource" uid="uid://qrfcvouj8up7" path="res://data/secondaire/s4/chimie/chimie.tres" id="4_5vq3t"]
+[ext_resource type="Resource" uid="uid://b43udmr5c0i6u" path="res://data/secondaire/s4/physique/physique.tres" id="5_2gxsu"]
+
+[resource]
+script = ExtResource("1_bos0s")
+name = "S4"
+subjects = Array[ExtResource("2_4iep2")]([ExtResource("3_6n38m"), ExtResource("4_5vq3t"), ExtResource("5_2gxsu")])

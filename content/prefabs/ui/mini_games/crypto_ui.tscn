@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://b8def1uxf3b5c"]
+
+[ext_resource type="Script" uid="uid://dn3tkij1lae6g" path="res://scripts/ui/crypto_ui.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://ba1od4dpwwnx1" path="res://content/prefabs/ui/mini_games/crypto_cell.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://dlwcuux7dlrik" path="res://content/prefabs/ui/panels/titled_panel.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://c5347yer7gwac" path="res://content/prefabs/ui/panels/pill.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://c06cljagag54w" path="res://content/prefabs/ui/panels/menu_panel.tscn" id="5"]
+[ext_resource type="Script" uid="uid://c45v0m5ykanjk" path="res://scripts/ui/juicy_button.gd" id="6"]
+[ext_resource type="Script" uid="uid://c4sgyuaafswdq" path="res://scripts/ui/button_press_animation.gd" id="7"]
+[ext_resource type="PackedScene" uid="uid://taellq4c8j8o" path="res://content/prefabs/ui/panels/on_screen_keyboard.tscn" id="8"]
+
+[node name="CryptoUI" type="Control" node_paths=PackedStringArray("hint_label", "counter_pill", "sentence_panel", "flow", "fix_button", "next_button", "keyboard")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+hint_label = NodePath("Layout/HintPanel/Layout/Inner/Content/HintLabel")
+counter_pill = NodePath("Layout/HintPanel/Layout/Header/CounterPill")
+sentence_panel = NodePath("Layout/SentencePanel")
+flow = NodePath("Layout/SentencePanel/Content/Center/Flow")
+fix_button = NodePath("Layout/Buttons/FixButton")
+next_button = NodePath("Layout/Buttons/NextButton")
+keyboard = NodePath("Layout/Keyboard")
+cell_prefab = ExtResource("2")
+
+[node name="Layout" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="HintPanel" parent="Layout" instance=ExtResource("3")]
+layout_mode = 2
+title = "Indice"
+
+[node name="CounterPill" parent="Layout/HintPanel/Layout/Header" instance=ExtResource("4")]
+layout_mode = 2
+text = "Phrase 1 / 1"
+
+[node name="HintLabel" type="Label" parent="Layout/HintPanel/Layout/Inner/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Indice de la phrase"
+horizontal_alignment = 0
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="SentencePanel" parent="Layout" instance=ExtResource("5")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Center" type="CenterContainer" parent="Layout/SentencePanel/Content"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Flow" type="HFlowContainer" parent="Layout/SentencePanel/Content/Center"]
+custom_minimum_size = Vector2(620, 0)
+layout_mode = 2
+theme_override_constants/h_separation = 22
+theme_override_constants/v_separation = 14
+alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="Layout"]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+alignment = 1
+
+[node name="FixButton" type="Button" parent="Layout/Buttons"]
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_minimum_size = Vector2(420, 90)
+theme_override_font_sizes/font_size = 30
+text = "Corriger les erreurs"
+visible = false
+script = ExtResource("6")
+color = Color(1, 0.4196, 0.4549, 1)
+
+[node name="ButtonPressAnimation" type="Node" parent="Layout/Buttons/FixButton"]
+script = ExtResource("7")
+
+[node name="NextButton" type="Button" parent="Layout/Buttons"]
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_minimum_size = Vector2(320, 90)
+theme_override_font_sizes/font_size = 34
+text = "Valider"
+visible = false
+script = ExtResource("6")
+color = Color(0.4196, 0.8471, 0.3529, 1)
+icon_right = "next"
+sparkles = true
+shine = true
+
+[node name="ButtonPressAnimation" type="Node" parent="Layout/Buttons/NextButton"]
+script = ExtResource("7")
+
+[node name="Keyboard" parent="Layout" instance=ExtResource("8")]
+layout_mode = 2
+
+[editable path="Layout/HintPanel"]
+[editable path="Layout/SentencePanel"]

@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://2oc8j2w7dxil"]
+
+[ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/mini_games/memo/memo_question.gd" id="1_ynnkd"]
+[ext_resource type="Texture2D" uid="uid://37kg462l5swt" path="res://content/images/cellule.svg" id="2_vu5rp"]
+[ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/mini_games/memo/memo_data.gd" id="3_jljcf"]
+
+[sub_resource type="Resource" id="Resource_w5410"]
+script = ExtResource("1_ynnkd")
+question = "Quelle est l'unité de base du vivant ?"
+answers = PackedStringArray("L\'atome", "La cellule", "L\'organe", "Le tissu")
+correct_index = 1
+image = ExtResource("2_vu5rp")
+
+[sub_resource type="Resource" id="Resource_yq71h"]
+script = ExtResource("1_ynnkd")
+question = "Où se trouve l'ADN chez les eucaryotes ?"
+answers = PackedStringArray("Dans le noyau", "Dans la membrane", "Dans la vacuole", "Dans la paroi")
+image = ExtResource("2_vu5rp")
+
+[sub_resource type="Resource" id="Resource_imwcr"]
+script = ExtResource("1_ynnkd")
+question = "Quel organite produit l'énergie de la cellule ?"
+answers = PackedStringArray("Le ribosome", "Le noyau", "La mitochondrie", "La vacuole")
+correct_index = 2
+
+[resource]
+script = ExtResource("3_jljcf")
+questions = Array[ExtResource("1_ynnkd")]([SubResource("Resource_w5410"), SubResource("Resource_yq71h"), SubResource("Resource_imwcr")])
+theme_title = "La cellule"

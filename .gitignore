@@ -1,2 +1,5 @@
 .godot/
 *.import.tmp
+
+# Rapports gdUnit4
+/reports/

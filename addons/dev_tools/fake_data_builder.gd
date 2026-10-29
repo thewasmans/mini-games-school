@@ -1,19 +1,9 @@
 @tool
 class_name FakeDataBuilder
 extends RefCounted
-## Génère les données de test (data/game_data.tres + data/minigames/*.tres).
-## ATTENTION : écrase data/game_data.tres. À lancer une fois, puis édite les données dans l'Inspector.
-##
-## Projet > Outils > Outils du jeu > Régénérer les données de test, ou :
-##   godot --headless --path . --script res://addons/dev_tools/cli.gd -- fake_data
-##
-## Couverture des features :
-## - Primaire : une seule année (P3) -> le menu des années est sauté ; une matière sans level.
-## - Secondaire : S1 et S4 jouables, S2 renseignée mais vide, S3/S5/S6 vides -> « Bientôt disponible ».
-## - Supérieur : aucun contenu -> bouton désactivé.
-## - Les 3 mini-jeux, avec et sans image de quiz, et un chemin de 5 levels (serpent sur 2 rangées).
 
-const OUT := "res://data/minigames/"
+const DATA_DIR := "res://data/"
+const STUDY_FOLDERS: Array[String] = ["primaire", "secondaire", "superieur"]
 const DATA_PATH := "res://data/game_data.tres"
 
 
@@ -26,18 +16,18 @@ func _build() -> Error:
 
 	data.primary_3 = _year("P3", [
 		_subject("Mathématiques", [
-			_quiz("P3", "Les tables de multiplication", [
+			_quiz("Les tables de multiplication", [
 				["Combien font 3 × 4 ?", ["7", "12", "34", "9"], 1, ""],
 				["Combien font 5 × 5 ?", ["10", "55", "25", "20"], 2, ""],
 				["Combien font 2 × 9 ?", ["18", "11", "29", "16"], 0, ""],
 			]),
-			_crypto("P3", "Les formes géométriques", [
+			_crypto("Les formes géométriques", [
 				["Un carré a quatre côtés égaux.", "Une forme à 4 côtés identiques"],
 				["Un triangle a trois angles.", "Tri veut dire trois"],
 			], 0.35),
 		]),
 		_subject("Français", [
-			_crossword("P3", "Les animaux de la ferme", [
+			_crossword("Les animaux de la ferme", [
 				["Vache", "Elle donne du lait"],
 				["Cheval", "On peut le monter et il hennit"],
 				["Mouton", "Sa laine tient chaud"],
@@ -51,18 +41,18 @@ func _build() -> Error:
 
 	data.secondary_1 = _year("S1", [
 		_subject("Histoire", [
-			_quiz("S1", "La Révolution française", [
+			_quiz("La Révolution française", [
 				["Quel grand événement a marqué l'année 1789 en France ?", ["La prise de la Bastille", "L'invention du vaccin", "La découverte de l'Amérique", "Le couronnement de Charlemagne"], 0, ""],
 				["Quel roi régnait en France en 1789 ?", ["Louis XIV", "Napoléon", "Louis XVI", "Henri IV"], 2, ""],
 			]),
-			_crossword("S1", "Le Moyen Âge", [
+			_crossword("Le Moyen Âge", [
 				["Château", "Demeure fortifiée du seigneur"],
 				["Chevalier", "Guerrier à cheval au service d'un seigneur"],
 				["Donjon", "La plus haute tour du château"],
 				["Seigneur", "Il possède un fief"],
 				["Moine", "Il vit dans un monastère"],
 			]),
-			_crypto("S1", "Napoléon", [
+			_crypto("Napoléon", [
 				["Napoléon devient empereur en 1804.", "Sacre à Notre-Dame de Paris"],
 			], 0.4),
 		]),
@@ -70,7 +60,7 @@ func _build() -> Error:
 	data.secondary_2 = _year("S2", [])
 	data.secondary_4 = _year("S4", [
 		_subject("Biologie", [
-			_crossword("S4", "La cellule", [
+			_crossword("La cellule", [
 				["Noyau", "Il contient l'ADN de la cellule"],
 				["Membrane", "Elle entoure la cellule et la protège"],
 				["Cytoplasme", "Substance gélatineuse qui remplit la cellule"],
@@ -79,16 +69,16 @@ func _build() -> Error:
 				["Vacuole", "Réserve d'eau, très grande chez les végétaux"],
 				["Chloroplaste", "Siège de la photosynthèse"],
 			]),
-			_quiz("S4", "La cellule", [
+			_quiz("La cellule", [
 				["Quelle est l'unité de base du vivant ?", ["L'atome", "La cellule", "L'organe", "Le tissu"], 1, "res://content/images/cellule.svg"],
 				["Où se trouve l'ADN chez les eucaryotes ?", ["Dans le noyau", "Dans la membrane", "Dans la vacuole", "Dans la paroi"], 0, "res://content/images/cellule.svg"],
 				["Quel organite produit l'énergie de la cellule ?", ["Le ribosome", "Le noyau", "La mitochondrie", "La vacuole"], 2, ""],
 			]),
-			_crypto("S4", "La photosynthèse", [
+			_crypto("La photosynthèse", [
 				["Les plantes fabriquent leur matière grâce à la lumière du Soleil.", "Le principe de la photosynthèse"],
 				["La chlorophylle donne aux feuilles leur couleur verte.", "Un pigment vert"],
 			], 0.4),
-			_crossword("S4", "Le corps humain", [
+			_crossword("Le corps humain", [
 				["Cœur", "Il pompe le sang"],
 				["Poumon", "Organe de la respiration"],
 				["Estomac", "Il digère les aliments"],
@@ -97,16 +87,16 @@ func _build() -> Error:
 				["Rein", "Il filtre le sang et produit l'urine"],
 				["Squelette", "L'ensemble des os"],
 			]),
-			_quiz("S4", "La digestion", [
+			_quiz("La digestion", [
 				["Où commence la digestion ?", ["Dans l'estomac", "Dans la bouche", "Dans l'intestin", "Dans le foie"], 1, ""],
 			]),
 		]),
 		_subject("Chimie", [
-			_quiz("S4", "L'atome", [
+			_quiz("L'atome", [
 				["Qu'y a-t-il au centre d'un atome ?", ["Un électron", "Le noyau", "Un photon", "Rien"], 1, "res://content/images/atome.svg"],
 				["Quelle particule a une charge négative ?", ["Le proton", "Le neutron", "L'électron", "Le noyau"], 2, "res://content/images/atome.svg"],
 			]),
-			_crypto("S4", "Les états de la matière", [
+			_crypto("Les états de la matière", [
 				["L'eau peut être solide, liquide ou gazeuse.", "Glace, eau, vapeur"],
 			], 0.5),
 		]),
@@ -124,32 +114,46 @@ func _build() -> Error:
 	credits.partner_logos.assign([load("res://content/images/logo_partenaire.svg")])
 	data.credits = credits
 
-	data.take_over_path(DATA_PATH)
-	var err := ResourceSaver.save(data, DATA_PATH)
-	print("game_data.tres : ", error_string(err))
+	for study in STUDY_FOLDERS.size():
+		for year_index in GameData.YEARS_PER_STUDY:
+			var year := data.get_year(study, year_index)
+			if year != null:
+				_save_year(year, DATA_DIR.path_join(STUDY_FOLDERS[study]).path_join(_slug(year.name)))
+	return _save(data, DATA_PATH)
+
+
+func _save_year(year: SchoolYearData, year_dir: String) -> void:
+	for subject in year.subjects:
+		var subject_dir := year_dir.path_join(_slug(subject.name))
+		DirAccess.make_dir_recursive_absolute(subject_dir)
+		for level_index in subject.levels.size():
+			var level := subject.levels[level_index]
+			var prefix := "%02d_" % (level_index + 1)
+			_save(level.mini_game, subject_dir.path_join(prefix + _slug(level.mini_game.theme_title) + ".tres"))
+			_save(level, subject_dir.path_join("level_%02d.tres" % (level_index + 1)))
+		_save(subject, subject_dir.path_join(_slug(subject.name) + ".tres"))
+	_save(year, year_dir.path_join(_slug(year.name) + ".tres"))
+
+
+func _save(resource: Resource, path: String) -> Error:
+	DirAccess.make_dir_recursive_absolute(path.get_base_dir())
+	resource.take_over_path(path)
+	var err := ResourceSaver.save(resource, path)
+	print(path, " : ", error_string(err))
 	return err
 
 
-var _count := 0
-
-
-func _save(mg: MiniGameData) -> MiniGameData:
-	_count += 1
+func _slug(text: String) -> String:
 	var slug := ""
-	for c in mg.theme_title:
-		slug += TextUtil.normalize_char(c).to_lower() if TextUtil.is_letter(c) else "_"
+	for c in text:
+		slug += TextUtil.normalize_char(c).to_lower() if TextUtil.is_letter(c) or c.is_valid_int() else "_"
 	while slug.contains("__"):
 		slug = slug.replace("__", "_")
-	var path := OUT + "%02d_%s.tres" % [_count, slug.strip_edges().trim_suffix("_")]
-	mg.take_over_path(path)
-	var err := ResourceSaver.save(mg, path)
-	print(path, " : ", error_string(err))
-	return load(path) as MiniGameData
+	return slug.trim_prefix("_").trim_suffix("_")
 
 
-func _crossword(year: String, theme: String, pairs: Array) -> LevelData:
+func _crossword(theme: String, pairs: Array) -> LevelData:
 	var mg := CrosswordData.new()
-	mg.school_year = year
 	mg.theme_title = theme
 	for p in pairs:
 		var e := CrosswordEntry.new()
@@ -157,12 +161,11 @@ func _crossword(year: String, theme: String, pairs: Array) -> LevelData:
 		e.clue = p[1]
 		mg.entries.append(e)
 	CrosswordGenerator.generate(mg)
-	return _level(_save(mg))
+	return _level(mg)
 
 
-func _quiz(year: String, theme: String, rows: Array) -> LevelData:
+func _quiz(theme: String, rows: Array) -> LevelData:
 	var mg := MemoData.new()
-	mg.school_year = year
 	mg.theme_title = theme
 	for r in rows:
 		var q := MemoQuestion.new()
@@ -172,12 +175,11 @@ func _quiz(year: String, theme: String, rows: Array) -> LevelData:
 		if r[3] != "":
 			q.image = load(r[3]) as Texture2D
 		mg.questions.append(q)
-	return _level(_save(mg))
+	return _level(mg)
 
 
-func _crypto(year: String, theme: String, rows: Array, ratio: float) -> LevelData:
+func _crypto(theme: String, rows: Array, ratio: float) -> LevelData:
 	var mg := CryptoData.new()
-	mg.school_year = year
 	mg.theme_title = theme
 	mg.hidden_ratio = ratio
 	for r in rows:
@@ -185,7 +187,7 @@ func _crypto(year: String, theme: String, rows: Array, ratio: float) -> LevelDat
 		s.sentence = r[0]
 		s.hint = r[1]
 		mg.sentences.append(s)
-	return _level(_save(mg))
+	return _level(mg)
 
 
 func _level(mg: MiniGameData) -> LevelData:

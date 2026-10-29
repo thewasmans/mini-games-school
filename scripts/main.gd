@@ -1,7 +1,13 @@
+class_name Main
 extends Control
-## Point d'entrée : charge les données puis affiche l'interface.
+
+@export var game_manager: GameManager
+@export var debug_helper_prefab: PackedScene
 
 
 func _ready() -> void:
-	GameManager.initialize()
-	add_child(GameUI.new())
+	game_manager.initialize()
+	if OS.has_feature("editor"):
+		var debug_helper := debug_helper_prefab.instantiate() as DebugHelper
+		add_child(debug_helper)
+		debug_helper.initialize(game_manager)

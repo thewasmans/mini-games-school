@@ -1,6 +1,6 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://d3dhpvb4a4n5e"]
 
-[ext_resource type="Script" path="res://scripts/ui/panels/title_banner.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://cvy6ou0gd6fkk" path="res://scripts/ui/panels/title_banner.gd" id="1_script"]
 
 [node name="TitleBanner" type="PanelContainer"]
 theme_type_variation = &"BannerBlue"

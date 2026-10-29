@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SubjectData" format=3 uid="uid://b11dsjtudhe6k"]
+
+[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="1_8hhtk"]
+[ext_resource type="Resource" uid="uid://ry8ywehvgk5" path="res://data/primaire/p3/francais/level_01.tres" id="2_6hv0g"]
+[ext_resource type="Script" uid="uid://slefhuqrt8qe" path="res://scripts/data/subject_data.gd" id="3_wmaih"]
+
+[resource]
+script = ExtResource("3_wmaih")
+name = "Français"
+levels = Array[ExtResource("1_8hhtk")]([ExtResource("2_6hv0g")])

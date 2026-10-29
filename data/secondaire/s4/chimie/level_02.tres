@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://b08fv8i54lycn"]
+
+[ext_resource type="Resource" uid="uid://7um6hwde2s8s" path="res://data/secondaire/s4/chimie/02_les_etats_de_la_matiere.tres" id="1_a5gbs"]
+[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="2_w7g5i"]
+
+[resource]
+script = ExtResource("2_w7g5i")
+mini_game = ExtResource("1_a5gbs")

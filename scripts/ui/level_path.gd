@@ -1,7 +1,5 @@
 class_name LevelPath
 extends Control
-## Grille des levels : un chemin en serpent qui monte du bas vers le haut,
-## d'un château de départ à un château d'arrivée, reliés par des tracés lumineux.
 
 signal level_pressed(index: int)
 
@@ -12,7 +10,6 @@ const MARGIN_BOTTOM := 340.0
 const CASTLE_SCALE := 62.0
 
 var nodes: Array[LevelNode] = []
-## 0..1 : progression du tracé lumineux vers le level fraîchement débloqué.
 var unlock_glow := 1.0
 var unlock_index := -1
 
@@ -21,33 +18,51 @@ var _needed_height := 0.0
 var _all_done := false
 
 
-func _init(levels: Array[LevelData], key: String) -> void:
-	size_flags_horizontal = SIZE_EXPAND_FILL
-	var rows := ceili(levels.size() / float(COLUMNS))
-	_needed_height = MARGIN_TOP + MARGIN_BOTTOM + maxi(rows - 1, 0) * ROW_HEIGHT
-	custom_minimum_size = Vector2(0, _needed_height)
-	var selected := GameState.get_selected(key)
-	_all_done = levels.size() > 0 and GameState.completed_count(key) >= levels.size()
-	for i in levels.size():
-		var mg := levels[i].mini_game
-		var kind := "crossword" if mg is CrosswordData else ("memo" if mg is MemoData else "crypto")
-		var title := mg.theme_title if mg.theme_title != "" else mg.get_kind_name()
-		var node := LevelNode.new(i, title, kind)
-		if not GameState.is_unlocked(key, i):
-			node.state = LevelNode.State.LOCKED
-		elif i == selected:
-			node.state = LevelNode.State.CURRENT
-		elif GameState.is_completed(key, i):
-			node.state = LevelNode.State.DONE
-		else:
-			node.state = LevelNode.State.OPEN
-		node.pressed.connect(func() -> void: level_pressed.emit(i))
-		add_child(node)
-		nodes.append(node)
+@export var level_node_prefab: PackedScene
+
+
+func _ready() -> void:
 	resized.connect(_layout)
 
 
-## Le chemin part toujours du bas, même quand il y a peu de levels.
+func build(levels: Array[LevelData], game_state: GameState) -> void:
+	for node in nodes:
+		remove_child(node)
+		node.queue_free()
+	nodes.clear()
+	unlock_index = -1
+	unlock_glow = 1.0
+	var rows := ceili(levels.size() / float(COLUMNS))
+	_needed_height = MARGIN_TOP + MARGIN_BOTTOM + maxi(rows - 1, 0) * ROW_HEIGHT
+	custom_minimum_size.y = _needed_height
+	var completed_count := 0
+	for level_index in levels.size():
+		var mini_game := levels[level_index].mini_game
+		var node := level_node_prefab.instantiate() as LevelNode
+		node.setup(level_index, mini_game.theme_title if mini_game.theme_title != "" else mini_game.get_kind_name(), mini_game.get_kind_id())
+		if not game_state.is_level_unlocked(level_index):
+			node.state = LevelNode.State.LOCKED
+		elif level_index == game_state.current_level:
+			node.state = LevelNode.State.CURRENT
+		elif game_state.is_level_completed(level_index):
+			node.state = LevelNode.State.DONE
+		else:
+			node.state = LevelNode.State.OPEN
+		if game_state.is_level_completed(level_index):
+			completed_count += 1
+		node.pressed.connect(level_pressed.emit.bind(level_index))
+		add_child(node)
+		nodes.append(node)
+	_all_done = levels.size() > 0 and completed_count >= levels.size()
+	_layout()
+
+
+func prepare_unlock(level_index: int) -> void:
+	nodes[level_index].state = LevelNode.State.LOCKED
+	unlock_index = level_index
+	unlock_glow = 0.0
+
+
 func fit_height(visible_height: float) -> void:
 	custom_minimum_size.y = maxf(_needed_height, visible_height)
 
@@ -59,12 +74,10 @@ func node_center(i: int) -> Vector2:
 		col = COLUMNS - 1 - col
 	var xs: Array[float] = [0.2, 0.5, 0.8]
 	var y := size.y - MARGIN_BOTTOM - row * ROW_HEIGHT
-	# Léger décalage vertical pour casser l'alignement
 	y -= (col - 1) * 30.0 * (1 if row % 2 == 0 else -1)
 	return Vector2(size.x * xs[col], y)
 
 
-## Point d'ancrage : -1 = château de départ, nodes.size() = château d'arrivée.
 func _anchor(i: int) -> Vector2:
 	if i < 0:
 		return Vector2(size.x * 0.42, size.y - MARGIN_BOTTOM + 215)
@@ -109,7 +122,6 @@ func _draw() -> void:
 	if _all_done:
 		draw_circle(end + Vector2(0, -40), 130, Color(1, 0.9, 0.4, 0.12 + 0.06 * sin(_t * 3.0)))
 	if has_theme_icon("castle_start", "LevelPath") and has_theme_icon("castle_end", "LevelPath"):
-		# Sprites du thème : le bas du sprite (l'herbe) se pose sur le point d'ancrage.
 		UISkin.draw_fit(self, get_theme_icon("castle_start", "LevelPath"), start + Vector2(0, -50), 190)
 		UISkin.draw_fit(self, get_theme_icon("castle_end", "LevelPath"), end + Vector2(0, -50), 210, Color.WHITE if _all_done else Color(0.75, 0.75, 0.85))
 	else:
@@ -136,12 +148,10 @@ func _draw_glow(pts: PackedVector2Array, amount: float) -> void:
 	draw_polyline(part, Color(0.4, 0.9, 1.0, 0.35), 20, true)
 	draw_polyline(part, Color("7ff0ff"), 10, true)
 	draw_polyline(part, Color(1, 1, 1, 0.9), 4, true)
-	# Petite lueur qui voyage le long du tracé
 	var k := int(fposmod(_t * 0.6, 1.0) * (part.size() - 1))
 	UIDraw.sparkle(self, part[k], 9.0, Color(1, 1, 1, 0.9))
 
 
-## Anime le tracé et le cadenas du level qui vient d'être débloqué.
 func play_unlock(i: int) -> void:
 	if i < 0 or i >= nodes.size():
 		return

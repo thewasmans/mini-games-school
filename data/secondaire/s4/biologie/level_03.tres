@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://ba12ewrqvndvb"]
+
+[ext_resource type="Resource" uid="uid://dajbkkdfq1yu6" path="res://data/secondaire/s4/biologie/03_la_photosynthese.tres" id="1_2we8c"]
+[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="2_idtia"]
+
+[resource]
+script = ExtResource("2_idtia")
+mini_game = ExtResource("1_2we8c")

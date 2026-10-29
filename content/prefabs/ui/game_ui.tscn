@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://druqtbjs8mfxt"]
+
+[ext_resource type="Script" uid="uid://cvsd1uql73bqu" path="res://scripts/ui/game_ui.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://behw45heocg6y" path="res://content/prefabs/ui/menus/menu_start_ui.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://bx273j8ruj4qh" path="res://content/prefabs/ui/menus/menu_study_levels_ui.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://h0kbe5ttekua" path="res://content/prefabs/ui/menus/menu_school_years_ui.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://wan6eun8r2o4" path="res://content/prefabs/ui/menus/menu_subjects_ui.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://cye0ydonx6m0l" path="res://content/prefabs/ui/menus/menu_levels_ui.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://c2loo0gttoung" path="res://content/prefabs/ui/menus/menu_credits_ui.tscn" id="7"]
+
+[node name="GameUI" type="Control" node_paths=PackedStringArray("menu_start", "menu_study_levels", "menu_school_years", "menu_subjects", "menu_levels", "menu_credits")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1")
+menu_start = NodePath("MenuStartUI")
+menu_study_levels = NodePath("MenuStudyLevelsUI")
+menu_school_years = NodePath("MenuSchoolYearsUI")
+menu_subjects = NodePath("MenuSubjectsUI")
+menu_levels = NodePath("MenuLevelsUI")
+menu_credits = NodePath("MenuCreditsUI")
+
+[node name="MenuStartUI" parent="." instance=ExtResource("2")]
+layout_mode = 1
+
+[node name="MenuStudyLevelsUI" parent="." instance=ExtResource("3")]
+layout_mode = 1
+
+[node name="MenuSchoolYearsUI" parent="." instance=ExtResource("4")]
+layout_mode = 1
+
+[node name="MenuSubjectsUI" parent="." instance=ExtResource("5")]
+layout_mode = 1
+
+[node name="MenuLevelsUI" parent="." instance=ExtResource("6")]
+layout_mode = 1
+
+[node name="MenuCreditsUI" parent="." instance=ExtResource("7")]
+layout_mode = 1

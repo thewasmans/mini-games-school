@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://dkkhre3mlrgky"]
+
+[ext_resource type="Script" uid="uid://c6dfqu8xsoual" path="res://scripts/ui/crossword_ui.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://3hl68sx72ewd" path="res://content/prefabs/ui/mini_games/crossword_cell.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://dlwcuux7dlrik" path="res://content/prefabs/ui/panels/titled_panel.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://c5347yer7gwac" path="res://content/prefabs/ui/panels/pill.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://taellq4c8j8o" path="res://content/prefabs/ui/panels/on_screen_keyboard.tscn" id="5"]
+
+[node name="CrosswordUI" type="Control" node_paths=PackedStringArray("clue_panel", "clue_number_label", "clue_direction_pill", "clue_text_label", "grid_area", "keyboard")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+clue_panel = NodePath("Layout/CluePanel")
+clue_number_label = NodePath("Layout/CluePanel/Layout/Inner/Content/ClueRow/NumberLabel")
+clue_direction_pill = NodePath("Layout/CluePanel/Layout/Header/DirectionPill")
+clue_text_label = NodePath("Layout/CluePanel/Layout/Inner/Content/ClueRow/TextLabel")
+grid_area = NodePath("Layout/Board")
+keyboard = NodePath("Layout/Keyboard")
+cell_prefab = ExtResource("2")
+
+[node name="Layout" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 14
+
+[node name="CluePanel" parent="Layout" instance=ExtResource("3")]
+layout_mode = 2
+title = "Indice"
+
+[node name="DirectionPill" parent="Layout/CluePanel/Layout/Header" instance=ExtResource("4")]
+layout_mode = 2
+text = "→  HORIZONTAL"
+
+[node name="ClueRow" type="HBoxContainer" parent="Layout/CluePanel/Layout/Inner/Content"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="NumberLabel" type="Label" parent="Layout/CluePanel/Layout/Inner/Content/ClueRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(1, 0.8235, 0.2471, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+text = "1."
+horizontal_alignment = 1
+vertical_alignment = 0
+
+[node name="TextLabel" type="Label" parent="Layout/CluePanel/Layout/Inner/Content/ClueRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Définition du mot"
+horizontal_alignment = 0
+vertical_alignment = 1
+custom_minimum_size = Vector2(0, 76)
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="Board" type="Panel" parent="Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_type_variation = &"Board"
+
+[node name="Keyboard" parent="Layout" instance=ExtResource("5")]
+layout_mode = 2
+
+[editable path="Layout/CluePanel"]

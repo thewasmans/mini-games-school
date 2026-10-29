@@ -1,203 +1,116 @@
 class_name MemoUI
 extends MiniGameUI
-## Quiz : une question, une image et 4 réponses. Une mauvaise réponse se désactive,
-## la bonne fait passer à la question suivante.
 
-const ANSWER_COLORS: Array[Color] = [Color("ffa62b"), Color("6bd85a"), Color("c06cf0"), Color("ffd84a")]
 const LETTERS := "ABCD"
+
+@export var question_card: FramePanel
+@export var question_label: Label
+@export var progress_ring: ProgressRing
+@export var image_box: Control
+@export var answer_buttons: Array[JuicyButton] = []
+@export var default_image_prefab: PackedScene
+
+@export_group("Réglages")
+## Couleur de chaque bouton de réponse (A, B, C, D).
+@export var answer_colors: Array[Color] = [Color("ffa62b"), Color("6bd85a"), Color("c06cf0"), Color("ffd84a")]
+## Couleur d'une mauvaise réponse.
+@export var wrong_color := Color("ff6b74")
+## Couleur de la bonne réponse.
+@export var right_color := Color("7be86a")
+## Temps pendant lequel la bonne réponse reste affichée avant la question suivante, en secondes.
+@export var next_question_delay := 1.0
 
 var _data: MemoData
 var _index := 0
 var _locked := false
-
-var _card: FramePanel
-var _ring: ProgressRing
-var _question: Label
-var _hint: Label
-var _image_box: Control
-var _answers_grid: GridContainer
-var _answers: Array[JuicyButton] = []
 var _t := 0.0
 
 
-func setup(data: MiniGameData) -> void:
-	_data = data as MemoData
-	var root := VBoxContainer.new()
-	root.set_anchors_and_offsets_preset(PRESET_FULL_RECT)
-	root.add_theme_constant_override("separation", 18)
-	add_child(root)
-
-	# Carte de question : texte à gauche, anneau de progression à droite.
-	_card = FramePanel.create()
-	root.add_child(_card)
-	var card_box := _card.content
-	var row := HBoxContainer.new()
-	row.add_theme_constant_override("separation", 14)
-	card_box.add_child(row)
-	_question = UIStyle.label("", 34)
-	_question.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
-	_question.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_question.size_flags_horizontal = SIZE_EXPAND_FILL
-	_question.custom_minimum_size = Vector2(0, 110)
-	row.add_child(_question)
-	_ring = ProgressRing.new()
-	_ring.size_flags_vertical = SIZE_SHRINK_CENTER
-	row.add_child(_ring)
-	_hint = UIStyle.label("", 22, UIStyle.YELLOW, 6)
-	_hint.visible = false
-	card_box.add_child(_hint)
-
-	_image_box = Control.new()
-	_image_box.size_flags_vertical = SIZE_EXPAND_FILL
-	_image_box.custom_minimum_size = Vector2(0, 220)
-	root.add_child(_image_box)
-
-	_answers_grid = GridContainer.new()
-	_answers_grid.columns = 2
-	_answers_grid.add_theme_constant_override("h_separation", 14)
-	_answers_grid.add_theme_constant_override("v_separation", 14)
-	root.add_child(_answers_grid)
-	for k in 4:
-		var b := JuicyButton.new("", ANSWER_COLORS[k], 28)
-		b.alignment = HORIZONTAL_ALIGNMENT_LEFT
-		b.padding = 20
-		b.custom_minimum_size = Vector2(0, 130)
-		b.size_flags_horizontal = SIZE_EXPAND_FILL
-		b.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		b.sound = ""
-		b.pressed.connect(_on_answer.bind(k))
-		_answers_grid.add_child(b)
-		_answers.append(b)
-
-
 func _ready() -> void:
-	super()
+	for answer_index in answer_buttons.size():
+		answer_buttons[answer_index].pressed.connect(_on_answer.bind(answer_index))
+
+
+func initialize(mini_game_data: MiniGameData) -> void:
+	_data = mini_game_data as MemoData
+	progress_changed.emit(0, _data.questions.size())
 	_show_question(0)
 
 
 func _process(delta: float) -> void:
 	_t += delta
-	if _image_box.get_child_count() > 0:
-		var img: Control = _image_box.get_child(0)
-		img.position.y = sin(_t * 1.5) * 6
+	if image_box.get_child_count() > 0:
+		var image: Control = image_box.get_child(0)
+		image.position.y = sin(_t * 1.5) * 6
 
 
-func _show_question(i: int) -> void:
-	_index = i
+func _show_question(question_index: int) -> void:
+	_index = question_index
 	_locked = false
-	var q := _data.questions[i]
-	_ring.set_progress(i + 1, _data.questions.size())
-	_question.text = q.question
-	_hint.text = "Réponse : %s. %s" % [LETTERS[q.correct_index], q.answers[q.correct_index] if q.correct_index < q.answers.size() else "?"]
-	_hint.visible = GameManager.debug_show_hints
+	var question := _data.questions[question_index]
+	progress_ring.set_progress(question_index + 1, _data.questions.size())
+	question_label.text = question.question
+	question_card.modulate.a = 1.0
 
-	for child in _image_box.get_children():
+	for child in image_box.get_children():
 		child.queue_free()
-	var img: Control
-	if q.image != null:
-		var tr := TextureRect.new()
-		tr.texture = q.image
-		tr.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-		tr.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-		img = tr
+	var image: Control
+	if question.image != null:
+		var texture_rect := TextureRect.new()
+		texture_rect.texture = question.image
+		texture_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		texture_rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		image = texture_rect
 	else:
-		img = DefaultQuizImage.new()
-	img.set_anchors_and_offsets_preset(PRESET_FULL_RECT)
-	_image_box.add_child(img)
-	UIFeedback.pop_in(img, 0.1, 0.4)
+		image = default_image_prefab.instantiate()
+	image_box.add_child(image)
+	image.set_anchors_and_offsets_preset(PRESET_FULL_RECT)
+	UIFeedback.pop_in(image, 0.1, 0.4)
 
-	for k in 4:
-		var b := _answers[k]
-		b.visible = k < q.answers.size()
-		if not b.visible:
+	for answer_index in answer_buttons.size():
+		var button := answer_buttons[answer_index]
+		button.visible = answer_index < question.answers.size()
+		if not button.visible:
 			continue
-		b.text = "%s. %s" % [LETTERS[k], q.answers[k]]
-		b.color = ANSWER_COLORS[k]
-		b.disabled = false
-		UIFeedback.pop_in(b, 0.15 + k * 0.07, 0.5)
-	UIFeedback.pop_in(_card, 0.0, 0.85)
-
-	if GameManager.debug_auto_fill:
-		debug_autofill()
+		button.text = "%s. %s" % [LETTERS[answer_index], question.answers[answer_index]]
+		button.color = answer_colors[answer_index]
+		button.sparkles = false
+		button.disabled = false
+		UIFeedback.pop_in(button, 0.15 + answer_index * 0.07, 0.5)
+	UIFeedback.pop_in(question_card, 0.0, 0.85)
 
 
-func _on_answer(k: int) -> void:
+func _on_answer(answer_index: int) -> void:
 	if _locked or is_completed:
 		return
-	var q := _data.questions[_index]
-	var b := _answers[k]
-	if k != q.correct_index:
-		b.color = Color("ff6b74")
-		b.disabled = true
-		UIFeedback.shake(b)
+	var question := _data.questions[_index]
+	var button := answer_buttons[answer_index]
+	if answer_index != question.correct_index:
+		button.color = wrong_color
+		button.disabled = true
+		UIFeedback.shake(button)
 		Sfx.play("error")
 		return
 
 	_locked = true
-	b.color = Color("7be86a")
-	b.sparkles = true
-	UIFeedback.punch(b, 0.15, 0.6)
+	button.color = right_color
+	button.sparkles = true
+	UIFeedback.punch(button, 0.15, 0.6)
 	Sfx.play("good")
-	Confetti.sparkle(self, b.global_position + b.size / 2, 22)
-	UIFeedback.float_text(b, "Bravo !", Color.WHITE, 46)
-	progress_changed.emit((_index + 1) / float(_data.questions.size()))
-	await _wait(1.0)
+	Confetti.sparkle(self, button.global_position + button.size / 2, 22)
+	UIFeedback.float_text(button, "Bravo !", Color.WHITE, 46)
+	progress_changed.emit(_index + 1, _data.questions.size())
+	await _wait(next_question_delay)
 	if not is_inside_tree():
 		return
 	if _index + 1 >= _data.questions.size():
 		_finish()
 		return
-	# Les réponses s'envolent, la question suivante arrive.
 	var tw := create_tween().set_parallel()
-	for a in _answers:
-		tw.tween_property(a, "scale", Vector2.ZERO, 0.22).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
-	tw.tween_property(_card, "modulate:a", 0.0, 0.2)
+	for answer in answer_buttons:
+		tw.tween_property(answer, "scale", Vector2.ZERO, 0.22).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+	tw.tween_property(question_card, "modulate:a", 0.0, 0.2)
 	await tw.finished
 	if is_inside_tree():
 		Sfx.play("whoosh")
 		_show_question(_index + 1)
-
-
-func set_show_hints(on: bool) -> void:
-	if _hint:
-		_hint.visible = on
-
-
-func debug_autofill() -> void:
-	var i := _index
-	await _wait(0.6)
-	if is_inside_tree() and i == _index and not _locked:
-		_on_answer(_data.questions[i].correct_index)
-
-
-## Anneau de progression (question n / total), façon minuteur.
-class ProgressRing extends Control:
-	var _value := 0.0
-	var _shown := 0.0
-	var _text := ""
-
-	func _init() -> void:
-		custom_minimum_size = Vector2(118, 118)
-
-	func set_progress(current: int, total: int) -> void:
-		_text = "%d/%d" % [current, total]
-		_value = current / float(maxi(total, 1))
-		var tw := create_tween()
-		tw.tween_method(func(v: float) -> void:
-			_shown = v
-			queue_redraw(), _shown, _value, 0.6).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
-
-	func _draw() -> void:
-		var c := size / 2
-		var r := minf(size.x, size.y) / 2 - 8
-		draw_circle(c, r + 6, Color("0f1d52"))
-		draw_circle(c, r - 8, Color("13235e"))
-		draw_arc(c, r - 1, 0, TAU, 48, Color(1, 1, 1, 0.12), 12, true)
-		var start := -PI / 2
-		var steps := 24
-		for i in steps:
-			var t0 := float(i) / steps * _shown
-			var t1 := float(i + 1) / steps * _shown
-			var col := Color("ffd23f").lerp(Color("ff5fa8"), t0).lerp(Color("4fb6ff"), maxf(0, t0 - 0.5))
-			draw_arc(c, r - 1, start + TAU * t0, start + TAU * t1 + 0.01, 4, col, 12, true)
-		UIStyle.draw_text(self, _text, c, int(r * 0.62), Color("ffe066"), 8)

@@ -1,8 +1,6 @@
 @tool
 class_name CsvMiniGameParser
 extends RefCounted
-## Lit un CSV et construit la ressource du mini-jeu correspondant.
-## Détection : en-tête (mot / question / phrase), ligne « ratio », nombre de colonnes.
 
 const IMAGE_DIR := "res://content/images"
 const IMAGE_EXTENSIONS: Array[String] = ["png", "jpg", "jpeg", "webp", "svg"]
@@ -12,7 +10,6 @@ const KIND_QUIZ := "Quiz"
 const KIND_CRYPTO := "Cryptogramme"
 
 
-## Renvoie { ok, error, kind, resource, entries: Array[String], warnings: Array[String] }
 static func parse(path: String) -> Dictionary:
 	var result := {"ok": false, "error": "", "kind": "", "resource": null,
 		"entries": [], "warnings": []}
@@ -36,14 +33,12 @@ static func parse(path: String) -> Dictionary:
 	for line in lines:
 		rows.append(_split(line, sep))
 
-	# Ratio optionnel (cryptogramme)
 	var ratio := -1.0
 	for row in rows.duplicate():
 		if row[0].strip_edges().to_lower() == "ratio":
 			ratio = float(row[1]) if row.size() > 1 else 0.4
 			rows.erase(row)
 
-	# En-tête
 	var kind := ""
 	var first := rows[0][0].strip_edges().to_lower() if not rows.is_empty() else ""
 	if first in ["mot", "mots", "word"]:
@@ -187,7 +182,6 @@ static func _answer_index(value: String, answers: PackedStringArray) -> int:
 	return -1
 
 
-## Cherche une image par nom (avec ou sans extension) dans IMAGE_DIR et ses sous-dossiers.
 static func find_image(image_name: String) -> Texture2D:
 	if image_name.begins_with("res://"):
 		return load(image_name) as Texture2D if ResourceLoader.exists(image_name) else null
@@ -212,7 +206,6 @@ static func _search(dir_path: String, wanted: String) -> String:
 	return ""
 
 
-## Découpe une ligne CSV en respectant les guillemets ("a;b" reste un seul champ).
 static func _split(line: String, sep: String) -> PackedStringArray:
 	var out := PackedStringArray()
 	var field := ""

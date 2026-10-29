@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SubjectData" format=3 uid="uid://bxx5t7cvk4c7k"]
+
+[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="1_gu6t6"]
+[ext_resource type="Resource" uid="uid://cuah74ou2388i" path="res://data/secondaire/s4/biologie/level_01.tres" id="2_7drjp"]
+[ext_resource type="Resource" uid="uid://ddvswlxkxtttm" path="res://data/secondaire/s4/biologie/level_02.tres" id="3_mvh8f"]
+[ext_resource type="Resource" uid="uid://ba12ewrqvndvb" path="res://data/secondaire/s4/biologie/level_03.tres" id="4_bderj"]
+[ext_resource type="Resource" uid="uid://c770tlifccscq" path="res://data/secondaire/s4/biologie/level_04.tres" id="5_eh448"]
+[ext_resource type="Resource" uid="uid://ba2q2ct4q5c6t" path="res://data/secondaire/s4/biologie/level_05.tres" id="6_mk6f4"]
+[ext_resource type="Script" uid="uid://slefhuqrt8qe" path="res://scripts/data/subject_data.gd" id="7_3oj24"]
+
+[resource]
+script = ExtResource("7_3oj24")
+name = "Biologie"
+levels = Array[ExtResource("1_gu6t6")]([ExtResource("2_7drjp"), ExtResource("3_mvh8f"), ExtResource("4_bderj"), ExtResource("5_eh448"), ExtResource("6_mk6f4")])

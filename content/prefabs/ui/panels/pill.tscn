@@ -1,6 +1,6 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://c5347yer7gwac"]
 
-[ext_resource type="Script" path="res://scripts/ui/panels/pill.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://3q3xcjpiu3hq" path="res://scripts/ui/panels/pill.gd" id="1_script"]
 
 [node name="Pill" type="PanelContainer"]
 theme_type_variation = &"Pill"

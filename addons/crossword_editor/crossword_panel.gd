@@ -1,6 +1,5 @@
 @tool
 extends VBoxContainer
-## Panneau de l'onglet Crossword : ouvrir, régénérer, inspecter la grille.
 
 const CrosswordPreview := preload("res://addons/crossword_editor/crossword_preview.gd")
 
@@ -134,8 +133,6 @@ func _regenerate() -> void:
 		push_warning("Mot croisé intégré à une autre ressource : enregistre la ressource parente (Ctrl+S).")
 	_refresh()
 
-
-# --- Glisser-déposer -------------------------------------------------------
 
 func _can_drop_data(_pos: Vector2, drag: Variant) -> bool:
 	return _from_drag(drag) != null

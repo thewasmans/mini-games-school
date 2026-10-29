@@ -1,7 +1,6 @@
 @tool
 class_name CrosswordData
 extends MiniGameData
-## Mots croisés. La grille est calculée dans l'éditeur (onglet Crossword ou import CSV).
 
 @export var entries: Array[CrosswordEntry] = []
 
@@ -12,6 +11,10 @@ extends MiniGameData
 
 func get_kind_name() -> String:
 	return "Mots croisés"
+
+
+func get_kind_id() -> String:
+	return "crossword"
 
 
 func is_generated() -> bool:

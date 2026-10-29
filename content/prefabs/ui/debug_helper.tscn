@@ -1,12 +1,18 @@
-[gd_scene format=3 uid="uid://c6w0drthei6ig"]
+[gd_scene format=3 uid="uid://bc5ge57cytkgg"]
 
-[ext_resource type="Script" uid="uid://c5mpd2nsq5nqc" path="res://scripts/debug/debug_helper.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://c5mpd2nsq5nqc" path="res://scripts/helpers/debug_helper.gd" id="1"]
 
-[node name="DebugHelper" type="CanvasLayer" unique_id=907629242]
+[node name="DebugHelper" type="CanvasLayer" node_paths=PackedStringArray("bar", "auto_fill_check", "auto_validate_check", "show_hints_check", "unlock_all_button", "hint_label")]
 layer = 90
-script = ExtResource("1_script")
+script = ExtResource("1")
+bar = NodePath("Bar")
+auto_fill_check = NodePath("Bar/Row/AutoFill")
+auto_validate_check = NodePath("Bar/Row/AutoValidate")
+show_hints_check = NodePath("Bar/Row/ShowHints")
+unlock_all_button = NodePath("Bar/Row/UnlockAll")
+hint_label = NodePath("Bar/Row/HintLabel")
 
-[node name="Bar" type="PanelContainer" parent="." unique_id=482589463]
+[node name="Bar" type="PanelContainer" parent="."]
 visible = false
 anchors_preset = 12
 anchor_top = 1.0
@@ -15,30 +21,34 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Row" type="HFlowContainer" parent="Bar" unique_id=330816350]
+[node name="Row" type="HFlowContainer" parent="Bar"]
 layout_mode = 2
 
-[node name="Title" type="Label" parent="Bar/Row" unique_id=425529784]
+[node name="Title" type="Label" parent="Bar/Row"]
 layout_mode = 2
 text = "Debug (F1)"
 
-[node name="AutoFill" type="CheckBox" parent="Bar/Row" unique_id=1980904845]
+[node name="AutoFill" type="CheckBox" parent="Bar/Row"]
 layout_mode = 2
 focus_mode = 0
 text = "Auto select / prefill"
 
-[node name="AutoValidate" type="CheckBox" parent="Bar/Row" unique_id=852555754]
+[node name="AutoValidate" type="CheckBox" parent="Bar/Row"]
 layout_mode = 2
 focus_mode = 0
 text = "Auto validate"
 
-[node name="ShowHints" type="CheckBox" parent="Bar/Row" unique_id=225071191]
+[node name="ShowHints" type="CheckBox" parent="Bar/Row"]
 layout_mode = 2
 focus_mode = 0
 text = "Show hints"
 
-[node name="UnlockAll" type="CheckBox" parent="Bar/Row" unique_id=755273114]
+[node name="UnlockAll" type="Button" parent="Bar/Row"]
 layout_mode = 2
-tooltip_text = "Effet visible au prochain affichage de la grille."
 focus_mode = 0
 text = "Unlock all levels"
+
+[node name="HintLabel" type="Label" parent="Bar/Row"]
+visible = false
+layout_mode = 2
+text = "Réponse :"

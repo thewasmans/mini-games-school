@@ -1,6 +1,5 @@
 @tool
 extends EditorPlugin
-## Onglet « Crossword » à côté de 2D, 3D, Script et AssetLib.
 
 const CrosswordPanel := preload("res://addons/crossword_editor/crossword_panel.gd")
 

@@ -1,7 +1,6 @@
 @tool
 class_name GameData
 extends Resource
-## Tout le contenu du jeu : un champ par année, regroupés par niveau d'études.
 
 const STUDY_NAMES: Array[String] = ["Primaire", "Secondaire", "Supérieur"]
 const YEAR_PREFIXES: Array[String] = ["P", "S", "Q"]
@@ -40,7 +39,6 @@ func get_year(study: int, index: int) -> SchoolYearData:
 	return get(YEAR_FIELDS[study] + str(index + 1)) as SchoolYearData
 
 
-## Nom de l'année, ou un nom automatique (P1, S2, Q3…) si le champ est vide ou sans nom.
 func get_year_name(study: int, index: int) -> String:
 	var year := get_year(study, index)
 	if year != null and not year.name.strip_edges().is_empty():
@@ -48,22 +46,12 @@ func get_year_name(study: int, index: int) -> String:
 	return YEAR_PREFIXES[study] + str(index + 1)
 
 
-## Index des années renseignées (champ non vide).
 func get_existing_years(study: int) -> Array[int]:
 	var out: Array[int] = []
 	for i in YEARS_PER_STUDY:
 		if get_year(study, i) != null:
 			out.append(i)
 	return out
-
-
-func count_study_levels(study: int) -> int:
-	var n := 0
-	for i in YEARS_PER_STUDY:
-		var year := get_year(study, i)
-		if year != null:
-			n += year.count_levels()
-	return n
 
 
 func get_subject(study: int, year: int, subject: int) -> SubjectData:

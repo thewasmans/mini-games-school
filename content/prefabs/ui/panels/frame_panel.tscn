@@ -1,6 +1,6 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://cc4xmcowli7qk"]
 
-[ext_resource type="Script" path="res://scripts/ui/panels/frame_panel.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://dvn68cgixp08n" path="res://scripts/ui/panels/frame_panel.gd" id="1_script"]
 
 [node name="FramePanel" type="PanelContainer"]
 theme_type_variation = &"PanelFrame"

@@ -1,12 +1,6 @@
 @tool
 class_name CrosswordGenerator
 extends RefCounted
-## Calcule la place des mots d'un CrosswordData. Utilisé dans l'éditeur uniquement
-## (onglet Crossword, import CSV) : en jeu, la grille est déjà calculée.
-##
-## Algorithme glouton déterministe : les mots les plus longs d'abord, chacun placé
-## là où il croise le plus de mots en gardant la grille compacte. Un mot qui ne
-## croise rien est posé à part, sous la grille (mot « isolé »).
 
 const H := 1
 const V := 2
@@ -30,7 +24,6 @@ static func generate(data: CrosswordData) -> void:
 	if words.is_empty():
 		return
 
-	# Tri stable : plus long d'abord, puis ordre de l'Inspector.
 	var order := {}
 	for i in words.size():
 		order[words[i]] = i
@@ -39,8 +32,8 @@ static func generate(data: CrosswordData) -> void:
 			return a.answer.length() > b.answer.length()
 		return order[a] < order[b])
 
-	var letters := {}  # Vector2i -> String
-	var dirs := {}     # Vector2i -> masque H | V
+	var letters := {}
+	var dirs := {}
 	var pending: Array[CrosswordEntry] = words.duplicate()
 	_place(letters, dirs, pending.pop_front(), Vector2i.ZERO, true)
 
@@ -55,7 +48,6 @@ static func generate(data: CrosswordData) -> void:
 			pending.erase(e)
 			progress = true
 
-	# Mots sans croisement possible : sous la grille, une ligne vide entre chaque.
 	for e in pending:
 		var b := _bounds(letters)
 		_place(letters, dirs, e, Vector2i(b.position.x, b.end.y + 1), true)
@@ -70,7 +62,6 @@ static func generate(data: CrosswordData) -> void:
 	data.emit_changed()
 
 
-## Mots isolés (aucun croisement) et cases dont les lettres se contredisent.
 static func analyze(data: CrosswordData) -> Dictionary:
 	var letters := {}
 	var owners := {}
@@ -130,7 +121,6 @@ static func _best_spot(letters: Dictionary, dirs: Dictionary, word: String) -> D
 	return best
 
 
-## Nombre de croisements si le mot tient à cet endroit, -1 sinon.
 static func _fit(letters: Dictionary, dirs: Dictionary, word: String, start: Vector2i, horizontal: bool) -> int:
 	var dir := Vector2i(1, 0) if horizontal else Vector2i(0, 1)
 	var perp := Vector2i(0, 1) if horizontal else Vector2i(1, 0)

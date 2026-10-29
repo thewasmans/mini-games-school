@@ -1,11 +1,138 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://taellq4c8j8o"]
 
-[ext_resource type="Script" path="res://scripts/ui/on_screen_keyboard.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://bj50bv0nfracr" path="res://scripts/ui/on_screen_keyboard.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://c0t2d3xrlwyhu" path="res://content/prefabs/ui/keyboard_key.tscn" id="2"]
 
-[node name="OnScreenKeyboard" type="PanelContainer"]
+[node name="OnScreenKeyboard" type="PanelContainer" node_paths=PackedStringArray("backspace_key")]
 theme_type_variation = &"PanelGlass"
-script = ExtResource("1_script")
+script = ExtResource("1")
+backspace_key = NodePath("Rows/Row3/Backspace")
 
 [node name="Rows" type="VBoxContainer" parent="."]
 layout_mode = 2
 theme_override_constants/separation = 8
+
+[node name="Row1" type="HBoxContainer" parent="Rows"]
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="A" parent="Rows/Row1" instance=ExtResource("2")]
+layout_mode = 2
+text = "A"
+
+[node name="Z" parent="Rows/Row1" instance=ExtResource("2")]
+layout_mode = 2
+text = "Z"
+
+[node name="E" parent="Rows/Row1" instance=ExtResource("2")]
+layout_mode = 2
+text = "E"
+
+[node name="R" parent="Rows/Row1" instance=ExtResource("2")]
+layout_mode = 2
+text = "R"
+
+[node name="T" parent="Rows/Row1" instance=ExtResource("2")]
+layout_mode = 2
+text = "T"
+
+[node name="Y" parent="Rows/Row1" instance=ExtResource("2")]
+layout_mode = 2
+text = "Y"
+
+[node name="U" parent="Rows/Row1" instance=ExtResource("2")]
+layout_mode = 2
+text = "U"
+
+[node name="I" parent="Rows/Row1" instance=ExtResource("2")]
+layout_mode = 2
+text = "I"
+
+[node name="O" parent="Rows/Row1" instance=ExtResource("2")]
+layout_mode = 2
+text = "O"
+
+[node name="P" parent="Rows/Row1" instance=ExtResource("2")]
+layout_mode = 2
+text = "P"
+
+[node name="Row2" type="HBoxContainer" parent="Rows"]
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="Q" parent="Rows/Row2" instance=ExtResource("2")]
+layout_mode = 2
+text = "Q"
+
+[node name="S" parent="Rows/Row2" instance=ExtResource("2")]
+layout_mode = 2
+text = "S"
+
+[node name="D" parent="Rows/Row2" instance=ExtResource("2")]
+layout_mode = 2
+text = "D"
+
+[node name="F" parent="Rows/Row2" instance=ExtResource("2")]
+layout_mode = 2
+text = "F"
+
+[node name="G" parent="Rows/Row2" instance=ExtResource("2")]
+layout_mode = 2
+text = "G"
+
+[node name="H" parent="Rows/Row2" instance=ExtResource("2")]
+layout_mode = 2
+text = "H"
+
+[node name="J" parent="Rows/Row2" instance=ExtResource("2")]
+layout_mode = 2
+text = "J"
+
+[node name="K" parent="Rows/Row2" instance=ExtResource("2")]
+layout_mode = 2
+text = "K"
+
+[node name="L" parent="Rows/Row2" instance=ExtResource("2")]
+layout_mode = 2
+text = "L"
+
+[node name="M" parent="Rows/Row2" instance=ExtResource("2")]
+layout_mode = 2
+text = "M"
+
+[node name="Row3" type="HBoxContainer" parent="Rows"]
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="W" parent="Rows/Row3" instance=ExtResource("2")]
+layout_mode = 2
+text = "W"
+
+[node name="X" parent="Rows/Row3" instance=ExtResource("2")]
+layout_mode = 2
+text = "X"
+
+[node name="C" parent="Rows/Row3" instance=ExtResource("2")]
+layout_mode = 2
+text = "C"
+
+[node name="V" parent="Rows/Row3" instance=ExtResource("2")]
+layout_mode = 2
+text = "V"
+
+[node name="B" parent="Rows/Row3" instance=ExtResource("2")]
+layout_mode = 2
+text = "B"
+
+[node name="N" parent="Rows/Row3" instance=ExtResource("2")]
+layout_mode = 2
+text = "N"
+
+[node name="Backspace" parent="Rows/Row3" instance=ExtResource("2")]
+custom_minimum_size = Vector2(124, 68)
+layout_mode = 2
+text = ""
+icon_kind = "backspace"

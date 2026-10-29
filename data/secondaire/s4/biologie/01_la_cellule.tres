@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://nxulfwe8bivx"]
+
+[ext_resource type="Script" uid="uid://6pk47pd5gtfx" path="res://scripts/mini_games/crossword/crossword_entry.gd" id="1_751ma"]
+[ext_resource type="Script" uid="uid://bu7s316sbdqky" path="res://scripts/mini_games/crossword/crossword_data.gd" id="2_uke67"]
+
+[sub_resource type="Resource" id="Resource_hcnap"]
+script = ExtResource("1_751ma")
+word = "Noyau"
+clue = "Il contient l'ADN de la cellule"
+answer = "NOYAU"
+x = 13
+y = 8
+placed = true
+number = 6
+
+[sub_resource type="Resource" id="Resource_q8hdm"]
+script = ExtResource("1_751ma")
+word = "Membrane"
+clue = "Elle entoure la cellule et la protège"
+answer = "MEMBRANE"
+x = 10
+y = 4
+horizontal = false
+placed = true
+number = 3
+
+[sub_resource type="Resource" id="Resource_xqpht"]
+script = ExtResource("1_751ma")
+word = "Cytoplasme"
+clue = "Substance gélatineuse qui remplit la cellule"
+answer = "CYTOPLASME"
+x = 3
+y = 2
+horizontal = false
+placed = true
+number = 2
+
+[sub_resource type="Resource" id="Resource_21tnh"]
+script = ExtResource("1_751ma")
+word = "Mitochondrie"
+clue = "La centrale énergétique de la cellule"
+answer = "MITOCHONDRIE"
+x = 3
+y = 10
+placed = true
+number = 7
+
+[sub_resource type="Resource" id="Resource_lbsfo"]
+script = ExtResource("1_751ma")
+word = "Ribosome"
+clue = "Il fabrique les protéines"
+answer = "RIBOSOME"
+y = 5
+placed = true
+number = 5
+
+[sub_resource type="Resource" id="Resource_sj524"]
+script = ExtResource("1_751ma")
+word = "Vacuole"
+clue = "Réserve d'eau, très grande chez les végétaux"
+answer = "VACUOLE"
+x = 14
+y = 4
+horizontal = false
+placed = true
+number = 4
+
+[sub_resource type="Resource" id="Resource_s2rfc"]
+script = ExtResource("1_751ma")
+word = "Chloroplaste"
+clue = "Siège de la photosynthèse"
+answer = "CHLOROPLASTE"
+x = 5
+horizontal = false
+placed = true
+number = 1
+
+[resource]
+script = ExtResource("2_uke67")
+entries = Array[ExtResource("1_751ma")]([SubResource("Resource_hcnap"), SubResource("Resource_q8hdm"), SubResource("Resource_xqpht"), SubResource("Resource_21tnh"), SubResource("Resource_lbsfo"), SubResource("Resource_sj524"), SubResource("Resource_s2rfc")])
+grid_width = 18
+grid_height = 12
+theme_title = "La cellule"

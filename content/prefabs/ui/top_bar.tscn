@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bxo54w63ssbon"]
+
+[ext_resource type="Script" uid="uid://ckoiqc8yqaq61" path="res://scripts/ui/top_bar.gd" id="1"]
+[ext_resource type="Script" uid="uid://c45v0m5ykanjk" path="res://scripts/ui/juicy_button.gd" id="2"]
+[ext_resource type="Script" uid="uid://c4sgyuaafswdq" path="res://scripts/ui/button_press_animation.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://d4isb4wtnq55b" path="res://content/prefabs/ui/panels/stars_pill.tscn" id="4"]
+
+[node name="TopBar" type="HBoxContainer" node_paths=PackedStringArray("back_button", "stars_pill", "sound_button")]
+theme_override_constants/separation = 14
+script = ExtResource("1")
+back_button = NodePath("BackButton")
+stars_pill = NodePath("Center/StarsPill")
+sound_button = NodePath("SoundButton")
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_minimum_size = Vector2(80, 80)
+script = ExtResource("2")
+color = Color(0.2392, 0.5176, 0.949, 1)
+icon_kind = "back"
+
+[node name="ButtonPressAnimation" type="Node" parent="BackButton"]
+script = ExtResource("3")
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="StarsPill" parent="Center" instance=ExtResource("4")]
+layout_mode = 2
+
+[node name="SoundButton" type="Button" parent="."]
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_minimum_size = Vector2(80, 80)
+tooltip_text = "Son"
+script = ExtResource("2")
+color = Color(0.2392, 0.5176, 0.949, 1)
+icon_kind = "gear"
+
+[node name="ButtonPressAnimation" type="Node" parent="SoundButton"]
+script = ExtResource("3")
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="SoundButton" to="." method="_on_sound_button_pressed"]

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://3hl68sx72ewd"]
+
+[ext_resource type="Script" uid="uid://0y0c4stj4pgb" path="res://scripts/ui/crossword_cell.gd" id="1"]
+
+[node name="CrosswordCell" type="Control"]
+mouse_default_cursor_shape = 2
+script = ExtResource("1")

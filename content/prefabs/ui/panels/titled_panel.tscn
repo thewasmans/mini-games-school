@@ -1,6 +1,6 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://dlwcuux7dlrik"]
 
-[ext_resource type="Script" path="res://scripts/ui/panels/titled_panel.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://d4hok3hdup6q4" path="res://scripts/ui/panels/titled_panel.gd" id="1_script"]
 
 [node name="TitledPanel" type="PanelContainer"]
 theme_type_variation = &"PanelTitled"

@@ -1,9 +1,7 @@
 extends Node
-## Petits sons synthétisés au lancement (aucun fichier audio nécessaire).
 
 const RATE := 22050
 
-## Coupé depuis le bouton réglages de la barre du haut.
 var muted := false
 
 var _streams := {}
@@ -17,7 +15,6 @@ func _ready() -> void:
 		p.volume_db = -6.0
 		add_child(p)
 		_players.append(p)
-	# Chaque note : [fréquence de départ, fréquence d'arrivée, durée]
 	_streams["click"] = _make([[520, 760, 0.05]], "square", 0.16)
 	_streams["pop"] = _make([[380, 900, 0.09]], "sine", 0.5)
 	_streams["type"] = _make([[900, 1150, 0.035]], "tri", 0.35)

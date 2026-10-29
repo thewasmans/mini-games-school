@@ -1,53 +1,41 @@
+@tool
+class_name GameManager
 extends Node
-## Charge GameData et porte les réglages du helper de test (F1).
 
-signal debug_changed
+signal initialized
 
-const GAME_DATA_PATH := "res://data/game_data.tres"
+@export var game_data: GameData
+@export_category("Managers")
+@export var game_ui_manager: GameUIManager
+@export var level_manager: LevelManager
 
-var data: GameData
+var game_state: GameState
 
-var debug_auto_fill := false
-var debug_auto_validate := false
-var debug_show_hints := false
+var managers: Array[Manager]:
+	get:
+		return [game_ui_manager, level_manager]
+
+
+func _ready() -> void:
+	if Engine.is_editor_hint():
+		child_entered_tree.connect(_on_children_changed)
+		child_exiting_tree.connect(_on_children_changed)
 
 
 func initialize() -> void:
-	data = load(GAME_DATA_PATH) as GameData
-	if data == null:
-		push_error("Impossible de charger %s" % GAME_DATA_PATH)
-		data = GameData.new()
-	GameState.reset()
+	game_state = GameState.new(game_data)
+	for manager in managers:
+		manager.initialize(self)
+	initialized.emit()
 
 
-func set_debug(auto_fill: bool, auto_validate: bool, show_hints: bool, unlock_all: bool) -> void:
-	debug_auto_fill = auto_fill
-	debug_auto_validate = auto_validate
-	debug_show_hints = show_hints
-	GameState.unlock_all = unlock_all
-	debug_changed.emit()
+func _get_configuration_warnings() -> PackedStringArray:
+	var warnings := PackedStringArray()
+	for child in get_children():
+		if child is Manager and child not in managers:
+			warnings.append("%s n'est pas dans le getter « managers » : il ne sera jamais initialisé." % child.name)
+	return warnings
 
 
-## Levels terminés / levels disponibles, toutes années et matières confondues.
-func study_progress(study: int) -> Vector2i:
-	var done := 0
-	for y in GameData.YEARS_PER_STUDY:
-		var year := data.get_year(study, y)
-		if year == null:
-			continue
-		for s in year.subjects.size():
-			done += GameState.completed_count(GameState.make_key(study, y, s))
-	return Vector2i(done, data.count_study_levels(study))
-
-
-func total_progress() -> Vector2i:
-	var total := Vector2i.ZERO
-	for study in GameData.STUDY_NAMES.size():
-		total += study_progress(study)
-	return total
-
-
-func subject_progress(study: int, year: int, subject: int) -> Vector2i:
-	var s := data.get_subject(study, year, subject)
-	var total := s.count_levels() if s != null else 0
-	return Vector2i(GameState.completed_count(GameState.make_key(study, year, subject)), total)
+func _on_children_changed(_child: Node) -> void:
+	update_configuration_warnings.call_deferred()

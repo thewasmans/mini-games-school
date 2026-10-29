@@ -1,6 +1,6 @@
+@tool
 class_name IconView
 extends Control
-## Affiche une icône vectorielle de UIDraw.
 
 @export var icon := "":
 	set(value):
@@ -8,9 +8,7 @@ extends Control
 		queue_redraw()
 
 
-func _init(icon_ := "", side := 40.0) -> void:
-	icon = icon_
-	custom_minimum_size = Vector2(side, side)
+func _ready() -> void:
 	mouse_filter = MOUSE_FILTER_IGNORE
 
 

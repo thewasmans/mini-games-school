@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://tuuu2vkgrkrw"]
+
+[ext_resource type="Script" uid="uid://dsak8n8hldji8" path="res://scripts/ui/memo_ui.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://cce7spnmd47io" path="res://content/prefabs/ui/default_quiz_image.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://cc4xmcowli7qk" path="res://content/prefabs/ui/panels/frame_panel.tscn" id="3"]
+[ext_resource type="Script" uid="uid://uc8j8wpalkhg" path="res://scripts/ui/progress_ring.gd" id="4"]
+[ext_resource type="Script" uid="uid://c45v0m5ykanjk" path="res://scripts/ui/juicy_button.gd" id="5"]
+[ext_resource type="Script" uid="uid://c4sgyuaafswdq" path="res://scripts/ui/button_press_animation.gd" id="6"]
+
+[node name="MemoUI" type="Control" node_paths=PackedStringArray("question_card", "question_label", "progress_ring", "image_box", "answer_buttons")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+question_card = NodePath("Layout/QuestionCard")
+question_label = NodePath("Layout/QuestionCard/Content/Row/QuestionLabel")
+progress_ring = NodePath("Layout/QuestionCard/Content/Row/ProgressRing")
+image_box = NodePath("Layout/ImageBox")
+answer_buttons = [NodePath("Layout/Answers/AnswerA"), NodePath("Layout/Answers/AnswerB"), NodePath("Layout/Answers/AnswerC"), NodePath("Layout/Answers/AnswerD")]
+default_image_prefab = ExtResource("2")
+
+[node name="Layout" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 18
+
+[node name="QuestionCard" parent="Layout" instance=ExtResource("3")]
+layout_mode = 2
+
+[node name="Row" type="HBoxContainer" parent="Layout/QuestionCard/Content"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="QuestionLabel" type="Label" parent="Layout/QuestionCard/Content/Row"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "Question du quiz ?"
+horizontal_alignment = 0
+vertical_alignment = 1
+custom_minimum_size = Vector2(0, 110)
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="ProgressRing" type="Control" parent="Layout/QuestionCard/Content/Row"]
+custom_minimum_size = Vector2(118, 118)
+layout_mode = 2
+size_flags_vertical = 4
+script = ExtResource("4")
+
+[node name="ImageBox" type="Control" parent="Layout"]
+custom_minimum_size = Vector2(0, 220)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="Answers" type="GridContainer" parent="Layout"]
+layout_mode = 2
+theme_override_constants/h_separation = 14
+theme_override_constants/v_separation = 14
+columns = 2
+
+[node name="AnswerA" type="Button" parent="Layout/Answers"]
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_minimum_size = Vector2(0, 130)
+theme_override_font_sizes/font_size = 28
+text = "A. Réponse"
+size_flags_horizontal = 3
+alignment = 0
+autowrap_mode = 3
+script = ExtResource("5")
+color = Color(1, 0.651, 0.1686, 1)
+padding = 20
+
+[node name="ButtonPressAnimation" type="Node" parent="Layout/Answers/AnswerA"]
+script = ExtResource("6")
+sound = ""
+
+[node name="AnswerB" type="Button" parent="Layout/Answers"]
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_minimum_size = Vector2(0, 130)
+theme_override_font_sizes/font_size = 28
+text = "B. Réponse"
+size_flags_horizontal = 3
+alignment = 0
+autowrap_mode = 3
+script = ExtResource("5")
+color = Color(0.4196, 0.8471, 0.3529, 1)
+padding = 20
+
+[node name="ButtonPressAnimation" type="Node" parent="Layout/Answers/AnswerB"]
+script = ExtResource("6")
+sound = ""
+
+[node name="AnswerC" type="Button" parent="Layout/Answers"]
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_minimum_size = Vector2(0, 130)
+theme_override_font_sizes/font_size = 28
+text = "C. Réponse"
+size_flags_horizontal = 3
+alignment = 0
+autowrap_mode = 3
+script = ExtResource("5")
+color = Color(0.7529, 0.4235, 0.9412, 1)
+padding = 20
+
+[node name="ButtonPressAnimation" type="Node" parent="Layout/Answers/AnswerC"]
+script = ExtResource("6")
+sound = ""
+
+[node name="AnswerD" type="Button" parent="Layout/Answers"]
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_minimum_size = Vector2(0, 130)
+theme_override_font_sizes/font_size = 28
+text = "D. Réponse"
+size_flags_horizontal = 3
+alignment = 0
+autowrap_mode = 3
+script = ExtResource("5")
+color = Color(1, 0.8471, 0.2902, 1)
+padding = 20
+
+[node name="ButtonPressAnimation" type="Node" parent="Layout/Answers/AnswerD"]
+script = ExtResource("6")
+sound = ""
+
+[editable path="Layout/QuestionCard"]

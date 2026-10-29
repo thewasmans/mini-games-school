@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SchoolYearData" format=3 uid="uid://c65wsvb8n6awi"]
+
+[ext_resource type="Script" uid="uid://ciwcgy3oely0m" path="res://scripts/data/school_year_data.gd" id="1_ckm7r"]
+[ext_resource type="Script" uid="uid://slefhuqrt8qe" path="res://scripts/data/subject_data.gd" id="2_ld47j"]
+[ext_resource type="Resource" uid="uid://cpmij707mx673" path="res://data/secondaire/s1/histoire/histoire.tres" id="3_mmcqc"]
+
+[resource]
+script = ExtResource("1_ckm7r")
+name = "S1"
+subjects = Array[ExtResource("2_ld47j")]([ExtResource("3_mmcqc")])

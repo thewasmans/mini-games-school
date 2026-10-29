@@ -1,12 +1,69 @@
 [gd_scene format=3 uid="uid://bjv42nsdtxoyn"]
 
-[ext_resource type="Script" uid="uid://cqj33om84xlbc" path="res://scripts/main.gd" id="1_main"]
+[ext_resource type="Script" uid="uid://cqj33om84xlbc" path="res://scripts/main.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://bc5ge57cytkgg" path="res://content/prefabs/ui/debug_helper.tscn" id="2"]
+[ext_resource type="Script" uid="uid://br7eyxxa2yhbm" path="res://scripts/managers/game_manager.gd" id="3"]
+[ext_resource type="Resource" uid="uid://dp3vx3tjtgvwo" path="res://data/game_data.tres" id="4"]
+[ext_resource type="Script" uid="uid://d0dcc8b7onssg" path="res://scripts/managers/game_ui_manager.gd" id="5"]
+[ext_resource type="PackedScene" uid="uid://druqtbjs8mfxt" path="res://content/prefabs/ui/game_ui.tscn" id="6"]
+[ext_resource type="Script" uid="uid://bo54fw7ghu2s2" path="res://scripts/managers/level_manager.gd" id="7"]
+[ext_resource type="PackedScene" uid="uid://ce1uu38c55ewe" path="res://content/prefabs/ui/level/level.tscn" id="8"]
+[ext_resource type="Script" uid="uid://b4xilacjnh0fe" path="res://scripts/ui/animated_background.gd" id="9"]
 
-[node name="Main" type="Control" unique_id=764106729]
+[node name="Main" type="Control" unique_id=1259184002 node_paths=PackedStringArray("game_manager")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_main")
+script = ExtResource("1")
+game_manager = NodePath("Global/GameManager")
+debug_helper_prefab = ExtResource("2")
+
+[node name="Global" type="Node" parent="." unique_id=481835987]
+
+[node name="GameManager" type="Node" parent="Global" unique_id=1369628355 node_paths=PackedStringArray("game_ui_manager", "level_manager")]
+script = ExtResource("3")
+game_data = ExtResource("4")
+game_ui_manager = NodePath("GameUIManager")
+level_manager = NodePath("LevelManager")
+
+[node name="GameUIManager" type="Node" parent="Global/GameManager" unique_id=365876765 node_paths=PackedStringArray("root_scene", "background")]
+script = ExtResource("5")
+game_ui_prefab = ExtResource("6")
+root_scene = NodePath("../../../UI")
+background = NodePath("../../../Background")
+
+[node name="LevelManager" type="Node" parent="Global/GameManager" unique_id=1527896933 node_paths=PackedStringArray("level_root")]
+script = ExtResource("7")
+level_root = NodePath("../../../Level")
+level_prefab = ExtResource("8")
+
+[node name="Background" type="SubViewportContainer" parent="." unique_id=1706682966]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("9")
+
+[node name="UI" type="Control" parent="." unique_id=1737194069]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Level" type="Control" parent="." unique_id=2120668901]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

@@ -1,11 +1,10 @@
+@tool
 class_name JuicyProgressBar
 extends Control
-## Jauge arrondie avec remplissage animé, reflet et texte centré.
 
-var fill_color := UIStyle.GREEN
-## Texte affiché par-dessus. "{percent}" est remplacé par le pourcentage.
-var text := "{percent}"
-var stripes := false
+@export var fill_color := UIStyle.GREEN
+@export var text := "{percent}"
+@export var stripes := false
 
 var value := 0.0
 var _shown := 0.0
@@ -13,13 +12,8 @@ var _t := 0.0
 var _tween: Tween
 
 
-func _init(color := UIStyle.GREEN, height := 34.0) -> void:
-	fill_color = color
-	custom_minimum_size = Vector2(0, height)
-	mouse_filter = MOUSE_FILTER_IGNORE
-
-
 func _ready() -> void:
+	mouse_filter = MOUSE_FILTER_IGNORE
 	set_process(stripes)
 
 

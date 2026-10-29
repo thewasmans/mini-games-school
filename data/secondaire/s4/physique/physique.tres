@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="SubjectData" format=3 uid="uid://b43udmr5c0i6u"]
+
+[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="1_7lshg"]
+[ext_resource type="Script" uid="uid://slefhuqrt8qe" path="res://scripts/data/subject_data.gd" id="2_12yyy"]
+
+[resource]
+script = ExtResource("2_12yyy")
+name = "Physique"

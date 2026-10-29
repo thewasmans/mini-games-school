@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bko7mgqxy66x1"]
+
+[ext_resource type="Script" uid="uid://drxkosp5q8fs7" path="res://scripts/ui/choice_entry_ui.gd" id="1"]
+[ext_resource type="Script" uid="uid://c45v0m5ykanjk" path="res://scripts/ui/juicy_button.gd" id="2"]
+[ext_resource type="Script" uid="uid://c4sgyuaafswdq" path="res://scripts/ui/button_press_animation.gd" id="3"]
+[ext_resource type="Script" uid="uid://8yrap112yt84" path="res://scripts/ui/juicy_progress_bar.gd" id="4"]
+
+[node name="ChoiceEntryUI" type="VBoxContainer" node_paths=PackedStringArray("button", "gauge", "coming_soon_label")]
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+script = ExtResource("1")
+button = NodePath("Button")
+gauge = NodePath("Gauge")
+coming_soon_label = NodePath("ComingSoonLabel")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_minimum_size = Vector2(0, 116)
+theme_override_font_sizes/font_size = 46
+text = "Matière"
+script = ExtResource("2")
+color = Color(0.2392, 0.5176, 0.949, 1)
+icon_left = "book"
+icon_right = "pencil"
+sparkles = true
+
+[node name="ButtonPressAnimation" type="Node" parent="Button"]
+script = ExtResource("3")
+
+[node name="Gauge" type="Control" parent="."]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+mouse_filter = 2
+script = ExtResource("4")
+
+[node name="ComingSoonLabel" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_colors/font_color = Color(0.7843, 0.8235, 1, 1)
+theme_override_constants/outline_size = 7
+theme_override_constants/shadow_outline_size = 7
+text = "Bientôt disponible"
+horizontal_alignment = 1
+vertical_alignment = 1
+visible = false

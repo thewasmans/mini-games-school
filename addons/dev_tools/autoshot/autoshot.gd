@@ -1,10 +1,11 @@
 extends Node
-## Visite guidée automatique avec captures d'écran (vérification visuelle).
-##
-## Projet > Outils > Outils du jeu > Lancer la visite automatique (captures dans user://shots), ou :
-##   godot --path . res://addons/dev_tools/autoshot/autoshot.tscn -- <dossier_de_sortie>
+
+const STUDY_LEVEL := 1
+const SCHOOL_YEAR := 3
+const SUBJECT := 0
 
 var _out := "user://shots"
+var _game_manager: GameManager
 var _ui: GameUI
 
 
@@ -13,65 +14,57 @@ func _ready() -> void:
 	if not args.is_empty():
 		_out = args[0]
 	DirAccess.make_dir_recursive_absolute(_out)
-	var main: Control = load("res://scenes/main.tscn").instantiate()
+	var main: Main = load("res://scenes/main.tscn").instantiate()
 	get_tree().root.add_child.call_deferred(main)
 	await _wait(0.5)
-	_ui = main.get_child(0) as GameUI
+	_game_manager = main.game_manager
+	_ui = _game_manager.game_ui_manager._game_ui
 	await _wait(1.6)
 	await _shot("01_main")
 
-	_ui.go_to({"screen": "study"})
+	_ui.menu_start.play_pressed.emit()
 	await _wait(1.5)
 	await _shot("02_study")
 
-	_ui.go_to({"screen": "year", "study": 1})
+	_ui.menu_study_levels.study_level_selected.emit(STUDY_LEVEL)
 	await _wait(1.2)
 	await _shot("03_years")
 
-	_ui.go_to({"screen": "subject", "study": 1, "year": 3})
+	_ui.menu_school_years.school_year_selected.emit(SCHOOL_YEAR)
 	await _wait(1.2)
 	await _shot("04_subjects")
 
-	GameState.complete_level("1/3/0", 0, 5)
-	_ui.go_to({"screen": "grid", "study": 1, "year": 3, "subject": 0})
+	var game_state := _game_manager.game_state
+	game_state.select_subject(SUBJECT)
+	game_state.complete_level(0)
+	_ui.menu_subjects.subject_selected.emit(SUBJECT)
 	await _wait(0.5)
 	await _shot("05_grid_unlocking")
 	await _wait(1.5)
 	await _shot("06_grid")
 
-	# Mots croisés : un mot juste, un mot faux
-	_ui.go_to({"screen": "level", "study": 1, "year": 3, "subject": 0, "index": 0})
-	await _wait(1.2)
-	var cw: CrosswordUI = _find(_ui, CrosswordUI)
-	for l in "NOYAU":
-		cw._type(l)
+	var crossword := await _open_level(0) as CrosswordUI
+	for letter in "NOYAU":
+		crossword._type(letter)
 	await _wait(0.3)
-	var second := cw._next_open(cw._selected)
-	cw._select_word(second)
-	for i in (cw._words[second].cells as Array).size():
-		cw._type("X")
+	var second := crossword._next_open(crossword._selected)
+	crossword._select_word(second)
+	for i in (crossword._words[second].cells as Array).size():
+		crossword._type("X")
 	await _wait(0.15)
 	await _shot("07_crossword")
-	_ui.go_back()
-	await _wait(0.6)
+	await _close_level()
 
-	# Quiz : une mauvaise réponse
-	_ui.go_to({"screen": "level", "study": 1, "year": 3, "subject": 0, "index": 1})
-	await _wait(1.2)
-	var quiz: MemoUI = _find(_ui, MemoUI)
+	var quiz := await _open_level(1) as MemoUI
 	quiz._on_answer(3)
 	await _wait(0.6)
 	await _shot("08_quiz")
 	quiz._on_answer(0)
 	await _wait(0.3)
 	await _shot("09_quiz_good")
-	_ui.go_back()
-	await _wait(0.6)
+	await _close_level()
 
-	# Cryptogramme : tout rempli avec des erreurs
-	_ui.go_to({"screen": "level", "study": 1, "year": 3, "subject": 0, "index": 2})
-	await _wait(1.2)
-	var crypto: CryptoUI = _find(_ui, CryptoUI)
+	var crypto := await _open_level(2) as CryptoUI
 	await _shot("10_crypto")
 	for i in crypto._hidden.size():
 		crypto._type("E" if i % 3 == 0 else TextUtil.normalize_char(crypto._cells[crypto._hidden[i]].original))
@@ -83,38 +76,43 @@ func _ready() -> void:
 			crypto._type(TextUtil.normalize_char(crypto._cells[k].original))
 	await _wait(0.4)
 	await _shot("12_crypto_solved")
-	crypto._next_sentence()
-	await _wait(0.5)
-	for k in crypto._hidden.duplicate():
-		crypto._type(TextUtil.normalize_char(crypto._cells[k].original))
-	await _wait(0.3)
-	crypto._next_sentence()
-	await _wait(0.5)
+	while not crypto.is_completed:
+		crypto._next_sentence()
+		await _wait(0.5)
+		for k in crypto._hidden.duplicate():
+			if crypto._cells[k].state != CryptoCell.State.CORRECT:
+				crypto._type(TextUtil.normalize_char(crypto._cells[k].original))
+		await _wait(0.3)
+	await _wait(0.2)
 	await _shot("13_victory")
 	await _wait(1.6)
 	await _shot("14_validate")
+	_game_manager.level_manager._level.validate()
+	await _wait(1.6)
+	await _shot("15_grid_after_level")
 
-	_ui.go_to({"screen": "credits"})
+	_ui._switch_to(_ui.menu_credits)
 	await _wait(1.3)
-	await _shot("15_credits")
+	await _shot("16_credits")
 	get_tree().quit()
 
 
-func _find(node: Node, type: Variant) -> Node:
-	for child in node.get_children():
-		if is_instance_of(child, type):
-			return child
-		var found := _find(child, type)
-		if found != null:
-			return found
-	return null
+func _open_level(level_index: int) -> MiniGameUI:
+	_ui.menu_levels.level_selected.emit(level_index)
+	await _wait(1.2)
+	return _game_manager.level_manager._level.mini_game_ui
 
 
-func _wait(s: float) -> void:
-	await get_tree().create_timer(s).timeout
+func _close_level() -> void:
+	_game_manager.level_manager._level.exited.emit()
+	await _wait(0.8)
 
 
-func _shot(name: String) -> void:
+func _wait(seconds: float) -> void:
+	await get_tree().create_timer(seconds).timeout
+
+
+func _shot(shot_name: String) -> void:
 	await RenderingServer.frame_post_draw
-	get_viewport().get_texture().get_image().save_png(_out.path_join(name + ".png"))
-	print("shot ", name)
+	get_viewport().get_texture().get_image().save_png(_out.path_join(shot_name + ".png"))
+	print("shot ", shot_name)

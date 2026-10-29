@@ -1,0 +1,35 @@
+name: Tests
+
+# Lance les tests gdUnit4 (tests/) a chaque push et sur chaque Pull Request.
+# L'image Godot doit correspondre a la version du projet (config/features dans project.godot).
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gdunit4:
+    name: gdUnit4
+    runs-on: ubuntu-latest
+    container:
+      image: barichello/godot-ci:4.7
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Import du projet
+        run: godot --headless --editor --path . --quit || true
+
+      - name: Tests
+        run: godot --headless --path . -s res://addons/gdUnit4/bin/GdUnitCmdTool.gd -a res://tests --ignoreHeadlessMode
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rapport-tests
+          path: reports/
+          if-no-files-found: ignore
+          retention-days: 14

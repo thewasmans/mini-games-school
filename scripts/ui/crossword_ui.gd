@@ -1,76 +1,49 @@
 class_name CrosswordUI
 extends MiniGameUI
-## Mots croisés : clic sur une case pour choisir un mot, saisie au clavier,
-## vérification dès que le mot est complet.
 
 var _data: CrosswordData
-var _cells := {}                   # Vector2i -> CrosswordCell
-var _words: Array[Dictionary] = []  # { entry, cells: Array[Vector2i], done }
+var _cells := {}
+var _words: Array[Dictionary] = []
 var _selected := -1
 var _cursor := 0
 var _last_clicked := Vector2i(-1, -1)
-var _show_hints := false
-var _autofilling := false
+@export var clue_panel: TitledPanel
+@export var clue_number_label: Label
+@export var clue_direction_pill: Pill
+@export var clue_text_label: Label
+@export var grid_area: Control
+@export var keyboard: OnScreenKeyboard
+@export var cell_prefab: PackedScene
 
-var _clue_panel: TitledPanel
-var _clue_number: Label
-var _clue_dir: Label
-var _clue_text: Label
-var _clue_answer: Label
-var _grid_area: Control
+@export_group("Réglages")
+## Taille maximale d'une case de la grille, en pixels.
+@export var max_cell_size := 86.0
+## Marge entre le bord du plateau et la grille, en pixels.
+@export var grid_padding := 12.0
 
 
-func setup(data: MiniGameData) -> void:
-	_data = data as CrosswordData
+func _ready() -> void:
+	grid_area.resized.connect(_layout_grid)
+	keyboard.letter_pressed.connect(_type)
+	keyboard.backspace_pressed.connect(_backspace)
+
+
+func initialize(mini_game_data: MiniGameData) -> void:
+	_data = mini_game_data as CrosswordData
 	if not _data.is_generated():
 		push_warning("Grille non générée pour « %s » : régénère-la dans l'onglet Crossword." % _data.theme_title)
 		CrosswordGenerator.generate(_data)
-
-	var root := VBoxContainer.new()
-	root.set_anchors_and_offsets_preset(PRESET_FULL_RECT)
-	root.add_theme_constant_override("separation", 14)
-	add_child(root)
-
-	# Panneau « Indice » : cadre bleu titré, intérieur bleu nuit (comme les panneaux « Clue »).
-	_clue_panel = TitledPanel.create("Indice")
-	root.add_child(_clue_panel)
-	var dir_pill := Pill.create()
-	_clue_dir = dir_pill.label
-	_clue_panel.header.add_child(dir_pill)
-	var clue_row := HBoxContainer.new()
-	clue_row.add_theme_constant_override("separation", 12)
-	_clue_panel.content.add_child(clue_row)
-	_clue_number = UIStyle.label("1.", 30, UIStyle.YELLOW, 8)
-	_clue_number.vertical_alignment = VERTICAL_ALIGNMENT_TOP
-	clue_row.add_child(_clue_number)
-	var text_col := VBoxContainer.new()
-	text_col.size_flags_horizontal = SIZE_EXPAND_FILL
-	clue_row.add_child(text_col)
-	var clue_box := text_col
-	_clue_text = UIStyle.label("", 28)
-	_clue_text.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
-	_clue_text.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_clue_text.custom_minimum_size = Vector2(0, 76)
-	clue_box.add_child(_clue_text)
-	_clue_answer = UIStyle.label("", 22, UIStyle.YELLOW, 6)
-	_clue_answer.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
-	_clue_answer.visible = false
-	clue_box.add_child(_clue_answer)
-
-	# Plateau translucide sous la grille
-	_grid_area = Panel.new()
-	_grid_area.theme_type_variation = &"Board"
-	_grid_area.size_flags_vertical = SIZE_EXPAND_FILL
-	_grid_area.resized.connect(_layout_grid)
-	root.add_child(_grid_area)
-
-	var keyboard := OnScreenKeyboard.create(68)
-	keyboard.letter_pressed.connect(_type)
-	keyboard.backspace_pressed.connect(_backspace)
-	root.add_child(keyboard)
-
 	_build_grid()
+	_layout_grid()
+	progress_changed.emit(0, _words.size())
 	_select_word(_next_open(-1))
+	for p: Vector2i in _cells:
+		var cell: CrosswordCell = _cells[p]
+		cell.modulate.a = 0
+		var tw := cell.create_tween()
+		tw.tween_interval(0.15 + (p.x + p.y) * 0.03)
+		tw.tween_callback(cell.celebrate)
+		tw.parallel().tween_property(cell, "modulate:a", 1.0, 0.15)
 
 
 func _build_grid() -> void:
@@ -82,10 +55,10 @@ func _build_grid() -> void:
 			cells.append(p)
 			var cell: CrosswordCell = _cells.get(p)
 			if cell == null:
-				cell = CrosswordCell.new()
+				cell = cell_prefab.instantiate() as CrosswordCell
 				cell.solution = e.answer[k]
 				cell.clicked.connect(_on_cell_clicked.bind(p))
-				_grid_area.add_child(cell)
+				grid_area.add_child(cell)
 				_cells[p] = cell
 			cell.words.append(_words.size())
 			if k == 0:
@@ -94,12 +67,12 @@ func _build_grid() -> void:
 
 
 func _layout_grid() -> void:
-	if _data.grid_width <= 0:
+	if _data == null or _data.grid_width <= 0:
 		return
-	var pad := 12.0
-	var avail := _grid_area.size - Vector2(pad, pad) * 2
+	var pad := grid_padding
+	var avail := grid_area.size - Vector2(pad, pad) * 2
 	var cs := floorf(minf(avail.x / _data.grid_width, avail.y / _data.grid_height))
-	cs = minf(cs, 86.0)
+	cs = minf(cs, max_cell_size)
 	var gap := maxf(2.0, cs * 0.07)
 	var origin := Vector2(pad, pad) + (avail - Vector2(_data.grid_width, _data.grid_height) * cs) / 2
 	for p: Vector2i in _cells:
@@ -109,25 +82,11 @@ func _layout_grid() -> void:
 		cell.pivot_offset = cell.size / 2
 
 
-func _ready() -> void:
-	super()
-	for p: Vector2i in _cells:
-		var cell: CrosswordCell = _cells[p]
-		cell.modulate.a = 0
-		var tw := cell.create_tween()
-		tw.tween_interval(0.15 + (p.x + p.y) * 0.03)
-		tw.tween_callback(cell.celebrate)
-		tw.parallel().tween_property(cell, "modulate:a", 1.0, 0.15)
-
-
-# --- Sélection -------------------------------------------------------------
-
 func _on_cell_clicked(p: Vector2i) -> void:
 	if is_completed:
 		return
 	var cell: CrosswordCell = _cells[p]
 	if _selected in cell.words and p == _last_clicked and cell.words.size() > 1:
-		# Deuxième clic sur un croisement : on passe à l'autre mot.
 		var other := cell.words[0] if cell.words[1] == _selected else cell.words[1]
 		_select_word(other, p)
 	elif _selected in cell.words:
@@ -154,13 +113,11 @@ func _select_word(index: int, at := Vector2i(-1, -1)) -> void:
 	var cells: Array[Vector2i] = w.cells
 	_cursor = cells.find(at) if at in cells else _first_empty(w)
 	var e: CrosswordEntry = w.entry
-	_clue_number.text = "%d." % e.number
-	_clue_dir.text = "→  HORIZONTAL" if e.horizontal else "↓  VERTICAL"
-	_clue_text.text = e.clue
-	_clue_answer.text = "Réponse : " + e.answer
-	_clue_answer.visible = _show_hints
+	clue_number_label.text = "%d." % e.number
+	clue_direction_pill.text = "→  HORIZONTAL" if e.horizontal else "↓  VERTICAL"
+	clue_text_label.text = e.clue
 	if changed:
-		UIFeedback.punch(_clue_panel, 0.04, 0.35)
+		UIFeedback.punch(clue_panel, 0.04, 0.35)
 	_refresh()
 
 
@@ -194,7 +151,6 @@ func _refresh() -> void:
 	for p: Vector2i in _cells:
 		var cell: CrosswordCell = _cells[p]
 		cell.highlight = CrosswordCell.Highlight.NONE
-		cell.hint = _show_hints
 	if _selected >= 0 and not _words[_selected].done:
 		var cells: Array[Vector2i] = _words[_selected].cells
 		for i in cells.size():
@@ -203,8 +159,6 @@ func _refresh() -> void:
 	for p: Vector2i in _cells:
 		(_cells[p] as CrosswordCell).refresh()
 
-
-# --- Saisie ----------------------------------------------------------------
 
 func _unhandled_input(event: InputEvent) -> void:
 	if is_completed or not is_visible_in_tree():
@@ -224,7 +178,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _type(letter: String) -> void:
-	if is_completed or _autofilling:
+	if is_completed:
 		return
 	if _selected < 0 or _words[_selected].done:
 		_select_word(_next_open(_selected))
@@ -248,7 +202,7 @@ func _type(letter: String) -> void:
 
 
 func _backspace() -> void:
-	if is_completed or _selected < 0 or _words[_selected].done or _autofilling:
+	if is_completed or _selected < 0 or _words[_selected].done:
 		return
 	var w := _words[_selected]
 	var cells: Array[Vector2i] = w.cells
@@ -284,8 +238,6 @@ func _is_right(w: Dictionary) -> bool:
 	return true
 
 
-# --- Vérification ----------------------------------------------------------
-
 func _check_word(index: int) -> void:
 	var w := _words[index]
 	if not _is_right(w):
@@ -315,8 +267,7 @@ func _validate_word(index: int) -> void:
 	Sfx.play("word")
 	var mid: CrosswordCell = _cells[cells[cells.size() / 2]]
 	Confetti.sparkle(self, mid.global_position + mid.size / 2, 14)
-	progress_changed.emit(_done_count() / float(_words.size()))
-	# Un mot croisé peut se retrouver complet et juste grâce à celui-ci.
+	progress_changed.emit(_done_count(), _words.size())
 	for p in cells:
 		for other: int in (_cells[p] as CrosswordCell).words:
 			var ow := _words[other]
@@ -339,40 +290,8 @@ func _all_done() -> bool:
 func _on_grid_complete() -> void:
 	_selected = -1
 	_refresh()
-	# Vague diagonale sur toute la grille, puis confettis.
 	for p: Vector2i in _cells:
 		(_cells[p] as CrosswordCell).celebrate(0.35 + (p.x + p.y) * 0.05)
 	await _wait(0.6 + (_data.grid_width + _data.grid_height) * 0.05)
 	if is_inside_tree():
 		_finish()
-
-
-# --- Helper F1 -------------------------------------------------------------
-
-func set_show_hints(on: bool) -> void:
-	_show_hints = on
-	if _clue_answer:
-		_clue_answer.visible = on
-	_refresh()
-
-
-func debug_autofill() -> void:
-	if _autofilling or is_completed:
-		return
-	_autofilling = true
-	for i in _words.size():
-		if _words[i].done:
-			continue
-		_select_word(i)
-		for p: Vector2i in _words[i].cells:
-			var cell: CrosswordCell = _cells[p]
-			cell.letter = cell.solution
-		_refresh()
-		await _wait(0.12)
-		if not is_inside_tree():
-			return
-		if not _words[i].done:
-			_validate_word(i)
-	_autofilling = false
-	if _all_done():
-		_on_grid_complete()

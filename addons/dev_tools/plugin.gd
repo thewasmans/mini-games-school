@@ -1,7 +1,5 @@
 @tool
 extends EditorPlugin
-## Projet > Outils > Outils du jeu : générateurs (thème, données de test), extraction des PNG
-## d'UI depuis les maquettes (Python) et visite automatique avec captures d'écran.
 
 const MENU := "Outils du jeu"
 const AUTOSHOT := "res://addons/dev_tools/autoshot/autoshot.tscn"

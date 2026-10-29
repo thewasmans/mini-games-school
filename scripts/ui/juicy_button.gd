@@ -1,14 +1,10 @@
+@tool
 class_name JuicyButton
 extends Button
-## Bouton épais façon jeu mobile. Fond et texte viennent du thème (variations Button<Couleur>,
-## ButtonPlay, ButtonKey, ButtonBack, ButtonGear) ; le script ajoute les icônes vectorielles,
-## les étincelles, le reflet, l'écrasement à l'appui et le rebond élastique.
 
 const STATES := ["normal", "hover", "pressed", "hover_pressed", "disabled", "focus"]
 const FONT_COLORS := ["font_color", "font_hover_color", "font_pressed_color", "font_hover_pressed_color", "font_focus_color"]
 
-@export var sound := "click"
-## Icône seule au centre (bouton sans texte) : voir UIDraw.icon() et UISkin.ICON_BUTTONS.
 @export var icon_kind := "":
 	set(value):
 		icon_kind = value
@@ -21,12 +17,10 @@ const FONT_COLORS := ["font_color", "font_hover_color", "font_pressed_color", "f
 	set(value):
 		icon_right = value
 		_apply_margins()
-## Choisit la variation Button<Couleur> du thème la plus proche (sauf si `skin` est renseigné).
 @export var color: Color = UIStyle.BLUE:
 	set(value):
 		color = value
 		_update_variation()
-## Variation du thème imposée (ex. "ButtonPlay", "ButtonKey") ; vide = déduite de `color`.
 @export var skin := &"":
 	set(value):
 		skin = value
@@ -37,7 +31,6 @@ const FONT_COLORS := ["font_color", "font_hover_color", "font_pressed_color", "f
 		for c: String in FONT_COLORS:
 			add_theme_color_override(c, value)
 		add_theme_color_override("font_disabled_color", Color(value, 0.85))
-## Marge horizontale du texte : -1 = celle du thème.
 @export var padding := -1:
 	set(value):
 		padding = value
@@ -46,37 +39,22 @@ const FONT_COLORS := ["font_color", "font_hover_color", "font_pressed_color", "f
 	set(value):
 		sparkles = value
 		_update_process()
-@export var shine := false
+@export var shine := false:
+	set(value):
+		shine = value
+		_update_process()
 
 var _t := 0.0
 var _shine_t := 0.0
-var _scale_tween: Tween
-
-
-func _init(text_ := "", color_ := UIStyle.BLUE, font_size := 30) -> void:
-	text = text_
-	focus_mode = FOCUS_NONE
-	mouse_default_cursor_shape = CURSOR_POINTING_HAND
-	add_theme_font_size_override("font_size", font_size)
-	color = color_
 
 
 func _ready() -> void:
-	pivot_offset = size / 2
-	resized.connect(func() -> void: pivot_offset = size / 2)
-	button_down.connect(func() -> void: _tween_scale(Vector2(0.92, 0.88), 0.08, Tween.TRANS_QUAD))
-	button_up.connect(func() -> void: _tween_scale(Vector2.ONE, 0.5, Tween.TRANS_ELASTIC))
-	mouse_entered.connect(func() -> void:
-		if not disabled:
-			_tween_scale(Vector2(1.04, 1.04), 0.25, Tween.TRANS_BACK))
-	mouse_exited.connect(func() -> void: _tween_scale(Vector2.ONE, 0.25, Tween.TRANS_BACK))
-	pressed.connect(func() -> void: Sfx.play(sound))
+	_update_variation()
 	_update_process()
 
 
 func set_shine(on: bool) -> void:
 	shine = on
-	_update_process()
 
 
 func _update_process() -> void:
@@ -89,14 +67,6 @@ func _process(delta: float) -> void:
 	queue_redraw()
 
 
-func _tween_scale(target: Vector2, duration: float, trans: Tween.TransitionType) -> void:
-	if _scale_tween:
-		_scale_tween.kill()
-	_scale_tween = create_tween()
-	_scale_tween.tween_property(self, "scale", target, duration).set_trans(trans).set_ease(Tween.EASE_OUT)
-
-
-## Variation du thème : `skin`, sinon bouton rond si l'icône en a un (retour, réglages), sinon Button<Couleur>.
 func _update_variation() -> void:
 	var round: StringName = UISkin.ICON_BUTTONS.get(icon_kind, &"") if text == "" else &""
 	if skin != &"":
@@ -117,7 +87,6 @@ func _icon_size() -> float:
 	return get_theme_font_size("font_size") * 1.5
 
 
-## Copie les styles de la variation en élargissant les marges pour les icônes et le padding.
 func _apply_margins() -> void:
 	begin_bulk_theme_override()
 	for state: String in STATES:
@@ -146,7 +115,6 @@ func _draw() -> void:
 		draw_line(a, b, Color("ff4d5a"), size.x * 0.07, true)
 		return
 
-	# Zone de contenu du style courant (suit le décalage à l'appui).
 	var mode := get_draw_mode()
 	var state := "normal"
 	match mode:

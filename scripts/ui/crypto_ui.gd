@@ -1,86 +1,39 @@
 class_name CryptoUI
 extends MiniGameUI
-## Cryptogramme : retrouver les lettres cachées d'une phrase à l'aide d'un indice.
 
 var _data: CryptoData
 var _index := 0
-var _cells: Array[CryptoCell] = []  # une case par caractère (null pour les espaces)
-var _hidden: Array[int] = []         # index des caractères cachés, dans l'ordre
-var _cursor := -1                     # position dans _hidden
+var _cells: Array[CryptoCell] = []
+var _hidden: Array[int] = []
+var _cursor := -1
 var _solved := false
-var _show_hints := false
 
-var _counter: Label
-var _hint_label: Label
-var _answer_label: Label
-var _sentence_panel: MenuPanel
-var _flow: HFlowContainer
-var _fix_button: JuicyButton
-var _next_button: JuicyButton
+@export var hint_label: Label
+@export var counter_pill: Pill
+@export var sentence_panel: MenuPanel
+@export var flow: HFlowContainer
+@export var fix_button: JuicyButton
+@export var next_button: JuicyButton
+@export var keyboard: OnScreenKeyboard
+@export var cell_prefab: PackedScene
 
-
-func setup(data: MiniGameData) -> void:
-	_data = data as CryptoData
-	var root := VBoxContainer.new()
-	root.set_anchors_and_offsets_preset(PRESET_FULL_RECT)
-	root.add_theme_constant_override("separation", 16)
-	add_child(root)
-
-	# Panneau « Indice » : cadre bleu titré, intérieur bleu nuit.
-	var hint_panel := TitledPanel.create("Indice")
-	root.add_child(hint_panel)
-	var counter_pill := Pill.create()
-	_counter = counter_pill.label
-	hint_panel.header.add_child(counter_pill)
-	var hint_box := hint_panel.content
-	_hint_label = UIStyle.label("", 28)
-	_hint_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_hint_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
-	hint_box.add_child(_hint_label)
-	_answer_label = UIStyle.label("", 22, UIStyle.YELLOW, 6)
-	_answer_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_answer_label.visible = false
-	hint_box.add_child(_answer_label)
-
-	_sentence_panel = MenuPanel.create()
-	_sentence_panel.size_flags_vertical = SIZE_EXPAND_FILL
-	root.add_child(_sentence_panel)
-	var center := CenterContainer.new()
-	center.size_flags_vertical = SIZE_EXPAND_FILL
-	_sentence_panel.content.add_child(center)
-	_flow = HFlowContainer.new()
-	_flow.alignment = FlowContainer.ALIGNMENT_CENTER
-	_flow.add_theme_constant_override("h_separation", 22)
-	_flow.add_theme_constant_override("v_separation", 14)
-	_flow.custom_minimum_size = Vector2(620, 0)
-	center.add_child(_flow)
-
-	var buttons := HBoxContainer.new()
-	buttons.alignment = BoxContainer.ALIGNMENT_CENTER
-	buttons.custom_minimum_size = Vector2(0, 96)
-	root.add_child(buttons)
-	_fix_button = JuicyButton.new("Corriger les erreurs", Color("ff6b74"), 30)
-	_fix_button.custom_minimum_size = Vector2(420, 90)
-	_fix_button.visible = false
-	_fix_button.pressed.connect(_fix_errors)
-	buttons.add_child(_fix_button)
-	_next_button = JuicyButton.new("Valider", Color("6bd85a"), 34)
-	_next_button.icon_right = "next"
-	_next_button.sparkles = true
-	_next_button.custom_minimum_size = Vector2(320, 90)
-	_next_button.visible = false
-	_next_button.set_shine(true)
-	_next_button.pressed.connect(_next_sentence)
-	buttons.add_child(_next_button)
-
-	var keyboard := OnScreenKeyboard.create(68)
-	keyboard.letter_pressed.connect(_type)
-	keyboard.backspace_pressed.connect(_backspace)
-	root.add_child(keyboard)
+@export_group("Réglages")
+## Taille d'une case de lettre, pour les phrases courtes.
+@export var cell_size := Vector2(46, 60)
+## Taille d'une case de lettre, pour les phrases de plus de 45 caractères.
+@export var small_cell_size := Vector2(38, 52)
 
 
 func _ready() -> void:
-	super()
+	keyboard.letter_pressed.connect(_type)
+	keyboard.backspace_pressed.connect(_backspace)
+	fix_button.pressed.connect(_fix_errors)
+	next_button.pressed.connect(_next_sentence)
+
+
+func initialize(mini_game_data: MiniGameData) -> void:
+	_data = mini_game_data as CryptoData
+	progress_changed.emit(0, _data.sentences.size())
 	_load_sentence(0)
 
 
@@ -89,17 +42,15 @@ func _load_sentence(i: int) -> void:
 	_solved = false
 	var s := _data.sentences[i]
 	var text := s.sentence.strip_edges()
-	_counter.text = "Phrase %d / %d" % [i + 1, _data.sentences.size()]
-	_hint_label.text = s.hint
-	_answer_label.text = "Réponse : " + text
-	_answer_label.visible = _show_hints
-	_fix_button.visible = false
-	_next_button.visible = false
+	counter_pill.text = "Phrase %d / %d" % [i + 1, _data.sentences.size()]
+	hint_label.text = s.hint
+	fix_button.visible = false
+	next_button.visible = false
 
-	for child in _flow.get_children():
+	for child in flow.get_children():
 		child.queue_free()
 	_cells.clear()
-	var cell_size := Vector2(46, 60) if text.length() <= 45 else Vector2(38, 52)
+	var letter_size := cell_size if text.length() <= 45 else small_cell_size
 	var word_box: HBoxContainer = null
 	var candidates: Array[int] = []
 	for k in text.length():
@@ -111,8 +62,9 @@ func _load_sentence(i: int) -> void:
 		if word_box == null:
 			word_box = HBoxContainer.new()
 			word_box.add_theme_constant_override("separation", 4)
-			_flow.add_child(word_box)
-		var cell := CryptoCell.new(ch, cell_size if TextUtil.is_letter(ch) else Vector2(cell_size.x * 0.5, cell_size.y))
+			flow.add_child(word_box)
+		var cell := cell_prefab.instantiate() as CryptoCell
+		cell.setup(ch, letter_size if TextUtil.is_letter(ch) else Vector2(letter_size.x * 0.5, letter_size.y))
 		if TextUtil.is_letter(ch):
 			candidates.append(k)
 		else:
@@ -121,7 +73,6 @@ func _load_sentence(i: int) -> void:
 		word_box.add_child(cell)
 		_cells.append(cell)
 
-	# Lettres cachées tirées au hasard à chaque partie.
 	candidates.shuffle()
 	var count := clampi(roundi(candidates.size() * _data.hidden_ratio), 1, candidates.size())
 	_hidden.assign(candidates.slice(0, count))
@@ -136,8 +87,6 @@ func _load_sentence(i: int) -> void:
 		if cell != null:
 			UIFeedback.pop_in(cell, 0.05 + n * 0.015, 0.3)
 			n += 1
-	if GameManager.debug_auto_fill:
-		debug_autofill()
 
 
 func _refresh() -> void:
@@ -146,7 +95,6 @@ func _refresh() -> void:
 		if cell == null:
 			continue
 		cell.is_cursor = _cursor >= 0 and _cursor < _hidden.size() and _hidden[_cursor] == k and not _solved
-		cell.hint = _show_hints
 		cell.refresh()
 
 
@@ -154,8 +102,6 @@ func _editable(k: int) -> bool:
 	var st := _cells[k].state
 	return st == CryptoCell.State.EMPTY or st == CryptoCell.State.FILLED or st == CryptoCell.State.WRONG
 
-
-# --- Saisie ----------------------------------------------------------------
 
 func _on_cell_clicked(k: int) -> void:
 	if _solved or not k in _hidden or not _editable(k):
@@ -196,7 +142,6 @@ func _type(letter: String) -> void:
 		_check()
 
 
-## Prochaine case vide après `from` (en bouclant), -1 s'il n'y en a plus.
 func _next_empty(from: int) -> int:
 	for step in range(1, _hidden.size() + 1):
 		var i := (from + step) % _hidden.size()
@@ -226,8 +171,6 @@ func _backspace() -> void:
 	_refresh()
 
 
-# --- Vérification ----------------------------------------------------------
-
 func _check() -> void:
 	var wrong := 0
 	for n in _hidden.size():
@@ -244,25 +187,20 @@ func _check() -> void:
 	_refresh()
 	if wrong > 0:
 		Sfx.play("error")
-		_fix_button.visible = true
-		UIFeedback.pop_in(_fix_button)
+		fix_button.visible = true
+		UIFeedback.pop_in(fix_button)
 		return
 
 	_solved = true
 	_refresh()
 	Sfx.play("good")
-	UIFeedback.punch(_sentence_panel, 0.04, 0.5)
-	Confetti.sparkle(self, _sentence_panel.global_position + _sentence_panel.size / 2, 30)
-	progress_changed.emit((_index + 1) / float(_data.sentences.size()))
-	_next_button.visible = true
-	UIFeedback.pop_in(_next_button)
-	if GameManager.debug_auto_fill and GameManager.debug_auto_validate:
-		await _wait(0.8)
-		if is_inside_tree() and _next_button.visible:
-			_next_sentence()
+	UIFeedback.punch(sentence_panel, 0.04, 0.5)
+	Confetti.sparkle(self, sentence_panel.global_position + sentence_panel.size / 2, 30)
+	progress_changed.emit(_index + 1, _data.sentences.size())
+	next_button.visible = true
+	UIFeedback.pop_in(next_button)
 
 
-## Efface les lettres fausses et place le curseur sur la première.
 func _fix_errors() -> void:
 	var first := -1
 	for n in _hidden.size():
@@ -273,45 +211,22 @@ func _fix_errors() -> void:
 			if first == -1:
 				first = n
 	_cursor = first
-	_fix_button.visible = false
+	fix_button.visible = false
 	_refresh()
 
 
 func _next_sentence() -> void:
 	if not _solved or is_completed:
 		return
-	_next_button.visible = false
+	next_button.visible = false
 	if _index + 1 >= _data.sentences.size():
 		_finish()
 		return
 	var tw := create_tween()
-	tw.tween_property(_flow, "modulate:a", 0.0, 0.2)
+	tw.tween_property(flow, "modulate:a", 0.0, 0.2)
 	await tw.finished
 	if not is_inside_tree():
 		return
-	_flow.modulate.a = 1.0
+	flow.modulate.a = 1.0
 	Sfx.play("whoosh")
 	_load_sentence(_index + 1)
-
-
-# --- Helper F1 -------------------------------------------------------------
-
-func set_show_hints(on: bool) -> void:
-	_show_hints = on
-	if _answer_label:
-		_answer_label.visible = on
-	_refresh()
-
-
-func debug_autofill() -> void:
-	var i := _index
-	await _wait(0.5)
-	if not is_inside_tree() or i != _index or _solved:
-		return
-	for k in _hidden:
-		var cell := _cells[k]
-		if cell.state != CryptoCell.State.CORRECT:
-			cell.typed = TextUtil.normalize_char(cell.original)
-			cell.state = CryptoCell.State.FILLED
-	_cursor = -1
-	_check()

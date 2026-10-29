@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://behw45heocg6y"]
+
+[ext_resource type="Script" uid="uid://dl64wu5kw7tdf" path="res://scripts/ui/menus/menu_start_ui.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://bxo54w63ssbon" path="res://content/prefabs/ui/top_bar.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://c5347yer7gwac" path="res://content/prefabs/ui/panels/pill.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://cce7spnmd47io" path="res://content/prefabs/ui/default_quiz_image.tscn" id="4"]
+[ext_resource type="Script" uid="uid://c45v0m5ykanjk" path="res://scripts/ui/juicy_button.gd" id="5"]
+[ext_resource type="Script" uid="uid://c4sgyuaafswdq" path="res://scripts/ui/button_press_animation.gd" id="6"]
+
+[node name="MenuStartUI" type="Control" node_paths=PackedStringArray("top_bar", "logo", "title_label", "hero", "play_button", "credits_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+top_bar = NodePath("Margin/Layout/TopBar")
+logo = NodePath("Margin/Layout/Body/Logo")
+title_label = NodePath("Margin/Layout/Body/Logo/Title")
+hero = NodePath("Margin/Layout/Body/Hero")
+play_button = NodePath("Margin/Layout/Body/PlayButton")
+credits_button = NodePath("Margin/Layout/Body/CreditsButton")
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 30
+
+[node name="Layout" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+theme_override_constants/separation = 22
+
+[node name="TopBar" parent="Margin/Layout" instance=ExtResource("2")]
+layout_mode = 2
+show_back = false
+
+[node name="Body" type="VBoxContainer" parent="Margin/Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 18
+
+[node name="Logo" type="VBoxContainer" parent="Margin/Layout/Body"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Title" type="Label" parent="Margin/Layout/Body/Logo"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 110
+theme_override_colors/font_color = Color(1, 0.8235, 0.2471, 1)
+theme_override_constants/outline_size = 24
+theme_override_constants/shadow_outline_size = 24
+text = "RÉVISIONS"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_colors/font_outline_color = Color(0.4157, 0.1725, 0, 1)
+theme_override_constants/shadow_offset_y = 9
+
+[node name="Subtitle" parent="Margin/Layout/Body/Logo" instance=ExtResource("3")]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"PillBlue"
+text = "Mots croisés • Quiz • Cryptogrammes"
+
+[node name="Text" parent="Margin/Layout/Body/Logo/Subtitle"]
+theme_override_font_sizes/font_size = 26
+
+[node name="Hero" parent="Margin/Layout/Body" instance=ExtResource("4")]
+custom_minimum_size = Vector2(0, 360)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PlayButton" type="Button" parent="Margin/Layout/Body"]
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_minimum_size = Vector2(520, 160)
+theme_override_font_sizes/font_size = 76
+text = "PLAY"
+size_flags_horizontal = 4
+script = ExtResource("5")
+color = Color(1, 0.651, 0.1686, 1)
+skin = &"ButtonPlay"
+sparkles = true
+shine = true
+
+[node name="ButtonPressAnimation" type="Node" parent="Margin/Layout/Body/PlayButton"]
+script = ExtResource("6")
+sound = "pop"
+
+[node name="CreditsButton" type="Button" parent="Margin/Layout/Body"]
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_minimum_size = Vector2(380, 100)
+theme_override_font_sizes/font_size = 38
+text = "CRÉDITS"
+size_flags_horizontal = 4
+script = ExtResource("5")
+color = Color(0.2392, 0.5176, 0.949, 1)
+icon_left = "book_blue"
+
+[node name="ButtonPressAnimation" type="Node" parent="Margin/Layout/Body/CreditsButton"]
+script = ExtResource("6")
+
+[connection signal="back_pressed" from="Margin/Layout/TopBar" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Margin/Layout/Body/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Margin/Layout/Body/CreditsButton" to="." method="_on_credits_button_pressed"]
+
+[editable path="Margin/Layout/Body/Logo/Subtitle"]

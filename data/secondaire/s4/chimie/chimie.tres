@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SubjectData" format=3 uid="uid://qrfcvouj8up7"]
+
+[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="1_dmln0"]
+[ext_resource type="Resource" uid="uid://e6yf5ojt0mei" path="res://data/secondaire/s4/chimie/level_01.tres" id="2_cqfpv"]
+[ext_resource type="Resource" uid="uid://b08fv8i54lycn" path="res://data/secondaire/s4/chimie/level_02.tres" id="3_l77de"]
+[ext_resource type="Script" uid="uid://slefhuqrt8qe" path="res://scripts/data/subject_data.gd" id="4_nv1io"]
+
+[resource]
+script = ExtResource("4_nv1io")
+name = "Chimie"
+levels = Array[ExtResource("1_dmln0")]([ExtResource("2_cqfpv"), ExtResource("3_l77de")])

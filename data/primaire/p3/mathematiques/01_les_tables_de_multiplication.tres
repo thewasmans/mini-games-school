@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://ds0i8g31kiqkr"]
+
+[ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/mini_games/memo/memo_question.gd" id="1_bp4er"]
+[ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/mini_games/memo/memo_data.gd" id="2_0ihy5"]
+
+[sub_resource type="Resource" id="Resource_6i5pm"]
+script = ExtResource("1_bp4er")
+question = "Combien font 3 × 4 ?"
+answers = PackedStringArray("7", "12", "34", "9")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_n6rjp"]
+script = ExtResource("1_bp4er")
+question = "Combien font 5 × 5 ?"
+answers = PackedStringArray("10", "55", "25", "20")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_2q0gw"]
+script = ExtResource("1_bp4er")
+question = "Combien font 2 × 9 ?"
+answers = PackedStringArray("18", "11", "29", "16")
+
+[resource]
+script = ExtResource("2_0ihy5")
+questions = Array[ExtResource("1_bp4er")]([SubResource("Resource_6i5pm"), SubResource("Resource_n6rjp"), SubResource("Resource_2q0gw")])
+theme_title = "Les tables de multiplication"

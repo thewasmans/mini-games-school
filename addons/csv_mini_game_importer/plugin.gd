@@ -1,6 +1,5 @@
 @tool
 extends EditorPlugin
-## Projet → Outils → Importer un mini-jeu (CSV)…
 
 const MENU_ITEM := "Importer un mini-jeu (CSV)…"
 const SAVE_DIR := "res://data/minigames"

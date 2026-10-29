@@ -1,16 +1,16 @@
 class_name AnimatedBackground
 extends SubViewportContainer
-## Décor de fond en 3D low poly (modèles de LowPoly) : ciel dégradé, mer de nuages, château sur
-## son île flottante, îles et maison, nuages qui dérivent, livres volants et étincelles.
-## La caméra ondule doucement pour donner de la profondeur ; le brouillard garde le décor « doux »
-## derrière l'interface.
 
 const HORIZON := Color("9fd0ff")
 const BOOK_COVERS: Array[Color] = [Color("b03a2e"), Color("8e5a2b"), Color("2d6cdf"), Color("7d3c98"), Color("c0392b"), Color("1e8449")]
-## Hauteurs entre lesquelles les livres montent puis réapparaissent en bas.
 const BOOK_Y := Vector2(-16.0, 18.0)
-## Largeur sur laquelle les nuages dérivent avant de revenir de l'autre côté.
 const CLOUD_X := 26.0
+
+@export_group("Réglages")
+## Couleur du haut du ciel : accueil, puis Primaire, Secondaire, Supérieur.
+@export var sky_top_colors: Array[Color] = [Color("2b4fb3"), Color("2b4fb3"), Color("1f5aa8"), Color("4a3fb3")]
+## Couleur du bas du ciel, dans le même ordre.
+@export var sky_bottom_colors: Array[Color] = [Color("1d3584"), Color("1d3584"), Color("12346e"), Color("251a78")]
 
 var _viewport: SubViewport
 var _sky: ProceduralSkyMaterial
@@ -18,7 +18,6 @@ var _env: Environment
 var _camera: Camera3D
 var _world: Node3D
 var _t := 0.0
-## Objets qui flottent sur place : {node, base, amp, speed, phase, spin}.
 var _floaters: Array[Dictionary] = []
 var _clouds: Array[Dictionary] = []
 var _books: Array[Dictionary] = []
@@ -42,7 +41,10 @@ func _ready() -> void:
 	set_anchors_and_offsets_preset(PRESET_FULL_RECT)
 
 
-## Teinte du ciel (légère variation par niveau d'études).
+func set_study_level(study_level_index: int) -> void:
+	set_colors(sky_top_colors[study_level_index + 1], sky_bottom_colors[study_level_index + 1])
+
+
 func set_colors(top: Color, bottom: Color) -> void:
 	var tw := create_tween().set_parallel()
 	tw.tween_property(_sky, "sky_top_color", top, 0.6)
@@ -96,7 +98,6 @@ func _build_scene() -> void:
 	var rng := RandomNumberGenerator.new()
 	rng.seed = 11
 
-	# Grande île du château, à droite comme sur les maquettes.
 	var main := LowPoly.island(4.2, 1.0, 4)
 	var keep := LowPoly.castle()
 	keep.position = Vector3(0.3, 0.55, -0.4)
@@ -106,7 +107,6 @@ func _build_scene() -> void:
 	_add_floater(main, Vector3(6.5, -2.5, -14), 0.35, 0.45, 0.0, 0.0)
 	main.rotation_degrees.y = 18
 
-	# Île de la maison, en bas à gauche, et autres îles à différentes profondeurs.
 	var home := LowPoly.island(2.4, 2.0, 2)
 	var h := LowPoly.house()
 	h.position = Vector3(-0.3, 0.3, 0.1)
@@ -118,14 +118,12 @@ func _build_scene() -> void:
 	_add_floater(LowPoly.island(1.6, 5.0, 1), Vector3(11, 13, -34), 0.4, 0.4, 4.0, 0.0)
 	_add_floater(LowPoly.island(1.2, 6.0, 1), Vector3(-6.5, -1, -10), 0.3, 0.8, 5.0, 4.0)
 
-	# Mer de nuages, tout en bas.
 	for i in 14:
 		var c := LowPoly.cloud(100.0 + i)
 		c.position = Vector3(rng.randf_range(-26, 26), rng.randf_range(-24, -21), rng.randf_range(-48, -22))
 		c.scale = Vector3.ONE * rng.randf_range(2.0, 3.2)
 		_world.add_child(c)
 
-	# Nuages qui dérivent dans le ciel.
 	for i in 7:
 		var c := LowPoly.cloud(10.0 + i)
 		c.position = Vector3(rng.randf_range(-CLOUD_X, CLOUD_X), rng.randf_range(5, 22), rng.randf_range(-40, -18))
@@ -133,7 +131,6 @@ func _build_scene() -> void:
 		_world.add_child(c)
 		_clouds.append({"node": c, "speed": rng.randf_range(0.25, 0.6)})
 
-	# Livres volants.
 	for i in 8:
 		var halves: Array[Node3D] = []
 		var b := LowPoly.book(BOOK_COVERS[i % BOOK_COVERS.size()], i % 2 == 0, halves)
@@ -144,7 +141,6 @@ func _build_scene() -> void:
 		_books.append({"node": b, "halves": halves, "speed": rng.randf_range(0.5, 1.0), "phase": rng.randf() * TAU,
 			"x": b.position.x, "spin": rng.randf_range(-0.3, 0.3)})
 
-	# Étincelles.
 	for i in 30:
 		var s := LowPoly.sparkle()
 		s.position = Vector3(rng.randf_range(-10, 10), rng.randf_range(-14, 16), rng.randf_range(-14, -1))

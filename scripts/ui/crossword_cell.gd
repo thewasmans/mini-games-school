@@ -1,13 +1,10 @@
 class_name CrosswordCell
 extends Control
-## Une case du mot croisé (lavande, orange une fois validée), dessinée à la main
-## pour pouvoir l'animer librement.
 
 signal clicked
 
 enum Highlight { NONE, WORD, CURSOR }
 
-## Type du thème qui porte les sprites des cases (empty, word, cursor, done, wrong).
 const THEME_TYPE := &"CrosswordCell"
 
 const EMPTY := [Color("ddd6ff"), Color("b9aef0")]
@@ -22,7 +19,6 @@ var number := 0
 var words: Array[int] = []
 var validated := false
 var wrong := false
-var hint := false
 var highlight := Highlight.NONE
 
 var _shake := 0.0
@@ -58,7 +54,6 @@ func shake() -> void:
 		queue_redraw(), 0.0, 1.0, 0.45)
 
 
-## Rebond + flash blanc (mot validé, vague de fin).
 func celebrate(delay := 0.0) -> void:
 	pivot_offset = size / 2
 	var tw := create_tween()
@@ -113,8 +108,6 @@ func _draw() -> void:
 		var light := validated or wrong
 		var outline_col := Color("8a3d00") if validated else Color("7a0f1a")
 		UIStyle.draw_text(self, letter, face_center, fs, Color.WHITE if light else UIStyle.INK, int(fs * 0.24) if light else 0, outline_col)
-	elif hint:
-		UIStyle.draw_text(self, solution, face_center, fs, Color(0.1, 0.1, 0.4, 0.25))
 	if number > 0:
 		var ns := int(size.y * 0.25)
 		UIStyle.draw_text(self, str(number), Vector2(ns * 0.62 + 2, ns * 0.6 + 1), ns, Color(0.08, 0.1, 0.35, 0.8))

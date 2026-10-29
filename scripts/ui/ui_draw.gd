@@ -1,10 +1,7 @@
+@tool
 class_name UIDraw
 extends RefCounted
-## Dessin vectoriel « cartoon » : rectangles arrondis en dégradé, lueurs, icônes et île-château.
-## Toutes les fonctions dessinent dans le _draw() du CanvasItem passé en paramètre.
 
-
-# --- Formes de base --------------------------------------------------------
 
 static func rrect_points(r: Rect2, radius: float, steps := 6) -> PackedVector2Array:
 	var rad := clampf(radius, 1.0, minf(r.size.x, r.size.y) / 2.0)
@@ -26,7 +23,6 @@ static func rrect_points(r: Rect2, radius: float, steps := 6) -> PackedVector2Ar
 	return pts
 
 
-## Rectangle arrondi rempli d'un dégradé vertical, bord anticrénelé.
 static func rrect(ci: CanvasItem, r: Rect2, radius: float, top: Color, bottom := Color(0, 0, 0, -1), outline := Color(0, 0, 0, 0), outline_width := 0.0) -> void:
 	if r.size.x < 2 or r.size.y < 2:
 		return
@@ -47,7 +43,6 @@ static func rrect(ci: CanvasItem, r: Rect2, radius: float, top: Color, bottom :=
 		ci.draw_polyline_colors(closed, closed_cols, 1.0, true)
 
 
-## Halo lumineux autour d'un rectangle arrondi.
 static func glow(ci: CanvasItem, r: Rect2, radius: float, color: Color, size := 14.0, layers := 5) -> void:
 	for i in layers:
 		var k := float(layers - i) / layers
@@ -57,7 +52,6 @@ static func glow(ci: CanvasItem, r: Rect2, radius: float, color: Color, size := 
 		rrect(ci, g, radius + size * k, c)
 
 
-## Polygone défini en coordonnées unitaires, centré sur c, mis à l'échelle s et tourné.
 static func poly(ci: CanvasItem, unit_pts: Array, c: Vector2, s: float, rot: float, color: Color) -> void:
 	var pts := PackedVector2Array()
 	for p: Vector2 in unit_pts:
@@ -82,7 +76,6 @@ static func star_points(center: Vector2, outer: float, inner: float, points := 5
 	return pts
 
 
-## Étincelle à 4 branches.
 static func sparkle(ci: CanvasItem, p: Vector2, size: float, color := Color(1, 1, 0.9)) -> void:
 	if size <= 0.5:
 		return
@@ -90,9 +83,6 @@ static func sparkle(ci: CanvasItem, p: Vector2, size: float, color := Color(1, 1
 	ci.draw_circle(p, size * 0.22, Color(1, 1, 1, color.a))
 
 
-# --- Icônes ----------------------------------------------------------------
-
-## Icône vectorielle de hauteur ~s centrée sur c.
 static func icon(ci: CanvasItem, name: String, c: Vector2, s: float) -> void:
 	var sprite := UISkin.icon(name)
 	if sprite != null:
@@ -226,7 +216,6 @@ static func _chevron(ci: CanvasItem, c: Vector2, s: float, left: bool) -> void:
 	ci.draw_polyline(pts, Color.WHITE, s * 0.2, true)
 
 
-## Cadenas argenté.
 static func lock(ci: CanvasItem, c: Vector2, s: float) -> void:
 	ci.draw_arc(c + Vector2(0, -0.12) * s, s * 0.24, PI, TAU, 18, UIStyle.INK, s * 0.17, true)
 	ci.draw_arc(c + Vector2(0, -0.12) * s, s * 0.24, PI, TAU, 18, Color("dfe4ee"), s * 0.09, true)
@@ -237,14 +226,10 @@ static func lock(ci: CanvasItem, c: Vector2, s: float) -> void:
 	ci.draw_line(c + Vector2(0, 0.1) * s, c + Vector2(0, 0.28) * s, Color("3a4256"), s * 0.07, true)
 
 
-# --- Île flottante avec château --------------------------------------------
-
-## Île flottante surmontée d'un château, largeur 2*s, sommet de l'herbe en c.
 static func castle_island(ci: CanvasItem, c: Vector2, s: float, roof := Color("3b6fd8"), dark := false) -> void:
 	var P := func(x: float, y: float) -> Vector2: return c + Vector2(x, y) * s
 	var stone := Color("8a8fa3") if dark else Color("c3c9d6")
 	var stone_dark := Color("5f6478") if dark else Color("9199ab")
-	# Roche
 	ci.draw_colored_polygon(PackedVector2Array([P.call(-1.0, 0.05), P.call(1.0, 0.05), P.call(0.75, 0.42), P.call(0.4, 0.72),
 		P.call(0.08, 1.05), P.call(-0.22, 0.75), P.call(-0.6, 0.5)]), Color("8b5a3c"))
 	ci.draw_colored_polygon(PackedVector2Array([P.call(0.1, 0.05), P.call(1.0, 0.05), P.call(0.75, 0.42), P.call(0.4, 0.72),
@@ -253,20 +238,16 @@ static func castle_island(ci: CanvasItem, c: Vector2, s: float, roof := Color("3
 	ci.draw_colored_polygon(ellipse(P.call(0, 0.08), Vector2(1.0, 0.24) * s), Color("7a4a2e"))
 	ci.draw_colored_polygon(ellipse(P.call(0, 0.0), Vector2(1.0, 0.24) * s), Color("62b844"))
 	ci.draw_colored_polygon(ellipse(P.call(-0.2, -0.03), Vector2(0.65, 0.13) * s), Color("86d65e"))
-	# Arbres
 	for t in [[-0.82, 0.0], [0.8, 0.02], [0.66, 0.08]]:
 		ci.draw_rect(Rect2(P.call(t[0] - 0.02, t[1] - 0.12), Vector2(0.04, 0.12) * s), Color("6b4228"))
 		ci.draw_colored_polygon(PackedVector2Array([P.call(t[0] - 0.11, t[1] - 0.1), P.call(t[0] + 0.11, t[1] - 0.1), P.call(t[0], t[1] - 0.42)]), Color("2e8b3e"))
-	# Murailles
 	var wall := Rect2(P.call(-0.5, -0.38), Vector2(1.0, 0.38) * s)
 	ci.draw_rect(wall, stone)
 	ci.draw_rect(Rect2(P.call(0.1, -0.38), Vector2(0.4, 0.38) * s), stone_dark)
 	for i in 6:
 		ci.draw_rect(Rect2(P.call(-0.5 + i * 0.18, -0.46), Vector2(0.1, 0.09) * s), stone if i < 3 else stone_dark)
-	# Porte
 	ci.draw_colored_polygon(PackedVector2Array([P.call(-0.12, 0.0), P.call(0.12, 0.0), P.call(0.12, -0.18), P.call(0.0, -0.27), P.call(-0.12, -0.18)]), Color("5a3a28"))
 	ci.draw_line(P.call(0, 0), P.call(0, -0.25), Color("3e2618"), s * 0.02)
-	# Tours
 	for tw in [[-0.62, 0.26, -0.62], [0.36, 0.26, -0.62], [-0.16, 0.32, -0.95]]:
 		var x: float = tw[0]
 		var w: float = tw[1]
@@ -278,6 +259,5 @@ static func castle_island(ci: CanvasItem, c: Vector2, s: float, roof := Color("3
 		var win := Color("ff7a3d") if dark else Color("ffcf6b")
 		ci.draw_rect(Rect2(P.call(x + w * 0.38, top + 0.12), Vector2(w * 0.24, 0.12) * s), Color("2a2f45"))
 		ci.draw_rect(Rect2(P.call(x + w * 0.42, top + 0.14), Vector2(w * 0.16, 0.08) * s), win)
-	# Drapeau
 	ci.draw_line(P.call(0.0, -1.35), P.call(0.0, -1.6), Color("4a4f60"), s * 0.025)
 	ci.draw_colored_polygon(PackedVector2Array([P.call(0.0, -1.6), P.call(0.2, -1.55), P.call(0.0, -1.48)]), Color("ff4d5a"))

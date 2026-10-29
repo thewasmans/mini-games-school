@@ -1,0 +1,70 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://73tst6dc76if"]
+
+[ext_resource type="Script" uid="uid://6pk47pd5gtfx" path="res://scripts/mini_games/crossword/crossword_entry.gd" id="1_dy70r"]
+[ext_resource type="Script" uid="uid://bu7s316sbdqky" path="res://scripts/mini_games/crossword/crossword_data.gd" id="2_tgdhk"]
+
+[sub_resource type="Resource" id="Resource_nfxix"]
+script = ExtResource("1_dy70r")
+word = "Vache"
+clue = "Elle donne du lait"
+answer = "VACHE"
+x = 3
+horizontal = false
+placed = true
+number = 1
+
+[sub_resource type="Resource" id="Resource_urixy"]
+script = ExtResource("1_dy70r")
+word = "Cheval"
+clue = "On peut le monter et il hennit"
+answer = "CHEVAL"
+x = 1
+y = 4
+placed = true
+number = 2
+
+[sub_resource type="Resource" id="Resource_3n4dw"]
+script = ExtResource("1_dy70r")
+word = "Mouton"
+clue = "Sa laine tient chaud"
+answer = "MOUTON"
+y = 11
+placed = true
+number = 5
+
+[sub_resource type="Resource" id="Resource_vhm8w"]
+script = ExtResource("1_dy70r")
+word = "Poule"
+clue = "Elle pond des œufs"
+answer = "POULE"
+y = 8
+placed = true
+number = 4
+
+[sub_resource type="Resource" id="Resource_654kb"]
+script = ExtResource("1_dy70r")
+word = "Cochon"
+clue = "Il adore se rouler dans la boue"
+answer = "COCHON"
+x = 1
+y = 4
+horizontal = false
+placed = true
+number = 2
+
+[sub_resource type="Resource" id="Resource_xjn45"]
+script = ExtResource("1_dy70r")
+word = "Canard"
+clue = "Il fait coin-coin"
+answer = "CANARD"
+x = 1
+y = 6
+placed = true
+number = 3
+
+[resource]
+script = ExtResource("2_tgdhk")
+entries = Array[ExtResource("1_dy70r")]([SubResource("Resource_nfxix"), SubResource("Resource_urixy"), SubResource("Resource_3n4dw"), SubResource("Resource_vhm8w"), SubResource("Resource_654kb"), SubResource("Resource_xjn45")])
+grid_width = 7
+grid_height = 12
+theme_title = "Les animaux de la ferme"

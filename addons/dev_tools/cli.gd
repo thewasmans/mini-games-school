@@ -1,7 +1,4 @@
 extends SceneTree
-## Générateurs en ligne de commande :
-##   godot --headless --path . --script res://addons/dev_tools/cli.gd -- theme
-##   godot --headless --path . --script res://addons/dev_tools/cli.gd -- fake_data
 
 
 func _initialize() -> void:

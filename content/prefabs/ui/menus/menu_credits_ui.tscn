@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://c2loo0gttoung"]
+
+[ext_resource type="Script" uid="uid://bxsbn12f2etdc" path="res://scripts/ui/menus/menu_credits_ui.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://bxo54w63ssbon" path="res://content/prefabs/ui/top_bar.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://d3dhpvb4a4n5e" path="res://content/prefabs/ui/panels/title_banner.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://dgac5yeoiwq4l" path="res://content/prefabs/ui/contributor_line_ui.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://vne7ie0oeetj" path="res://content/prefabs/ui/panels/partner_tile.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://dlwcuux7dlrik" path="res://content/prefabs/ui/panels/titled_panel.tscn" id="6"]
+
+[node name="MenuCreditsUI" type="Control" node_paths=PackedStringArray("top_bar", "contributors_panel", "partners_panel", "partners_grid", "empty_label", "title_banner")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+top_bar = NodePath("Margin/Layout/TopBar")
+contributors_panel = NodePath("Margin/Layout/Body/Scroll/List/ContributorsPanel")
+partners_panel = NodePath("Margin/Layout/Body/Scroll/List/PartnersPanel")
+partners_grid = NodePath("Margin/Layout/Body/Scroll/List/PartnersPanel/Layout/Inner/Content/Grid")
+empty_label = NodePath("Margin/Layout/Body/Scroll/List/EmptyLabel")
+title_banner = NodePath("Margin/Layout/TitleBanner")
+contributor_line_prefab = ExtResource("4")
+partner_tile_prefab = ExtResource("5")
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="Layout" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+theme_override_constants/separation = 22
+
+[node name="TopBar" parent="Margin/Layout" instance=ExtResource("2")]
+layout_mode = 2
+
+[node name="TitleBanner" parent="Margin/Layout" instance=ExtResource("3")]
+custom_minimum_size = Vector2(420, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "CRÉDITS"
+
+[node name="Body" type="VBoxContainer" parent="Margin/Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 18
+
+[node name="Scroll" type="ScrollContainer" parent="Margin/Layout/Body"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="List" type="VBoxContainer" parent="Margin/Layout/Body/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 26
+
+[node name="EmptyLabel" type="Label" parent="Margin/Layout/Body/Scroll/List"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Aucun crédit renseigné."
+horizontal_alignment = 1
+vertical_alignment = 1
+visible = false
+
+[node name="ContributorsPanel" parent="Margin/Layout/Body/Scroll/List" instance=ExtResource("6")]
+layout_mode = 2
+title = "Contributeurs"
+
+[node name="PartnersPanel" parent="Margin/Layout/Body/Scroll/List" instance=ExtResource("6")]
+layout_mode = 2
+title = "Partenaires"
+
+[node name="Grid" type="GridContainer" parent="Margin/Layout/Body/Scroll/List/PartnersPanel/Layout/Inner/Content"]
+layout_mode = 2
+theme_override_constants/h_separation = 14
+theme_override_constants/v_separation = 14
+columns = 2
+
+[connection signal="back_pressed" from="Margin/Layout/TopBar" to="." method="_on_back_pressed"]
+
+[editable path="Margin/Layout/Body/Scroll/List/PartnersPanel"]

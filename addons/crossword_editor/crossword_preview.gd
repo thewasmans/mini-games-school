@@ -1,6 +1,5 @@
 @tool
 extends Control
-## Aperçu de la grille dans l'onglet Crossword.
 
 const COLOR_CELL := Color("d6d0ff")
 const COLOR_EMPTY := Color(1, 1, 1, 0.05)

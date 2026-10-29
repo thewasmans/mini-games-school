@@ -1,8 +1,5 @@
 class_name LevelNode
 extends Control
-## Un level sur le chemin : plateforme ronde posée sur un rocher flottant.
-## Verrouillée (pierre grise + cadenas), ouverte (disque bleu lumineux), en cours (halo pulsant)
-## ou terminée (disque doré + étoile).
 
 signal pressed
 
@@ -12,34 +9,31 @@ const NODE_SIZE := Vector2(170, 170)
 
 var index := 0
 var state := State.LOCKED
-var kind := ""        # "crossword", "memo", "crypto"
+var kind := ""
 var lock_offset := Vector2.ZERO
 var flash := 0.0
 
 var _t := 0.0
 var _phase := 0.0
-var _title: Label
+
+@export var title_label: Label
 
 
-func _init(index_: int, title: String, kind_: String) -> void:
+func _ready() -> void:
+	size = NODE_SIZE
+	pivot_offset = NODE_SIZE / 2
+
+
+func setup(index_: int, title: String, kind_: String) -> void:
 	index = index_
 	kind = kind_
 	_phase = index_ * 1.3
-	size = NODE_SIZE
-	pivot_offset = NODE_SIZE / 2
-	mouse_default_cursor_shape = CURSOR_POINTING_HAND
-	_title = UIStyle.label(title, 24, Color.WHITE, 8)
-	_title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_title.size = Vector2(250, 64)
-	_title.position = Vector2((NODE_SIZE.x - 250) / 2, -34)
-	_title.vertical_alignment = VERTICAL_ALIGNMENT_BOTTOM
-	_title.mouse_filter = MOUSE_FILTER_IGNORE
-	add_child(_title)
+	title_label.text = title
 
 
 func _process(delta: float) -> void:
 	_t += delta
-	_title.modulate.a = 0.7 if state == State.LOCKED else 1.0
+	title_label.modulate.a = 0.7 if state == State.LOCKED else 1.0
 	queue_redraw()
 
 
@@ -70,7 +64,6 @@ func _draw() -> void:
 		_draw_sprite_platform(c, get_theme_icon(skin, "LevelNode"))
 		return
 
-	# Rocher sous la plateforme
 	var rock := PackedVector2Array([c + Vector2(-62, 12), c + Vector2(62, 12), c + Vector2(46, 40), c + Vector2(18, 74),
 		c + Vector2(2, 98), c + Vector2(-18, 72), c + Vector2(-48, 40)])
 	draw_colored_polygon(rock, Color("6e7584") if locked else Color("8b5a3c"))
@@ -82,14 +75,12 @@ func _draw() -> void:
 		for k in 3:
 			draw_colored_polygon(UIDraw.ellipse(c + Vector2(0, 4), Vector2(86, 44) * (1.0 + k * 0.14 + pulse * 0.08)), Color(0.35, 0.9, 1.0, 0.12 - k * 0.03))
 
-	# Rebord (cylindre)
 	var rim_dark := Color("7b8190") if locked else (Color("b8790a") if state == State.DONE else Color("c46a1c"))
 	var rim_light := Color("aeb4c0") if locked else (Color("ffd45c") if state == State.DONE else Color("f6a640"))
 	draw_colored_polygon(UIDraw.ellipse(c + Vector2(0, 16), Vector2(68, 30)), rim_dark)
 	draw_rect(Rect2(c.x - 68, c.y, 136, 16), rim_dark)
 	draw_colored_polygon(UIDraw.ellipse(c, Vector2(68, 30)), rim_light)
 
-	# Disque supérieur
 	match state:
 		State.LOCKED:
 			draw_colored_polygon(UIDraw.ellipse(c + Vector2(0, -2), Vector2(56, 23)), Color("c9ced8"))
@@ -123,11 +114,9 @@ func _draw() -> void:
 		draw_colored_polygon(UIDraw.ellipse(c, Vector2(68, 30) * (1.0 + (1.0 - flash) * 0.7)), Color(1, 1, 1, flash))
 
 
-## Plateforme du thème (icônes open / lock / done du type LevelNode) + numéro, étincelles, badge.
 func _draw_sprite_platform(c: Vector2, sprite: Texture2D) -> void:
 	var w := 156.0
 	var sz := Vector2(sprite.get_width(), sprite.get_height()) * (w / sprite.get_width())
-	# Le centre du disque est vers 35 % de la hauteur du sprite.
 	var disc := c + Vector2(0, -16)
 	if state == State.CURRENT:
 		var pulse := 0.5 + 0.5 * sin(_t * 4.0)
@@ -163,7 +152,6 @@ func _draw_kind_badge(c: Vector2) -> void:
 			UIStyle.draw_text(self, "A_", c + Vector2(0, 1), 17, UIStyle.GREEN.darkened(0.2))
 
 
-## Animation de déblocage : le cadenas tremble, éclate, puis le level devient « en cours ».
 func play_unlock() -> void:
 	state = State.LOCKED
 	var tw := create_tween()

@@ -1,6 +1,6 @@
-[gd_resource type="FontVariation" format=3]
+[gd_resource type="FontVariation" format=3 uid="uid://6w1rjfbaafsj"]
 
-[ext_resource type="FontFile" path="res://content/fonts/Fredoka.ttf" id="1_mptf5"]
+[ext_resource type="FontFile" uid="uid://dcgoypicaucsv" path="res://content/fonts/Fredoka.ttf" id="1_mptf5"]
 
 [resource]
 base_font = ExtResource("1_mptf5")

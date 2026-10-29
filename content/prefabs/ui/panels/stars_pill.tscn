@@ -1,7 +1,7 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://d4isb4wtnq55b"]
 
-[ext_resource type="Script" path="res://scripts/ui/panels/stars_pill.gd" id="1_script"]
-[ext_resource type="Script" path="res://scripts/ui/icon_view.gd" id="2_icon"]
+[ext_resource type="Script" uid="uid://byemmj2a8txnl" path="res://scripts/ui/panels/stars_pill.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://da7bsgfs5sdpw" path="res://scripts/ui/icon_view.gd" id="2_icon"]
 
 [node name="StarsPill" type="PanelContainer"]
 theme_type_variation = &"PillStars"

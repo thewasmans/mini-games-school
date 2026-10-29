@@ -1,6 +1,5 @@
 class_name Confetti
 extends RefCounted
-## Confettis et étincelles, dessinés sur une CanvasLayer au-dessus de tout.
 
 const COLORS: Array[Color] = [Color("ff4d5a"), Color("ffc928"), Color("4cd964"), Color("35d0ff"), Color("b05ce0"), Color("ff9f1c"), Color("ffffff")]
 
@@ -8,7 +7,6 @@ static var _rect_tex: Texture2D
 static var _star_tex: Texture2D
 
 
-## Grande explosion de confettis depuis les deux coins du bas et pluie depuis le haut.
 static func burst(from: Node) -> void:
 	var layer := _layer(from)
 	var size := from.get_viewport().get_visible_rect().size
@@ -20,7 +18,6 @@ static func burst(from: Node) -> void:
 	rain.explosiveness = 0.6
 
 
-## Petite gerbe d'étoiles à une position globale.
 static func sparkle(from: Node, global_pos: Vector2, amount := 18, color := Color("ffe066")) -> void:
 	var layer := _layer(from)
 	var p := CPUParticles2D.new()
@@ -113,7 +110,6 @@ static func _star() -> Texture2D:
 		for x in s:
 			for y in s:
 				var d := Vector2(x + 0.5, y + 0.5) - c
-				# Étoile à 4 branches : |x|^0.5 + |y|^0.5 < r^0.5
 				var v := sqrt(absf(d.x)) + sqrt(absf(d.y))
 				var a := clampf((sqrt(s / 2.0) * 1.05 - v) * 2.0, 0.0, 1.0)
 				img.set_pixel(x, y, Color(1, 1, 1, a))

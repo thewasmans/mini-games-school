@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://bmc8icp3kwv33"]
+
+[ext_resource type="Resource" uid="uid://iqdh6m3i4u6d" path="res://data/secondaire/s1/histoire/03_napoleon.tres" id="1_ff1xd"]
+[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="2_ti6rj"]
+
+[resource]
+script = ExtResource("2_ti6rj")
+mini_game = ExtResource("1_ff1xd")
