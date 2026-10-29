@@ -144,7 +144,7 @@ func _draw_kind_badge(c: Vector2) -> void:
 	match kind:
 		"crossword":
 			for i in 4:
-				var p := c + Vector2((i % 2) * 11 - 10, (i / 2) * 11 - 10)
+				var p := c + Vector2((i % 2) * 11 - 10, floori(i / 2.0) * 11 - 10)
 				draw_rect(Rect2(p, Vector2(9, 9)), UIStyle.GOLD if i != 3 else Color("c9c1f2"))
 		"memo":
 			UIStyle.draw_text(self, "?", c + Vector2(0, 1), 26, UIStyle.PURPLE)

@@ -14,6 +14,7 @@ func test_completing_a_level_unlocks_and_selects_the_next_one() -> void:
 	assert_bool(state.is_level_unlocked(1)).is_true()
 	assert_bool(state.is_level_unlocked(2)).is_false()
 	assert_int(state.current_level).is_equal(1)
+	@warning_ignore("redundant_await")
 	await assert_signal(state).is_emitted("level_unlocked", 1)
 
 
@@ -23,6 +24,7 @@ func test_completing_the_last_level_unlocks_nothing() -> void:
 	monitor_signals(state, false)
 	state.complete_level(1)
 	assert_int(state.current_level).is_equal(1)
+	@warning_ignore("redundant_await")
 	await assert_signal(state).wait_until(100).is_not_emitted("level_unlocked")
 
 
@@ -54,6 +56,7 @@ func test_unlock_all_levels_unlocks_every_level() -> void:
 	monitor_signals(state, false)
 	state.unlock_all_levels()
 	assert_bool(state.is_level_unlocked(2)).is_true()
+	@warning_ignore("redundant_await")
 	await assert_signal(state).is_emitted("all_levels_unlocked")
 
 

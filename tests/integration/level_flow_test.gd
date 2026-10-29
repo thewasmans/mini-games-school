@@ -34,9 +34,11 @@ func test_answering_every_question_then_validating_emits_validated() -> void:
 	memo.answer_buttons[0].pressed.emit()
 	await await_millis(1800)
 	memo.answer_buttons[0].pressed.emit()
+	@warning_ignore("redundant_await")
 	await assert_signal(level).wait_until(TIMEOUT_MS).is_emitted("validation_available")
 	assert_bool(level.validate_button.visible).is_true()
 	level.validate_button.pressed.emit()
+	@warning_ignore("redundant_await")
 	await assert_signal(level).is_emitted("validated", 4)
 
 
@@ -53,4 +55,5 @@ func test_back_button_emits_exited() -> void:
 	var level := _start_level(0, TestData.memo(1))
 	monitor_signals(level, false)
 	level.top_bar.back_button.pressed.emit()
+	@warning_ignore("redundant_await")
 	await assert_signal(level).is_emitted("exited")

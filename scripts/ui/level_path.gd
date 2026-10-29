@@ -68,7 +68,7 @@ func fit_height(visible_height: float) -> void:
 
 
 func node_center(i: int) -> Vector2:
-	var row := i / COLUMNS
+	var row := floori(i / float(COLUMNS))
 	var col := i % COLUMNS
 	if row % 2 == 1:
 		col = COLUMNS - 1 - col

@@ -33,7 +33,7 @@ static func glow_material() -> StandardMaterial3D:
 	return _glow_material
 
 
-static func flat(src: PrimitiveMesh, color: Color, jitter := Vector3.ZERO, seed := 0.0, bottom := Color(0, 0, 0, 0), vary := 0.06) -> ArrayMesh:
+static func flat(src: PrimitiveMesh, color: Color, jitter := Vector3.ZERO, noise_seed := 0.0, bottom := Color(0, 0, 0, 0), vary := 0.06) -> ArrayMesh:
 	var arrays := src.get_mesh_arrays()
 	var verts: PackedVector3Array = arrays[Mesh.ARRAY_VERTEX]
 	var idx: PackedInt32Array = arrays[Mesh.ARRAY_INDEX]
@@ -49,12 +49,12 @@ static func flat(src: PrimitiveMesh, color: Color, jitter := Vector3.ZERO, seed 
 		var tri: Array[Vector3] = []
 		for k in 3:
 			var p := verts[idx[i + k]]
-			tri.append(p + Vector3(_hash(p, seed + 1.0), _hash(p, seed + 2.0), _hash(p, seed + 3.0)) * jitter)
+			tri.append(p + Vector3(_hash(p, noise_seed + 1.0), _hash(p, noise_seed + 2.0), _hash(p, noise_seed + 3.0)) * jitter)
 		var centroid := (tri[0] + tri[1] + tri[2]) / 3.0
 		var c := color
 		if bottom.a > 0 and max_y > min_y:
 			c = color.lerp(bottom, inverse_lerp(max_y, min_y, centroid.y))
-		var v := _hash(centroid, seed + 7.0) * vary
+		var v := _hash(centroid, noise_seed + 7.0) * vary
 		c = c.lightened(v) if v > 0 else c.darkened(-v)
 		st.set_color(c)
 		for p in tri:
@@ -103,33 +103,33 @@ static func sphere(radius: float, segments := 7, rings := 4) -> SphereMesh:
 	return m
 
 
-static func island(radius: float, seed: float, trees := 3) -> Node3D:
+static func island(radius: float, noise_seed: float, trees := 3) -> Node3D:
 	var rng := RandomNumberGenerator.new()
-	rng.seed = int(seed * 1000.0)
+	rng.seed = int(noise_seed * 1000.0)
 	var root := Node3D.new()
 	var r := radius
-	root.add_child(part(flat(cylinder(r, r * 0.95, r * 0.26, 11), GRASS, Vector3(r * 0.06, r * 0.03, r * 0.06), seed), Vector3.ZERO))
-	root.add_child(part(flat(cylinder(r * 0.96, r * 0.1, r * 1.35, 11, 3), ROCK_TOP, Vector3(r * 0.16, r * 0.1, r * 0.16), seed, ROCK_BOTTOM, 0.08),
+	root.add_child(part(flat(cylinder(r, r * 0.95, r * 0.26, 11), GRASS, Vector3(r * 0.06, r * 0.03, r * 0.06), noise_seed), Vector3.ZERO))
+	root.add_child(part(flat(cylinder(r * 0.96, r * 0.1, r * 1.35, 11, 3), ROCK_TOP, Vector3(r * 0.16, r * 0.1, r * 0.16), noise_seed, ROCK_BOTTOM, 0.08),
 		Vector3(0, -r * 0.8, 0)))
 	for i in trees:
 		var a := rng.randf() * TAU
 		var d := rng.randf_range(0.35, 0.75) * r
-		root.add_child(tree(rng.randf_range(0.8, 1.3) * minf(r * 0.3, 1.0), seed + i, Vector3(cos(a) * d, r * 0.13, sin(a) * d)))
+		root.add_child(tree(rng.randf_range(0.8, 1.3) * minf(r * 0.3, 1.0), noise_seed + i, Vector3(cos(a) * d, r * 0.13, sin(a) * d)))
 	for i in 2:
 		var a := rng.randf() * TAU
-		var rock := part(flat(sphere(r * 0.08, 5, 3), Color("a9a3bd"), Vector3.ONE * r * 0.02, seed + 10 + i),
+		var rock := part(flat(sphere(r * 0.08, 5, 3), Color("a9a3bd"), Vector3.ONE * r * 0.02, noise_seed + 10 + i),
 			Vector3(cos(a) * r * 0.7, r * 0.14, sin(a) * r * 0.7))
 		root.add_child(rock)
 	return root
 
 
-static func tree(scale: float, seed: float, pos: Vector3) -> Node3D:
+static func tree(scale: float, noise_seed: float, pos: Vector3) -> Node3D:
 	var root := Node3D.new()
 	root.position = pos
 	root.scale = Vector3.ONE * scale
-	root.add_child(part(flat(cylinder(0.08, 0.12, 0.5, 5), WOOD, Vector3.ZERO, seed), Vector3(0, 0.25, 0)))
-	root.add_child(part(flat(cylinder(0.0, 0.55, 0.9, 6), GRASS_DARK, Vector3.ONE * 0.05, seed), Vector3(0, 0.85, 0)))
-	root.add_child(part(flat(cylinder(0.0, 0.42, 0.7, 6), GRASS_DARK.lightened(0.12), Vector3.ONE * 0.04, seed + 1), Vector3(0, 1.3, 0)))
+	root.add_child(part(flat(cylinder(0.08, 0.12, 0.5, 5), WOOD, Vector3.ZERO, noise_seed), Vector3(0, 0.25, 0)))
+	root.add_child(part(flat(cylinder(0.0, 0.55, 0.9, 6), GRASS_DARK, Vector3.ONE * 0.05, noise_seed), Vector3(0, 0.85, 0)))
+	root.add_child(part(flat(cylinder(0.0, 0.42, 0.7, 6), GRASS_DARK.lightened(0.12), Vector3.ONE * 0.04, noise_seed + 1), Vector3(0, 1.3, 0)))
 	return root
 
 
@@ -138,7 +138,7 @@ static func castle() -> Node3D:
 	root.add_child(part(flat(box(Vector3(2.6, 1.4, 2.6)), STONE, Vector3.ONE * 0.03, 1.0, STONE_DARK), Vector3(0, 0.7, 0)))
 	for i in 12:
 		var t := float(i % 3) / 2.0 - 0.5
-		var side := i / 3
+		var side := floori(i / 3.0)
 		var p := Vector3(t * 1.6, 1.55, 1.25) if side == 0 else (Vector3(t * 1.6, 1.55, -1.25) if side == 1 else
 			(Vector3(1.25, 1.55, t * 1.6) if side == 2 else Vector3(-1.25, 1.55, t * 1.6)))
 		root.add_child(part(flat(box(Vector3(0.3, 0.3, 0.3)), STONE, Vector3.ZERO, 2.0 + i), p))
@@ -171,16 +171,16 @@ static func house() -> Node3D:
 	return root
 
 
-static func cloud(seed: float) -> Node3D:
+static func cloud(noise_seed: float) -> Node3D:
 	var rng := RandomNumberGenerator.new()
-	rng.seed = int(seed * 100.0)
+	rng.seed = int(noise_seed * 100.0)
 	var root := Node3D.new()
 	var n := rng.randi_range(4, 6)
 	for i in n:
-		var r := rng.randf_range(0.8, 1.5) * (1.3 if i == n / 2 else 1.0)
+		var r := rng.randf_range(0.8, 1.5) * (1.3 if i == floori(n / 2.0) else 1.0)
 		var x := (i - (n - 1) / 2.0) * 1.1 + rng.randf_range(-0.2, 0.2)
-		var mi := part(flat(sphere(r, 7, 4), CLOUD, Vector3.ONE * r * 0.12, seed + i, Color(0, 0, 0, 0), 0.03),
-			Vector3(x, rng.randf_range(-0.1, 0.4) + (0.4 if i == n / 2 else 0.0), rng.randf_range(-0.4, 0.4)), false)
+		var mi := part(flat(sphere(r, 7, 4), CLOUD, Vector3.ONE * r * 0.12, noise_seed + i, Color(0, 0, 0, 0), 0.03),
+			Vector3(x, rng.randf_range(-0.1, 0.4) + (0.4 if i == floori(n / 2.0) else 0.0), rng.randf_range(-0.4, 0.4)), false)
 		mi.scale = Vector3(1, 0.75, 1)
 		root.add_child(mi)
 	return root

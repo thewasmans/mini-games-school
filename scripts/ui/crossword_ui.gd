@@ -265,7 +265,7 @@ func _validate_word(index: int) -> void:
 		cell.wrong = false
 		cell.celebrate(i * 0.05)
 	Sfx.play("word")
-	var mid: CrosswordCell = _cells[cells[cells.size() / 2]]
+	var mid: CrosswordCell = _cells[cells[floori(cells.size() / 2.0)]]
 	Confetti.sparkle(self, mid.global_position + mid.size / 2, 14)
 	progress_changed.emit(_done_count(), _words.size())
 	for p in cells:

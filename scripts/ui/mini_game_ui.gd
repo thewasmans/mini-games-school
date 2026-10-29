@@ -3,6 +3,7 @@ class_name MiniGameUI
 extends Control
 
 signal completed
+@warning_ignore("unused_signal")
 signal progress_changed(completed_count: int, total_count: int)
 
 var is_completed := false

@@ -68,11 +68,11 @@ func _process(delta: float) -> void:
 
 
 func _update_variation() -> void:
-	var round: StringName = UISkin.ICON_BUTTONS.get(icon_kind, &"") if text == "" else &""
+	var round_skin: StringName = UISkin.ICON_BUTTONS.get(icon_kind, &"") if text == "" else &""
 	if skin != &"":
 		theme_type_variation = skin
-	elif round != &"" and UIStyle.theme().has_stylebox("normal", round):
-		theme_type_variation = round
+	elif round_skin != &"" and UIStyle.theme().has_stylebox("normal", round_skin):
+		theme_type_variation = round_skin
 	else:
 		theme_type_variation = "Button" + UISkin.color_name(color)
 	_apply_margins()

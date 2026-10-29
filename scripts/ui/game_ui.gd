@@ -108,7 +108,10 @@ func _on_school_year_selected(school_year_index: int) -> void:
 
 
 func _on_menu_subjects_back() -> void:
-	_switch_to(menu_study_levels if _skipped_school_years else menu_school_years, false)
+	if _skipped_school_years:
+		_switch_to(menu_study_levels, false)
+	else:
+		_switch_to(menu_school_years, false)
 
 
 func _on_subject_selected(subject_index: int) -> void:

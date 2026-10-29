@@ -36,6 +36,7 @@ func _assert_cheat_completes(kind_id: String) -> void:
 	assert_int(level_index).is_not_negative()
 	_game_manager.game_state.select_level(level_index)
 	_game_manager.level_manager.start_level(level_index)
+	@warning_ignore("redundant_await")
 	await assert_func(_game_manager.game_state, "is_level_completed", [level_index]).wait_until(TIMEOUT_MS).is_true()
 
 
