@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://drurgugoup12y"]
+
+[ext_resource type="Resource" uid="uid://cb4khmwlkv5r3" path="res://data/secondaire/s4/physique/17_memo_travail_et_puissance.tres" id="1_jmxhy"]
+[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="2_yw2ql"]
+
+[resource]
+script = ExtResource("2_yw2ql")
+mini_game = ExtResource("1_jmxhy")

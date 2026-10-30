@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://quctoc77hyjv"]
+
+[ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/mini_games/memo/memo_question.gd" id="1_7ubdk"]
+[ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/mini_games/memo/memo_data.gd" id="2_3qiur"]
+
+[sub_resource type="Resource" id="Resource_cp6sa"]
+script = ExtResource("1_7ubdk")
+question = "Comment se nomme le réseau de tubes qui transporte les nutriments dans la cellule ?"
+answers = PackedStringArray("Le réticulum endoplasmique.", "La mitochondrie.", "Le noyau.", "La vacuole.")
+
+[sub_resource type="Resource" id="Resource_402ja"]
+script = ExtResource("1_7ubdk")
+question = "Quel est le site de la photosynthèse ?"
+answers = PackedStringArray("La mitochondrie.", "Le noyau.", "Le chloroplaste.", "La mitose.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_jw5wk"]
+script = ExtResource("1_7ubdk")
+question = "Qu’est-ce qui permet à la cellule d’absorber les nutriments et d’éliminer les déchets ?"
+answers = PackedStringArray("La méiose.", "La membrane cellulaire.", "La mitose.", "Les globules blancs.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_7w10n"]
+script = ExtResource("1_7ubdk")
+question = "Quelle structure est considérée comme étant l’unité fondamentale du vivant ?"
+answers = PackedStringArray("Le virus.", "La bactérie.", "La cellule.", "La protéine.")
+correct_index = 2
+
+[resource]
+script = ExtResource("2_3qiur")
+questions = Array[ExtResource("1_7ubdk")]([SubResource("Resource_cp6sa"), SubResource("Resource_402ja"), SubResource("Resource_jw5wk"), SubResource("Resource_7w10n")])
+theme_title = "La cellule"

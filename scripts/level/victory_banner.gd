@@ -7,6 +7,8 @@ extends Control
 ## Durée d'affichage du bandeau, avant qu'il disparaisse, en secondes.
 @export var display_duration := 1.0
 
+var stars := 3.0
+
 var _t := 0.0
 var _scale := 0.0
 
@@ -44,5 +46,9 @@ func _draw() -> void:
 	for k in 3:
 		var sx := (k - 1) * 90.0
 		var sy := -120.0 + absi(k - 1) * 20.0
-		draw_colored_polygon(UIStyle.star(Vector2(sx, sy), 44 if k == 1 else 34, 18 if k == 1 else 14), Color("8a5a00"))
-		draw_colored_polygon(UIStyle.star(Vector2(sx, sy - 4), 40 if k == 1 else 30, 16 if k == 1 else 12), UIStyle.YELLOW)
+		UIDraw.rating_star(self, Vector2(sx, sy), 42 if k == 1 else 32, clampf(stars - k, 0.0, 1.0), UIStyle.YELLOW, Color(0.35, 0.25, 0.1, 0.85))
+	UIStyle.draw_text(self, "%s / 3" % _format_stars(stars), Vector2(0, 104), 40, Color.WHITE, 12)
+
+
+func _format_stars(value: float) -> String:
+	return str(snappedf(value, 0.1)).replace(".", ",").trim_suffix(",0")

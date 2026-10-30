@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://be7cwfw2c0mqa"]
+
+[ext_resource type="Resource" uid="uid://60v7n1ao2txn" path="res://data/secondaire/s4/biologie/45_crypto_l_evolution.tres" id="1_tf02o"]
+[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="2_h5h5x"]
+
+[resource]
+script = ExtResource("2_h5h5x")
+mini_game = ExtResource("1_tf02o")

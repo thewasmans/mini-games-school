@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://c6oahk2k5cacv"]
+
+[ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/mini_games/memo/memo_question.gd" id="1_g2csn"]
+[ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/mini_games/memo/memo_data.gd" id="2_1dk66"]
+
+[sub_resource type="Resource" id="Resource_msbm0"]
+script = ExtResource("1_g2csn")
+question = "Quel concept traduit le déplacement d'espèces pour la reproduction ?"
+answers = PackedStringArray("La biomanipulation.", "La genèse.", "L\'évolution.", "La migration.")
+correct_index = 3
+
+[sub_resource type="Resource" id="Resource_e2teb"]
+script = ExtResource("1_g2csn")
+question = "Pourquoi est-il faux de parler de race humaine ?"
+answers = PackedStringArray("On peut tout à fait en parler.", "Car le terme est ancien.", "Car le terme n\'est pas juste.", "Car le terme est en discussion.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_he7bs"]
+script = ExtResource("1_g2csn")
+question = "Que signifie LUCA ?"
+answers = PackedStringArray("Le dernier ancêtre commun naturel.", "Le premier ancêtre commun universel.", "Le dernier ancêtre commun universel.", "Le premier ancêtre commun naturel.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_12lrp"]
+script = ExtResource("1_g2csn")
+question = "Qu'est-ce que la biodiversité ?"
+answers = PackedStringArray("Diversité des animaux.", "Diversité des plantes.", "Diversité des êtres vivants.", "Correspond au biotope.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_m6see"]
+script = ExtResource("1_g2csn")
+question = "Quel point d’ancrage est utilisé pour réaliser un arbre phylogénétique ?"
+answers = PackedStringArray("L\'ancêtre commun.", "La lignée pure.", "Les dates.", "Les fossiles.")
+
+[sub_resource type="Resource" id="Resource_s6j1j"]
+script = ExtResource("1_g2csn")
+question = "Quel groupe d’animaux sont utilisés pour la stratigraphie archéologique ?"
+answers = PackedStringArray("Requins.", "Pieuvres.", "Ammonites.", "Crustacés.")
+correct_index = 2
+
+[resource]
+script = ExtResource("2_1dk66")
+questions = Array[ExtResource("1_g2csn")]([SubResource("Resource_msbm0"), SubResource("Resource_e2teb"), SubResource("Resource_he7bs"), SubResource("Resource_12lrp"), SubResource("Resource_m6see"), SubResource("Resource_s6j1j")])
+theme_title = "L'évolution"

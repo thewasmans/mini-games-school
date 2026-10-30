@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://b331gungy886u"]
+
+[ext_resource type="Script" uid="uid://buw8bvxkdb56e" path="res://scripts/ui/level_map/bonus_island_marker.gd" id="1"]
+[ext_resource type="Script" uid="uid://da7bsgfs5sdpw" path="res://scripts/ui/icon_view.gd" id="2"]
+
+[node name="BonusIslandMarker" type="Control" node_paths=PackedStringArray("icon_view", "count_label")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 140.0
+offset_bottom = 120.0
+pivot_offset = Vector2(70, 42)
+mouse_filter = 2
+script = ExtResource("1")
+icon_view = NodePath("Icon")
+count_label = NodePath("CountLabel")
+
+[node name="Icon" type="Control" parent="."]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 14.0
+offset_right = 96.0
+offset_bottom = 66.0
+mouse_filter = 2
+script = ExtResource("2")
+icon = "bulb"
+
+[node name="CountLabel" type="Label" parent="."]
+layout_mode = 0
+offset_top = 78.0
+offset_right = 140.0
+offset_bottom = 120.0
+mouse_filter = 2
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 30
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1

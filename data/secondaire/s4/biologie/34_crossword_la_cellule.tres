@@ -1,0 +1,84 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dtgwmgnjf682w"]
+
+[ext_resource type="Script" uid="uid://6pk47pd5gtfx" path="res://scripts/mini_games/crossword/crossword_entry.gd" id="1_t1s6b"]
+[ext_resource type="Script" uid="uid://bu7s316sbdqky" path="res://scripts/mini_games/crossword/crossword_data.gd" id="2_rem5j"]
+
+[sub_resource type="Resource" id="Resource_id2do"]
+script = ExtResource("1_t1s6b")
+word = "GENOTYPE"
+clue = "Information portée par le génome d'un organisme, par opposition au phénotype."
+answer = "GENOTYPE"
+x = 9
+y = 1
+horizontal = false
+placed = true
+number = 3
+
+[sub_resource type="Resource" id="Resource_pqvpx"]
+script = ExtResource("1_t1s6b")
+word = "DIHYBRIDISME"
+clue = "L'étude de la transmission de deux caractères."
+answer = "DIHYBRIDISME"
+x = 6
+y = 6
+placed = true
+number = 6
+
+[sub_resource type="Resource" id="Resource_863e2"]
+script = ExtResource("1_t1s6b")
+word = "DOMINANT"
+clue = "Se dit du caractère qui s'exprime, même s'il n'est présent que sur un seul allèle."
+answer = "DOMINANT"
+x = 14
+y = 3
+horizontal = false
+placed = true
+number = 5
+
+[sub_resource type="Resource" id="Resource_bbk6w"]
+script = ExtResource("1_t1s6b")
+word = "AUTOSOME"
+clue = "Chromosome non sexuel ou somatique."
+answer = "AUTOSOME"
+x = 16
+horizontal = false
+placed = true
+number = 1
+
+[sub_resource type="Resource" id="Resource_u8f3o"]
+script = ExtResource("1_t1s6b")
+word = "SOMATIQUE"
+clue = "Qualifie toutes les cellules du corps sauf les cellules germinales ou gamètes."
+answer = "SOMATIQUE"
+x = 12
+y = 1
+horizontal = false
+placed = true
+number = 4
+
+[sub_resource type="Resource" id="Resource_ibfrv"]
+script = ExtResource("1_t1s6b")
+word = "FECONDATION"
+clue = "Fusion entre le spermatozoide et l'ovocyte pour former un ovule."
+answer = "FECONDATION"
+x = 6
+y = 1
+horizontal = false
+placed = true
+number = 2
+
+[sub_resource type="Resource" id="Resource_prts8"]
+script = ExtResource("1_t1s6b")
+word = "RECESSIF"
+clue = "Se dit du caractère qui s'exprime uniquement s'il est présent sur les deux allèles."
+answer = "RECESSIF"
+y = 9
+placed = true
+number = 7
+
+[resource]
+script = ExtResource("2_rem5j")
+entries = Array[ExtResource("1_t1s6b")]([SubResource("Resource_id2do"), SubResource("Resource_pqvpx"), SubResource("Resource_863e2"), SubResource("Resource_bbk6w"), SubResource("Resource_u8f3o"), SubResource("Resource_ibfrv"), SubResource("Resource_prts8")])
+grid_width = 18
+grid_height = 12
+theme_title = "La cellule"

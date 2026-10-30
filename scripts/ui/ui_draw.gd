@@ -76,6 +76,24 @@ static func star_points(center: Vector2, outer: float, inner: float, points := 5
 	return pts
 
 
+static func rating_star(ci: CanvasItem, center: Vector2, outer: float, fill: float, fill_color := UIStyle.YELLOW, empty_color := Color(0.05, 0.08, 0.25, 0.55)) -> void:
+	var inner := outer * 0.46
+	ci.draw_colored_polygon(star_points(center + Vector2(0, outer * 0.1), outer * 1.12, inner * 1.12), UIStyle.INK)
+	var star := star_points(center, outer, inner)
+	ci.draw_colored_polygon(star, empty_color)
+	if fill <= 0.0:
+		return
+	if fill >= 1.0:
+		ci.draw_colored_polygon(star, fill_color)
+	else:
+		var left := center.x - outer
+		var right := left + outer * 2.0 * fill
+		var clip := PackedVector2Array([Vector2(left, center.y - outer), Vector2(right, center.y - outer), Vector2(right, center.y + outer), Vector2(left, center.y + outer)])
+		for part in Geometry2D.intersect_polygons(star, clip):
+			ci.draw_colored_polygon(part, fill_color)
+	ci.draw_colored_polygon(star_points(center + Vector2(-outer * 0.12, -outer * 0.12), outer * 0.45, inner * 0.45), Color(1, 1, 1, 0.3 * minf(fill * 2.0, 1.0)))
+
+
 static func sparkle(ci: CanvasItem, p: Vector2, size: float, color := Color(1, 1, 0.9)) -> void:
 	if size <= 0.5:
 		return

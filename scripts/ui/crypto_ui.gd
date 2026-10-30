@@ -184,6 +184,7 @@ func _check() -> void:
 			cell.state = CryptoCell.State.WRONG
 			cell.shake()
 			wrong += 1
+			_make_mistake()
 	_refresh()
 	if wrong > 0:
 		Sfx.play("error")
@@ -199,6 +200,38 @@ func _check() -> void:
 	progress_changed.emit(_index + 1, _data.sentences.size())
 	next_button.visible = true
 	UIFeedback.pop_in(next_button)
+
+
+func use_hint() -> bool:
+	if _solved or is_completed:
+		return false
+	var hint_index := _cursor if _cursor >= 0 and _cursor < _hidden.size() and _editable(_hidden[_cursor]) else _first_editable()
+	if hint_index < 0:
+		return false
+	var cell := _cells[_hidden[hint_index]]
+	cell.typed = TextUtil.normalize_char(cell.original)
+	cell.state = CryptoCell.State.CORRECT
+	UIFeedback.punch(cell, 0.3, 0.5)
+	Sfx.play("good")
+	_cursor = _next_empty(hint_index)
+	_refresh()
+	if _cursor == -1 and not _has_wrong_cell():
+		_check()
+	return true
+
+
+func _first_editable() -> int:
+	for hidden_index in _hidden.size():
+		if _editable(_hidden[hidden_index]):
+			return hidden_index
+	return -1
+
+
+func _has_wrong_cell() -> bool:
+	for k in _hidden:
+		if _cells[k].state == CryptoCell.State.WRONG:
+			return true
+	return false
 
 
 func _fix_errors() -> void:

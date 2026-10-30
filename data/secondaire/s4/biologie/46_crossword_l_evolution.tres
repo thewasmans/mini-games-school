@@ -1,0 +1,81 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dsqmd3awxj8i1"]
+
+[ext_resource type="Script" uid="uid://6pk47pd5gtfx" path="res://scripts/mini_games/crossword/crossword_entry.gd" id="1_wtvaj"]
+[ext_resource type="Script" uid="uid://bu7s316sbdqky" path="res://scripts/mini_games/crossword/crossword_data.gd" id="2_6acjg"]
+
+[sub_resource type="Resource" id="Resource_cth23"]
+script = ExtResource("1_wtvaj")
+word = "BIODIVERSITE"
+clue = "Terme reflétant l'ensemble de la diversité du vivant."
+answer = "BIODIVERSITE"
+x = 12
+horizontal = false
+placed = true
+number = 3
+
+[sub_resource type="Resource" id="Resource_t3yen"]
+script = ExtResource("1_wtvaj")
+word = "EXTINCTION"
+clue = "Terme désignant la disparition définitive d'une espèce."
+answer = "EXTINCTION"
+x = 4
+horizontal = false
+placed = true
+number = 2
+
+[sub_resource type="Resource" id="Resource_q7fsy"]
+script = ExtResource("1_wtvaj")
+word = "HOMOLOGUES"
+clue = "Structures qui peuvent différer d’apparence et de fonction mais qui dérivent toutes de la même partie du corps d’un ancêtre commun."
+answer = "HOMOLOGUES"
+x = 10
+y = 1
+horizontal = false
+placed = true
+number = 4
+
+[sub_resource type="Resource" id="Resource_gqlgp"]
+script = ExtResource("1_wtvaj")
+word = "INNOVATION"
+clue = "Nouveau caractère avantageux qui permet aux individus de se reproduire davantage, on parle d'... évolutive."
+answer = "INNOVATION"
+y = 11
+placed = true
+number = 7
+
+[sub_resource type="Resource" id="Resource_qw5b4"]
+script = ExtResource("1_wtvaj")
+word = "RECHAUFFEMENT"
+clue = "Variation des températures du climat à la hausse."
+answer = "RECHAUFFEMENT"
+x = 2
+horizontal = false
+placed = true
+number = 1
+
+[sub_resource type="Resource" id="Resource_xnuy1"]
+script = ExtResource("1_wtvaj")
+word = "ADAPTATION"
+clue = "Mécanisme mis en place par les espèces pour survivre dans un environnement."
+answer = "ADAPTATION"
+y = 4
+horizontal = false
+placed = true
+number = 5
+
+[sub_resource type="Resource" id="Resource_4xh66"]
+script = ExtResource("1_wtvaj")
+word = "MONOPHYLETIQUE"
+clue = "Taxon comprenant une espèce et tous ses descendants."
+answer = "MONOPHYLETIQUE"
+x = 2
+y = 9
+placed = true
+number = 6
+
+[resource]
+script = ExtResource("2_6acjg")
+entries = Array[ExtResource("1_wtvaj")]([SubResource("Resource_cth23"), SubResource("Resource_t3yen"), SubResource("Resource_q7fsy"), SubResource("Resource_gqlgp"), SubResource("Resource_qw5b4"), SubResource("Resource_xnuy1"), SubResource("Resource_4xh66")])
+grid_width = 16
+grid_height = 14
+theme_title = "L'évolution"

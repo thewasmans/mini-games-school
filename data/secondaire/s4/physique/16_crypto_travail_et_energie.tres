@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dubfk03c1qmpm"]
+
+[ext_resource type="Script" uid="uid://d12jxrx0uuunw" path="res://scripts/mini_games/crypto/crypto_data.gd" id="1_lj1l0"]
+[ext_resource type="Script" uid="uid://c4ybdhwj2y7o2" path="res://scripts/mini_games/crypto/crypto_sentence.gd" id="2_uiuqd"]
+
+[sub_resource type="Resource" id="Resource_p13cg"]
+script = ExtResource("2_uiuqd")
+sentence = "Les changements d'état absorbent ou libèrent de l'énergie thermique."
+
+[sub_resource type="Resource" id="Resource_ywe17"]
+script = ExtResource("2_uiuqd")
+sentence = "La puissance dissipée en chaleur limite le rendement énergétique."
+
+[resource]
+script = ExtResource("1_lj1l0")
+sentences = Array[ExtResource("2_uiuqd")]([SubResource("Resource_p13cg"), SubResource("Resource_ywe17")])
+hidden_ratio = 0.2
+theme_title = "Travail et énergie"

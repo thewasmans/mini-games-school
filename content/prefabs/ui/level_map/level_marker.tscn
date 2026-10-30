@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://bxl1vy1jw0cpr"]
+
+[ext_resource type="Script" uid="uid://b7op6a7ut8baw" path="res://scripts/ui/level_map/level_marker.gd" id="1"]
+[ext_resource type="Script" uid="uid://cnal1vj5sgu6c" path="res://scripts/ui/star_rating.gd" id="2"]
+
+[node name="LevelMarker" type="Control" node_paths=PackedStringArray("number_label", "title_label", "star_rating")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 180.0
+offset_bottom = 168.0
+pivot_offset = Vector2(90, 48)
+mouse_filter = 2
+script = ExtResource("1")
+number_label = NodePath("NumberLabel")
+title_label = NodePath("TitleLabel")
+star_rating = NodePath("StarRating")
+
+[node name="NumberLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 10.0
+offset_right = 130.0
+offset_bottom = 84.0
+mouse_filter = 2
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 40
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StarRating" type="Control" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 92.0
+offset_right = 140.0
+offset_bottom = 124.0
+mouse_filter = 2
+script = ExtResource("2")
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 0
+offset_top = 122.0
+offset_right = 180.0
+offset_bottom = 168.0
+mouse_filter = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_font_sizes/font_size = 20
+text = "Titre"
+horizontal_alignment = 1
+autowrap_mode = 3

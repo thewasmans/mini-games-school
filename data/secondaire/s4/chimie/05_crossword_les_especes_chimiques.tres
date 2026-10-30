@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dc0td4xxttoje"]
+
+[ext_resource type="Script" uid="uid://6pk47pd5gtfx" path="res://scripts/mini_games/crossword/crossword_entry.gd" id="1_pmq4o"]
+[ext_resource type="Script" uid="uid://bu7s316sbdqky" path="res://scripts/mini_games/crossword/crossword_data.gd" id="2_y77gd"]
+
+[sub_resource type="Resource" id="Resource_nca05"]
+script = ExtResource("1_pmq4o")
+word = "AVOGADRO"
+clue = "Nom du nombre de particules qui se trouvent dans une mole."
+answer = "AVOGADRO"
+x = 8
+y = 3
+horizontal = false
+placed = true
+number = 3
+
+[sub_resource type="Resource" id="Resource_3qxqd"]
+script = ExtResource("1_pmq4o")
+word = "NOMENCLATURE"
+clue = "Ensemble de règles qui permettent de nommer les éléments et les composés en interprétant leur formule chimique."
+answer = "NOMENCLATURE"
+x = 3
+horizontal = false
+placed = true
+number = 2
+
+[sub_resource type="Resource" id="Resource_gxcrk"]
+script = ExtResource("1_pmq4o")
+word = "SIGNIFICATIFS"
+clue = "Se dit des chiffres qui indiquent la fiabilité d'une valeur numérique."
+answer = "SIGNIFICATIFS"
+placed = true
+number = 1
+
+[sub_resource type="Resource" id="Resource_w30l4"]
+script = ExtResource("1_pmq4o")
+word = "QUATERNAIRE"
+clue = "Corps composé de quatre éléments chimiques, comme l'acide sulfurique."
+answer = "QUATERNAIRE"
+x = 1
+y = 7
+placed = true
+number = 4
+
+[resource]
+script = ExtResource("2_y77gd")
+entries = Array[ExtResource("1_pmq4o")]([SubResource("Resource_nca05"), SubResource("Resource_3qxqd"), SubResource("Resource_gxcrk"), SubResource("Resource_w30l4")])
+grid_width = 13
+grid_height = 12
+theme_title = "Les espèces chimiques"

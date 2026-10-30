@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://cfrbo1kj5q0pi"]
+
+[ext_resource type="Resource" uid="uid://nqxi28031ivv" path="res://data/secondaire/s4/biologie/30_memo_la_cellule.tres" id="1_r1m4d"]
+[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="2_snsjx"]
+
+[resource]
+script = ExtResource("2_snsjx")
+mini_game = ExtResource("1_r1m4d")

@@ -17,6 +17,8 @@ const LETTERS := "ABCD"
 @export var wrong_color := Color("ff6b74")
 ## Couleur de la bonne réponse.
 @export var right_color := Color("7be86a")
+## Couleur d'une mauvaise réponse écartée par un indice.
+@export var eliminated_color := Color("8a93a6")
 ## Temps pendant lequel la bonne réponse reste affichée avant la question suivante, en secondes.
 @export var next_question_delay := 1.0
 
@@ -80,6 +82,25 @@ func _show_question(question_index: int) -> void:
 	UIFeedback.pop_in(question_card, 0.0, 0.85)
 
 
+func use_hint() -> bool:
+	if _locked or is_completed:
+		return false
+	var question := _data.questions[_index]
+	var wrong_buttons: Array[JuicyButton] = []
+	for answer_index in answer_buttons.size():
+		var button := answer_buttons[answer_index]
+		if answer_index != question.correct_index and button.visible and not button.disabled:
+			wrong_buttons.append(button)
+	if wrong_buttons.is_empty():
+		return false
+	var eliminated := wrong_buttons.pick_random() as JuicyButton
+	eliminated.color = eliminated_color
+	eliminated.disabled = true
+	UIFeedback.punch(eliminated, 0.12, 0.4)
+	Sfx.play("pop")
+	return true
+
+
 func _on_answer(answer_index: int) -> void:
 	if _locked or is_completed:
 		return
@@ -90,6 +111,7 @@ func _on_answer(answer_index: int) -> void:
 		button.disabled = true
 		UIFeedback.shake(button)
 		Sfx.play("error")
+		_make_mistake()
 		return
 
 	_locked = true

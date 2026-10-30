@@ -10,8 +10,8 @@ Ce document décrit le parcours du joueur, les règles de chaque mini-jeu, l'org
 
 ```
 Menu principal ─► Niveau d'études ─► Année ─► Matière ─► Grille des levels ─► Level (mini-jeu)
-   │                (Primaire,        (P1…P6,   (Biologie,    (chemin de           │
-   └─► Crédits       Secondaire,       S1…S6,    Chimie,       levels en serpent)   └─► retour à la grille
+   │                (Primaire,        (P1…P6,   (Biologie,    (carte 3D d'îles     │
+   └─► Crédits       Secondaire,       S1…S6,    Chimie,       et îles bonus)       └─► retour à la grille
 					 Supérieur)        Q1…Q6)    Physique…)
 ```
 
@@ -21,10 +21,12 @@ Menu principal ─► Niveau d'études ─► Année ─► Matière ─► Gril
 2. **Niveau d'études** : Primaire, Secondaire ou Supérieur. Une jauge sous chaque bouton montre la progression dans ce niveau (levels terminés sur levels disponibles).
 3. **Année** : P1 à P6 pour le Primaire, S1 à S6 pour le Secondaire, quadrimestres Q1 à Q6 pour le Supérieur. Si un niveau d'études n'a qu'une seule année, ce menu est sauté.
 4. **Matière** : par exemple Biologie, Chimie ou Physique.
-5. **Grille des levels** : les levels forment un chemin en serpent, du bas vers le haut. Un level verrouillé n'est pas jouable, et le level en cours est mis en évidence.
+5. **Grille des levels** : une carte 3D low poly. Chaque level est une île flottante reliée à la suivante par un chemin de pierres, de la maison de départ jusqu'au château d'arrivée. On fait défiler la carte en glissant ou à la molette. Une île verrouillée n'est pas jouable, le level en cours est mis en évidence, et un level terminé affiche ses étoiles. Entre certains levels, une **île bonus** avec un château donne des indices (voir la section 3).
 6. **Level** :
    - **Titre :** il rappelle le niveau d'études, l'année, la matière et le thème, par exemple « Secondaire - S4 - Biologie - La cellule ».
    - **Progression :** une barre commune à tous les mini-jeux la suit.
+   - **Étoiles :** trois étoiles à côté de la barre. Chaque erreur fait perdre un dixième d'étoile, sans descendre sous une étoile.
+   - **Indice :** le bouton ampoule dépense un indice. Il révèle une lettre (mots croisés, cryptogramme) ou écarte une mauvaise réponse (quiz). Un indice ne compte pas comme une erreur.
    - **Fin :** quand le mini-jeu est réussi, le bouton **Valider** termine le level et ramène à la grille.
    - **Retour :** le bouton retour quitte le level sans le terminer.
 
@@ -71,6 +73,9 @@ La grille s'adapte à la taille de l'écran. Elle est calculée à l'avance dans
 ## 3. Progression
 
 - Dans chaque matière, le premier level est toujours débloqué. Terminer un level débloque le suivant et le sélectionne.
+- **Étoiles :** un level terminé rapporte de 1 à 3 étoiles (3 moins 0,1 par erreur). Rejouer un level ne garde que le meilleur score.
+- **Îles bonus :** une île est placée après chaque groupe de levels (5 par défaut, réglable par matière avec « Bonus Island Interval »). Quand tous les levels du groupe sont terminés, toucher l'île donne autant d'indices que la moyenne d'étoiles du groupe, arrondie à l'inférieur : 1 indice pour une moyenne de 1 étoile, 3 pour 3 étoiles. Après avoir amélioré ses étoiles, on peut revenir chercher les indices manquants.
+- **Indices :** ils sont communs à toutes les matières. La pastille de la grille des levels en affiche le nombre.
 - La progression est suivie séparément pour chaque combinaison de niveau d'études, d'année et de matière.
 - Les jauges du menu des niveaux d'études additionnent les levels terminés de toutes les années et de toutes les matières.
 - **La progression n'est pas sauvegardée** : elle repart de zéro à chaque lancement du jeu.
@@ -144,6 +149,7 @@ Quand le jeu est lancé depuis l'éditeur, la touche **F1** ouvre un panneau de 
 - **Auto validate** : valide automatiquement le level quand le mini-jeu est réussi.
 - **Show hints** : affiche la réponse attendue.
 - **Unlock all levels** : débloque tous les levels jusqu'à la fermeture du jeu, sans les compter comme terminés.
+- **+3 bonus** : ajoute trois indices.
 
 ---
 

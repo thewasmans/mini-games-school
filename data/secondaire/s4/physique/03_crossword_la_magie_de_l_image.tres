@@ -1,0 +1,52 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bmmevwvupkjuy"]
+
+[ext_resource type="Script" uid="uid://6pk47pd5gtfx" path="res://scripts/mini_games/crossword/crossword_entry.gd" id="1_ka5b5"]
+[ext_resource type="Script" uid="uid://bu7s316sbdqky" path="res://scripts/mini_games/crossword/crossword_data.gd" id="2_fuxla"]
+
+[sub_resource type="Resource" id="Resource_rslun"]
+script = ExtResource("1_ka5b5")
+word = "LENTILLES"
+clue = "Objets transparents faits de verre ou de plastique dont au moins une des faces est courbe et qui ont la propriété de réfracter la lumière."
+answer = "LENTILLES"
+x = 1
+y = 2
+horizontal = false
+placed = true
+number = 2
+
+[sub_resource type="Resource" id="Resource_4lsn0"]
+script = ExtResource("1_ka5b5")
+word = "LUMIERE"
+clue = "Onde polychromatique qui transporte de l'énergie sous forme de photons."
+answer = "LUMIERE"
+x = 7
+horizontal = false
+placed = true
+number = 1
+
+[sub_resource type="Resource" id="Resource_7h4ot"]
+script = ExtResource("1_ka5b5")
+word = "REFRACTION"
+clue = "Phénomène lumineux au cours duquel la lumière dévie de sa trajectoire lorsqu'elle passe d’un milieu transparent à un autre."
+answer = "REFRACTION"
+y = 3
+placed = true
+number = 4
+
+[sub_resource type="Resource" id="Resource_ujaxh"]
+script = ExtResource("1_ka5b5")
+word = "PRESBYTIE"
+clue = "Perte progressive liée à l'âge de la capacité de l'œil à voir nettement les objets proches, autre que la cataracte."
+answer = "PRESBYTIE"
+x = 3
+y = 2
+horizontal = false
+placed = true
+number = 3
+
+[resource]
+script = ExtResource("2_fuxla")
+entries = Array[ExtResource("1_ka5b5")]([SubResource("Resource_rslun"), SubResource("Resource_4lsn0"), SubResource("Resource_7h4ot"), SubResource("Resource_ujaxh")])
+grid_width = 10
+grid_height = 11
+theme_title = "La magie de l'image"

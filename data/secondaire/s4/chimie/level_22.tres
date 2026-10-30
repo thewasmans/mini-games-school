@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://cy4231hm3b41g"]
+
+[ext_resource type="Resource" uid="uid://wm2ey4om4sd8" path="res://data/secondaire/s4/chimie/22_crypto_les_especes_chimiques.tres" id="1_jwqan"]
+[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="2_au3nl"]
+
+[resource]
+script = ExtResource("2_au3nl")
+mini_game = ExtResource("1_jwqan")

@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://df8sl5mwo7cpq"]
+
+[ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/mini_games/memo/memo_question.gd" id="1_lxe61"]
+[ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/mini_games/memo/memo_data.gd" id="2_u717u"]
+
+[sub_resource type="Resource" id="Resource_np0so"]
+script = ExtResource("1_lxe61")
+question = "Qu'est-ce que l'électronégativité ?"
+answers = PackedStringArray("Une liaison chimique.", "Une solution neutre.", "Des ponts hydrogènes.", "La tendance d\'un atome à attirer les électrons.")
+correct_index = 3
+
+[sub_resource type="Resource" id="Resource_upbeu"]
+script = ExtResource("1_lxe61")
+question = "Que représente le HCl ?"
+answers = PackedStringArray("Le nitrate de sodium.", "Le chlorure d\'hydrogène.", "L\'acide sulfurique.", "Le permangante de potassium.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_jp6hy"]
+script = ExtResource("1_lxe61")
+question = "Que représente le NaOH ?"
+answers = PackedStringArray("Le nitrate de sodium.", "Le chlorure d\'hydrogène.", "L\'hydroxyde de sodium.", "Le permangante de potassium.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_hhmnr"]
+script = ExtResource("1_lxe61")
+question = "Quel est le corps composé binaire ?"
+answers = PackedStringArray("CO.", "NaOH.", "L\'acétylcholine.", "Aucun des trois.")
+
+[sub_resource type="Resource" id="Resource_5hi43"]
+script = ExtResource("1_lxe61")
+question = "Quel est le corps composé ternaire ?"
+answers = PackedStringArray("CO.", "NaOH.", "L\'acétylcholine.", "Aucun des trois.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_axnmd"]
+script = ExtResource("1_lxe61")
+question = "Quel est le corps composé quaternaire ?"
+answers = PackedStringArray("CO.", "NaOH.", "L\'acétylcholine.", "Aucun des trois.")
+correct_index = 2
+
+[resource]
+script = ExtResource("2_u717u")
+questions = Array[ExtResource("1_lxe61")]([SubResource("Resource_np0so"), SubResource("Resource_upbeu"), SubResource("Resource_jp6hy"), SubResource("Resource_hhmnr"), SubResource("Resource_5hi43"), SubResource("Resource_axnmd")])
+theme_title = "Les réactions chimiques"

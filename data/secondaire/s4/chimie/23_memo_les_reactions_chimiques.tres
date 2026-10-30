@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://cbg33m4771gyl"]
+
+[ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/mini_games/memo/memo_question.gd" id="1_kyw1g"]
+[ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/mini_games/memo/memo_data.gd" id="2_5b428"]
+
+[sub_resource type="Resource" id="Resource_c6ijl"]
+script = ExtResource("1_kyw1g")
+question = "Quelle est la loi de Lavoisier ?"
+answers = PackedStringArray("Dans toute réaction chimique, la masse totale des réactifs est égale à la masse totale des produits.", "Dans toute réaction chimique, la masse totale des réactifs est égale à la masse totale des réactifs.", "Dans toute réaction chimique, il y a équilibre.", "Dans toute réaction chimique, on perd de la matière.")
+
+[sub_resource type="Resource" id="Resource_kvvy3"]
+script = ExtResource("1_kyw1g")
+question = "Qu'est-ce que pondérer ?"
+answers = PackedStringArray("Attribuer des éventuels coefficients pour équilibrer une équation.", "Equilibrer en ajoutant de l\'eau.", "Equilibrer en retirant de l\'eau.", "Equilibrer en diluant.")
+
+[sub_resource type="Resource" id="Resource_wsbdj"]
+script = ExtResource("1_kyw1g")
+question = "Qu'est-ce que la mole ?"
+answers = PackedStringArray("C\'est une quantité de matière exprimée en grammes.", "C\'est une unité.", "C\'est la quantité de moles d\'un soluté par litre de solution.", "C\'est la loi des gaz parfaits.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_iaxqx"]
+script = ExtResource("1_kyw1g")
+question = "Qu'est-ce que la masse ?"
+answers = PackedStringArray("C\'est une quantité de matière exprimée en grammes.", "C\'est une unité.", "C\'est la quantité de moles d\'un soluté par litre de solution.", "C\'est la loi des gaz parfaits.")
+
+[sub_resource type="Resource" id="Resource_8cid5"]
+script = ExtResource("1_kyw1g")
+question = "Qu'est-ce que le nombre d’Avogadro ?"
+answers = PackedStringArray("Une valeur constante.", "Une masse qui varie selon l\'atome.", "Une valeur qui dépend de la température.", "Une masse précise.")
+
+[sub_resource type="Resource" id="Resource_rvonh"]
+script = ExtResource("1_kyw1g")
+question = "Qu'est-ce que la stoechiométrie ?"
+answers = PackedStringArray("Etude des proportions selon lesquelles les substances interagissent dans une réaction chimique.", "Tableau d\'éléments chimiques.", "Tableau des risques chimiques.", "Etude de l\'électrolyse.")
+
+[sub_resource type="Resource" id="Resource_hbwmg"]
+script = ExtResource("1_kyw1g")
+question = "Que représente la concentration massique ?"
+answers = PackedStringArray("Le rapport entre la masse et le volume.", "Le rapport entre le nombre de moles et le volume.", "L\'équation des gaz parfaits.", "Le facteur de dilution.")
+
+[resource]
+script = ExtResource("2_5b428")
+questions = Array[ExtResource("1_kyw1g")]([SubResource("Resource_c6ijl"), SubResource("Resource_kvvy3"), SubResource("Resource_wsbdj"), SubResource("Resource_iaxqx"), SubResource("Resource_8cid5"), SubResource("Resource_rvonh"), SubResource("Resource_hbwmg")])
+theme_title = "Les réactions chimiques"

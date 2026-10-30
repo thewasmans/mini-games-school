@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://bh2jg4whf35gs"]
+
+[ext_resource type="Script" uid="uid://d12jxrx0uuunw" path="res://scripts/mini_games/crypto/crypto_data.gd" id="1_ehuw5"]
+[ext_resource type="Script" uid="uid://c4ybdhwj2y7o2" path="res://scripts/mini_games/crypto/crypto_sentence.gd" id="2_3y27l"]
+
+[sub_resource type="Resource" id="Resource_6p0xg"]
+script = ExtResource("2_3y27l")
+sentence = "La fibre optique utilise le phénomène de réflexion totale."
+
+[sub_resource type="Resource" id="Resource_6sup4"]
+script = ExtResource("2_3y27l")
+sentence = "Les lentilles convergentes concentrent les faisceaux lumineux."
+
+[sub_resource type="Resource" id="Resource_k1ony"]
+script = ExtResource("2_3y27l")
+sentence = "La distance focale détermine la puissance optique d'une lentille."
+
+[sub_resource type="Resource" id="Resource_o60ja"]
+script = ExtResource("2_3y27l")
+sentence = "La vergence s'exprime en dioptries et dépend de la distance focale."
+
+[sub_resource type="Resource" id="Resource_8bw03"]
+script = ExtResource("2_3y27l")
+sentence = "La décomposition de la lumière blanche révèle le spectre lumineux."
+
+[sub_resource type="Resource" id="Resource_rcrct"]
+script = ExtResource("2_3y27l")
+sentence = "La couleur d'un objet dépend de l'absorption et de la diffusion."
+
+[resource]
+script = ExtResource("1_ehuw5")
+sentences = Array[ExtResource("2_3y27l")]([SubResource("Resource_6p0xg"), SubResource("Resource_6sup4"), SubResource("Resource_k1ony"), SubResource("Resource_o60ja"), SubResource("Resource_8bw03"), SubResource("Resource_rcrct")])
+hidden_ratio = 0.25
+theme_title = "La magie de l'image"

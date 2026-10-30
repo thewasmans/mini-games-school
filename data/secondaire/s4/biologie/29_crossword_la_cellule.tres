@@ -1,0 +1,81 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cpeegcaupcrhb"]
+
+[ext_resource type="Script" uid="uid://6pk47pd5gtfx" path="res://scripts/mini_games/crossword/crossword_entry.gd" id="1_sj7ce"]
+[ext_resource type="Script" uid="uid://bu7s316sbdqky" path="res://scripts/mini_games/crossword/crossword_data.gd" id="2_yx53f"]
+
+[sub_resource type="Resource" id="Resource_nqe3b"]
+script = ExtResource("1_sj7ce")
+word = "NUCLEOLE"
+clue = "Région du noyau où se trouve l'ADN."
+answer = "NUCLEOLE"
+x = 5
+y = 2
+horizontal = false
+placed = true
+number = 3
+
+[sub_resource type="Resource" id="Resource_yxy53"]
+script = ExtResource("1_sj7ce")
+word = "MITOSE"
+clue = "Processus de division cellulaire permettant d'obtenir des cellules filles génétiquement identiques."
+answer = "MITOSE"
+y = 9
+placed = true
+number = 7
+
+[sub_resource type="Resource" id="Resource_15up2"]
+script = ExtResource("1_sj7ce")
+word = "ZYGOTE"
+clue = "Cellule oeuf fécondée résultant de la fusion d'un gamète femelle et d'un gamète mâle."
+answer = "ZYGOTE"
+x = 2
+y = 7
+placed = true
+number = 6
+
+[sub_resource type="Resource" id="Resource_go5th"]
+script = ExtResource("1_sj7ce")
+word = "HETEROZYGOTE"
+clue = "Individu qui possède deux allèles différents pour un gène donné."
+answer = "HETEROZYGOTE"
+x = 3
+horizontal = false
+placed = true
+number = 1
+
+[sub_resource type="Resource" id="Resource_l0yms"]
+script = ExtResource("1_sj7ce")
+word = "GAMETE"
+clue = "Cellule reproductrice appelée spermatozoide ou ovocyte."
+answer = "GAMETE"
+x = 10
+y = 4
+horizontal = false
+placed = true
+number = 4
+
+[sub_resource type="Resource" id="Resource_u6ujy"]
+script = ExtResource("1_sj7ce")
+word = "POLLINISATION"
+clue = "Transport du pollen des étamines (partie mâle des fleurs) au pistil (partie femelle)."
+answer = "POLLINISATION"
+x = 2
+y = 5
+placed = true
+number = 5
+
+[sub_resource type="Resource" id="Resource_62vr7"]
+script = ExtResource("1_sj7ce")
+word = "PURE"
+clue = "Lignée dont les caractères étudiés sont bien fixés et ne se modifient pas au cours des générations successives."
+answer = "PURE"
+y = 1
+placed = true
+number = 2
+
+[resource]
+script = ExtResource("2_yx53f")
+entries = Array[ExtResource("1_sj7ce")]([SubResource("Resource_nqe3b"), SubResource("Resource_yxy53"), SubResource("Resource_15up2"), SubResource("Resource_go5th"), SubResource("Resource_l0yms"), SubResource("Resource_u6ujy"), SubResource("Resource_62vr7")])
+grid_width = 15
+grid_height = 12
+theme_title = "La cellule"

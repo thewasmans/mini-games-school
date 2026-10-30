@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://dfaaksqlukem0"]
+
+[ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/mini_games/memo/memo_question.gd" id="1_4tpqb"]
+[ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/mini_games/memo/memo_data.gd" id="2_ddxmt"]
+
+[sub_resource type="Resource" id="Resource_4qss1"]
+script = ExtResource("1_4tpqb")
+question = "Comment se nomme un ion non impliqué dans la réaction de précipitation ?"
+answers = PackedStringArray("Spectateur.", "Acteur.", "Formateur.", "Pondérateur.")
+
+[sub_resource type="Resource" id="Resource_cvfqo"]
+script = ExtResource("1_4tpqb")
+question = "Qu'est-ce que l'équation ionique ?"
+answers = PackedStringArray("Equation de la réaction entre les ions spectateurs..", "Equation de la réaction entre les ions acteurs..", "Equation de la réaction entre les ions pondérateurs..", "Equation de la réaction entre les ions formateurs..")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_hr836"]
+script = ExtResource("1_4tpqb")
+question = "Quelle solution proposes-tu pour nettoyer le robinet ?"
+answers = PackedStringArray("Du calcaire.", "Du vinaigre.", "De l\'eau.", "De l\'alcool.")
+correct_index = 1
+
+[resource]
+script = ExtResource("2_ddxmt")
+questions = Array[ExtResource("1_4tpqb")]([SubResource("Resource_4qss1"), SubResource("Resource_cvfqo"), SubResource("Resource_hr836")])
+theme_title = "Les espèces chimiques"

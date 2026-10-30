@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://cx4ueaspov52k"]
+
+[ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/mini_games/memo/memo_question.gd" id="1_0xbr3"]
+[ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/mini_games/memo/memo_data.gd" id="2_xegap"]
+
+[sub_resource type="Resource" id="Resource_7sivi"]
+script = ExtResource("1_0xbr3")
+question = "Combien l’Homme a-t-il de gènes ?"
+answers = PackedStringArray("220000.", "364.", "21000.", "1292.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_xsfpx"]
+script = ExtResource("1_0xbr3")
+question = "Qu’est-ce qu’une mutation ?"
+answers = PackedStringArray("Une maladie.", "Une modification génétique.", "Un problème génétique.", "Une conséquence héréditaire.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_esonh"]
+script = ExtResource("1_0xbr3")
+question = "Qu’est-ce que l’apoptose ?"
+answers = PackedStringArray("La naissance d’une cellule.", "La mort programmée d’une cellule.", "Le même que la nécrose.", "La division de deux cellules.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_0gbee"]
+script = ExtResource("1_0xbr3")
+question = "Quels sont les organites spécifiques à la cellule végétale ?"
+answers = PackedStringArray("Paroi cellulaire-Vacuole-Chloroplaste.", "Paroi cellulaire-Mitochondrie-Chloroplaste.", "Lysosome-Vacuole-Chloroplaste.", "Paroi cellulaire-Vacuole-Ribosome.")
+
+[sub_resource type="Resource" id="Resource_elsqf"]
+script = ExtResource("1_0xbr3")
+question = "De quoi est composé le gène ?"
+answers = PackedStringArray("Cellule.", "Organe.", "ADN.", "Tissu.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_1y0u4"]
+script = ExtResource("1_0xbr3")
+question = "Que se passe-t-il lors de la métaphase ?"
+answers = PackedStringArray("Les chromosomes s’alignent sur une plaque théorique.", "Les ribosomes s’effacent.", "Le noyau apparait.", "Deux cellules se forment.")
+
+[resource]
+script = ExtResource("2_xegap")
+questions = Array[ExtResource("1_0xbr3")]([SubResource("Resource_7sivi"), SubResource("Resource_xsfpx"), SubResource("Resource_esonh"), SubResource("Resource_0gbee"), SubResource("Resource_elsqf"), SubResource("Resource_1y0u4")])
+theme_title = "La cellule"

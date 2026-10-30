@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://cneyt2iesqfop"]
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://bysok1yot3sh4"]
 
-[ext_resource type="Resource" uid="uid://bfihhfjiexpg2" path="res://data/secondaire/s4/biologie/09_crossword_la_cellule.tres" id="1_806g7"]
+[ext_resource type="Resource" uid="uid://quctoc77hyjv" path="res://data/secondaire/s4/biologie/09_memo_la_cellule.tres" id="1_806g7"]
 [ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="2_un481"]
 
 [resource]

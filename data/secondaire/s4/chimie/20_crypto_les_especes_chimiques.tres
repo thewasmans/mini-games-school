@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://78wb2uw0agy6"]
+
+[ext_resource type="Script" uid="uid://d12jxrx0uuunw" path="res://scripts/mini_games/crypto/crypto_data.gd" id="1_ukmhs"]
+[ext_resource type="Script" uid="uid://c4ybdhwj2y7o2" path="res://scripts/mini_games/crypto/crypto_sentence.gd" id="2_n6skt"]
+
+[sub_resource type="Resource" id="Resource_f5s0j"]
+script = ExtResource("2_n6skt")
+sentence = "L'identification expérimentale caractérise les espèces chimiques."
+
+[sub_resource type="Resource" id="Resource_o1qse"]
+script = ExtResource("2_n6skt")
+sentence = "La combustion du dioxygène dégage de l'énergie et des oxydes."
+
+[sub_resource type="Resource" id="Resource_b6mot"]
+script = ExtResource("2_n6skt")
+sentence = "Le test à l'eau de chaux met en évidence le dioxyde de carbone."
+
+[sub_resource type="Resource" id="Resource_di1ou"]
+script = ExtResource("2_n6skt")
+sentence = "L'électrolyse de l'eau libère du dihydrogène et du dioxygène."
+
+[sub_resource type="Resource" id="Resource_6ufnb"]
+script = ExtResource("2_n6skt")
+sentence = "L'action des acides sur les métaux produit du dihydrogène."
+
+[resource]
+script = ExtResource("1_ukmhs")
+sentences = Array[ExtResource("2_n6skt")]([SubResource("Resource_f5s0j"), SubResource("Resource_o1qse"), SubResource("Resource_b6mot"), SubResource("Resource_di1ou"), SubResource("Resource_6ufnb")])
+hidden_ratio = 0.25
+theme_title = "Les espèces chimiques"

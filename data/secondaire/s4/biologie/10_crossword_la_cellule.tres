@@ -1,92 +1,63 @@
-[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dep3xl7yk6amd"]
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://by4uu6vi2y1nr"]
 
 [ext_resource type="Script" uid="uid://6pk47pd5gtfx" path="res://scripts/mini_games/crossword/crossword_entry.gd" id="1_asp2o"]
 [ext_resource type="Script" uid="uid://bu7s316sbdqky" path="res://scripts/mini_games/crossword/crossword_data.gd" id="2_uvvg8"]
 
-[sub_resource type="Resource" id="Resource_8bu0b"]
+[sub_resource type="Resource" id="Resource_asp2o"]
 script = ExtResource("1_asp2o")
-word = "THYMINE"
-clue = "Base azotée caractérisée par la lettre T."
-answer = "THYMINE"
-y = 9
+word = "HEMOGLOBINE"
+clue = "Pigment permettant le transport de l'oxygène dans le sang."
+answer = "HEMOGLOBINE"
+y = 1
 placed = true
-number = 7
+number = 2
 
-[sub_resource type="Resource" id="Resource_sps46"]
+[sub_resource type="Resource" id="Resource_uvvg8"]
 script = ExtResource("1_asp2o")
-word = "RECESSIF"
-clue = "Se dit du caractère qui s'exprime uniquement s'il est présent sur les deux allèles."
-answer = "RECESSIF"
-x = 11
-y = 3
-horizontal = false
-placed = true
-number = 4
-
-[sub_resource type="Resource" id="Resource_ml3g5"]
-script = ExtResource("1_asp2o")
-word = "HOMOZYGOTE"
-clue = "Individu qui possède deux allèles identiques pour un gène donné."
-answer = "HOMOZYGOTE"
-x = 2
-y = 4
-placed = true
-number = 5
-
-[sub_resource type="Resource" id="Resource_jmqt1"]
-script = ExtResource("1_asp2o")
-word = "GENETIQUE"
-clue = "Science qui s'intéresse aux séquences génétiques."
-answer = "GENETIQUE"
-x = 8
-y = 4
-horizontal = false
-placed = true
-number = 6
-
-[sub_resource type="Resource" id="Resource_eau7f"]
-script = ExtResource("1_asp2o")
-word = "AMIDON"
-clue = "Réserve glucidique des végétaux."
-answer = "AMIDON"
-x = 2
-placed = true
-number = 1
-
-[sub_resource type="Resource" id="Resource_dqeeo"]
-script = ExtResource("1_asp2o")
-word = "GONOSOME"
-clue = "Chromosome sexuel."
-answer = "GONOSOME"
-x = 3
-y = 3
+word = "EXOCYTOSE"
+clue = "Mécanisme de transport vésiculaire vers l'extérieur d'une cellule."
+answer = "EXOCYTOSE"
+x = 1
+y = 1
 horizontal = false
 placed = true
 number = 3
 
-[sub_resource type="Resource" id="Resource_64va7"]
+[sub_resource type="Resource" id="Resource_8bu0b"]
 script = ExtResource("1_asp2o")
-word = "HEREDITE"
-clue = "Science qui s'intéresse à la transmission des gènes des parents vers les descendants."
-answer = "HEREDITE"
-x = 7
-y = 12
-placed = true
-number = 8
-
-[sub_resource type="Resource" id="Resource_6dcui"]
-script = ExtResource("1_asp2o")
-word = "DIPLOIDE"
-clue = "Caractérise une cellule dont le noyau comprend deux exemplaires de chaque chromosome (2n=46)."
-answer = "DIPLOIDE"
-x = 5
+word = "GLYCOGENE"
+clue = "Réserve glucidique des animaux."
+answer = "GLYCOGENE"
+x = 4
+y = 1
 horizontal = false
 placed = true
-number = 2
+number = 4
+
+[sub_resource type="Resource" id="Resource_sps46"]
+script = ExtResource("1_asp2o")
+word = "CELLULOSE"
+clue = "Polysaccharide qui constitue la paroi cellulosique des végétaux chlorophylliens."
+answer = "CELLULOSE"
+x = 10
+horizontal = false
+placed = true
+number = 1
+
+[sub_resource type="Resource" id="Resource_ml3g5"]
+script = ExtResource("1_asp2o")
+word = "ORGANIQUE"
+clue = "Se dit des substances tels que les glucides ou les protéines."
+answer = "ORGANIQUE"
+x = 6
+y = 1
+horizontal = false
+placed = true
+number = 5
 
 [resource]
 script = ExtResource("2_uvvg8")
-entries = Array[ExtResource("1_asp2o")]([SubResource("Resource_8bu0b"), SubResource("Resource_sps46"), SubResource("Resource_ml3g5"), SubResource("Resource_jmqt1"), SubResource("Resource_eau7f"), SubResource("Resource_dqeeo"), SubResource("Resource_64va7"), SubResource("Resource_6dcui")])
-grid_width = 15
-grid_height = 13
+entries = Array[ExtResource("1_asp2o")]([SubResource("Resource_asp2o"), SubResource("Resource_uvvg8"), SubResource("Resource_8bu0b"), SubResource("Resource_sps46"), SubResource("Resource_ml3g5")])
+grid_width = 11
+grid_height = 10
 theme_title = "La cellule"

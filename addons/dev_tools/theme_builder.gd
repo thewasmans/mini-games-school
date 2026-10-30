@@ -5,6 +5,8 @@ extends RefCounted
 const UI := "res://content/ui/"
 const THEME_PATH := "res://content/ui/game_theme.tres"
 const FONT_PATH := "res://content/fonts/fredoka.tres"
+const NEW_LINE := "\n"
+const QUOTE := "\""
 
 const BUTTON_MARGINS := [30, 20, 30, 24]
 const MARGINS := {
@@ -37,8 +39,7 @@ func _build() -> Error:
 	_panels(t)
 	_icons(t)
 	_scrollbars(t)
-	t.take_over_path(THEME_PATH)
-	var err := ResourceSaver.save(t, THEME_PATH)
+	var err := _save_keeping_uid(t, THEME_PATH)
 	print("Thème écrit : %s (%s)" % [THEME_PATH, error_string(err)])
 	return err
 
@@ -48,9 +49,49 @@ func _font() -> Font:
 	fv.base_font = load("res://content/fonts/Fredoka.ttf")
 	var ts := TextServerManager.get_primary_interface()
 	fv.variation_opentype = {ts.name_to_tag("wght"): 650}
-	fv.take_over_path(FONT_PATH)
-	ResourceSaver.save(fv, FONT_PATH)
+	_save_keeping_uid(fv, FONT_PATH)
 	return fv
+
+
+func _save_keeping_uid(resource: Resource, path: String) -> Error:
+	var uid := _file_uid(path)
+	resource.take_over_path(path)
+	var err := ResourceSaver.save(resource, path)
+	if err == OK and uid != ResourceUID.INVALID_ID:
+		err = ResourceSaver.set_uid(path, uid)
+	if err == OK:
+		_fill_ext_uids(path)
+	return err
+
+
+func _fill_ext_uids(path: String) -> void:
+	var lines := FileAccess.get_file_as_string(path).split(NEW_LINE)
+	for i in lines.size():
+		if not lines[i].begins_with("[ext_resource") or lines[i].contains(" uid="):
+			continue
+		var uid := _uid_of(lines[i].get_slice("path=" + QUOTE, 1).get_slice(QUOTE, 0))
+		if uid != "":
+			lines[i] = lines[i].replace(" path=", " uid=%s%s%s path=" % [QUOTE, uid, QUOTE])
+	FileAccess.open(path, FileAccess.WRITE).store_string(NEW_LINE.join(lines))
+
+
+func _uid_of(path: String) -> String:
+	if FileAccess.file_exists(path + ".import"):
+		var config := ConfigFile.new()
+		if config.load(path + ".import") == OK:
+			return config.get_value("remap", "uid", "")
+	var uid := _file_uid(path)
+	return ResourceUID.id_to_text(uid) if uid != ResourceUID.INVALID_ID else ""
+
+
+func _file_uid(path: String) -> int:
+	if not FileAccess.file_exists(path):
+		return ResourceUID.INVALID_ID
+	var header := FileAccess.get_file_as_string(path).get_slice("\n", 0)
+	var start := header.find("uid=\"")
+	if start < 0:
+		return ResourceUID.INVALID_ID
+	return ResourceUID.text_to_id(header.substr(start + 5).get_slice("\"", 0))
 
 
 func _text_defaults(t: Theme) -> void:
@@ -180,8 +221,6 @@ func _icons(t: Theme) -> void:
 	var icons := {
 		"CrosswordCell": {"empty": "cell_empty", "word": "cell_word", "cursor": "cell_cursor", "done": "cell_done", "wrong": "cell_wrong"},
 		"CryptoCell": {"word": "cell_word", "cursor": "cell_cursor", "good": "cell_good", "wrong": "cell_wrong"},
-		"LevelNode": {"open": "platform_open", "lock": "platform_lock", "done": "platform_done"},
-		"LevelPath": {"castle_start": "castle_start", "castle_end": "castle_end"},
 		"DefaultQuizImage": {"island": "island_castle"},
 		"GameIcons": {},
 	}

@@ -1,72 +1,45 @@
-[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://hbjvap5pw77f"]
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://dvhj5px56851i"]
 
 [ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/mini_games/memo/memo_question.gd" id="1_tvqo1"]
 [ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/mini_games/memo/memo_data.gd" id="2_vhjqj"]
 
+[sub_resource type="Resource" id="Resource_tvqo1"]
+script = ExtResource("1_tvqo1")
+question = "Qu’est-ce que l’endosymbiose ?"
+answers = PackedStringArray("Mode de relation lié à la prédation.", "Phénomène où un symbiote est présent à l’intérieur d’un hôte.", "Croissance d\'une cellule.", "Synonyme de la mitose.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_vhjqj"]
+script = ExtResource("1_tvqo1")
+question = "Quelle espèce possède le plasmodesme ?"
+answers = PackedStringArray("Le cloporte.", "Le calmar.", "Le pommier.", "La tortue.")
+correct_index = 2
+
 [sub_resource type="Resource" id="Resource_geyte"]
+script = ExtResource("1_tvqo1")
+question = "Qui a proposé les premières lois liées à la génétique ?"
+answers = PackedStringArray("Darwin.", "Mendel.", "Watson.", "Einstein.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_yoj0j"]
+script = ExtResource("1_tvqo1")
+question = "En quoi consiste le brassage génétique ?"
+answers = PackedStringArray("Le mélange de plusieurs ethnies.", "La fusion des gamètes.", "Le mélange de bactéries.", "Le mélange du patrimoine génétique de la mère et du père.")
+correct_index = 3
+
+[sub_resource type="Resource" id="Resource_slf43"]
+script = ExtResource("1_tvqo1")
+question = "Quel élément suivant n’est pas un nucléotide ?"
+answers = PackedStringArray("La thymine.", "L’alanine.", "La guanine.", "La cytosine.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_n87pr"]
 script = ExtResource("1_tvqo1")
 question = "Combien de brins possèdent l’ADN ?"
 answers = PackedStringArray("6.", "2.", "8.", "4.")
 correct_index = 1
 
-[sub_resource type="Resource" id="Resource_yoj0j"]
-script = ExtResource("1_tvqo1")
-question = "Combien l’Homme a-t-il de gènes ?"
-answers = PackedStringArray("220000.", "364.", "21000.", "1292.")
-correct_index = 2
-
-[sub_resource type="Resource" id="Resource_slf43"]
-script = ExtResource("1_tvqo1")
-question = "Qu’est-ce qu’une mutation ?"
-answers = PackedStringArray("Une maladie.", "Une modification génétique.", "Un problème génétique.", "Une conséquence héréditaire.")
-correct_index = 1
-
-[sub_resource type="Resource" id="Resource_n87pr"]
-script = ExtResource("1_tvqo1")
-question = "Qu’est-ce que l’apoptose ?"
-answers = PackedStringArray("La naissance d’une cellule.", "La mort programmée d’une cellule.", "Le même que la nécrose.", "La division de deux cellules.")
-correct_index = 1
-
-[sub_resource type="Resource" id="Resource_21lis"]
-script = ExtResource("1_tvqo1")
-question = "Quels sont les organites spécifiques à la cellule végétale ?"
-answers = PackedStringArray("Paroi cellulaire-Vacuole-Chloroplaste.", "Paroi cellulaire-Mitochondrie-Chloroplaste.", "Lysosome-Vacuole-Chloroplaste.", "Paroi cellulaire-Vacuole-Ribosome.")
-
-[sub_resource type="Resource" id="Resource_ase58"]
-script = ExtResource("1_tvqo1")
-question = "De quoi est composé le gène ?"
-answers = PackedStringArray("Cellule.", "Organe.", "ADN.", "Tissu.")
-correct_index = 2
-
-[sub_resource type="Resource" id="Resource_njvlf"]
-script = ExtResource("1_tvqo1")
-question = "Que se passe-t-il lors de la métaphase ?"
-answers = PackedStringArray("Les chromosomes s’alignent sur une plaque théorique.", "Les ribosomes s’effacent.", "Le noyau apparait.", "Deux cellules se forment.")
-
-[sub_resource type="Resource" id="Resource_e6o2c"]
-script = ExtResource("1_tvqo1")
-question = "Qu’est-ce que l’ADN ?"
-answers = PackedStringArray("Une cellule.", "Une macromolécule.", "Un gène.", "Un chromosome.")
-correct_index = 1
-
-[sub_resource type="Resource" id="Resource_7uwj0"]
-script = ExtResource("1_tvqo1")
-question = "Qu’est-ce qu’une bactérie ?"
-answers = PackedStringArray("Un virus.", "Une maladie.", "Un être vivant.", "Une protéine.")
-correct_index = 2
-
-[sub_resource type="Resource" id="Resource_qduyb"]
-script = ExtResource("1_tvqo1")
-question = "Quel est le rôle de la division cellulaire ?"
-answers = PackedStringArray("La reproduction d\'une bactérie.", "La formation de nouvelles cellules.", "La mort d\'une cellule.", "La mort de plusieurs cellules.")
-correct_index = 1
-
-[sub_resource type="Resource" id="Resource_k2slg"]
-script = ExtResource("1_tvqo1")
-question = "Quel est le mode de réplication de l'ADN ?"
-answers = PackedStringArray("Semi-conservatif.", "Conservatif.", "Replicatif.", "Indépendant.")
-
 [resource]
 script = ExtResource("2_vhjqj")
-questions = Array[ExtResource("1_tvqo1")]([SubResource("Resource_geyte"), SubResource("Resource_yoj0j"), SubResource("Resource_slf43"), SubResource("Resource_n87pr"), SubResource("Resource_21lis"), SubResource("Resource_ase58"), SubResource("Resource_njvlf"), SubResource("Resource_e6o2c"), SubResource("Resource_7uwj0"), SubResource("Resource_qduyb"), SubResource("Resource_k2slg")])
+questions = Array[ExtResource("1_tvqo1")]([SubResource("Resource_tvqo1"), SubResource("Resource_vhjqj"), SubResource("Resource_geyte"), SubResource("Resource_yoj0j"), SubResource("Resource_slf43"), SubResource("Resource_n87pr")])
 theme_title = "La cellule"

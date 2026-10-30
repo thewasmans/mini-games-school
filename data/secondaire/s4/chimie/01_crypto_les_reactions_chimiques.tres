@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://c8jf4gupsss8x"]
+
+[ext_resource type="Script" uid="uid://d12jxrx0uuunw" path="res://scripts/mini_games/crypto/crypto_data.gd" id="1_ig88v"]
+[ext_resource type="Script" uid="uid://c4ybdhwj2y7o2" path="res://scripts/mini_games/crypto/crypto_sentence.gd" id="2_ee7on"]
+
+[sub_resource type="Resource" id="Resource_thy3m"]
+script = ExtResource("2_ee7on")
+sentence = "La nomenclature chimique nomme les substances de manière rigoureuse."
+
+[sub_resource type="Resource" id="Resource_x6sho"]
+script = ExtResource("2_ee7on")
+sentence = "Les corps composés binaires associent deux éléments distincts."
+
+[resource]
+script = ExtResource("1_ig88v")
+sentences = Array[ExtResource("2_ee7on")]([SubResource("Resource_thy3m"), SubResource("Resource_x6sho")])
+hidden_ratio = 0.1
+theme_title = "Les réactions chimiques"

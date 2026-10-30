@@ -201,6 +201,37 @@ func _type(letter: String) -> void:
 		_check_word(_selected)
 
 
+func use_hint() -> bool:
+	if is_completed:
+		return false
+	if _selected < 0 or _words[_selected].done:
+		_select_word(_next_open(_selected))
+		if _selected < 0:
+			return false
+	var w := _words[_selected]
+	var cells: Array[Vector2i] = w.cells
+	var hint_index := -1
+	for step in cells.size():
+		var i := (_cursor + step) % cells.size()
+		var candidate: CrosswordCell = _cells[cells[i]]
+		if not candidate.validated and candidate.letter != candidate.solution:
+			hint_index = i
+			break
+	if hint_index < 0:
+		return false
+	var cell: CrosswordCell = _cells[cells[hint_index]]
+	cell.letter = cell.solution
+	_clear_wrong(w)
+	UIFeedback.punch(cell, 0.3, 0.5)
+	Sfx.play("good")
+	var next := _skip_locked(cells, hint_index + 1, 1)
+	_cursor = next if next != -1 else hint_index
+	_refresh()
+	if _is_full(w) and _is_right(w):
+		_check_word(_selected)
+	return true
+
+
 func _backspace() -> void:
 	if is_completed or _selected < 0 or _words[_selected].done:
 		return
@@ -246,6 +277,7 @@ func _check_word(index: int) -> void:
 			cell.wrong = true
 			cell.shake()
 		Sfx.play("error")
+		_make_mistake()
 		_refresh()
 		return
 	_validate_word(index)

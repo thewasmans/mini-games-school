@@ -1,0 +1,82 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bddkju6v2o2te"]
+
+[ext_resource type="Script" uid="uid://6pk47pd5gtfx" path="res://scripts/mini_games/crossword/crossword_entry.gd" id="1_7vn5g"]
+[ext_resource type="Script" uid="uid://bu7s316sbdqky" path="res://scripts/mini_games/crossword/crossword_data.gd" id="2_6ryql"]
+
+[sub_resource type="Resource" id="Resource_0evmc"]
+script = ExtResource("1_7vn5g")
+word = "MONOHYBRIDISME"
+clue = "L'étude de la transmission d’un caractère."
+answer = "MONOHYBRIDISME"
+y = 6
+placed = true
+number = 6
+
+[sub_resource type="Resource" id="Resource_2ovr0"]
+script = ExtResource("1_7vn5g")
+word = "MENDEL"
+clue = "Père fondateur de la génétique."
+answer = "MENDEL"
+y = 12
+placed = true
+number = 7
+
+[sub_resource type="Resource" id="Resource_ibsft"]
+script = ExtResource("1_7vn5g")
+word = "HAPLOIDE"
+clue = "Caractérise une cellule dont le noyau ne comprend qu'un seul exemplaire de chaque chromosome (n=23)."
+answer = "HAPLOIDE"
+x = 8
+y = 1
+horizontal = false
+placed = true
+number = 2
+
+[sub_resource type="Resource" id="Resource_1uyyj"]
+script = ExtResource("1_7vn5g")
+word = "ALLELE"
+clue = "Variant qu'un gène peut présenter."
+answer = "ALLELE"
+x = 6
+y = 4
+placed = true
+number = 5
+
+[sub_resource type="Resource" id="Resource_q1jc2"]
+script = ExtResource("1_7vn5g")
+word = "DREPANOCYTOSE"
+clue = "Maladie qui se manifeste par la formation d’une protéine d’hémoglobine anormale qui déforme les globules rouges."
+answer = "DREPANOCYTOSE"
+x = 1
+horizontal = false
+placed = true
+number = 1
+
+[sub_resource type="Resource" id="Resource_r7f45"]
+script = ExtResource("1_7vn5g")
+word = "PUNNETT"
+clue = "Nom du scientifique ayant proposé le tableau de croisement en génétique."
+answer = "PUNNETT"
+x = 13
+y = 2
+horizontal = false
+placed = true
+number = 4
+
+[sub_resource type="Resource" id="Resource_2126c"]
+script = ExtResource("1_7vn5g")
+word = "PHENOTYPE"
+clue = "Ensemble des caractères apparents d'un individu."
+answer = "PHENOTYPE"
+x = 3
+y = 2
+horizontal = false
+placed = true
+number = 3
+
+[resource]
+script = ExtResource("2_6ryql")
+entries = Array[ExtResource("1_7vn5g")]([SubResource("Resource_0evmc"), SubResource("Resource_2ovr0"), SubResource("Resource_ibsft"), SubResource("Resource_1uyyj"), SubResource("Resource_q1jc2"), SubResource("Resource_r7f45"), SubResource("Resource_2126c")])
+grid_width = 14
+grid_height = 13
+theme_title = "La cellule"

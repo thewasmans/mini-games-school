@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dduoaslp3tpud"]
+
+[ext_resource type="Script" uid="uid://d12jxrx0uuunw" path="res://scripts/mini_games/crypto/crypto_data.gd" id="1_wbfjw"]
+[ext_resource type="Script" uid="uid://c4ybdhwj2y7o2" path="res://scripts/mini_games/crypto/crypto_sentence.gd" id="2_llwap"]
+
+[sub_resource type="Resource" id="Resource_csoq5"]
+script = ExtResource("2_llwap")
+sentence = "Les allèles sont des versions d'un gène."
+
+[sub_resource type="Resource" id="Resource_el6yw"]
+script = ExtResource("2_llwap")
+sentence = "Le génotype détermine le phénotype."
+
+[sub_resource type="Resource" id="Resource_pjiux"]
+script = ExtResource("2_llwap")
+sentence = "L'allèle dominant masque le récessif."
+
+[sub_resource type="Resource" id="Resource_v7xay"]
+script = ExtResource("2_llwap")
+sentence = "Mendel démontre la transmission des caractères."
+
+[sub_resource type="Resource" id="Resource_p78vj"]
+script = ExtResource("2_llwap")
+sentence = "L'échiquier prévoit la descendance."
+
+[resource]
+script = ExtResource("1_wbfjw")
+sentences = Array[ExtResource("2_llwap")]([SubResource("Resource_csoq5"), SubResource("Resource_el6yw"), SubResource("Resource_pjiux"), SubResource("Resource_v7xay"), SubResource("Resource_p78vj")])
+hidden_ratio = 0.25
+theme_title = "La cellule"

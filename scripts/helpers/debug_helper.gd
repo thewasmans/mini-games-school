@@ -8,6 +8,7 @@ const HINT_REFRESH_INTERVAL := 0.3
 @export var auto_validate_check: CheckBox
 @export var show_hints_check: CheckBox
 @export var unlock_all_button: Button
+@export var add_bonus_button: Button
 @export var hint_label: Label
 
 var _game_manager: GameManager
@@ -24,6 +25,7 @@ func initialize(game_manager: GameManager) -> void:
 	auto_validate_check.toggled.connect(_on_auto_validate_toggled)
 	show_hints_check.toggled.connect(_on_show_hints_toggled)
 	unlock_all_button.pressed.connect(game_manager.game_state.unlock_all_levels)
+	add_bonus_button.pressed.connect(game_manager.game_state.add_bonus.bind(3))
 	game_manager.level_manager.level_started.connect(_on_level_started)
 
 

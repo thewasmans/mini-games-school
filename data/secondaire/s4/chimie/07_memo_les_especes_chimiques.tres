@@ -1,42 +1,31 @@
-[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bjg4p8503t224"]
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://dqu3oi647dixj"]
 
 [ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/mini_games/memo/memo_question.gd" id="1_3fbuc"]
 [ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/mini_games/memo/memo_data.gd" id="2_piode"]
 
+[sub_resource type="Resource" id="Resource_3fbuc"]
+script = ExtResource("1_3fbuc")
+question = "Qu'est-ce que la conductibilité ?"
+answers = PackedStringArray("La capacité d\'une espèce à conduire le courant..", "La capacité d\'une espèce à absorber la chaleur..", "La transformation d\'un métal en un non métal..", "La transformation d\'un non métal en un métal..")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_piode"]
+script = ExtResource("1_3fbuc")
+question = "Qu'est-ce qu'un électrolyte ?"
+answers = PackedStringArray("Un corps qui se transforme en ions libres.", "Un proton.", "Un électron.", "De l\'antimatière.")
+
 [sub_resource type="Resource" id="Resource_rasxy"]
 script = ExtResource("1_3fbuc")
-question = "Comment se nomme un ion formé à partir de plusieurs atomes ?"
-answers = PackedStringArray("Polyatomique.", "Monoatomique.", "Monosaccharide.", "Polysaccharide.")
+question = "Que représente le Na ?"
+answers = PackedStringArray("Le sodium.", "Le magnésium.", "Le calcium.", "Le chlore.")
 
 [sub_resource type="Resource" id="Resource_bbl8c"]
 script = ExtResource("1_3fbuc")
-question = "Qu'est-ce qu'une réaction de précipitation ?"
-answers = PackedStringArray("Réaction où un dépôt se forme..", "Réaction où tout est dissout..", "Lorsque le produit est très soluble..", "Toutes ces phrases sont justes..")
-
-[sub_resource type="Resource" id="Resource_k4m6o"]
-script = ExtResource("1_3fbuc")
-question = "Comment se nomme un ion impliqué dans la réaction de précipitation ?"
-answers = PackedStringArray("Spectateur.", "Acteur.", "Formateur.", "Pondérateur.")
-correct_index = 1
-
-[sub_resource type="Resource" id="Resource_r6x8n"]
-script = ExtResource("1_3fbuc")
-question = "Comment se nomme un ion non impliqué dans la réaction de précipitation ?"
-answers = PackedStringArray("Spectateur.", "Acteur.", "Formateur.", "Pondérateur.")
-
-[sub_resource type="Resource" id="Resource_okcxj"]
-script = ExtResource("1_3fbuc")
-question = "Qu'est-ce que l'équation ionique ?"
-answers = PackedStringArray("Equation de la réaction entre les ions spectateurs..", "Equation de la réaction entre les ions acteurs..", "Equation de la réaction entre les ions pondérateurs..", "Equation de la réaction entre les ions formateurs..")
-correct_index = 1
-
-[sub_resource type="Resource" id="Resource_4fs78"]
-script = ExtResource("1_3fbuc")
-question = "Quelle solution proposes-tu pour nettoyer le robinet ?"
-answers = PackedStringArray("Du calcaire.", "Du vinaigre.", "De l\'eau.", "De l\'alcool.")
+question = "Que représente le Mg ?"
+answers = PackedStringArray("Le sodium.", "Le magnésium.", "Le calcium.", "Le chlore.")
 correct_index = 1
 
 [resource]
 script = ExtResource("2_piode")
-questions = Array[ExtResource("1_3fbuc")]([SubResource("Resource_rasxy"), SubResource("Resource_bbl8c"), SubResource("Resource_k4m6o"), SubResource("Resource_r6x8n"), SubResource("Resource_okcxj"), SubResource("Resource_4fs78")])
+questions = Array[ExtResource("1_3fbuc")]([SubResource("Resource_3fbuc"), SubResource("Resource_piode"), SubResource("Resource_rasxy"), SubResource("Resource_bbl8c")])
 theme_title = "Les espèces chimiques"

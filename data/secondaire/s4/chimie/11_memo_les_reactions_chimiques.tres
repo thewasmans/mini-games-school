@@ -1,74 +1,38 @@
-[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://cyuwfgm43i1bc"]
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://btln7bvuxyo3b"]
 
 [ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/mini_games/memo/memo_question.gd" id="1_kfc8k"]
 [ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/mini_games/memo/memo_data.gd" id="2_w1e3p"]
 
+[sub_resource type="Resource" id="Resource_kfc8k"]
+script = ExtResource("1_kfc8k")
+question = "Qu'est-ce qu'un corps pur composé ?"
+answers = PackedStringArray("Atomes liés ensemble suite à une réaction chimique, comme l\'eau.", "Deux ou plusieurs substances qui sont physiquement mêlées.", "Se dit d\'un mélange si on ne peut pas distinguer ses différents constituants à l’oeil nu.", "Assemblage d’atomes d’un seul élément.")
+
+[sub_resource type="Resource" id="Resource_w1e3p"]
+script = ExtResource("1_kfc8k")
+question = "Qu'est-ce qu'un mélange homogène ?"
+answers = PackedStringArray("Atomes liés ensemble suite à une réaction chimique, comme l\'eau.", "deux ou plusieurs substances qui sont physiquement mêlées.", "Se dit d\'un mélange si on ne peut pas distinguer ses différents constituants à l’oeil nu.", "Assemblage d’atomes d’un seul élément.")
+correct_index = 2
+
 [sub_resource type="Resource" id="Resource_so2mq"]
 script = ExtResource("1_kfc8k")
-question = "Que représente le NaOH ?"
-answers = PackedStringArray("Le nitrate de sodium.", "Le chlorure d\'hydrogène.", "L\'hydroxyde de sodium.", "Le permangante de potassium.")
+question = "Qu'est-ce qu'une solution ?"
+answers = PackedStringArray("Se dit de la substance qui va être dissoute.", "Se dit de la substance qui va dissoudre le composé.", "Se dit du résultat entre le solvant et le soluté.", "Se dit de la réaction chimique qui se produit pour obtenir une solution complète.")
 correct_index = 2
 
 [sub_resource type="Resource" id="Resource_qq0m1"]
 script = ExtResource("1_kfc8k")
-question = "Quel est le corps composé binaire ?"
-answers = PackedStringArray("CO.", "NaOH.", "L\'acétylcholine.", "Aucun des trois.")
+question = "En quoi consiste la décantation ?"
+answers = PackedStringArray("Cette méthode permet de recueillir le solide dans le filtre et d’obtenir un liquide appelé filtrat.", "Procédé qui consiste à débarrasser un liquide de ses impuretés lourdes en les laissant se déposer sur le fond.", "Procédé qui consiste à faire tourner le mélange autour d’un axe de rotation.", "Procédé par lequel un mélange est chauffé dans un système fermé.")
+correct_index = 1
 
 [sub_resource type="Resource" id="Resource_u1tte"]
 script = ExtResource("1_kfc8k")
-question = "Quel est le corps composé ternaire ?"
-answers = PackedStringArray("CO.", "NaOH.", "L\'acétylcholine.", "Aucun des trois.")
+question = "Que représente le numéro atomique ?"
+answers = PackedStringArray("Le nombre d\'électrons.", "Le nombre de protons.", "Aucune de ces réponses.", "Le symbole de l\'élément.")
 correct_index = 1
-
-[sub_resource type="Resource" id="Resource_svicj"]
-script = ExtResource("1_kfc8k")
-question = "Quel est le corps composé quaternaire ?"
-answers = PackedStringArray("CO.", "NaOH.", "L\'acétylcholine.", "Aucun des trois.")
-correct_index = 2
-
-[sub_resource type="Resource" id="Resource_mblt0"]
-script = ExtResource("1_kfc8k")
-question = "Quelle est la loi de Lavoisier ?"
-answers = PackedStringArray("Dans toute réaction chimique, la masse totale des réactifs est égale à la masse totale des produits.", "Dans toute réaction chimique, la masse totale des réactifs est égale à la masse totale des réactifs.", "Dans toute réaction chimique, il y a équilibre.", "Dans toute réaction chimique, on perd de la matière.")
-
-[sub_resource type="Resource" id="Resource_jquwk"]
-script = ExtResource("1_kfc8k")
-question = "Qu'est-ce que pondérer ?"
-answers = PackedStringArray("Attribuer des éventuels coefficients pour équilibrer une équation.", "Equilibrer en ajoutant de l\'eau.", "Equilibrer en retirant de l\'eau.", "Equilibrer en diluant.")
-
-[sub_resource type="Resource" id="Resource_4kmm2"]
-script = ExtResource("1_kfc8k")
-question = "Qu'est-ce que la mole ?"
-answers = PackedStringArray("C\'est une quantité de matière exprimée en grammes.", "C\'est une unité.", "C\'est la quantité de moles d\'un soluté par litre de solution.", "C\'est la loi des gaz parfaits.")
-correct_index = 1
-
-[sub_resource type="Resource" id="Resource_rf736"]
-script = ExtResource("1_kfc8k")
-question = "Qu'est-ce que la masse ?"
-answers = PackedStringArray("C\'est une quantité de matière exprimée en grammes.", "C\'est une unité.", "C\'est la quantité de moles d\'un soluté par litre de solution.", "C\'est la loi des gaz parfaits.")
-
-[sub_resource type="Resource" id="Resource_xf52d"]
-script = ExtResource("1_kfc8k")
-question = "Qu'est-ce que la concentration molaire ?"
-answers = PackedStringArray("C\'est une quantité de matière exprimée en grammes.", "C\'est une unité.", "C\'est la quantité de moles d\'un soluté par litre de solution.", "C\'est la loi des gaz parfaits.")
-correct_index = 2
-
-[sub_resource type="Resource" id="Resource_1uejg"]
-script = ExtResource("1_kfc8k")
-question = "Qu'est-ce que le nombre d’Avogadro ?"
-answers = PackedStringArray("Une valeur constante.", "Une masse qui varie selon l\'atome.", "Une valeur qui dépend de la température.", "Une masse précise.")
-
-[sub_resource type="Resource" id="Resource_7m6k1"]
-script = ExtResource("1_kfc8k")
-question = "Qu'est-ce que la stoechiométrie ?"
-answers = PackedStringArray("Etude des proportions selon lesquelles les substances interagissent dans une réaction chimique.", "Tableau d\'éléments chimiques.", "Tableau des risques chimiques.", "Etude de l\'électrolyse.")
-
-[sub_resource type="Resource" id="Resource_e0vdu"]
-script = ExtResource("1_kfc8k")
-question = "Que représente la concentration massique ?"
-answers = PackedStringArray("Le rapport entre la masse et le volume.", "Le rapport entre le nombre de moles et le volume.", "L\'équation des gaz parfaits.", "Le facteur de dilution.")
 
 [resource]
 script = ExtResource("2_w1e3p")
-questions = Array[ExtResource("1_kfc8k")]([SubResource("Resource_so2mq"), SubResource("Resource_qq0m1"), SubResource("Resource_u1tte"), SubResource("Resource_svicj"), SubResource("Resource_mblt0"), SubResource("Resource_jquwk"), SubResource("Resource_4kmm2"), SubResource("Resource_rf736"), SubResource("Resource_xf52d"), SubResource("Resource_1uejg"), SubResource("Resource_7m6k1"), SubResource("Resource_e0vdu")])
+questions = Array[ExtResource("1_kfc8k")]([SubResource("Resource_kfc8k"), SubResource("Resource_w1e3p"), SubResource("Resource_so2mq"), SubResource("Resource_qq0m1"), SubResource("Resource_u1tte")])
 theme_title = "Les réactions chimiques"

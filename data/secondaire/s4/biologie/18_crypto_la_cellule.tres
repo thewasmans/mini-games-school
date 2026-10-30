@@ -1,42 +1,26 @@
-[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://cx2dfmfelmq0j"]
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://baemwb5fnk2wp"]
 
 [ext_resource type="Script" uid="uid://d12jxrx0uuunw" path="res://scripts/mini_games/crypto/crypto_data.gd" id="1_1ggjg"]
 [ext_resource type="Script" uid="uid://c4ybdhwj2y7o2" path="res://scripts/mini_games/crypto/crypto_sentence.gd" id="2_evjwk"]
 
+[sub_resource type="Resource" id="Resource_1ggjg"]
+script = ExtResource("2_evjwk")
+sentence = "La membrane plasmique est double."
+
+[sub_resource type="Resource" id="Resource_evjwk"]
+script = ExtResource("2_evjwk")
+sentence = "Les échanges traversent la membrane."
+
 [sub_resource type="Resource" id="Resource_1lwc0"]
 script = ExtResource("2_evjwk")
-sentence = "Un gène code pour un caractère."
+sentence = "Le cycle cellulaire alterne croissance et division."
 
 [sub_resource type="Resource" id="Resource_51v3g"]
 script = ExtResource("2_evjwk")
-sentence = "Les allèles sont des versions d'un gène."
-
-[sub_resource type="Resource" id="Resource_25pia"]
-script = ExtResource("2_evjwk")
-sentence = "Le génotype détermine le phénotype."
-
-[sub_resource type="Resource" id="Resource_doop0"]
-script = ExtResource("2_evjwk")
-sentence = "L'allèle dominant masque le récessif."
-
-[sub_resource type="Resource" id="Resource_klwnq"]
-script = ExtResource("2_evjwk")
-sentence = "Mendel démontre la transmission des caractères."
-
-[sub_resource type="Resource" id="Resource_biegp"]
-script = ExtResource("2_evjwk")
-sentence = "L'échiquier prévoit la descendance."
-
-[sub_resource type="Resource" id="Resource_jrbjt"]
-script = ExtResource("2_evjwk")
-sentence = "Le test-cross identifie le génotype."
-
-[sub_resource type="Resource" id="Resource_up15e"]
-script = ExtResource("2_evjwk")
-sentence = "La méiose sépare les allèles."
+sentence = "L'interphase prépare la division cellulaire."
 
 [resource]
 script = ExtResource("1_1ggjg")
-sentences = Array[ExtResource("2_evjwk")]([SubResource("Resource_1lwc0"), SubResource("Resource_51v3g"), SubResource("Resource_25pia"), SubResource("Resource_doop0"), SubResource("Resource_klwnq"), SubResource("Resource_biegp"), SubResource("Resource_jrbjt"), SubResource("Resource_up15e")])
-hidden_ratio = 0.05
+sentences = Array[ExtResource("2_evjwk")]([SubResource("Resource_1ggjg"), SubResource("Resource_evjwk"), SubResource("Resource_1lwc0"), SubResource("Resource_51v3g")])
+hidden_ratio = 0.2
 theme_title = "La cellule"

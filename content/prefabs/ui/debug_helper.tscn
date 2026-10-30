@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c5mpd2nsq5nqc" path="res://scripts/helpers/debug_helper.gd" id="1"]
 
-[node name="DebugHelper" type="CanvasLayer" unique_id=1165960340 node_paths=PackedStringArray("bar", "auto_fill_check", "auto_validate_check", "show_hints_check", "unlock_all_button", "hint_label")]
+[node name="DebugHelper" type="CanvasLayer" unique_id=1165960340 node_paths=PackedStringArray("bar", "auto_fill_check", "auto_validate_check", "show_hints_check", "unlock_all_button", "add_bonus_button", "hint_label")]
 layer = 90
 script = ExtResource("1")
 bar = NodePath("Bar")
@@ -10,6 +10,7 @@ auto_fill_check = NodePath("Bar/Row/AutoFill")
 auto_validate_check = NodePath("Bar/Row/AutoValidate")
 show_hints_check = NodePath("Bar/Row/ShowHints")
 unlock_all_button = NodePath("Bar/Row/UnlockAll")
+add_bonus_button = NodePath("Bar/Row/AddBonus")
 hint_label = NodePath("Bar/Row/HintLabel")
 
 [node name="Bar" type="PanelContainer" parent="." unique_id=1768986667]
@@ -47,6 +48,11 @@ text = "Show hints"
 layout_mode = 2
 focus_mode = 0
 text = "Unlock all levels"
+
+[node name="AddBonus" type="Button" parent="Bar/Row"]
+layout_mode = 2
+focus_mode = 0
+text = "+3 bonus"
 
 [node name="HintLabel" type="Label" parent="Bar/Row" unique_id=1825435342]
 visible = false

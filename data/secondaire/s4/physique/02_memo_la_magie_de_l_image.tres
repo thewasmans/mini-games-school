@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://d2fpsbsp2vclw"]
+
+[ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/mini_games/memo/memo_question.gd" id="1_vk75h"]
+[ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/mini_games/memo/memo_data.gd" id="2_uesqh"]
+
+[sub_resource type="Resource" id="Resource_5087m"]
+script = ExtResource("1_vk75h")
+question = "Quel théorème permet de déterminer la taille de l’image ?"
+answers = PackedStringArray("Thalès.", "Pythagore.", "Archimède.", "Hercule.")
+
+[sub_resource type="Resource" id="Resource_mwdvl"]
+script = ExtResource("1_vk75h")
+question = "Quelle est la vitesse de la lumière dans le vide ?"
+answers = PackedStringArray("300.000 km/s.", "340 m/s.", "1500 m/s.", "zéro.")
+
+[sub_resource type="Resource" id="Resource_uetjc"]
+script = ExtResource("1_vk75h")
+question = "Quelle est la vitesse du son dans l'air ?"
+answers = PackedStringArray("300.000 km/s.", "340 m/s.", "1500 m/s.", "zéro.")
+correct_index = 1
+
+[resource]
+script = ExtResource("2_uesqh")
+questions = Array[ExtResource("1_vk75h")]([SubResource("Resource_5087m"), SubResource("Resource_mwdvl"), SubResource("Resource_uetjc")])
+theme_title = "La magie de l'image"

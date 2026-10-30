@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://360gu4o74jmn"]
+
+[ext_resource type="Script" uid="uid://d12jxrx0uuunw" path="res://scripts/mini_games/crypto/crypto_data.gd" id="1_gbkvc"]
+[ext_resource type="Script" uid="uid://c4ybdhwj2y7o2" path="res://scripts/mini_games/crypto/crypto_sentence.gd" id="2_2p1vu"]
+
+[sub_resource type="Resource" id="Resource_n8isk"]
+script = ExtResource("2_2p1vu")
+sentence = "Le volume molaire dépend des conditions de température."
+
+[sub_resource type="Resource" id="Resource_0hr0w"]
+script = ExtResource("2_2p1vu")
+sentence = "Les calculs de stœchiométrie prédisent les quantités formées."
+
+[sub_resource type="Resource" id="Resource_0dpci"]
+script = ExtResource("2_2p1vu")
+sentence = "Le réactif limitant stoppe la réaction chimique."
+
+[sub_resource type="Resource" id="Resource_pf5mp"]
+script = ExtResource("2_2p1vu")
+sentence = "Le rendement chimique mesure l'efficacité d'une transformation."
+
+[resource]
+script = ExtResource("1_gbkvc")
+sentences = Array[ExtResource("2_2p1vu")]([SubResource("Resource_n8isk"), SubResource("Resource_0hr0w"), SubResource("Resource_0dpci"), SubResource("Resource_pf5mp")])
+hidden_ratio = 0.2
+theme_title = "Les réactions chimiques"

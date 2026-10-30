@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://bf08ggdlbhq1a"]
+
+[ext_resource type="Script" uid="uid://d12jxrx0uuunw" path="res://scripts/mini_games/crypto/crypto_data.gd" id="1_0na6x"]
+[ext_resource type="Script" uid="uid://c4ybdhwj2y7o2" path="res://scripts/mini_games/crypto/crypto_sentence.gd" id="2_5ao3s"]
+
+[sub_resource type="Resource" id="Resource_f0cvd"]
+script = ExtResource("2_5ao3s")
+sentence = "L'ADN forme une double hélice."
+
+[sub_resource type="Resource" id="Resource_7sa6s"]
+script = ExtResource("2_5ao3s")
+sentence = "L'adénine s'associe toujours à la thymine."
+
+[sub_resource type="Resource" id="Resource_5i2ry"]
+script = ExtResource("2_5ao3s")
+sentence = "Les macromolécules résultent de condensations."
+
+[resource]
+script = ExtResource("1_0na6x")
+sentences = Array[ExtResource("2_5ao3s")]([SubResource("Resource_f0cvd"), SubResource("Resource_7sa6s"), SubResource("Resource_5i2ry")])
+hidden_ratio = 0.15
+theme_title = "La cellule"

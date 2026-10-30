@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://dvl8fy6pxccrh"]
+
+[ext_resource type="Script" uid="uid://bn2ilu6qy26hw" path="res://scripts/ui/level_map/level_map.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://bxl1vy1jw0cpr" path="res://content/prefabs/ui/level_map/level_marker.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://b331gungy886u" path="res://content/prefabs/ui/level_map/bonus_island_marker.tscn" id="3"]
+
+[sub_resource type="ProceduralSkyMaterial" id="Sky_map"]
+sky_top_color = Color(0.1686, 0.3098, 0.702, 1)
+sky_horizon_color = Color(0.4706, 0.6353, 0.9216, 1)
+ground_bottom_color = Color(0.1137, 0.2078, 0.5176, 1)
+ground_horizon_color = Color(0.4706, 0.6353, 0.9216, 1)
+ground_curve = 0.3
+
+[sub_resource type="Sky" id="Sky_resource"]
+sky_material = SubResource("Sky_map")
+
+[sub_resource type="Environment" id="Environment_map"]
+background_mode = 2
+sky = SubResource("Sky_resource")
+ambient_light_source = 2
+ambient_light_color = Color(0.7255, 0.7843, 1, 1)
+ambient_light_energy = 0.8
+fog_enabled = true
+fog_light_color = Color(0.4353, 0.5765, 0.8471, 1)
+fog_density = 0.018
+fog_sky_affect = 0.0
+
+[node name="LevelMap" type="Control" node_paths=PackedStringArray("camera", "world", "markers_root")]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+script = ExtResource("1")
+camera = NodePath("ViewportContainer/Viewport/World/Camera")
+world = NodePath("ViewportContainer/Viewport/World")
+markers_root = NodePath("Markers")
+level_marker_prefab = ExtResource("2")
+island_marker_prefab = ExtResource("3")
+
+[node name="ViewportContainer" type="SubViewportContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+stretch = true
+
+[node name="Viewport" type="SubViewport" parent="ViewportContainer"]
+own_world_3d = true
+handle_input_locally = false
+msaa_3d = 1
+size = Vector2i(672, 960)
+render_target_update_mode = 4
+
+[node name="World" type="Node3D" parent="ViewportContainer/Viewport"]
+
+[node name="Environment" type="WorldEnvironment" parent="ViewportContainer/Viewport/World"]
+environment = SubResource("Environment_map")
+
+[node name="Sun" type="DirectionalLight3D" parent="ViewportContainer/Viewport/World"]
+rotation = Vector3(-0.8727, 0.6109, 0)
+light_color = Color(1, 0.9451, 0.8392, 1)
+light_energy = 1.1
+shadow_enabled = true
+directional_shadow_max_distance = 60.0
+
+[node name="Camera" type="Camera3D" parent="ViewportContainer/Viewport/World"]
+keep_aspect = 0
+fov = 45.0
+far = 120.0
+
+[node name="Markers" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

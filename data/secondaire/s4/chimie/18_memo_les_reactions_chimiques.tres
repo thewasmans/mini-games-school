@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bjmytv7lc408i"]
+
+[ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/mini_games/memo/memo_question.gd" id="1_scwwk"]
+[ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/mini_games/memo/memo_data.gd" id="2_05iu1"]
+
+[sub_resource type="Resource" id="Resource_sff2m"]
+script = ExtResource("1_scwwk")
+question = "Quel groupe n'est pas une famille du tableau périodique ?"
+answers = PackedStringArray("Les alcalins.", "Les azotides.", "Les sulfurides.", "Les carbalides.")
+correct_index = 3
+
+[sub_resource type="Resource" id="Resource_k10qo"]
+script = ExtResource("1_scwwk")
+question = "Combien de familles retrouves-tu dans le tableau périodique ?"
+answers = PackedStringArray("8.", "2.", "25.", "11.")
+
+[sub_resource type="Resource" id="Resource_50rvl"]
+script = ExtResource("1_scwwk")
+question = "Combien de périodes retrouves-tu dans le tableau périodique ?"
+answers = PackedStringArray("7.", "2.", "25.", "11.")
+
+[sub_resource type="Resource" id="Resource_fqcuf"]
+script = ExtResource("1_scwwk")
+question = "Que représente le nombre de masse ?"
+answers = PackedStringArray("C\'est la somme du nombre de protons et du nombre de neutrons.", "C\'est la somme du nombre de protons et du nombre d\'électrons.", "C\'est la somme du nombre d\'électrons et du nombre de neutrons.", "C\'est le nombre de moles.")
+
+[sub_resource type="Resource" id="Resource_7x7gs"]
+script = ExtResource("1_scwwk")
+question = "Qu'est-ce que la couche électronique ?"
+answers = PackedStringArray("Lieu où les électrons orbitent autour du noyau.", "Lieu où se trouvent les protons.", "Lieu où se trouvent les neutrons.", "Nombre de masse de l\'atome.")
+
+[sub_resource type="Resource" id="Resource_ohxwk"]
+script = ExtResource("1_scwwk")
+question = "Qu'est-ce qu'un isotope ?"
+answers = PackedStringArray("Un élément chimique chargé.", "Un élément chimique ayant le même nombre de protons.", "Un élément chimique ayant le même nombre de neutrons.", "Un anion.")
+correct_index = 1
+
+[resource]
+script = ExtResource("2_05iu1")
+questions = Array[ExtResource("1_scwwk")]([SubResource("Resource_sff2m"), SubResource("Resource_k10qo"), SubResource("Resource_50rvl"), SubResource("Resource_fqcuf"), SubResource("Resource_7x7gs"), SubResource("Resource_ohxwk")])
+theme_title = "Les réactions chimiques"

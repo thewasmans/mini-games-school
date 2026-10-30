@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://2pnhuxjapqwk"]
+
+[ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/mini_games/memo/memo_question.gd" id="1_b0xow"]
+[ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/mini_games/memo/memo_data.gd" id="2_f8j1x"]
+
+[sub_resource type="Resource" id="Resource_rsrhk"]
+script = ExtResource("1_b0xow")
+question = "Qu'est-ce qu'un ion ?"
+answers = PackedStringArray("Un atome chargé.", "Un atome neutre.", "Un gaz rare.", "Une molécule instable.")
+
+[sub_resource type="Resource" id="Resource_lhs5t"]
+script = ExtResource("1_b0xow")
+question = "Qu'est-ce qu'un cation ?"
+answers = PackedStringArray("Un atome chargé négativement.", "Un atome chargé positivement.", "Un atome neutre.", "Un atome sans charge.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_74tqf"]
+script = ExtResource("1_b0xow")
+question = "Qu'est-ce qu'un anion ?"
+answers = PackedStringArray("Un atome chargé négativement.", "Un atome chargé positivement.", "Un atome neutre.", "Un atome sans charge.")
+
+[sub_resource type="Resource" id="Resource_krltr"]
+script = ExtResource("1_b0xow")
+question = "Quelle est la différence entre la cathode et l'anode ?"
+answers = PackedStringArray("La cathode est chargée positivement.", "La cathode est chargée négativement.", "L\'anode est chargée négativement.", "La cathode a la même charge que l\'anode.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_2p4ar"]
+script = ExtResource("1_b0xow")
+question = "Qu'est-ce que la concentration massique ?"
+answers = PackedStringArray("C\'est la masse de soluté présente dans un litre de la solution.", "Le nombre d\'électrons de l\'élément.", "Les différents isotopes d\'un élément.", "C\'est la quantité de matière dissoute dans un litre de solution.")
+
+[sub_resource type="Resource" id="Resource_fagc4"]
+script = ExtResource("1_b0xow")
+question = "Que représente chaque ligne horizontale du tableau périodique ?"
+answers = PackedStringArray("La famille.", "La période.", "La fréquence.", "Le symbole.")
+correct_index = 1
+
+[resource]
+script = ExtResource("2_f8j1x")
+questions = Array[ExtResource("1_b0xow")]([SubResource("Resource_rsrhk"), SubResource("Resource_lhs5t"), SubResource("Resource_74tqf"), SubResource("Resource_krltr"), SubResource("Resource_2p4ar"), SubResource("Resource_fagc4")])
+theme_title = "Les réactions chimiques"

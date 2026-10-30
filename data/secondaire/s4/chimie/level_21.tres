@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://cvn4fwj37dwqd"]
+
+[ext_resource type="Resource" uid="uid://df8sl5mwo7cpq" path="res://data/secondaire/s4/chimie/21_memo_les_reactions_chimiques.tres" id="1_0qamm"]
+[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="2_umnao"]
+
+[resource]
+script = ExtResource("2_umnao")
+mini_game = ExtResource("1_0qamm")

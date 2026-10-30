@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://bmg74jcm4sl45"]
+
+[ext_resource type="Resource" uid="uid://bb5tb7xvkancd" path="res://data/secondaire/s4/physique/23_crossword_le_travail.tres" id="1_v5dqk"]
+[ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="2_qfh8t"]
+
+[resource]
+script = ExtResource("2_qfh8t")
+mini_game = ExtResource("1_v5dqk")

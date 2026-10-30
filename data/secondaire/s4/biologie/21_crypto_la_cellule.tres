@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://kuf734tsa877"]
+
+[ext_resource type="Script" uid="uid://d12jxrx0uuunw" path="res://scripts/mini_games/crypto/crypto_data.gd" id="1_gig0r"]
+[ext_resource type="Script" uid="uid://c4ybdhwj2y7o2" path="res://scripts/mini_games/crypto/crypto_sentence.gd" id="2_8dxkn"]
+
+[sub_resource type="Resource" id="Resource_f7cbd"]
+script = ExtResource("2_8dxkn")
+sentence = "La réplication de l'ADN est semi-conservative."
+
+[sub_resource type="Resource" id="Resource_n5bvj"]
+script = ExtResource("2_8dxkn")
+sentence = "Les yeux de réplication amorcent la copie."
+
+[sub_resource type="Resource" id="Resource_mlbvj"]
+script = ExtResource("2_8dxkn")
+sentence = "La mitose produit deux cellules identiques."
+
+[sub_resource type="Resource" id="Resource_83wmv"]
+script = ExtResource("2_8dxkn")
+sentence = "La prophase condense la chromatine en chromosomes."
+
+[sub_resource type="Resource" id="Resource_od7vn"]
+script = ExtResource("2_8dxkn")
+sentence = "La métaphase aligne les chromosomes."
+
+[resource]
+script = ExtResource("1_gig0r")
+sentences = Array[ExtResource("2_8dxkn")]([SubResource("Resource_f7cbd"), SubResource("Resource_n5bvj"), SubResource("Resource_mlbvj"), SubResource("Resource_83wmv"), SubResource("Resource_od7vn")])
+hidden_ratio = 0.25
+theme_title = "La cellule"

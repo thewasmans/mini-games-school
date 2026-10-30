@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://wm2ey4om4sd8"]
+
+[ext_resource type="Script" uid="uid://d12jxrx0uuunw" path="res://scripts/mini_games/crypto/crypto_data.gd" id="1_lkg8d"]
+[ext_resource type="Script" uid="uid://c4ybdhwj2y7o2" path="res://scripts/mini_games/crypto/crypto_sentence.gd" id="2_dgr12"]
+
+[sub_resource type="Resource" id="Resource_vo5h0"]
+script = ExtResource("2_dgr12")
+sentence = "Les tests d'identification confirment la présence de gaz spécifiques."
+
+[sub_resource type="Resource" id="Resource_hiu8a"]
+script = ExtResource("2_dgr12")
+sentence = "Les réactions de précipitation forment des composés insolubles."
+
+[sub_resource type="Resource" id="Resource_aqqdt"]
+script = ExtResource("2_dgr12")
+sentence = "Le tableau de solubilité prédit la formation de précipités."
+
+[sub_resource type="Resource" id="Resource_1voqc"]
+script = ExtResource("2_dgr12")
+sentence = "Les ions spectateurs n'interviennent pas dans la réaction chimique."
+
+[sub_resource type="Resource" id="Resource_13r23"]
+script = ExtResource("2_dgr12")
+sentence = "L'équation ionique nette simplifie le bilan de la réaction."
+
+[sub_resource type="Resource" id="Resource_m2y4v"]
+script = ExtResource("2_dgr12")
+sentence = "Le calcul de masse de précipité s'appuie sur la stœchiométrie."
+
+[resource]
+script = ExtResource("1_lkg8d")
+sentences = Array[ExtResource("2_dgr12")]([SubResource("Resource_vo5h0"), SubResource("Resource_hiu8a"), SubResource("Resource_aqqdt"), SubResource("Resource_1voqc"), SubResource("Resource_13r23"), SubResource("Resource_m2y4v")])
+hidden_ratio = 0.25
+theme_title = "Les espèces chimiques"

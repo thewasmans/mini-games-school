@@ -67,7 +67,7 @@ Le seul autoload est **`Sfx`** : sons synthétisés au démarrage, joués avec `
   - sur `GameUI.level_requested`, il cache les menus et appelle `LevelManager.start_level()` ;
   - sur `LevelManager.level_closed`, il réaffiche les menus (grille des levels mise à jour) ;
   - sur `GameUI.study_level_shown`, il teinte le ciel du décor (`AnimatedBackground.set_study_level`).
-- **`LevelManager`** : `start_level(index)` instancie `level.tscn` sous `Level`, compose le titre (niveau d'études - année - matière - thème) et l'initialise. Il émet `level_started(level)`. Sur `Level.validated`, il appelle `GameState.complete_level()` ; sur `validated` ou `exited`, il libère le level et émet `level_closed`.
+- **`LevelManager`** : `start_level(index)` instancie `level.tscn` sous `Level`, compose le titre (niveau d'études - année - matière - thème) et l'initialise. Il émet `level_started(level)`. Sur `Level.validated(level_index, stars)`, il appelle `GameState.complete_level(level_index, stars)` ; sur `validated` ou `exited`, il libère le level et émet `level_closed`. Sur `Level.hint_requested`, il dépense un bonus si le mini-jeu a pu donner un indice ; il tient le bouton d'indice à jour sur `GameState.bonus_count_changed`.
 
 ### 3.2 État : `GameState`
 
@@ -76,8 +76,11 @@ Le seul autoload est **`Sfx`** : sons synthétisés au démarrage, joués avec `
 - **Sélection en cours :** `current_study_level`, `current_school_year`, `current_subject`, `current_level`, et `current_levels` (les levels de la matière).
 - **Progression :** stockée par clé `Vector3i(niveau d'études, année, matière)` ; les nombres de levels sont toujours lus dans `GameData`.
 - **Règles :** le level 0 est débloqué ; un level est débloqué si lui-même ou le précédent est terminé ; `unlock_all_levels()` débloque tout (debug).
+- **Étoiles :** `complete_level(index, stars)` garde la meilleure note du level, lue par `level_stars(index)`.
+- **Îles bonus :** `island_count` vient de `SubjectData.bonus_island_interval` ; `island_levels(i)`, `is_island_reached(i)`, `island_reward(i)` (moyenne d'étoiles arrondie à l'inférieur) et `claim_island(i)`, qui ne donne que les bonus pas encore récupérés.
+- **Bonus :** `bonus_count`, `add_bonus()`, `spend_bonus()`.
 - **Compteurs :** `completed_level_count()` et `level_count()` filtrent par niveau d'études, et facultativement par année et matière ; `total_progress()` alimente la pastille d'étoiles.
-- **Signaux :** `level_unlocked`, `current_level_changed`, `all_levels_unlocked`.
+- **Signaux :** `level_unlocked`, `current_level_changed`, `all_levels_unlocked`, `bonus_count_changed`.
 - **Pas de sauvegarde.**
 
 ### 3.3 Données : hiérarchie du contenu
@@ -86,7 +89,7 @@ Le seul autoload est **`Sfx`** : sons synthétisés au démarrage, joués avec `
 GameData (data/game_data.tres)
 ├─ primary_1 … primary_6           ┐
 ├─ secondary_1 … secondary_6       ├─ SchoolYearData (name, subjects)
-├─ quadrimester_1 … quadrimester_6 ┘     └─ SubjectData (name, color, levels)
+├─ quadrimester_1 … quadrimester_6 ┘     └─ SubjectData (name, color, levels, bonus_island_interval)
 └─ credits (CreditsData)                      └─ LevelData (mini_game)
                                                    └─ MiniGameData (theme_title)
                                                         ├─ CrosswordData
@@ -124,7 +127,7 @@ MenuStartUI ──play──► MenuStudyLevelsUI ──► MenuSchoolYearsUI �
 
 - **Niveaux d'études et années :** les entrées (`choice_entry_ui.tscn` : bouton, jauge, « Bientôt disponible ») sont posées dans les prefabs ; leurs libellés, couleurs et icônes se règlent dans l'éditeur.
 - **Matières :** une entrée par matière est instanciée depuis `choice_entry_ui.tscn`.
-- **Grille des levels :** `LevelPath` dispose les `level_node.tscn` en serpent entre deux châteaux et anime le déblocage du level suivant.
+- **Grille des levels :** le prefab `level_map/level_map.tscn` (`LevelMap`) contient le `SubViewport` 3D (caméra, soleil, ciel et brouillard réglables dans l'éditeur). Le code y construit les îles `LowPoly`, les chemins de pierres et les îles bonus avec château, et fait suivre à chaque île un marqueur 2D (`level_marker.tscn` : numéro, étoiles, type de mini-jeu ; `bonus_island_marker.tscn` : indices à récupérer). Glisser ou la molette déplacent la caméra ; un clic court touche le marqueur le plus proche. `MenuLevelsUI` anime le déblocage et donne les bonus d'une île touchée.
 - **Lancement d'un level :** `MenuLevelsUI` émet `level_selected` (ou secoue le cadenas si le level est verrouillé) ; `GameUI` sélectionne le level et émet `level_requested`.
 
 ### 4.2 Écran de level : `Level`
@@ -133,7 +136,9 @@ MenuStartUI ──play──► MenuStudyLevelsUI ──► MenuSchoolYearsUI �
 
 - **Le mini-jeu :** il demande le prefab au registre `MiniGamePrefabs`, l'instancie et appelle `initialize(data)`.
 - **La progression :** il anime la jauge sur `progress_changed`.
-- **La fin :** sur `completed`, il affiche le bandeau « BRAVO ! » puis le bouton **Valider**, et émet `validation_available`. Valider émet `validated(level_index)` ; le retour émet `exited`.
+- **Les étoiles :** `stars` vaut `max_stars - erreurs × stars_lost_per_mistake`, au moins `min_stars` (réglages de `level.tscn`) ; `StarRating` les affiche.
+- **Les indices :** le bouton ampoule émet `hint_requested` ; `use_hint()` délègue au mini-jeu.
+- **La fin :** sur `completed`, il affiche le bandeau « BRAVO ! » avec les étoiles, puis le bouton **Valider**, et émet `validation_available`. Valider émet `validated(level_index, stars)` ; le retour émet `exited`.
 
 ### 4.3 Contrat d'un mini-jeu
 
@@ -142,8 +147,12 @@ Chaque interface hérite de la classe abstraite [`MiniGameUI`](../scripts/ui/min
 ```gdscript
 signal completed
 signal progress_changed(completed_count: int, total_count: int)
+signal mistake_made(mistake_count: int)
 @abstract func initialize(mini_game_data: MiniGameData) -> void
+@abstract func use_hint() -> bool
 ```
+
+Une erreur s'enregistre avec `_make_mistake()`. `use_hint()` renvoie `false` quand il n'y a plus rien à révéler.
 
 Le registre [`mini_game_prefabs.tres`](../content/prefabs/ui/mini_games/mini_game_prefabs.tres) associe chaque script de données à son prefab.
 
@@ -157,7 +166,7 @@ Le registre [`mini_game_prefabs.tres`](../content/prefabs/ui/mini_games/mini_gam
 
 **Pour ajouter un mini-jeu :**
 1. Créer une sous-classe de `MiniGameData` (avec `get_kind_name()` et `get_kind_id()`).
-2. Créer une interface qui hérite de `MiniGameUI`, et son prefab.
+2. Créer une interface qui hérite de `MiniGameUI` (avec `use_hint()` et des appels à `_make_mistake()`), et son prefab.
 3. Ajouter l'association script de données → prefab dans `mini_game_prefabs.tres`.
 4. Facultatif : écrire un `MiniGameCheat` et l'ajouter à `DebugHelper._make_cheat()`.
 

@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://blc1dccgb315t"]
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://72vc6amwrcfy"]
 
-[ext_resource type="Resource" uid="uid://bjg4p8503t224" path="res://data/secondaire/s4/chimie/07_memo_les_especes_chimiques.tres" id="1_gmj8j"]
+[ext_resource type="Resource" uid="uid://dqu3oi647dixj" path="res://data/secondaire/s4/chimie/07_memo_les_especes_chimiques.tres" id="1_gmj8j"]
 [ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="2_tn4h2"]
 
 [resource]

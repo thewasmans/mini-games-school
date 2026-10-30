@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://crk52gj0s80sw"]
+
+[ext_resource type="Script" uid="uid://d12jxrx0uuunw" path="res://scripts/mini_games/crypto/crypto_data.gd" id="1_klroi"]
+[ext_resource type="Script" uid="uid://c4ybdhwj2y7o2" path="res://scripts/mini_games/crypto/crypto_sentence.gd" id="2_sr1h0"]
+
+[sub_resource type="Resource" id="Resource_j30vn"]
+script = ExtResource("2_sr1h0")
+sentence = "La biodiversité a connu plusieurs crises majeures."
+
+[sub_resource type="Resource" id="Resource_ox3lk"]
+script = ExtResource("2_sr1h0")
+sentence = "Les extinctions massives éliminent de nombreuses espèces."
+
+[sub_resource type="Resource" id="Resource_injp5"]
+script = ExtResource("2_sr1h0")
+sentence = "Les arbres phylogénétiques traduisent les parentés."
+
+[sub_resource type="Resource" id="Resource_pg8da"]
+script = ExtResource("2_sr1h0")
+sentence = "Un ancêtre commun hypothétique possède des caractères partagés."
+
+[sub_resource type="Resource" id="Resource_adbs6"]
+script = ExtResource("2_sr1h0")
+sentence = "Les innovations évolutives proviennent de mutations."
+
+[resource]
+script = ExtResource("1_klroi")
+sentences = Array[ExtResource("2_sr1h0")]([SubResource("Resource_j30vn"), SubResource("Resource_ox3lk"), SubResource("Resource_injp5"), SubResource("Resource_pg8da"), SubResource("Resource_adbs6")])
+hidden_ratio = 0.25
+theme_title = "L'évolution"

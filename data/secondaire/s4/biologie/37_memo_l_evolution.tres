@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://dc40084lmceob"]
+
+[ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/mini_games/memo/memo_question.gd" id="1_mtr5y"]
+[ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/mini_games/memo/memo_data.gd" id="2_gid4q"]
+
+[sub_resource type="Resource" id="Resource_mjc4s"]
+script = ExtResource("1_mtr5y")
+question = "Qu'est-ce que les structures homologues ?"
+answers = PackedStringArray("Une fonction différente d\'origine évolutive différente.", "Une fonction différente d\'origine évolutive identique.", "Une fonction similaire d\'origine évolutive différente.", "Une fonction perdue.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_5mjjt"]
+script = ExtResource("1_mtr5y")
+question = "En quoi consiste l'homoplasie ?"
+answers = PackedStringArray("Caractère du même ancêtre.", "Caractère partagé par plusieurs espèces qui n\'est pas hérité d\'un ancêtre commun.", "Caractère venant d\'une bactérie.", "Méthode en phylogénie.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_it412"]
+script = ExtResource("1_mtr5y")
+question = "Qu'est-ce que la convergence évolutive ?"
+answers = PackedStringArray("C\'est la même chose que les structures analogues.", "C\'est un synonyme de la théorie de l\'évolution.", "C\'est le principe de la loi de l\'usage.", "Une méthode de coévolution.")
+
+[sub_resource type="Resource" id="Resource_qrc3v"]
+script = ExtResource("1_mtr5y")
+question = "Pourquoi parlons-nous de chaînon manquant en biologie évolutive ?"
+answers = PackedStringArray("Car la chaîne se casse toujours lors de l\'évolution.", "Car il existe toujours une absence de fonction dans l\'évolution.", "Car il existe toujours des formes intermédiaires entre des espèces.", "Car peu d\'espèces survivent.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_s4c0c"]
+script = ExtResource("1_mtr5y")
+question = "Quelle hypothèse peut-être défendue à propos de l'évolution des chiens domestiques ?"
+answers = PackedStringArray("Ce sont des dauphins domestiqués.", "Ce sont des loups domestiqués.", "Ils n\'ont aucun ancêtre commun.", "C\'est l\'homme qui a fabriqué le chien.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_c7mic"]
+script = ExtResource("1_mtr5y")
+question = "Quelle solution a été utilisée pour lutter contre la prolifération des lapins en Australie ?"
+answers = PackedStringArray("Introduire des moustiques.", "Introduire des renards.", "Introduire des guépards.", "Introduire des mouches.")
+correct_index = 1
+
+[resource]
+script = ExtResource("2_gid4q")
+questions = Array[ExtResource("1_mtr5y")]([SubResource("Resource_mjc4s"), SubResource("Resource_5mjjt"), SubResource("Resource_it412"), SubResource("Resource_qrc3v"), SubResource("Resource_s4c0c"), SubResource("Resource_c7mic")])
+theme_title = "L'évolution"

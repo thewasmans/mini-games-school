@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://divqwor08jdil"]
+
+[ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/mini_games/memo/memo_question.gd" id="1_bjmr8"]
+[ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/mini_games/memo/memo_data.gd" id="2_52ay8"]
+
+[sub_resource type="Resource" id="Resource_bvmt1"]
+script = ExtResource("1_bjmr8")
+question = "Quel est le rôle de la mitochondrie ?"
+answers = PackedStringArray("Stocker des réserves.", "Produire de l\'énergie.", "Stocker l\'ADN nucléaire.", "Rôle de photosynthèse.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_00wv8"]
+script = ExtResource("1_bjmr8")
+question = "Quel organite n’est pas présent dans la cellule animale ?"
+answers = PackedStringArray("Le noyau.", "La mitochondrie.", "Le chloroplaste.", "L\'appareil de golgi.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_ahaig"]
+script = ExtResource("1_bjmr8")
+question = "Quel élément donne la couleur verte aux chloroplastes ?"
+answers = PackedStringArray("Les carotènes.", "L\'hémocyanine.", "L\'hémoglobine.", "La chlorophylle.")
+correct_index = 3
+
+[resource]
+script = ExtResource("2_52ay8")
+questions = Array[ExtResource("1_bjmr8")]([SubResource("Resource_bvmt1"), SubResource("Resource_00wv8"), SubResource("Resource_ahaig")])
+theme_title = "La cellule"

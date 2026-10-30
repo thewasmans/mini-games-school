@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://mms56jdgjv1h"]
+
+[ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/mini_games/memo/memo_question.gd" id="1_18mdq"]
+[ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/mini_games/memo/memo_data.gd" id="2_hy3n3"]
+
+[sub_resource type="Resource" id="Resource_l4rxf"]
+script = ExtResource("1_18mdq")
+question = "Comment se nomme un ion formé à partir de plusieurs atomes ?"
+answers = PackedStringArray("Polyatomique.", "Monoatomique.", "Monosaccharide.", "Polysaccharide.")
+
+[sub_resource type="Resource" id="Resource_5e6c7"]
+script = ExtResource("1_18mdq")
+question = "Qu'est-ce qu'une réaction de précipitation ?"
+answers = PackedStringArray("Réaction où un dépôt se forme..", "Réaction où tout est dissout..", "Lorsque le produit est très soluble..", "Toutes ces phrases sont justes..")
+
+[sub_resource type="Resource" id="Resource_s6s42"]
+script = ExtResource("1_18mdq")
+question = "Comment se nomme un ion impliqué dans la réaction de précipitation ?"
+answers = PackedStringArray("Spectateur.", "Acteur.", "Formateur.", "Pondérateur.")
+correct_index = 1
+
+[resource]
+script = ExtResource("2_hy3n3")
+questions = Array[ExtResource("1_18mdq")]([SubResource("Resource_l4rxf"), SubResource("Resource_5e6c7"), SubResource("Resource_s6s42")])
+theme_title = "Les espèces chimiques"

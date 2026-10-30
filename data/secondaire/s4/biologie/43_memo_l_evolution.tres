@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bvs64fm80jq6w"]
+
+[ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/mini_games/memo/memo_question.gd" id="1_mruso"]
+[ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/mini_games/memo/memo_data.gd" id="2_m1qmc"]
+
+[sub_resource type="Resource" id="Resource_1n1j3"]
+script = ExtResource("1_mruso")
+question = "Comment se nomme l'arbre scientifique permettant de classer les espèces selon leur degré d'apparenté ?"
+answers = PackedStringArray("Phyloharmonique.", "Phylotechnique.", "Phylomorphologique.", "Phylogénétique.")
+correct_index = 3
+
+[sub_resource type="Resource" id="Resource_1ou1l"]
+script = ExtResource("1_mruso")
+question = "En quoi consiste la sélection naturelle ?"
+answers = PackedStringArray("Théorie liée à l\'usage.", "Mécanisme expliquant l\'évolution des espèces.", "Loi du plus fort.", "Loi de la reproduction.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_6g4s3"]
+script = ExtResource("1_mruso")
+question = "Que sait-on à propos des dinosaures ?"
+answers = PackedStringArray("Les descendants sont les oiseaux.", "Ce sont des mammifères.", "Ils ont vécu il y a 65 millions d\'années.", "Toutes ces phrases sont justes.")
+
+[sub_resource type="Resource" id="Resource_wt4nt"]
+script = ExtResource("1_mruso")
+question = "En quoi consiste le biomimetisme ?"
+answers = PackedStringArray("Imiter des concepts en étudiant le monde du vivant.", "Développer des stratégies de survie.", "Mimer des comportements spécifiques.", "Utiliser la nature pour son bien-être.")
+
+[sub_resource type="Resource" id="Resource_qf8xw"]
+script = ExtResource("1_mruso")
+question = "Quelle est la définition exacte d'une espèce ?"
+answers = PackedStringArray("C\'est un individu stérile.", "C\'est une population.", "Il n\'y a pas une définition exacte.", "C\'est une communauté.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_l6n5w"]
+script = ExtResource("1_mruso")
+question = "Qu'est-ce que la spéciation ?"
+answers = PackedStringArray("Le processus d\'extinction.", "Le processus de reproduction.", "Le processus permettant à de nouvelle espèces d\'apparaître.", "L\'étranglement d\'une population.")
+correct_index = 2
+
+[resource]
+script = ExtResource("2_m1qmc")
+questions = Array[ExtResource("1_mruso")]([SubResource("Resource_1n1j3"), SubResource("Resource_1ou1l"), SubResource("Resource_6g4s3"), SubResource("Resource_wt4nt"), SubResource("Resource_qf8xw"), SubResource("Resource_l6n5w")])
+theme_title = "L'évolution"

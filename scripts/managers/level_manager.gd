@@ -10,17 +10,22 @@ signal level_closed
 var _level: Level
 
 
+func initialize(game_manager: GameManager) -> void:
+	super.initialize(game_manager)
+	game_state.bonus_count_changed.connect(_on_bonus_count_changed)
+
+
 func start_level(level_index: int) -> void:
 	var level_data := game_state.current_levels[level_index]
 	_level = level_prefab.instantiate() as Level
 	level_root.add_child(_level)
 	_level.initialize(level_index, level_data, _title_of(level_data))
 	_level.top_bar.set_progress(game_state.total_progress())
+	_level.set_bonus_count(game_state.bonus_count)
 	_level.validated.connect(_on_level_validated)
 	_level.exited.connect(_close_level)
+	_level.hint_requested.connect(_on_hint_requested)
 	level_started.emit(_level)
-	
-	_game_manager._manager_of_type(GameUIManager)
 
 
 func _title_of(level_data: LevelData) -> String:
@@ -34,9 +39,19 @@ func _title_of(level_data: LevelData) -> String:
 	return " - ".join(title_parts)
 
 
-func _on_level_validated(level_index: int) -> void:
-	game_state.complete_level(level_index)
+func _on_level_validated(level_index: int, stars: float) -> void:
+	game_state.complete_level(level_index, stars)
 	_close_level()
+
+
+func _on_hint_requested() -> void:
+	if game_state.bonus_count > 0 and _level.use_hint():
+		game_state.spend_bonus()
+
+
+func _on_bonus_count_changed(bonus_count: int) -> void:
+	if _level != null:
+		_level.set_bonus_count(bonus_count)
 
 
 func _close_level() -> void:

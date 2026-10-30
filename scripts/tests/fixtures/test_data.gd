@@ -45,6 +45,23 @@ static func game_state(level_counts_per_subject: Array[int]) -> GameState:
 	return state
 
 
+static func game_state_with_islands(level_count: int, bonus_island_interval: int) -> GameState:
+	var state := game_state([level_count])
+	state._current_subject_data().bonus_island_interval = bonus_island_interval
+	return state
+
+
+static func crypto(sentences: Array[String], hidden_ratio := 0.3) -> CryptoData:
+	var crypto_data := CryptoData.new()
+	crypto_data.theme_title = "Crypto de test"
+	crypto_data.hidden_ratio = hidden_ratio
+	for text in sentences:
+		var sentence := CryptoSentence.new()
+		sentence.sentence = text
+		crypto_data.sentences.append(sentence)
+	return crypto_data
+
+
 static func crossword(words: Array[String]) -> CrosswordData:
 	var crossword_data := CrosswordData.new()
 	for word in words:

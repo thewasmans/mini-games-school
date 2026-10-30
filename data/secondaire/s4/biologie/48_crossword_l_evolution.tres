@@ -1,0 +1,52 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bctpbsuotwqwb"]
+
+[ext_resource type="Script" uid="uid://6pk47pd5gtfx" path="res://scripts/mini_games/crossword/crossword_entry.gd" id="1_uub04"]
+[ext_resource type="Script" uid="uid://bu7s316sbdqky" path="res://scripts/mini_games/crossword/crossword_data.gd" id="2_d2i78"]
+
+[sub_resource type="Resource" id="Resource_sldnq"]
+script = ExtResource("1_uub04")
+word = "VARIABILITE"
+clue = "Caractère de ce qui peut être changé, propriété de ce qui est instable dans une population."
+answer = "VARIABILITE"
+x = 1
+y = 3
+horizontal = false
+placed = true
+number = 2
+
+[sub_resource type="Resource" id="Resource_0l38d"]
+script = ExtResource("1_uub04")
+word = "CONVERGENCE"
+clue = "Acquisition de structures similaires au sein de lignées différentes, comme les ailes."
+answer = "CONVERGENCE"
+x = 8
+horizontal = false
+placed = true
+number = 1
+
+[sub_resource type="Resource" id="Resource_bi22x"]
+script = ExtResource("1_uub04")
+word = "PARAPHYLETIQUE"
+clue = "Taxon comprenant une espèce et une partie de ses descendants."
+answer = "PARAPHYLETIQUE"
+y = 4
+placed = true
+number = 4
+
+[sub_resource type="Resource" id="Resource_n8v0n"]
+script = ExtResource("1_uub04")
+word = "RACE"
+clue = "Population animale résultant, par sélection, de la subdivision d'une même espèce pour des critères spécifiques."
+answer = "RACE"
+x = 3
+y = 3
+horizontal = false
+placed = true
+number = 3
+
+[resource]
+script = ExtResource("2_d2i78")
+entries = Array[ExtResource("1_uub04")]([SubResource("Resource_sldnq"), SubResource("Resource_0l38d"), SubResource("Resource_bi22x"), SubResource("Resource_n8v0n")])
+grid_width = 14
+grid_height = 14
+theme_title = "L'évolution"

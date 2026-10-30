@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://u15e148geoi3"]
+
+[ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/mini_games/memo/memo_question.gd" id="1_f48sr"]
+[ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/mini_games/memo/memo_data.gd" id="2_drp7h"]
+
+[sub_resource type="Resource" id="Resource_5wejh"]
+script = ExtResource("1_f48sr")
+question = "Quel est l'organite végétal qui stocke la matière que la cellule n'utilise pas immédiatement ?"
+answers = PackedStringArray("La vacuole.", "Le noyau.", "Le réticulum endoplasmique.", "Le cytoplasme.")
+
+[sub_resource type="Resource" id="Resource_6omjr"]
+script = ExtResource("1_f48sr")
+question = "Quel élément est gélatineux et baigne les autres organites cellulaires ?"
+answers = PackedStringArray("La mitochondrie.", "Le cytoplasme.", "Le noyau.", "La paroi cellulaire.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_5cqe1"]
+script = ExtResource("1_f48sr")
+question = "Quel organite est le centre de contrôle de la cellule ?"
+answers = PackedStringArray("Les ribosomes.", "Le centriole.", "L\'ARN.", "Le noyau.")
+correct_index = 3
+
+[resource]
+script = ExtResource("2_drp7h")
+questions = Array[ExtResource("1_f48sr")]([SubResource("Resource_5wejh"), SubResource("Resource_6omjr"), SubResource("Resource_5cqe1")])
+theme_title = "La cellule"

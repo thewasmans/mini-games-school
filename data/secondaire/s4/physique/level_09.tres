@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://bqud6p24ghk2c"]
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://bcqchhq6s1g65"]
 
-[ext_resource type="Resource" uid="uid://dov2xosrinnhd" path="res://data/secondaire/s4/physique/09_memo_travail_et_puissance.tres" id="1_ljpqf"]
+[ext_resource type="Resource" uid="uid://d23brrlogrpbo" path="res://data/secondaire/s4/physique/09_memo_la_magie_de_l_image.tres" id="1_ljpqf"]
 [ext_resource type="Script" uid="uid://bylnpw15rlwnc" path="res://scripts/data/level_data.gd" id="2_h25o4"]
 
 [resource]

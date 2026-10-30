@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://cb4khmwlkv5r3"]
+
+[ext_resource type="Script" uid="uid://bdi8yu82s8f8s" path="res://scripts/mini_games/memo/memo_question.gd" id="1_gxaoe"]
+[ext_resource type="Script" uid="uid://q1fl04ueorua" path="res://scripts/mini_games/memo/memo_data.gd" id="2_3fqo3"]
+
+[sub_resource type="Resource" id="Resource_a1412"]
+script = ExtResource("1_gxaoe")
+question = "Qu'est-ce qu'une poulie ?"
+answers = PackedStringArray("Système de roues dentées qui transmettent un mouvement.", "C\'est une roue qui pivote autour d\'un essieu, un point d\'appui.", "Barre qui permet de soulever des charges lourdes.", "C\'est un problème dans le moteur.")
+correct_index = 1
+
+[sub_resource type="Resource" id="Resource_k8dq0"]
+script = ExtResource("1_gxaoe")
+question = "Qu'est-ce qu'un engrenage ?"
+answers = PackedStringArray("Système de roues dentées qui transmettent un mouvement.", "C\'est une roue qui pivote autour d\'un essieu, un point d\'appui.", "Barre qui permet de soulever des charges lourdes.", "C\'est un problème dans le moteur.")
+
+[sub_resource type="Resource" id="Resource_s4o6a"]
+script = ExtResource("1_gxaoe")
+question = "Qu'est-ce qu'un levier ?"
+answers = PackedStringArray("Système de roues dentées qui transmettent un mouvement.", "C\'est une roue qui pivote autour d\'un essieu, un point d\'appui.", "Barre qui permet de soulever des charges lourdes.", "C\'est un problème dans le moteur.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_wuyi6"]
+script = ExtResource("1_gxaoe")
+question = "En quoi consiste l'énergie potentielle ?"
+answers = PackedStringArray("La somme des énergies cinétique et potentielle.", "L\'énergie liée à un mouvement d\'un corps.", "L\'énergie liée à la position d\'un corps.", "L\'énergie liée à la température.")
+correct_index = 2
+
+[sub_resource type="Resource" id="Resource_njluy"]
+script = ExtResource("1_gxaoe")
+question = "En quoi consiste l'énergie mécanique ?"
+answers = PackedStringArray("La somme des énergies cinétique et potentielle.", "L\'énergie liée à un mouvement d\'un corps.", "L\'énergie liée à la position d\'un corps.", "L\'énergie liée à la température.")
+
+[sub_resource type="Resource" id="Resource_v6rh8"]
+script = ExtResource("1_gxaoe")
+question = "En quoi consiste l'énergie cinétique ?"
+answers = PackedStringArray("La somme des énergies cinétique et potentielle.", "L\'énergie liée à un mouvement d\'un corps.", "L\'énergie liée à la position d\'un corps.", "L\'énergie liée à la température.")
+correct_index = 1
+
+[resource]
+script = ExtResource("2_3fqo3")
+questions = Array[ExtResource("1_gxaoe")]([SubResource("Resource_a1412"), SubResource("Resource_k8dq0"), SubResource("Resource_s4o6a"), SubResource("Resource_wuyi6"), SubResource("Resource_njluy"), SubResource("Resource_v6rh8")])
+theme_title = "Travail et puissance"

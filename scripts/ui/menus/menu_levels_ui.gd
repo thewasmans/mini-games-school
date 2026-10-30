@@ -5,15 +5,20 @@ signal level_selected(level_index: int)
 
 @export var title_banner: TitleBanner
 @export var info_pill: Pill
-@export var scroll: ScrollContainer
-@export var level_path: LevelPath
+@export var bonus_pill: Pill
+@export var level_map: LevelMap
 
 var pending_unlock := -1
 
 
 func _ready() -> void:
-	scroll.resized.connect(func() -> void: level_path.fit_height(scroll.size.y))
-	level_path.level_pressed.connect(_on_level_pressed)
+	level_map.level_pressed.connect(_on_level_pressed)
+	level_map.island_pressed.connect(_on_island_pressed)
+
+
+func initialize(game_manager_: GameManager) -> void:
+	super.initialize(game_manager_)
+	game_manager.game_state.bonus_count_changed.connect(func(_bonus_count: int) -> void: _refresh_bonus_pill())
 
 
 func _refresh() -> void:
@@ -25,26 +30,47 @@ func _refresh() -> void:
 	title_banner.text = game_data.get_subject(study_level, school_year, game_state.current_subject).name
 	info_pill.text = "%s - %s   •   %d / %d" % [GameData.STUDY_NAMES[study_level], game_data.get_year_name(study_level, school_year),
 		game_state.completed_level_count(study_level, school_year, game_state.current_subject), levels.size()]
-	level_path.build(levels, game_state)
+	_refresh_bonus_pill()
+	level_map.build(levels, game_state)
 	var unlock_index := pending_unlock
 	pending_unlock = -1
 	if unlock_index >= 0:
-		level_path.prepare_unlock(unlock_index)
-	await get_tree().process_frame
-	await get_tree().process_frame
+		level_map.prepare_unlock(unlock_index)
 	if levels.is_empty():
 		return
-	var focus := clampi(unlock_index if unlock_index >= 0 else game_state.current_level, 0, levels.size() - 1)
-	scroll.scroll_vertical = int(level_path.node_center(focus).y - scroll.size.y / 2)
+	level_map.focus_level(clampi(unlock_index if unlock_index >= 0 else game_state.current_level, 0, levels.size() - 1), true)
 	if unlock_index >= 0:
 		await get_tree().create_timer(0.3).timeout
-		level_path.play_unlock(unlock_index)
+		level_map.play_unlock(unlock_index)
+
+
+func _refresh_bonus_pill() -> void:
+	var bonus_count := game_manager.game_state.bonus_count
+	bonus_pill.text = "%d indice%s" % [bonus_count, "s" if bonus_count > 1 else ""]
 
 
 func _on_level_pressed(level_index: int) -> void:
 	if not game_manager.game_state.is_level_unlocked(level_index):
 		Sfx.play("locked")
-		level_path.nodes[level_index].shake()
+		level_map.level_markers[level_index].shake()
 		return
 	Sfx.play("pop")
 	level_selected.emit(level_index)
+
+
+func _on_island_pressed(island_index: int) -> void:
+	var game_state := game_manager.game_state
+	if not game_state.is_island_reached(island_index):
+		Sfx.play("locked")
+		level_map.island_markers[island_index].shake()
+		return
+	var gained := game_state.claim_island(island_index)
+	if gained <= 0:
+		Sfx.play("click")
+		level_map.island_markers[island_index].shake()
+		return
+	Sfx.play("unlock")
+	level_map.celebrate_island(island_index, gained)
+	level_map.refresh(game_state)
+	_refresh_bonus_pill()
+	UIFeedback.punch(bonus_pill, 0.2, 0.5)
