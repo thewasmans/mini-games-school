@@ -48,7 +48,7 @@ func test_wrong_answer_disables_the_choice_without_progress() -> void:
 	memo.answer_buttons[2].pressed.emit()
 	assert_bool(memo.answer_buttons[2].disabled).is_true()
 	await await_millis(300)
-	assert_float(level.progress_bar.value).is_equal(0.0)
+	assert_float(level.star_gauge.bar.value).is_equal(0.0)
 
 
 func test_back_button_emits_exited() -> void:
@@ -59,21 +59,67 @@ func test_back_button_emits_exited() -> void:
 	await assert_signal(level).is_emitted("exited")
 
 
-func test_each_mistake_costs_a_tenth_of_a_star() -> void:
+func test_a_mistake_is_not_punished_until_the_answer_is_found() -> void:
 	var level := _start_level(0, TestData.memo(1))
 	var memo := level.mini_game_ui as MemoUI
 	memo.answer_buttons[1].pressed.emit()
 	memo.answer_buttons[2].pressed.emit()
 	assert_int(memo.mistake_count).is_equal(2)
-	assert_float(level.stars).is_equal_approx(2.8, 0.001)
-	assert_float(level.star_rating.value).is_equal_approx(2.8, 0.001)
+	assert_float(level.score_ratio).is_equal(0.0)
+	memo.answer_buttons[0].pressed.emit()
+	assert_int(level.score).is_equal(level.points_by_mistakes[2])
+	assert_int(level.max_score).is_equal(level.points_by_mistakes[0])
+	assert_float(level.stars).is_equal(0.0)
 
 
-func test_stars_never_drop_below_one() -> void:
+func test_too_many_mistakes_earn_no_star() -> void:
 	var level := _start_level(0, TestData.memo(1))
-	for mistake in 40:
-		level.mini_game_ui._make_mistake()
+	var memo := level.mini_game_ui as MemoUI
+	for answer_index in [1, 2, 3, 0]:
+		memo.answer_buttons[answer_index].pressed.emit()
+	assert_int(level.score).is_equal(0)
+	assert_float(level.stars).is_equal(0.0)
+
+
+func test_points_drop_with_each_mistake_on_the_same_answer() -> void:
+	var level := _start_level(0, TestData.memo(1))
+	assert_int(level.points_for(0, false)).is_equal(10)
+	assert_int(level.points_for(1, false)).is_equal(5)
+	assert_int(level.points_for(2, false)).is_equal(2)
+	assert_int(level.points_for(3, false)).is_equal(0)
+	assert_int(level.points_for(8, false)).is_equal(0)
+	assert_int(level.points_for(0, true)).is_equal(level.hint_points)
+	assert_int(level.points_for(2, true)).is_equal(2)
+
+
+func test_the_gauge_fills_with_good_answers_and_reaches_the_stars() -> void:
+	var level := _start_level(0, TestData.memo(2))
+	var memo := level.mini_game_ui as MemoUI
+	assert_int(level.max_score).is_equal(2 * level.points_by_mistakes[0])
+	assert_float(level.star_gauge.bar.value).is_equal(0.0)
+	assert_int(level.star_gauge.reached_count).is_equal(0)
+	memo.answer_buttons[0].pressed.emit()
+	assert_float(level.star_gauge.bar.value).is_equal_approx(0.5, 0.001)
 	assert_float(level.stars).is_equal(1.0)
+	await await_millis(1000)
+	assert_int(level.star_gauge.reached_count).is_equal(1)
+
+
+func test_an_answer_found_with_a_hint_earns_hint_points() -> void:
+	var level := _start_level(0, TestData.memo(1))
+	var memo := level.mini_game_ui as MemoUI
+	assert_bool(level.use_hint()).is_true()
+	memo.answer_buttons[0].pressed.emit()
+	assert_int(level.score).is_equal(level.hint_points)
+	assert_float(level.stars).is_equal(1.0)
+
+
+func test_stars_follow_the_score_thresholds() -> void:
+	var level := _start_level(0, TestData.memo(1))
+	level.mini_game_ui.answer_total = 10
+	for case: Array in [[100, 3.0], [90, 3.0], [89, 2.0], [60, 2.0], [59, 1.0], [30, 1.0], [29, 0.0], [0, 0.0]]:
+		level.score = case[0]
+		assert_float(level.stars).is_equal(case[1])
 
 
 func test_validating_after_mistakes_emits_the_stars() -> void:
@@ -86,7 +132,7 @@ func test_validating_after_mistakes_emits_the_stars() -> void:
 	await assert_signal(level).wait_until(TIMEOUT_MS).is_emitted("validation_available")
 	level.validate_button.pressed.emit()
 	@warning_ignore("redundant_await")
-	await assert_signal(level).is_emitted("validated", 2, 2.9)
+	await assert_signal(level).is_emitted("validated", 2, 1.0)
 
 
 func test_hint_button_is_disabled_without_bonus() -> void:
@@ -122,6 +168,7 @@ func test_crypto_hint_reveals_a_letter_and_can_solve_the_sentence() -> void:
 		assert_bool(level.use_hint()).is_true()
 	assert_bool(crypto._solved).is_true()
 	assert_int(crypto.mistake_count).is_equal(0)
+	assert_int(level.score).is_equal(crypto._hidden.size() * level.hint_points)
 
 
 func test_crossword_hint_reveals_a_letter_of_the_selected_word() -> void:

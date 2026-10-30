@@ -11,6 +11,10 @@ var _shown := 0.0
 var _t := 0.0
 var _tween: Tween
 
+var shown_value: float:
+	get:
+		return _shown
+
 
 func _ready() -> void:
 	mouse_filter = MOUSE_FILTER_IGNORE

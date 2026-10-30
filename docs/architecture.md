@@ -136,8 +136,7 @@ MenuStartUI ──play──► MenuStudyLevelsUI ──► MenuSchoolYearsUI �
 [level.gd](../scripts/level/level.gd), dans `level/level.tscn`, ne connaît ni le `GameManager` ni le debug :
 
 - **Le mini-jeu :** il demande le prefab au registre `MiniGamePrefabs`, l'instancie et appelle `initialize(data)`.
-- **La progression :** il anime la jauge sur `progress_changed`.
-- **Les étoiles :** `stars` vaut `max_stars - erreurs × stars_lost_per_mistake`, au moins `min_stars` (réglages de `level.tscn`) ; `StarRating` les affiche.
+- **Les étoiles :** chaque `answer_found(mistake_count, hinted)` ajoute `points_for(mistake_count, hinted)` à `score` : `points_by_mistakes` donne 10 sans erreur, 5 après 1 erreur, 2 après 2, 0 ensuite, et un indice plafonne à `hint_points` (4). `max_score` vaut `answer_total × points_by_mistakes[0]` (le mini-jeu fixe `answer_total` dans `initialize`). La jauge [`StarGauge`](../content/prefabs/ui/star_gauge.tscn) affiche `score_ratio` et porte une étoile à chaque palier de `star_thresholds()` (`one_star_ratio` 0,3, `two_stars_ratio` 0,6, `three_stars_ratio` 0,9, réglages de `level.tscn`). Une étoile s'allume, avec un son, quand la jauge animée l'atteint (`star_reached`). `stars` (émis par `validated`) compte les paliers atteints, de 0 à 3 ; le bandeau de victoire montre les points.
 - **Les indices :** le bouton ampoule émet `hint_requested` ; `use_hint()` délègue au mini-jeu.
 - **La fin :** sur `completed`, il affiche le bandeau « BRAVO ! » avec les étoiles, puis le bouton **Valider**, et émet `validation_available`. Valider émet `validated(level_index, stars)` ; le retour émet `exited`.
 
@@ -148,12 +147,13 @@ Chaque interface hérite de la classe abstraite [`MiniGameUI`](../scripts/ui/min
 ```gdscript
 signal completed
 signal progress_changed(completed_count: int, total_count: int)
-signal mistake_made(mistake_count: int)
+signal mistake_made
+signal answer_found(mistake_count: int, hinted: bool)
 @abstract func initialize(mini_game_data: MiniGameData) -> void
 @abstract func use_hint() -> bool
 ```
 
-Une erreur s'enregistre avec `_make_mistake()`. `use_hint()` renvoie `false` quand il n'y a plus rien à révéler.
+Chaque réponse à trouver a une clé (index de question, index de mot, position de la lettre cachée). Une erreur s'enregistre avec `_make_mistake(clé)`, un indice avec `_mark_hinted(clé)`, et une réponse trouvée avec `_answer_found(clé)`, qui émet `answer_found` avec le nombre d'erreurs faites sur cette réponse et l'usage d'un indice. `use_hint()` renvoie `false` quand il n'y a plus rien à révéler.
 
 Le registre [`mini_game_prefabs.tres`](../content/prefabs/ui/mini_games/mini_game_prefabs.tres) associe chaque script de données à son prefab.
 
@@ -167,7 +167,7 @@ Le registre [`mini_game_prefabs.tres`](../content/prefabs/ui/mini_games/mini_gam
 
 **Pour ajouter un mini-jeu :**
 1. Créer une sous-classe de `MiniGameData` (avec `get_kind_name()` et `get_kind_id()`).
-2. Créer une interface qui hérite de `MiniGameUI` (avec `use_hint()` et des appels à `_make_mistake()`), et son prefab.
+2. Créer une interface qui hérite de `MiniGameUI` (avec `use_hint()` et des appels à `_make_mistake()`, `_mark_hinted()` et `_answer_found()`), et son prefab.
 3. Ajouter l'association script de données → prefab dans `mini_game_prefabs.tres`.
 4. Facultatif : écrire un `MiniGameCheat` et l'ajouter à `DebugHelper._make_cheat()`.
 

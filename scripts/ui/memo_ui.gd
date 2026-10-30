@@ -35,6 +35,7 @@ func _ready() -> void:
 
 func initialize(mini_game_data: MiniGameData) -> void:
 	_data = mini_game_data as MemoData
+	answer_total = _data.questions.size()
 	progress_changed.emit(0, _data.questions.size())
 	_show_question(0)
 
@@ -96,6 +97,7 @@ func use_hint() -> bool:
 	var eliminated := wrong_buttons.pick_random() as JuicyButton
 	eliminated.color = eliminated_color
 	eliminated.disabled = true
+	_mark_hinted(_index)
 	UIFeedback.punch(eliminated, 0.12, 0.4)
 	Sfx.play("pop")
 	return true
@@ -111,10 +113,11 @@ func _on_answer(answer_index: int) -> void:
 		button.disabled = true
 		UIFeedback.shake(button)
 		Sfx.play("error")
-		_make_mistake()
+		_make_mistake(_index)
 		return
 
 	_locked = true
+	_answer_found(_index)
 	button.color = right_color
 	button.sparkles = true
 	UIFeedback.punch(button, 0.15, 0.6)

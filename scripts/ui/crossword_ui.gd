@@ -35,6 +35,7 @@ func initialize(mini_game_data: MiniGameData) -> void:
 		CrosswordGenerator.generate(_data)
 	_build_grid()
 	_layout_grid()
+	answer_total = _words.size()
 	progress_changed.emit(0, _words.size())
 	_select_word(_next_open(-1))
 	for p: Vector2i in _cells:
@@ -221,6 +222,7 @@ func use_hint() -> bool:
 		return false
 	var cell: CrosswordCell = _cells[cells[hint_index]]
 	cell.letter = cell.solution
+	_mark_hinted(_selected)
 	_clear_wrong(w)
 	UIFeedback.punch(cell, 0.3, 0.5)
 	Sfx.play("good")
@@ -277,7 +279,7 @@ func _check_word(index: int) -> void:
 			cell.wrong = true
 			cell.shake()
 		Sfx.play("error")
-		_make_mistake()
+		_make_mistake(index)
 		_refresh()
 		return
 	_validate_word(index)
@@ -290,6 +292,7 @@ func _check_word(index: int) -> void:
 func _validate_word(index: int) -> void:
 	var w := _words[index]
 	w.done = true
+	_answer_found(index)
 	var cells: Array[Vector2i] = w.cells
 	for i in cells.size():
 		var cell: CrosswordCell = _cells[cells[i]]

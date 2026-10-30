@@ -24,9 +24,8 @@ Menu principal ─► Niveau d'études ─► Année ─► Matière ─► Gril
 5. **Grille des levels** : une carte 3D low poly. Chaque level est une île flottante reliée à la suivante par un chemin de pierres, de la maison de départ jusqu'au château d'arrivée. On fait défiler la carte en glissant ou à la molette. Une île verrouillée n'est pas jouable, le level en cours est mis en évidence, et un level terminé affiche ses étoiles. Entre certains levels, une **île bonus** avec un château donne des indices (voir la section 3).
 6. **Level** :
    - **Titre :** il rappelle le niveau d'études, l'année, la matière et le thème, par exemple « Secondaire - S4 - Biologie - La cellule ».
-   - **Progression :** une barre commune à tous les mini-jeux la suit.
-   - **Étoiles :** trois étoiles à côté de la barre. Chaque erreur fait perdre un dixième d'étoile, sans descendre sous une étoile.
-   - **Indice :** le bouton ampoule dépense un indice. Il révèle une lettre (mots croisés, cryptogramme) ou écarte une mauvaise réponse (quiz). Un indice ne compte pas comme une erreur.
+   - **Jauge d'étoiles :** une jauge qui monte à chaque bonne réponse, avec trois étoiles posées dessus. Une étoile s'allume quand la jauge l'atteint.
+   - **Indice :** le bouton ampoule dépense un indice. Il révèle une lettre (mots croisés, cryptogramme) ou écarte une mauvaise réponse (quiz). Une réponse obtenue avec un indice rapporte moins de points, mais ne compte pas comme une erreur.
    - **Fin :** quand le mini-jeu est réussi, le bouton **Valider** termine le level et ramène à la grille.
    - **Retour :** le bouton retour quitte le level sans le terminer.
 
@@ -73,7 +72,7 @@ La grille s'adapte à la taille de l'écran. Elle est calculée à l'avance dans
 ## 3. Progression
 
 - Dans chaque matière, le premier level est toujours débloqué. Terminer un level débloque le suivant et le sélectionne.
-- **Étoiles :** un level terminé rapporte de 1 à 3 étoiles (3 moins 0,1 par erreur). Rejouer un level ne garde que le meilleur score.
+- **Points et étoiles :** chaque bonne réponse (une question du quiz, un mot des mots croisés, une lettre du cryptogramme) rapporte des points selon le nombre d'erreurs faites dessus : 10 sans erreur, 5 après 1 erreur, 2 après 2 erreurs, 0 au-delà. Avec un indice, elle rapporte au plus 4 points. Un level sans faute remplit la jauge (3 étoiles) ; avec trop de fautes, la jauge n'atteint aucune étoile. La jauge monte avec les points gagnés, par rapport au score maximum du level. Les étoiles sont posées sur la jauge à 30 %, 60 % et 90 % : une étoile n'est gagnée que si la jauge l'a atteinte à la fin du level. Rejouer un level ne garde que le meilleur résultat.
 - **Îles bonus :** une île est placée après chaque groupe de levels (5 par défaut, réglable par matière avec « Bonus Island Interval »). Quand tous les levels du groupe sont terminés, toucher l'île donne autant d'indices que la moyenne d'étoiles du groupe, arrondie à l'inférieur : 1 indice pour une moyenne de 1 étoile, 3 pour 3 étoiles. Après avoir amélioré ses étoiles, on peut revenir chercher les indices manquants.
 - **Indices :** ils sont communs à toutes les matières. La pastille de la grille des levels en affiche le nombre.
 - La progression est suivie séparément pour chaque combinaison de niveau d'études, d'année et de matière.

@@ -35,6 +35,8 @@ func _ready() -> void:
 
 func initialize(mini_game_data: MiniGameData) -> void:
 	_data = mini_game_data as CryptoData
+	for sentence in _data.sentences:
+		answer_total += _hidden_count(sentence.sentence.strip_edges())
 	progress_changed.emit(0, _data.sentences.size())
 	_load_sentence(0)
 
@@ -76,8 +78,7 @@ func _load_sentence(i: int) -> void:
 		_cells.append(cell)
 
 	candidates.shuffle()
-	var count := clampi(roundi(candidates.size() * _data.hidden_ratio), 1, candidates.size())
-	_hidden.assign(candidates.slice(0, count))
+	_hidden.assign(candidates.slice(0, _hidden_count(text)))
 	_hidden.sort()
 	for k in _hidden:
 		_cells[k].state = CryptoCell.State.EMPTY
@@ -92,6 +93,14 @@ func _load_sentence(i: int) -> void:
 		if cell != null:
 			UIFeedback.pop_in(cell, 0.05 + n * 0.015, 0.3)
 			n += 1
+
+
+func _hidden_count(text: String) -> int:
+	var letter_count := 0
+	for ch in text:
+		if TextUtil.is_letter(ch):
+			letter_count += 1
+	return clampi(roundi(letter_count * _data.hidden_ratio), 1, letter_count)
 
 
 func _refresh() -> void:
@@ -184,12 +193,13 @@ func _check() -> void:
 			continue
 		if TextUtil.normalize_char(cell.typed) == TextUtil.normalize_char(cell.original):
 			cell.state = CryptoCell.State.CORRECT
+			_answer_found(Vector2i(_index, _hidden[n]))
 			UIFeedback.punch(cell, 0.25, 0.5)
 		else:
 			cell.state = CryptoCell.State.WRONG
 			cell.shake()
 			wrong += 1
-			_make_mistake()
+			_make_mistake(Vector2i(_index, _hidden[n]))
 	_refresh()
 	if wrong > 0:
 		Sfx.play("error")
@@ -216,6 +226,8 @@ func use_hint() -> bool:
 	var cell := _cells[_hidden[hint_index]]
 	cell.typed = TextUtil.normalize_char(cell.original)
 	cell.state = CryptoCell.State.CORRECT
+	_mark_hinted(Vector2i(_index, _hidden[hint_index]))
+	_answer_found(Vector2i(_index, _hidden[hint_index]))
 	UIFeedback.punch(cell, 0.3, 0.5)
 	Sfx.play("good")
 	_cursor = _next_empty(hint_index)

@@ -5,12 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://d0dusy5kmvqkl" path="res://content/prefabs/ui/level/victory_banner.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://bxo54w63ssbon" path="res://content/prefabs/ui/top_bar.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://d3dhpvb4a4n5e" path="res://content/prefabs/ui/panels/title_banner.tscn" id="5"]
-[ext_resource type="Script" uid="uid://8yrap112yt84" path="res://scripts/ui/juicy_progress_bar.gd" id="6"]
+[ext_resource type="PackedScene" uid="uid://dk7bb7ooy4ix2" path="res://content/prefabs/ui/star_gauge.tscn" id="6"]
 [ext_resource type="Script" uid="uid://c45v0m5ykanjk" path="res://scripts/ui/juicy_button.gd" id="7"]
 [ext_resource type="Script" uid="uid://c4sgyuaafswdq" path="res://scripts/ui/button_press_animation.gd" id="8"]
-[ext_resource type="Script" uid="uid://cnal1vj5sgu6c" path="res://scripts/ui/star_rating.gd" id="9"]
 
-[node name="Level" type="Control" node_paths=PackedStringArray("top_bar", "title_banner", "progress_bar", "star_rating", "hint_button", "mini_game_container", "missing_mini_game_label", "validate_button")]
+[node name="Level" type="Control" node_paths=PackedStringArray("top_bar", "title_banner", "star_gauge", "hint_button", "mini_game_container", "missing_mini_game_label", "validate_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,8 +19,7 @@ grow_vertical = 2
 script = ExtResource("1")
 top_bar = NodePath("Margin/Layout/TopBar")
 title_banner = NodePath("Margin/Layout/TitleBanner")
-progress_bar = NodePath("Margin/Layout/StatusRow/ProgressBar")
-star_rating = NodePath("Margin/Layout/StatusRow/StarRating")
+star_gauge = NodePath("Margin/Layout/StatusRow/StarGauge")
 hint_button = NodePath("Margin/Layout/StatusRow/HintButton")
 mini_game_container = NodePath("Margin/Layout/MiniGameContainer")
 missing_mini_game_label = NodePath("Margin/Layout/MissingMiniGameLabel")
@@ -62,22 +60,10 @@ theme_override_constants/outline_size = 6
 layout_mode = 2
 theme_override_constants/separation = 14
 
-[node name="ProgressBar" type="Control" parent="Margin/Layout/StatusRow"]
-custom_minimum_size = Vector2(0, 34)
+[node name="StarGauge" parent="Margin/Layout/StatusRow" instance=ExtResource("6")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
-mouse_filter = 2
-script = ExtResource("6")
-fill_color = Color(0.298, 0.7608, 0.2902, 1)
-stripes = true
-
-[node name="StarRating" type="Control" parent="Margin/Layout/StatusRow"]
-custom_minimum_size = Vector2(150, 54)
-layout_mode = 2
-size_flags_vertical = 4
-mouse_filter = 2
-script = ExtResource("9")
 
 [node name="HintButton" type="Button" parent="Margin/Layout/StatusRow"]
 custom_minimum_size = Vector2(130, 70)
