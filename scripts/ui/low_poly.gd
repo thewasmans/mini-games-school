@@ -1,25 +1,28 @@
 class_name LowPoly
 extends RefCounted
 
-const GRASS := Color("5aa846")
-const GRASS_DARK := Color("3f8f3a")
-const ROCK_TOP := Color("d9844a")
-const ROCK_BOTTOM := Color("6b3a2a")
-const STONE := Color("c9c3e3")
-const STONE_DARK := Color("8f88b8")
-const ROOF := Color("d9505a")
-const WOOD := Color("8b5a3c")
-const CLOUD := Color("e4ecff")
+const GRASS := Color("5f9e38")
+const GRASS_LIGHT := Color("7aae40")
+const GRASS_DARK := Color("3f7f3a")
+const ROCK_TOP := Color("c28650")
+const ROCK_BOTTOM := Color("5a3828")
+const STONE := Color("ddd2bd")
+const STONE_DARK := Color("9a8a78")
+const ROOF := Color("c9473d")
+const WOOD := Color("7a4a2e")
+const CLOUD := Color("fff6ea")
 const PAPER := Color("fff4dc")
 
 static var _material: StandardMaterial3D
 static var _glow_material: StandardMaterial3D
+static var _glass_material: StandardMaterial3D
 
 
 static func material() -> StandardMaterial3D:
 	if _material == null:
 		_material = StandardMaterial3D.new()
 		_material.vertex_color_use_as_albedo = true
+		_material.vertex_color_is_srgb = true
 		_material.roughness = 0.95
 		_material.specular_mode = BaseMaterial3D.SPECULAR_DISABLED
 	return _material
@@ -29,8 +32,21 @@ static func glow_material() -> StandardMaterial3D:
 	if _glow_material == null:
 		_glow_material = StandardMaterial3D.new()
 		_glow_material.vertex_color_use_as_albedo = true
+		_glow_material.vertex_color_is_srgb = true
 		_glow_material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 	return _glow_material
+
+
+static func glass_material() -> StandardMaterial3D:
+	if _glass_material == null:
+		_glass_material = StandardMaterial3D.new()
+		_glass_material.vertex_color_use_as_albedo = true
+		_glass_material.vertex_color_is_srgb = true
+		_glass_material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+		_glass_material.albedo_color = Color(1, 1, 1, 0.38)
+		_glass_material.roughness = 0.15
+		_glass_material.cull_mode = BaseMaterial3D.CULL_DISABLED
+	return _glass_material
 
 
 static func flat(src: PrimitiveMesh, color: Color, jitter := Vector3.ZERO, noise_seed := 0.0, bottom := Color(0, 0, 0, 0), vary := 0.06) -> ArrayMesh:
@@ -103,23 +119,39 @@ static func sphere(radius: float, segments := 7, rings := 4) -> SphereMesh:
 	return m
 
 
-static func island(radius: float, noise_seed: float, trees := 3) -> Node3D:
+static func island(radius: float, noise_seed: float, trees := 3, top_colors: Array[Color] = [GRASS, GRASS, GRASS_LIGHT], side_color := ROCK_TOP, bottom_color := ROCK_BOTTOM) -> HexIsland:
 	var rng := RandomNumberGenerator.new()
 	rng.seed = int(noise_seed * 1000.0)
-	var root := Node3D.new()
-	var r := radius
-	root.add_child(part(flat(cylinder(r, r * 0.95, r * 0.26, 11), GRASS, Vector3(r * 0.06, r * 0.03, r * 0.06), noise_seed), Vector3.ZERO))
-	root.add_child(part(flat(cylinder(r * 0.96, r * 0.1, r * 1.35, 11, 3), ROCK_TOP, Vector3(r * 0.16, r * 0.1, r * 0.16), noise_seed, ROCK_BOTTOM, 0.08),
-		Vector3(0, -r * 0.8, 0)))
-	for i in trees:
-		var a := rng.randf() * TAU
-		var d := rng.randf_range(0.35, 0.75) * r
-		root.add_child(tree(rng.randf_range(0.8, 1.3) * minf(r * 0.3, 1.0), noise_seed + i, Vector3(cos(a) * d, r * 0.13, sin(a) * d)))
-	for i in 2:
-		var a := rng.randf() * TAU
-		var rock := part(flat(sphere(r * 0.08, 5, 3), Color("a9a3bd"), Vector3.ONE * r * 0.02, noise_seed + 10 + i),
-			Vector3(cos(a) * r * 0.7, r * 0.14, sin(a) * r * 0.7))
-		root.add_child(rock)
+	var root := HexIsland.new()
+	var tile := radius / 2.4
+	var top := radius * 0.13
+	var cap := tile * 0.2
+	var tops: Array[Vector3] = [Vector3(0, top, 0)]
+	for k in 6:
+		if k > 0 and rng.randf() < 0.25:
+			continue
+		var angle := PI / 6.0 + TAU * k / 6.0
+		tops.append(Vector3(cos(angle), 0, sin(angle)) * tile * sqrt(3.0) + Vector3(0, top - rng.randf_range(0.0, 0.2) * tile, 0))
+	for tile_index in tops.size():
+		var at := tops[tile_index]
+		root.add_child(part(flat(cylinder(tile * 0.97, tile * 0.97, cap, 6), top_colors[rng.randi_range(0, top_colors.size() - 1)], Vector3(0, tile * 0.03, 0),
+			noise_seed + tile_index), at - Vector3(0, cap / 2.0, 0)))
+		root.add_child(part(flat(cylinder(tile * 0.97, tile * 0.82, tile * 0.75, 6, 1), side_color, Vector3(tile * 0.04, 0, tile * 0.04), noise_seed + tile_index,
+			bottom_color, 0.06), at - Vector3(0, cap + tile * 0.375, 0)))
+	root.add_child(part(flat(cylinder(radius * 0.8, radius * 0.08, radius * 1.2, 7, 2), side_color.darkened(0.2), Vector3(radius * 0.14, radius * 0.08, radius * 0.14),
+		noise_seed, bottom_color, 0.08), Vector3(0, top - cap - tile * 0.75 - radius * 0.55, 0)))
+	var spots: Array[Vector3] = []
+	spots.assign(tops.slice(1))
+	for i in range(spots.size() - 1, 0, -1):
+		var swap := rng.randi_range(0, i)
+		var kept: Vector3 = spots[i]
+		spots[i] = spots[swap]
+		spots[swap] = kept
+	for i in mini(trees, spots.size()):
+		var jitter := Vector3(rng.randf_range(-0.3, 0.3), 0, rng.randf_range(-0.3, 0.3)) * tile
+		root.add_child(tree(rng.randf_range(0.8, 1.2) * minf(tile * 0.75, 1.0), noise_seed + i, spots[i] + jitter))
+	root.tile_size = tile
+	root.free_spots.assign(spots.slice(mini(trees, spots.size())))
 	return root
 
 
@@ -127,9 +159,10 @@ static func tree(scale: float, noise_seed: float, pos: Vector3) -> Node3D:
 	var root := Node3D.new()
 	root.position = pos
 	root.scale = Vector3.ONE * scale
-	root.add_child(part(flat(cylinder(0.08, 0.12, 0.5, 5), WOOD, Vector3.ZERO, noise_seed), Vector3(0, 0.25, 0)))
-	root.add_child(part(flat(cylinder(0.0, 0.55, 0.9, 6), GRASS_DARK, Vector3.ONE * 0.05, noise_seed), Vector3(0, 0.85, 0)))
-	root.add_child(part(flat(cylinder(0.0, 0.42, 0.7, 6), GRASS_DARK.lightened(0.12), Vector3.ONE * 0.04, noise_seed + 1), Vector3(0, 1.3, 0)))
+	root.add_child(part(flat(cylinder(0.07, 0.1, 0.4, 5), WOOD, Vector3.ZERO, noise_seed), Vector3(0, 0.2, 0)))
+	root.add_child(part(flat(cylinder(0.0, 0.5, 0.75, 6), GRASS_DARK, Vector3.ONE * 0.04, noise_seed), Vector3(0, 0.7, 0)))
+	root.add_child(part(flat(cylinder(0.0, 0.4, 0.62, 6), GRASS_DARK.lightened(0.08), Vector3.ONE * 0.04, noise_seed + 1), Vector3(0, 1.05, 0)))
+	root.add_child(part(flat(cylinder(0.0, 0.28, 0.5, 6), GRASS_DARK.lightened(0.16), Vector3.ONE * 0.03, noise_seed + 2), Vector3(0, 1.38, 0)))
 	return root
 
 

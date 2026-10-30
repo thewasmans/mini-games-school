@@ -35,6 +35,7 @@ Les écrans sont des scènes modifiables dans l'éditeur ; le code ne fait que l
 
 - `game_ui.tscn` (`GameUI`) contient un menu par étape (`menus/*.tscn`, scripts `scripts/ui/menus/`, base `MenuUI` : `top_bar`, `back_pressed`, `show_menu()` → `_refresh()`). Les menus sont pré-instanciés, montrés / cachés avec une transition glissée.
 - Carte des levels : `level_map/level_map.tscn` (`LevelMap`, 3D low poly dans un `SubViewport`, îles et chemins construits avec `LowPoly`), marqueurs 2D `level_map/level_marker.tscn` et `level_map/bonus_island_marker.tscn` qui suivent les îles.
+- Univers de la carte par matière : `SubjectData.map_theme` → `MapTheme` (`content/map_themes/*.tres` : style forêt / laboratoire / mécanique, couleurs des tuiles, ciel, lumière, chemin, particules). `MapProps` construit les accessoires, les repères (départ, arrivée, îles bonus) et l'ambiance de chaque style ; `MapAnimations` anime ce qui bouge (engrenages, bulles, orbites). Nouvelle matière = nouveau `MapTheme`.
 - Briques : `top_bar.tscn`, `choice_entry_ui.tscn` (bouton + jauge + « Bientôt disponible »), `keyboard_key.tscn`, `contributor_line_ui.tscn`, `default_quiz_image.tscn`, `panels/*.tscn` (`TitledPanel`, `FramePanel`, `MenuPanel`, `TitleBanner`, `Pill`, `StarsPill`, `PartnerTile`, `OnScreenKeyboard`).
 - `level/level.tscn` (`Level`) : barre du haut, titre, jauge, conteneur du mini-jeu, Valider ; `level/victory_banner.tscn`.
 - Mini-jeux : `mini_games/*_ui.tscn`, scripts héritant de `MiniGameUI` (`@abstract`, signaux `completed` / `progress_changed(completed_count, total_count)` / `mistake_made`, `initialize(mini_game_data)`, `use_hint() -> bool`, `_make_mistake()`). `Level` choisit le prefab dans le registre `mini_games/mini_game_prefabs.tres` (`MiniGamePrefabs`, script de données → prefab). Ajouter un mini-jeu = données + interface + entrée du registre (+ cheat), sans toucher à `Level`.
@@ -47,6 +48,7 @@ Les écrans sont des scènes modifiables dans l'éditeur ; le code ne fait que l
 - `JuicyButton` (`@tool`) : fond et texte natifs du thème, icônes, étincelles, reflet. `color` choisit la variation la plus proche, `skin` en impose une.
 - Dessin à la main : `UIDraw` (dont `rating_star`), `UIStyle` (palette, `draw_text`), `StarRating`, `LevelMarker`, `BonusIslandMarker`, cases, `ProgressRing`, `JuicyProgressBar`, `VictoryBanner`.
 - `AnimatedBackground` : décor 3D low poly construit en code (`LowPoly`) ; couleurs du ciel par niveau d'études en réglages exportés.
+- **Direction artistique 3D** : low poly en diorama de plateau, dans l'esprit de For the King. Îles en tuiles hexagonales en terrasses (`LowPoly.island`), facettes en aplats, palette chaude, soleil doré, vue oblique. La scène reste lumineuse : la chaleur vient des couleurs, pas de l'assombrissement. Les couleurs de sommets sont en sRGB (`vertex_color_is_srgb`), donc la palette de `LowPoly` s'affiche telle quelle.
 - Police : `content/fonts/Fredoka.ttf` (OFL), graisse 650 via `content/fonts/fredoka.tres`.
 
 ## Conventions

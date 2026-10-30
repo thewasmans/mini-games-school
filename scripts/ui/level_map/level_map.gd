@@ -9,25 +9,30 @@ const ISLAND_PATH_STONES := 2
 
 @export var camera: Camera3D
 @export var world: Node3D
+@export var world_environment: WorldEnvironment
+@export var sun: DirectionalLight3D
+@export var default_theme: MapTheme
 @export var markers_root: Control
 @export var level_marker_prefab: PackedScene
 @export var island_marker_prefab: PackedScene
 
 @export_group("Réglages")
 ## Distance entre deux levels le long du chemin, en mètres.
-@export var level_spacing := 4.5
+@export var level_spacing := 5.0
 ## Écart latéral du chemin de part et d'autre du centre, en mètres.
 @export var path_width := 2.2
 ## Hauteur de la caméra au-dessus des îles, en mètres.
-@export var camera_height := 12.0
+@export var camera_height := 9.0
 ## Recul de la caméra derrière le level visé, en mètres.
-@export var camera_distance := 7.0
+@export var camera_distance := 10.0
 ## Distance devant le level visé où regarde la caméra, en mètres.
 @export var focus_ahead := 2.0
 ## Distance latérale entre une île bonus et le chemin, en mètres.
 @export var bonus_island_offset := 3.4
 ## Hauteur des marqueurs au-dessus des îles, en mètres.
-@export var marker_height := 1.7
+@export var marker_height := 1.9
+## Hauteur des marqueurs au-dessus des îles bonus, pour laisser voir leur décor, en mètres.
+@export var bonus_marker_height := 3.0
 ## Défilement par cran de molette, en mètres.
 @export var wheel_step := 1.5
 ## Défilement par pixel glissé, en mètres.
@@ -35,13 +40,7 @@ const ISLAND_PATH_STONES := 2
 ## Déplacement en pixels au-delà duquel un appui devient un glissement.
 @export var drag_threshold := 14.0
 ## Couleur des plateformes, dans l'ordre : verrouillé, ouvert, en cours, terminé.
-@export var platform_colors: Array[Color] = [Color("8f88b8"), Color("4fb6ff"), Color("7ff0ff"), Color("ffc53d")]
-## Couleur des pierres d'un chemin pas encore ouvert.
-@export var stone_color := Color("6e6a8e")
-## Couleur des pierres d'un chemin ouvert.
-@export var lit_stone_color := Color("ffe27a")
-## Nombre de nuages sous les îles, pour 10 mètres de chemin.
-@export var clouds_per_ten_meters := 2.0
+@export var platform_colors: Array[Color] = [Color("a89c8c"), Color("4fb6ff"), Color("7ff0ff"), Color("ffc53d")]
 
 var level_markers: Array[LevelMarker] = []
 var island_markers: Array[BonusIslandMarker] = []
@@ -56,8 +55,10 @@ var _island_paths: Array[Array] = []
 var _anchors: Array[Dictionary] = []
 var _floaters: Array[Dictionary] = []
 var _platform_meshes: Array[ArrayMesh] = []
-var _stone_mesh: ArrayMesh
-var _lit_stone_mesh: ArrayMesh
+var _stone_mesh: Mesh
+var _lit_stone_mesh: Mesh
+var _theme: MapTheme
+var _animations := MapAnimations.new()
 var _camera_z := 0.0
 var _target_z := 0.0
 var _min_z := 0.0
@@ -70,49 +71,49 @@ var _t := 0.0
 
 func _ready() -> void:
 	for color in platform_colors:
-		_platform_meshes.append(LowPoly.flat(LowPoly.cylinder(0.78, 0.86, 0.2, 10), color, Vector3.ONE * 0.02, 3.0))
-	_stone_mesh = LowPoly.flat(LowPoly.sphere(0.2, 5, 3), stone_color, Vector3.ONE * 0.03, 5.0)
-	_lit_stone_mesh = LowPoly.flat(LowPoly.sphere(0.2, 5, 3), lit_stone_color, Vector3.ONE * 0.03, 5.0, Color(0, 0, 0, 0), 0.0)
+		_platform_meshes.append(LowPoly.flat(LowPoly.cylinder(0.58, 0.62, 0.16, 6), color, Vector3.ONE * 0.015, 3.0))
 	visibility_changed.connect(func() -> void: set_process(is_visible_in_tree()))
 
 
-func build(levels: Array[LevelData], game_state: GameState) -> void:
+func build(levels: Array[LevelData], game_state: GameState, map_theme: MapTheme = null) -> void:
 	_clear()
+	_apply_theme(map_theme if map_theme != null else default_theme)
 	_content = Node3D.new()
 	world.add_child(_content)
-	var start := _add_floater(LowPoly.island(1.8, 90.0, 2), Vector3(_level_x(-1), 0, level_spacing))
-	var house := LowPoly.house()
-	house.scale = Vector3.ONE * 0.75
-	house.position = Vector3(0.2, 0.25, -0.1)
-	start.add_child(house)
+	var rng := RandomNumberGenerator.new()
+	rng.seed = 31
+	var start := _add_floater(_theme_island(1.8, 90.0), Vector3(_level_x(-1), 0, level_spacing))
+	var start_landmark := MapProps.start_landmark(_theme, _animations)
+	start_landmark.scale = Vector3.ONE * 0.75
+	start_landmark.position = Vector3(0.1, 0.23, -0.1)
+	start.add_child(start_landmark)
 
 	for level_index in levels.size():
-		var island := _add_floater(LowPoly.island(1.25, 20.0 + level_index * 1.7, 0), _level_position(level_index))
-		var tree_angle := level_index * 2.3
-		island.add_child(LowPoly.tree(0.6, level_index, Vector3(cos(tree_angle) * 1.0, 0.15, sin(tree_angle) * 1.0)))
-		var platform := LowPoly.part(_platform_meshes[0], Vector3(0, 0.25, 0))
+		var island := _add_floater(_theme_island(1.6, 20.0 + level_index * 1.7), _level_position(level_index))
+		MapProps.decorate(_theme, island, rng, _animations)
+		var platform := LowPoly.part(_platform_meshes[0], Vector3(0, 0.29, 0))
 		island.add_child(platform)
 		_level_islands.append(island)
 		_platforms.append(platform)
 		var previous := _level_position(level_index - 1) if level_index > 0 else start.position
 		_level_paths.append(_add_path(previous, island.position, PATH_STONES))
 		var mini_game := levels[level_index].mini_game
-		var marker := _add_marker(level_marker_prefab, island) as LevelMarker
+		var marker := _add_marker(level_marker_prefab, island, marker_height) as LevelMarker
 		marker.setup(level_index, mini_game.theme_title if mini_game.theme_title != "" else mini_game.get_kind_name(), mini_game.get_kind_id(), game_state.level_stars(level_index))
 		level_markers.append(marker)
 
 	var end_z := _level_position(levels.size() - 1).z - level_spacing * 1.3 if not levels.is_empty() else -level_spacing
-	var end := _add_floater(LowPoly.island(2.2, 91.0, 3), Vector3(0, 0, end_z))
-	var castle := LowPoly.castle()
-	castle.scale = Vector3.ONE * 0.5
-	castle.position = Vector3(0, 0.25, 0)
-	end.add_child(castle)
+	var end := _add_floater(_theme_island(2.2, 91.0), Vector3(0, 0, end_z))
+	MapProps.decorate(_theme, end, rng, _animations)
+	var end_landmark := MapProps.end_landmark(_theme, _animations)
+	end_landmark.position = Vector3(0, 0.25, 0)
+	end.add_child(end_landmark)
 	if not levels.is_empty():
 		_level_paths.append(_add_path(_level_position(levels.size() - 1), end.position, PATH_STONES))
 
 	for island_index in game_state.island_count:
 		_add_bonus_island(island_index, game_state)
-	_add_clouds(level_spacing * 3.0, end_z - level_spacing * 4.0)
+	MapProps.ambience(_theme, _content, level_spacing * 3.0, end_z - level_spacing * 4.0, _animations)
 
 	_max_z = level_spacing * 0.5
 	_min_z = end_z + level_spacing
@@ -187,6 +188,29 @@ func _clear() -> void:
 	_island_paths.clear()
 	_anchors.clear()
 	_floaters.clear()
+	_animations.clear()
+
+
+func _apply_theme(map_theme: MapTheme) -> void:
+	_theme = map_theme
+	_stone_mesh = MapProps.path_stone(map_theme, false)
+	_lit_stone_mesh = MapProps.path_stone(map_theme, true)
+	var environment := world_environment.environment
+	var sky := environment.sky.sky_material as ProceduralSkyMaterial
+	sky.sky_top_color = map_theme.sky_top_color
+	sky.sky_horizon_color = map_theme.sky_horizon_color
+	sky.ground_horizon_color = map_theme.sky_horizon_color
+	sky.ground_bottom_color = map_theme.ground_bottom_color
+	environment.fog_light_color = map_theme.fog_color
+	environment.ambient_light_color = map_theme.ambient_color
+	environment.ambient_light_energy = map_theme.ambient_energy
+	sun.light_color = map_theme.sun_color
+	sun.light_energy = map_theme.sun_energy
+
+
+func _theme_island(radius: float, noise_seed: float) -> HexIsland:
+	var trees := 1 if _theme.style == MapTheme.Style.FOREST else 0
+	return LowPoly.island(radius, noise_seed, trees, _theme.tile_top_colors, _theme.tile_side_color, _theme.tile_bottom_color)
 
 
 func _level_x(level_index: int) -> float:
@@ -209,12 +233,12 @@ func _add_bonus_island(island_index: int, game_state: GameState) -> void:
 	var from := _level_position(last_level)
 	var middle := (from + _level_position(last_level + 1)) / 2.0
 	var side := 1.0 if middle.x <= 0.0 else -1.0
-	var island := _add_floater(LowPoly.island(1.4, 60.0 + island_index, 1), Vector3(middle.x + side * bonus_island_offset, 0.3, middle.z))
-	var castle := LowPoly.castle()
-	castle.scale = Vector3.ONE * 0.32
-	castle.position = Vector3(0, 0.18, 0)
-	castle.rotation_degrees.y = -20.0 * side
-	island.add_child(castle)
+	var island := _add_floater(_theme_island(1.4, 60.0 + island_index), Vector3(middle.x + side * bonus_island_offset, 0.3, middle.z))
+	var landmark := MapProps.bonus_landmark(_theme, _animations)
+	landmark.scale = Vector3.ONE * 0.75
+	landmark.position = Vector3(0, 0.18, 0)
+	landmark.rotation_degrees.y = -20.0 * side
+	island.add_child(landmark)
 	var sparkles := Node3D.new()
 	for k in 6:
 		var sparkle := LowPoly.sparkle()
@@ -225,10 +249,10 @@ func _add_bonus_island(island_index: int, game_state: GameState) -> void:
 	_bonus_islands.append(island)
 	_bonus_sparkles.append(sparkles)
 	_island_paths.append(_add_path(from, island.position, ISLAND_PATH_STONES))
-	island_markers.append(_add_marker(island_marker_prefab, island) as BonusIslandMarker)
+	island_markers.append(_add_marker(island_marker_prefab, island, bonus_marker_height) as BonusIslandMarker)
 
 
-func _add_marker(prefab: PackedScene, island: Node3D) -> Control:
+func _add_marker(prefab: PackedScene, island: Node3D, height: float) -> Control:
 	var holder := Control.new()
 	holder.mouse_filter = MOUSE_FILTER_IGNORE
 	markers_root.add_child(holder)
@@ -236,19 +260,8 @@ func _add_marker(prefab: PackedScene, island: Node3D) -> Control:
 	holder.add_child(marker)
 	holder.size = marker.size
 	holder.pivot_offset = marker.pivot_offset
-	_anchors.append({"holder": holder, "marker": marker, "node": island})
+	_anchors.append({"holder": holder, "marker": marker, "node": island, "height": height})
 	return marker
-
-
-func _add_clouds(from_z: float, to_z: float) -> void:
-	var rng := RandomNumberGenerator.new()
-	rng.seed = 7
-	for cloud_index in roundi((from_z - to_z) / 10.0 * clouds_per_ten_meters):
-		var cloud := LowPoly.cloud(200.0 + cloud_index)
-		var side := -1.0 if cloud_index % 2 == 0 else 1.0
-		cloud.position = Vector3(side * rng.randf_range(7.0, 13.0), rng.randf_range(-7.0, -4.0), rng.randf_range(to_z, from_z))
-		cloud.scale = Vector3.ONE * rng.randf_range(1.0, 1.8)
-		_content.add_child(cloud)
 
 
 func _add_path(from: Vector3, to: Vector3, stone_count: int) -> Array[MeshInstance3D]:
@@ -350,6 +363,7 @@ func _process(delta: float) -> void:
 		node.position.y = floater.base + sin(_t * 1.4 + floater.phase) * 0.12
 	for sparkles in _bonus_sparkles:
 		sparkles.rotation.y += delta * 0.8
+	_animations.update(_t, delta)
 	_place_markers()
 
 
@@ -363,7 +377,7 @@ func _place_markers() -> void:
 	for anchor in _anchors:
 		var holder: Control = anchor.holder
 		var node: Node3D = anchor.node
-		var point := node.position + Vector3(0, marker_height, 0)
+		var point := node.position + Vector3(0, anchor.height, 0)
 		if camera.is_position_behind(point):
 			holder.hide()
 			continue

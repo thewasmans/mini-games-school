@@ -3,12 +3,13 @@
 [ext_resource type="Script" uid="uid://bn2ilu6qy26hw" path="res://scripts/ui/level_map/level_map.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://bxl1vy1jw0cpr" path="res://content/prefabs/ui/level_map/level_marker.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://b331gungy886u" path="res://content/prefabs/ui/level_map/bonus_island_marker.tscn" id="3"]
+[ext_resource type="Resource" uid="uid://bw3eum0af7w0r" path="res://content/map_themes/biologie.tres" id="4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="Sky_map"]
-sky_top_color = Color(0.1686, 0.3098, 0.702, 1)
-sky_horizon_color = Color(0.4706, 0.6353, 0.9216, 1)
-ground_bottom_color = Color(0.1137, 0.2078, 0.5176, 1)
-ground_horizon_color = Color(0.4706, 0.6353, 0.9216, 1)
+sky_top_color = Color(0.2549, 0.4824, 0.698, 1)
+sky_horizon_color = Color(0.6, 0.7882, 0.8392, 1)
+ground_bottom_color = Color(0.2, 0.4471, 0.5882, 1)
+ground_horizon_color = Color(0.5216, 0.7412, 0.8118, 1)
 ground_curve = 0.3
 
 [sub_resource type="Sky" id="Sky_resource"]
@@ -18,14 +19,14 @@ sky_material = SubResource("Sky_map")
 background_mode = 2
 sky = SubResource("Sky_resource")
 ambient_light_source = 2
-ambient_light_color = Color(0.7255, 0.7843, 1, 1)
-ambient_light_energy = 0.8
+ambient_light_color = Color(0.8784, 0.8392, 0.9216, 1)
+ambient_light_energy = 0.4
 fog_enabled = true
-fog_light_color = Color(0.4353, 0.5765, 0.8471, 1)
-fog_density = 0.018
+fog_light_color = Color(0.5412, 0.7333, 0.8, 1)
+fog_density = 0.006
 fog_sky_affect = 0.0
 
-[node name="LevelMap" type="Control" node_paths=PackedStringArray("camera", "world", "markers_root")]
+[node name="LevelMap" type="Control" node_paths=PackedStringArray("camera", "world", "world_environment", "sun", "markers_root")]
 clip_contents = true
 layout_mode = 3
 anchors_preset = 15
@@ -37,6 +38,9 @@ mouse_default_cursor_shape = 2
 script = ExtResource("1")
 camera = NodePath("ViewportContainer/Viewport/World/Camera")
 world = NodePath("ViewportContainer/Viewport/World")
+world_environment = NodePath("ViewportContainer/Viewport/World/Environment")
+sun = NodePath("ViewportContainer/Viewport/World/Sun")
+default_theme = ExtResource("4")
 markers_root = NodePath("Markers")
 level_marker_prefab = ExtResource("2")
 island_marker_prefab = ExtResource("3")
@@ -65,8 +69,8 @@ environment = SubResource("Environment_map")
 
 [node name="Sun" type="DirectionalLight3D" parent="ViewportContainer/Viewport/World"]
 rotation = Vector3(-0.8727, 0.6109, 0)
-light_color = Color(1, 0.9451, 0.8392, 1)
-light_energy = 1.1
+light_color = Color(1, 0.851, 0.6235, 1)
+light_energy = 0.95
 shadow_enabled = true
 directional_shadow_max_distance = 60.0
 

@@ -122,3 +122,11 @@ func test_mini_game_types_alternate() -> void:
 			if kinds[0] == kinds[1] and kinds[1] == kinds[2]:
 				broken.append("%s levels %d à %d" % [subject.name, level_index - 1, level_index + 1])
 	assert_array(broken).is_empty()
+
+
+func test_every_subject_has_a_map_theme() -> void:
+	var missing: Array[String] = []
+	for subject in _subjects():
+		if subject.map_theme == null:
+			missing.append(subject.name)
+	assert_array(missing).is_empty()

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="MapTheme" format=3 uid="uid://7o3vassboco0"]
+
+[ext_resource type="Script" uid="uid://d332ss1os4h30" path="res://scripts/ui/level_map/map_theme.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+style = 1
+tile_top_colors = Array[Color]([Color(0.6824, 0.6510, 0.7059, 1), Color(0.6235, 0.5922, 0.6588, 1), Color(0.7294, 0.7020, 0.7529, 1)])
+tile_side_color = Color(0.4863, 0.4314, 0.5333, 1)
+tile_bottom_color = Color(0.2392, 0.1882, 0.2824, 1)
+accent_colors = Array[Color]([Color(0.6588, 0.3333, 0.8784, 1), Color(0.1843, 0.8157, 0.5412, 1), Color(1.0000, 0.7059, 0.2314, 1), Color(1.0000, 0.4157, 0.3529, 1)])
+props_per_island = 2
+sky_top_color = Color(0.2902, 0.2275, 0.5412, 1)
+sky_horizon_color = Color(0.8784, 0.6588, 0.4157, 1)
+ground_bottom_color = Color(0.2431, 0.1725, 0.4000, 1)
+fog_color = Color(0.5412, 0.4353, 0.6588, 1)
+sun_color = Color(1.0000, 0.7843, 0.5647, 1)
+sun_energy = 1.0
+ambient_color = Color(0.8471, 0.7843, 0.9412, 1)
+ambient_energy = 0.45
+stone_color = Color(0.4784, 0.4157, 0.5412, 1)
+lit_stone_color = Color(0.4980, 0.9412, 0.7529, 1)
+ambient_particles = 45
+particle_color = Color(0.9569, 0.9020, 1.0000, 1)

@@ -27,11 +27,12 @@ func _refresh() -> void:
 	var study_level := game_state.current_study_level
 	var school_year := game_state.current_school_year
 	var levels := game_state.current_levels
-	title_banner.text = game_data.get_subject(study_level, school_year, game_state.current_subject).name
+	var subject := game_data.get_subject(study_level, school_year, game_state.current_subject)
+	title_banner.text = subject.name
 	info_pill.text = "%s - %s   •   %d / %d" % [GameData.STUDY_NAMES[study_level], game_data.get_year_name(study_level, school_year),
 		game_state.completed_level_count(study_level, school_year, game_state.current_subject), levels.size()]
 	_refresh_bonus_pill()
-	level_map.build(levels, game_state)
+	level_map.build(levels, game_state, subject.map_theme)
 	var unlock_index := pending_unlock
 	pending_unlock = -1
 	if unlock_index >= 0:

@@ -50,8 +50,10 @@
 [ext_resource type="Resource" uid="uid://dkqif7dfy80ii" path="res://data/secondaire/s4/biologie/level_46.tres" id="47_1r0oe"]
 [ext_resource type="Resource" uid="uid://cswqsrqjcbvgy" path="res://data/secondaire/s4/biologie/level_47.tres" id="48_ls35r"]
 [ext_resource type="Resource" uid="uid://dau10twhnxejm" path="res://data/secondaire/s4/biologie/level_48.tres" id="49_roga0"]
+[ext_resource type="Resource" uid="uid://bw3eum0af7w0r" path="res://content/map_themes/biologie.tres" id="map_theme"]
 
 [resource]
 script = ExtResource("27_7aaxl")
 name = "Biologie"
 levels = Array[ExtResource("1_1ktah")]([ExtResource("2_noomr"), ExtResource("3_n5lnr"), ExtResource("4_htad1"), ExtResource("5_f7vx4"), ExtResource("6_b36ts"), ExtResource("7_5o0la"), ExtResource("8_ppgk8"), ExtResource("9_5t6aw"), ExtResource("10_p22qy"), ExtResource("11_65flt"), ExtResource("12_swtuv"), ExtResource("13_h8l2d"), ExtResource("14_pxwh1"), ExtResource("15_82rtx"), ExtResource("16_4hw5n"), ExtResource("17_gy8lq"), ExtResource("18_gljps"), ExtResource("19_25nr2"), ExtResource("20_f62m0"), ExtResource("21_grp5o"), ExtResource("22_ng0yb"), ExtResource("23_yc30o"), ExtResource("24_yovn6"), ExtResource("25_f02qa"), ExtResource("26_6mq6k"), ExtResource("27_yovn6"), ExtResource("28_f02qa"), ExtResource("29_6mq6k"), ExtResource("30_7aaxl"), ExtResource("31_7d750"), ExtResource("32_uwuai"), ExtResource("33_2ii1u"), ExtResource("34_wcyiw"), ExtResource("35_if7u2"), ExtResource("36_vvdp8"), ExtResource("37_3si8y"), ExtResource("38_v7cm2"), ExtResource("39_8fsg8"), ExtResource("40_ennii"), ExtResource("41_r2q63"), ExtResource("42_yg04b"), ExtResource("43_v6ofw"), ExtResource("44_m4qm1"), ExtResource("45_cgl3f"), ExtResource("46_l4m2c"), ExtResource("47_1r0oe"), ExtResource("48_ls35r"), ExtResource("49_roga0")])
+map_theme = ExtResource("map_theme")

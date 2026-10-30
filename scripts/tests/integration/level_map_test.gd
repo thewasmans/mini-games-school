@@ -61,3 +61,12 @@ func test_clicking_a_marker_on_screen_selects_its_level() -> void:
 	_menu_levels.level_map._click(holder.position + holder.pivot_offset)
 	@warning_ignore("redundant_await")
 	await assert_signal(_menu_levels.level_map).is_emitted("level_pressed", 0)
+
+
+func test_map_uses_the_theme_of_the_subject() -> void:
+	var game_state := _game_manager.game_state
+	var subject := _game_manager.game_data.get_subject(game_state.current_study_level, game_state.current_school_year, game_state.current_subject)
+	var level_map := _menu_levels.level_map
+	assert_object(subject.map_theme).is_not_null()
+	assert_that(level_map.sun.light_color).is_equal(subject.map_theme.sun_color)
+	assert_that(level_map.world_environment.environment.ambient_light_color).is_equal(subject.map_theme.ambient_color)

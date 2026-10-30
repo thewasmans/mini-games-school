@@ -5,6 +5,7 @@ extends Resource
 @export var name: String = ""
 @export var color: Color = Color(0, 0, 0, 0)
 @export var levels: Array[LevelData] = []
+@export var map_theme: MapTheme
 
 @export_group("Réglages")
 ## Nombre de levels entre deux îles bonus (0 : aucune île).

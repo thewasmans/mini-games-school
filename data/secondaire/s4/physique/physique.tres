@@ -25,8 +25,10 @@
 [ext_resource type="Resource" uid="uid://c27x0nk3kqaod" path="res://data/secondaire/s4/physique/level_21.tres" id="22_b580t"]
 [ext_resource type="Resource" uid="uid://kjy2vus2ufvk" path="res://data/secondaire/s4/physique/level_22.tres" id="23_qk3ga"]
 [ext_resource type="Resource" uid="uid://bmg74jcm4sl45" path="res://data/secondaire/s4/physique/level_23.tres" id="24_f1t5f"]
+[ext_resource type="Resource" uid="uid://6v7b21v0xt2j" path="res://content/map_themes/physique.tres" id="map_theme"]
 
 [resource]
 script = ExtResource("11_s4x38")
 name = "Physique"
 levels = Array[ExtResource("1_v1bso")]([ExtResource("2_7twk1"), ExtResource("3_d21xo"), ExtResource("4_3gslw"), ExtResource("5_6mjt6"), ExtResource("6_y1q3y"), ExtResource("7_sy0mt"), ExtResource("8_7r441"), ExtResource("9_hxd8q"), ExtResource("10_skwok"), ExtResource("11_h3ql3"), ExtResource("12_3dht0"), ExtResource("13_m47w8"), ExtResource("14_b83jb"), ExtResource("15_6rjho"), ExtResource("16_cdurr"), ExtResource("17_5yx1b"), ExtResource("18_hkktk"), ExtResource("19_g4280"), ExtResource("20_3bd4m"), ExtResource("21_hm0bo"), ExtResource("22_b580t"), ExtResource("23_qk3ga"), ExtResource("24_f1t5f")])
+map_theme = ExtResource("map_theme")
