@@ -5,7 +5,7 @@ signal play_pressed
 signal credits_pressed
 
 @export var logo: Control
-@export var title_label: Label
+@export var title_image: TextureRect
 @export var hero: Control
 @export var play_button: JuicyButton
 @export var credits_button: JuicyButton
@@ -28,10 +28,10 @@ func _refresh() -> void:
 	UIFeedback.pop_in(play_button, 0.5, 0.3)
 	UIFeedback.pop_in(credits_button, 0.6, 0.5)
 	await get_tree().create_timer(0.7).timeout
-	title_label.pivot_offset = title_label.size / 2
-	var wobble := title_label.create_tween().set_loops()
-	wobble.tween_property(title_label, "rotation", title_wobble, title_wobble_duration).set_trans(Tween.TRANS_SINE)
-	wobble.tween_property(title_label, "rotation", -title_wobble, title_wobble_duration).set_trans(Tween.TRANS_SINE)
+	title_image.pivot_offset = title_image.size / 2
+	var wobble := title_image.create_tween().set_loops()
+	wobble.tween_property(title_image, "rotation", title_wobble, title_wobble_duration).set_trans(Tween.TRANS_SINE)
+	wobble.tween_property(title_image, "rotation", -title_wobble, title_wobble_duration).set_trans(Tween.TRANS_SINE)
 	await get_tree().create_timer(0.4).timeout
 	UIFeedback.breathe(play_button, 0.04, 1.3)
 
