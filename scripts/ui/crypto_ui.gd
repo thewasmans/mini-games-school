@@ -22,6 +22,8 @@ var _solved := false
 @export var cell_size := Vector2(46, 60)
 ## Taille d'une case de lettre, pour les phrases de plus de 45 caractères.
 @export var small_cell_size := Vector2(38, 52)
+## Largeur d'une lettre déjà affichée, par rapport à une case à remplir.
+@export_range(0.3, 1.0) var visible_letter_width := 0.55
 
 
 func _ready() -> void:
@@ -79,6 +81,9 @@ func _load_sentence(i: int) -> void:
 	_hidden.sort()
 	for k in _hidden:
 		_cells[k].state = CryptoCell.State.EMPTY
+	for cell in _cells:
+		if cell != null and cell.state == CryptoCell.State.VISIBLE:
+			cell.custom_minimum_size.x = letter_size.x * visible_letter_width
 	_cursor = 0
 	_refresh()
 

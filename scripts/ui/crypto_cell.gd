@@ -49,7 +49,7 @@ func _draw() -> void:
 		return
 	draw_set_transform(Vector2(_shake, 0), 0, Vector2.ONE)
 	var fs := int(size.y * 0.58)
-	if state == State.SYMBOL:
+	if state == State.SYMBOL or state == State.VISIBLE:
 		UIStyle.draw_text(self, original, Vector2(size.x / 2, size.y / 2 - 2), fs, Color.WHITE, 8)
 		return
 	var depth := 5.0
