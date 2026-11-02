@@ -5,7 +5,8 @@
 [ext_resource type="Script" uid="uid://br5q0sg4b052d" path="res://scripts/data/level_data.gd" id="2_r34r7"]
 [ext_resource type="Resource" uid="uid://dihkdp4gkv3sb" path="res://data/secondaire/s4/cryptogram/biologie/uaa3_cellule_partie1.tres" id="5_r4uws"]
 [ext_resource type="Resource" uid="uid://bryqjylodb8ei" path="res://data/secondaire/s4/quiz/biologie/cellule.tres" id="6_4ls4r"]
-[ext_resource type="Resource" uid="uid://ccvhq4tbhmbgn" path="res://data/secondaire/s4/crossword/biologie/cellule_s4.tres" id="7_xbtbc"]
+[ext_resource type="Resource" uid="uid://6wpvia0bwu74" path="res://data/secondaire/s4/crossword/biologie/cellule_s4_part2.tres" id="7_rrd11"]
+[ext_resource type="Resource" uid="uid://ccvhq4tbhmbgn" path="res://data/secondaire/s4/crossword/biologie/cellule_s4_part1.tres" id="7_xbtbc"]
 [ext_resource type="Resource" uid="uid://b8001eoh6safi" path="res://data/secondaire/s4/crossword/biologie/cellule_s4_2.tres" id="8_028tp"]
 [ext_resource type="Resource" uid="uid://dtq3lxbkhvlki" path="res://data/secondaire/s4/crossword/biologie/cellule_s4_3.tres" id="9_t72jb"]
 [ext_resource type="Resource" uid="uid://tin0bplqyr66" path="res://data/secondaire/s4/crossword/biologie/cellule_s4_4.tres" id="10_4dg1r"]
@@ -54,6 +55,11 @@
 [sub_resource type="Resource" id="Resource_vjkum"]
 script = ExtResource("2_r34r7")
 mini_games = Array[ExtResource("1_vllua")]([ExtResource("7_xbtbc")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Resource_snn74"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("7_rrd11")])
 metadata/_custom_type_script = "uid://br5q0sg4b052d"
 
 [sub_resource type="Resource" id="Resource_2jjq6"]
@@ -179,7 +185,7 @@ metadata/_custom_type_script = "uid://br5q0sg4b052d"
 [sub_resource type="Resource" id="Subject_biologie"]
 script = ExtResource("25_subject")
 name = "Biologie"
-levels = Array[ExtResource("2_r34r7")]([SubResource("Resource_vjkum"), SubResource("Resource_2jjq6"), SubResource("Resource_rp2v0"), SubResource("Resource_b06qv"), SubResource("Resource_q0bag"), SubResource("Resource_n2a7k"), SubResource("Resource_ltsaj"), SubResource("Resource_kplp0"), SubResource("Resource_0tubd"), SubResource("Resource_43ofh"), SubResource("Resource_562mk"), SubResource("Resource_2bcoo"), SubResource("Resource_07n5x"), SubResource("Resource_rnyso"), SubResource("Resource_8a55v"), SubResource("Resource_leu7v"), SubResource("Resource_h7085"), SubResource("Resource_frr8y"), SubResource("Resource_c8be8"), SubResource("Resource_w46bf"), SubResource("Resource_uinbi"), SubResource("Resource_g2kih"), SubResource("Resource_hdf2c"), SubResource("Resource_c6xja"), SubResource("Resource_4nmmn")])
+levels = Array[ExtResource("2_r34r7")]([SubResource("Resource_vjkum"), SubResource("Resource_snn74"), SubResource("Resource_2jjq6"), SubResource("Resource_rp2v0"), SubResource("Resource_b06qv"), SubResource("Resource_q0bag"), SubResource("Resource_n2a7k"), SubResource("Resource_ltsaj"), SubResource("Resource_kplp0"), SubResource("Resource_0tubd"), SubResource("Resource_43ofh"), SubResource("Resource_562mk"), SubResource("Resource_2bcoo"), SubResource("Resource_07n5x"), SubResource("Resource_rnyso"), SubResource("Resource_8a55v"), SubResource("Resource_leu7v"), SubResource("Resource_h7085"), SubResource("Resource_frr8y"), SubResource("Resource_c8be8"), SubResource("Resource_w46bf"), SubResource("Resource_uinbi"), SubResource("Resource_g2kih"), SubResource("Resource_hdf2c"), SubResource("Resource_c6xja"), SubResource("Resource_4nmmn")])
 
 [sub_resource type="Resource" id="Resource_ca4gj"]
 script = ExtResource("2_r34r7")
