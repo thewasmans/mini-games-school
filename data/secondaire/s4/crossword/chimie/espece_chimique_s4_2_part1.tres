@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://camncqv6u70jp"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_fc0jv"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_yq8x0"]
+
+[sub_resource type="Resource" id="Resource_tmodb"]
+script = ExtResource("1_fc0jv")
+word = "ELECTROLYTE"
+hint = "Substance chimique capable de transporter ou de conduire une charge électrique."
+grid_position = Vector2i(2, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_xgw6b"]
+script = ExtResource("1_fc0jv")
+word = "ELECTROLYSE"
+hint = "Procédé par lequel on effectue la décomposition de l'eau en dihydrogène et dioxygène."
+grid_position = Vector2i(0, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_yv57g"]
+script = ExtResource("1_fc0jv")
+word = "SOLUBILITE"
+hint = "Quantité maximale de soluté qu'on peut dissoudre dans un solvant."
+grid_position = Vector2i(5, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_644p5"]
+script = ExtResource("1_fc0jv")
+word = "IONIQUE"
+hint = "Se dit d'une réaction entre les ions acteurs, type de liaison chimique forte."
+grid_position = Vector2i(7, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_0d8le"]
+script = ExtResource("1_fc0jv")
+word = "TERNAIRE"
+hint = "Corps composé de trois éléments chimiques, comme le NaOH."
+grid_position = Vector2i(0, 6)
+
+[resource]
+script = ExtResource("2_yq8x0")
+clues = Array[ExtResource("1_fc0jv")]([SubResource("Resource_tmodb"), SubResource("Resource_xgw6b"), SubResource("Resource_yv57g"), SubResource("Resource_644p5"), SubResource("Resource_0d8le")])
+school_year = "S4"
+title = "Les espèces chimiques"

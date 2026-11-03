@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://bvrdsw5ntjekp"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_3e60f"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_mswon"]
+
+[sub_resource type="Resource" id="Resource_r1e1s"]
+script = ExtResource("1_3e60f")
+text = "La biodiversité a connu plusieurs crises majeures."
+
+[sub_resource type="Resource" id="Resource_p7ec8"]
+script = ExtResource("1_3e60f")
+text = "Les extinctions massives éliminent de nombreuses espèces."
+
+[sub_resource type="Resource" id="Resource_82wjv"]
+script = ExtResource("1_3e60f")
+text = "Les arbres phylogénétiques traduisent les parentés."
+
+[sub_resource type="Resource" id="Resource_qx1ep"]
+script = ExtResource("1_3e60f")
+text = "Un ancêtre commun hypothétique possède des caractères partagés."
+
+[resource]
+script = ExtResource("2_mswon")
+hidden_letter_ratio = 0.05
+phrases = Array[ExtResource("1_3e60f")]([SubResource("Resource_r1e1s"), SubResource("Resource_p7ec8"), SubResource("Resource_82wjv"), SubResource("Resource_qx1ep")])
+school_year = "S4"
+title = "L'évolution"

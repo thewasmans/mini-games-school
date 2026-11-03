@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://1dirtrsmyddt"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_3crpt"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_27lt7"]
+
+[sub_resource type="Resource" id="Resource_ah6q7"]
+script = ExtResource("1_3crpt")
+word = "ADN"
+hint = "Molécule formée de deux brins enroulés en une double hélice."
+grid_position = Vector2i(0, 4)
+
+[sub_resource type="Resource" id="Resource_d60cv"]
+script = ExtResource("1_3crpt")
+word = "EXOCYTOSE"
+hint = "Processus qui correspond à la sortie de molécules par fusion de vésicules avec la membrane plasmique."
+grid_position = Vector2i(2, 3)
+
+[sub_resource type="Resource" id="Resource_wvkpt"]
+script = ExtResource("1_3crpt")
+word = "OSMOSE"
+hint = "Passage de molécules à travers une membrane semi-perméable depuis le milieu hypotonique en solutés vers celui hypertonique."
+grid_position = Vector2i(8, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_3a53w"]
+script = ExtResource("1_3crpt")
+word = "PORE"
+hint = "Trou au niveau de l'enveloppe nucléaire."
+grid_position = Vector2i(4, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_3t6sc"]
+script = ExtResource("1_3crpt")
+word = "GENE"
+hint = "Portion d'ADN."
+grid_position = Vector2i(2, 2)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_27lt7")
+clues = Array[ExtResource("1_3crpt")]([SubResource("Resource_ah6q7"), SubResource("Resource_d60cv"), SubResource("Resource_wvkpt"), SubResource("Resource_3a53w"), SubResource("Resource_3t6sc")])
+school_year = "S4"
+title = "La cellule"

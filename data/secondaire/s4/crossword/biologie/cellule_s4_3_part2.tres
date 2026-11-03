@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://b8p77ibskplik"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_losiw"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_s8fub"]
+
+[sub_resource type="Resource" id="Resource_xc8qu"]
+script = ExtResource("1_losiw")
+word = "ARN"
+hint = "Acide nucléique formé d'un seul brin qui joue un rôle dans la synthèse des protéines."
+grid_position = Vector2i(2, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_b2bc5"]
+script = ExtResource("1_losiw")
+word = "PLASMIQUE"
+hint = "Structure qui délimite le cytoplasme du milieu extracellulaire, on parle de la membrane..."
+
+[sub_resource type="Resource" id="Resource_b3rjg"]
+script = ExtResource("1_losiw")
+word = "EUCARYOTE"
+hint = "Etre vivant se caractérisant par la présence d'un noyau."
+grid_position = Vector2i(8, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_2curu"]
+script = ExtResource("1_losiw")
+word = "MONOSACCHARIDE"
+hint = "Monomère de glucides."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_06mxw"]
+script = ExtResource("1_losiw")
+word = "GENE"
+hint = "Portion d'ADN."
+grid_position = Vector2i(3, 13)
+
+[sub_resource type="Resource" id="Resource_7mcqs"]
+script = ExtResource("1_losiw")
+word = "PEPTIDIQUE"
+hint = "Nom de la liaison entre des acides aminés."
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_s8fub")
+clues = Array[ExtResource("1_losiw")]([SubResource("Resource_xc8qu"), SubResource("Resource_b2bc5"), SubResource("Resource_b3rjg"), SubResource("Resource_2curu"), SubResource("Resource_06mxw"), SubResource("Resource_7mcqs")])
+school_year = "S4"
+title = "La cellule"

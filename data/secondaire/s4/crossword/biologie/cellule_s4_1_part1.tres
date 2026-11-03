@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://ccvhq4tbhmbgn"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_i7sa1"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_umjwc"]
+
+[sub_resource type="Resource" id="Resource_g6fwl"]
+script = ExtResource("1_i7sa1")
+word = "GUANINE"
+hint = "Base azotée caractérisée par la lettre G."
+grid_position = Vector2i(5, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_n3vew"]
+script = ExtResource("1_i7sa1")
+word = "REIN"
+hint = "Organe de filtration du sang et qui produit l'urine."
+grid_position = Vector2i(1, 0)
+
+[sub_resource type="Resource" id="Resource_32y6l"]
+script = ExtResource("1_i7sa1")
+word = "SOLVANT"
+hint = "Se dit d’une substance capable de dissoudre un soluté."
+grid_position = Vector2i(0, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_aekqp"]
+script = ExtResource("1_i7sa1")
+word = "ESSENTIELS"
+hint = "Se dit des acides aminés qui ne peuvent être synthétisés par l’organisme."
+grid_position = Vector2i(2, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_0lpm2"]
+script = ExtResource("1_i7sa1")
+word = "AMIDON"
+hint = "Réserve glucidique des végétaux."
+grid_position = Vector2i(0, 6)
+
+[resource]
+script = ExtResource("2_umjwc")
+clues = Array[ExtResource("1_i7sa1")]([SubResource("Resource_g6fwl"), SubResource("Resource_n3vew"), SubResource("Resource_32y6l"), SubResource("Resource_aekqp"), SubResource("Resource_0lpm2")])
+school_year = "S4"
+title = "La cellule"

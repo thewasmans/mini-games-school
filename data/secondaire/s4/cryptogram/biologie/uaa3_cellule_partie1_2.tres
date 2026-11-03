@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://sgp588axehu1"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_68oii"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_s84rw"]
+
+[sub_resource type="Resource" id="Resource_gyacf"]
+script = ExtResource("1_68oii")
+text = "Les glucides fournissent l'énergie cellulaire."
+
+[sub_resource type="Resource" id="Resource_q71qp"]
+script = ExtResource("1_68oii")
+text = "Les lipides structurent les membranes."
+
+[sub_resource type="Resource" id="Resource_ycm8t"]
+script = ExtResource("1_68oii")
+text = "Les protéines assurent les fonctions vitales."
+
+[sub_resource type="Resource" id="Resource_wgepc"]
+script = ExtResource("1_68oii")
+text = "Les acides aminés constituent les protéines."
+
+[resource]
+script = ExtResource("2_s84rw")
+hidden_letter_ratio = 0.05
+phrases = Array[ExtResource("1_68oii")]([SubResource("Resource_gyacf"), SubResource("Resource_q71qp"), SubResource("Resource_ycm8t"), SubResource("Resource_wgepc")])
+school_year = "S4"
+title = "La cellule"
