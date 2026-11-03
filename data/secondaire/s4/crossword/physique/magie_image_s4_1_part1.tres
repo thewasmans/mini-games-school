@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cs1s7qwnrvam8"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_fcwlw"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_557ed"]
+
+[sub_resource type="Resource" id="Resource_h6w8s"]
+script = ExtResource("1_fcwlw")
+word = "POLYCHROMATIQUE"
+hint = "Se dit d'une lumière composée de radiations de différentes longueurs d'onde."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_hbk22"]
+script = ExtResource("1_fcwlw")
+word = "SNELL"
+hint = "Loi permettant de calculer les angles incidents et réfractés."
+grid_position = Vector2i(0, 2)
+
+[sub_resource type="Resource" id="Resource_2r5du"]
+script = ExtResource("1_fcwlw")
+word = "ISOTROPIE"
+hint = "Caractérise l'invariance des propriétés physiques d'un milieu en fonction de la direction."
+grid_position = Vector2i(0, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_0gu3q"]
+script = ExtResource("1_fcwlw")
+word = "REFLEXION"
+hint = "Changement de direction de la lumière à l'interface de deux milieux qui la fait revenir vers son milieu d'origine."
+grid_position = Vector2i(2, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_6cdk4"]
+script = ExtResource("1_fcwlw")
+word = "LUXMETRE"
+hint = "Unité de mesure de l’éclairement d’une source lumineuse."
+grid_position = Vector2i(0, 14)
+
+[resource]
+script = ExtResource("2_557ed")
+clues = Array[ExtResource("1_fcwlw")]([SubResource("Resource_h6w8s"), SubResource("Resource_hbk22"), SubResource("Resource_2r5du"), SubResource("Resource_0gu3q"), SubResource("Resource_6cdk4")])
+school_year = "S4"
+title = "La magie de l'image"

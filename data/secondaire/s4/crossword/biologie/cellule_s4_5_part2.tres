@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://75ysdjd8eu6i"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_vwgxl"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_407fo"]
+
+[sub_resource type="Resource" id="Resource_p6mpc"]
+script = ExtResource("1_vwgxl")
+word = "TRANSPLANTATION"
+hint = "Greffe d'un organe depuis un donneur vers un receveur."
+grid_position = Vector2i(6, 10)
+
+[sub_resource type="Resource" id="Resource_6j5qb"]
+script = ExtResource("1_vwgxl")
+word = "OPTIQUE"
+hint = "Technique de microscopie basée sur l'utilisation de lentilles."
+grid_position = Vector2i(0, 11)
+
+[sub_resource type="Resource" id="Resource_0myr6"]
+script = ExtResource("1_vwgxl")
+word = "LYSOSOME"
+hint = "Vésicule contenant des enzymes hydrolytiques qui digèrent des macromolécules."
+grid_position = Vector2i(6, 2)
+
+[sub_resource type="Resource" id="Resource_qrisr"]
+script = ExtResource("1_vwgxl")
+word = "ORGANITE"
+hint = "Compartiment différencié contenu dans les cellules eucaryotes et qui a des fonctions bien précises, comme l'appareil de golgi."
+grid_position = Vector2i(8, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_pmee3"]
+script = ExtResource("1_vwgxl")
+word = "CHLOROPLASTE"
+hint = "Organite caractéristique des cellules chlorophylliennes permettant la photosynthèse."
+grid_position = Vector2i(6, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_p7ri4"]
+script = ExtResource("1_vwgxl")
+word = "NUCLEOTIDE"
+hint = "Molécule composée de phosphate + sucre (désoxyribose) + base azotée."
+grid_position = Vector2i(12, 7)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_407fo")
+clues = Array[ExtResource("1_vwgxl")]([SubResource("Resource_p6mpc"), SubResource("Resource_6j5qb"), SubResource("Resource_0myr6"), SubResource("Resource_qrisr"), SubResource("Resource_pmee3"), SubResource("Resource_p7ri4")])
+school_year = "S4"
+title = "La cellule"

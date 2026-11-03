@@ -1,0 +1,56 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://dsr2ie060qki5"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_0cxbm"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_74dld"]
+
+[sub_resource type="Resource" id="Resource_cqu08"]
+script = ExtResource("1_0cxbm")
+question = "A quel groupe cladistique appartiennent les reptiles ?"
+choices = Array[String](["Paraphylétique.", "Polyphylétique.", "Monophylétique.", "Oligophylétique."])
+
+[sub_resource type="Resource" id="Resource_gx11n"]
+script = ExtResource("1_0cxbm")
+question = "Quelle caractéristique relie les crocodiles aux oiseaux ?"
+choices = Array[String](["Ce sont de grands voyageurs.", "Ce sont des prédateurs nocturnes.", "Ils sont vivipares.", "La présence d'un gésier."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_d1xcy"]
+script = ExtResource("1_0cxbm")
+question = "Qu'est-ce qu'une espèce invasive ?"
+choices = Array[String](["Une espèce en voie d'extinction.", "Une espèce non indigène dont l'introduction constitue une menace.", "Une espèce indigène dont l'introduction constitue une menace.", "Une espèce gravement menacée."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ob35g"]
+script = ExtResource("1_0cxbm")
+question = "Qu'est-ce que la dérive génétique ?"
+choices = Array[String](["La création de nouvelles espèces à partir de populations d'individus.", "C'est l'évolution d'une population de manière orientée.", "Un principe reposant sur l'innovation évolutive.", "Des homologies entre espèces."])
+
+[sub_resource type="Resource" id="Resource_v3a0q"]
+script = ExtResource("1_0cxbm")
+question = "En quoi consiste la loi de l'usage ?"
+choices = Array[String](["Théorie proposée par Darwin.", "Adaptation des espèces piscicoles.", "Mécanisme expliquant l'évolution des espèces selon leur utilisation.", "Sélection des espèces les plus fortes."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_4meni"]
+script = ExtResource("1_0cxbm")
+question = "Qu'est-ce que les structures analogues ?"
+choices = Array[String](["Une fonction différente d'origine évolutive différente.", "Une fonction différente d'origine évolutive identique.", "Une fonction similaire d'origine évolutive différente.", "Une fonction perdue."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_luo0e"]
+script = ExtResource("1_0cxbm")
+question = "Qu'est-ce que les structures homologues ?"
+choices = Array[String](["Une fonction différente d'origine évolutive différente.", "Une fonction différente d'origine évolutive identique.", "Une fonction similaire d'origine évolutive différente.", "Une fonction perdue."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_7ei0g"]
+script = ExtResource("1_0cxbm")
+question = "En quoi consiste l'homoplasie ?"
+choices = Array[String](["Caractère du même ancêtre.", "Caractère partagé par plusieurs espèces qui n'est pas hérité d'un ancêtre commun.", "Caractère venant d'une bactérie.", "Méthode en phylogénie."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_74dld")
+questions = Array[ExtResource("1_0cxbm")]([SubResource("Resource_cqu08"), SubResource("Resource_gx11n"), SubResource("Resource_d1xcy"), SubResource("Resource_ob35g"), SubResource("Resource_v3a0q"), SubResource("Resource_4meni"), SubResource("Resource_luo0e"), SubResource("Resource_7ei0g")])
+school_year = "S4"
+title = "L'évolution"

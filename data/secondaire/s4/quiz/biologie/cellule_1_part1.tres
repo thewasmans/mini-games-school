@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://dgafblioh5j25"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_4xrtu"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_x2o5x"]
+
+[sub_resource type="Resource" id="Resource_ym50d"]
+script = ExtResource("1_4xrtu")
+question = "Qu’est-ce qui permet à la cellule d’absorber les nutriments et d’éliminer les déchets ?"
+choices = Array[String](["La méiose.", "La membrane cellulaire.", "La mitose.", "Les globules blancs."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_vpu0b"]
+script = ExtResource("1_4xrtu")
+question = "Quelle structure est considérée comme étant l’unité fondamentale du vivant ?"
+choices = Array[String](["Le virus.", "La bactérie.", "La cellule.", "La protéine."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_e6lu0"]
+script = ExtResource("1_4xrtu")
+question = "Quel élément est commun entre la cellule procaryote et la cellule eucaryote ?"
+choices = Array[String](["L'ADN.", "Le noyau.", "Le chloroplaste.", "La vacuole."])
+
+[sub_resource type="Resource" id="Resource_ps57j"]
+script = ExtResource("1_4xrtu")
+question = "Quelle particularité les eucaryotes possèdent-ils par rapport aux procaryotes ?"
+choices = Array[String](["L'ADN.", "Des ribosomes.", "Un noyau.", "Une cellule."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_76lbn"]
+script = ExtResource("1_4xrtu")
+question = "Quel élément est similaire entre le microscope électronique et le microscope optique ?"
+choices = Array[String](["Le pouvoir de résolution.", "Observer des éléments invisibles à l’œil nu.", "Le prix.", "Le fonctionnement."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_s30co"]
+script = ExtResource("1_4xrtu")
+question = "Comment appelle-t-on la partie liquide du cytoplasme ?"
+choices = Array[String](["Le cytosol.", "Le plasma.", "Le sang.", "La vacuole."])
+
+[sub_resource type="Resource" id="Resource_yu32a"]
+script = ExtResource("1_4xrtu")
+question = "Pourquoi dit-on que les archées sont extrémophiles ?"
+choices = Array[String](["Car elles survivent dans des conditions extrêmes.", "Car elles se reproduisent vite.", "Car elles grandissent vite.", "Car elles ne mangent pas."])
+
+[resource]
+script = ExtResource("2_x2o5x")
+questions = Array[ExtResource("1_4xrtu")]([SubResource("Resource_ym50d"), SubResource("Resource_vpu0b"), SubResource("Resource_e6lu0"), SubResource("Resource_ps57j"), SubResource("Resource_76lbn"), SubResource("Resource_s30co"), SubResource("Resource_yu32a")])
+school_year = "S4"
+title = "La cellule"

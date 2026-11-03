@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://day2mu25xrinp"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_vs2k0"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_dxoo4"]
+
+[sub_resource type="Resource" id="Resource_0ttci"]
+script = ExtResource("1_vs2k0")
+word = "STOECHIOMETRIE"
+hint = "Méthode de pondération des substances qui interagissent dans une réaction chimique."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_fasx0"]
+script = ExtResource("1_vs2k0")
+word = "DENSITE"
+hint = "Rapport de la masse volumique d'un corps à la masse volumique d'un référent."
+grid_position = Vector2i(6, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_yg8hs"]
+script = ExtResource("1_vs2k0")
+word = "ISOTOPE"
+hint = "Elément chimique qui possède le même nombre de protons (et d'électrons), mais qui diffère par le nombre de neutrons."
+grid_position = Vector2i(1, 6)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_10noh"]
+script = ExtResource("1_vs2k0")
+word = "BINAIRE"
+hint = "Corps composé de deux éléments chimiques, comme le HCl."
+grid_position = Vector2i(0, 6)
+
+[sub_resource type="Resource" id="Resource_cl2k1"]
+script = ExtResource("1_vs2k0")
+word = "CNTP"
+hint = "Acronyme pour les conditions normales de température et de pression."
+grid_position = Vector2i(2, 1)
+
+[resource]
+script = ExtResource("2_dxoo4")
+clues = Array[ExtResource("1_vs2k0")]([SubResource("Resource_0ttci"), SubResource("Resource_fasx0"), SubResource("Resource_yg8hs"), SubResource("Resource_10noh"), SubResource("Resource_cl2k1")])
+school_year = "S4"
+title = "Les espèces chimiques"

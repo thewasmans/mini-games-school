@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dmur2c4bvidug"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_ekg7a"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_w00g4"]
+
+[sub_resource type="Resource" id="Resource_5yyf8"]
+script = ExtResource("1_ekg7a")
+word = "PROTEINE"
+hint = "Molécule complexe formée par une chaîne d’acides aminés."
+grid_position = Vector2i(1, 8)
+
+[sub_resource type="Resource" id="Resource_hs41t"]
+script = ExtResource("1_ekg7a")
+word = "SUCROSE"
+hint = "Disaccharide composé de glucose et de fructose, aussi appelé saccharose."
+grid_position = Vector2i(4, 4)
+
+[sub_resource type="Resource" id="Resource_m1o4u"]
+script = ExtResource("1_ekg7a")
+word = "HEMOGLOBINE"
+hint = "Pigment permettant le transport de l'oxygène dans le sang."
+grid_position = Vector2i(0, 2)
+
+[sub_resource type="Resource" id="Resource_q66j2"]
+script = ExtResource("1_ekg7a")
+word = "EXOCYTOSE"
+hint = "Mécanisme de transport vésiculaire vers l'extérieur d'une cellule."
+grid_position = Vector2i(2, 0)
+
+[sub_resource type="Resource" id="Resource_33bts"]
+script = ExtResource("1_ekg7a")
+word = "GLYCOGENE"
+hint = "Réserve glucidique des animaux."
+grid_position = Vector2i(1, 6)
+
+[sub_resource type="Resource" id="Resource_g3x4n"]
+script = ExtResource("1_ekg7a")
+word = "CELLULOSE"
+hint = "Polysaccharide qui constitue la paroi cellulosique des végétaux chlorophylliens."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_w00g4")
+clues = Array[ExtResource("1_ekg7a")]([SubResource("Resource_5yyf8"), SubResource("Resource_hs41t"), SubResource("Resource_m1o4u"), SubResource("Resource_q66j2"), SubResource("Resource_33bts"), SubResource("Resource_g3x4n")])
+school_year = "S4"
+title = "La cellule"
