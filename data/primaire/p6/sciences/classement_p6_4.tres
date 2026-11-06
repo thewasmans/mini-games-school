@@ -1,0 +1,67 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cld60llo2ioj3"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_1v2np"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_cv4tc"]
+
+[sub_resource type="Resource" id="Resource_7jbty"]
+script = ExtResource("1_1v2np")
+word = "ABEILLE"
+hint = "Insecte social qui meurt quelques heures après avoir piqué."
+grid_position = Vector2i(6, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_gmi18"]
+script = ExtResource("1_1v2np")
+word = "ESPECES"
+hint = "Individus qui se ressemblent physiquement et qui sont capables de se reproduire entre eux. Leurs descendants sont viables et féconds."
+grid_position = Vector2i(14, 7)
+
+[sub_resource type="Resource" id="Resource_3fsfh"]
+script = ExtResource("1_1v2np")
+word = "ORDONNER"
+hint = "Organiser des espèces selon un ordre croissant ou décroissant."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_vllk5"]
+script = ExtResource("1_1v2np")
+word = "TIQUE"
+hint = "Arachnide acarien parasite des animaux se nourrissant de sang."
+grid_position = Vector2i(12, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_tr0el"]
+script = ExtResource("1_1v2np")
+word = "INVESTIGATION"
+hint = "Démarche scientifique qui regroupe plusieurs stratégies opérationnelles visant à résoudre des problématiques."
+grid_position = Vector2i(3, 4)
+
+[sub_resource type="Resource" id="Resource_p6ki5"]
+script = ExtResource("1_1v2np")
+word = "TRIER"
+hint = "Regrouper des espèces selon un critère binaire (a ou n'a pas)."
+grid_position = Vector2i(0, 1)
+
+[sub_resource type="Resource" id="Resource_tb5p2"]
+script = ExtResource("1_1v2np")
+word = "ATTRIBUT"
+hint = "Caractère de ce qui appartient à une espèce."
+grid_position = Vector2i(8, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_h14lx"]
+script = ExtResource("1_1v2np")
+word = "RAT"
+hint = "Petit mammifère rongeur social que l'on retrouve en ville et en campagne."
+grid_position = Vector2i(8, 6)
+
+[sub_resource type="Resource" id="Resource_03ya6"]
+script = ExtResource("1_1v2np")
+word = "MOULE"
+hint = "Bivalve que l'on retrouve dans la mer et que l'on mange avec des frites."
+grid_position = Vector2i(14, 3)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_cv4tc")
+clues = Array[ExtResource("1_1v2np")]([SubResource("Resource_7jbty"), SubResource("Resource_gmi18"), SubResource("Resource_3fsfh"), SubResource("Resource_vllk5"), SubResource("Resource_tr0el"), SubResource("Resource_p6ki5"), SubResource("Resource_tb5p2"), SubResource("Resource_h14lx"), SubResource("Resource_03ya6")])
