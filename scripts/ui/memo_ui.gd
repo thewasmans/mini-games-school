@@ -7,6 +7,10 @@ signal progress_changed(completed_count: int, total_count: int)
 const CORRECT_COLOR := Color(0.5, 1.0, 0.5)
 const INCORRECT_COLOR := Color(1.0, 0.5, 0.5)
 const NEXT_DELAY := 0.6
+const CORRECT_FLASH_COLOR := Color(1.5, 1.9, 1.5)
+const CORRECT_POP_SCALE := 1.15
+const APPEAR_STAGGER := 0.06
+const COMPLETED_DELAY := 0.8
 
 @export var question_label: Label
 @export var image_rect: TextureRect
@@ -33,6 +37,8 @@ func _show_question() -> void:
 		button.text = question_data.choices[choice_index]
 		button.disabled = false
 		button.modulate = Color.WHITE
+		UIFeedback.appear(button, choice_index * APPEAR_STAGGER)
+	UIFeedback.appear(question_label, 0.0)
 
 func _on_choice_pressed(choice_index: int) -> void:
 	var question_data := _questions[_question_index]
@@ -40,13 +46,16 @@ func _on_choice_pressed(choice_index: int) -> void:
 		var wrong_button := choice_buttons[choice_index]
 		wrong_button.disabled = true
 		wrong_button.modulate = INCORRECT_COLOR
+		UIFeedback.shake(wrong_button)
 		return
 	for button in choice_buttons:
 		button.disabled = true
-	choice_buttons[question_data.correct_choice_index].modulate = CORRECT_COLOR
+	UIFeedback.pop(choice_buttons[question_data.correct_choice_index], 0.0, CORRECT_POP_SCALE, CORRECT_FLASH_COLOR, CORRECT_COLOR)
 	_question_index += 1
 	progress_changed.emit(_question_index, _questions.size())
 	if _question_index >= _questions.size():
+		UIFeedback.spawn_confetti(self, size / 2.0)
+		await get_tree().create_timer(UIFeedback.POP_DURATION + COMPLETED_DELAY).timeout
 		completed.emit()
 		return
 	await get_tree().create_timer(NEXT_DELAY).timeout

@@ -1,5 +1,12 @@
 class_name StudyLevelData
-extends Resource
+extends RefCounted
 
-@export var name: String = ""
-@export var subjects: Array[SubjectData] = []
+var name: String
+var school_years: Array[SchoolYearData]
+
+func _init(study_level_name: String, study_level_school_years: Array[SchoolYearData]) -> void:
+	name = study_level_name
+	school_years = study_level_school_years
+
+func has_levels() -> bool:
+	return school_years.any(func(school_year: SchoolYearData) -> bool: return school_year.has_levels())

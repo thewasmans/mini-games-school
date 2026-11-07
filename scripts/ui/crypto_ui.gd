@@ -5,6 +5,11 @@ signal completed
 signal progress_changed(completed_count: int, total_count: int)
 
 const NORMAL_COLOR := Color.WHITE
+const TYPED_BOUNCE_SCALE := 1.3
+const CORRECT_FLASH_COLOR := Color(1.5, 1.9, 1.5)
+const CORRECT_POP_SCALE := 1.3
+const SUCCESS_LETTER_STAGGER := 0.04
+const COMPLETED_DELAY := 0.8
 const CORRECT_COLOR := Color(0.5, 1.0, 0.5)
 const INCORRECT_COLOR := Color(1.0, 0.5, 0.5)
 const SLOT_SIZE := Vector2(10, 38)
@@ -159,6 +164,7 @@ func _show_slot_as_letter(slot: LineEdit) -> void:
 func _on_slot_text_changed(new_text: String, character_index: int) -> void:
 	_mark_slot_edited(character_index)
 	if new_text != "":
+		UIFeedback.bounce(_slots[character_index], TYPED_BOUNCE_SCALE)
 		_focus_next_slot(character_index)
 	_refresh_slot_box(_slots[character_index])
 	if _is_complete():
@@ -202,22 +208,30 @@ func _is_complete() -> bool:
 func _validate() -> void:
 	var solution := _puzzle.solution()
 	_incorrect_indices.clear()
-	for character_index in _slots:
+	var sorted_indices := _sorted_slot_indices()
+	for slot_order in sorted_indices.size():
+		var character_index: int = sorted_indices[slot_order]
 		var slot: LineEdit = _slots[character_index]
 		if slot.text.to_upper() == solution[character_index].to_upper():
-			slot.modulate = CORRECT_COLOR
+			UIFeedback.pop(slot, slot_order * SUCCESS_LETTER_STAGGER, CORRECT_POP_SCALE, CORRECT_FLASH_COLOR, CORRECT_COLOR)
 		else:
 			slot.modulate = INCORRECT_COLOR
+			UIFeedback.shake(slot)
 			_incorrect_indices[character_index] = true
 	_update_fix_errors_button()
 	if not _incorrect_indices.is_empty():
+		UIFeedback.appear(fix_errors_button, 0.0)
 		return
 	for character_index in _slots:
 		_slots[character_index].editable = false
+	var success_duration := sorted_indices.size() * SUCCESS_LETTER_STAGGER + UIFeedback.POP_DURATION
 	if _puzzle_index == _crypto_data.phrases.size() - 1:
+		UIFeedback.spawn_confetti(self, size / 2.0)
+		await get_tree().create_timer(success_duration + COMPLETED_DELAY).timeout
 		_advance()
 		return
 	validate_button.show()
+	UIFeedback.appear(validate_button, success_duration)
 	validate_button.grab_focus()
 
 func _on_validate_button_pressed() -> void:

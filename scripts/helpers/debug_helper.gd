@@ -15,6 +15,7 @@ static var auto_prefill := false
 static var auto_validate := false
 static var show_hints := false
 
+var _game_manager: GameManager
 var _mini_game_ui
 var _cheat: MiniGameCheat
 var _level: Level
@@ -23,6 +24,9 @@ var _hint_label: Label
 var _ready_done := false
 var _prefill_running := false
 var _hint_refresh_countdown := 0.0
+
+func _init(game_manager: GameManager) -> void:
+	_game_manager = game_manager
 
 func _ready() -> void:
 	if not OS.has_feature("editor"):
@@ -112,6 +116,12 @@ func _build_ui() -> void:
 	row.add_child(_make_toggle("Auto select / prefill", auto_prefill, _on_prefill_toggled))
 	row.add_child(_make_toggle("Auto validate", auto_validate, _on_validate_toggled))
 	row.add_child(_make_toggle("Show hints", show_hints, _on_hints_toggled))
+
+	var unlock_button := Button.new()
+	unlock_button.text = "Unlock all levels"
+	unlock_button.add_theme_font_size_override("font_size", FONT_SIZE)
+	unlock_button.pressed.connect(_game_manager.game_state.unlock_all_levels)
+	row.add_child(unlock_button)
 
 	_hint_label = Label.new()
 	_hint_label.visible = false

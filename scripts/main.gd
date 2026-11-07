@@ -3,6 +3,10 @@ extends Node
 
 @export var game_manager: GameManager
 
+@export_category("Main Category")
+@export var number = 3
+@export var string = ""
+
 func _ready() -> void:
 	ButtonPressAnimation.watch_default_theme_buttons(get_tree())
 	game_manager.initialize()
@@ -11,4 +15,4 @@ func _ready() -> void:
 func _spawn_debug_helper() -> void:
 	if not OS.has_feature("editor"):
 		return
-	add_child(DebugHelper.new())
+	add_child(DebugHelper.new(game_manager))
