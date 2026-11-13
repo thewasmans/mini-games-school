@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://ewov5mglodbo" path="res://scripts/level/level.gd" id="1_8od4f"]
 [ext_resource type="PackedScene" uid="uid://bsw4556x5xgdg" path="res://content/prefabs/ui/mini_games/crossword_ui.tscn" id="2_xword"]
+[ext_resource type="Texture2D" uid="uid://c3upgh7dpfrhf" path="res://content/sprites/ui/ui_background.png" id="3_yoao0"]
 [ext_resource type="PackedScene" uid="uid://bmemouiscn012" path="res://content/prefabs/ui/mini_games/memo_ui.tscn" id="4_memo"]
-[ext_resource type="Texture2D" uid="uid://884oxmw0b65s" path="res://content/sprites/ui/ui_background_science.png" id="5_by0ps"]
 [ext_resource type="PackedScene" uid="uid://ccryptuiscn12" path="res://content/prefabs/ui/mini_games/crypto_ui.tscn" id="5_crypto"]
 [ext_resource type="Texture2D" uid="uid://bssxvehr8hskc" path="res://content/sprites/ui/ui_icon_return.png" id="6_back"]
 
@@ -31,7 +31,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("5_by0ps")
+texture = ExtResource("3_yoao0")
 expand_mode = 3
 stretch_mode = 6
 

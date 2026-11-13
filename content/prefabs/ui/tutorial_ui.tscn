@@ -5,15 +5,17 @@
 
 [sub_resource type="Resource" id="Resource_slide1"]
 script = ExtResource("2_slide")
+image = null
 text = "Bienvenue ! Choisis un niveau d'étude pour commencer à jouer."
 metadata/_custom_type_script = "uid://bslidedatagd1"
 
 [sub_resource type="Resource" id="Resource_slide2"]
 script = ExtResource("2_slide")
+image = null
 text = "Résous les mini-jeux pour débloquer le niveau suivant."
 metadata/_custom_type_script = "uid://bslidedatagd1"
 
-[node name="TutorialUI" type="Control" unique_id=1631184966 node_paths=PackedStringArray("image_rect", "text_label", "next_button")]
+[node name="TutorialUI" type="Control" node_paths=PackedStringArray("image_rect", "text_label", "next_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,7 +28,7 @@ image_rect = NodePath("Card/MarginContainer/VBoxContainer/ImageSlot/ImageFrame")
 text_label = NodePath("Card/MarginContainer/VBoxContainer/TextLabel")
 next_button = NodePath("Card/MarginContainer/VBoxContainer/NextButton")
 
-[node name="DimBackground" type="ColorRect" parent="." unique_id=823623018]
+[node name="DimBackground" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -35,7 +37,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.65)
 
-[node name="Card" type="Panel" parent="." unique_id=1725428156]
+[node name="Card" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -49,7 +51,7 @@ offset_bottom = 320.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Card" unique_id=1965258911]
+[node name="MarginContainer" type="MarginContainer" parent="Card"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -61,15 +63,15 @@ theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 30
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Card/MarginContainer" unique_id=820938266]
+[node name="VBoxContainer" type="VBoxContainer" parent="Card/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 24
 
-[node name="ImageSlot" type="Control" parent="Card/MarginContainer/VBoxContainer" unique_id=1523341682]
+[node name="ImageSlot" type="Control" parent="Card/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(400, 260)
 layout_mode = 2
 
-[node name="ImageBackground" type="ColorRect" parent="Card/MarginContainer/VBoxContainer/ImageSlot" unique_id=1611931030]
+[node name="ImageBackground" type="ColorRect" parent="Card/MarginContainer/VBoxContainer/ImageSlot"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -78,7 +80,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.25)
 
-[node name="ImageFrame" type="TextureRect" parent="Card/MarginContainer/VBoxContainer/ImageSlot" unique_id=1923538408]
+[node name="ImageFrame" type="TextureRect" parent="Card/MarginContainer/VBoxContainer/ImageSlot"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -88,7 +90,7 @@ grow_vertical = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextLabel" type="Label" parent="Card/MarginContainer/VBoxContainer" unique_id=1281471617]
+[node name="TextLabel" type="Label" parent="Card/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_vertical = 3
@@ -98,7 +100,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="NextButton" type="Button" parent="Card/MarginContainer/VBoxContainer" unique_id=2117262579]
+[node name="NextButton" type="Button" parent="Card/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(220, 80)
 layout_mode = 2
 size_flags_horizontal = 4
