@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cpry1s4pkr00t"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_00ejj"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_prcit"]
+
+[sub_resource type="Resource" id="Resource_bxpiu"]
+script = ExtResource("1_00ejj")
+word = "USAGE"
+hint = "Loi de l'évolution proposée par Lamarck."
+grid_position = Vector2i(4, 6)
+
+[sub_resource type="Resource" id="Resource_5dcwb"]
+script = ExtResource("1_00ejj")
+word = "MEIOSE"
+hint = "Processus de division cellulaire permettant d'obtenir des cellules filles génétiquement différentes."
+grid_position = Vector2i(8, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_jq5a8"]
+script = ExtResource("1_00ejj")
+word = "ANCETRE"
+hint = "Ascendant, se dit d'une espèce dont une autre provient."
+grid_position = Vector2i(0, 4)
+
+[sub_resource type="Resource" id="Resource_ofyv6"]
+script = ExtResource("1_00ejj")
+word = "DARWIN"
+hint = "Scientifique à l'origine du mécanisme de la sélection naturelle."
+grid_position = Vector2i(0, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_vrlt6"]
+script = ExtResource("1_00ejj")
+word = "SELECTION"
+hint = "Peut être naturelle ou artificielle, théorie de l'évolution proposée par Darwin."
+grid_position = Vector2i(2, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_obnof"]
+script = ExtResource("1_00ejj")
+word = "FOSSILE"
+hint = "Trace d'un organisme minéralisé dans une roche sédimentaire."
+
+[sub_resource type="Resource" id="Resource_efbs8"]
+script = ExtResource("1_00ejj")
+word = "CRISES"
+hint = "Périodes durant lesquelles, à l’échelle du globe, un grand nombre d’espèces ont disparu simultanément."
+grid_position = Vector2i(5, 3)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_prcit")
+clues = Array[ExtResource("1_00ejj")]([SubResource("Resource_bxpiu"), SubResource("Resource_5dcwb"), SubResource("Resource_jq5a8"), SubResource("Resource_ofyv6"), SubResource("Resource_vrlt6"), SubResource("Resource_obnof"), SubResource("Resource_efbs8")])
+school_year = "S4"
+title = "L'évolution"

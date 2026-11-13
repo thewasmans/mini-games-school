@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bcumyc1si43r0"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_vla4r"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_l45l8"]
+
+[sub_resource type="Resource" id="Resource_pmj25"]
+script = ExtResource("1_vla4r")
+word = "LENTILLES"
+hint = "Objets transparents faits de verre ou de plastique dont au moins une des faces est courbe et qui ont la propriété de réfracter la lumière."
+grid_position = Vector2i(0, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_eg6ud"]
+script = ExtResource("1_vla4r")
+word = "LUMIERE"
+hint = "Onde polychromatique qui transporte de l'énergie sous forme de photons."
+grid_position = Vector2i(0, 8)
+
+[sub_resource type="Resource" id="Resource_052hj"]
+script = ExtResource("1_vla4r")
+word = "REFRACTION"
+hint = "Phénomène lumineux au cours duquel la lumière dévie de sa trajectoire lorsqu'elle passe d’un milieu transparent à un autre."
+grid_position = Vector2i(3, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_wojlx"]
+script = ExtResource("1_vla4r")
+word = "PRESBYTIE"
+hint = "Perte progressive liée à l'âge de la capacité de l'œil à voir nettement les objets proches, autre que la cataracte."
+grid_position = Vector2i(6, 0)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_l45l8")
+clues = Array[ExtResource("1_vla4r")]([SubResource("Resource_pmj25"), SubResource("Resource_eg6ud"), SubResource("Resource_052hj"), SubResource("Resource_wojlx")])
+school_year = "S4"
+title = "La magie de l'image"

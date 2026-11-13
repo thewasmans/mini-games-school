@@ -1,0 +1,56 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://c0avqo0w158ou"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_0fi1o"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_2g0vu"]
+
+[sub_resource type="Resource" id="Resource_t741m"]
+script = ExtResource("1_0fi1o")
+question = "Quel est l'organite végétal qui stocke la matière que la cellule n'utilise pas immédiatement ?"
+choices = Array[String](["La vacuole.", "Le noyau.", "Le réticulum endoplasmique.", "Le cytoplasme."])
+
+[sub_resource type="Resource" id="Resource_8gi2u"]
+script = ExtResource("1_0fi1o")
+question = "Quel élément est gélatineux et baigne les autres organites cellulaires ?"
+choices = Array[String](["La mitochondrie.", "Le cytoplasme.", "Le noyau.", "La paroi cellulaire."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_11ug0"]
+script = ExtResource("1_0fi1o")
+question = "Quel organite est le centre de contrôle de la cellule ?"
+choices = Array[String](["Les ribosomes.", "Le centriole.", "L'ARN.", "Le noyau."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_c8afq"]
+script = ExtResource("1_0fi1o")
+question = "Quel est le rôle de la mitochondrie ?"
+choices = Array[String](["Stocker des réserves.", "Produire de l'énergie.", "Stocker l'ADN nucléaire.", "Rôle de photosynthèse."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_tdpit"]
+script = ExtResource("1_0fi1o")
+question = "Quel organite n’est pas présent dans la cellule animale ?"
+choices = Array[String](["Le noyau.", "La mitochondrie.", "Le chloroplaste.", "L'appareil de golgi."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_fkcnr"]
+script = ExtResource("1_0fi1o")
+question = "Quel élément donne la couleur verte aux chloroplastes ?"
+choices = Array[String](["Les carotènes.", "L'hémocyanine.", "L'hémoglobine.", "La chlorophylle."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_i288w"]
+script = ExtResource("1_0fi1o")
+question = "Comment se nomme le réseau de tubes qui transporte les nutriments dans la cellule ?"
+choices = Array[String](["Le réticulum endoplasmique.", "La mitochondrie.", "Le noyau.", "La vacuole."])
+
+[sub_resource type="Resource" id="Resource_kny2o"]
+script = ExtResource("1_0fi1o")
+question = "Quel est le site de la photosynthèse ?"
+choices = Array[String](["La mitochondrie.", "Le noyau.", "Le chloroplaste.", "La mitose."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("2_2g0vu")
+questions = Array[ExtResource("1_0fi1o")]([SubResource("Resource_t741m"), SubResource("Resource_8gi2u"), SubResource("Resource_11ug0"), SubResource("Resource_c8afq"), SubResource("Resource_tdpit"), SubResource("Resource_fkcnr"), SubResource("Resource_i288w"), SubResource("Resource_kny2o")])
+school_year = "S4"
+title = "La cellule"

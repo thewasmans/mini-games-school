@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://b3a37oeyviu4i"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_1jkj6"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_w1qgk"]
+
+[sub_resource type="Resource" id="Resource_y82lb"]
+script = ExtResource("1_1jkj6")
+word = "GOLGI"
+hint = "Empilement de sacs membraneux aplatis permettant le tri des protéines."
+grid_position = Vector2i(0, 5)
+
+[sub_resource type="Resource" id="Resource_8ii07"]
+script = ExtResource("1_1jkj6")
+word = "ENDOCYTOSE"
+hint = "Mécanisme de transport de molécules vers l'intérieur de la cellule."
+
+[sub_resource type="Resource" id="Resource_sn2um"]
+script = ExtResource("1_1jkj6")
+word = "RETICULUM"
+hint = "Réseau de tubules et de sacs membraneux appelés citernes."
+grid_position = Vector2i(2, 3)
+
+[sub_resource type="Resource" id="Resource_nbxho"]
+script = ExtResource("1_1jkj6")
+word = "CHOLESTEROL"
+hint = "Graisse qui réduit la fluidité de la membrane cellulaire et empêche sa solidification à basse température."
+grid_position = Vector2i(0, 8)
+
+[sub_resource type="Resource" id="Resource_nbpg1"]
+script = ExtResource("1_1jkj6")
+word = "CENTRIOLE"
+hint = "Structure composée de 9 triplets de microtubules disposés en cercle."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_w1qgk")
+clues = Array[ExtResource("1_1jkj6")]([SubResource("Resource_y82lb"), SubResource("Resource_8ii07"), SubResource("Resource_sn2um"), SubResource("Resource_nbxho"), SubResource("Resource_nbpg1")])
+school_year = "S4"
+title = "La cellule"

@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://xshar7cdngg0"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_nvfms"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_nuq0l"]
+
+[sub_resource type="Resource" id="Resource_dbg10"]
+script = ExtResource("1_nvfms")
+word = "PUISSANCE"
+hint = "Rapport entre le travail et l'unité de temps."
+grid_position = Vector2i(15, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_lob0h"]
+script = ExtResource("1_nvfms")
+word = "CHARLES"
+hint = "Loi disant que le volume d'un gaz est proportionnel à sa température absolue lorsque le nombre de particules et la pression sont constants."
+grid_position = Vector2i(17, 4)
+
+[sub_resource type="Resource" id="Resource_xq655"]
+script = ExtResource("1_nvfms")
+word = "TRANSLATION"
+hint = "Déplacement d'une figure dont toutes les parties vont dans la même direction."
+grid_position = Vector2i(6, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_84kns"]
+script = ExtResource("1_nvfms")
+word = "POTENTIELLE"
+hint = "Se dit d'une énergie liée à la position."
+grid_position = Vector2i(9, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_2hm4o"]
+script = ExtResource("1_nvfms")
+word = "MECANIQUE"
+hint = "Somme de l'énergie potentielle et de l'énergie cinétique."
+grid_position = Vector2i(17, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_o8vte"]
+script = ExtResource("1_nvfms")
+word = "HOOKE"
+hint = "Loi de comportement des solides soumis à une déformation élastique de faible amplitude."
+grid_position = Vector2i(5, 13)
+
+[resource]
+script = ExtResource("2_nuq0l")
+clues = Array[ExtResource("1_nvfms")]([SubResource("Resource_dbg10"), SubResource("Resource_lob0h"), SubResource("Resource_xq655"), SubResource("Resource_84kns"), SubResource("Resource_2hm4o"), SubResource("Resource_o8vte")])
+school_year = "S4"
+title = "Le travail"

@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://d3vsbjp4wbf4o"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_wfnc8"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_4jcl7"]
+
+[sub_resource type="Resource" id="Resource_2ma66"]
+script = ExtResource("1_wfnc8")
+text = "La nomenclature chimique nomme les substances de manière rigoureuse."
+
+[sub_resource type="Resource" id="Resource_xodp5"]
+script = ExtResource("1_wfnc8")
+text = "Les corps composés binaires associent deux éléments distincts."
+
+[sub_resource type="Resource" id="Resource_gng46"]
+script = ExtResource("1_wfnc8")
+text = "Les fonctions chimiques regroupent des substances aux propriétés analogues."
+
+[sub_resource type="Resource" id="Resource_dmr7u"]
+script = ExtResource("1_wfnc8")
+text = "Les acides et les hydroxydes caractérisent les solutions ioniques."
+
+[resource]
+script = ExtResource("2_4jcl7")
+hidden_letter_ratio = 0.05
+phrases = Array[ExtResource("1_wfnc8")]([SubResource("Resource_2ma66"), SubResource("Resource_xodp5"), SubResource("Resource_gng46"), SubResource("Resource_dmr7u")])
+school_year = "S4"
+title = "Les réactions chimiques"

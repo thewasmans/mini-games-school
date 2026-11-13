@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://c5iv2chh2o4mr"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_nyo4a"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_oapf2"]
+
+[sub_resource type="Resource" id="Resource_rafx6"]
+script = ExtResource("1_nyo4a")
+text = "Le travail d'une force dépend de son intensité et du déplacement."
+
+[sub_resource type="Resource" id="Resource_tcrqe"]
+script = ExtResource("1_nyo4a")
+text = "Une force colinéaire au déplacement effectue un travail maximal."
+
+[sub_resource type="Resource" id="Resource_lyvdi"]
+script = ExtResource("1_nyo4a")
+text = "La puissance mécanique exprime la rapidité d'un transfert d'énergie."
+
+[sub_resource type="Resource" id="Resource_3oecl"]
+script = ExtResource("1_nyo4a")
+text = "Les machines simples facilitent l'exécution d'un travail mécanique."
+
+[resource]
+script = ExtResource("2_oapf2")
+hidden_letter_ratio = 0.05
+phrases = Array[ExtResource("1_nyo4a")]([SubResource("Resource_rafx6"), SubResource("Resource_tcrqe"), SubResource("Resource_lyvdi"), SubResource("Resource_3oecl")])
+school_year = "S4"
+title = "Travail et énergie"

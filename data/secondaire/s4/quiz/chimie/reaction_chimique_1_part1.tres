@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://dwum1jms40s4p"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_1uptb"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_wxvib"]
+
+[sub_resource type="Resource" id="Resource_x6uh0"]
+script = ExtResource("1_1uptb")
+question = "Quel est l'objectif de la dilution ?"
+choices = Array[String](["Diminuer la concentration d'une solution en y ajoutant du solvant.", "Augmenter la concentration d'une solution en y ajoutant du solvant.", "Augmenter la quantité de solvant.", "Transformer un corps solide en liquide."])
+
+[sub_resource type="Resource" id="Resource_0jlhk"]
+script = ExtResource("1_1uptb")
+question = "Comment appelons-nous les éléments situés à gauche du tableau périodique ?"
+choices = Array[String](["Les métaux.", "Les non métaux.", "Les sels.", "Les macromolécules."])
+
+[sub_resource type="Resource" id="Resource_7774v"]
+script = ExtResource("1_1uptb")
+question = "Comment appelons-nous les éléments situés à droite du tableau périodique ?"
+choices = Array[String](["Les métaux.", "Les non métaux.", "Les sels.", "Les macromolécules."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_yp4mu"]
+script = ExtResource("1_1uptb")
+question = "Comment appelons-nous les éléments chimiques de la dernière famille ?"
+choices = Array[String](["Les gaz perdus.", "Les gaz retrouvés.", "Les gaz nobles.", "Les gaz imparfaits."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_ap2u7"]
+script = ExtResource("1_1uptb")
+question = "Qu'est-ce qu'un ion ?"
+choices = Array[String](["Un atome chargé.", "Un atome neutre.", "Un gaz rare.", "Une molécule instable."])
+
+[sub_resource type="Resource" id="Resource_ibjpj"]
+script = ExtResource("1_1uptb")
+question = "Qu'est-ce qu'un cation ?"
+choices = Array[String](["Un atome chargé négativement.", "Un atome chargé positivement.", "Un atome neutre.", "Un atome sans charge."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_j7bui"]
+script = ExtResource("1_1uptb")
+question = "Qu'est-ce qu'un anion ?"
+choices = Array[String](["Un atome chargé négativement.", "Un atome chargé positivement.", "Un atome neutre.", "Un atome sans charge."])
+
+[resource]
+script = ExtResource("2_wxvib")
+questions = Array[ExtResource("1_1uptb")]([SubResource("Resource_x6uh0"), SubResource("Resource_0jlhk"), SubResource("Resource_7774v"), SubResource("Resource_yp4mu"), SubResource("Resource_ap2u7"), SubResource("Resource_ibjpj"), SubResource("Resource_j7bui")])
+school_year = "S4"
+title = "Les réactions chimiques"
