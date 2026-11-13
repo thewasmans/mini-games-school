@@ -2,8 +2,9 @@
 
 [ext_resource type="Script" uid="uid://ccryptouigd12" path="res://scripts/ui/crypto_ui.gd" id="1_crypto"]
 [ext_resource type="PackedScene" uid="uid://dyyetxjnkus7c" path="res://content/prefabs/ui/mini_games/placeholders/crypto_placeholder_phrase.tscn" id="2_placeholder_phrase"]
+[ext_resource type="PackedScene" path="res://content/prefabs/ui/virtual_keyboard.tscn" id="3_keyboard"]
 
-[node name="CryptoUI" type="Control" unique_id=763304351 node_paths=PackedStringArray("flow_container", "hint_label", "fix_errors_button", "validate_button")]
+[node name="CryptoUI" type="Control" unique_id=763304351 node_paths=PackedStringArray("flow_container", "hint_label", "fix_errors_button", "validate_button", "keyboard")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,29 +12,35 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_crypto")
-flow_container = NodePath("VBoxContainer/FlowContainer")
-hint_label = NodePath("VBoxContainer/HintLabel")
-fix_errors_button = NodePath("VBoxContainer/FixErrorsButton")
-validate_button = NodePath("VBoxContainer/ValidateButton")
+flow_container = NodePath("VBoxContainer/PhraseArea/FlowContainer")
+hint_label = NodePath("VBoxContainer/PhraseArea/HintLabel")
+fix_errors_button = NodePath("VBoxContainer/PhraseArea/FixErrorsButton")
+validate_button = NodePath("VBoxContainer/PhraseArea/ValidateButton")
+keyboard = NodePath("VBoxContainer/VirtualKeyboard")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1443419174]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 60.0
-offset_top = 130.0
-offset_right = -60.0
-offset_bottom = -130.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="PhraseArea" type="VBoxContainer" parent="VBoxContainer" unique_id=1592847306]
+layout_mode = 2
+size_flags_vertical = 3
 theme_override_constants/separation = 24
 alignment = 1
 
-[node name="FlowContainer" parent="VBoxContainer" unique_id=243756574 instance=ExtResource("2_placeholder_phrase")]
+[node name="FlowContainer" parent="VBoxContainer/PhraseArea" unique_id=243756574 instance=ExtResource("2_placeholder_phrase")]
 layout_mode = 2
 
-[node name="HintLabel" type="Label" parent="VBoxContainer" unique_id=800877155]
+[node name="HintLabel" type="Label" parent="VBoxContainer/PhraseArea" unique_id=800877155]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "Un animal fait la sieste"
@@ -41,7 +48,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="FixErrorsButton" type="Button" parent="VBoxContainer" unique_id=280260667]
+[node name="FixErrorsButton" type="Button" parent="VBoxContainer/PhraseArea" unique_id=280260667]
 visible = false
 custom_minimum_size = Vector2(320, 80)
 layout_mode = 2
@@ -49,10 +56,13 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 32
 text = "Corriger les erreurs"
 
-[node name="ValidateButton" type="Button" parent="VBoxContainer" unique_id=914101201]
+[node name="ValidateButton" type="Button" parent="VBoxContainer/PhraseArea" unique_id=914101201]
 visible = false
 custom_minimum_size = Vector2(320, 80)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 32
 text = "Valider"
+
+[node name="VirtualKeyboard" parent="VBoxContainer" unique_id=1068254913 instance=ExtResource("3_keyboard")]
+layout_mode = 2
