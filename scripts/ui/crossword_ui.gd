@@ -129,7 +129,13 @@ func _select_placement(placement: CrosswordWordPlacement) -> void:
 	_update_current_cell_color(attempt.length())
 	var direction := "Horizontal" if placement.is_horizontal else "Vertical"
 	hint_label.text = "(%s) %s" % [direction, placement.word_data.hint]
+	_start_input_editing()
+
+func _start_input_editing() -> void:
+	if input.is_editing():
+		input.unedit()
 	input.grab_focus()
+	input.edit()
 
 func _on_cell_mouse_entered(pos: Vector2i) -> void:
 	_set_word_color(_cell_placements[pos][0], HOVER_COLOR)
@@ -209,7 +215,7 @@ func _on_word_input_changed(new_text: String) -> void:
 		_validate_word(new_text)
 
 func _on_word_input_submitted(_new_text: String) -> void:
-	input.grab_focus()
+	_start_input_editing()
 
 func _validate_word(submitted_text: String) -> void:
 	if submitted_text.strip_edges().to_upper() != _selected_placement.word_data.word:
