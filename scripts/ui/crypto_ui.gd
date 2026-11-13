@@ -12,31 +12,33 @@ const SUCCESS_LETTER_STAGGER := 0.04
 const COMPLETED_DELAY := 0.8
 const CORRECT_COLOR := Color(0.5, 1.0, 0.5)
 const INCORRECT_COLOR := Color(1.0, 0.5, 0.5)
-const SLOT_SIZE := Vector2(10, 38)
 const LETTER_SIZE := Vector2(0, 44)
 const SPACE_SIZE := Vector2(16, 44)
 const WORD_LETTER_SEPARATION := 4
-const HIDDEN_BOX_STYLES: Array[StringName] = [&"normal", &"read_only"]
-const LETTER_COLOR_NAMES: Array[StringName] = [&"font_color", &"font_uneditable_color"]
-const THEME_LETTER_EMPTY: Theme = preload("res://content/theme/mini_games/crypto/theme_crypto.tres")
+const NO_SELECTION := -1
+const THEME_SLOT: Theme = preload("res://content/theme/mini_games/crypto/theme_crypto.tres")
 
 @export var flow_container: FlowContainer
 @export var hint_label: Label
 @export var fix_errors_button: Button
 @export var validate_button: Button
+@export var keyboard: VirtualKeyboardUI
 
 var _crypto_data: CryptoData
 var _puzzle_index: int = 0
 var _puzzle: CryptoPuzzle
 var _slots: Dictionary = {}
 var _incorrect_indices: Dictionary = {}
-var _hidden_box_style := StyleBoxEmpty.new()
+var _selected_index: int = NO_SELECTION
+var _locked := false
 
 func initialize(crypto_data: CryptoData) -> void:
 	_crypto_data = crypto_data
 	progress_changed.emit(_puzzle_index, _crypto_data.phrases.size())
 	fix_errors_button.pressed.connect(_correct_errors)
 	validate_button.pressed.connect(_on_validate_button_pressed)
+	keyboard.letter_pressed.connect(_on_letter_pressed)
+	keyboard.erase_pressed.connect(_on_erase_pressed)
 	_load_puzzle()
 
 func _load_puzzle() -> void:
@@ -44,6 +46,9 @@ func _load_puzzle() -> void:
 		child.queue_free()
 	_slots.clear()
 	_incorrect_indices.clear()
+	_selected_index = NO_SELECTION
+	_locked = false
+	keyboard.set_enabled(true)
 	_update_fix_errors_button()
 	validate_button.hide()
 	_puzzle = CryptoMasker.mask(_crypto_data.phrases[_puzzle_index], _crypto_data.hidden_letter_ratio)
@@ -65,27 +70,76 @@ func _load_puzzle() -> void:
 	if _slots.is_empty():
 		_advance()
 		return
-	_focus_first_slot()
+	_select_slot(_sorted_slot_indices()[0])
 
-func _focus_first_slot() -> void:
-	var first_slot: LineEdit = _slots[_sorted_slot_indices()[0]]
-	if first_slot.is_inside_tree():
-		first_slot.grab_focus()
-	else:
-		first_slot.grab_focus.call_deferred()
+func _select_slot(character_index: int) -> void:
+	if _locked:
+		return
+	if _slots.has(_selected_index):
+		_slots[_selected_index].selected = false
+	_selected_index = character_index
+	_slots[character_index].selected = true
+
+func _clear_selection() -> void:
+	if _slots.has(_selected_index):
+		_slots[_selected_index].selected = false
+	_selected_index = NO_SELECTION
+
+func _on_letter_pressed(letter: String) -> void:
+	if _locked or not _slots.has(_selected_index):
+		return
+	var character_index := _selected_index
+	var slot: CryptoSlot = _slots[character_index]
+	slot.set_letter(_displayed_letter(letter, character_index))
+	_mark_slot_edited(character_index)
+	UIFeedback.bounce(slot, TYPED_BOUNCE_SCALE)
+	_select_next_empty_slot(character_index)
+	if _is_complete():
+		_validate()
+
+func _on_erase_pressed() -> void:
+	if _locked or not _slots.has(_selected_index):
+		return
+	var slot: CryptoSlot = _slots[_selected_index]
+	if slot.text != "":
+		_clear_slot(_selected_index)
+		return
+	var indices := _sorted_slot_indices()
+	var pos := indices.find(_selected_index)
+	if pos <= 0:
+		return
+	var previous_index: int = indices[pos - 1]
+	_clear_slot(previous_index)
+	_select_slot(previous_index)
+
+func _clear_slot(character_index: int) -> void:
+	_slots[character_index].set_letter("")
+	_mark_slot_edited(character_index)
+
+func _displayed_letter(letter: String, character_index: int) -> String:
+	var expected := _puzzle.solution()[character_index]
+	return letter.to_lower() if expected == expected.to_lower() else letter
+
+func _select_next_empty_slot(character_index: int) -> void:
+	var indices := _sorted_slot_indices()
+	var pos := indices.find(character_index)
+	for offset in range(1, indices.size()):
+		var candidate: int = indices[(pos + offset) % indices.size()]
+		if _slots[candidate].text == "":
+			_select_slot(candidate)
+			return
+	_clear_selection()
 
 func _correct_errors() -> void:
 	var incorrect_indices := _incorrect_indices.keys()
 	incorrect_indices.sort()
 	for character_index in incorrect_indices:
-		var slot: LineEdit = _slots[character_index]
-		slot.text = ""
-		slot.modulate = NORMAL_COLOR
-		_refresh_slot_box(slot)
+		_slots[character_index].set_letter("")
+		_slots[character_index].modulate = NORMAL_COLOR
 	_incorrect_indices.clear()
 	_update_fix_errors_button()
 	if not incorrect_indices.is_empty():
-		_slots[incorrect_indices[0]].grab_focus()
+		_select_slot(incorrect_indices[0])
 
 func _mark_slot_edited(character_index: int) -> void:
 	_slots[character_index].modulate = NORMAL_COLOR
@@ -115,89 +169,10 @@ func _create_letter(letter: String) -> Label:
 
 func _create_slot(character_index: int) -> CryptoSlot:
 	var slot := CryptoSlot.new()
-	slot.theme = THEME_LETTER_EMPTY
-	slot.custom_minimum_size = SLOT_SIZE
-	slot.minimum_click_width = SLOT_SIZE.x
-	slot.max_length = 1
-	slot.alignment = HORIZONTAL_ALIGNMENT_CENTER
-	slot.context_menu_enabled = false
-	slot.select_all_on_focus = true
-	slot.text_changed.connect(_on_slot_text_changed.bind(character_index))
-	slot.gui_input.connect(_on_slot_gui_input.bind(character_index))
-	slot.focus_entered.connect(_refresh_slot_box.bind(slot))
-	slot.focus_exited.connect(_refresh_slot_box.bind(slot))
+	slot.theme = THEME_SLOT
+	slot.pressed.connect(_select_slot.bind(character_index))
 	_slots[character_index] = slot
 	return slot
-
-func _refresh_slot_box(slot: LineEdit) -> void:
-	if slot.has_focus() or slot.text == "":
-		_show_slot_box(slot)
-	else:
-		_show_slot_as_letter(slot)
-
-func _show_slot_box(slot: LineEdit) -> void:
-	slot.custom_minimum_size = SLOT_SIZE
-	slot.expand_to_text_length = false
-	slot.remove_theme_constant_override("minimum_character_width")
-	slot.remove_theme_constant_override("outline_size")
-	slot.remove_theme_color_override("font_outline_color")
-	slot.remove_theme_font_override("font")
-	slot.remove_theme_font_size_override("font_size")
-	for color_name in LETTER_COLOR_NAMES:
-		slot.remove_theme_color_override(color_name)
-	for style_name in HIDDEN_BOX_STYLES:
-		slot.remove_theme_stylebox_override(style_name)
-
-func _show_slot_as_letter(slot: LineEdit) -> void:
-	slot.custom_minimum_size = LETTER_SIZE
-	slot.expand_to_text_length = true
-	slot.add_theme_constant_override("minimum_character_width", 0)
-	slot.add_theme_constant_override("outline_size", slot.get_theme_constant("outline_size", "Label"))
-	slot.add_theme_color_override("font_outline_color", slot.get_theme_color("font_outline_color", "Label"))
-	slot.add_theme_font_override("font", slot.get_theme_font("font", "Label"))
-	slot.add_theme_font_size_override("font_size", slot.get_theme_font_size("font_size", "Label"))
-	for color_name in LETTER_COLOR_NAMES:
-		slot.add_theme_color_override(color_name, slot.get_theme_color("font_color", "Label"))
-	for style_name in HIDDEN_BOX_STYLES:
-		slot.add_theme_stylebox_override(style_name, _hidden_box_style)
-
-func _on_slot_text_changed(new_text: String, character_index: int) -> void:
-	_mark_slot_edited(character_index)
-	if new_text != "":
-		UIFeedback.bounce(_slots[character_index], TYPED_BOUNCE_SCALE)
-		_focus_next_slot(character_index)
-	_refresh_slot_box(_slots[character_index])
-	if _is_complete():
-		_validate()
-
-func _on_slot_gui_input(event: InputEvent, character_index: int) -> void:
-	var slot: LineEdit = _slots[character_index]
-	var key_event := event as InputEventKey
-	if key_event == null or not key_event.pressed or key_event.keycode != KEY_BACKSPACE:
-		return
-	if not slot.editable or slot.text != "":
-		return
-	slot.accept_event()
-	_clear_previous_slot(character_index)
-
-func _clear_previous_slot(character_index: int) -> void:
-	var indices := _sorted_slot_indices()
-	var pos := indices.find(character_index)
-	if pos <= 0:
-		return
-	var previous_slot: LineEdit = _slots[indices[pos - 1]]
-	previous_slot.text = ""
-	_mark_slot_edited(indices[pos - 1])
-	previous_slot.grab_focus()
-
-func _focus_next_slot(character_index: int) -> void:
-	var indices := _sorted_slot_indices()
-	var pos := indices.find(character_index)
-	for offset in range(pos + 1, indices.size()):
-		if _slots[indices[offset]].text == "":
-			_slots[indices[offset]].grab_focus()
-			return
-	_slots[character_index].release_focus()
 
 func _is_complete() -> bool:
 	for character_index in _slots:
@@ -211,8 +186,9 @@ func _validate() -> void:
 	var sorted_indices := _sorted_slot_indices()
 	for slot_order in sorted_indices.size():
 		var character_index: int = sorted_indices[slot_order]
-		var slot: LineEdit = _slots[character_index]
-		if slot.text.to_upper() == solution[character_index].to_upper():
+		var slot: CryptoSlot = _slots[character_index]
+		if LetterNormalizer.matches(slot.text, solution[character_index]):
+			slot.set_letter(solution[character_index])
 			UIFeedback.pop(slot, slot_order * SUCCESS_LETTER_STAGGER, CORRECT_POP_SCALE, CORRECT_FLASH_COLOR, CORRECT_COLOR)
 		else:
 			slot.modulate = INCORRECT_COLOR
@@ -222,8 +198,9 @@ func _validate() -> void:
 	if not _incorrect_indices.is_empty():
 		UIFeedback.appear(fix_errors_button, 0.0)
 		return
-	for character_index in _slots:
-		_slots[character_index].editable = false
+	_clear_selection()
+	_locked = true
+	keyboard.set_enabled(false)
 	var success_duration := sorted_indices.size() * SUCCESS_LETTER_STAGGER + UIFeedback.POP_DURATION
 	if _puzzle_index == _crypto_data.phrases.size() - 1:
 		UIFeedback.spawn_confetti(self, size / 2.0)

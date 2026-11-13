@@ -4,8 +4,9 @@
 [ext_resource type="Theme" uid="uid://bj5fo081gmi4i" path="res://content/theme/mini_games/crossword/theme_tile_letter.tres" id="2_tile_letter"]
 [ext_resource type="Theme" uid="uid://cpx7am23p62r1" path="res://content/theme/mini_games/crossword/theme_tile_letter_validated.tres" id="3_tile_letter_validated"]
 [ext_resource type="PackedScene" path="res://content/prefabs/ui/mini_games/placeholders/crossword_placeholder_grid.tscn" id="4_placeholder_grid"]
+[ext_resource type="PackedScene" path="res://content/prefabs/ui/virtual_keyboard.tscn" id="5_keyboard"]
 
-[node name="CrosswordUI" type="Control" unique_id=1160996909 node_paths=PackedStringArray("grid_area", "grid_container", "hint_label", "input")]
+[node name="CrosswordUI" type="Control" unique_id=1160996909 node_paths=PackedStringArray("grid_area", "grid_container", "hint_label", "keyboard")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,7 +17,7 @@ script = ExtResource("1_crossword")
 grid_area = NodePath("VBoxContainer/GridArea")
 grid_container = NodePath("VBoxContainer/GridArea/GridContainer")
 hint_label = NodePath("VBoxContainer/HintLabel")
-input = NodePath("HiddenCrosswordInput")
+keyboard = NodePath("VBoxContainer/VirtualKeyboard")
 tile_letter_theme = ExtResource("2_tile_letter")
 tile_letter_validated_theme = ExtResource("3_tile_letter_validated")
 
@@ -27,6 +28,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 16.0
 offset_right = -16.0
+offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
@@ -58,10 +60,5 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="HiddenCrosswordInput" type="LineEdit" parent="." unique_id=597246007]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(1, 1)
-layout_mode = 0
-size_flags_horizontal = 0
-size_flags_vertical = 0
-mouse_filter = 2
+[node name="VirtualKeyboard" parent="VBoxContainer" unique_id=1739520864 instance=ExtResource("5_keyboard")]
+layout_mode = 2

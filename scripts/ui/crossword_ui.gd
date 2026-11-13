@@ -21,7 +21,7 @@ const VICTORY_END_DELAY := 0.6
 @export var grid_area: Control
 @export var grid_container: GridContainer
 @export var hint_label: Label
-@export var input: LineEdit
+@export var keyboard: VirtualKeyboardUI
 @export var tile_letter_theme: Theme
 @export var tile_letter_validated_theme: Theme
 
@@ -30,6 +30,7 @@ var _cell_backgrounds: Dictionary = {}
 var _cell_placements: Dictionary = {}
 var _placement_attempts: Dictionary = {}
 var _selected_placement: CrosswordWordPlacement
+var _current_text: String = ""
 var _word_count: int
 var _solved_count: int = 0
 
@@ -41,8 +42,9 @@ func initialize(crossword_data: CrosswordData) -> void:
 	grid_area.resized.connect(_fit_grid_to_area)
 	grid_container.minimum_size_changed.connect(_fit_grid_to_area)
 	_fit_grid_to_area()
-	input.text_changed.connect(_on_word_input_changed)
-	input.text_submitted.connect(_on_word_input_submitted)
+	keyboard.letter_pressed.connect(_on_letter_pressed)
+	keyboard.erase_pressed.connect(_on_erase_pressed)
+	keyboard.set_enabled(false)
 
 func _fit_grid_to_area() -> void:
 	var grid_size := grid_container.get_combined_minimum_size()
@@ -118,24 +120,15 @@ func _on_cell_pressed(pos: Vector2i) -> void:
 
 func _select_placement(placement: CrosswordWordPlacement) -> void:
 	if _selected_placement != null:
-		_placement_attempts[_selected_placement] = input.text
+		_placement_attempts[_selected_placement] = _current_text
 	_clear_selection_color()
 	_selected_placement = placement
-	input.max_length = placement.word_data.word.length()
-	var attempt: String = _placement_attempts.get(placement, "")
-	input.text = attempt
-	input.caret_column = attempt.length()
-	_update_word_cells(attempt, false)
-	_update_current_cell_color(attempt.length())
+	_current_text = _placement_attempts.get(placement, "")
+	_update_word_cells(_current_text, false)
+	_update_current_cell_color(_current_text.length())
 	var direction := "Horizontal" if placement.is_horizontal else "Vertical"
 	hint_label.text = "(%s) %s" % [direction, placement.word_data.hint]
-	_start_input_editing()
-
-func _start_input_editing() -> void:
-	if input.is_editing():
-		input.unedit()
-	input.grab_focus()
-	input.edit()
+	keyboard.set_enabled(true)
 
 func _on_cell_mouse_entered(pos: Vector2i) -> void:
 	_set_word_color(_cell_placements[pos][0], HOVER_COLOR)
@@ -143,7 +136,7 @@ func _on_cell_mouse_entered(pos: Vector2i) -> void:
 func _on_cell_mouse_exited(pos: Vector2i) -> void:
 	var placement: CrosswordWordPlacement = _cell_placements[pos][0]
 	if placement == _selected_placement:
-		_update_current_cell_color(input.text.length())
+		_update_current_cell_color(_current_text.length())
 	else:
 		_set_word_color(placement, NORMAL_COLOR)
 
@@ -206,23 +199,31 @@ func _play_victory_feedback() -> float:
 	UIFeedback.spawn_confetti(self, UIFeedback.center_in(self, grid_area))
 	return (max_diagonal - min_diagonal) * VICTORY_WAVE_STAGGER + UIFeedback.POP_DURATION + VICTORY_END_DELAY
 
-func _on_word_input_changed(new_text: String) -> void:
-	if _selected_placement == null:
+func _on_letter_pressed(letter: String) -> void:
+	if _selected_placement == null or _current_text.length() >= _selected_placement.word_data.word.length():
 		return
-	_update_word_cells(new_text)
-	_update_current_cell_color(new_text.length())
-	if new_text.length() == _selected_placement.word_data.word.length():
-		_validate_word(new_text)
+	_current_text += letter
+	_on_current_text_changed()
 
-func _on_word_input_submitted(_new_text: String) -> void:
-	_start_input_editing()
+func _on_erase_pressed() -> void:
+	if _selected_placement == null or _current_text.is_empty():
+		return
+	_current_text = _current_text.left(-1)
+	_on_current_text_changed()
+
+func _on_current_text_changed() -> void:
+	_update_word_cells(_current_text)
+	_update_current_cell_color(_current_text.length())
+	if _current_text.length() == _selected_placement.word_data.word.length():
+		_validate_word(_current_text)
 
 func _validate_word(submitted_text: String) -> void:
-	if submitted_text.strip_edges().to_upper() != _selected_placement.word_data.word:
+	if not LetterNormalizer.matches(submitted_text, _selected_placement.word_data.word):
 		_set_word_color(_selected_placement, INCORRECT_COLOR)
 		_play_incorrect_feedback(_selected_placement)
 		return
 	_placement_attempts[_selected_placement] = _selected_placement.word_data.word
+	_update_word_cells(_selected_placement.word_data.word, false)
 	_clear_selection_color()
 	for letter_index in _selected_placement.word_data.word.length():
 		var pos := _selected_placement.cell_position(letter_index)
@@ -231,7 +232,8 @@ func _validate_word(submitted_text: String) -> void:
 	_play_success_feedback(_selected_placement)
 	_selected_placement = null
 	hint_label.text = ""
-	input.text = ""
+	_current_text = ""
+	keyboard.set_enabled(false)
 	_solved_count += 1
 	progress_changed.emit(_solved_count, _word_count)
 	if _solved_count == _word_count:
