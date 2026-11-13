@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://0gapd7wm8ydd" path="res://content/prefabs/ui/button_level_ui.tscn" id="2_npsjx"]
 [ext_resource type="PackedScene" uid="uid://dy4o76u7t5tkx" path="res://content/prefabs/ui/menu_select_levels_ui.tscn" id="3_hpqhx"]
 [ext_resource type="PackedScene" uid="uid://d0h5gr0h7xhcu" path="res://content/prefabs/ui/menu_start_ui.tscn" id="4_mpxm1"]
+[ext_resource type="PackedScene" path="res://content/prefabs/ui/menu_subjects_ui.tscn" id="7_subjects"]
 [ext_resource type="PackedScene" uid="uid://cmenustudyscn" path="res://content/prefabs/ui/menu_study_levels_ui.tscn" id="5_stdylvl"]
 [ext_resource type="PackedScene" uid="uid://movkvjm3labp" path="res://content/prefabs/ui/menu_credits_ui.tscn" id="6_credits"]
-[ext_resource type="PackedScene" path="res://content/prefabs/ui/menu_subjects_ui.tscn" id="7_subjects"]
 
 [node name="GameUi" type="Control" unique_id=137618360 node_paths=PackedStringArray("menu_start", "menu_study_levels", "menu_school_years", "menu_subjects", "menu_levels", "menu_credits")]
 layout_mode = 3

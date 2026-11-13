@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://3u5rpwn74cfg"]
+[gd_scene format=3]
 
-[ext_resource type="Script" uid="uid://ij8xhbu1caom" path="res://scripts/ui/menu_subjects_ui.gd" id="1_subjects"]
-[ext_resource type="Texture2D" uid="uid://bpefrdxbg0rti" path="res://content/sprites/ui/ui_background_science.png" id="2_q3t4x"]
+[ext_resource type="Script" path="res://scripts/ui/menu_subjects_ui.gd" id="1_subjects"]
+[ext_resource type="Texture2D" uid="uid://c3upgh7dpfrhf" path="res://content/sprites/ui/ui_background.png" id="2_bg"]
 [ext_resource type="Texture2D" uid="uid://bssxvehr8hskc" path="res://content/sprites/ui/ui_icon_return.png" id="3_back"]
 
 [node name="MenuSubjectsUI" type="Control" unique_id=849938833 node_paths=PackedStringArray("title_label", "buttons_container")]
@@ -22,7 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_q3t4x")
+texture = ExtResource("2_bg")
 expand_mode = 1
 stretch_mode = 6
 
@@ -58,7 +58,7 @@ autowrap_mode = 3
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
-theme_override_constants/separation = 40
 alignment = 1
+theme_override_constants/separation = 40
 
 [connection signal="pressed" from="Layout/TopBar/BackButton" to="." method="_on_back_button_pressed"]
