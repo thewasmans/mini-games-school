@@ -1,0 +1,80 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://ba7d583i23du"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_utj35"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_llppn"]
+
+[sub_resource type="Resource" id="Resource_vtl24"]
+script = ExtResource("1_utj35")
+word = "BAROMETRE"
+hint = "Instrument de mesure de la pression."
+grid_position = Vector2i(11, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_6rkuv"]
+script = ExtResource("1_utj35")
+word = "ETATS"
+hint = "Formes sous lesquelles une substance peut exister."
+grid_position = Vector2i(0, 9)
+
+[sub_resource type="Resource" id="Resource_0gmm4"]
+script = ExtResource("1_utj35")
+word = "PLUVIOMETRE"
+hint = "Instrument de mesure de quantité de pluie."
+grid_position = Vector2i(3, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_kojql"]
+script = ExtResource("1_utj35")
+word = "VOLCAN"
+hint = "Montagne de roches magmatiques qui peut cracher de la lave."
+grid_position = Vector2i(8, 11)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_fnxen"]
+script = ExtResource("1_utj35")
+word = "VENT"
+hint = "Déplacement de l'air."
+grid_position = Vector2i(8, 11)
+
+[sub_resource type="Resource" id="Resource_orjim"]
+script = ExtResource("1_utj35")
+word = "OCEAN"
+hint = "Très grande étendue d'eau de mer qui entoure les différents continents de la Terre."
+grid_position = Vector2i(1, 11)
+
+[sub_resource type="Resource" id="Resource_r7emi"]
+script = ExtResource("1_utj35")
+word = "EST"
+hint = "Endroit où le Soleil se lève."
+grid_position = Vector2i(11, 13)
+
+[sub_resource type="Resource" id="Resource_3xomo"]
+script = ExtResource("1_utj35")
+word = "BULLETIN"
+hint = "Rapport de la météo observée en un temps et un endroit donné, se dit d'un rapport de score."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_iyy13"]
+script = ExtResource("1_utj35")
+word = "SOLIDIFICATION"
+hint = "Changement d'état de la matière lorsqu'on gèle de l'eau."
+grid_position = Vector2i(2, 6)
+
+[sub_resource type="Resource" id="Resource_qcaxl"]
+script = ExtResource("1_utj35")
+word = "TORNADE"
+hint = "Tourbillon de vents qui suit un couloir et peut se déplacer à 300km/h."
+grid_position = Vector2i(14, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ua4nr"]
+script = ExtResource("1_utj35")
+word = "MATIERE"
+hint = "Se dit de tout ce qui occupe un espace et possède une masse."
+grid_position = Vector2i(7, 3)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_llppn")
+clues = Array[ExtResource("1_utj35")]([SubResource("Resource_vtl24"), SubResource("Resource_6rkuv"), SubResource("Resource_0gmm4"), SubResource("Resource_kojql"), SubResource("Resource_fnxen"), SubResource("Resource_orjim"), SubResource("Resource_r7emi"), SubResource("Resource_3xomo"), SubResource("Resource_iyy13"), SubResource("Resource_qcaxl"), SubResource("Resource_ua4nr")])

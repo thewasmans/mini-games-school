@@ -1,0 +1,86 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://deop3c6js4b0n"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_ych2n"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_8ud63"]
+
+[sub_resource type="Resource" id="Resource_570op"]
+script = ExtResource("1_ych2n")
+word = "AGE"
+hint = "Une des causes engendrant une variation du nombre d'os."
+grid_position = Vector2i(14, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_rbyse"]
+script = ExtResource("1_ych2n")
+word = "STERNUM"
+hint = "Ensemble d'os qui permet de relier les côtes de la cage thoracique entre elles."
+grid_position = Vector2i(0, 9)
+
+[sub_resource type="Resource" id="Resource_roqcp"]
+script = ExtResource("1_ych2n")
+word = "PELVIENNE"
+hint = "Nom de la ceinture osseuse qui se situe dans le bas du corps."
+grid_position = Vector2i(8, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_tqc3l"]
+script = ExtResource("1_ych2n")
+word = "CARPE"
+hint = "Ensemble d'os qui se situent dans la main, au niveau du poignet."
+grid_position = Vector2i(2, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_rbngc"]
+script = ExtResource("1_ych2n")
+word = "COUDE"
+hint = "Articulation qui relie les os de l'avant-bras avec l'humérus du bras."
+grid_position = Vector2i(11, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_fb5sd"]
+script = ExtResource("1_ych2n")
+word = "VERTEBRE"
+hint = "Pièce osseuse que l'on retrouve au sein de la colonne vertébrale."
+grid_position = Vector2i(7, 7)
+
+[sub_resource type="Resource" id="Resource_77jty"]
+script = ExtResource("1_ych2n")
+word = "OS"
+hint = "Organe, tissu que l'on retrouve dans le squelette."
+grid_position = Vector2i(6, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_w0h2j"]
+script = ExtResource("1_ych2n")
+word = "LOCOMOTION"
+hint = "Action de se mouvoir, de se déplacer d'un lieu vers un autre."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_4ofmi"]
+script = ExtResource("1_ych2n")
+word = "FORCE"
+hint = "Action qui se réalise suite à l'interaction entre deux objets."
+grid_position = Vector2i(3, 1)
+
+[sub_resource type="Resource" id="Resource_sj7pe"]
+script = ExtResource("1_ych2n")
+word = "AXIAL"
+hint = "Par opposition au squelette dit appendiculaire."
+grid_position = Vector2i(14, 5)
+
+[sub_resource type="Resource" id="Resource_tas7x"]
+script = ExtResource("1_ych2n")
+word = "EXTENSION"
+hint = "Mouvement d'un membre du corps qui s'étire, qui s'allonge."
+grid_position = Vector2i(8, 10)
+
+[sub_resource type="Resource" id="Resource_f5ixq"]
+script = ExtResource("1_ych2n")
+word = "MUSCLE"
+hint = "Ensemble de fibres musculaires."
+grid_position = Vector2i(4, 4)
+
+[resource]
+script = ExtResource("2_8ud63")
+clues = Array[ExtResource("1_ych2n")]([SubResource("Resource_570op"), SubResource("Resource_rbyse"), SubResource("Resource_roqcp"), SubResource("Resource_tqc3l"), SubResource("Resource_rbngc"), SubResource("Resource_fb5sd"), SubResource("Resource_77jty"), SubResource("Resource_w0h2j"), SubResource("Resource_4ofmi"), SubResource("Resource_sj7pe"), SubResource("Resource_tas7x"), SubResource("Resource_f5ixq")])
