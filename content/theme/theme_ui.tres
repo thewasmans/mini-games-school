@@ -52,5 +52,6 @@ Button/styles/hover = SubResource("StyleBoxTexture_u386j")
 Button/styles/normal = ExtResource("1_bugk3")
 Button/styles/pressed = SubResource("StyleBoxTexture_pq3oh")
 Label/constants/outline_size = 5
+Label/font_sizes/font_size = 32
 Label/fonts/font = ExtResource("1_7dxyk")
 Panel/styles/panel = SubResource("StyleBoxTexture_w8hwn")
