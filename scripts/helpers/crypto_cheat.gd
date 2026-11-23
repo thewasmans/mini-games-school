@@ -11,9 +11,8 @@ func autofill() -> void:
 		var current_index: int = ui._puzzle_index
 		var solution: String = ui._puzzle.solution()
 		for character_index in ui._sorted_slot_indices():
-			var slot: LineEdit = ui._slots[character_index]
-			slot.text = solution[character_index]
-			ui._on_slot_text_changed(slot.text, character_index)
+			ui._select_slot(character_index)
+			ui._on_letter_pressed(LetterNormalizer.base_letter(solution[character_index]))
 			await _wait(CHAR_INTERVAL)
 			if not _running():
 				return

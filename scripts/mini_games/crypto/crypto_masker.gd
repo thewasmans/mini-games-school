@@ -17,7 +17,7 @@ static func mask(phrase_data: CryptoPhraseData, hidden_letter_ratio: float, rng:
 	return CryptoPuzzle.new(phrase_data, hidden_indices)
 
 static func _is_maskable(character: String) -> bool:
-	return character.strip_edges() != "" and character.to_lower() != character.to_upper()
+	return LetterNormalizer.is_typeable(character)
 
 static func _shuffle(values: Array[int], random: RandomNumberGenerator) -> void:
 	for i in range(values.size() - 1, 0, -1):
