@@ -1,0 +1,13 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/virtual_keyboard_ui.gd" id="1_keyboard"]
+[ext_resource type="Theme" path="res://content/theme/virtual_keyboard/theme_virtual_keyboard.tres" id="2_theme"]
+
+[node name="VirtualKeyboard" type="VBoxContainer" unique_id=1846203517]
+custom_minimum_size = Vector2(0, 164)
+offset_right = 508.0
+offset_bottom = 164.0
+theme = ExtResource("2_theme")
+theme_override_constants/separation = 6
+alignment = 1
+script = ExtResource("1_keyboard")

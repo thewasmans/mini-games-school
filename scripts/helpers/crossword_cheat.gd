@@ -14,11 +14,10 @@ func autofill() -> void:
 		if ui._placement_attempts.get(placement, "") == placement.word_data.word:
 			continue
 		ui._select_placement(placement)
+		ui._current_text = ""
 		var word: String = placement.word_data.word
-		for length in range(1, word.length() + 1):
-			ui.input.text = word.substr(0, length)
-			ui.input.caret_column = length
-			ui._on_word_input_changed(ui.input.text)
+		for letter in word:
+			ui._on_letter_pressed(LetterNormalizer.base_letter(letter))
 			await _wait(CHAR_INTERVAL)
 			if not _running():
 				return
