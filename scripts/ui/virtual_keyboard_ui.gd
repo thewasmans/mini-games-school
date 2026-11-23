@@ -14,10 +14,12 @@ const ERASE_KEY_FONT_SIZE := 16
 const ERASE_KEY_TEXT := "Effacer"
 const KEY_BOUNCE_SCALE := 1.15
 const DISABLED_ALPHA := 0.5
+const MIN_KEY_PRESS_INTERVAL_MSEC := 90
 
 var _keys: Dictionary = {}
 var _erase_key: Button
 var _enabled := true
+var _last_key_press_msec := -MIN_KEY_PRESS_INTERVAL_MSEC
 
 func _init() -> void:
 	for row_index in ROWS.size():
@@ -29,12 +31,12 @@ func _init() -> void:
 		_add_padding(row_box, padding_units)
 		for letter in row:
 			var key := _create_key(letter, 1.0, KEY_FONT_SIZE)
-			key.pressed.connect(_press_letter.bind(letter))
+			key.pressed.connect(_on_letter_key_pressed.bind(letter))
 			_keys[letter] = key
 			row_box.add_child(key)
 		if is_last_row:
 			_erase_key = _create_key(ERASE_KEY_TEXT, ERASE_KEY_UNITS, ERASE_KEY_FONT_SIZE)
-			_erase_key.pressed.connect(_press_erase)
+			_erase_key.pressed.connect(_on_erase_key_pressed)
 			row_box.add_child(_erase_key)
 		_add_padding(row_box, padding_units)
 
@@ -91,6 +93,21 @@ func _all_keys() -> Array:
 	var keys := _keys.values()
 	keys.append(_erase_key)
 	return keys
+
+func _on_letter_key_pressed(letter: String) -> void:
+	if _accept_key_press():
+		_press_letter(letter)
+
+func _on_erase_key_pressed() -> void:
+	if _accept_key_press():
+		_press_erase()
+
+func _accept_key_press() -> bool:
+	var now := Time.get_ticks_msec()
+	if now - _last_key_press_msec < MIN_KEY_PRESS_INTERVAL_MSEC:
+		return false
+	_last_key_press_msec = now
+	return true
 
 func _press_letter(letter: String) -> void:
 	UIFeedback.bounce(_keys[letter], KEY_BOUNCE_SCALE)
