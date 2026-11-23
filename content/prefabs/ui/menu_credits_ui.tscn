@@ -8,6 +8,54 @@
 [ext_resource type="Texture2D" uid="uid://bjqe6de6rddw0" path="res://content/sprites/ui/ui_logo_europe.png" id="6_eqogt"]
 [ext_resource type="Texture2D" uid="uid://dhogrwrhvob5g" path="res://content/sprites/ui/ui_logo_fwb.png" id="7_rcj63"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_snn74"]
+bg_color = Color(0.9607843, 0.96862745, 0.9882353, 0.8784314)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.72156864, 0.78431374, 0.8784314, 0.6509804)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_147b2"]
+bg_color = Color(0.9607843, 0.96862745, 0.9882353, 0.8784314)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.72156864, 0.78431374, 0.8784314, 0.6509804)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvowr"]
+bg_color = Color(0.9607843, 0.96862745, 0.9882353, 0.8784314)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.72156864, 0.78431374, 0.8784314, 0.6509804)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eqogt"]
+bg_color = Color(0.101960786, 0.14117648, 0.21960784, 0.7490196)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.47843137, 0.5803922, 0.72156864, 0.5019608)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
 [node name="MenuCreditsUI" type="Control" unique_id=546725621]
 layout_mode = 3
 anchors_preset = 15
@@ -99,28 +147,44 @@ theme_override_constants/h_separation = 40
 theme_override_constants/v_separation = 40
 alignment = 1
 
-[node name="LogoSlot1" type="TextureRect" parent="Layout/ScrollContainer/Content/LogosContainer" unique_id=1407048119]
+[node name="PanelContainer1" type="PanelContainer" parent="Layout/ScrollContainer/Content/LogosContainer" unique_id=904159239]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_snn74")
+
+[node name="LogoSlot1" type="TextureRect" parent="Layout/ScrollContainer/Content/LogosContainer/PanelContainer1" unique_id=1407048119]
 custom_minimum_size = Vector2(220, 140)
 layout_mode = 2
 texture = ExtResource("4_147b2")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="LogoSlot2" type="TextureRect" parent="Layout/ScrollContainer/Content/LogosContainer" unique_id=509404274]
+[node name="PanelContainer2" type="PanelContainer" parent="Layout/ScrollContainer/Content/LogosContainer" unique_id=40088483]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_147b2")
+
+[node name="LogoSlot2" type="TextureRect" parent="Layout/ScrollContainer/Content/LogosContainer/PanelContainer2" unique_id=509404274]
 custom_minimum_size = Vector2(220, 140)
 layout_mode = 2
 texture = ExtResource("5_kvowr")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="LogoSlot3" type="TextureRect" parent="Layout/ScrollContainer/Content/LogosContainer" unique_id=1785898989]
+[node name="PanelContainer3" type="PanelContainer" parent="Layout/ScrollContainer/Content/LogosContainer" unique_id=1777818100]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kvowr")
+
+[node name="LogoSlot3" type="TextureRect" parent="Layout/ScrollContainer/Content/LogosContainer/PanelContainer3" unique_id=1785898989]
 custom_minimum_size = Vector2(220, 140)
 layout_mode = 2
 texture = ExtResource("6_eqogt")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="LogoSlot4" type="TextureRect" parent="Layout/ScrollContainer/Content/LogosContainer" unique_id=2038957174]
+[node name="PanelContainer4" type="PanelContainer" parent="Layout/ScrollContainer/Content/LogosContainer" unique_id=180400992]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_eqogt")
+
+[node name="LogoSlot4" type="TextureRect" parent="Layout/ScrollContainer/Content/LogosContainer/PanelContainer4" unique_id=2038957174]
 custom_minimum_size = Vector2(220, 140)
 layout_mode = 2
 texture = ExtResource("7_rcj63")
