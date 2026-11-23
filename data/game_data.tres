@@ -69,6 +69,130 @@
 [ext_resource type="Resource" uid="uid://kp7c05te1ldm" path="res://data/secondaire/s4/crossword/physique/travail_s4_part2.tres" id="65_etlxc"]
 [ext_resource type="Resource" uid="uid://dnk8yq3udo45e" path="res://data/secondaire/s4/quiz/physique/magie_image_part1.tres" id="66_os888"]
 [ext_resource type="Resource" uid="uid://55gaj584t0n1" path="res://data/secondaire/s4/quiz/physique/magie_image_part2.tres" id="67_ty4fw"]
+[ext_resource type="Resource" uid="uid://caolb5jc8hf10" path="res://data/primaire/p1/sciences/alimentation_p1.tres" id="add_1"]
+[ext_resource type="Resource" uid="uid://bob8xnluncllm" path="res://data/primaire/p1/sciences/alimentation_p1_2.tres" id="add_2"]
+[ext_resource type="Resource" uid="uid://bc5sixuv4d8c3" path="res://data/primaire/p1/sciences/animaux_p1.tres" id="add_3"]
+[ext_resource type="Resource" uid="uid://x4erjskdjxmv" path="res://data/primaire/p1/sciences/animaux_p1_2.tres" id="add_4"]
+[ext_resource type="Resource" uid="uid://dyyhvtotswgsy" path="res://data/primaire/p1/sciences/objets_p1.tres" id="add_5"]
+[ext_resource type="Resource" uid="uid://csubdswbvvjcp" path="res://data/primaire/p1/sciences/objets_p1_2.tres" id="add_6"]
+[ext_resource type="Resource" uid="uid://crir1o0khq41j" path="res://data/primaire/p1/sciences/vivant_p1.tres" id="add_7"]
+[ext_resource type="Resource" uid="uid://42wxwuuhtr06" path="res://data/primaire/p1/sciences/vivant_p1_2.tres" id="add_8"]
+[ext_resource type="Resource" uid="uid://cww7yqabjxaav" path="res://data/primaire/p2/sciences/appareils_electriques_p2.tres" id="add_9"]
+[ext_resource type="Resource" uid="uid://b5chcaqmhs3jc" path="res://data/primaire/p2/sciences/cycle_p2.tres" id="add_10"]
+[ext_resource type="Resource" uid="uid://bx31lygwuilf4" path="res://data/primaire/p2/sciences/cycle_p2_2.tres" id="add_11"]
+[ext_resource type="Resource" uid="uid://c8eqk2el3j502" path="res://data/primaire/p2/sciences/meteo_p2.tres" id="add_12"]
+[ext_resource type="Resource" uid="uid://byf5j4e6yg8ff" path="res://data/primaire/p2/sciences/meteo_p2_2.tres" id="add_13"]
+[ext_resource type="Resource" uid="uid://ba7d583i23du" path="res://data/primaire/p2/sciences/meteo_p2_3.tres" id="add_14"]
+[ext_resource type="Resource" uid="uid://dyrxxmrflyiwg" path="res://data/primaire/p3/sciences/eau_p3.tres" id="add_15"]
+[ext_resource type="Resource" uid="uid://beu1h0vap56hl" path="res://data/primaire/p3/sciences/eau_p3_2.tres" id="add_16"]
+[ext_resource type="Resource" uid="uid://c2nividrub0k" path="res://data/primaire/p3/sciences/plantes_p3.tres" id="add_17"]
+[ext_resource type="Resource" uid="uid://co7rpl0bcfonu" path="res://data/primaire/p3/sciences/son_p3.tres" id="add_18"]
+[ext_resource type="Resource" uid="uid://bv25u4jwddl62" path="res://data/primaire/p3/sciences/son_p3_2.tres" id="add_19"]
+[ext_resource type="Resource" uid="uid://cqdckcre8u3i8" path="res://data/primaire/p4/sciences/chaine_alimentaire_p4.tres" id="add_20"]
+[ext_resource type="Resource" uid="uid://2blfevnnprjk" path="res://data/primaire/p4/sciences/chaine_alimentaire_p4_2.tres" id="add_21"]
+[ext_resource type="Resource" uid="uid://bp33kp044biqv" path="res://data/primaire/p4/sciences/cycle_eau_p4.tres" id="add_22"]
+[ext_resource type="Resource" uid="uid://bnqfln0yf346p" path="res://data/primaire/p4/sciences/cycle_eau_p4_2.tres" id="add_23"]
+[ext_resource type="Resource" uid="uid://dbljgm3gv3hfq" path="res://data/primaire/p4/sciences/locomotion_p4.tres" id="add_24"]
+[ext_resource type="Resource" uid="uid://deop3c6js4b0n" path="res://data/primaire/p4/sciences/locomotion_p4_2.tres" id="add_25"]
+[ext_resource type="Resource" uid="uid://ei36k0fcg2m2" path="res://data/primaire/p4/sciences/locomotion_p4_3.tres" id="add_26"]
+[ext_resource type="Resource" uid="uid://cdr7mgeowp85x" path="res://data/primaire/p4/sciences/nutrition_p4.tres" id="add_27"]
+[ext_resource type="Resource" uid="uid://ymiem1rnh7pd" path="res://data/primaire/p5/sciences/circuit_p5.tres" id="add_28"]
+[ext_resource type="Resource" uid="uid://dqufuuk2pigo5" path="res://data/primaire/p5/sciences/circuit_p5_2.tres" id="add_29"]
+[ext_resource type="Resource" uid="uid://dgus6ac0gudek" path="res://data/primaire/p5/sciences/melanges_p5.tres" id="add_30"]
+[ext_resource type="Resource" uid="uid://vuouiexuqwgg" path="res://data/primaire/p5/sciences/melanges_p5_2.tres" id="add_31"]
+[ext_resource type="Resource" uid="uid://bxv23yih4h5u3" path="res://data/primaire/p5/sciences/reproduction_humaine_p5.tres" id="add_32"]
+[ext_resource type="Resource" uid="uid://dithfgnoq7eis" path="res://data/primaire/p5/sciences/reproduction_humaine_p5_2.tres" id="add_33"]
+[ext_resource type="Resource" uid="uid://dkqk08m7hwtk7" path="res://data/primaire/p5/sciences/reproduction_plantes_p5.tres" id="add_34"]
+[ext_resource type="Resource" uid="uid://ct87gs1p37faj" path="res://data/primaire/p5/sciences/reproduction_plantes_p5_2.tres" id="add_35"]
+[ext_resource type="Resource" uid="uid://cqw1tbnf8jvag" path="res://data/primaire/p5/sciences/rotation_p5.tres" id="add_36"]
+[ext_resource type="Resource" uid="uid://dy0vyapeeetyv" path="res://data/primaire/p5/sciences/rotation_p5_2.tres" id="add_37"]
+[ext_resource type="Resource" uid="uid://b2levldhc2rtw" path="res://data/primaire/p6/sciences/classement_p6.tres" id="add_38"]
+[ext_resource type="Resource" uid="uid://dfr5jpgkiogk3" path="res://data/primaire/p6/sciences/classement_p6_2.tres" id="add_39"]
+[ext_resource type="Resource" uid="uid://b6tlcoq1he3bs" path="res://data/primaire/p6/sciences/classement_p6_3.tres" id="add_40"]
+[ext_resource type="Resource" uid="uid://cld60llo2ioj3" path="res://data/primaire/p6/sciences/classement_p6_4.tres" id="add_41"]
+[ext_resource type="Resource" uid="uid://c322wf6b4nvts" path="res://data/primaire/p6/sciences/ressources_p6.tres" id="add_42"]
+[ext_resource type="Resource" uid="uid://bhv0sabxii8r8" path="res://data/primaire/p6/sciences/systemes_p6.tres" id="add_43"]
+[ext_resource type="Resource" uid="uid://cp3wx281m470q" path="res://data/primaire/p6/sciences/systemes_p6_2.tres" id="add_44"]
+[ext_resource type="Resource" uid="uid://dqwb2kkde7r20" path="res://data/primaire/p6/sciences/systemes_p6_3.tres" id="add_45"]
+[ext_resource type="Resource" uid="uid://c2p06rrm1qnla" path="res://data/primaire/p6/sciences/transformations_p6.tres" id="add_46"]
+[ext_resource type="Resource" uid="uid://bp52nayt7k4vn" path="res://data/secondaire/s1/biologie/cryptogram/ecosystemes.tres" id="add_47"]
+[ext_resource type="Resource" uid="uid://cp0jq637phagv" path="res://data/secondaire/s1/biologie/cryptogram/reproduction.tres" id="add_48"]
+[ext_resource type="Resource" uid="uid://vl6tfpcpanil" path="res://data/secondaire/s1/biologie/quiz/ecosystemes.tres" id="add_49"]
+[ext_resource type="Resource" uid="uid://cao1l0dgl5c7q" path="res://data/secondaire/s1/biologie/quiz/reproduction_humaine.tres" id="add_50"]
+[ext_resource type="Resource" uid="uid://dq0u3repjoaqo" path="res://data/secondaire/s1/biologie/quiz/reproduction_humaine_2.tres" id="add_51"]
+[ext_resource type="Resource" uid="uid://c4mywbjnv68xg" path="res://data/secondaire/s1/biologie/quiz/reproduction_humaine_3.tres" id="add_52"]
+[ext_resource type="Resource" uid="uid://demxl3auorxl2" path="res://data/secondaire/s1/biologie/crossword/ecosysteme_s1.tres" id="add_53"]
+[ext_resource type="Resource" uid="uid://b0fpvbj0afgko" path="res://data/secondaire/s1/biologie/crossword/reproduction_s1.tres" id="add_54"]
+[ext_resource type="Resource" uid="uid://b6thimbqc3hu3" path="res://data/secondaire/s1/biologie/crossword/reproduction_s1_2.tres" id="add_55"]
+[ext_resource type="Resource" uid="uid://bjqoloc0glc2y" path="res://data/secondaire/s1/biologie/crossword/reproduction_s1_3.tres" id="add_56"]
+[ext_resource type="Resource" uid="uid://dre4t71u63y3k" path="res://data/secondaire/s1/chimie/cryptogram/melanges.tres" id="add_57"]
+[ext_resource type="Resource" uid="uid://diupoqo48c3y5" path="res://data/secondaire/s1/chimie/quiz/dilatation.tres" id="add_58"]
+[ext_resource type="Resource" uid="uid://btnnhjoitxaee" path="res://data/secondaire/s1/chimie/quiz/dilatation_2.tres" id="add_59"]
+[ext_resource type="Resource" uid="uid://jvycb5gjusd" path="res://data/secondaire/s1/chimie/quiz/melanges.tres" id="add_60"]
+[ext_resource type="Resource" uid="uid://bp0au5joikle8" path="res://data/secondaire/s1/chimie/quiz/melanges_2.tres" id="add_61"]
+[ext_resource type="Resource" uid="uid://cn5785wr0vk7j" path="res://data/secondaire/s1/chimie/crossword/dilatation_s1.tres" id="add_62"]
+[ext_resource type="Resource" uid="uid://b30yoc7xemwer" path="res://data/secondaire/s1/chimie/crossword/melanges_s1.tres" id="add_63"]
+[ext_resource type="Resource" uid="uid://chbffmt5wm11b" path="res://data/secondaire/s1/chimie/crossword/melanges_s1_2.tres" id="add_64"]
+[ext_resource type="Resource" uid="uid://dfhrlkeangpbq" path="res://data/secondaire/s1/physique/cryptogram/energie_dilatation.tres" id="add_65"]
+[ext_resource type="Resource" uid="uid://bpd756agqal0l" path="res://data/secondaire/s1/physique/cryptogram/ressources_energie.tres" id="add_66"]
+[ext_resource type="Resource" uid="uid://dlswu2aketnx6" path="res://data/secondaire/s1/physique/cryptogram/ressources_naturelles.tres" id="add_67"]
+[ext_resource type="Resource" uid="uid://jlwk4k25okva" path="res://data/secondaire/s1/physique/quiz/ressources.tres" id="add_68"]
+[ext_resource type="Resource" uid="uid://bfdiedkltah7s" path="res://data/secondaire/s1/physique/quiz/ressources_2.tres" id="add_69"]
+[ext_resource type="Resource" uid="uid://dvc2ooqvo6tki" path="res://data/secondaire/s1/physique/crossword/ressources_s1.tres" id="add_70"]
+[ext_resource type="Resource" uid="uid://djo54cn5tdxna" path="res://data/secondaire/s1/physique/crossword/ressources_s1_2.tres" id="add_71"]
+[ext_resource type="Resource" uid="uid://b7oujvu0hm2lm" path="res://data/secondaire/s2/biologie/cryptogram/action_humaine.tres" id="add_72"]
+[ext_resource type="Resource" uid="uid://bqb6epflj6wtr" path="res://data/secondaire/s2/biologie/cryptogram/evolution_du_vivant.tres" id="add_73"]
+[ext_resource type="Resource" uid="uid://cn112akc5bgi2" path="res://data/secondaire/s2/biologie/quiz/evolution.tres" id="add_74"]
+[ext_resource type="Resource" uid="uid://8ls5g0b82243" path="res://data/secondaire/s2/biologie/quiz/evolution_2.tres" id="add_75"]
+[ext_resource type="Resource" uid="uid://bi2eaiuc37p80" path="res://data/secondaire/s2/biologie/quiz/impact_environnement.tres" id="add_76"]
+[ext_resource type="Resource" uid="uid://ds1bbjjkm6nel" path="res://data/secondaire/s2/biologie/crossword/ecosysteme_s2.tres" id="add_77"]
+[ext_resource type="Resource" uid="uid://t7e46fj4hmqf" path="res://data/secondaire/s2/biologie/crossword/evolution_s2.tres" id="add_78"]
+[ext_resource type="Resource" uid="uid://c48utcotjwa56" path="res://data/secondaire/s2/chimie/cryptogram/concentration_massique.tres" id="add_79"]
+[ext_resource type="Resource" uid="uid://76ui4raohf2v" path="res://data/secondaire/s2/chimie/cryptogram/corps_purs_atomes_molecules.tres" id="add_80"]
+[ext_resource type="Resource" uid="uid://dj5db08ofrjsx" path="res://data/secondaire/s2/chimie/quiz/corps_composes.tres" id="add_81"]
+[ext_resource type="Resource" uid="uid://c6acpncmds2rc" path="res://data/secondaire/s2/chimie/quiz/corps_composes_2.tres" id="add_82"]
+[ext_resource type="Resource" uid="uid://buox0i0tfa6x6" path="res://data/secondaire/s2/chimie/crossword/atomes_s2.tres" id="add_83"]
+[ext_resource type="Resource" uid="uid://bt7fve6e47w5x" path="res://data/secondaire/s2/chimie/crossword/atomes_s2_2.tres" id="add_84"]
+[ext_resource type="Resource" uid="uid://bl6ytk2rpalje" path="res://data/secondaire/s2/chimie/crossword/concentration_s2.tres" id="add_85"]
+[ext_resource type="Resource" uid="uid://mvygdviuje4t" path="res://data/secondaire/s2/chimie/crossword/concentration_s2_2.tres" id="add_86"]
+[ext_resource type="Resource" uid="uid://dhu2287g0lieh" path="res://data/secondaire/s2/physique/cryptogram/machines_simples.tres" id="add_87"]
+[ext_resource type="Resource" uid="uid://clss6m8nkb130" path="res://data/secondaire/s2/physique/cryptogram/pression.tres" id="add_88"]
+[ext_resource type="Resource" uid="uid://ffvetxkiqo2n" path="res://data/secondaire/s2/physique/quiz/force_pression.tres" id="add_89"]
+[ext_resource type="Resource" uid="uid://bl8m6o2ud6b7x" path="res://data/secondaire/s2/physique/quiz/force_pression_2.tres" id="add_90"]
+[ext_resource type="Resource" uid="uid://d0bq7qtatkd0x" path="res://data/secondaire/s2/physique/crossword/pression_s2.tres" id="add_91"]
+[ext_resource type="Resource" uid="uid://cag4xfju7b8vj" path="res://data/secondaire/s2/physique/crossword/pression_s2_2.tres" id="add_92"]
+[ext_resource type="Resource" uid="uid://dxbi7ghvpqucb" path="res://data/secondaire/s3/biologie/cryptogram/nutrition_humains.tres" id="add_93"]
+[ext_resource type="Resource" uid="uid://l5tnecsy5aea" path="res://data/secondaire/s3/biologie/cryptogram/nutrition_plantes_vertes.tres" id="add_94"]
+[ext_resource type="Resource" uid="uid://cylo3tvhdwrgv" path="res://data/secondaire/s3/biologie/quiz/nutrition_partie_1.tres" id="add_95"]
+[ext_resource type="Resource" uid="uid://dc7cpy2mtqegw" path="res://data/secondaire/s3/biologie/quiz/nutrition_partie_2.tres" id="add_96"]
+[ext_resource type="Resource" uid="uid://djuoh0b1sojxp" path="res://data/secondaire/s3/biologie/quiz/nutrition_partie_3.tres" id="add_97"]
+[ext_resource type="Resource" uid="uid://o4mlm1c71vbo" path="res://data/secondaire/s3/biologie/quiz/nutrition_partie_4.tres" id="add_98"]
+[ext_resource type="Resource" uid="uid://bpsyejy20dith" path="res://data/secondaire/s3/biologie/crossword/heterotrophes_s3.tres" id="add_99"]
+[ext_resource type="Resource" uid="uid://wrffgdgsc4vk" path="res://data/secondaire/s3/biologie/crossword/heterotrophes_s3_2.tres" id="add_100"]
+[ext_resource type="Resource" uid="uid://cwdijn4bthbsa" path="res://data/secondaire/s3/biologie/crossword/heterotrophes_s3_3.tres" id="add_101"]
+[ext_resource type="Resource" uid="uid://byrkg1wa24c8" path="res://data/secondaire/s3/biologie/crossword/heterotrophes_s3_4.tres" id="add_102"]
+[ext_resource type="Resource" uid="uid://by46jy1y2er2c" path="res://data/secondaire/s3/biologie/crossword/plantes_s3.tres" id="add_103"]
+[ext_resource type="Resource" uid="uid://ca4sxufc5gemy" path="res://data/secondaire/s3/biologie/crossword/plantes_s3_2.tres" id="add_104"]
+[ext_resource type="Resource" uid="uid://cvtxh75lplqqx" path="res://data/secondaire/s3/biologie/crossword/plantes_s3_3.tres" id="add_105"]
+[ext_resource type="Resource" uid="uid://jnlc7nibwy6a" path="res://data/secondaire/s3/biologie/crossword/plantes_s3_4.tres" id="add_106"]
+[ext_resource type="Resource" uid="uid://ctc87uiqj0u1w" path="res://data/secondaire/s3/biologie/crossword/plantes_s3_5.tres" id="add_107"]
+[ext_resource type="Resource" uid="uid://calry03bt071t" path="res://data/secondaire/s3/chimie/cryptogram/tableau_periodique.tres" id="add_108"]
+[ext_resource type="Resource" uid="uid://crgm50mvch588" path="res://data/secondaire/s3/chimie/cryptogram/transformations_chimiques.tres" id="add_109"]
+[ext_resource type="Resource" uid="uid://djppor8ft55e0" path="res://data/secondaire/s3/chimie/quiz/tableau_periodique.tres" id="add_110"]
+[ext_resource type="Resource" uid="uid://b618tiwk2r3mk" path="res://data/secondaire/s3/chimie/quiz/tableau_periodique_2.tres" id="add_111"]
+[ext_resource type="Resource" uid="uid://bxphffyiq5mod" path="res://data/secondaire/s3/chimie/quiz/tableau_periodique_3.tres" id="add_112"]
+[ext_resource type="Resource" uid="uid://bi5xgtd0yqhsi" path="res://data/secondaire/s3/chimie/quiz/transformations_chimiques.tres" id="add_113"]
+[ext_resource type="Resource" uid="uid://cqns3twgel2fr" path="res://data/secondaire/s3/chimie/crossword/tableau_s3.tres" id="add_114"]
+[ext_resource type="Resource" uid="uid://cl1d4o1cbgd5a" path="res://data/secondaire/s3/chimie/crossword/tableau_s3_2.tres" id="add_115"]
+[ext_resource type="Resource" uid="uid://b11j80735l5dx" path="res://data/secondaire/s3/chimie/crossword/transformation_s3.tres" id="add_116"]
+[ext_resource type="Resource" uid="uid://jrpu11p7oih5" path="res://data/secondaire/s3/physique/cryptogram/archimede.tres" id="add_117"]
+[ext_resource type="Resource" uid="uid://bese60os64gow" path="res://data/secondaire/s3/physique/cryptogram/electricite.tres" id="add_118"]
+[ext_resource type="Resource" uid="uid://xunlra4ywgxc" path="res://data/secondaire/s3/physique/quiz/archimede.tres" id="add_119"]
+[ext_resource type="Resource" uid="uid://braashmtp6hjf" path="res://data/secondaire/s3/physique/quiz/electricite.tres" id="add_120"]
+[ext_resource type="Resource" uid="uid://cqeaacamf43jl" path="res://data/secondaire/s3/physique/quiz/electricite_2.tres" id="add_121"]
+[ext_resource type="Resource" uid="uid://dynvwkemeeq78" path="res://data/secondaire/s3/physique/crossword/archimede_s3.tres" id="add_122"]
+[ext_resource type="Resource" uid="uid://cjddas87pok2r" path="res://data/secondaire/s3/physique/crossword/electricite_s3.tres" id="add_123"]
+[ext_resource type="Resource" uid="uid://dao5phoqad3l5" path="res://data/secondaire/s3/physique/crossword/electricite_s3_2.tres" id="add_124"]
 
 [sub_resource type="Resource" id="Resource_w46bf"]
 script = ExtResource("2_r34r7")
@@ -410,7 +534,756 @@ script = ExtResource("26_school_year")
 name = "S4"
 subjects = Array[ExtResource("25_subject")]([SubResource("Subject_biologie"), SubResource("Subject_chimie"), SubResource("Subject_physique")])
 
+[sub_resource type="Resource" id="Level_p1_sciences_1"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_1")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p1_sciences_2"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_2")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p1_sciences_3"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_3")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p1_sciences_4"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_4")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p1_sciences_5"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_5")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p1_sciences_6"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_6")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p1_sciences_7"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_7")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p1_sciences_8"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_8")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Subject_p1_sciences"]
+script = ExtResource("25_subject")
+name = "Sciences"
+levels = Array[ExtResource("2_r34r7")]([SubResource("Level_p1_sciences_1"), SubResource("Level_p1_sciences_2"), SubResource("Level_p1_sciences_3"), SubResource("Level_p1_sciences_4"), SubResource("Level_p1_sciences_5"), SubResource("Level_p1_sciences_6"), SubResource("Level_p1_sciences_7"), SubResource("Level_p1_sciences_8")])
+
+[sub_resource type="Resource" id="SchoolYear_p1"]
+script = ExtResource("26_school_year")
+name = "P1"
+subjects = Array[ExtResource("25_subject")]([SubResource("Subject_p1_sciences")])
+
+[sub_resource type="Resource" id="Level_p2_sciences_1"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_9")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p2_sciences_2"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_10")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p2_sciences_3"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_11")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p2_sciences_4"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_12")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p2_sciences_5"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_13")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p2_sciences_6"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_14")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Subject_p2_sciences"]
+script = ExtResource("25_subject")
+name = "Sciences"
+levels = Array[ExtResource("2_r34r7")]([SubResource("Level_p2_sciences_1"), SubResource("Level_p2_sciences_2"), SubResource("Level_p2_sciences_3"), SubResource("Level_p2_sciences_4"), SubResource("Level_p2_sciences_5"), SubResource("Level_p2_sciences_6")])
+
+[sub_resource type="Resource" id="SchoolYear_p2"]
+script = ExtResource("26_school_year")
+name = "P2"
+subjects = Array[ExtResource("25_subject")]([SubResource("Subject_p2_sciences")])
+
+[sub_resource type="Resource" id="Level_p3_sciences_1"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_15")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p3_sciences_2"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_16")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p3_sciences_3"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_17")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p3_sciences_4"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_18")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p3_sciences_5"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_19")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Subject_p3_sciences"]
+script = ExtResource("25_subject")
+name = "Sciences"
+levels = Array[ExtResource("2_r34r7")]([SubResource("Level_p3_sciences_1"), SubResource("Level_p3_sciences_2"), SubResource("Level_p3_sciences_3"), SubResource("Level_p3_sciences_4"), SubResource("Level_p3_sciences_5")])
+
+[sub_resource type="Resource" id="SchoolYear_p3"]
+script = ExtResource("26_school_year")
+name = "P3"
+subjects = Array[ExtResource("25_subject")]([SubResource("Subject_p3_sciences")])
+
+[sub_resource type="Resource" id="Level_p4_sciences_1"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_20")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p4_sciences_2"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_21")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p4_sciences_3"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_22")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p4_sciences_4"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_23")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p4_sciences_5"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_24")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p4_sciences_6"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_25")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p4_sciences_7"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_26")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p4_sciences_8"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_27")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Subject_p4_sciences"]
+script = ExtResource("25_subject")
+name = "Sciences"
+levels = Array[ExtResource("2_r34r7")]([SubResource("Level_p4_sciences_1"), SubResource("Level_p4_sciences_2"), SubResource("Level_p4_sciences_3"), SubResource("Level_p4_sciences_4"), SubResource("Level_p4_sciences_5"), SubResource("Level_p4_sciences_6"), SubResource("Level_p4_sciences_7"), SubResource("Level_p4_sciences_8")])
+
+[sub_resource type="Resource" id="SchoolYear_p4"]
+script = ExtResource("26_school_year")
+name = "P4"
+subjects = Array[ExtResource("25_subject")]([SubResource("Subject_p4_sciences")])
+
+[sub_resource type="Resource" id="Level_p5_sciences_1"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_28")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p5_sciences_2"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_29")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p5_sciences_3"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_30")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p5_sciences_4"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_31")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p5_sciences_5"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_32")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p5_sciences_6"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_33")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p5_sciences_7"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_34")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p5_sciences_8"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_35")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p5_sciences_9"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_36")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p5_sciences_10"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_37")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Subject_p5_sciences"]
+script = ExtResource("25_subject")
+name = "Sciences"
+levels = Array[ExtResource("2_r34r7")]([SubResource("Level_p5_sciences_1"), SubResource("Level_p5_sciences_2"), SubResource("Level_p5_sciences_3"), SubResource("Level_p5_sciences_4"), SubResource("Level_p5_sciences_5"), SubResource("Level_p5_sciences_6"), SubResource("Level_p5_sciences_7"), SubResource("Level_p5_sciences_8"), SubResource("Level_p5_sciences_9"), SubResource("Level_p5_sciences_10")])
+
+[sub_resource type="Resource" id="SchoolYear_p5"]
+script = ExtResource("26_school_year")
+name = "P5"
+subjects = Array[ExtResource("25_subject")]([SubResource("Subject_p5_sciences")])
+
+[sub_resource type="Resource" id="Level_p6_sciences_1"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_38")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p6_sciences_2"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_39")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p6_sciences_3"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_40")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p6_sciences_4"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_41")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p6_sciences_5"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_42")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p6_sciences_6"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_43")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p6_sciences_7"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_44")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p6_sciences_8"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_45")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_p6_sciences_9"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_46")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Subject_p6_sciences"]
+script = ExtResource("25_subject")
+name = "Sciences"
+levels = Array[ExtResource("2_r34r7")]([SubResource("Level_p6_sciences_1"), SubResource("Level_p6_sciences_2"), SubResource("Level_p6_sciences_3"), SubResource("Level_p6_sciences_4"), SubResource("Level_p6_sciences_5"), SubResource("Level_p6_sciences_6"), SubResource("Level_p6_sciences_7"), SubResource("Level_p6_sciences_8"), SubResource("Level_p6_sciences_9")])
+
+[sub_resource type="Resource" id="SchoolYear_p6"]
+script = ExtResource("26_school_year")
+name = "P6"
+subjects = Array[ExtResource("25_subject")]([SubResource("Subject_p6_sciences")])
+
+[sub_resource type="Resource" id="Level_s1_biologie_1"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_47")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s1_biologie_2"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_48")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s1_biologie_3"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_49")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s1_biologie_4"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_50")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s1_biologie_5"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_51")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s1_biologie_6"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_52")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s1_biologie_7"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_53")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s1_biologie_8"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_54")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s1_biologie_9"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_55")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s1_biologie_10"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_56")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Subject_s1_biologie"]
+script = ExtResource("25_subject")
+name = "Biologie"
+levels = Array[ExtResource("2_r34r7")]([SubResource("Level_s1_biologie_1"), SubResource("Level_s1_biologie_2"), SubResource("Level_s1_biologie_3"), SubResource("Level_s1_biologie_4"), SubResource("Level_s1_biologie_5"), SubResource("Level_s1_biologie_6"), SubResource("Level_s1_biologie_7"), SubResource("Level_s1_biologie_8"), SubResource("Level_s1_biologie_9"), SubResource("Level_s1_biologie_10")])
+
+[sub_resource type="Resource" id="Level_s1_chimie_1"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_57")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s1_chimie_2"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_58")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s1_chimie_3"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_59")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s1_chimie_4"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_60")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s1_chimie_5"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_61")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s1_chimie_6"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_62")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s1_chimie_7"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_63")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s1_chimie_8"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_64")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Subject_s1_chimie"]
+script = ExtResource("25_subject")
+name = "Chimie"
+levels = Array[ExtResource("2_r34r7")]([SubResource("Level_s1_chimie_1"), SubResource("Level_s1_chimie_2"), SubResource("Level_s1_chimie_3"), SubResource("Level_s1_chimie_4"), SubResource("Level_s1_chimie_5"), SubResource("Level_s1_chimie_6"), SubResource("Level_s1_chimie_7"), SubResource("Level_s1_chimie_8")])
+
+[sub_resource type="Resource" id="Level_s1_physique_1"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_65")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s1_physique_2"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_66")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s1_physique_3"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_67")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s1_physique_4"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_68")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s1_physique_5"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_69")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s1_physique_6"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_70")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s1_physique_7"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_71")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Subject_s1_physique"]
+script = ExtResource("25_subject")
+name = "Physique"
+levels = Array[ExtResource("2_r34r7")]([SubResource("Level_s1_physique_1"), SubResource("Level_s1_physique_2"), SubResource("Level_s1_physique_3"), SubResource("Level_s1_physique_4"), SubResource("Level_s1_physique_5"), SubResource("Level_s1_physique_6"), SubResource("Level_s1_physique_7")])
+
+[sub_resource type="Resource" id="SchoolYear_s1"]
+script = ExtResource("26_school_year")
+name = "S1"
+subjects = Array[ExtResource("25_subject")]([SubResource("Subject_s1_biologie"), SubResource("Subject_s1_chimie"), SubResource("Subject_s1_physique")])
+
+[sub_resource type="Resource" id="Level_s2_biologie_1"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_72")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s2_biologie_2"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_73")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s2_biologie_3"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_74")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s2_biologie_4"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_75")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s2_biologie_5"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_76")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s2_biologie_6"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_77")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s2_biologie_7"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_78")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Subject_s2_biologie"]
+script = ExtResource("25_subject")
+name = "Biologie"
+levels = Array[ExtResource("2_r34r7")]([SubResource("Level_s2_biologie_1"), SubResource("Level_s2_biologie_2"), SubResource("Level_s2_biologie_3"), SubResource("Level_s2_biologie_4"), SubResource("Level_s2_biologie_5"), SubResource("Level_s2_biologie_6"), SubResource("Level_s2_biologie_7")])
+
+[sub_resource type="Resource" id="Level_s2_chimie_1"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_79")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s2_chimie_2"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_80")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s2_chimie_3"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_81")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s2_chimie_4"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_82")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s2_chimie_5"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_83")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s2_chimie_6"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_84")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s2_chimie_7"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_85")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s2_chimie_8"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_86")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Subject_s2_chimie"]
+script = ExtResource("25_subject")
+name = "Chimie"
+levels = Array[ExtResource("2_r34r7")]([SubResource("Level_s2_chimie_1"), SubResource("Level_s2_chimie_2"), SubResource("Level_s2_chimie_3"), SubResource("Level_s2_chimie_4"), SubResource("Level_s2_chimie_5"), SubResource("Level_s2_chimie_6"), SubResource("Level_s2_chimie_7"), SubResource("Level_s2_chimie_8")])
+
+[sub_resource type="Resource" id="Level_s2_physique_1"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_87")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s2_physique_2"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_88")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s2_physique_3"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_89")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s2_physique_4"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_90")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s2_physique_5"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_91")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s2_physique_6"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_92")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Subject_s2_physique"]
+script = ExtResource("25_subject")
+name = "Physique"
+levels = Array[ExtResource("2_r34r7")]([SubResource("Level_s2_physique_1"), SubResource("Level_s2_physique_2"), SubResource("Level_s2_physique_3"), SubResource("Level_s2_physique_4"), SubResource("Level_s2_physique_5"), SubResource("Level_s2_physique_6")])
+
+[sub_resource type="Resource" id="SchoolYear_s2"]
+script = ExtResource("26_school_year")
+name = "S2"
+subjects = Array[ExtResource("25_subject")]([SubResource("Subject_s2_biologie"), SubResource("Subject_s2_chimie"), SubResource("Subject_s2_physique")])
+
+[sub_resource type="Resource" id="Level_s3_biologie_1"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_93")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_biologie_2"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_94")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_biologie_3"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_95")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_biologie_4"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_96")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_biologie_5"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_97")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_biologie_6"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_98")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_biologie_7"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_99")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_biologie_8"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_100")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_biologie_9"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_101")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_biologie_10"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_102")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_biologie_11"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_103")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_biologie_12"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_104")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_biologie_13"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_105")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_biologie_14"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_106")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_biologie_15"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_107")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Subject_s3_biologie"]
+script = ExtResource("25_subject")
+name = "Biologie"
+levels = Array[ExtResource("2_r34r7")]([SubResource("Level_s3_biologie_1"), SubResource("Level_s3_biologie_2"), SubResource("Level_s3_biologie_3"), SubResource("Level_s3_biologie_4"), SubResource("Level_s3_biologie_5"), SubResource("Level_s3_biologie_6"), SubResource("Level_s3_biologie_7"), SubResource("Level_s3_biologie_8"), SubResource("Level_s3_biologie_9"), SubResource("Level_s3_biologie_10"), SubResource("Level_s3_biologie_11"), SubResource("Level_s3_biologie_12"), SubResource("Level_s3_biologie_13"), SubResource("Level_s3_biologie_14"), SubResource("Level_s3_biologie_15")])
+
+[sub_resource type="Resource" id="Level_s3_chimie_1"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_108")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_chimie_2"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_109")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_chimie_3"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_110")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_chimie_4"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_111")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_chimie_5"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_112")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_chimie_6"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_113")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_chimie_7"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_114")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_chimie_8"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_115")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_chimie_9"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_116")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Subject_s3_chimie"]
+script = ExtResource("25_subject")
+name = "Chimie"
+levels = Array[ExtResource("2_r34r7")]([SubResource("Level_s3_chimie_1"), SubResource("Level_s3_chimie_2"), SubResource("Level_s3_chimie_3"), SubResource("Level_s3_chimie_4"), SubResource("Level_s3_chimie_5"), SubResource("Level_s3_chimie_6"), SubResource("Level_s3_chimie_7"), SubResource("Level_s3_chimie_8"), SubResource("Level_s3_chimie_9")])
+
+[sub_resource type="Resource" id="Level_s3_physique_1"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_117")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_physique_2"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_118")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_physique_3"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_119")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_physique_4"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_120")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_physique_5"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_121")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_physique_6"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_122")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_physique_7"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_123")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Level_s3_physique_8"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("add_124")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Subject_s3_physique"]
+script = ExtResource("25_subject")
+name = "Physique"
+levels = Array[ExtResource("2_r34r7")]([SubResource("Level_s3_physique_1"), SubResource("Level_s3_physique_2"), SubResource("Level_s3_physique_3"), SubResource("Level_s3_physique_4"), SubResource("Level_s3_physique_5"), SubResource("Level_s3_physique_6"), SubResource("Level_s3_physique_7"), SubResource("Level_s3_physique_8")])
+
+[sub_resource type="Resource" id="SchoolYear_s3"]
+script = ExtResource("26_school_year")
+name = "S3"
+subjects = Array[ExtResource("25_subject")]([SubResource("Subject_s3_biologie"), SubResource("Subject_s3_chimie"), SubResource("Subject_s3_physique")])
+
 [resource]
 script = ExtResource("1_urpql")
+primary_1 = SubResource("SchoolYear_p1")
+primary_2 = SubResource("SchoolYear_p2")
+primary_3 = SubResource("SchoolYear_p3")
+primary_4 = SubResource("SchoolYear_p4")
+primary_5 = SubResource("SchoolYear_p5")
+primary_6 = SubResource("SchoolYear_p6")
+secondary_1 = SubResource("SchoolYear_s1")
+secondary_2 = SubResource("SchoolYear_s2")
+secondary_3 = SubResource("SchoolYear_s3")
 secondary_4 = SubResource("SchoolYear_s4")
 metadata/_custom_type_script = "uid://cp2inhinnjjop"
