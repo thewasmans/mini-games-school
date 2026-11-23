@@ -1,0 +1,79 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bpsyejy20dith"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_7h12m"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_jvw4b"]
+
+[sub_resource type="Resource" id="Resource_pk1k8"]
+script = ExtResource("1_7h12m")
+word = "ENZYME"
+hint = "Protéine, catalyseur qui permet de modifier une réaction chimique sans se transformer."
+grid_position = Vector2i(4, 0)
+
+[sub_resource type="Resource" id="Resource_6wa4i"]
+script = ExtResource("1_7h12m")
+word = "VITAMINE"
+hint = "Substance nécessaire au bon fonctionnement de l’organisme, parfois fabriquée par les bactéries."
+grid_position = Vector2i(10, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_bu6d1"]
+script = ExtResource("1_7h12m")
+word = "BOL"
+hint = "Masse alimentaire mastiquée qui traverse l'œsophage et passe dans l'estomac."
+grid_position = Vector2i(6, 2)
+
+[sub_resource type="Resource" id="Resource_dhqtl"]
+script = ExtResource("1_7h12m")
+word = "GLUCIDE"
+hint = "Carburant qui donne l'énergie aux cellules."
+grid_position = Vector2i(14, 6)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_3kbku"]
+script = ExtResource("1_7h12m")
+word = "DIETETIQUE"
+hint = "Discipline basée sur le principe d'une alimentation saine et équilibrée associée à une bonne hygiène de vie."
+grid_position = Vector2i(6, 8)
+
+[sub_resource type="Resource" id="Resource_r3s2w"]
+script = ExtResource("1_7h12m")
+word = "GRAISSE"
+hint = "Lipide servant à stocker l'énergie."
+grid_position = Vector2i(0, 11)
+
+[sub_resource type="Resource" id="Resource_ivl05"]
+script = ExtResource("1_7h12m")
+word = "OBESITE"
+hint = "Situation lorsque les apports alimentaires sont en excès par rapport aux besoins alimentaires."
+grid_position = Vector2i(1, 13)
+
+[sub_resource type="Resource" id="Resource_vfnms"]
+script = ExtResource("1_7h12m")
+word = "ANOREXIE"
+hint = "Trouble alimentaire se traduisant par une perte de masse et une inquiétude à se nourrir."
+grid_position = Vector2i(12, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_rtacb"]
+script = ExtResource("1_7h12m")
+word = "DIGESTION"
+hint = "Processus de transformation des aliments en nutriments."
+grid_position = Vector2i(6, 8)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_2gx4p"]
+script = ExtResource("1_7h12m")
+word = "FEHLING"
+hint = "Liqueur qui sert couramment à caractériser des substances chimiques à partir d'une coloration bleue."
+grid_position = Vector2i(1, 16)
+
+[sub_resource type="Resource" id="Resource_ulgdp"]
+script = ExtResource("1_7h12m")
+word = "MALBOUFFE"
+hint = "Alimentation malsaine que l'on retrouve dans les fast food."
+grid_position = Vector2i(8, 0)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_jvw4b")
+clues = Array[ExtResource("1_7h12m")]([SubResource("Resource_pk1k8"), SubResource("Resource_6wa4i"), SubResource("Resource_bu6d1"), SubResource("Resource_dhqtl"), SubResource("Resource_3kbku"), SubResource("Resource_r3s2w"), SubResource("Resource_ivl05"), SubResource("Resource_vfnms"), SubResource("Resource_rtacb"), SubResource("Resource_2gx4p"), SubResource("Resource_ulgdp")])

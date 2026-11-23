@@ -1,0 +1,56 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://jlwk4k25okva"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_sv51v"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_nw22i"]
+
+[sub_resource type="Resource" id="Resource_xf8l3"]
+script = ExtResource("1_sv51v")
+question = "Comment peut-on nommer les étapes de la transformation d'un produit ?"
+choices = Array[String](["Le cycle de vie.", "Le compostage.", "La malléabilité.", "L'extraction."])
+
+[sub_resource type="Resource" id="Resource_aw2jc"]
+script = ExtResource("1_sv51v")
+question = "En quoi consiste l'énergie thermique ?"
+choices = Array[String](["De la chaleur.", "De l'énergie liée à la position.", "De l'énergie liée au mouvement.", "De l'énergie provenant du Soleil."])
+
+[sub_resource type="Resource" id="Resource_cs1m4"]
+script = ExtResource("1_sv51v")
+question = "En quoi consiste l'énergie potentielle ?"
+choices = Array[String](["De la chaleur.", "De l'énergie liée à la position.", "De l'énergie liée au mouvement.", "De l'énergie provenant du Soleil."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_orbvf"]
+script = ExtResource("1_sv51v")
+question = "En quoi consiste l'énergie cinétique ?"
+choices = Array[String](["De la chaleur.", "De l'énergie liée à la position.", "De l'énergie liée au mouvement.", "De l'énergie provenant du Soleil."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_e7b7d"]
+script = ExtResource("1_sv51v")
+question = "En quoi consiste l'énergie radiante ?"
+choices = Array[String](["De la chaleur.", "De l'énergie liée à la position.", "De l'énergie liée au mouvement.", "De l'énergie provenant du Soleil."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_cs6xy"]
+script = ExtResource("1_sv51v")
+question = "Quel est l'objectif d'une centrale nucléaire ?"
+choices = Array[String](["Fabriquer de l'électricité.", "Purifier de l'eau.", "Fabriquer des smartphones.", "Découper des arbres."])
+
+[sub_resource type="Resource" id="Resource_bllsl"]
+script = ExtResource("1_sv51v")
+question = "En quoi consiste la loi de Lavoisier ?"
+choices = Array[String](["Rien ne se perd, rien ne se crée, tout se transforme..", "Tout se crée, tout se perd..", "Rien ne se transforme, mais tout se perd..", "Le changement est irréversible.."])
+
+[sub_resource type="Resource" id="Resource_ga6r0"]
+script = ExtResource("1_sv51v")
+question = "Comment se nomme la structure où s'évapore l'eau ?"
+choices = Array[String](["La tour de refroidissement.", "Le centre de déchets.", "Le réacteur.", "L'alternateur."])
+
+[sub_resource type="Resource" id="Resource_aahg7"]
+script = ExtResource("1_sv51v")
+question = "Que se passe-t-il dans le réacteur nucléaire ?"
+choices = Array[String](["Une fission nucléaire.", "Une aimantation.", "Une décantation.", "Une filtration."])
+
+[resource]
+script = ExtResource("2_nw22i")
+questions = Array[ExtResource("1_sv51v")]([SubResource("Resource_xf8l3"), SubResource("Resource_aw2jc"), SubResource("Resource_cs1m4"), SubResource("Resource_orbvf"), SubResource("Resource_e7b7d"), SubResource("Resource_cs6xy"), SubResource("Resource_bllsl"), SubResource("Resource_ga6r0"), SubResource("Resource_aahg7")])

@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://diupoqo48c3y5"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_ich02"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_qbuq0"]
+
+[sub_resource type="Resource" id="Resource_pyf1v"]
+script = ExtResource("1_ich02")
+question = "Comment se nomme le passage du liquide au gaz ?"
+choices = Array[String](["La fusion.", "La condensation.", "L'évaporation.", "La solidification."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_5xq4w"]
+script = ExtResource("1_ich02")
+question = "Comment se nomme le passage du liquide au solide ?"
+choices = Array[String](["La fusion.", "La condensation.", "L'évaporation.", "La solidification."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_mwpnl"]
+script = ExtResource("1_ich02")
+question = "Quelle est la définition du volume ?"
+choices = Array[String](["C'est l'espace occupé par un objet.", "C'est l'espace que peut contenir un objet.", "C'est un concept virtuel.", "C'est l'équivalent de la masse."])
+
+[sub_resource type="Resource" id="Resource_8x78e"]
+script = ExtResource("1_ich02")
+question = "Nous appelons les variations de températures dans un système..."
+choices = Array[String](["La combustion.", "La convection.", "La conduction.", "La radiation."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_s1ea3"]
+script = ExtResource("1_ich02")
+question = "Nous appelons le contact physique entre deux corps..."
+choices = Array[String](["La combustion.", "La convection.", "La conduction.", "La radiation."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_x6gfq"]
+script = ExtResource("1_ich02")
+question = "Nous appelons les rayonnements emis..."
+choices = Array[String](["La combustion.", "La convection.", "La conduction.", "La radiation."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_o414s"]
+script = ExtResource("1_ich02")
+question = "Nous appelons la réaction entre un combustible et un carburant..."
+choices = Array[String](["La combustion.", "La convection.", "La conduction.", "La radiation."])
+
+[resource]
+script = ExtResource("2_qbuq0")
+questions = Array[ExtResource("1_ich02")]([SubResource("Resource_pyf1v"), SubResource("Resource_5xq4w"), SubResource("Resource_mwpnl"), SubResource("Resource_8x78e"), SubResource("Resource_s1ea3"), SubResource("Resource_x6gfq"), SubResource("Resource_o414s")])

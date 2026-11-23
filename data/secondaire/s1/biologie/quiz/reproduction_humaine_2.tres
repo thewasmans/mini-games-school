@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://dq0u3repjoaqo"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_osmdx"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_darcq"]
+
+[sub_resource type="Resource" id="Resource_mdgib"]
+script = ExtResource("1_osmdx")
+question = "Comment appelons-nous les changements lors de l'adolescence ?"
+choices = Array[String](["La puberté.", "L'homosexualité.", "Les variations.", "L'hormonologie."])
+
+[sub_resource type="Resource" id="Resource_egmoi"]
+script = ExtResource("1_osmdx")
+question = "Quel changement a lieu lors de la puberté ?"
+choices = Array[String](["Le développement de la poitrine.", "Le développement des branchies.", "Le développement de l'anus.", "Les mécanismes respiratoires."])
+
+[sub_resource type="Resource" id="Resource_xgpao"]
+script = ExtResource("1_osmdx")
+question = "Qui est concerné par ce cycle ?"
+choices = Array[String](["Les hommes.", "Les hommes et les femmes.", "Les femmes.", "Les enfants."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_nc7w7"]
+script = ExtResource("1_osmdx")
+question = "Peut-on dire que toutes les femmes suivent ce cycle de 28 jours ?"
+choices = Array[String](["non, que les hommes.", "cela ne concerne pas l'humain.", "non.", "oui."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_sqcbv"]
+script = ExtResource("1_osmdx")
+question = "Quelle cellule concerne la fécondation ?"
+choices = Array[String](["Le neurone.", "Le gliocyte.", "L'hépatocyte.", "L'ovocyte."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_7gv0e"]
+script = ExtResource("1_osmdx")
+question = "Quel est le résultat de la fécondation ?"
+choices = Array[String](["Un ovocyte.", "Un ovule.", "Un neurone.", "Un spermatozoide."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_darcq")
+questions = Array[ExtResource("1_osmdx")]([SubResource("Resource_mdgib"), SubResource("Resource_egmoi"), SubResource("Resource_xgpao"), SubResource("Resource_nc7w7"), SubResource("Resource_sqcbv"), SubResource("Resource_7gv0e")])

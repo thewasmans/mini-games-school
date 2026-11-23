@@ -1,0 +1,99 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://ds1bbjjkm6nel"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_7cgah"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_yngkc"]
+
+[sub_resource type="Resource" id="Resource_47266"]
+script = ExtResource("1_7cgah")
+word = "SAUVEGARDE"
+hint = "Action de préserver une espèce avant qu'elle ne disparaisse définitivement."
+grid_position = Vector2i(10, 6)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_otwfs"]
+script = ExtResource("1_7cgah")
+word = "FLEUR"
+hint = "Partie de la plante qui est souvent odorante et contenant les organes reproducteurs."
+grid_position = Vector2i(0, 15)
+
+[sub_resource type="Resource" id="Resource_cc6o4"]
+script = ExtResource("1_7cgah")
+word = "SURPECHE"
+hint = "Action d'attraper trop de poissons avant qu'ils ne se reproduisent suffisamment."
+grid_position = Vector2i(5, 0)
+
+[sub_resource type="Resource" id="Resource_2ouk1"]
+script = ExtResource("1_7cgah")
+word = "STEPPE"
+hint = "Etendue d'herbes dans un climat aride, considéré comme un biome."
+grid_position = Vector2i(2, 18)
+
+[sub_resource type="Resource" id="Resource_yp7pc"]
+script = ExtResource("1_7cgah")
+word = "BIOCONTAMINATION"
+hint = "Pollution d'un environnement à cause d'une substance toxique ou d'une espèce néfaste."
+grid_position = Vector2i(3, 7)
+
+[sub_resource type="Resource" id="Resource_ydltf"]
+script = ExtResource("1_7cgah")
+word = "RESERVE"
+hint = "Espace naturel protégé d'une importance nationale ou internationale."
+grid_position = Vector2i(5, 2)
+
+[sub_resource type="Resource" id="Resource_8kcxk"]
+script = ExtResource("1_7cgah")
+word = "MAIS"
+hint = "Plante tropicale cultivée comme céréale pour ses grains riches en amidon."
+grid_position = Vector2i(9, 12)
+
+[sub_resource type="Resource" id="Resource_jmqrh"]
+script = ExtResource("1_7cgah")
+word = "BIOMANIPULATION"
+hint = "Action de manipuler l'environnement en introduisant une espèce."
+grid_position = Vector2i(3, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_hs2s2"]
+script = ExtResource("1_7cgah")
+word = "FAUNE"
+hint = "Ensemble des espèces animales vivant dans un espace géographique."
+grid_position = Vector2i(0, 21)
+
+[sub_resource type="Resource" id="Resource_rivnu"]
+script = ExtResource("1_7cgah")
+word = "DEFORESTATION"
+hint = "Action de détruire une forêt, d'enlever les arbres pour se chauffer."
+grid_position = Vector2i(7, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_tw7ai"]
+script = ExtResource("1_7cgah")
+word = "SUREXPLOITATION"
+hint = "Action d'épuiser les ressources avant qu'elles ne puissent se renouveler."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_0bvt1"]
+script = ExtResource("1_7cgah")
+word = "POLLUTION"
+hint = "Action de contaminer l'air, l'eau ou la terre."
+grid_position = Vector2i(15, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_xhp5u"]
+script = ExtResource("1_7cgah")
+word = "BRACONNAGE"
+hint = "Pratique illégale de la chasse ou de la pêche."
+grid_position = Vector2i(13, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ecdn6"]
+script = ExtResource("1_7cgah")
+word = "INVASIVE"
+hint = "Terme utilisé pour informer d'une espèce qui est étrangère et pose problème dans l'environnement."
+grid_position = Vector2i(18, 6)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_yngkc")
+clues = Array[ExtResource("1_7cgah")]([SubResource("Resource_47266"), SubResource("Resource_otwfs"), SubResource("Resource_cc6o4"), SubResource("Resource_2ouk1"), SubResource("Resource_yp7pc"), SubResource("Resource_ydltf"), SubResource("Resource_8kcxk"), SubResource("Resource_jmqrh"), SubResource("Resource_hs2s2"), SubResource("Resource_rivnu"), SubResource("Resource_tw7ai"), SubResource("Resource_0bvt1"), SubResource("Resource_xhp5u"), SubResource("Resource_ecdn6")])

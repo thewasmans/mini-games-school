@@ -1,0 +1,82 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://braashmtp6hjf"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_3lqxp"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_l4yas"]
+
+[sub_resource type="Resource" id="Resource_42y3l"]
+script = ExtResource("1_3lqxp")
+question = "Quelle est l'unité de la puissance ?"
+choices = Array[String](["Le joule.", "Le watt.", "L'ohm.", "Le volt."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_538mf"]
+script = ExtResource("1_3lqxp")
+question = "Quelle est l'unité de la résistance ?"
+choices = Array[String](["Le joule.", "Le watt.", "L'ohm.", "Le volt."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_wi5cs"]
+script = ExtResource("1_3lqxp")
+question = "Quelle est l'unité de l'énergie ?"
+choices = Array[String](["Le joule.", "Le watt.", "L'ohm.", "Le volt."])
+
+[sub_resource type="Resource" id="Resource_48jsi"]
+script = ExtResource("1_3lqxp")
+question = "Quelle est l'unité de la tension ?"
+choices = Array[String](["Le joule.", "Le watt.", "L'ohm.", "Le volt."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_3iqnn"]
+script = ExtResource("1_3lqxp")
+question = "Quel est la rôle du disjoncteur ?"
+choices = Array[String](["Protéger le matériel électrique.", "Protéger les personnes.", "Envoyer du courant électrique.", "Augmenter l'intensité du courant."])
+
+[sub_resource type="Resource" id="Resource_guym5"]
+script = ExtResource("1_3lqxp")
+question = "Quel est la rôle du différentiel ?"
+choices = Array[String](["Protéger le matériel électrique.", "Protéger les personnes.", "Envoyer du courant électrique.", "Augmenter l'intensité du courant."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_k2mmo"]
+script = ExtResource("1_3lqxp")
+question = "Quelle est la différence entre le courant continu et le courant alternatif ?"
+choices = Array[String](["Le sens de circulation des électrons change périodiquement dans le courant continu.", "Le courant alternatif est produit dans les batteries.", "Le courant continu se trouve dans les prises.", "Le flux d'électrons se déplace toujours dans la même direction pour le courant continu."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_wyqxw"]
+script = ExtResource("1_3lqxp")
+question = "Que signifie la tige verte et jaune ?"
+choices = Array[String](["La phase.", "Le neutre.", "La terre.", "La mer."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_qyqhq"]
+script = ExtResource("1_3lqxp")
+question = "Que faut-il faire lorsqu'on doit changer une ampoule ?"
+choices = Array[String](["Abaisser le bon disjoncteur.", "Couper toute l'installation électrique de la maison.", "Eteindre uniquement la lumière.", "Eteindre la lumière dans toute la maison."])
+
+[sub_resource type="Resource" id="Resource_1h0ve"]
+script = ExtResource("1_3lqxp")
+question = "Quel élément représente le générateur ?"
+choices = Array[String](["La lampe.", "La pile.", "L'interrupteur.", "Les fils."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_7w4s6"]
+script = ExtResource("1_3lqxp")
+question = "Quel élément représente le récepteur ?"
+choices = Array[String](["La lampe.", "La pile.", "L'interrupteur.", "Les fils."])
+
+[sub_resource type="Resource" id="Resource_ixoir"]
+script = ExtResource("1_3lqxp")
+question = "Quel élément permet de conduire le courant ?"
+choices = Array[String](["La lampe.", "La pile.", "L'interrupteur.", "Les fils."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_22043"]
+script = ExtResource("1_3lqxp")
+question = "Quel élément permet d'ouvrir ou de fermer le circuit ?"
+choices = Array[String](["La lampe.", "La pile.", "L'interrupteur.", "Les fils."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("2_l4yas")
+questions = Array[ExtResource("1_3lqxp")]([SubResource("Resource_42y3l"), SubResource("Resource_538mf"), SubResource("Resource_wi5cs"), SubResource("Resource_48jsi"), SubResource("Resource_3iqnn"), SubResource("Resource_guym5"), SubResource("Resource_k2mmo"), SubResource("Resource_wyqxw"), SubResource("Resource_qyqhq"), SubResource("Resource_1h0ve"), SubResource("Resource_7w4s6"), SubResource("Resource_ixoir"), SubResource("Resource_22043")])

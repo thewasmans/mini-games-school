@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://76ui4raohf2v"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_5yyi3"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_kuuoh"]
+
+[sub_resource type="Resource" id="Resource_6ifhd"]
+script = ExtResource("1_5yyi3")
+text = "Toute la matière est constituée de minuscules particules appelées atomes."
+
+[sub_resource type="Resource" id="Resource_av0rb"]
+script = ExtResource("1_5yyi3")
+text = "Un élément chimique est caractérisé par le type d'atomes qui le compose."
+
+[sub_resource type="Resource" id="Resource_0w3op"]
+script = ExtResource("1_5yyi3")
+text = "Une molécule est formée par l'association de plusieurs atomes liés entre eux."
+
+[sub_resource type="Resource" id="Resource_mm8su"]
+script = ExtResource("1_5yyi3")
+text = "Un corps pur simple contient des atomes d'une seule et même sorte."
+
+[sub_resource type="Resource" id="Resource_n5vyr"]
+script = ExtResource("1_5yyi3")
+text = "Un corps pur composé associe des atomes de plusieurs éléments différents."
+
+[sub_resource type="Resource" id="Resource_15xbo"]
+script = ExtResource("1_5yyi3")
+text = "La formule chimique indique la composition en atomes d'une molécule."
+
+[sub_resource type="Resource" id="Resource_rhrbb"]
+script = ExtResource("1_5yyi3")
+text = "L'atome possède un noyau central entouré d'électrons en mouvement."
+
+[sub_resource type="Resource" id="Resource_pioq5"]
+script = ExtResource("1_5yyi3")
+text = "Les liaisons chimiques unissent les atomes au sein des molécules."
+
+[sub_resource type="Resource" id="Resource_sdw7k"]
+script = ExtResource("1_5yyi3")
+text = "Le dihydrogène est un corps pur simple formé de deux atomes identiques."
+
+[sub_resource type="Resource" id="Resource_8vvrl"]
+script = ExtResource("1_5yyi3")
+text = "L'eau est un corps pur composé associant hydrogène et oxygène."
+
+[resource]
+script = ExtResource("2_kuuoh")
+phrases = Array[ExtResource("1_5yyi3")]([SubResource("Resource_6ifhd"), SubResource("Resource_av0rb"), SubResource("Resource_0w3op"), SubResource("Resource_mm8su"), SubResource("Resource_n5vyr"), SubResource("Resource_15xbo"), SubResource("Resource_rhrbb"), SubResource("Resource_pioq5"), SubResource("Resource_sdw7k"), SubResource("Resource_8vvrl")])

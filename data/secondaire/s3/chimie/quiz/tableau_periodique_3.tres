@@ -1,0 +1,65 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bxphffyiq5mod"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_yvghg"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_l1th1"]
+
+[sub_resource type="Resource" id="Resource_j6aju"]
+script = ExtResource("1_yvghg")
+question = "Quel est le symbole du soufre ?"
+choices = Array[String](["S.", "Mg.", "Mn.", "He."])
+
+[sub_resource type="Resource" id="Resource_syy53"]
+script = ExtResource("1_yvghg")
+question = "Quel est le symbole du magnésium ?"
+choices = Array[String](["S.", "Mg.", "Mn.", "He."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_d4llp"]
+script = ExtResource("1_yvghg")
+question = "Quel est le symbole du manganèse ?"
+choices = Array[String](["S.", "Mg.", "Mn.", "He."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_dires"]
+script = ExtResource("1_yvghg")
+question = "Quel est le symbole de l'hélium ?"
+choices = Array[String](["S.", "Mg.", "Mn.", "He."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_byalq"]
+script = ExtResource("1_yvghg")
+question = "Comment s'écrit l'acide chlorhydrique ?"
+choices = Array[String](["Hcl.", "NaOH.", "NaCl.", "KNO3."])
+
+[sub_resource type="Resource" id="Resource_cc5rg"]
+script = ExtResource("1_yvghg")
+question = "Comment s'écrit l'hydroxyde de sodium ?"
+choices = Array[String](["Hcl.", "NaOH.", "NaCl.", "KNO3."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_vl20q"]
+script = ExtResource("1_yvghg")
+question = "Comment s'écrit le chlorure de sodium ?"
+choices = Array[String](["Hcl.", "NaOH.", "NaCl.", "KNO3."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_6r7gn"]
+script = ExtResource("1_yvghg")
+question = "Comment s'écrit le nitrate de potassium ?"
+choices = Array[String](["Hcl.", "NaOH.", "NaCl.", "KNO3."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_th1c3"]
+script = ExtResource("1_yvghg")
+question = "Comment appelons-nous les particules qui tournent autour du coeur ?"
+choices = Array[String](["Électrons.", "Protons.", "Isotopes.", "Valences."])
+
+[sub_resource type="Resource" id="Resource_4l00x"]
+script = ExtResource("1_yvghg")
+question = "Comment appelons-nous les particules au coeur du noyau ?"
+choices = Array[String](["Électrons.", "Protons.", "Isotopes.", "Valences."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_l1th1")
+questions = Array[ExtResource("1_yvghg")]([SubResource("Resource_j6aju"), SubResource("Resource_syy53"), SubResource("Resource_d4llp"), SubResource("Resource_dires"), SubResource("Resource_byalq"), SubResource("Resource_cc5rg"), SubResource("Resource_vl20q"), SubResource("Resource_6r7gn"), SubResource("Resource_th1c3"), SubResource("Resource_4l00x")])

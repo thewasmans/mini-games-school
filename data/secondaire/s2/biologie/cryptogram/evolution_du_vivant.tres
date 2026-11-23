@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://bqb6epflj6wtr"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_4vexy"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_j2dcs"]
+
+[sub_resource type="Resource" id="Resource_lwbo3"]
+script = ExtResource("1_4vexy")
+text = "L'évolution du vivant désigne la transformation des espèces au fil du temps."
+
+[sub_resource type="Resource" id="Resource_i3xr4"]
+script = ExtResource("1_4vexy")
+text = "Les fossiles témoignent de l'existence d'espèces anciennes disparues."
+
+[sub_resource type="Resource" id="Resource_h78a7"]
+script = ExtResource("1_4vexy")
+text = "La sélection naturelle favorise les individus les mieux adaptés à leur milieu."
+
+[sub_resource type="Resource" id="Resource_i7q88"]
+script = ExtResource("1_4vexy")
+text = "Les caractères héréditaires se transmettent de génération en génération."
+
+[sub_resource type="Resource" id="Resource_cwjae"]
+script = ExtResource("1_4vexy")
+text = "La biodiversité actuelle est le fruit d'une longue histoire évolutive."
+
+[sub_resource type="Resource" id="Resource_c8hor"]
+script = ExtResource("1_4vexy")
+text = "Une espèce nouvelle apparaît lorsque des populations divergent durablement."
+
+[sub_resource type="Resource" id="Resource_o30b4"]
+script = ExtResource("1_4vexy")
+text = "Les crises biologiques provoquent des extinctions massives d'espèces."
+
+[sub_resource type="Resource" id="Resource_d3wd5"]
+script = ExtResource("1_4vexy")
+text = "L'arbre de la parenté illustre les liens évolutifs entre les êtres vivants."
+
+[sub_resource type="Resource" id="Resource_el1ex"]
+script = ExtResource("1_4vexy")
+text = "L'adaptation morphologique aide les espèces à survivre face aux changements."
+
+[sub_resource type="Resource" id="Resource_fou80"]
+script = ExtResource("1_4vexy")
+text = "Toutes les formes de vie sur Terre partagent des origines communes."
+
+[resource]
+script = ExtResource("2_j2dcs")
+phrases = Array[ExtResource("1_4vexy")]([SubResource("Resource_lwbo3"), SubResource("Resource_i3xr4"), SubResource("Resource_h78a7"), SubResource("Resource_i7q88"), SubResource("Resource_cwjae"), SubResource("Resource_c8hor"), SubResource("Resource_o30b4"), SubResource("Resource_d3wd5"), SubResource("Resource_el1ex"), SubResource("Resource_fou80")])

@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://vl6tfpcpanil"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_jakfe"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_ieiap"]
+
+[sub_resource type="Resource" id="Resource_j4do6"]
+script = ExtResource("1_jakfe")
+question = "Quel est le rôle des décomposeurs ?"
+choices = Array[String](["Décomposer la matière organique.", "Fabriquer du glucose.", "Convertir l'énergie du Soleil.", "Libérer de l'oxygène."])
+
+[sub_resource type="Resource" id="Resource_m2hvr"]
+script = ExtResource("1_jakfe")
+question = "Quel terme correspond au faucon en haut d'un réseau ?"
+choices = Array[String](["Producteur.", "Flore.", "Superprédateur.", "Consommateur primaire."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_71kdh"]
+script = ExtResource("1_jakfe")
+question = "Qu'est-ce qu'un écosystème ?"
+choices = Array[String](["Uniquement les êtres vivants.", "Ensemble d'êtres vivants en relation avec leur milieu de vie.", "Uniquement le milieu de vie.", "Uniquement les plantes."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_am0t1"]
+script = ExtResource("1_jakfe")
+question = "Qu'est-ce que la biocénose ?"
+choices = Array[String](["Uniquement les êtres vivants.", "Ensemble d'êtres vivants en relation avec leur milieu de vie.", "Uniquement le milieu de vie.", "Uniquement les plantes."])
+
+[sub_resource type="Resource" id="Resource_kbo6q"]
+script = ExtResource("1_jakfe")
+question = "Qu'est-ce que le biotope ?"
+choices = Array[String](["Uniquement les êtres vivants.", "Ensemble d'êtres vivants en relation avec leur milieu de vie.", "Uniquement le milieu de vie.", "Uniquement les plantes."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_4eidk"]
+script = ExtResource("1_jakfe")
+question = "Qu'est-ce que la flore ?"
+choices = Array[String](["Uniquement les êtres vivants.", "Ensemble d'êtres vivants en relation avec leur milieu de vie.", "Uniquement le milieu de vie.", "Uniquement les plantes."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_iba1v"]
+script = ExtResource("1_jakfe")
+question = "Qu'est-ce que la faune ?"
+choices = Array[String](["Uniquement les animaux.", "Ensemble d'êtres vivants en relation avec leur milieu de vie.", "Uniquement le milieu de vie.", "Uniquement les plantes."])
+
+[sub_resource type="Resource" id="Resource_s016m"]
+script = ExtResource("1_jakfe")
+question = "Qu'est-ce que la biodiversité ?"
+choices = Array[String](["Diversité des animaux.", "Diversité des plantes.", "Diversité des êtres vivants.", "Correspond au biotope."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("2_ieiap")
+questions = Array[ExtResource("1_jakfe")]([SubResource("Resource_j4do6"), SubResource("Resource_m2hvr"), SubResource("Resource_71kdh"), SubResource("Resource_am0t1"), SubResource("Resource_kbo6q"), SubResource("Resource_4eidk"), SubResource("Resource_iba1v"), SubResource("Resource_s016m")])

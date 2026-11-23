@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://jrpu11p7oih5"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_cbtjh"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_1dcpb"]
+
+[sub_resource type="Resource" id="Resource_3rfpw"]
+script = ExtResource("1_cbtjh")
+text = "Tout corps plongé dans un fluide subit une poussée verticale vers le haut."
+
+[sub_resource type="Resource" id="Resource_lx8tb"]
+script = ExtResource("1_cbtjh")
+text = "La poussée d'Archimède s'exerce de bas en haut sur les objets immergés."
+
+[sub_resource type="Resource" id="Resource_xwu6y"]
+script = ExtResource("1_cbtjh")
+text = "Cette force est égale au poids du volume de fluide déplacé par l'objet."
+
+[sub_resource type="Resource" id="Resource_acdlm"]
+script = ExtResource("1_cbtjh")
+text = "Un objet flotte si sa densité est inférieure à celle du liquide."
+
+[sub_resource type="Resource" id="Resource_u2nyj"]
+script = ExtResource("1_cbtjh")
+text = "Un objet coule si son poids est supérieur à la poussée d'Archimède."
+
+[sub_resource type="Resource" id="Resource_yykwh"]
+script = ExtResource("1_cbtjh")
+text = "Archimède a découvert ce principe célèbre dans sa baignoire."
+
+[sub_resource type="Resource" id="Resource_chhgk"]
+script = ExtResource("1_cbtjh")
+text = "La force de poussée dépend du volume immergé et de la masse volumique du fluide."
+
+[sub_resource type="Resource" id="Resource_h7x0f"]
+script = ExtResource("1_cbtjh")
+text = "Les navires immenses flottent grâce à l'air qu'ils contiennent et à leur forme."
+
+[sub_resource type="Resource" id="Resource_toy85"]
+script = ExtResource("1_cbtjh")
+text = "Un sous-marin gère sa flottaison en remplissant ou vidant ses ballasts."
+
+[sub_resource type="Resource" id="Resource_se846"]
+script = ExtResource("1_cbtjh")
+text = "L'unité de mesure de la poussée d'Archimède est le newton."
+
+[resource]
+script = ExtResource("2_1dcpb")
+phrases = Array[ExtResource("1_cbtjh")]([SubResource("Resource_3rfpw"), SubResource("Resource_lx8tb"), SubResource("Resource_xwu6y"), SubResource("Resource_acdlm"), SubResource("Resource_u2nyj"), SubResource("Resource_yykwh"), SubResource("Resource_chhgk"), SubResource("Resource_h7x0f"), SubResource("Resource_toy85"), SubResource("Resource_se846")])

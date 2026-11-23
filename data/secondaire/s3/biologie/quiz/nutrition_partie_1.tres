@@ -1,0 +1,87 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://cylo3tvhdwrgv"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_vgwbu"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_kfoum"]
+
+[sub_resource type="Resource" id="Resource_fmcb0"]
+script = ExtResource("1_vgwbu")
+question = "Qu'est-ce qu'un hétérotrophe ?"
+choices = Array[String](["Un être vivant qui doit se nourrir de matière organique.", "Un être vivant capable de fabriquer sa propre matière organique.", "Un être vivant uniquement décomposeur.", "Un superprédateur uniquement."])
+
+[sub_resource type="Resource" id="Resource_a25hc"]
+script = ExtResource("1_vgwbu")
+question = "Qu'est-ce qu'un autotrophe ?"
+choices = Array[String](["Un être vivant qui doit se nourrir de matière organique.", "Un être vivant capable de fabriquer sa propre matière organique.", "Un être vivant uniquement décomposeur.", "Un superprédateur uniquement."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_f52so"]
+script = ExtResource("1_vgwbu")
+question = "Qu'est-ce que les glucides ?"
+choices = Array[String](["Ce sont des graisses.", "Ce sont des protides.", "Ce sont des sucres.", "Ce sont des macromolécules."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_g81k4"]
+script = ExtResource("1_vgwbu")
+question = "Qu'est-ce que les lipides ?"
+choices = Array[String](["Ce sont des graisses.", "Ce sont des protides.", "Ce sont des sucres.", "Ce sont des macromolécules."])
+
+[sub_resource type="Resource" id="Resource_gt0p2"]
+script = ExtResource("1_vgwbu")
+question = "Qu'est-ce que les protides ?"
+choices = Array[String](["Ce sont des graisses.", "Ce sont des protéines.", "Ce sont des sucres.", "Ce sont des macromolécules."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_bwpnu"]
+script = ExtResource("1_vgwbu")
+question = "De quoi est composé l'aliment ?"
+choices = Array[String](["De nutriments.", "De matière minérale.", "De roches.", "D'uranium."])
+
+[sub_resource type="Resource" id="Resource_lsqa1"]
+script = ExtResource("1_vgwbu")
+question = "Comment se nomme l'organe qui stocke le glucose ?"
+choices = Array[String](["Le foie.", "L'estomac.", "L'intestin grêle.", "Le gros intestin."])
+
+[sub_resource type="Resource" id="Resource_f4dem"]
+script = ExtResource("1_vgwbu")
+question = "Comment se nomme l'organe qui stocke les aliments ?"
+choices = Array[String](["Le foie.", "L'estomac.", "L'intestin grêle.", "Le gros intestin."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_dkr8a"]
+script = ExtResource("1_vgwbu")
+question = "Comment se nomme l'organe qui absorbe les aliments ?"
+choices = Array[String](["Le foie.", "L'estomac.", "L'intestin grêle.", "Le gros intestin."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_vmtee"]
+script = ExtResource("1_vgwbu")
+question = "Comment se nomme l'organe qui fabrique les matières fécales ?"
+choices = Array[String](["Le foie.", "L'estomac.", "L'intestin grêle.", "Le gros intestin."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_aph7t"]
+script = ExtResource("1_vgwbu")
+question = "Quel est le rôle du pancréas ?"
+choices = Array[String](["Réguler la glycémie.", "Véhiculer le bol alimentaire.", "Libérer la bile.", "Libérer la matière fécale."])
+
+[sub_resource type="Resource" id="Resource_5ffo0"]
+script = ExtResource("1_vgwbu")
+question = "Quel est le rôle de l'oesophage ?"
+choices = Array[String](["Réguler la glycémie.", "Véhiculer le bol alimentaire.", "Libérer la bile.", "Libérer la matière fécale."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_wbkju"]
+script = ExtResource("1_vgwbu")
+question = "Quel est le rôle de la vésicule biliaire ?"
+choices = Array[String](["Réguler la glycémie.", "Véhiculer le bol alimentaire.", "Libérer la bile.", "Libérer la matière fécale."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_uwqaw"]
+script = ExtResource("1_vgwbu")
+question = "Quel est le rôle de l'anus ?"
+choices = Array[String](["Réguler la glycémie.", "Véhiculer le bol alimentaire.", "Libérer la bile.", "Libérer la matière fécale."])
+correct_choice_index = 3
+
+[resource]
+script = ExtResource("2_kfoum")
+questions = Array[ExtResource("1_vgwbu")]([SubResource("Resource_fmcb0"), SubResource("Resource_a25hc"), SubResource("Resource_f52so"), SubResource("Resource_g81k4"), SubResource("Resource_gt0p2"), SubResource("Resource_bwpnu"), SubResource("Resource_lsqa1"), SubResource("Resource_f4dem"), SubResource("Resource_dkr8a"), SubResource("Resource_vmtee"), SubResource("Resource_aph7t"), SubResource("Resource_5ffo0"), SubResource("Resource_wbkju"), SubResource("Resource_uwqaw")])

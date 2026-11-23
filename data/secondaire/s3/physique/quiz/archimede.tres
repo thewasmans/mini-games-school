@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://xunlra4ywgxc"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_cbtjh"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_1dcpb"]
+
+[sub_resource type="Resource" id="Resource_3rfpw"]
+script = ExtResource("1_cbtjh")
+question = "Que peux-tu dire à propos de la masse volumique ?"
+choices = Array[String](["C'est la quantité de matière dans un espace.", "Son symbole est rho.", "C'est le rapport entre la masse et le volume.", "Toutes ces phrases sont justes."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_lx8tb"]
+script = ExtResource("1_cbtjh")
+question = "Pourquoi peut-on dire que la glace flotte sur l'eau ?"
+choices = Array[String](["Sa masse volumique est inf. à celle de l'eau liquide.", "Sa masse volumique est sup. à celle de l'eau liquide.", "Sa masse volumique est égale à celle de l'eau liquide.", "On ne sait pas encore l'expliquer."])
+
+[sub_resource type="Resource" id="Resource_xwu6y"]
+script = ExtResource("1_cbtjh")
+question = "Qu'est-ce que la densité ?"
+choices = Array[String](["Un synonyme de la masse volumique.", "Le rapport de la masse volumique d'une substance par rapport à une référence.", "L'équivalent de la concentration massique.", "Aucune de ces réponses."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_acdlm"]
+script = ExtResource("1_cbtjh")
+question = "Qu'est-ce qui attire le bateau au fond de l'eau ?"
+choices = Array[String](["La gravité.", "La poussée d'Archimède.", "Le vent.", "La flottaison."])
+
+[sub_resource type="Resource" id="Resource_u2nyj"]
+script = ExtResource("1_cbtjh")
+question = "Qu'est-ce qui permet au bateau de flotter ?"
+choices = Array[String](["La gravité.", "La poussée d'Archimède.", "Le vent.", "La flottaison."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_yykwh"]
+script = ExtResource("1_cbtjh")
+question = "En quoi consiste la poussée d'Archimède ?"
+choices = Array[String](["C'est une force exercée par l'eau.", "C'est une force exercée par l'air.", "C'est une force exercée par un objet.", "C'est la gravité.."])
+
+[sub_resource type="Resource" id="Resource_chhgk"]
+script = ExtResource("1_cbtjh")
+question = "Dans la situation neutre, on peut dire..."
+choices = Array[String](["C'est l'équilibre.", "La poussée d'Archimède est sup. à la charge.", "La poussée d'Archimède est inf. à la charge.", "Rien ne peut remonter à la surface."])
+
+[sub_resource type="Resource" id="Resource_h7x0f"]
+script = ExtResource("1_cbtjh")
+question = "Dans la situation négative, on peut dire..."
+choices = Array[String](["C'est l'équilibre.", "La poussée d'Archimède est sup. à la charge.", "La poussée d'Archimède est inf. à la charge.", "Rien ne peut remonter à la surface."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_toy85"]
+script = ExtResource("1_cbtjh")
+question = "Dans la situation positive, on peut dire..."
+choices = Array[String](["C'est l'équilibre.", "La poussée d'Archimède est sup. à la charge.", "La poussée d'Archimède est inf. à la charge.", "Rien ne peut remonter à la surface."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_1dcpb")
+questions = Array[ExtResource("1_cbtjh")]([SubResource("Resource_3rfpw"), SubResource("Resource_lx8tb"), SubResource("Resource_xwu6y"), SubResource("Resource_acdlm"), SubResource("Resource_u2nyj"), SubResource("Resource_yykwh"), SubResource("Resource_chhgk"), SubResource("Resource_h7x0f"), SubResource("Resource_toy85")])

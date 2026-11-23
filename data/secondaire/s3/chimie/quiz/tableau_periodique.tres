@@ -1,0 +1,76 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://djppor8ft55e0"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_wpwi2"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_lcwqs"]
+
+[sub_resource type="Resource" id="Resource_j7i38"]
+script = ExtResource("1_wpwi2")
+question = "Comment appelons-nous les éléments situés à gauche du tableau périodique ?"
+choices = Array[String](["Les métaux.", "Les non métaux.", "Les sels.", "Les macromolécules."])
+
+[sub_resource type="Resource" id="Resource_5or2p"]
+script = ExtResource("1_wpwi2")
+question = "Comment appelons-nous les éléments situés à droite du tableau périodique ?"
+choices = Array[String](["Les métaux.", "Les non métaux.", "Les sels.", "Les macromolécules."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_0uq80"]
+script = ExtResource("1_wpwi2")
+question = "Que représente chaque ligne horizontale du tableau périodique?"
+choices = Array[String](["La famille.", "La période.", "La fréquence.", "Le symbole."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_45vqn"]
+script = ExtResource("1_wpwi2")
+question = "Que représente chaque ligne verticale du tableau périodique ?"
+choices = Array[String](["La famille.", "La période.", "La fréquence.", "Le symbole."])
+
+[sub_resource type="Resource" id="Resource_dswvd"]
+script = ExtResource("1_wpwi2")
+question = "Que représente la famille dans le tableau périodique ?"
+choices = Array[String](["Le même nombre de couches.", "Le même nombre d'électrons de valence.", "La même électronégativité.", "Le même atome."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_pcwew"]
+script = ExtResource("1_wpwi2")
+question = "Que représente la période dans le tableau périodique ?"
+choices = Array[String](["Le même nombre de couches.", "Le même nombre d'électrons de valence.", "La même électronégativité.", "Le même atome."])
+
+[sub_resource type="Resource" id="Resource_cxyml"]
+script = ExtResource("1_wpwi2")
+question = "Comment se nomme la construction de Mendeleiev ?"
+choices = Array[String](["Tableau annuel.", "Tableau périodique des atomes.", "Aucun.", "Tableau périodique des molécules."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_8siuf"]
+script = ExtResource("1_wpwi2")
+question = "Que représente le numéro atomique ?"
+choices = Array[String](["Le nombre d'électrons.", "Le nombre de protons.", "Aucune.", "Le symbole."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_dss8m"]
+script = ExtResource("1_wpwi2")
+question = "Quel est le symbole chimique du carbone ?"
+choices = Array[String](["C.", "N.", "K.", "R."])
+
+[sub_resource type="Resource" id="Resource_xc3ca"]
+script = ExtResource("1_wpwi2")
+question = "Que représente la masse atomique relative ?"
+choices = Array[String](["Structure de Lewis.", "Poids d'une molécule.", "Comparaison de masse entre atomes.", "Comparaison de masse entre molécules."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_5bwdq"]
+script = ExtResource("1_wpwi2")
+question = "Quelle est la taille d'un atome ?"
+choices = Array[String](["Millimètre.", "Mètre.", "Micromètre.", "Angstrom."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_uamnj"]
+script = ExtResource("1_wpwi2")
+question = "Quelle est la taille d'une cellule ?"
+choices = Array[String](["Millimètre.", "Mètre.", "Micromètre.", "Angstrom."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("2_lcwqs")
+questions = Array[ExtResource("1_wpwi2")]([SubResource("Resource_j7i38"), SubResource("Resource_5or2p"), SubResource("Resource_0uq80"), SubResource("Resource_45vqn"), SubResource("Resource_dswvd"), SubResource("Resource_pcwew"), SubResource("Resource_cxyml"), SubResource("Resource_8siuf"), SubResource("Resource_dss8m"), SubResource("Resource_xc3ca"), SubResource("Resource_5bwdq"), SubResource("Resource_uamnj")])

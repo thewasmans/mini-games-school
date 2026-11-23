@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dhu2287g0lieh"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_wf81n"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_8oxxb"]
+
+[sub_resource type="Resource" id="Resource_lry0n"]
+script = ExtResource("1_wf81n")
+text = "Une force est une action capable de modifier le mouvement d'un corps."
+
+[sub_resource type="Resource" id="Resource_mr5pq"]
+script = ExtResource("1_wf81n")
+text = "L'intensité d'une force se mesure en newtons à l'aide d'un dynamomètre."
+
+[sub_resource type="Resource" id="Resource_cbciw"]
+script = ExtResource("1_wf81n")
+text = "Le poids est la force d'attraction exercée par la Terre sur les objets."
+
+[sub_resource type="Resource" id="Resource_vsw1n"]
+script = ExtResource("1_wf81n")
+text = "Une machine simple facilite l'exécution d'un travail mécanique."
+
+[sub_resource type="Resource" id="Resource_biijj"]
+script = ExtResource("1_wf81n")
+text = "Le levier permet de soulever des charges lourdes avec moins d'effort."
+
+[sub_resource type="Resource" id="Resource_vjtd3"]
+script = ExtResource("1_wf81n")
+text = "La poulie facilite le hissage vertical des charges en changeant de direction."
+
+[sub_resource type="Resource" id="Resource_wk6u7"]
+script = ExtResource("1_wf81n")
+text = "Le plan incliné réduit l'effort nécessaire pour élever une charge."
+
+[sub_resource type="Resource" id="Resource_p4vn0"]
+script = ExtResource("1_wf81n")
+text = "La roue et l'essieu transmettent et amplifient les forces en rotation."
+
+[sub_resource type="Resource" id="Resource_3dpli"]
+script = ExtResource("1_wf81n")
+text = "Une machine simple ne diminue pas le travail total"
+hint = "mais réduit l'effort."
+
+[sub_resource type="Resource" id="Resource_g6r5d"]
+script = ExtResource("1_wf81n")
+text = "Le rapport de transmission caractérise l'efficacité des machines simples."
+
+[resource]
+script = ExtResource("2_8oxxb")
+phrases = Array[ExtResource("1_wf81n")]([SubResource("Resource_lry0n"), SubResource("Resource_mr5pq"), SubResource("Resource_cbciw"), SubResource("Resource_vsw1n"), SubResource("Resource_biijj"), SubResource("Resource_vjtd3"), SubResource("Resource_wk6u7"), SubResource("Resource_p4vn0"), SubResource("Resource_3dpli"), SubResource("Resource_g6r5d")])

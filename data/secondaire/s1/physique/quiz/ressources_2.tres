@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bfdiedkltah7s"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_21l6q"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_gb4pe"]
+
+[sub_resource type="Resource" id="Resource_ky5t3"]
+script = ExtResource("1_21l6q")
+question = "De quoi est composé le sol de la Terre ?"
+choices = Array[String](["Fragments de roches.", "Air.", "Eau.", "Poussières d'étoiles."])
+
+[sub_resource type="Resource" id="Resource_m14ai"]
+script = ExtResource("1_21l6q")
+question = "Qu'est-ce que la biodégradabilité ?"
+choices = Array[String](["Incapacité d'un produit à se décomposer naturellement.", "Transfert de la matière dégradable.", "Capacité d'un produit à se décomposer naturellement.", "Recyclage des matériaux en fin de vie."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_qqgpw"]
+script = ExtResource("1_21l6q")
+question = "Qu'est-ce que le compostage ?"
+choices = Array[String](["Incapacité d'un produit à se décomposer naturellement.", "Produit qui nécessite une intervention humaine pour se décomposer.", "Capacité d'un produit à se décomposer naturellement.", "Recyclage des matériaux en fin de vie."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_2imy4"]
+script = ExtResource("1_21l6q")
+question = "Qu'est-ce que le recyclage ?"
+choices = Array[String](["Incapacité d'un produit à se décomposer naturellement.", "Produit qui nécessite une intervention humaine pour se décomposer.", "Capacité d'un produit à se décomposer naturellement.", "Produit que l'on peut utiliser une seconde fois."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_2ski3"]
+script = ExtResource("1_21l6q")
+question = "Quelle est l'utilisation du cuivre ?"
+choices = Array[String](["Dans les câbles électriques.", "Transporter la lumière.", "Comme des isolants.", "Pour retenir la chaleur."])
+
+[sub_resource type="Resource" id="Resource_g1k6m"]
+script = ExtResource("1_21l6q")
+question = "Quelle est l'utilisation de l'or ?"
+choices = Array[String](["Dans les bijoux.", "Transporter la lumière.", "Comme des isolants.", "Pour retenir la chaleur."])
+
+[sub_resource type="Resource" id="Resource_uk72r"]
+script = ExtResource("1_21l6q")
+question = "Quelle est l'utilisation de l'argent ?"
+choices = Array[String](["En optique.", "Transporter la lumière.", "Comme des isolants.", "Dans les câbles électriques."])
+correct_choice_index = 3
+
+[resource]
+script = ExtResource("2_gb4pe")
+questions = Array[ExtResource("1_21l6q")]([SubResource("Resource_ky5t3"), SubResource("Resource_m14ai"), SubResource("Resource_qqgpw"), SubResource("Resource_2imy4"), SubResource("Resource_2ski3"), SubResource("Resource_g1k6m"), SubResource("Resource_uk72r")])

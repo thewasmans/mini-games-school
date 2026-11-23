@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://bese60os64gow"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_3lqxp"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_l4yas"]
+
+[sub_resource type="Resource" id="Resource_42y3l"]
+script = ExtResource("1_3lqxp")
+text = "Le courant électrique correspond à un déplacement d'électrons dans un circuit."
+
+[sub_resource type="Resource" id="Resource_538mf"]
+script = ExtResource("1_3lqxp")
+text = "L'intensité du courant se mesure en ampères à l'aide d'un multimètre."
+
+[sub_resource type="Resource" id="Resource_wi5cs"]
+script = ExtResource("1_3lqxp")
+text = "La tension électrique représente la différence de potentiel entre deux points."
+
+[sub_resource type="Resource" id="Resource_48jsi"]
+script = ExtResource("1_3lqxp")
+text = "L'unité de la tension électrique est le volt."
+
+[sub_resource type="Resource" id="Resource_3iqnn"]
+script = ExtResource("1_3lqxp")
+text = "La résistance électrique s'oppose au passage du courant dans un circuit."
+
+[sub_resource type="Resource" id="Resource_guym5"]
+script = ExtResource("1_3lqxp")
+text = "L'unité de la résistance électrique est l'ohm."
+
+[sub_resource type="Resource" id="Resource_k2mmo"]
+script = ExtResource("1_3lqxp")
+text = "La loi d'Ohm relie la tension"
+hint = "l'intensité et la résistance."
+
+[sub_resource type="Resource" id="Resource_wyqxw"]
+script = ExtResource("1_3lqxp")
+text = "Un circuit en série ne possède qu'une seule boucle de courant."
+
+[sub_resource type="Resource" id="Resource_qyqhq"]
+script = ExtResource("1_3lqxp")
+text = "Un circuit en dérivation comporte plusieurs branches distinctes."
+
+[sub_resource type="Resource" id="Resource_1h0ve"]
+script = ExtResource("1_3lqxp")
+text = "La puissance électrique se calcule en multipliant la tension par l'intensité."
+
+[resource]
+script = ExtResource("2_l4yas")
+phrases = Array[ExtResource("1_3lqxp")]([SubResource("Resource_42y3l"), SubResource("Resource_538mf"), SubResource("Resource_wi5cs"), SubResource("Resource_48jsi"), SubResource("Resource_3iqnn"), SubResource("Resource_guym5"), SubResource("Resource_k2mmo"), SubResource("Resource_wyqxw"), SubResource("Resource_qyqhq"), SubResource("Resource_1h0ve")])

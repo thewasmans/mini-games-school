@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dre4t71u63y3k"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_12rpd"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_vq5tp"]
+
+[sub_resource type="Resource" id="Resource_6inqe"]
+script = ExtResource("1_12rpd")
+text = "Un corps pur est constitué d'une seule sorte de matière."
+
+[sub_resource type="Resource" id="Resource_mpvus"]
+script = ExtResource("1_12rpd")
+text = "Un mélange contient au moins deux substances différentes."
+
+[sub_resource type="Resource" id="Resource_0ia3h"]
+script = ExtResource("1_12rpd")
+text = "Un mélange homogène présente un aspect identique partout."
+
+[sub_resource type="Resource" id="Resource_715l2"]
+script = ExtResource("1_12rpd")
+text = "Un mélange hétérogène permet de distinguer ses constituants."
+
+[sub_resource type="Resource" id="Resource_eylls"]
+script = ExtResource("1_12rpd")
+text = "La filtration permet de séparer un solide d'un liquide."
+
+[sub_resource type="Resource" id="Resource_0saq0"]
+script = ExtResource("1_12rpd")
+text = "La décantation sépare des substances de densités différentes."
+
+[sub_resource type="Resource" id="Resource_ulbyk"]
+script = ExtResource("1_12rpd")
+text = "La distillation utilise l'ébullition pour séparer les liquides."
+
+[sub_resource type="Resource" id="Resource_oxe0u"]
+script = ExtResource("1_12rpd")
+text = "L'eau pure est un corps pur composé de molécules identiques."
+
+[sub_resource type="Resource" id="Resource_xnbn2"]
+script = ExtResource("1_12rpd")
+text = "L'eau minérale est un mélange contenant des sels dissous."
+
+[sub_resource type="Resource" id="Resource_dlern"]
+script = ExtResource("1_12rpd")
+text = "Les méthodes de séparation permettent d'isoler les constituants."
+
+[resource]
+script = ExtResource("2_vq5tp")
+phrases = Array[ExtResource("1_12rpd")]([SubResource("Resource_6inqe"), SubResource("Resource_mpvus"), SubResource("Resource_0ia3h"), SubResource("Resource_715l2"), SubResource("Resource_eylls"), SubResource("Resource_0saq0"), SubResource("Resource_ulbyk"), SubResource("Resource_oxe0u"), SubResource("Resource_xnbn2"), SubResource("Resource_dlern")])

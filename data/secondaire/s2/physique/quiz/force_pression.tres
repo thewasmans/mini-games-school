@@ -1,0 +1,92 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://ffvetxkiqo2n"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_xsbm2"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_3hn33"]
+
+[sub_resource type="Resource" id="Resource_y8q0m"]
+script = ExtResource("1_xsbm2")
+question = "De quoi dépend le poids ?"
+choices = Array[String](["De la masse.", "De l'endroit où on se trouve.", "De la gravité.", "De l'ensemble des éléments cités."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_1b500"]
+script = ExtResource("1_xsbm2")
+question = "Qu'est-ce qu'un engrenage ?"
+choices = Array[String](["Système de roues dentées qui transmettent un mouvement.", "C'est une roue qui pivote autour d'un essieu, un point d'appui.", "Barre qui permet de soulever des charges lourdes.", "C'est un problème dans le moteur."])
+
+[sub_resource type="Resource" id="Resource_cg2u0"]
+script = ExtResource("1_xsbm2")
+question = "Qu'est-ce qu'une poulie ?"
+choices = Array[String](["Système de roues dentées qui transmettent un mouvement.", "C'est une roue qui pivote autour d'un essieu, un point d'appui.", "Barre qui permet de soulever des charges lourdes.", "C'est un problème dans le moteur."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_8be21"]
+script = ExtResource("1_xsbm2")
+question = "Qu'est-ce qu'un levier ?"
+choices = Array[String](["Système de roues dentées qui transmettent un mouvement.", "C'est une roue qui pivote autour d'un essieu, un point d'appui.", "Barre qui permet de soulever des charges lourdes.", "C'est un problème dans le moteur."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_8yjfm"]
+script = ExtResource("1_xsbm2")
+question = "Qu'est-ce que la force de contact ?"
+choices = Array[String](["L'équivalent de la force poids.", "Une force exercée par un objet sur un autre au moyen d’un lien.", "Une force qui existe entre deux objets sans se toucher.", "Une force qui est toujours liée à la gravité."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_v506d"]
+script = ExtResource("1_xsbm2")
+question = "Qu'est-ce que la force à distance ?"
+choices = Array[String](["L'équivalent de la force poids.", "Une force exercée par un objet sur un autre au moyen d’un lien.", "Une force qui existe entre deux objets sans se toucher.", "Une force qui est toujours liée à la gravité."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_jv1xt"]
+script = ExtResource("1_xsbm2")
+question = "Qu'est-ce que la pression ?"
+choices = Array[String](["C'est le rapport entre la force sur une surface.", "C'est le produit entre la force sur une surface.", "C'est le rapport entre la force et le poids.", "C'est le produit entre la force et le poids."])
+
+[sub_resource type="Resource" id="Resource_7hoy6"]
+script = ExtResource("1_xsbm2")
+question = "Quelle est l'unité de la pression ?"
+choices = Array[String](["Le bar.", "Le Pascal.", "Le Newton par mètre carré.", "Toutes ces unités."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_ep065"]
+script = ExtResource("1_xsbm2")
+question = "Quel est l'instrument de mesure de la pression ?"
+choices = Array[String](["Le pluviomètre.", "Le baromètre.", "L'anémomètre.", "La girouette."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_j7a8b"]
+script = ExtResource("1_xsbm2")
+question = "Comment est le temps lors d'un anticyclone ?"
+choices = Array[String](["Il y a des nuages et de la pluie.", "Il fait sec et parfois ensolleilé.", "Il y a toujours de l'orage.", "Il y a toujours des cyclones."])
+
+[sub_resource type="Resource" id="Resource_u5y8j"]
+script = ExtResource("1_xsbm2")
+question = "Comment est le temps lors d'une dépression ?"
+choices = Array[String](["Il y a des nuages et de la pluie.", "Il fait sec et parfois ensolleilé.", "Il y a toujours de l'orage.", "Il y a toujours des cyclones."])
+
+[sub_resource type="Resource" id="Resource_p1na4"]
+script = ExtResource("1_xsbm2")
+question = "Que peut-on relier à l'anticyclone ?"
+choices = Array[String](["Une basse pression.", "Une haute pression.", "Une pression stable.", "Aucune de ces données."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_hevce"]
+script = ExtResource("1_xsbm2")
+question = "Que peut-on relier à la dépression ?"
+choices = Array[String](["Une basse pression.", "Une haute pression.", "Une pression stable.", "Aucune de ces données."])
+
+[sub_resource type="Resource" id="Resource_d02a3"]
+script = ExtResource("1_xsbm2")
+question = "Quelle est la différence entre la météo et le climat ?"
+choices = Array[String](["La durée.", "Les conditions étudiées.", "Les paramètres.", "L'environnement."])
+
+[sub_resource type="Resource" id="Resource_q5181"]
+script = ExtResource("1_xsbm2")
+question = "Pourquoi un carton peut-il tenir sous un verre plein d'eau retourné ?"
+choices = Array[String](["Cette expérience est fausse.", "Parce que le carton a une résistance incroyable.", "Parce qu'il existe une pression atmosphérique.", "Parce que le verre est capable de coller l'eau une fois retourné."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("2_3hn33")
+questions = Array[ExtResource("1_xsbm2")]([SubResource("Resource_y8q0m"), SubResource("Resource_1b500"), SubResource("Resource_cg2u0"), SubResource("Resource_8be21"), SubResource("Resource_8yjfm"), SubResource("Resource_v506d"), SubResource("Resource_jv1xt"), SubResource("Resource_7hoy6"), SubResource("Resource_ep065"), SubResource("Resource_j7a8b"), SubResource("Resource_u5y8j"), SubResource("Resource_p1na4"), SubResource("Resource_hevce"), SubResource("Resource_d02a3"), SubResource("Resource_q5181")])

@@ -1,0 +1,67 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://cn112akc5bgi2"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_e2hb7"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_81g35"]
+
+[sub_resource type="Resource" id="Resource_teui1"]
+script = ExtResource("1_e2hb7")
+question = "Comment se nomme l'arbre scientifique permettant de classer les espèces selon leur degré d'apparenté ?"
+choices = Array[String](["Phyloharmonique.", "Phylotechnique.", "Phylomorphologique.", "Phylogénétique."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_1vy7e"]
+script = ExtResource("1_e2hb7")
+question = "Quel groupe d’animaux sont utilisés pour la stratigraphie archéologique ?"
+choices = Array[String](["Requins.", "Pieuvres.", "Ammonites.", "Crustacés."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_1by2p"]
+script = ExtResource("1_e2hb7")
+question = "Qui est le descendant du Megalodon ?"
+choices = Array[String](["L'ensemble des poissons.", "Le grand requin blanc.", "Le guppy.", "Le poisson clown."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_n621s"]
+script = ExtResource("1_e2hb7")
+question = "Qui est l'ancêtre du chien ?"
+choices = Array[String](["Le chien n'a pas d'ancêtre.", "Le renard.", "Le chat.", "Le loup."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_ufh0x"]
+script = ExtResource("1_e2hb7")
+question = "Combien d'extinctions de masse se sont déroulées ?"
+choices = Array[String](["3.", "9.", "5.", "7."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_8qmit"]
+script = ExtResource("1_e2hb7")
+question = "Quelle est la dernière extinction ?"
+choices = Array[String](["Celle des mammifères.", "Celle des poissons.", "Celle des dinosaures.", "Celle des oiseaux."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_l3sdu"]
+script = ExtResource("1_e2hb7")
+question = "Durant quelle période s'est déroulée la première extinction ?"
+choices = Array[String](["Au crétacé.", "Au jurassique.", "Au silurien.", "Au trias."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_k10td"]
+script = ExtResource("1_e2hb7")
+question = "Pourquoi parlons-nous d'une 6ème extinction ?"
+choices = Array[String](["Car les poissons se reproduisent trop vite.", "Car les plantes disparaissent.", "Car l'homme modifie trop son environnement.", "Car les animaux mangent les plantes."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_u6qom"]
+script = ExtResource("1_e2hb7")
+question = "Peut-on dire que les oiseaux sont les descendants des dinosaures ?"
+choices = Array[String](["Non, c'est une faute fréquente.", "Non, c'est l'inverse.", "Oui, car les oiseaux sont des cousins.", "Oui, car les oiseaux font partie du même groupe que les dinosaures."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_uxauv"]
+script = ExtResource("1_e2hb7")
+question = "Combien de groupes séparent les dinosaures ?"
+choices = Array[String](["2.", "12.", "1000.", "2000."])
+
+[resource]
+script = ExtResource("2_81g35")
+questions = Array[ExtResource("1_e2hb7")]([SubResource("Resource_teui1"), SubResource("Resource_1vy7e"), SubResource("Resource_1by2p"), SubResource("Resource_n621s"), SubResource("Resource_ufh0x"), SubResource("Resource_8qmit"), SubResource("Resource_l3sdu"), SubResource("Resource_k10td"), SubResource("Resource_u6qom"), SubResource("Resource_uxauv")])

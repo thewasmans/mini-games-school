@@ -1,0 +1,80 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://wrffgdgsc4vk"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_oydh1"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_t8tuj"]
+
+[sub_resource type="Resource" id="Resource_d1obc"]
+script = ExtResource("1_oydh1")
+word = "BOULIMIE"
+hint = "Trouble alimentaire caractérisé par des crises d'hyperphagie."
+grid_position = Vector2i(4, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ggovg"]
+script = ExtResource("1_oydh1")
+word = "DIETE"
+hint = "Absence temporaire totale ou partielle de nourriture."
+grid_position = Vector2i(2, 13)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_02nrh"]
+script = ExtResource("1_oydh1")
+word = "PROTIDE"
+hint = "Séquence d'acides aminés ayant différents rôles, autre terme que la protéine."
+grid_position = Vector2i(9, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ifacn"]
+script = ExtResource("1_oydh1")
+word = "ALIMENT"
+hint = "Substance composée de nutriments."
+grid_position = Vector2i(0, 14)
+
+[sub_resource type="Resource" id="Resource_oqoox"]
+script = ExtResource("1_oydh1")
+word = "PYRAMIDE"
+hint = "Présentation organisée de l'alimentation sous formes d'étages."
+grid_position = Vector2i(7, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_mwc3f"]
+script = ExtResource("1_oydh1")
+word = "CHON"
+hint = "Les quatre principaux éléments du vivant."
+grid_position = Vector2i(11, 4)
+
+[sub_resource type="Resource" id="Resource_v6k3a"]
+script = ExtResource("1_oydh1")
+word = "SUC"
+hint = "Substance chimique aidant à la digestion, qui peut être gastrique ou intestinale."
+grid_position = Vector2i(9, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ra65b"]
+script = ExtResource("1_oydh1")
+word = "ABSORPTION"
+hint = "Passage des nutriments du tube digestif vers le sang."
+grid_position = Vector2i(3, 7)
+
+[sub_resource type="Resource" id="Resource_p4oco"]
+script = ExtResource("1_oydh1")
+word = "GLYCEROL"
+hint = "Egalement appelée glycérine, c'est un liquide sucré, inodore et incolore."
+grid_position = Vector2i(11, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ic0xj"]
+script = ExtResource("1_oydh1")
+word = "BILE"
+hint = "Sorte de savon fabriquée par le foie, qui facilite l'absorption des graisses et vitamines."
+grid_position = Vector2i(2, 10)
+
+[sub_resource type="Resource" id="Resource_mry40"]
+script = ExtResource("1_oydh1")
+word = "COLON"
+hint = "Lieu où se déroule la fabrication de la matière fécale."
+grid_position = Vector2i(9, 2)
+
+[resource]
+script = ExtResource("2_t8tuj")
+clues = Array[ExtResource("1_oydh1")]([SubResource("Resource_d1obc"), SubResource("Resource_ggovg"), SubResource("Resource_02nrh"), SubResource("Resource_ifacn"), SubResource("Resource_oqoox"), SubResource("Resource_mwc3f"), SubResource("Resource_v6k3a"), SubResource("Resource_ra65b"), SubResource("Resource_p4oco"), SubResource("Resource_ic0xj"), SubResource("Resource_mry40")])

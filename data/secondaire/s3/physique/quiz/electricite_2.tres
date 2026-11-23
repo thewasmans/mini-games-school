@@ -1,0 +1,87 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://cqeaacamf43jl"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_8b762"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_7ubom"]
+
+[sub_resource type="Resource" id="Resource_qaune"]
+script = ExtResource("1_8b762")
+question = "Qu'est-ce que l'électrostatique ?"
+choices = Array[String](["Science qui décrit les phénomènes causés par les charges électriques au repos.", "Transfert de charges négatives lorsque deux objets se touchent.", "Transfert de charges négatives suite à un frottement.", "Charger un objet neutre en le mettant à proximité d’un objet chargé."])
+
+[sub_resource type="Resource" id="Resource_ltedf"]
+script = ExtResource("1_8b762")
+question = "En quoi consiste l'électrisation par contact ?"
+choices = Array[String](["Science qui décrit les phénomènes causés par les charges électriques au repos.", "Transfert de charges négatives lorsque deux objets se touchent.", "Transfert de charges négatives suite à un frottement.", "Charger un objet neutre en le mettant à proximité d’un objet chargé."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_g5a4n"]
+script = ExtResource("1_8b762")
+question = "En quoi consiste l'électrisation par frottement ?"
+choices = Array[String](["Science qui décrit les phénomènes causés par les charges électriques au repos.", "Transfert de charges négatives lorsque deux objets se touchent.", "Transfert de charges négatives suite à un frottement.", "Charger un objet neutre en le mettant à proximité d’un objet chargé."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_xjwi1"]
+script = ExtResource("1_8b762")
+question = "En quoi consiste l'électrisation par induction ?"
+choices = Array[String](["Science qui décrit les phénomènes causés par les charges électriques au repos.", "Transfert de charges négatives lorsque deux objets se touchent.", "Transfert de charges négatives suite à un frottement.", "Charger un objet neutre en le mettant à proximité d’un objet chargé."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_qgdf8"]
+script = ExtResource("1_8b762")
+question = "Quelle est la nature des charges transférées lors de l'électrisation ?"
+choices = Array[String](["Des protons.", "Des électrons.", "Des neutrons.", "Des quarks."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_8q5tx"]
+script = ExtResource("1_8b762")
+question = "En quoi consiste un circuit en série ?"
+choices = Array[String](["Un circuit où le courant prend différents chemins.", "Un circuit où le courant prend un seul chemin.", "Un circuit où il y a toujours deux générateurs.", "Un circuit où il y a toujours deux récepteurs."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_luhip"]
+script = ExtResource("1_8b762")
+question = "En quoi consiste un circuit en parallèle ?"
+choices = Array[String](["Un circuit où le courant prend différents chemins.", "Un circuit où le courant prend un seul chemin.", "Un circuit où il y a toujours deux générateurs.", "Un circuit où il y a toujours deux récepteurs."])
+
+[sub_resource type="Resource" id="Resource_njdme"]
+script = ExtResource("1_8b762")
+question = "Quelle est la caractéristique d'un circuit en série ?"
+choices = Array[String](["C'est la même intensité qui traverse tous les récepteurs.", "Le courant est réparti entre tous les récepteurs.", "Toutes ces phrases sont justes.", "C'est la même intensité et la même tension entre tous les récepteurs."])
+
+[sub_resource type="Resource" id="Resource_81hon"]
+script = ExtResource("1_8b762")
+question = "Quelle est la caractéristique d'un circuit en parallèle ?"
+choices = Array[String](["C'est la même intensité qui traverse tous les récepteurs.", "Le courant est réparti entre tous les récepteurs.", "Toutes ces phrases sont justes.", "C'est la même intensité et la même tension entre tous les récepteurs."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_jxx6d"]
+script = ExtResource("1_8b762")
+question = "Quelle forme d'énergie est utilisée pour alimenter l'ordinateur ?"
+choices = Array[String](["Electrique.", "Thermique.", "Lumineuse.", "Mécanique."])
+
+[sub_resource type="Resource" id="Resource_uleos"]
+script = ExtResource("1_8b762")
+question = "Quelle est la formule de la résistance ?"
+choices = Array[String](["Le rapport entre la tension et l'intensité du courant.", "Le produit de la puissance et du temps.", "Le produit de l'intensité et de la tension.", "Le rapport entre l'énergie et la puissance."])
+
+[sub_resource type="Resource" id="Resource_mttho"]
+script = ExtResource("1_8b762")
+question = "Quelle est la formule de l'énergie électrique ?"
+choices = Array[String](["Le rapport entre la tension et l'intensité du courant.", "Le produit de la puissance et du temps.", "Le produit de l'intensité et de la tension.", "Le rapport entre l'énergie et la puissance."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_r3dcj"]
+script = ExtResource("1_8b762")
+question = "Quelle est la formule de la puissance ?"
+choices = Array[String](["Le rapport entre la tension et l'intensité du courant.", "Le produit de la puissance et du temps.", "Le produit de l'intensité et de la tension.", "Le rapport entre l'énergie et la puissance."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_n8syd"]
+script = ExtResource("1_8b762")
+question = "Comment se calcule le temps à partir de l'énergie électrique ?"
+choices = Array[String](["Le rapport entre la tension et l'intensité du courant.", "Le produit de la puissance et du temps.", "Le produit de l'intensité et de la tension.", "Le rapport entre l'énergie et la puissance."])
+correct_choice_index = 3
+
+[resource]
+script = ExtResource("2_7ubom")
+questions = Array[ExtResource("1_8b762")]([SubResource("Resource_qaune"), SubResource("Resource_ltedf"), SubResource("Resource_g5a4n"), SubResource("Resource_xjwi1"), SubResource("Resource_qgdf8"), SubResource("Resource_8q5tx"), SubResource("Resource_luhip"), SubResource("Resource_njdme"), SubResource("Resource_81hon"), SubResource("Resource_jxx6d"), SubResource("Resource_uleos"), SubResource("Resource_mttho"), SubResource("Resource_r3dcj"), SubResource("Resource_n8syd")])

@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://o4mlm1c71vbo"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_u3kgq"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_1xg7h"]
+
+[sub_resource type="Resource" id="Resource_c0kb1"]
+script = ExtResource("1_u3kgq")
+question = "Quel minéral est essentiel pour la santé des os et des dents ?"
+choices = Array[String](["Le fer.", "Le calcium.", "Le sodium.", "Le potassium."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_hnx2g"]
+script = ExtResource("1_u3kgq")
+question = "Quelle est la fonction principale des lipides (matières grasses) ?"
+choices = Array[String](["Fournir une réserve d'énergie et protéger les organes.", "Construire les muscles.", "Remplacer l'eau.", "Augmenter le taux de sucre."])
+
+[sub_resource type="Resource" id="Resource_5liol"]
+script = ExtResource("1_u3kgq")
+question = "Pourquoi les fibres alimentaires sont-elles importantes ?"
+choices = Array[String](["Pour favoriser le transit intestinal.", "Pour donner de la force immédiate.", "Pour réduire le cholestérol totalement.", "Elles ne sont pas utiles."])
+
+[sub_resource type="Resource" id="Resource_m7xjq"]
+script = ExtResource("1_u3kgq")
+question = "Qu'est-ce qu'une \"ration alimentaire\" ?"
+choices = Array[String](["La quantité de nourriture consommée en une fois.", "Le nom d'un aliment.", "Le prix d'un repas.", "Un type de régime."])
+
+[sub_resource type="Resource" id="Resource_8q0w0"]
+script = ExtResource("1_u3kgq")
+question = "Quel nutriment est crucial pour le transport de l'oxygène dans le sang ?"
+choices = Array[String](["Le magnésium.", "Le fer.", "Le sucre.", "La vitamine C."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_rv4bi"]
+script = ExtResource("1_u3kgq")
+question = "Que signifie une alimentation \"locale\" ?"
+choices = Array[String](["Acheter des produits produits près de chez soi.", "Acheter des produits bio.", "Acheter des produits très chers.", "Acheter uniquement des fruits."])
+
+[sub_resource type="Resource" id="Resource_gt0kt"]
+script = ExtResource("1_u3kgq")
+question = "Quel est le rôle des vitamines dans l'organisme ?"
+choices = Array[String](["Réguler les fonctions vitales et protéger le système immunitaire.", "Fournir toute l'énergie du corps.", "Remplacer les protéines.", "Augmenter la masse musculaire."])
+
+[sub_resource type="Resource" id="Resource_jg880"]
+script = ExtResource("1_u3kgq")
+question = "Quelle est la conséquence d'un déséquilibre alimentaire prolongé ?"
+choices = Array[String](["Une meilleure santé.", "Des risques de carences ou de maladies métaboliques.", "Une croissance accélérée.", "Aucune conséquence."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_actms"]
+script = ExtResource("1_u3kgq")
+question = "Quel est le rôle de la pyramide alimentaire ?"
+choices = Array[String](["Aider à visualiser les bonnes proportions des aliments.", "Servir de décoration.", "Calculer le prix du marché.", "Interdire certains aliments."])
+
+[sub_resource type="Resource" id="Resource_gnphy"]
+script = ExtResource("1_u3kgq")
+question = "Pourquoi les céréales complètes sont-elles préférables aux céréales raffinées ?"
+choices = Array[String](["Plus de pesticides.", "Plus de fibres et nutriments.", "Plus de sucre.", "Plus de colorants."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_yuxs0"]
+script = ExtResource("1_u3kgq")
+question = "Quelle est la recommandation générale pour l'hydratation quotidienne ?"
+choices = Array[String](["Boire uniquement quand on a soif.", "Boire environ 1,5 à 2 litres d'eau.", "Boire uniquement des jus de fruits.", "Boire très peu pour moins aller aux toilettes."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_16101"]
+script = ExtResource("1_u3kgq")
+question = "Quel aliment est une source majeure de protéines végétales ?"
+choices = Array[String](["Les légumineuses (lentilles, pois, haricots).", "Le sucre blanc.", "La crème fraîche.", "L'huile d'olive."])
+
+[resource]
+script = ExtResource("2_1xg7h")
+questions = Array[ExtResource("1_u3kgq")]([SubResource("Resource_c0kb1"), SubResource("Resource_hnx2g"), SubResource("Resource_5liol"), SubResource("Resource_m7xjq"), SubResource("Resource_8q0w0"), SubResource("Resource_rv4bi"), SubResource("Resource_gt0kt"), SubResource("Resource_jg880"), SubResource("Resource_actms"), SubResource("Resource_gnphy"), SubResource("Resource_yuxs0"), SubResource("Resource_16101")])

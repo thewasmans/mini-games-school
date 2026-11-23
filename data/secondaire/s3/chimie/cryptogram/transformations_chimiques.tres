@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://crgm50mvch588"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_4mplb"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_wokkf"]
+
+[sub_resource type="Resource" id="Resource_1t32v"]
+script = ExtResource("1_4mplb")
+text = "Une transformation chimique modifie la nature de la matière."
+
+[sub_resource type="Resource" id="Resource_vcdb2"]
+script = ExtResource("1_4mplb")
+text = "Les réactifs sont les substances de départ qui disparaissent lors de la réaction."
+
+[sub_resource type="Resource" id="Resource_btg4t"]
+script = ExtResource("1_4mplb")
+text = "Les produits sont les nouvelles substances formées par la réaction."
+
+[sub_resource type="Resource" id="Resource_mbh36"]
+script = ExtResource("1_4mplb")
+text = "La masse totale se conserve au cours de toute transformation chimique."
+
+[sub_resource type="Resource" id="Resource_1h5od"]
+script = ExtResource("1_4mplb")
+text = "Les atomes présents dans les réactifs se réorganisent pour former les produits."
+
+[sub_resource type="Resource" id="Resource_yxj05"]
+script = ExtResource("1_4mplb")
+text = "Une équation chimique équilibrée respecte la conservation des atomes."
+
+[sub_resource type="Resource" id="Resource_mu8x2"]
+script = ExtResource("1_4mplb")
+text = "La combustion d'un corps dégage de l'énergie thermique et de la lumière."
+
+[sub_resource type="Resource" id="Resource_xwlym"]
+script = ExtResource("1_4mplb")
+text = "Le dioxygène est un réactif indispensable à de nombreuses combustions."
+
+[sub_resource type="Resource" id="Resource_prrgg"]
+script = ExtResource("1_4mplb")
+text = "Les indices et les coefficients stœchiométriques décrivent les quantités."
+
+[sub_resource type="Resource" id="Resource_2y0vi"]
+script = ExtResource("1_4mplb")
+text = "Aucun atome ne se crée et aucun atome ne se détruit lors d'une réaction."
+
+[resource]
+script = ExtResource("2_wokkf")
+phrases = Array[ExtResource("1_4mplb")]([SubResource("Resource_1t32v"), SubResource("Resource_vcdb2"), SubResource("Resource_btg4t"), SubResource("Resource_mbh36"), SubResource("Resource_1h5od"), SubResource("Resource_yxj05"), SubResource("Resource_mu8x2"), SubResource("Resource_xwlym"), SubResource("Resource_prrgg"), SubResource("Resource_2y0vi")])
