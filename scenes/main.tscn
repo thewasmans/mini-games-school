@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dgxh18nboxsck" path="res://content/prefabs/ui/game_ui.tscn" id="5_tbgi4"]
 [ext_resource type="Script" uid="uid://biod1yqhch7nv" path="res://scripts/managers/level_manager.gd" id="8_lvlmgr"]
 [ext_resource type="PackedScene" uid="uid://b4qqoy48s4na1" path="res://content/prefabs/ui/level/level.tscn" id="9_lvlprfb"]
+[ext_resource type="PackedScene" path="res://content/prefabs/ui/mute_button_ui.tscn" id="10_mute"]
 
 [node name="Main" type="Node" unique_id=727947993 node_paths=PackedStringArray("game_manager")]
 script = ExtResource("1_sugp2")
@@ -31,3 +32,5 @@ level_root = NodePath("../../../Level")
 level_prefab = ExtResource("9_lvlprfb")
 
 [node name="Level" type="Node" parent="." unique_id=1565323220]
+
+[node name="MuteButtonLayer" parent="." instance=ExtResource("10_mute")]

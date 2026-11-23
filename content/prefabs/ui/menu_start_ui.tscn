@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bwqhljjwny4ys" path="res://scripts/ui/menu_start_ui.gd" id="3_menu_start"]
 [ext_resource type="Shader" uid="uid://bsitsh62plr28" path="res://content/shaders/ui_title.gdshader" id="4_title_shader"]
 [ext_resource type="Shader" uid="uid://bohtck3gprpqg" path="res://content/shaders/ui_play_button.gdshader" id="5_play_button_shader"]
+[ext_resource type="AudioStream" uid="uid://d1ui0l0byilnv" path="res://content/audios/sfx_background_music.mp3" id="6_05shb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_title"]
 shader = ExtResource("4_title_shader")
@@ -79,6 +80,10 @@ layout_mode = 2
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 50
 text = "CREDITS"
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=1748454735]
+stream = ExtResource("6_05shb")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
