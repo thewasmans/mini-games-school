@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://byfgihn66oa2q"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_o7j0t"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_fqorc"]
+
+[sub_resource type="Resource" id="Resource_fwjj1"]
+script = ExtResource("1_o7j0t")
+word = "DILUTION"
+hint = "Procédé utilisé pour diminuer la concentration d'une solution en y ajoutant du solvant, sans changer la quantité de soluté."
+grid_position = Vector2i(0, 4)
+
+[sub_resource type="Resource" id="Resource_x1ckl"]
+script = ExtResource("1_o7j0t")
+word = "PHOSPHORE"
+hint = "Elément chimique dont la symbole est P."
+grid_position = Vector2i(6, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_8f6sr"]
+script = ExtResource("1_o7j0t")
+word = "SOLUTE"
+hint = "Se dit de la substance qui est dissoute par un solvant."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_t31x7"]
+script = ExtResource("1_o7j0t")
+word = "CALCIUM"
+hint = "Elément chimique dont la symbole est Ca."
+grid_position = Vector2i(2, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_81nva"]
+script = ExtResource("1_o7j0t")
+word = "HYDROGENE"
+hint = "Elément chimique dont la symbole est H."
+grid_position = Vector2i(0, 2)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_fqorc")
+clues = Array[ExtResource("1_o7j0t")]([SubResource("Resource_fwjj1"), SubResource("Resource_x1ckl"), SubResource("Resource_8f6sr"), SubResource("Resource_t31x7"), SubResource("Resource_81nva")])

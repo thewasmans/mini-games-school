@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://8dbp02fkxj10"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_8iaiq"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_2un4s"]
+
+[sub_resource type="Resource" id="Resource_0qqfl"]
+script = ExtResource("1_8iaiq")
+word = "INFILTRATION"
+hint = "Processus physique par lequel l'eau pénètre dans les sols et alimente les nappes."
+grid_position = Vector2i(3, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_tioq1"]
+script = ExtResource("1_8iaiq")
+word = "MATIERE"
+hint = "Tout ce qui compose les corps qui nous entourent, tout ce qui a une masse et un volume."
+grid_position = Vector2i(0, 4)
+
+[sub_resource type="Resource" id="Resource_1pcbe"]
+script = ExtResource("1_8iaiq")
+word = "GAZ"
+hint = "Etat où la matière est complètement désorganisée, comme l'air."
+grid_position = Vector2i(1, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_pbah0"]
+script = ExtResource("1_8iaiq")
+word = "CONDENSATION"
+hint = "Phénomène physique de changement d'état de la matière d'un état gazeux à un état compact."
+grid_position = Vector2i(6, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ulh4w"]
+script = ExtResource("1_8iaiq")
+word = "MER"
+hint = "L'eau des fleuves s'y jette."
+grid_position = Vector2i(1, 7)
+
+[resource]
+script = ExtResource("2_2un4s")
+clues = Array[ExtResource("1_8iaiq")]([SubResource("Resource_0qqfl"), SubResource("Resource_tioq1"), SubResource("Resource_1pcbe"), SubResource("Resource_pbah0"), SubResource("Resource_ulh4w")])

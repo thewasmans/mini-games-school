@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bw4x8fk573swt"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_8e12d"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="2_np67b"]
+
+[sub_resource type="Resource" id="Resource_fat8p"]
+script = ExtResource("1_8e12d")
+question = "Quel est le rôle des décomposeurs ?"
+choices = Array[String](["Décomposer la matière organique.", "Fabriquer du glucose.", "Convertir l'énergie du Soleil.", "Libérer de l'oxygène."])
+
+[sub_resource type="Resource" id="Resource_vpnr5"]
+script = ExtResource("1_8e12d")
+question = "Quel terme correspond au faucon en haut d'un réseau ?"
+choices = Array[String](["Producteur.", "Flore.", "Superprédateur.", "Consommateur primaire."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_gwmdy"]
+script = ExtResource("1_8e12d")
+question = "Qu'est-ce qu'un écosystème ?"
+choices = Array[String](["Uniquement les êtres vivants.", "Ensemble d'êtres vivants en relation avec leur milieu de vie.", "Uniquement le milieu de vie.", "Uniquement les plantes."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_bsxyw"]
+script = ExtResource("1_8e12d")
+question = "Qu'est-ce que la biocénose ?"
+choices = Array[String](["Uniquement les êtres vivants.", "Ensemble d'êtres vivants en relation avec leur milieu de vie.", "Uniquement le milieu de vie.", "Uniquement les plantes."])
+
+[resource]
+script = ExtResource("2_np67b")
+questions = Array[ExtResource("1_8e12d")]([SubResource("Resource_fat8p"), SubResource("Resource_vpnr5"), SubResource("Resource_gwmdy"), SubResource("Resource_bsxyw")])

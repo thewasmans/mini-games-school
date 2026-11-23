@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://cte52gpvci1h8"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_ab8ov"]
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_oii2w"]
+
+[sub_resource type="Resource" id="Resource_8onmb"]
+script = ExtResource("1_ab8ov")
+text = "Tout corps plongé dans un fluide subit une poussée verticale vers le haut."
+
+[sub_resource type="Resource" id="Resource_ukvr8"]
+script = ExtResource("1_ab8ov")
+text = "La poussée d'Archimède s'exerce de bas en haut sur les objets immergés."
+
+[sub_resource type="Resource" id="Resource_1pylm"]
+script = ExtResource("1_ab8ov")
+text = "Cette force est égale au poids du volume de fluide déplacé par l'objet."
+
+[resource]
+script = ExtResource("2_oii2w")
+hidden_letter_ratio = 0.3
+phrases = Array[ExtResource("1_ab8ov")]([SubResource("Resource_8onmb"), SubResource("Resource_ukvr8"), SubResource("Resource_1pylm")])

@@ -1,0 +1,54 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cd3hdplub08uy"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_gksar"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_anpbw"]
+
+[sub_resource type="Resource" id="Resource_xcmt1"]
+script = ExtResource("1_gksar")
+word = "DISSEMINATION"
+hint = "Action de répandre, d'étaler des graines de plantes dans un champ."
+grid_position = Vector2i(2, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ni42j"]
+script = ExtResource("1_gksar")
+word = "TIGE"
+hint = "Partie allongée des plantes qui porte les feuilles."
+grid_position = Vector2i(0, 9)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_1gpxt"]
+script = ExtResource("1_gksar")
+word = "ABEILLE"
+hint = "Insecte pollinisateur qui permet d'obtenir du miel."
+grid_position = Vector2i(4, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_xguqk"]
+script = ExtResource("1_gksar")
+word = "HYDROGAMIE"
+hint = "Transport des grains de pollen par l'eau."
+
+[sub_resource type="Resource" id="Resource_msot3"]
+script = ExtResource("1_gksar")
+word = "ANEMOGAMIE"
+hint = "Transport des grains de pollen par le vent, l'air."
+grid_position = Vector2i(6, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_nhj2y"]
+script = ExtResource("1_gksar")
+word = "GROSEILLIER"
+hint = "Arbuste cultivé pour ses fruits, les groseilles."
+grid_position = Vector2i(0, 11)
+
+[sub_resource type="Resource" id="Resource_jhfch"]
+script = ExtResource("1_gksar")
+word = "GERMINATION"
+hint = "Etapes par lesquelles une graine se développe et devient une plante."
+grid_position = Vector2i(8, 3)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_anpbw")
+clues = Array[ExtResource("1_gksar")]([SubResource("Resource_xcmt1"), SubResource("Resource_ni42j"), SubResource("Resource_1gpxt"), SubResource("Resource_xguqk"), SubResource("Resource_msot3"), SubResource("Resource_nhj2y"), SubResource("Resource_jhfch")])

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://co2lhmu1j4i2o"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_nts4d"]
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_mmrty"]
+
+[sub_resource type="Resource" id="Resource_uav47"]
+script = ExtResource("1_nts4d")
+text = "Le changement climatique mondial impacte l'ensemble des milieux de vie."
+
+[sub_resource type="Resource" id="Resource_ns16j"]
+script = ExtResource("1_nts4d")
+text = "La protection de la nature permet de restaurer les habitats dégradés."
+
+[sub_resource type="Resource" id="Resource_rqij0"]
+script = ExtResource("1_nts4d")
+text = "Le développement durable concilie besoins humains et respect de l'environnement."
+
+[sub_resource type="Resource" id="Resource_ys66n"]
+script = ExtResource("1_nts4d")
+text = "Chaque citoyen peut agir au quotidien pour préserver la planète."
+
+[resource]
+script = ExtResource("2_mmrty")
+hidden_letter_ratio = 0.5
+phrases = Array[ExtResource("1_nts4d")]([SubResource("Resource_uav47"), SubResource("Resource_ns16j"), SubResource("Resource_rqij0"), SubResource("Resource_ys66n")])

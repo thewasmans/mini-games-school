@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://b647nho3ydn8k"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_begt3"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="2_q8cyc"]
+
+[sub_resource type="Resource" id="Resource_jmnrm"]
+script = ExtResource("1_begt3")
+question = "Comment se nomme le passage du liquide au gaz ?"
+choices = Array[String](["La fusion.", "La condensation.", "L'évaporation.", "La solidification."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_pw200"]
+script = ExtResource("1_begt3")
+question = "Comment se nomme le passage du liquide au solide ?"
+choices = Array[String](["La fusion.", "La condensation.", "L'évaporation.", "La solidification."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_6niuw"]
+script = ExtResource("1_begt3")
+question = "Quelle est la définition du volume ?"
+choices = Array[String](["C'est l'espace occupé par un objet.", "C'est l'espace que peut contenir un objet.", "C'est un concept virtuel.", "C'est l'équivalent de la masse."])
+
+[sub_resource type="Resource" id="Resource_hkan7"]
+script = ExtResource("1_begt3")
+question = "Nous appelons les variations de températures dans un système..."
+choices = Array[String](["La combustion.", "La convection.", "La conduction.", "La radiation."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_q8cyc")
+questions = Array[ExtResource("1_begt3")]([SubResource("Resource_jmnrm"), SubResource("Resource_pw200"), SubResource("Resource_6niuw"), SubResource("Resource_hkan7")])

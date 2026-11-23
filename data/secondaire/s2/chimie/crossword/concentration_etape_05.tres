@@ -1,0 +1,52 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dbxlm6003a0fd"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_5n0vd"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_5gjjb"]
+
+[sub_resource type="Resource" id="Resource_w6ayy"]
+script = ExtResource("1_5n0vd")
+word = "MG"
+hint = "Symbole chimique du magnésium."
+grid_position = Vector2i(4, 8)
+
+[sub_resource type="Resource" id="Resource_vjgfp"]
+script = ExtResource("1_5n0vd")
+word = "CARBONE"
+hint = "Elément chimique dont la symbole est C."
+grid_position = Vector2i(0, 4)
+
+[sub_resource type="Resource" id="Resource_kd777"]
+script = ExtResource("1_5n0vd")
+word = "CR"
+hint = "Symbole chimique du chrome."
+grid_position = Vector2i(4, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_5gld2"]
+script = ExtResource("1_5n0vd")
+word = "AS"
+hint = "Symbole chimique de l'arsenic."
+
+[sub_resource type="Resource" id="Resource_5e5k3"]
+script = ExtResource("1_5n0vd")
+word = "AZOTE"
+hint = "Elément chimique dont la symbole est N."
+grid_position = Vector2i(6, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ob0um"]
+script = ExtResource("1_5n0vd")
+word = "SOLVANT"
+hint = "Se dit d'une substance qui permet de dissoudre, comme l'eau."
+grid_position = Vector2i(1, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_xs0j7"]
+script = ExtResource("1_5n0vd")
+word = "FLUOR"
+hint = "Elément chimique dont la symbole est F."
+grid_position = Vector2i(0, 2)
+
+[resource]
+script = ExtResource("2_5gjjb")
+clues = Array[ExtResource("1_5n0vd")]([SubResource("Resource_w6ayy"), SubResource("Resource_vjgfp"), SubResource("Resource_kd777"), SubResource("Resource_5gld2"), SubResource("Resource_5e5k3"), SubResource("Resource_ob0um"), SubResource("Resource_xs0j7")])

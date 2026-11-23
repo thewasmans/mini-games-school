@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://c8ganmiu4cvk5"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_bgohm"]
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_sqwrf"]
+
+[sub_resource type="Resource" id="Resource_i5vlh"]
+script = ExtResource("1_bgohm")
+text = "Le noyau atomique rassemble des protons et des neutrons très serrés."
+
+[sub_resource type="Resource" id="Resource_yd0ac"]
+script = ExtResource("1_bgohm")
+text = "Les électrons se répartissent en couches électroniques autour du noyau."
+
+[sub_resource type="Resource" id="Resource_ahgej"]
+script = ExtResource("1_bgohm")
+text = "La masse de l'atome est presque entièrement concentrée dans son noyau central."
+
+[sub_resource type="Resource" id="Resource_qmffk"]
+script = ExtResource("1_bgohm")
+text = "Chaque élément chimique possède un symbole unique composé d'une ou deux lettres."
+
+[resource]
+script = ExtResource("2_sqwrf")
+hidden_letter_ratio = 0.5
+phrases = Array[ExtResource("1_bgohm")]([SubResource("Resource_i5vlh"), SubResource("Resource_yd0ac"), SubResource("Resource_ahgej"), SubResource("Resource_qmffk")])

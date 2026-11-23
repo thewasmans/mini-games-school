@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bja3blt1l2bl6"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_a7tb2"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_dvo4n"]
+
+[sub_resource type="Resource" id="Resource_k5sux"]
+script = ExtResource("1_a7tb2")
+word = "CONDUCTEUR"
+hint = "Se dit d'un matériau qui transfert la chaleur, comme l'aluminium."
+grid_position = Vector2i(6, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_fn7w0"]
+script = ExtResource("1_a7tb2")
+word = "EOLIENNE"
+hint = "Technologie exploitant l'énergie cinétique du vent."
+grid_position = Vector2i(4, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_j5tqj"]
+script = ExtResource("1_a7tb2")
+word = "HYDRAULIQUE"
+hint = "Technologie exploitant l'énergie de l'eau en mouvement, utilisée notamment dans les barrages."
+grid_position = Vector2i(1, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ng88y"]
+script = ExtResource("1_a7tb2")
+word = "VENT"
+hint = "Terme météorologique qui désigne le mouvement de l'air."
+grid_position = Vector2i(3, 8)
+
+[sub_resource type="Resource" id="Resource_o8neo"]
+script = ExtResource("1_a7tb2")
+word = "BASSE"
+hint = "On parle de haute pression et de..."
+grid_position = Vector2i(0, 4)
+
+[resource]
+script = ExtResource("2_dvo4n")
+clues = Array[ExtResource("1_a7tb2")]([SubResource("Resource_k5sux"), SubResource("Resource_fn7w0"), SubResource("Resource_j5tqj"), SubResource("Resource_ng88y"), SubResource("Resource_o8neo")])

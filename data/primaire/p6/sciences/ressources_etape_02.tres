@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://b5nuh1t7xrkut"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_avikl"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_i40v6"]
+
+[sub_resource type="Resource" id="Resource_37k40"]
+script = ExtResource("1_avikl")
+word = "RENOUVELABLE"
+hint = "Se dit d'une énergie provenant de sources naturelles qui se renouvelle à un rythme supérieur de sa consommation."
+grid_position = Vector2i(3, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_chro4"]
+script = ExtResource("1_avikl")
+word = "TRANSFERT"
+hint = "Terme utilisé pour traduire le déplacement d'énergie thermique d'un objet chaud à un objet froid."
+grid_position = Vector2i(1, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_e8i17"]
+script = ExtResource("1_avikl")
+word = "ISOLANT"
+hint = "Matériau qui permet d'empêcher la chaleur ou le froid de s'échapper, comme le bois ou la laine."
+grid_position = Vector2i(0, 7)
+
+[sub_resource type="Resource" id="Resource_rgm72"]
+script = ExtResource("1_avikl")
+word = "ELECTRIQUE"
+hint = "Forme d'énergie qui permet d'alimenter, d'allumer un ordinateur ou un smartphone."
+grid_position = Vector2i(6, 3)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_i40v6")
+clues = Array[ExtResource("1_avikl")]([SubResource("Resource_37k40"), SubResource("Resource_chro4"), SubResource("Resource_e8i17"), SubResource("Resource_rgm72")])

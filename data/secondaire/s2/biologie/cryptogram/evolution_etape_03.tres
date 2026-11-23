@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://bosenjkk6ib8x"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_u407k"]
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_y28n7"]
+
+[sub_resource type="Resource" id="Resource_6op3v"]
+script = ExtResource("1_u407k")
+text = "Les crises biologiques provoquent des extinctions massives d'espèces."
+
+[sub_resource type="Resource" id="Resource_rbcwc"]
+script = ExtResource("1_u407k")
+text = "L'arbre de la parenté illustre les liens évolutifs entre les êtres vivants."
+
+[sub_resource type="Resource" id="Resource_q6i5w"]
+script = ExtResource("1_u407k")
+text = "L'adaptation morphologique aide les espèces à survivre face aux changements."
+
+[sub_resource type="Resource" id="Resource_3e2qi"]
+script = ExtResource("1_u407k")
+text = "Toutes les formes de vie sur Terre partagent des origines communes."
+
+[resource]
+script = ExtResource("2_y28n7")
+hidden_letter_ratio = 0.5
+phrases = Array[ExtResource("1_u407k")]([SubResource("Resource_6op3v"), SubResource("Resource_rbcwc"), SubResource("Resource_q6i5w"), SubResource("Resource_3e2qi")])

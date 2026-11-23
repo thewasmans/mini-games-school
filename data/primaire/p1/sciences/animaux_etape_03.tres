@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bnsnasfc5rnwn"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_ggr2j"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_e62iv"]
+
+[sub_resource type="Resource" id="Resource_8bq82"]
+script = ExtResource("1_ggr2j")
+word = "MARE"
+hint = "Milieu de vie naturel et aquatique aménagé par l'humain afin d'y voir des poissons et des grenouilles."
+grid_position = Vector2i(2, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_j8d7g"]
+script = ExtResource("1_ggr2j")
+word = "POULE"
+hint = "Oiseau domestiqué pour obtenir des œufs que l'on peut manger en omelette ou sur le plat."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_umspi"]
+script = ExtResource("1_ggr2j")
+word = "TERRE"
+hint = "Elément solide qui permet à une plante de s'enraciner."
+grid_position = Vector2i(0, 4)
+
+[sub_resource type="Resource" id="Resource_ubss8"]
+script = ExtResource("1_ggr2j")
+word = "FORET"
+hint = "Milieu de vie naturel et terrestre dans nos régions où vivent des plantes, des animaux et des champignons."
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_e62iv")
+clues = Array[ExtResource("1_ggr2j")]([SubResource("Resource_8bq82"), SubResource("Resource_j8d7g"), SubResource("Resource_umspi"), SubResource("Resource_ubss8")])

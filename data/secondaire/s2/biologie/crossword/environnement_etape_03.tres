@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://c12pysttt6tpx"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_kv7gf"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_7hf60"]
+
+[sub_resource type="Resource" id="Resource_p1j1s"]
+script = ExtResource("1_kv7gf")
+word = "DEFORESTATION"
+hint = "Action de détruire une forêt, d'enlever les arbres pour se chauffer."
+grid_position = Vector2i(7, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_d381c"]
+script = ExtResource("1_kv7gf")
+word = "SUREXPLOITATION"
+hint = "Action d'épuiser les ressources avant qu'elles ne puissent se renouveler."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_e832q"]
+script = ExtResource("1_kv7gf")
+word = "POLLUTION"
+hint = "Action de contaminer l'air, l'eau ou la terre."
+grid_position = Vector2i(0, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ubh3s"]
+script = ExtResource("1_kv7gf")
+word = "BRACONNAGE"
+hint = "Pratique illégale de la chasse ou de la pêche."
+grid_position = Vector2i(3, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_s1j3x"]
+script = ExtResource("1_kv7gf")
+word = "INVASIVE"
+hint = "Terme utilisé pour informer d'une espèce qui est étrangère et pose problème dans l'environnement."
+grid_position = Vector2i(0, 8)
+
+[resource]
+script = ExtResource("2_7hf60")
+clues = Array[ExtResource("1_kv7gf")]([SubResource("Resource_p1j1s"), SubResource("Resource_d381c"), SubResource("Resource_e832q"), SubResource("Resource_ubh3s"), SubResource("Resource_s1j3x")])

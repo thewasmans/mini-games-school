@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://cx6yhwoxqtpt"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_2asfw"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="2_qi1gj"]
+
+[sub_resource type="Resource" id="Resource_wy76b"]
+script = ExtResource("1_2asfw")
+question = "Comment se nomme l'élément chimique noté Na ?"
+choices = Array[String](["Calcium.", "Sodium.", "Phosphore.", "Potassium."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_jxmfk"]
+script = ExtResource("1_2asfw")
+question = "Comment se nomme l'élément chimique noté Ca ?"
+choices = Array[String](["Calcium.", "Sodium.", "Phosphore.", "Potassium."])
+
+[sub_resource type="Resource" id="Resource_qe3nn"]
+script = ExtResource("1_2asfw")
+question = "Comment se nomme l'élément chimique noté P ?"
+choices = Array[String](["Calcium.", "Sodium.", "Phosphore.", "Potassium."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_gf6l6"]
+script = ExtResource("1_2asfw")
+question = "Comment se nomme l'élément chimique noté K ?"
+choices = Array[String](["Calcium.", "Sodium.", "Phosphore.", "Potassium."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_4p0lh"]
+script = ExtResource("1_2asfw")
+question = "Quel est le symbole du soufre ?"
+choices = Array[String](["S.", "Mg.", "Mn.", "He."])
+
+[sub_resource type="Resource" id="Resource_u1qva"]
+script = ExtResource("1_2asfw")
+question = "Quel est le symbole du magnésium ?"
+choices = Array[String](["S.", "Mg.", "Mn.", "He."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_dkge7"]
+script = ExtResource("1_2asfw")
+question = "Quel est le symbole du manganèse ?"
+choices = Array[String](["S.", "Mg.", "Mn.", "He."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("2_qi1gj")
+questions = Array[ExtResource("1_2asfw")]([SubResource("Resource_wy76b"), SubResource("Resource_jxmfk"), SubResource("Resource_qe3nn"), SubResource("Resource_gf6l6"), SubResource("Resource_4p0lh"), SubResource("Resource_u1qva"), SubResource("Resource_dkge7")])

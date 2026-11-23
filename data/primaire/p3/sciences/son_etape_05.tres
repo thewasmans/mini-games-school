@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cppxtmr327d4q"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_r8sex"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_2x8lt"]
+
+[sub_resource type="Resource" id="Resource_8g1ge"]
+script = ExtResource("1_r8sex")
+word = "ABSORPTION"
+hint = "Action de capter des longueurs d'ondes spécifiques du Soleil."
+grid_position = Vector2i(3, 8)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_xonep"]
+script = ExtResource("1_r8sex")
+word = "PROPAGATION"
+hint = "Fait de s'étendre, d'être diffusé, comme une onde qui se....dans l'eau."
+grid_position = Vector2i(1, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_25ddi"]
+script = ExtResource("1_r8sex")
+word = "NASAL"
+hint = "Qui est relatif au nez ou lui appartient."
+grid_position = Vector2i(0, 8)
+
+[sub_resource type="Resource" id="Resource_un2ad"]
+script = ExtResource("1_r8sex")
+word = "LOUPE"
+hint = "Instrument de base en optique permettant d'agrandir l'image d'un objet."
+grid_position = Vector2i(0, 13)
+
+[sub_resource type="Resource" id="Resource_hewe8"]
+script = ExtResource("1_r8sex")
+word = "MIROIR"
+hint = "Instrument qui sert à réfléchir la lumière et dans lequel on se regarde."
+grid_position = Vector2i(0, 16)
+
+[sub_resource type="Resource" id="Resource_f4qcp"]
+script = ExtResource("1_r8sex")
+word = "LUMIERE"
+hint = "Spectre contenant plusieurs types de rayonnements lumineux pouvant éclairer un milieu."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_7x84n"]
+script = ExtResource("1_r8sex")
+word = "ONDE"
+hint = "Déformation ou vibration qui se propage dans un milieu donné."
+grid_position = Vector2i(1, 6)
+
+[resource]
+script = ExtResource("2_2x8lt")
+clues = Array[ExtResource("1_r8sex")]([SubResource("Resource_8g1ge"), SubResource("Resource_xonep"), SubResource("Resource_25ddi"), SubResource("Resource_un2ad"), SubResource("Resource_hewe8"), SubResource("Resource_f4qcp"), SubResource("Resource_7x84n")])

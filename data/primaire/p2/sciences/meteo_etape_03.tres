@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dx0yhl02b2ww4"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_762ys"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_sx7cs"]
+
+[sub_resource type="Resource" id="Resource_0e5ox"]
+script = ExtResource("1_762ys")
+word = "NUAGE"
+hint = "Phénomène qui se forme lorsque la vapeur d'eau se condense en altitude."
+grid_position = Vector2i(3, 5)
+
+[sub_resource type="Resource" id="Resource_mwe03"]
+script = ExtResource("1_762ys")
+word = "ECLAIR"
+hint = "Phénomène lumineux qui apparait suite à une décharge électrique dans les nuages."
+grid_position = Vector2i(0, 1)
+
+[sub_resource type="Resource" id="Resource_b70bc"]
+script = ExtResource("1_762ys")
+word = "PLUIE"
+hint = "Petites gouttes d'eau qui tombent du ciel depuis les nuages."
+grid_position = Vector2i(7, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_25ff4"]
+script = ExtResource("1_762ys")
+word = "SAISON"
+hint = "Période de temps divisée en 4 parties : été, hiver, automne et printemps."
+grid_position = Vector2i(3, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_h64og"]
+script = ExtResource("1_762ys")
+word = "NEIGE"
+hint = "Petit flocon qui tombe en hiver lorsqu'il fait froid."
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_sx7cs")
+clues = Array[ExtResource("1_762ys")]([SubResource("Resource_0e5ox"), SubResource("Resource_mwe03"), SubResource("Resource_b70bc"), SubResource("Resource_25ff4"), SubResource("Resource_h64og")])

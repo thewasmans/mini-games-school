@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dtnn7scmm4kc"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_tkrwi"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_633km"]
+
+[sub_resource type="Resource" id="Resource_s1psh"]
+script = ExtResource("1_tkrwi")
+word = "CAPTAGE"
+hint = "Action de récupérer l'eau, de la reprendre."
+grid_position = Vector2i(2, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_0d8u0"]
+script = ExtResource("1_tkrwi")
+word = "TOXIQUE"
+hint = "Substance nocive pour un organisme."
+grid_position = Vector2i(8, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_r2tg4"]
+script = ExtResource("1_tkrwi")
+word = "MELANGE"
+hint = "Association de deux ou plusieurs substances."
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_1ch0e"]
+script = ExtResource("1_tkrwi")
+word = "DRAIN"
+hint = "Tube servant à faire écouler un liquide."
+grid_position = Vector2i(5, 3)
+
+[sub_resource type="Resource" id="Resource_mvv2m"]
+script = ExtResource("1_tkrwi")
+word = "EVACUATION"
+hint = "Action de libérer, d'évacuer l'eau."
+grid_position = Vector2i(0, 1)
+
+[resource]
+script = ExtResource("2_633km")
+clues = Array[ExtResource("1_tkrwi")]([SubResource("Resource_s1psh"), SubResource("Resource_0d8u0"), SubResource("Resource_r2tg4"), SubResource("Resource_1ch0e"), SubResource("Resource_mvv2m")])

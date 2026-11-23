@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bodp5wjdawtja"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_r51gm"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_llj7a"]
+
+[sub_resource type="Resource" id="Resource_pa5o2"]
+script = ExtResource("1_r51gm")
+word = "RELATIVE"
+hint = "Masse atomique qui est la moyenne pondérée des masses des isotopes d'un élément."
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_nmn13"]
+script = ExtResource("1_r51gm")
+word = "RUTHERFORD"
+hint = "Physicien qui découvre une nouvelle particule subatomique, le proton."
+
+[sub_resource type="Resource" id="Resource_qeoe2"]
+script = ExtResource("1_r51gm")
+word = "NEUTRON"
+hint = "Particule élémentaire du noyau atomique, de charge électrique neutre."
+grid_position = Vector2i(4, 7)
+
+[sub_resource type="Resource" id="Resource_rqppr"]
+script = ExtResource("1_r51gm")
+word = "ELECTRON"
+hint = "Particule élémentaire de charge électrique négative qui gravite autour du noyau de l'atome."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_nvyhw"]
+script = ExtResource("1_r51gm")
+word = "PERIODE"
+hint = "Groupe d'éléments de la ligne horizontale du tableau périodique, ils ont le même nombre de couches électroniques."
+grid_position = Vector2i(2, 5)
+
+[sub_resource type="Resource" id="Resource_j24bh"]
+script = ExtResource("1_r51gm")
+word = "CATION"
+hint = "Elément chimique chargé positivement."
+grid_position = Vector2i(4, 3)
+
+[resource]
+script = ExtResource("2_llj7a")
+clues = Array[ExtResource("1_r51gm")]([SubResource("Resource_pa5o2"), SubResource("Resource_nmn13"), SubResource("Resource_qeoe2"), SubResource("Resource_rqppr"), SubResource("Resource_nvyhw"), SubResource("Resource_j24bh")])

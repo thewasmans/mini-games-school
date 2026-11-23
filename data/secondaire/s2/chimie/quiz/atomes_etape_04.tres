@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://b1y0pm0gmhbt5"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_njlof"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="2_q3pyr"]
+
+[sub_resource type="Resource" id="Resource_k6kva"]
+script = ExtResource("1_njlof")
+question = "Quel est l'objectif de la dilution ?"
+choices = Array[String](["Diminuer la concentration d'une solution en y ajoutant du solvant.", "Augmenter la concentration d'une solution en y ajoutant du solvant.", "Augmenter la quantité de solvant.", "Transformer un corps solide en liquide."])
+
+[sub_resource type="Resource" id="Resource_fyy8e"]
+script = ExtResource("1_njlof")
+question = "Quel est l'objectif de la dissolution ?"
+choices = Array[String](["Diminuer la concentration d'une solution en y ajoutant du solvant.", "Augmenter la concentration d'une solution en y ajoutant du solvant.", "Augmenter la quantité de solvant.", "Transformer un corps solide en liquide."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_nx2rf"]
+script = ExtResource("1_njlof")
+question = "Que peux-tu dire à propos de l'eau ?"
+choices = Array[String](["Solvant.", "Atome.", "Incompatible avec la vie.", "Se divise (mitose)."])
+
+[sub_resource type="Resource" id="Resource_lu104"]
+script = ExtResource("1_njlof")
+question = "Que faut-il faire lors d'un labo ?"
+choices = Array[String](["Manger.", "Porter son tablier.", "Etre toujours proche du bec de Bunsen.", "Ne pas prendre des gants."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_fdrib"]
+script = ExtResource("1_njlof")
+question = "Que peut-on dire à propos du NaCl ?"
+choices = Array[String](["C'est un sel.", "Chlorure de sodium.", "Une molécule.", "Toutes ces phrases."])
+correct_choice_index = 3
+
+[resource]
+script = ExtResource("2_q3pyr")
+questions = Array[ExtResource("1_njlof")]([SubResource("Resource_k6kva"), SubResource("Resource_fyy8e"), SubResource("Resource_nx2rf"), SubResource("Resource_lu104"), SubResource("Resource_fdrib")])

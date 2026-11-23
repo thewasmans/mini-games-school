@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cojx5u2fyrvdq"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_8scex"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_qsr7v"]
+
+[sub_resource type="Resource" id="Resource_ufo75"]
+script = ExtResource("1_8scex")
+word = "SCHEMA"
+hint = "Figure donnant une représentation simplifiée et fonctionnelle."
+grid_position = Vector2i(2, 1)
+
+[sub_resource type="Resource" id="Resource_wvcc2"]
+script = ExtResource("1_8scex")
+word = "HYPERTONIQUE"
+hint = "Se dit d'une solution fortement concentrée en solutés."
+grid_position = Vector2i(0, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_qtcgb"]
+script = ExtResource("1_8scex")
+word = "OSMOSE"
+hint = "Passage de molécules de solvants à travers une membrane semi-perméable, depuis le milieu le moins concentré en solutés vers celui le plus concentré."
+grid_position = Vector2i(0, 7)
+
+[sub_resource type="Resource" id="Resource_2oyxy"]
+script = ExtResource("1_8scex")
+word = "CELLULOSE"
+hint = "Polymère de glucides qui contient la matière structurelle primaire de la plupart des végétaux."
+grid_position = Vector2i(3, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_arkmk"]
+script = ExtResource("1_8scex")
+word = "ARBRE"
+hint = "Organisme végétal qui peut atteindre plus de 100 mètres de haut."
+grid_position = Vector2i(5, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_yiujx"]
+script = ExtResource("1_8scex")
+word = "MARAICHER"
+hint = "Exploitant agricole qui cultive des légumes."
+grid_position = Vector2i(7, 0)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_qsr7v")
+clues = Array[ExtResource("1_8scex")]([SubResource("Resource_ufo75"), SubResource("Resource_wvcc2"), SubResource("Resource_qtcgb"), SubResource("Resource_2oyxy"), SubResource("Resource_arkmk"), SubResource("Resource_yiujx")])

@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://c1mcqfgxr37ta"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_e5b6h"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="2_xbj34"]
+
+[sub_resource type="Resource" id="Resource_fxeof"]
+script = ExtResource("1_e5b6h")
+question = "Comment se nomme la partie où se développe le bébé ?"
+choices = Array[String](["Ovaire.", "Testicule.", "Utérus.", "Scrotum."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_gu6vy"]
+script = ExtResource("1_e5b6h")
+question = "Que contient le sperme ?"
+choices = Array[String](["Des ovocytes.", "Des spermatozoides.", "Du sang.", "Du liquide cérébro-spinal."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_toexp"]
+script = ExtResource("1_e5b6h")
+question = "Dans quel endroit s'effectue l'éjaculation ?"
+choices = Array[String](["Au niveau des testicules.", "Au niveau du pénis.", "Au niveau de la vésicule séminale.", "Au niveau de l'intestin."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_dsbei"]
+script = ExtResource("1_e5b6h")
+question = "Comment appelons-nous les changements lors de l'adolescence ?"
+choices = Array[String](["La puberté.", "L'homosexualité.", "Les variations.", "L'hormonologie."])
+
+[resource]
+script = ExtResource("2_xbj34")
+questions = Array[ExtResource("1_e5b6h")]([SubResource("Resource_fxeof"), SubResource("Resource_gu6vy"), SubResource("Resource_toexp"), SubResource("Resource_dsbei")])

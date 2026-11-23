@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://eq2bm5nkv0e8"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_2rukl"]
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_1xkfw"]
+
+[sub_resource type="Resource" id="Resource_fi3qm"]
+script = ExtResource("1_2rukl")
+text = "Les décomposeurs recyclent la matière organique."
+
+[sub_resource type="Resource" id="Resource_rgo38"]
+script = ExtResource("1_2rukl")
+text = "L'équilibre des milieux est dynamique."
+
+[sub_resource type="Resource" id="Resource_ky750"]
+script = ExtResource("1_2rukl")
+text = "L'humain modifie les équilibres naturels."
+
+[sub_resource type="Resource" id="Resource_pquvo"]
+script = ExtResource("1_2rukl")
+text = "Protéger la nature préserve la biodiversité."
+
+[resource]
+script = ExtResource("2_1xkfw")
+hidden_letter_ratio = 0.5
+phrases = Array[ExtResource("1_2rukl")]([SubResource("Resource_fi3qm"), SubResource("Resource_rgo38"), SubResource("Resource_ky750"), SubResource("Resource_pquvo")])

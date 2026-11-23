@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://umihlrugwwdj"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_3e6bg"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="2_42imc"]
+
+[sub_resource type="Resource" id="Resource_xi2qy"]
+script = ExtResource("1_3e6bg")
+question = "Quel est le rôle des vitamines dans l'organisme ?"
+choices = Array[String](["Réguler les fonctions vitales et protéger le système immunitaire.", "Fournir toute l'énergie du corps.", "Remplacer les protéines.", "Augmenter la masse musculaire."])
+
+[sub_resource type="Resource" id="Resource_5snn1"]
+script = ExtResource("1_3e6bg")
+question = "Quelle est la conséquence d'un déséquilibre alimentaire prolongé ?"
+choices = Array[String](["Une meilleure santé.", "Des risques de carences ou de maladies métaboliques.", "Une croissance accélérée.", "Aucune conséquence."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_cr7ln"]
+script = ExtResource("1_3e6bg")
+question = "Quel est le rôle de la pyramide alimentaire ?"
+choices = Array[String](["Aider à visualiser les bonnes proportions des aliments.", "Servir de décoration.", "Calculer le prix du marché.", "Interdire certains aliments."])
+
+[sub_resource type="Resource" id="Resource_ulocj"]
+script = ExtResource("1_3e6bg")
+question = "Pourquoi les céréales complètes sont-elles préférables aux céréales raffinées ?"
+choices = Array[String](["Plus de pesticides.", "Plus de fibres et nutriments.", "Plus de sucre.", "Plus de colorants."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_1en8d"]
+script = ExtResource("1_3e6bg")
+question = "Quelle est la recommandation générale pour l'hydratation quotidienne ?"
+choices = Array[String](["Boire uniquement quand on a soif.", "Boire environ 1,5 à 2 litres d'eau.", "Boire uniquement des jus de fruits.", "Boire très peu pour moins aller aux toilettes."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_aqx4i"]
+script = ExtResource("1_3e6bg")
+question = "Quel aliment est une source majeure de protéines végétales ?"
+choices = Array[String](["Les légumineuses (lentilles, pois, haricots).", "Le sucre blanc.", "La crème fraîche.", "L'huile d'olive."])
+
+[resource]
+script = ExtResource("2_42imc")
+questions = Array[ExtResource("1_3e6bg")]([SubResource("Resource_xi2qy"), SubResource("Resource_5snn1"), SubResource("Resource_cr7ln"), SubResource("Resource_ulocj"), SubResource("Resource_1en8d"), SubResource("Resource_aqx4i")])

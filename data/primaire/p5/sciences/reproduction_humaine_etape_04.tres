@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cwycoufxxinsl"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_1lsgp"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_oh338"]
+
+[sub_resource type="Resource" id="Resource_1bjtn"]
+script = ExtResource("1_1lsgp")
+word = "FECONDATION"
+hint = "Fusion entre le spermatozoïde et l'ovocyte pour former un ovule."
+grid_position = Vector2i(0, 3)
+
+[sub_resource type="Resource" id="Resource_v6wos"]
+script = ExtResource("1_1lsgp")
+word = "CLITORIS"
+hint = "Organe érectile de l'appareil génital féminin situé à l'entrée de la vulve."
+grid_position = Vector2i(7, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_scphc"]
+script = ExtResource("1_1lsgp")
+word = "PROSTATE"
+hint = "Glande masculine dont la fonction principale est de produire un liquide qui entre dans la composition du sperme."
+grid_position = Vector2i(4, 7)
+
+[sub_resource type="Resource" id="Resource_b4o65"]
+script = ExtResource("1_1lsgp")
+word = "UTERUS"
+hint = "Partie de l'appareil reproducteur féminin dans lequel le bébé se développe."
+grid_position = Vector2i(4, 5)
+
+[sub_resource type="Resource" id="Resource_wf3vy"]
+script = ExtResource("1_1lsgp")
+word = "TESTICULE"
+hint = "Lieu de fabrication des spermatozoïdes."
+grid_position = Vector2i(2, 0)
+
+[sub_resource type="Resource" id="Resource_y5obn"]
+script = ExtResource("1_1lsgp")
+word = "SEXUE"
+hint = "Mode de reproduction qui implique deux sexes différents."
+grid_position = Vector2i(1, 2)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_oh338")
+clues = Array[ExtResource("1_1lsgp")]([SubResource("Resource_1bjtn"), SubResource("Resource_v6wos"), SubResource("Resource_scphc"), SubResource("Resource_b4o65"), SubResource("Resource_wf3vy"), SubResource("Resource_y5obn")])

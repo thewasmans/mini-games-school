@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://ddewmj27dppb0"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_6qtui"]
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_crsp8"]
+
+[sub_resource type="Resource" id="Resource_l5wbs"]
+script = ExtResource("1_6qtui")
+text = "Un gaz exerce une pression en frappant les parois du récipient."
+
+[sub_resource type="Resource" id="Resource_4353n"]
+script = ExtResource("1_6qtui")
+text = "Le baromètre est l'instrument utilisé pour mesurer la pression atmosphérique."
+
+[sub_resource type="Resource" id="Resource_xd6i0"]
+script = ExtResource("1_6qtui")
+text = "Les plongeurs subissent une pression croissante sous l'eau."
+
+[sub_resource type="Resource" id="Resource_3tr3a"]
+script = ExtResource("1_6qtui")
+text = "Une force pressante se calcule en divisant la force par la surface."
+
+[sub_resource type="Resource" id="Resource_4fbna"]
+script = ExtResource("1_6qtui")
+text = "Les variations de pression influencent la météo et les conditions de vol."
+
+[resource]
+script = ExtResource("2_crsp8")
+hidden_letter_ratio = 0.5
+phrases = Array[ExtResource("1_6qtui")]([SubResource("Resource_l5wbs"), SubResource("Resource_4353n"), SubResource("Resource_xd6i0"), SubResource("Resource_3tr3a"), SubResource("Resource_4fbna")])

@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://b7jsk5gies4sq"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_ho81b"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_kmklo"]
+
+[sub_resource type="Resource" id="Resource_wxjj8"]
+script = ExtResource("1_ho81b")
+word = "BOIS"
+hint = "Matière ligneuse et compacte des arbres."
+grid_position = Vector2i(2, 3)
+
+[sub_resource type="Resource" id="Resource_qnug1"]
+script = ExtResource("1_ho81b")
+word = "EPIDERME"
+hint = "Tissu qui recouvre la surface de la peau."
+grid_position = Vector2i(0, 11)
+
+[sub_resource type="Resource" id="Resource_qxwac"]
+script = ExtResource("1_ho81b")
+word = "CHLOROPLASTE"
+hint = "Organite formé de thylakoïdes où se déroule la photosynthèse."
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_q3ujh"]
+script = ExtResource("1_ho81b")
+word = "BIOTOPE"
+hint = "Milieu physico-chimique dans lequel on y retrouve les êtres vivants."
+grid_position = Vector2i(4, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_3r1k3"]
+script = ExtResource("1_ho81b")
+word = "BIOCENOSE"
+hint = "Ensemble des êtres vivants dans un environnement."
+grid_position = Vector2i(7, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_78wlw"]
+script = ExtResource("1_ho81b")
+word = "ALGUES"
+hint = "Taxon de végétaux qui vivent dans l'eau."
+grid_position = Vector2i(0, 8)
+
+[resource]
+script = ExtResource("2_kmklo")
+clues = Array[ExtResource("1_ho81b")]([SubResource("Resource_wxjj8"), SubResource("Resource_qnug1"), SubResource("Resource_qxwac"), SubResource("Resource_q3ujh"), SubResource("Resource_3r1k3"), SubResource("Resource_78wlw")])

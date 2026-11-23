@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cq1mxkymsjym"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_q5yoh"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_an1sy"]
+
+[sub_resource type="Resource" id="Resource_l7tfo"]
+script = ExtResource("1_q5yoh")
+word = "OVOVIVIPARE"
+hint = "Animal qui pond des œufs, mais ceux-ci restent à l'intérieur de la femelle et des petits en ressortent."
+grid_position = Vector2i(1, 3)
+
+[sub_resource type="Resource" id="Resource_bnxma"]
+script = ExtResource("1_q5yoh")
+word = "EMBRYON"
+hint = "Premier stade du développement d'un œuf ou zygote, chez les plantes et les animaux."
+grid_position = Vector2i(10, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_0u48l"]
+script = ExtResource("1_q5yoh")
+word = "EAU"
+hint = "Aliment indispensable à la survie de tout vivant."
+grid_position = Vector2i(1, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_cx7pu"]
+script = ExtResource("1_q5yoh")
+word = "DIMORPHISME"
+hint = "Terme utilisé pour mettre en évidence des différences physiques entre les mâles et les femelles."
+
+[sub_resource type="Resource" id="Resource_8g633"]
+script = ExtResource("1_q5yoh")
+word = "REPRODUCTION"
+hint = "Processus qui permet la production de nouveaux enfants."
+grid_position = Vector2i(0, 5)
+
+[resource]
+script = ExtResource("2_an1sy")
+clues = Array[ExtResource("1_q5yoh")]([SubResource("Resource_l7tfo"), SubResource("Resource_bnxma"), SubResource("Resource_0u48l"), SubResource("Resource_cx7pu"), SubResource("Resource_8g633")])

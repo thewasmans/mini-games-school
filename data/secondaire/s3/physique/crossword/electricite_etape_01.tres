@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bluji8kqyc3oy"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_e8wew"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_i72uh"]
+
+[sub_resource type="Resource" id="Resource_k6oj0"]
+script = ExtResource("1_e8wew")
+word = "MULTIMETRE"
+hint = "Appareil électrique permettant d'effectuer des mesures d'intensités, de tensions ou de résistances."
+grid_position = Vector2i(0, 3)
+
+[sub_resource type="Resource" id="Resource_kvi7k"]
+script = ExtResource("1_e8wew")
+word = "REPULSION"
+hint = "Force électrique qui pousse deux objets à s'éloigner l'un de l'autre car les charges sont de même nature."
+grid_position = Vector2i(1, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_24meg"]
+script = ExtResource("1_e8wew")
+word = "POTENTIEL"
+hint = "Grandeur physique qui mesure l'état électrique d'un point précis à un moment donné, son unité est le Volt (V)."
+grid_position = Vector2i(6, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_i7hil"]
+script = ExtResource("1_e8wew")
+word = "LUMINEUSE"
+hint = "Forme d'énergie qui permet d'éclairer et qui est produite à partir de l'électricité."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_i72uh")
+clues = Array[ExtResource("1_e8wew")]([SubResource("Resource_k6oj0"), SubResource("Resource_kvi7k"), SubResource("Resource_24meg"), SubResource("Resource_i7hil")])

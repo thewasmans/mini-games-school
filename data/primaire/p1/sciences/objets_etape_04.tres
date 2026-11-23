@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cabccps55oh1y"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_r4v27"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_5omso"]
+
+[sub_resource type="Resource" id="Resource_0xt2u"]
+script = ExtResource("1_r4v27")
+word = "POUSSER"
+hint = "Action d'exercer une pression sur un objet qui le déplace."
+grid_position = Vector2i(3, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_8rdua"]
+script = ExtResource("1_r4v27")
+word = "INTERPRETER"
+hint = "Expliquer un phénomène afin de lui donner du sens."
+grid_position = Vector2i(0, 5)
+
+[sub_resource type="Resource" id="Resource_hpyni"]
+script = ExtResource("1_r4v27")
+word = "DEFORMER"
+hint = "Changer la forme d’un objet."
+grid_position = Vector2i(0, 1)
+
+[sub_resource type="Resource" id="Resource_lohmh"]
+script = ExtResource("1_r4v27")
+word = "CASSER"
+hint = "Abîmer définitivement un objet."
+grid_position = Vector2i(1, 3)
+
+[sub_resource type="Resource" id="Resource_vcsqu"]
+script = ExtResource("1_r4v27")
+word = "LIER"
+hint = "Connecter des éléments, des objets ensemble."
+grid_position = Vector2i(9, 3)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_5omso")
+clues = Array[ExtResource("1_r4v27")]([SubResource("Resource_0xt2u"), SubResource("Resource_8rdua"), SubResource("Resource_hpyni"), SubResource("Resource_lohmh"), SubResource("Resource_vcsqu")])

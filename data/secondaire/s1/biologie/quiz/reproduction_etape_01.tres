@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://d14ckebh5ih0a"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_lcfbi"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="2_k5f0s"]
+
+[sub_resource type="Resource" id="Resource_jhnop"]
+script = ExtResource("1_lcfbi")
+question = "Comment se nomme la partie contenant les spermatozoides ?"
+choices = Array[String](["Ovaire.", "Testicule.", "Utérus.", "Scrotum."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_1gcjn"]
+script = ExtResource("1_lcfbi")
+question = "Comment se nomme la partie contenant les testicules ?"
+choices = Array[String](["Ovaire.", "Testicule.", "Utérus.", "Scrotum."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_p35e6"]
+script = ExtResource("1_lcfbi")
+question = "Comment se nomme la partie contenant les ovocytes ?"
+choices = Array[String](["Ovaire.", "Testicule.", "Utérus.", "Scrotum."])
+
+[resource]
+script = ExtResource("2_k5f0s")
+questions = Array[ExtResource("1_lcfbi")]([SubResource("Resource_jhnop"), SubResource("Resource_1gcjn"), SubResource("Resource_p35e6")])

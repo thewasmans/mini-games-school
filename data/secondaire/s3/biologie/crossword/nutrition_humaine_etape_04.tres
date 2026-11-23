@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://b27b88oiucqby"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_h42f6"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_06rht"]
+
+[sub_resource type="Resource" id="Resource_xkomp"]
+script = ExtResource("1_h42f6")
+word = "PYRAMIDE"
+hint = "Présentation organisée de l'alimentation sous formes d'étages."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_2ip6i"]
+script = ExtResource("1_h42f6")
+word = "CHON"
+hint = "Les quatre principaux éléments du vivant."
+grid_position = Vector2i(8, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_5x6k5"]
+script = ExtResource("1_h42f6")
+word = "SUC"
+hint = "Substance chimique aidant à la digestion, qui peut être gastrique ou intestinale."
+grid_position = Vector2i(6, 0)
+
+[sub_resource type="Resource" id="Resource_yxe3e"]
+script = ExtResource("1_h42f6")
+word = "ABSORPTION"
+hint = "Passage des nutriments du tube digestif vers le sang."
+grid_position = Vector2i(0, 2)
+
+[sub_resource type="Resource" id="Resource_7a5eq"]
+script = ExtResource("1_h42f6")
+word = "GLYCEROL"
+hint = "Egalement appelée glycérine, c'est un liquide sucré, inodore et incolore."
+grid_position = Vector2i(0, 7)
+
+[sub_resource type="Resource" id="Resource_umar3"]
+script = ExtResource("1_h42f6")
+word = "BILE"
+hint = "Sorte de savon fabriquée par le foie, qui facilite l'absorption des graisses et vitamines."
+grid_position = Vector2i(1, 2)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_06rht")
+clues = Array[ExtResource("1_h42f6")]([SubResource("Resource_xkomp"), SubResource("Resource_2ip6i"), SubResource("Resource_5x6k5"), SubResource("Resource_yxe3e"), SubResource("Resource_7a5eq"), SubResource("Resource_umar3")])

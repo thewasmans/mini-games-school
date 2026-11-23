@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://3rls41pcxeov"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_s7bh5"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_4m17k"]
+
+[sub_resource type="Resource" id="Resource_lue3u"]
+script = ExtResource("1_s7bh5")
+word = "SOLEIL"
+hint = "Source d'énergie naturelle qui fournit de la chaleur et qui permet de produire de l'électricité via des panneaux photovoltaïques."
+grid_position = Vector2i(8, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_t7byo"]
+script = ExtResource("1_s7bh5")
+word = "CYCLE"
+hint = "Suite de phénomènes se renouvelant sans arrêt."
+grid_position = Vector2i(5, 5)
+
+[sub_resource type="Resource" id="Resource_dybuj"]
+script = ExtResource("1_s7bh5")
+word = "MECANIQUE"
+hint = "Correspond à l'énergie totale d'un corps, tenant compte de sa position et de son mouvement."
+grid_position = Vector2i(0, 3)
+
+[sub_resource type="Resource" id="Resource_yfrw7"]
+script = ExtResource("1_s7bh5")
+word = "LUMINEUSE"
+hint = "Forme d'énergie qui provient du Soleil ou d'une lampe."
+grid_position = Vector2i(1, 0)
+
+[resource]
+script = ExtResource("2_4m17k")
+clues = Array[ExtResource("1_s7bh5")]([SubResource("Resource_lue3u"), SubResource("Resource_t7byo"), SubResource("Resource_dybuj"), SubResource("Resource_yfrw7")])

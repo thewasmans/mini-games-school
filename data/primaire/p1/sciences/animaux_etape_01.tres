@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://by1bsqki20661"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_pgrbn"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_eo0hx"]
+
+[sub_resource type="Resource" id="Resource_bahb6"]
+script = ExtResource("1_pgrbn")
+word = "OBJET"
+hint = "Caractérise tout élément qui n'est pas vivant, qui peut être naturel ou artificiel."
+grid_position = Vector2i(0, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_84ulb"]
+script = ExtResource("1_pgrbn")
+word = "EAU"
+hint = "Liquide naturel le plus répandu sur la surface de la Terre."
+grid_position = Vector2i(0, 7)
+
+[sub_resource type="Resource" id="Resource_2d8jm"]
+script = ExtResource("1_pgrbn")
+word = "LAC"
+hint = "Milieu de vie aquatique contenant une grande quantité d'eau et que l'on retrouve à certains lieux, comme à L'Eau d'Heure."
+grid_position = Vector2i(0, 11)
+
+[sub_resource type="Resource" id="Resource_pcici"]
+script = ExtResource("1_pgrbn")
+word = "NOURRITURE"
+hint = "Terme scientifique qui désigne l'aliment."
+grid_position = Vector2i(2, 0)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_eo0hx")
+clues = Array[ExtResource("1_pgrbn")]([SubResource("Resource_bahb6"), SubResource("Resource_84ulb"), SubResource("Resource_2d8jm"), SubResource("Resource_pcici")])

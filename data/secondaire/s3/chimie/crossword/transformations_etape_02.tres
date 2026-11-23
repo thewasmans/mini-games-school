@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://wvyjbvgvqqdj"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_svdg6"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_0irl5"]
+
+[sub_resource type="Resource" id="Resource_xjs7w"]
+script = ExtResource("1_svdg6")
+word = "COMBUSTION"
+hint = "Réaction de chaleur obtenue avec le mélange d'un combustible (gaz) et d'un comburant (dioxygène)."
+grid_position = Vector2i(0, 12)
+
+[sub_resource type="Resource" id="Resource_4k6h2"]
+script = ExtResource("1_svdg6")
+word = "COEFFICIENT"
+hint = "Nombre que l'on indique devant une substance chimique dans une équation pour l'équilibrer."
+grid_position = Vector2i(7, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_iknom"]
+script = ExtResource("1_svdg6")
+word = "TRANSFORMATION"
+hint = "Opération par laquelle il y a du changement."
+grid_position = Vector2i(1, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_tfw18"]
+script = ExtResource("1_svdg6")
+word = "CORROSION"
+hint = "Oxydation, altération d'un matériau par réaction chimique avec un oxydant."
+grid_position = Vector2i(0, 6)
+
+[sub_resource type="Resource" id="Resource_04dlk"]
+script = ExtResource("1_svdg6")
+word = "ETIQUETAGE"
+hint = "Ensemble d'informations qui figurent sur une substance chimique afin de l'identifier et de la classer."
+
+[sub_resource type="Resource" id="Resource_2l5nw"]
+script = ExtResource("1_svdg6")
+word = "LAVOISIER"
+hint = "Célèbre chimiste français qui a proposé la théorie de la conservation de la matière."
+grid_position = Vector2i(0, 2)
+
+[sub_resource type="Resource" id="Resource_r2f64"]
+script = ExtResource("1_svdg6")
+word = "BASE"
+hint = "Se dit d'une substance chimique capable de prendre, d'accepter des protons, comme la soude caustique."
+grid_position = Vector2i(0, 9)
+
+[resource]
+script = ExtResource("2_0irl5")
+clues = Array[ExtResource("1_svdg6")]([SubResource("Resource_xjs7w"), SubResource("Resource_4k6h2"), SubResource("Resource_iknom"), SubResource("Resource_tfw18"), SubResource("Resource_04dlk"), SubResource("Resource_2l5nw"), SubResource("Resource_r2f64")])

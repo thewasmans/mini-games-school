@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://m1l2wswgetxo"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_p7veb"]
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_ys0nt"]
+
+[sub_resource type="Resource" id="Resource_my60q"]
+script = ExtResource("1_p7veb")
+text = "Une transformation chimique modifie la nature de la matière."
+
+[sub_resource type="Resource" id="Resource_i34pw"]
+script = ExtResource("1_p7veb")
+text = "Les réactifs sont les substances de départ qui disparaissent lors de la réaction."
+
+[sub_resource type="Resource" id="Resource_k43yw"]
+script = ExtResource("1_p7veb")
+text = "Les produits sont les nouvelles substances formées par la réaction."
+
+[resource]
+script = ExtResource("2_ys0nt")
+hidden_letter_ratio = 0.3
+phrases = Array[ExtResource("1_p7veb")]([SubResource("Resource_my60q"), SubResource("Resource_i34pw"), SubResource("Resource_k43yw")])

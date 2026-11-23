@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://uv6i0hisv0pc"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_fgkrb"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_stf7r"]
+
+[sub_resource type="Resource" id="Resource_sgprv"]
+script = ExtResource("1_fgkrb")
+word = "RUER"
+hint = "Se précipiter avec violence sur quelqu'un, sur quelque chose."
+grid_position = Vector2i(0, 6)
+
+[sub_resource type="Resource" id="Resource_0pnlt"]
+script = ExtResource("1_fgkrb")
+word = "APPUYER"
+hint = "Réaliser une pression sur un objet, un bouton d'une manette par exemple."
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_hubc4"]
+script = ExtResource("1_fgkrb")
+word = "AIMANT"
+hint = "Objet métallique qui permet d'en attirer ou d'en repousser d'autres."
+
+[sub_resource type="Resource" id="Resource_bynyu"]
+script = ExtResource("1_fgkrb")
+word = "FORCE"
+hint = "Caractérise une interaction entre des objets."
+grid_position = Vector2i(2, 2)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_stf7r")
+clues = Array[ExtResource("1_fgkrb")]([SubResource("Resource_sgprv"), SubResource("Resource_0pnlt"), SubResource("Resource_hubc4"), SubResource("Resource_bynyu")])

@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://ccy8232bgvhce"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_8urg4"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_t2tcd"]
+
+[sub_resource type="Resource" id="Resource_1nilf"]
+script = ExtResource("1_8urg4")
+word = "ECOLOGIE"
+hint = "Science qui a pour objet l'étude des espèces en interaction avec leur environnement."
+grid_position = Vector2i(6, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_i6ush"]
+script = ExtResource("1_8urg4")
+word = "DARWIN"
+hint = "Chercheur naturaliste à l'origine de la théorie sur la sélection naturelle."
+grid_position = Vector2i(3, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_6m7vv"]
+script = ExtResource("1_8urg4")
+word = "SEISME"
+hint = "Secousse du sol, tremblement de terre."
+grid_position = Vector2i(1, 8)
+
+[sub_resource type="Resource" id="Resource_rtjmt"]
+script = ExtResource("1_8urg4")
+word = "VOLCAN"
+hint = "Montagne formée de roches magmatiques dans laquelle se trouve la lave."
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_072ey"]
+script = ExtResource("1_8urg4")
+word = "NOYAU"
+hint = "Partie centrale de la Terre essentiellement constituée de fer métallique."
+grid_position = Vector2i(0, 5)
+
+[resource]
+script = ExtResource("2_t2tcd")
+clues = Array[ExtResource("1_8urg4")]([SubResource("Resource_1nilf"), SubResource("Resource_i6ush"), SubResource("Resource_6m7vv"), SubResource("Resource_rtjmt"), SubResource("Resource_072ey")])

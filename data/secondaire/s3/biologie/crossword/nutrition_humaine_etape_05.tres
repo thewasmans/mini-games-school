@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://be8qo3ytljv6i"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_pp6ng"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_ykb2p"]
+
+[sub_resource type="Resource" id="Resource_hulrf"]
+script = ExtResource("1_pp6ng")
+word = "COLON"
+hint = "Lieu où se déroule la fabrication de la matière fécale."
+grid_position = Vector2i(1, 11)
+
+[sub_resource type="Resource" id="Resource_epjd6"]
+script = ExtResource("1_pp6ng")
+word = "PROTEASE"
+hint = "Enzyme qui décompose les protéines en acides aminés."
+grid_position = Vector2i(1, 6)
+
+[sub_resource type="Resource" id="Resource_nrenf"]
+script = ExtResource("1_pp6ng")
+word = "GRELE"
+hint = "Lieu de l'intestin où se déroule le mécanisme d'absorption."
+grid_position = Vector2i(1, 8)
+
+[sub_resource type="Resource" id="Resource_aa8op"]
+script = ExtResource("1_pp6ng")
+word = "MACROMOLECULE"
+hint = "Grande molécule qui possède une masse moléculaire élevée."
+grid_position = Vector2i(3, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_gfdal"]
+script = ExtResource("1_pp6ng")
+word = "HYDROLYSE"
+hint = "Processus chimique qui consiste à casser une molécule en utilisant de l'eau."
+grid_position = Vector2i(0, 3)
+
+[sub_resource type="Resource" id="Resource_dflcf"]
+script = ExtResource("1_pp6ng")
+word = "SUBSTRAT"
+hint = "Molécule transformée au cours d'une catalyse enzymatique."
+grid_position = Vector2i(7, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_l4d6n"]
+script = ExtResource("1_pp6ng")
+word = "AMYLASE"
+hint = "Enzyme qui accélère le début de la digestion de l'amidon."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_ykb2p")
+clues = Array[ExtResource("1_pp6ng")]([SubResource("Resource_hulrf"), SubResource("Resource_epjd6"), SubResource("Resource_nrenf"), SubResource("Resource_aa8op"), SubResource("Resource_gfdal"), SubResource("Resource_dflcf"), SubResource("Resource_l4d6n")])

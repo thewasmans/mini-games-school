@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://b5ow7k2qr43d6"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_2s50o"]
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_d18w6"]
+
+[sub_resource type="Resource" id="Resource_my3kn"]
+script = ExtResource("1_2s50o")
+text = "La sève brute transporte l'eau et les minéraux des racines vers les feuilles."
+
+[sub_resource type="Resource" id="Resource_yhlis"]
+script = ExtResource("1_2s50o")
+text = "La sève élaborée distribue les nutriments organiques dans toute la plante."
+
+[sub_resource type="Resource" id="Resource_wbpt3"]
+script = ExtResource("1_2s50o")
+text = "La lumière du soleil est la source d'énergie indispensable à la photosynthèse."
+
+[sub_resource type="Resource" id="Resource_vhykb"]
+script = ExtResource("1_2s50o")
+text = "Les végétaux verts sont les principaux producteurs des écosystèmes."
+
+[resource]
+script = ExtResource("2_d18w6")
+hidden_letter_ratio = 0.5
+phrases = Array[ExtResource("1_2s50o")]([SubResource("Resource_my3kn"), SubResource("Resource_yhlis"), SubResource("Resource_wbpt3"), SubResource("Resource_vhykb")])

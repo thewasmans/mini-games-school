@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dj41cwur78gqu"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_nqv47"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_txusi"]
+
+[sub_resource type="Resource" id="Resource_c8lg8"]
+script = ExtResource("1_nqv47")
+word = "CREVETTE"
+hint = "Petit crustacé décapode marin, ou d'eau douce, dont certaines espèces sont comestibles."
+grid_position = Vector2i(1, 0)
+
+[sub_resource type="Resource" id="Resource_xv26f"]
+script = ExtResource("1_nqv47")
+word = "DAUPHIN"
+hint = "Mammifère aquatique qui vit en groupe et vient parfois en aide aux personnes."
+grid_position = Vector2i(0, 2)
+
+[sub_resource type="Resource" id="Resource_q6wnn"]
+script = ExtResource("1_nqv47")
+word = "MORUE"
+hint = "Gros poisson des mers froides, consommé frais sous le nom de cabillaud."
+grid_position = Vector2i(6, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_qkyy5"]
+script = ExtResource("1_nqv47")
+word = "CEPHALOPODE"
+hint = "Groupe d'animaux qui se caractérisent par des tentacules au niveau de la bouche."
+grid_position = Vector2i(0, 5)
+
+[sub_resource type="Resource" id="Resource_u4ve8"]
+script = ExtResource("1_nqv47")
+word = "PHYLOGENIE"
+hint = "Science qui étudie les relations de parenté génétique entre les espèces (taxons)."
+grid_position = Vector2i(0, 8)
+
+[sub_resource type="Resource" id="Resource_j0gta"]
+script = ExtResource("1_nqv47")
+word = "CLASSER"
+hint = "Organiser les espèces sur base des attributs en commun et de leur histoire évolutive."
+grid_position = Vector2i(1, 0)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_txusi")
+clues = Array[ExtResource("1_nqv47")]([SubResource("Resource_c8lg8"), SubResource("Resource_xv26f"), SubResource("Resource_q6wnn"), SubResource("Resource_qkyy5"), SubResource("Resource_u4ve8"), SubResource("Resource_j0gta")])

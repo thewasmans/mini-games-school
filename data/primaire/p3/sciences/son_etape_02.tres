@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bwaca5gghj7qr"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_bkosj"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_xa5q3"]
+
+[sub_resource type="Resource" id="Resource_xo3bq"]
+script = ExtResource("1_bkosj")
+word = "NERF"
+hint = "Tube de transport des informations dans le corps."
+grid_position = Vector2i(3, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_wictk"]
+script = ExtResource("1_bkosj")
+word = "SENS"
+hint = "Instruments de la perception du corps permettant d'éprouver des impressions."
+grid_position = Vector2i(1, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_5vyb7"]
+script = ExtResource("1_bkosj")
+word = "VUE"
+hint = "Sens dont l'organe utilisé est l'œil."
+grid_position = Vector2i(5, 3)
+
+[sub_resource type="Resource" id="Resource_6oc08"]
+script = ExtResource("1_bkosj")
+word = "OUIE"
+hint = "Sens dont l'organe utilisé est l'oreille."
+grid_position = Vector2i(7, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_qc84f"]
+script = ExtResource("1_bkosj")
+word = "RECEPTEUR"
+hint = "Appareil qui reçoit les informations."
+grid_position = Vector2i(0, 1)
+
+[resource]
+script = ExtResource("2_xa5q3")
+clues = Array[ExtResource("1_bkosj")]([SubResource("Resource_xo3bq"), SubResource("Resource_wictk"), SubResource("Resource_5vyb7"), SubResource("Resource_6oc08"), SubResource("Resource_qc84f")])

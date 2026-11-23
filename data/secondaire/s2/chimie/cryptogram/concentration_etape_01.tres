@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dpqgy31svk77t"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_8ahh8"]
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_d7vo6"]
+
+[sub_resource type="Resource" id="Resource_ralew"]
+script = ExtResource("1_8ahh8")
+text = "Une solution est obtenue par dissolution d'un soluté dans un solvant."
+
+[sub_resource type="Resource" id="Resource_verql"]
+script = ExtResource("1_8ahh8")
+text = "Le soluté est la substance dissoute et le solvant est le liquide."
+
+[sub_resource type="Resource" id="Resource_i0ubj"]
+script = ExtResource("1_8ahh8")
+text = "La concentration massique indique la masse de soluté par litre de solution."
+
+[resource]
+script = ExtResource("2_d7vo6")
+hidden_letter_ratio = 0.3
+phrases = Array[ExtResource("1_8ahh8")]([SubResource("Resource_ralew"), SubResource("Resource_verql"), SubResource("Resource_i0ubj")])

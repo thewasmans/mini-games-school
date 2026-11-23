@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://3m11lnh2yplm"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_g4hpr"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="2_k51yy"]
+
+[sub_resource type="Resource" id="Resource_vth5p"]
+script = ExtResource("1_g4hpr")
+question = "En quoi consiste l'électrisation par contact ?"
+choices = Array[String](["Science qui décrit les phénomènes causés par les charges électriques au repos.", "Transfert de charges négatives lorsque deux objets se touchent.", "Transfert de charges négatives suite à un frottement.", "Charger un objet neutre en le mettant à proximité d’un objet chargé."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_bddha"]
+script = ExtResource("1_g4hpr")
+question = "En quoi consiste l'électrisation par frottement ?"
+choices = Array[String](["Science qui décrit les phénomènes causés par les charges électriques au repos.", "Transfert de charges négatives lorsque deux objets se touchent.", "Transfert de charges négatives suite à un frottement.", "Charger un objet neutre en le mettant à proximité d’un objet chargé."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_33rkm"]
+script = ExtResource("1_g4hpr")
+question = "En quoi consiste l'électrisation par induction ?"
+choices = Array[String](["Science qui décrit les phénomènes causés par les charges électriques au repos.", "Transfert de charges négatives lorsque deux objets se touchent.", "Transfert de charges négatives suite à un frottement.", "Charger un objet neutre en le mettant à proximité d’un objet chargé."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_kd1uh"]
+script = ExtResource("1_g4hpr")
+question = "Quelle est la nature des charges transférées lors de l'électrisation ?"
+choices = Array[String](["Des protons.", "Des électrons.", "Des neutrons.", "Des quarks."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_mbw7i"]
+script = ExtResource("1_g4hpr")
+question = "En quoi consiste un circuit en série ?"
+choices = Array[String](["Un circuit où le courant prend différents chemins.", "Un circuit où le courant prend un seul chemin.", "Un circuit où il y a toujours deux générateurs.", "Un circuit où il y a toujours deux récepteurs."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_i4yr5"]
+script = ExtResource("1_g4hpr")
+question = "En quoi consiste un circuit en parallèle ?"
+choices = Array[String](["Un circuit où le courant prend différents chemins.", "Un circuit où le courant prend un seul chemin.", "Un circuit où il y a toujours deux générateurs.", "Un circuit où il y a toujours deux récepteurs."])
+
+[resource]
+script = ExtResource("2_k51yy")
+questions = Array[ExtResource("1_g4hpr")]([SubResource("Resource_vth5p"), SubResource("Resource_bddha"), SubResource("Resource_33rkm"), SubResource("Resource_kd1uh"), SubResource("Resource_mbw7i"), SubResource("Resource_i4yr5")])

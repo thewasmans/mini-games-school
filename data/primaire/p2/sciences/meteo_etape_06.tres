@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://c6356gvs2oyk8"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_vinpy"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_sjdpr"]
+
+[sub_resource type="Resource" id="Resource_kqo0o"]
+script = ExtResource("1_vinpy")
+word = "OCEAN"
+hint = "Très grande étendue d'eau de mer qui entoure les différents continents de la Terre."
+grid_position = Vector2i(6, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_f4n5w"]
+script = ExtResource("1_vinpy")
+word = "EST"
+hint = "Endroit où le Soleil se lève."
+grid_position = Vector2i(3, 0)
+
+[sub_resource type="Resource" id="Resource_kohu0"]
+script = ExtResource("1_vinpy")
+word = "BULLETIN"
+hint = "Rapport de la météo observée en un temps et un endroit donné, se dit d'un rapport de score."
+grid_position = Vector2i(0, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_oftw4"]
+script = ExtResource("1_vinpy")
+word = "SOLIDIFICATION"
+hint = "Changement d'état de la matière lorsqu'on gèle de l'eau."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_aalxv"]
+script = ExtResource("1_vinpy")
+word = "TORNADE"
+hint = "Tourbillon de vents qui suit un couloir et peut se déplacer à 300km/h."
+grid_position = Vector2i(0, 9)
+
+[sub_resource type="Resource" id="Resource_lyy8y"]
+script = ExtResource("1_vinpy")
+word = "MATIERE"
+hint = "Se dit de tout ce qui occupe un espace et possède une masse."
+grid_position = Vector2i(2, 4)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_sjdpr")
+clues = Array[ExtResource("1_vinpy")]([SubResource("Resource_kqo0o"), SubResource("Resource_f4n5w"), SubResource("Resource_kohu0"), SubResource("Resource_oftw4"), SubResource("Resource_aalxv"), SubResource("Resource_lyy8y")])

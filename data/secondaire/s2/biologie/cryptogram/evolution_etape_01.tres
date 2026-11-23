@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://d3wrt6tni0si8"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_01jnu"]
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_2qgvm"]
+
+[sub_resource type="Resource" id="Resource_tg7u8"]
+script = ExtResource("1_01jnu")
+text = "L'évolution du vivant désigne la transformation des espèces au fil du temps."
+
+[sub_resource type="Resource" id="Resource_uukc6"]
+script = ExtResource("1_01jnu")
+text = "Les fossiles témoignent de l'existence d'espèces anciennes disparues."
+
+[sub_resource type="Resource" id="Resource_fu5ip"]
+script = ExtResource("1_01jnu")
+text = "La sélection naturelle favorise les individus les mieux adaptés à leur milieu."
+
+[resource]
+script = ExtResource("2_2qgvm")
+hidden_letter_ratio = 0.3
+phrases = Array[ExtResource("1_01jnu")]([SubResource("Resource_tg7u8"), SubResource("Resource_uukc6"), SubResource("Resource_fu5ip")])

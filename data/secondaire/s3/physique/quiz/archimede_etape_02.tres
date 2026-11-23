@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://8hltgwsan12l"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_fxtmy"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="2_a6r2h"]
+
+[sub_resource type="Resource" id="Resource_0ywn4"]
+script = ExtResource("1_fxtmy")
+question = "Qu'est-ce qui permet au bateau de flotter ?"
+choices = Array[String](["La gravité.", "La poussée d'Archimède.", "Le vent.", "La flottaison."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_o6vts"]
+script = ExtResource("1_fxtmy")
+question = "En quoi consiste la poussée d'Archimède ?"
+choices = Array[String](["C'est une force exercée par l'eau.", "C'est une force exercée par l'air.", "C'est une force exercée par un objet.", "C'est la gravité.."])
+
+[sub_resource type="Resource" id="Resource_wvvhy"]
+script = ExtResource("1_fxtmy")
+question = "Dans la situation neutre, on peut dire..."
+choices = Array[String](["C'est l'équilibre.", "La poussée d'Archimède est sup. à la charge.", "La poussée d'Archimède est inf. à la charge.", "Rien ne peut remonter à la surface."])
+
+[sub_resource type="Resource" id="Resource_6rcje"]
+script = ExtResource("1_fxtmy")
+question = "Dans la situation négative, on peut dire..."
+choices = Array[String](["C'est l'équilibre.", "La poussée d'Archimède est sup. à la charge.", "La poussée d'Archimède est inf. à la charge.", "Rien ne peut remonter à la surface."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_wev7i"]
+script = ExtResource("1_fxtmy")
+question = "Dans la situation positive, on peut dire..."
+choices = Array[String](["C'est l'équilibre.", "La poussée d'Archimède est sup. à la charge.", "La poussée d'Archimède est inf. à la charge.", "Rien ne peut remonter à la surface."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_a6r2h")
+questions = Array[ExtResource("1_fxtmy")]([SubResource("Resource_0ywn4"), SubResource("Resource_o6vts"), SubResource("Resource_wvvhy"), SubResource("Resource_6rcje"), SubResource("Resource_wev7i")])

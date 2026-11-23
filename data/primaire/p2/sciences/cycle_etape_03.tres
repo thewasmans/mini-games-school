@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dc8h00vvr0c6q"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_wg4fq"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_0tj65"]
+
+[sub_resource type="Resource" id="Resource_1khy1"]
+script = ExtResource("1_wg4fq")
+word = "NAITRE"
+hint = "Première étape de la vie d'un être vivant, lorsqu'il vit."
+grid_position = Vector2i(0, 15)
+
+[sub_resource type="Resource" id="Resource_tw84v"]
+script = ExtResource("1_wg4fq")
+word = "FECONDATION"
+hint = "Fusion entre la cellule mâle et la cellule femelle pour donner un embryon."
+grid_position = Vector2i(3, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_3prmh"]
+script = ExtResource("1_wg4fq")
+word = "METAMORPHOSE"
+hint = "Période de la vie d'un animal qui correspond au passage d'une forme larvaire à une forme juvénile ou adulte."
+grid_position = Vector2i(5, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_6ajxy"]
+script = ExtResource("1_wg4fq")
+word = "VIVIPARE"
+hint = "Animal qui donne naissance à des petits, et qui ne pond pas des oeufs."
+grid_position = Vector2i(0, 6)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_xcg2y"]
+script = ExtResource("1_wg4fq")
+word = "VIVANT"
+hint = "Être qui peut naitre, grandir, manger et mourir."
+grid_position = Vector2i(0, 6)
+
+[sub_resource type="Resource" id="Resource_fxxr0"]
+script = ExtResource("1_wg4fq")
+word = "MOURIR"
+hint = "Dernière étape de la vie d'un vivant, lorsqu'il disparait pour toujours."
+grid_position = Vector2i(2, 11)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_0tj65")
+clues = Array[ExtResource("1_wg4fq")]([SubResource("Resource_1khy1"), SubResource("Resource_tw84v"), SubResource("Resource_3prmh"), SubResource("Resource_6ajxy"), SubResource("Resource_xcg2y"), SubResource("Resource_fxxr0")])

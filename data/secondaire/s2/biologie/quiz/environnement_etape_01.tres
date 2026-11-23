@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://57aey6p7bso8"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_27vrp"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="2_3itj7"]
+
+[sub_resource type="Resource" id="Resource_dnrhf"]
+script = ExtResource("1_27vrp")
+question = "Quel impact de l'homme se traduit par la destruction d'habitats d'espèces ?"
+choices = Array[String](["La deforestation.", "La pollution.", "La surpêche.", "L'introduction d'espèces invasives."])
+
+[sub_resource type="Resource" id="Resource_bdnxv"]
+script = ExtResource("1_27vrp")
+question = "Quel impact de l'homme se traduit par la contamination d'un environnement ?"
+choices = Array[String](["La deforestation.", "La pollution.", "La surpêche.", "L'introduction d'espèces invasives."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_75u6v"]
+script = ExtResource("1_27vrp")
+question = "Quel impact de l'homme se traduit par la surexploitation des ressources ?"
+choices = Array[String](["La deforestation.", "La pollution.", "La surpêche.", "L'introduction d'espèces invasives."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("2_3itj7")
+questions = Array[ExtResource("1_27vrp")]([SubResource("Resource_dnrhf"), SubResource("Resource_bdnxv"), SubResource("Resource_75u6v")])

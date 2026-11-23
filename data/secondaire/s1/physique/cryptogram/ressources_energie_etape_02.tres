@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://bshstcclf55qv"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_jvmym"]
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_gi4uj"]
+
+[sub_resource type="Resource" id="Resource_4v6xn"]
+script = ExtResource("1_jvmym")
+text = "L'eau est une ressource naturelle vitale et limitée."
+
+[sub_resource type="Resource" id="Resource_arqht"]
+script = ExtResource("1_jvmym")
+text = "Les ressources renouvelables se reconstituent naturellement."
+
+[sub_resource type="Resource" id="Resource_xeq37"]
+script = ExtResource("1_jvmym")
+text = "Les énergies fossiles sont des ressources non renouvelables."
+
+[sub_resource type="Resource" id="Resource_poely"]
+script = ExtResource("1_jvmym")
+text = "La transformation industrielle crée des produits finis."
+
+[resource]
+script = ExtResource("2_gi4uj")
+hidden_letter_ratio = 0.35
+phrases = Array[ExtResource("1_jvmym")]([SubResource("Resource_4v6xn"), SubResource("Resource_arqht"), SubResource("Resource_xeq37"), SubResource("Resource_poely")])

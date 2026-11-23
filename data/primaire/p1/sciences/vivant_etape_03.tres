@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://diosj4f3cnmxy"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_dxspc"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_5d25x"]
+
+[sub_resource type="Resource" id="Resource_o321y"]
+script = ExtResource("1_dxspc")
+word = "TETE"
+hint = "Attribut qui caractérise l'animal."
+grid_position = Vector2i(1, 1)
+
+[sub_resource type="Resource" id="Resource_1gqal"]
+script = ExtResource("1_dxspc")
+word = "REPRODUCTION"
+hint = "Etape de la vie d'un vivant qui lui permet d'avoir des enfants."
+grid_position = Vector2i(2, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_lvy0q"]
+script = ExtResource("1_dxspc")
+word = "VIVANT"
+hint = "Être qui peut naitre, grandir, manger et mourir."
+grid_position = Vector2i(0, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_q6kdq"]
+script = ExtResource("1_dxspc")
+word = "ANTENNE"
+hint = "Attribut que possède un insecte au niveau de sa tête et qui lui permet de réagir à son environnement."
+grid_position = Vector2i(0, 8)
+
+[sub_resource type="Resource" id="Resource_hp157"]
+script = ExtResource("1_dxspc")
+word = "ANIMAL"
+hint = "Se dit d'un être vivant qui possède une bouche et/ou des yeux."
+grid_position = Vector2i(1, 11)
+
+[sub_resource type="Resource" id="Resource_rk35k"]
+script = ExtResource("1_dxspc")
+word = "OBJET"
+hint = "Caractérise tout élément qui n'est pas vivant, qui peut être naturel ou artificiel."
+grid_position = Vector2i(2, 4)
+
+[resource]
+script = ExtResource("2_5d25x")
+clues = Array[ExtResource("1_dxspc")]([SubResource("Resource_o321y"), SubResource("Resource_1gqal"), SubResource("Resource_lvy0q"), SubResource("Resource_q6kdq"), SubResource("Resource_hp157"), SubResource("Resource_rk35k")])

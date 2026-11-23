@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bkx1b6iaic72w"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_jclut"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_a43qw"]
+
+[sub_resource type="Resource" id="Resource_rorqv"]
+script = ExtResource("1_jclut")
+word = "CHLORE"
+hint = "Elément chimique dont la symbole est Cl."
+grid_position = Vector2i(0, 3)
+
+[sub_resource type="Resource" id="Resource_48cbo"]
+script = ExtResource("1_jclut")
+word = "ARGENT"
+hint = "Elément chimique dont la symbole est Ag."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_tpejr"]
+script = ExtResource("1_jclut")
+word = "HG"
+hint = "Symbole chimique du mercure."
+grid_position = Vector2i(1, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_yfwvf"]
+script = ExtResource("1_jclut")
+word = "CO"
+hint = "Symbole chimique du cobalt."
+grid_position = Vector2i(3, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_q6jly"]
+script = ExtResource("1_jclut")
+word = "BA"
+hint = "Symbole chimique du baryum."
+grid_position = Vector2i(4, 0)
+
+[sub_resource type="Resource" id="Resource_pcxey"]
+script = ExtResource("1_jclut")
+word = "FE"
+hint = "Symbole chimique du fer."
+grid_position = Vector2i(4, 7)
+
+[resource]
+script = ExtResource("2_a43qw")
+clues = Array[ExtResource("1_jclut")]([SubResource("Resource_rorqv"), SubResource("Resource_48cbo"), SubResource("Resource_tpejr"), SubResource("Resource_yfwvf"), SubResource("Resource_q6jly"), SubResource("Resource_pcxey")])

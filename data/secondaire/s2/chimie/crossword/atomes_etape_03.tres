@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://b3okg08upm4bc"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_fk0m0"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_fopgh"]
+
+[sub_resource type="Resource" id="Resource_7ves6"]
+script = ExtResource("1_fk0m0")
+word = "SE"
+hint = "Symbole chimique du sélénium."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_0sx53"]
+script = ExtResource("1_fk0m0")
+word = "ATOME"
+hint = "Plus petit élément chimique que l'on ne peut pas diviser, particule qui compose la molécule."
+grid_position = Vector2i(1, 1)
+
+[sub_resource type="Resource" id="Resource_w1n23"]
+script = ExtResource("1_fk0m0")
+word = "ZINC"
+hint = "Elément chimique dont le symbole est Zn."
+grid_position = Vector2i(1, 5)
+
+[sub_resource type="Resource" id="Resource_k4ar4"]
+script = ExtResource("1_fk0m0")
+word = "AIR"
+hint = "Mélange de gaz contenant de l'azote, oxygène et hélium."
+grid_position = Vector2i(1, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_21egj"]
+script = ExtResource("1_fk0m0")
+word = "LI"
+hint = "Symbole chimique du lithium."
+grid_position = Vector2i(0, 2)
+
+[resource]
+script = ExtResource("2_fopgh")
+clues = Array[ExtResource("1_fk0m0")]([SubResource("Resource_7ves6"), SubResource("Resource_0sx53"), SubResource("Resource_w1n23"), SubResource("Resource_k4ar4"), SubResource("Resource_21egj")])

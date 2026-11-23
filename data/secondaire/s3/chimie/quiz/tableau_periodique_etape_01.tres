@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://do1lurvrc3tfy"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_iydit"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="2_sl1gm"]
+
+[sub_resource type="Resource" id="Resource_rhbte"]
+script = ExtResource("1_iydit")
+question = "Comment appelons-nous les éléments situés à gauche du tableau périodique ?"
+choices = Array[String](["Les métaux.", "Les non métaux.", "Les sels.", "Les macromolécules."])
+
+[sub_resource type="Resource" id="Resource_o608e"]
+script = ExtResource("1_iydit")
+question = "Comment appelons-nous les éléments situés à droite du tableau périodique ?"
+choices = Array[String](["Les métaux.", "Les non métaux.", "Les sels.", "Les macromolécules."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ycxbu"]
+script = ExtResource("1_iydit")
+question = "Que représente chaque ligne horizontale du tableau périodique?"
+choices = Array[String](["La famille.", "La période.", "La fréquence.", "Le symbole."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_blx0p"]
+script = ExtResource("1_iydit")
+question = "Que représente chaque ligne verticale du tableau périodique ?"
+choices = Array[String](["La famille.", "La période.", "La fréquence.", "Le symbole."])
+
+[resource]
+script = ExtResource("2_sl1gm")
+questions = Array[ExtResource("1_iydit")]([SubResource("Resource_rhbte"), SubResource("Resource_o608e"), SubResource("Resource_ycxbu"), SubResource("Resource_blx0p")])

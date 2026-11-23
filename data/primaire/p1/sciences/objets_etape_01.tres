@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bb77vjx6rthad"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_swr1u"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_re3l4"]
+
+[sub_resource type="Resource" id="Resource_d7i4n"]
+script = ExtResource("1_swr1u")
+word = "METAL"
+hint = "Objet qui peut conduire à la fois la chaleur et l'électricité."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_1mvs5"]
+script = ExtResource("1_swr1u")
+word = "TIRER"
+hint = "Action d'amener un objet dans une direction précise."
+grid_position = Vector2i(3, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_f8k47"]
+script = ExtResource("1_swr1u")
+word = "ATTIRER"
+hint = "Action d'amener un objet vers soi, de le rapprocher."
+grid_position = Vector2i(0, 1)
+
+[sub_resource type="Resource" id="Resource_tskb2"]
+script = ExtResource("1_swr1u")
+word = "OTER"
+hint = "Action d'enlever un objet ou un élément du corps humain."
+grid_position = Vector2i(1, 0)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_re3l4")
+clues = Array[ExtResource("1_swr1u")]([SubResource("Resource_d7i4n"), SubResource("Resource_1mvs5"), SubResource("Resource_f8k47"), SubResource("Resource_tskb2")])

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://b5vf8pmjbw744"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_1turu"]
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_480da"]
+
+[sub_resource type="Resource" id="Resource_1gcl5"]
+script = ExtResource("1_1turu")
+text = "L'unité usuelle de la concentration massique est le gramme par litre."
+
+[sub_resource type="Resource" id="Resource_pufd3"]
+script = ExtResource("1_1turu")
+text = "Pour calculer la concentration"
+hint = "on divise la masse par le volume."
+
+[sub_resource type="Resource" id="Resource_k7l32"]
+script = ExtResource("1_1turu")
+text = "Une solution saturée ne peut plus dissoudre de soluté supplémentaire."
+
+[resource]
+script = ExtResource("2_480da")
+phrases = Array[ExtResource("1_1turu")]([SubResource("Resource_1gcl5"), SubResource("Resource_pufd3"), SubResource("Resource_k7l32")])

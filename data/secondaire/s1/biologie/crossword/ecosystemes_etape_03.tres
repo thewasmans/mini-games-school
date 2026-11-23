@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://djw4sdmpo3oaw"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_k25ur"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_ipbl5"]
+
+[sub_resource type="Resource" id="Resource_y2stu"]
+script = ExtResource("1_k25ur")
+word = "ORGANIQUE"
+hint = "Par opposition à la matière minérale."
+grid_position = Vector2i(0, 9)
+
+[sub_resource type="Resource" id="Resource_7tq65"]
+script = ExtResource("1_k25ur")
+word = "BIODIVERSITE"
+hint = "Terme reflétant l'ensemble de la diversité du vivant."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_w335f"]
+script = ExtResource("1_k25ur")
+word = "PROIE"
+hint = "Se dit de l'animal qui est traqué par le prédateur."
+grid_position = Vector2i(4, 7)
+
+[sub_resource type="Resource" id="Resource_l3shm"]
+script = ExtResource("1_k25ur")
+word = "PREDATION"
+hint = "Relation de type alimentaire au cours de laquelle un prédateur se nourrit d’une proie."
+grid_position = Vector2i(0, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_6g8qg"]
+script = ExtResource("1_k25ur")
+word = "ECOSYSTEME"
+hint = "Ensemble formé par une communauté d'êtres vivants en interaction avec leur environnement."
+grid_position = Vector2i(8, 0)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_ipbl5")
+clues = Array[ExtResource("1_k25ur")]([SubResource("Resource_y2stu"), SubResource("Resource_7tq65"), SubResource("Resource_w335f"), SubResource("Resource_l3shm"), SubResource("Resource_6g8qg")])

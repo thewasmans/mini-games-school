@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://d2p7c5qemrt8w"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_800yu"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="2_4asql"]
+
+[sub_resource type="Resource" id="Resource_vj2gm"]
+script = ExtResource("1_800yu")
+question = "Quel est le rôle de la vésicule biliaire ?"
+choices = Array[String](["Réguler la glycémie.", "Véhiculer le bol alimentaire.", "Libérer la bile.", "Libérer la matière fécale."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_0rfda"]
+script = ExtResource("1_800yu")
+question = "Quel est le rôle de l'anus ?"
+choices = Array[String](["Réguler la glycémie.", "Véhiculer le bol alimentaire.", "Libérer la bile.", "Libérer la matière fécale."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_2x6sc"]
+script = ExtResource("1_800yu")
+question = "Quel type de transformation se passe lors de la mastication ?"
+choices = Array[String](["Chimique.", "Mécanique.", "Thermique.", "Cinétique."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_740j0"]
+script = ExtResource("1_800yu")
+question = "Quel type de transformation se passe lors de la salivation ?"
+choices = Array[String](["Chimique.", "Mécanique.", "Thermique.", "Cinétique."])
+
+[sub_resource type="Resource" id="Resource_sor5b"]
+script = ExtResource("1_800yu")
+question = "Quels sont les deux mécanismes digestifs dans la bouche ?"
+choices = Array[String](["Mastication et salivation.", "Peristaltisme et absorption.", "Evacuation et déjection.", "Destruction et compensation."])
+
+[resource]
+script = ExtResource("2_4asql")
+questions = Array[ExtResource("1_800yu")]([SubResource("Resource_vj2gm"), SubResource("Resource_0rfda"), SubResource("Resource_2x6sc"), SubResource("Resource_740j0"), SubResource("Resource_sor5b")])

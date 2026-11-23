@@ -1,0 +1,52 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dfs8vlhoouw8t"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_anfj7"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_skomc"]
+
+[sub_resource type="Resource" id="Resource_c1krm"]
+script = ExtResource("1_anfj7")
+word = "METHYLENE"
+hint = "Indicateur coloré bleu qui dérive d'un alcool."
+grid_position = Vector2i(7, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_mmuyn"]
+script = ExtResource("1_anfj7")
+word = "ABRI"
+hint = "Endroit où un animal peut se réfugier face au climat."
+grid_position = Vector2i(3, 2)
+
+[sub_resource type="Resource" id="Resource_bqtss"]
+script = ExtResource("1_anfj7")
+word = "CHAMPIGNON"
+hint = "Organisme qui se développe dans l'obscurité, l'humidité et la chaleur."
+
+[sub_resource type="Resource" id="Resource_os48g"]
+script = ExtResource("1_anfj7")
+word = "ABIOTIQUES"
+hint = "Se dit des facteurs d'un environnement qui ne font pas partie du vivant (température, pH…)."
+grid_position = Vector2i(3, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_frcgl"]
+script = ExtResource("1_anfj7")
+word = "SEVE"
+hint = "Equivalent du sang qui coule dans les tissus des plantes."
+grid_position = Vector2i(9, 8)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_xmhy2"]
+script = ExtResource("1_anfj7")
+word = "ECOSYSTEME"
+hint = "Ensemble formé par une communauté d'êtres vivants en interaction avec leur environnement."
+grid_position = Vector2i(0, 11)
+
+[sub_resource type="Resource" id="Resource_pp0k4"]
+script = ExtResource("1_anfj7")
+word = "CHLOROPHYLLE"
+hint = "Pigment vert des végétaux qui joue un rôle essentiel dans la photosynthèse."
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_skomc")
+clues = Array[ExtResource("1_anfj7")]([SubResource("Resource_c1krm"), SubResource("Resource_mmuyn"), SubResource("Resource_bqtss"), SubResource("Resource_os48g"), SubResource("Resource_frcgl"), SubResource("Resource_xmhy2"), SubResource("Resource_pp0k4")])

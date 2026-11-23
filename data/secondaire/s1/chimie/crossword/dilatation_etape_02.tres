@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dhhv4lpf3pl6s"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_vrwqc"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_yj0l6"]
+
+[sub_resource type="Resource" id="Resource_sw5hj"]
+script = ExtResource("1_vrwqc")
+word = "DILATATION"
+hint = "Augmentation du volume d'un corps sous l'influence de la chaleur."
+grid_position = Vector2i(2, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_fuuc8"]
+script = ExtResource("1_vrwqc")
+word = "TEMPERATURE"
+hint = "Grandeur physique exprimée en degré Celsius."
+grid_position = Vector2i(6, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_572en"]
+script = ExtResource("1_vrwqc")
+word = "EBULLITION"
+hint = "Formation de bulles lors du changement violent d’un corps de l’état liquide vers l’état gazeux."
+grid_position = Vector2i(4, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ctq7l"]
+script = ExtResource("1_vrwqc")
+word = "FUSION"
+hint = "Passage de l'état solide à l'état liquide sous l'action de la chaleur."
+grid_position = Vector2i(0, 13)
+
+[sub_resource type="Resource" id="Resource_d20g3"]
+script = ExtResource("1_vrwqc")
+word = "SOLIDE"
+hint = "Etat de la matière dans lequel les molécules ont une forte cohésion, ce qui rend le composé résistant."
+grid_position = Vector2i(1, 10)
+
+[sub_resource type="Resource" id="Resource_omhkk"]
+script = ExtResource("1_vrwqc")
+word = "CHALEUR"
+hint = "Energie thermique."
+grid_position = Vector2i(0, 5)
+
+[resource]
+script = ExtResource("2_yj0l6")
+clues = Array[ExtResource("1_vrwqc")]([SubResource("Resource_sw5hj"), SubResource("Resource_fuuc8"), SubResource("Resource_572en"), SubResource("Resource_ctq7l"), SubResource("Resource_d20g3"), SubResource("Resource_omhkk")])

@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://b5nc8l4xlxluf"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_p7iet"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="2_p8557"]
+
+[sub_resource type="Resource" id="Resource_xpfr4"]
+script = ExtResource("1_p7iet")
+question = "Que peux-tu dire à propos de la masse volumique ?"
+choices = Array[String](["C'est la quantité de matière dans un espace.", "Son symbole est rho.", "C'est le rapport entre la masse et le volume.", "Toutes ces phrases sont justes."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_xke6p"]
+script = ExtResource("1_p7iet")
+question = "Pourquoi peut-on dire que la glace flotte sur l'eau ?"
+choices = Array[String](["Sa masse volumique est inf. à celle de l'eau liquide.", "Sa masse volumique est sup. à celle de l'eau liquide.", "Sa masse volumique est égale à celle de l'eau liquide.", "On ne sait pas encore l'expliquer."])
+
+[sub_resource type="Resource" id="Resource_evvp6"]
+script = ExtResource("1_p7iet")
+question = "Qu'est-ce que la densité ?"
+choices = Array[String](["Un synonyme de la masse volumique.", "Le rapport de la masse volumique d'une substance par rapport à une référence.", "L'équivalent de la concentration massique.", "Aucune de ces réponses."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_l4lx6"]
+script = ExtResource("1_p7iet")
+question = "Qu'est-ce qui attire le bateau au fond de l'eau ?"
+choices = Array[String](["La gravité.", "La poussée d'Archimède.", "Le vent.", "La flottaison."])
+
+[resource]
+script = ExtResource("2_p8557")
+questions = Array[ExtResource("1_p7iet")]([SubResource("Resource_xpfr4"), SubResource("Resource_xke6p"), SubResource("Resource_evvp6"), SubResource("Resource_l4lx6")])

@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bb88ufwae3b31"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_xaoex"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_qyqdd"]
+
+[sub_resource type="Resource" id="Resource_docmx"]
+script = ExtResource("1_xaoex")
+word = "MAGNESIUM"
+hint = "Elément chimique dont le symbole est Mg."
+grid_position = Vector2i(2, 4)
+
+[sub_resource type="Resource" id="Resource_cqk0c"]
+script = ExtResource("1_xaoex")
+word = "ARGON"
+hint = "Gaz rare dont le symbole chimique est l'Ar."
+grid_position = Vector2i(3, 0)
+
+[sub_resource type="Resource" id="Resource_xs53h"]
+script = ExtResource("1_xaoex")
+word = "OZONE"
+hint = "Couche de gaz qui absorbe les UVs."
+grid_position = Vector2i(6, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_vwriw"]
+script = ExtResource("1_xaoex")
+word = "ELECTROLYSE"
+hint = "Procédé par lequel on effectue la décomposition de l'eau en dihydrogène et dioxygène."
+grid_position = Vector2i(0, 2)
+
+[resource]
+script = ExtResource("2_qyqdd")
+clues = Array[ExtResource("1_xaoex")]([SubResource("Resource_docmx"), SubResource("Resource_cqk0c"), SubResource("Resource_xs53h"), SubResource("Resource_vwriw")])

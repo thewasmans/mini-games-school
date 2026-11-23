@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://c6pr7bv6abeht"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_uod2n"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_vgcqv"]
+
+[sub_resource type="Resource" id="Resource_82rl4"]
+script = ExtResource("1_uod2n")
+word = "CERVEAU"
+hint = "Organe situé dans le crâne qui remplit de nombreuses fonctions essentielles."
+grid_position = Vector2i(3, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_pa2gh"]
+script = ExtResource("1_uod2n")
+word = "GOUT"
+hint = "Sens dont l'organe utilisé est la langue."
+grid_position = Vector2i(1, 7)
+
+[sub_resource type="Resource" id="Resource_umquv"]
+script = ExtResource("1_uod2n")
+word = "SOURCE"
+hint = "Point d'origine ou de provenance à partir duquel quelque chose se forme."
+grid_position = Vector2i(0, 3)
+
+[sub_resource type="Resource" id="Resource_w410o"]
+script = ExtResource("1_uod2n")
+word = "LASER"
+hint = "Instrument produisant un fin rayon lumineux."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_do7ux"]
+script = ExtResource("1_uod2n")
+word = "CASQUE"
+hint = "Objet que l'on porte sur les oreilles pour protéger contre les sons forts."
+grid_position = Vector2i(0, 1)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_vgcqv")
+clues = Array[ExtResource("1_uod2n")]([SubResource("Resource_82rl4"), SubResource("Resource_pa2gh"), SubResource("Resource_umquv"), SubResource("Resource_w410o"), SubResource("Resource_do7ux")])

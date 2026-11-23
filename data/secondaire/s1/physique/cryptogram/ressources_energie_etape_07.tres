@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://orldyaubxl73"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_0t2rk"]
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_tmqh2"]
+
+[sub_resource type="Resource" id="Resource_le0lj"]
+script = ExtResource("1_0t2rk")
+text = "La solidification transforme un liquide en solide par refroidissement."
+
+[sub_resource type="Resource" id="Resource_j1la1"]
+script = ExtResource("1_0t2rk")
+text = "La vaporisation correspond au passage d'un liquide à l'état de gaz."
+
+[sub_resource type="Resource" id="Resource_d1rkv"]
+script = ExtResource("1_0t2rk")
+text = "La condensation est le passage de l'état gazeux à l'état liquide."
+
+[sub_resource type="Resource" id="Resource_sl384"]
+script = ExtResource("1_0t2rk")
+text = "Les changements d'état s'effectuent à température constante pour un corps pur."
+
+[sub_resource type="Resource" id="Resource_vaq42"]
+script = ExtResource("1_0t2rk")
+text = "L'apport ou la libération d'énergie thermique provoque les changements d'état."
+
+[resource]
+script = ExtResource("2_tmqh2")
+hidden_letter_ratio = 0.5
+phrases = Array[ExtResource("1_0t2rk")]([SubResource("Resource_le0lj"), SubResource("Resource_j1la1"), SubResource("Resource_d1rkv"), SubResource("Resource_sl384"), SubResource("Resource_vaq42")])

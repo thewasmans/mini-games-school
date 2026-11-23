@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://dnmohcn1exp0b"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_04nbl"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="2_e5c62"]
+
+[sub_resource type="Resource" id="Resource_gurlu"]
+script = ExtResource("1_04nbl")
+question = "En quoi consiste la centrigufation ?"
+choices = Array[String](["Cette méthode permet de recueillir le solide dans le filtre et d’obtenir un liquide appelé filtrat.", "Procédé qui consiste à débarrasser un liquide de ses impuretés lourdes en les laissant se déposer sur le fond..", "Procédé qui consiste à faire tourner le mélange autour d’un axe de rotation.", "Procédé par lequel un mélange est chauffé dans un système fermé."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_lnmg5"]
+script = ExtResource("1_04nbl")
+question = "En quoi consiste la distillation ?"
+choices = Array[String](["Cette méthode permet de recueillir le solide dans le filtre et d’obtenir un liquide appelé filtrat.", "Procédé qui consiste à débarrasser un liquide de ses impuretés lourdes en les laissant se déposer sur le fond..", "Procédé qui consiste à faire tourner le mélange autour d’un axe de rotation.", "Procédé par lequel un mélange est chauffé dans un système fermé."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_inb2s"]
+script = ExtResource("1_04nbl")
+question = "Que peux-tu dire à propos du fer ?"
+choices = Array[String](["C'est un corps pur simple.", "C'est un corps pur composé.", "C'est un mélange homogène.", "C'est un mélange hétérogène."])
+
+[sub_resource type="Resource" id="Resource_m6qy5"]
+script = ExtResource("1_04nbl")
+question = "Qu'est-ce qu'un modèle ?"
+choices = Array[String](["Représentation simplifiée de la réalité d'un phénomène.", "Représentation complexe de la réalité d'un phénomène.", "Schéma de position.", "Croquis anatomique."])
+
+[sub_resource type="Resource" id="Resource_vhiye"]
+script = ExtResource("1_04nbl")
+question = "De quoi est composée la matière ?"
+choices = Array[String](["Tout ce qui compose les corps, les molécules.", "Tout ce qui se trouve sous la terre.", "Tout ce qui se trouve dans l'espace.", "Tout ce qui possède une masse et une position."])
+
+[sub_resource type="Resource" id="Resource_3mc40"]
+script = ExtResource("1_04nbl")
+question = "De quoi est composée une molécule ?"
+choices = Array[String](["D'atomes.", "De cellules.", "D'organes.", "D'espèces."])
+
+[resource]
+script = ExtResource("2_e5c62")
+questions = Array[ExtResource("1_04nbl")]([SubResource("Resource_gurlu"), SubResource("Resource_lnmg5"), SubResource("Resource_inb2s"), SubResource("Resource_m6qy5"), SubResource("Resource_vhiye"), SubResource("Resource_3mc40")])

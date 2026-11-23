@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://bmvr5i7v1kohf"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_5qin0"]
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_kq7by"]
+
+[sub_resource type="Resource" id="Resource_tdlb2"]
+script = ExtResource("1_5qin0")
+text = "L'unité légale de pression est le pascal."
+
+[sub_resource type="Resource" id="Resource_nkpfd"]
+script = ExtResource("1_5qin0")
+text = "Plus la surface de contact est petite"
+hint = "plus la pression est grande."
+
+[sub_resource type="Resource" id="Resource_rcrhs"]
+script = ExtResource("1_5qin0")
+text = "La pression atmosphérique est due au poids de l'air environnant."
+
+[sub_resource type="Resource" id="Resource_ir480"]
+script = ExtResource("1_5qin0")
+text = "La pression dans les liquides augmente avec la profondeur."
+
+[resource]
+script = ExtResource("2_kq7by")
+hidden_letter_ratio = 0.45
+phrases = Array[ExtResource("1_5qin0")]([SubResource("Resource_tdlb2"), SubResource("Resource_nkpfd"), SubResource("Resource_rcrhs"), SubResource("Resource_ir480")])

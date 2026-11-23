@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bqv3lc5uqbtf3"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_fciph"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_gevcp"]
+
+[sub_resource type="Resource" id="Resource_d8fuk"]
+script = ExtResource("1_fciph")
+word = "PILE"
+hint = "Correspond au générateur dans un circuit électrique simple."
+grid_position = Vector2i(0, 7)
+
+[sub_resource type="Resource" id="Resource_p36p0"]
+script = ExtResource("1_fciph")
+word = "SERIE"
+hint = "Circuit dont le courant emprunte un seul chemin."
+grid_position = Vector2i(4, 10)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_r88t4"]
+script = ExtResource("1_fciph")
+word = "RECEPTEUR"
+hint = "Appareil qui reçoit des signaux électriques."
+grid_position = Vector2i(3, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_agq83"]
+script = ExtResource("1_fciph")
+word = "CONDUCTIVITE"
+hint = "Valeur qui caractérise le passage du courant ou de la chaleur dans un matériau."
+grid_position = Vector2i(1, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_8v35r"]
+script = ExtResource("1_fciph")
+word = "BORNE"
+hint = "Correspond à l'extrémité positive ou négative d'un générateur, d'une pile."
+grid_position = Vector2i(0, 14)
+
+[sub_resource type="Resource" id="Resource_1gdqc"]
+script = ExtResource("1_fciph")
+word = "FERME"
+hint = "Circuit dont le courant passe et le récepteur (lampe) fonctionne (s'allume)."
+grid_position = Vector2i(0, 11)
+
+[resource]
+script = ExtResource("2_gevcp")
+clues = Array[ExtResource("1_fciph")]([SubResource("Resource_d8fuk"), SubResource("Resource_p36p0"), SubResource("Resource_r88t4"), SubResource("Resource_agq83"), SubResource("Resource_8v35r"), SubResource("Resource_1gdqc")])

@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://j4yo1yyuur7y"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_kx4cf"]
+[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_qjpfv"]
+
+[sub_resource type="Resource" id="Resource_q1cgg"]
+script = ExtResource("1_kx4cf")
+word = "CABLES"
+hint = "Fils électriques qui permet au courant de passer."
+grid_position = Vector2i(0, 4)
+
+[sub_resource type="Resource" id="Resource_olf2o"]
+script = ExtResource("1_kx4cf")
+word = "IMAGES"
+hint = "Éléments visuels qui permettent de réaliser une vidéo lorsqu'on en accélère la lecture"
+grid_position = Vector2i(0, 11)
+
+[sub_resource type="Resource" id="Resource_tsrrw"]
+script = ExtResource("1_kx4cf")
+word = "PROTECTION"
+hint = "Mesure de sécurité concernant l'électricité réalisée dans les maisons."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_xrxpl"]
+script = ExtResource("1_kx4cf")
+word = "ELECTROCUTION"
+hint = "Action de causer une secousse mortelle par le passage d'un courant électrique."
+grid_position = Vector2i(0, 1)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_qjpfv")
+clues = Array[ExtResource("1_kx4cf")]([SubResource("Resource_q1cgg"), SubResource("Resource_olf2o"), SubResource("Resource_tsrrw"), SubResource("Resource_xrxpl")])
