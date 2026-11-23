@@ -17,4 +17,5 @@ text = "Une équation chimique équilibrée respecte la conservation des atomes.
 
 [resource]
 script = ExtResource("2_cvar2")
+hidden_letter_ratio = 0.13
 phrases = Array[ExtResource("1_gxpgd")]([SubResource("Resource_77rlr"), SubResource("Resource_go4xj"), SubResource("Resource_lk7ot")])

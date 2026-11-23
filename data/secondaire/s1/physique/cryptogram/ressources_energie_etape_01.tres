@@ -18,5 +18,5 @@ text = "L'exploitation minière extrait les minerais du sol."
 
 [resource]
 script = ExtResource("2_sa1bx")
-hidden_letter_ratio = 0.3
+hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_01gek")]([SubResource("Resource_5kyce"), SubResource("Resource_n3ahh"), SubResource("Resource_l68lv")])

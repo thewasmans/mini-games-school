@@ -17,4 +17,5 @@ text = "Archimède a découvert ce principe célèbre dans sa baignoire."
 
 [resource]
 script = ExtResource("2_q2clx")
+hidden_letter_ratio = 0.13
 phrases = Array[ExtResource("1_nn4jj")]([SubResource("Resource_2ofue"), SubResource("Resource_6n1dw"), SubResource("Resource_6hkkv")])

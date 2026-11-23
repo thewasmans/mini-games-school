@@ -17,4 +17,5 @@ text = "La grossesse dure environ neuf mois chez l'humain."
 
 [resource]
 script = ExtResource("2_fag0y")
+hidden_letter_ratio = 0.13
 phrases = Array[ExtResource("1_yxeoq")]([SubResource("Resource_fxbxn"), SubResource("Resource_tkmao"), SubResource("Resource_uv5gg")])

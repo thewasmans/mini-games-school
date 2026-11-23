@@ -21,5 +21,5 @@ text = "Le choix responsable implique information et prévention."
 
 [resource]
 script = ExtResource("2_jgm8d")
-hidden_letter_ratio = 0.5
+hidden_letter_ratio = 0.17
 phrases = Array[ExtResource("1_63l00")]([SubResource("Resource_7v22d"), SubResource("Resource_y743m"), SubResource("Resource_0benc"), SubResource("Resource_7yeff")])

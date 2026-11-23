@@ -17,4 +17,5 @@ text = "La surpêche et la chasse excessive menacent la biodiversité marine et 
 
 [resource]
 script = ExtResource("2_app6c")
+hidden_letter_ratio = 0.13
 phrases = Array[ExtResource("1_14sd3")]([SubResource("Resource_3gwh1"), SubResource("Resource_cuxfb"), SubResource("Resource_3yjai")])

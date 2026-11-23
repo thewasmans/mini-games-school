@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://4nwxkc4uvsii"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_s4b88"]
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_vajbm"]
+
+[sub_resource type="Resource" id="Resource_aycop"]
+script = ExtResource("1_s4b88")
+text = "L'oreille sert à entendre les sons."
+
+[sub_resource type="Resource" id="Resource_2ym04"]
+script = ExtResource("1_s4b88")
+text = "Nous avons cinq sens : la vue, l'ouïe, le toucher, l'odorat et le goût."
+
+[sub_resource type="Resource" id="Resource_rpjl2"]
+script = ExtResource("1_s4b88")
+text = "Les nerfs portent les informations jusqu'au cerveau."
+
+[resource]
+script = ExtResource("2_vajbm")
+hidden_letter_ratio = 0.1
+phrases = Array[ExtResource("1_s4b88")]([SubResource("Resource_aycop"), SubResource("Resource_2ym04"), SubResource("Resource_rpjl2")])

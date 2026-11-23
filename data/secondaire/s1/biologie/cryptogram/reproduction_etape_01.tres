@@ -17,5 +17,5 @@ text = "L'appareil reproducteur féminin produit des ovules."
 
 [resource]
 script = ExtResource("2_kff3b")
-hidden_letter_ratio = 0.3
+hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_k5b4q")]([SubResource("Resource_02nfo"), SubResource("Resource_fj473"), SubResource("Resource_p1ojf")])

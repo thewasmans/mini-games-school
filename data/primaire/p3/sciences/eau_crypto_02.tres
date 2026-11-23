@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://c6omtk1u71etr"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_eku7a"]
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_8ayw7"]
+
+[sub_resource type="Resource" id="Resource_swfts"]
+script = ExtResource("1_eku7a")
+text = "Le captage récupère l'eau dans la nature."
+
+[sub_resource type="Resource" id="Resource_ukgac"]
+script = ExtResource("1_eku7a")
+text = "La filtration retire les saletés de l'eau."
+
+[sub_resource type="Resource" id="Resource_6cwso"]
+script = ExtResource("1_eku7a")
+text = "La station d'épuration nettoie les eaux usées."
+
+[sub_resource type="Resource" id="Resource_7bnv6"]
+script = ExtResource("1_eku7a")
+text = "Une eau polluée peut être toxique."
+
+[resource]
+script = ExtResource("2_8ayw7")
+hidden_letter_ratio = 0.15
+phrases = Array[ExtResource("1_eku7a")]([SubResource("Resource_swfts"), SubResource("Resource_ukgac"), SubResource("Resource_6cwso"), SubResource("Resource_7bnv6")])

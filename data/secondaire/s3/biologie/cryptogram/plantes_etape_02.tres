@@ -17,4 +17,5 @@ text = "La plante absorbe du dioxyde de carbone et rejette du dioxygène."
 
 [resource]
 script = ExtResource("2_qluw4")
+hidden_letter_ratio = 0.13
 phrases = Array[ExtResource("1_gmjnl")]([SubResource("Resource_8bwma"), SubResource("Resource_domh2"), SubResource("Resource_8lmjx")])

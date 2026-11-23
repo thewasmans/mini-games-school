@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://bujg84f1solgt"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_h4sw0"]
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_mbmye"]
+
+[sub_resource type="Resource" id="Resource_0iwio"]
+script = ExtResource("1_h4sw0")
+text = "La pluie tombe des nuages."
+
+[sub_resource type="Resource" id="Resource_73gag"]
+script = ExtResource("1_h4sw0")
+text = "Le tonnerre gronde après l'éclair."
+
+[sub_resource type="Resource" id="Resource_wwpsb"]
+script = ExtResource("1_h4sw0")
+text = "Sous zéro degré, l'eau devient de la glace."
+
+[resource]
+script = ExtResource("2_mbmye")
+hidden_letter_ratio = 0.08
+phrases = Array[ExtResource("1_h4sw0")]([SubResource("Resource_0iwio"), SubResource("Resource_73gag"), SubResource("Resource_wwpsb")])

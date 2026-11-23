@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://d3yloc7nootkf"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_ili1w"]
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_guo7v"]
+
+[sub_resource type="Resource" id="Resource_spwd7"]
+script = ExtResource("1_ili1w")
+text = "Les mollusques ont un corps mou."
+
+[sub_resource type="Resource" id="Resource_hxbuv"]
+script = ExtResource("1_ili1w")
+text = "Les vertébrés possèdent une colonne vertébrale."
+
+[sub_resource type="Resource" id="Resource_46x24"]
+script = ExtResource("1_ili1w")
+text = "Le scorpion et la tique sont des arachnides."
+
+[sub_resource type="Resource" id="Resource_pn4os"]
+script = ExtResource("1_ili1w")
+text = "On classe les animaux selon leurs attributs communs."
+
+[resource]
+script = ExtResource("2_guo7v")
+hidden_letter_ratio = 0.15
+phrases = Array[ExtResource("1_ili1w")]([SubResource("Resource_spwd7"), SubResource("Resource_hxbuv"), SubResource("Resource_46x24"), SubResource("Resource_pn4os")])

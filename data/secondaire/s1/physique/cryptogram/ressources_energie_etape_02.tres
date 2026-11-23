@@ -21,5 +21,5 @@ text = "La transformation industrielle crée des produits finis."
 
 [resource]
 script = ExtResource("2_gi4uj")
-hidden_letter_ratio = 0.35
+hidden_letter_ratio = 0.12
 phrases = Array[ExtResource("1_jvmym")]([SubResource("Resource_4v6xn"), SubResource("Resource_arqht"), SubResource("Resource_xeq37"), SubResource("Resource_poely")])

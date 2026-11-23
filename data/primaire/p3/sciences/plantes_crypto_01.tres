@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dmluhnmqnhum3"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_hrgiw"]
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_b11me"]
+
+[sub_resource type="Resource" id="Resource_uac0q"]
+script = ExtResource("1_hrgiw")
+text = "La racine tient la plante dans le sol."
+
+[sub_resource type="Resource" id="Resource_it22x"]
+script = ExtResource("1_hrgiw")
+text = "La tige porte les feuilles."
+
+[sub_resource type="Resource" id="Resource_s5or7"]
+script = ExtResource("1_hrgiw")
+text = "La feuille capte la lumière du Soleil."
+
+[resource]
+script = ExtResource("2_b11me")
+hidden_letter_ratio = 0.1
+phrases = Array[ExtResource("1_hrgiw")]([SubResource("Resource_uac0q"), SubResource("Resource_it22x"), SubResource("Resource_s5or7")])

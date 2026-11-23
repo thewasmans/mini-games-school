@@ -17,5 +17,5 @@ text = "Le poids est la force d'attraction exercée par la Terre sur les objets.
 
 [resource]
 script = ExtResource("2_6r058")
-hidden_letter_ratio = 0.3
+hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_npokd")]([SubResource("Resource_hfdan"), SubResource("Resource_sc7j3"), SubResource("Resource_cxkcl")])

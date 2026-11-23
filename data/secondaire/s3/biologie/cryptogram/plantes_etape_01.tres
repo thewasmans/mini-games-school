@@ -18,5 +18,5 @@ text = "Les racines absorbent l'eau et les sels minéraux du sol."
 
 [resource]
 script = ExtResource("2_s81ua")
-hidden_letter_ratio = 0.3
+hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_4yaua")]([SubResource("Resource_xqq2c"), SubResource("Resource_10y6e"), SubResource("Resource_e6hh5")])

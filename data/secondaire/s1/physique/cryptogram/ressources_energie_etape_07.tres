@@ -25,5 +25,5 @@ text = "L'apport ou la libération d'énergie thermique provoque les changements
 
 [resource]
 script = ExtResource("2_tmqh2")
-hidden_letter_ratio = 0.5
+hidden_letter_ratio = 0.17
 phrases = Array[ExtResource("1_0t2rk")]([SubResource("Resource_le0lj"), SubResource("Resource_j1la1"), SubResource("Resource_d1rkv"), SubResource("Resource_sl384"), SubResource("Resource_vaq42")])

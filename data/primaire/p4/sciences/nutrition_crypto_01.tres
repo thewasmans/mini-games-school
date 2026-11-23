@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://h2u4v5hworm"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_3x6fo"]
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_xoy7l"]
+
+[sub_resource type="Resource" id="Resource_pqyy8"]
+script = ExtResource("1_3x6fo")
+text = "La digestion transforme les aliments en nutriments."
+
+[sub_resource type="Resource" id="Resource_2udk8"]
+script = ExtResource("1_3x6fo")
+text = "L'œsophage conduit les aliments vers l'estomac."
+
+[sub_resource type="Resource" id="Resource_vq2fq"]
+script = ExtResource("1_3x6fo")
+text = "L'estomac mélange les aliments avec le suc gastrique."
+
+[resource]
+script = ExtResource("2_xoy7l")
+hidden_letter_ratio = 0.1
+phrases = Array[ExtResource("1_3x6fo")]([SubResource("Resource_pqyy8"), SubResource("Resource_2udk8"), SubResource("Resource_vq2fq")])

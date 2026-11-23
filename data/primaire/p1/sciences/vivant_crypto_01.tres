@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://5gjaorkmje33"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_sa71y"]
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_rvjoq"]
+
+[sub_resource type="Resource" id="Resource_27ovy"]
+script = ExtResource("1_sa71y")
+text = "Un objet n'est pas vivant."
+
+[sub_resource type="Resource" id="Resource_ptxnr"]
+script = ExtResource("1_sa71y")
+text = "Un être vivant naît, grandit, mange et meurt."
+
+[sub_resource type="Resource" id="Resource_ccl6x"]
+script = ExtResource("1_sa71y")
+text = "L'escargot porte une coquille sur son dos."
+
+[resource]
+script = ExtResource("2_rvjoq")
+hidden_letter_ratio = 0.08
+phrases = Array[ExtResource("1_sa71y")]([SubResource("Resource_27ovy"), SubResource("Resource_ptxnr"), SubResource("Resource_ccl6x")])

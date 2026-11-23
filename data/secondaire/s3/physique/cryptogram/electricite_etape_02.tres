@@ -17,4 +17,5 @@ text = "L'unité de la résistance électrique est l'ohm."
 
 [resource]
 script = ExtResource("2_y3175")
+hidden_letter_ratio = 0.13
 phrases = Array[ExtResource("1_thec6")]([SubResource("Resource_y7tah"), SubResource("Resource_q8f1k"), SubResource("Resource_0841g")])

@@ -18,5 +18,5 @@ text = "La déforestation détruit les habitats naturels de nombreuses espèces.
 
 [resource]
 script = ExtResource("2_q5h2j")
-hidden_letter_ratio = 0.3
+hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_vxkfy")]([SubResource("Resource_ycg1b"), SubResource("Resource_lxy4o"), SubResource("Resource_4kpfh")])

@@ -17,5 +17,5 @@ text = "La concentration massique indique la masse de soluté par litre de solut
 
 [resource]
 script = ExtResource("2_d7vo6")
-hidden_letter_ratio = 0.3
+hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_8ahh8")]([SubResource("Resource_ralew"), SubResource("Resource_verql"), SubResource("Resource_i0ubj")])

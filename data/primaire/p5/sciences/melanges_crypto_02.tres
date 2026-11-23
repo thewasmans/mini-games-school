@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dkufx4exyqgno"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_5kben"]
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_flyx2"]
+
+[sub_resource type="Resource" id="Resource_nnok2"]
+script = ExtResource("1_5kben")
+text = "L'eau et la grenadine forment un mélange homogène."
+
+[sub_resource type="Resource" id="Resource_4n24i"]
+script = ExtResource("1_5kben")
+text = "Dans un mélange hétérogène, on distingue les constituants."
+
+[sub_resource type="Resource" id="Resource_xbp6v"]
+script = ExtResource("1_5kben")
+text = "L'air contient surtout du diazote et du dioxygène."
+
+[sub_resource type="Resource" id="Resource_cdmxl"]
+script = ExtResource("1_5kben")
+text = "Une molécule est formée d'atomes."
+
+[resource]
+script = ExtResource("2_flyx2")
+hidden_letter_ratio = 0.15
+phrases = Array[ExtResource("1_5kben")]([SubResource("Resource_nnok2"), SubResource("Resource_4n24i"), SubResource("Resource_xbp6v"), SubResource("Resource_cdmxl")])

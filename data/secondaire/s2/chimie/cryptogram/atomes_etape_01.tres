@@ -17,5 +17,5 @@ text = "Une molécule est formée par l'association de plusieurs atomes liés en
 
 [resource]
 script = ExtResource("2_3d4q5")
-hidden_letter_ratio = 0.3
+hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_04qnx")]([SubResource("Resource_1n0ok"), SubResource("Resource_jaubt"), SubResource("Resource_lcojb")])

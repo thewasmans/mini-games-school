@@ -17,5 +17,5 @@ text = "Les produits sont les nouvelles substances formées par la réaction."
 
 [resource]
 script = ExtResource("2_ys0nt")
-hidden_letter_ratio = 0.3
+hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_p7veb")]([SubResource("Resource_my60q"), SubResource("Resource_i34pw"), SubResource("Resource_k43yw")])

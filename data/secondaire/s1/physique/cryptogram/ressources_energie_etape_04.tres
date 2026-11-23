@@ -23,4 +23,5 @@ hint = "le charbon et le gaz sont des énergies non renouvelables."
 
 [resource]
 script = ExtResource("2_xdw6o")
+hidden_letter_ratio = 0.13
 phrases = Array[ExtResource("1_uwl6s")]([SubResource("Resource_84msf"), SubResource("Resource_c2hdq"), SubResource("Resource_0kb7n"), SubResource("Resource_snrbk")])

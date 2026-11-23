@@ -21,5 +21,5 @@ text = "Aucun atome ne se crée et aucun atome ne se détruit lors d'une réacti
 
 [resource]
 script = ExtResource("2_jh7g6")
-hidden_letter_ratio = 0.5
+hidden_letter_ratio = 0.17
 phrases = Array[ExtResource("1_urabw")]([SubResource("Resource_u1epi"), SubResource("Resource_hub2t"), SubResource("Resource_30dbh"), SubResource("Resource_jqbk8")])

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dfbat48m58gvu"]
+
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_8fa7w"]
+[ext_resource type="Script" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_1tqi4"]
+
+[sub_resource type="Resource" id="Resource_w3645"]
+script = ExtResource("1_8fa7w")
+text = "Jupiter est la plus grosse planète du système solaire."
+
+[sub_resource type="Resource" id="Resource_shkiw"]
+script = ExtResource("1_8fa7w")
+text = "La Terre tourne sur elle-même en un jour."
+
+[sub_resource type="Resource" id="Resource_pf3h5"]
+script = ExtResource("1_8fa7w")
+text = "La rotation de la Terre crée l'alternance du jour et de la nuit."
+
+[sub_resource type="Resource" id="Resource_67n47"]
+script = ExtResource("1_8fa7w")
+text = "La Terre fait le tour du Soleil en un an : c'est sa révolution."
+
+[resource]
+script = ExtResource("2_1tqi4")
+hidden_letter_ratio = 0.15
+phrases = Array[ExtResource("1_8fa7w")]([SubResource("Resource_w3645"), SubResource("Resource_shkiw"), SubResource("Resource_pf3h5"), SubResource("Resource_67n47")])
