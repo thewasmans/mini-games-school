@@ -1,13 +1,16 @@
 name: Build
 
 # Compile le projet pour Windows, Linux, Web et Android, sans publier sur itch.io.
-# Se declenche sur chaque Pull Request et manuellement via "Run workflow".
+# Se declenche a chaque push sur refactor/architecture-origine, sur chaque Pull Request
+# et manuellement via "Run workflow".
 # Les builds sont disponibles dans les artefacts du run (30 jours).
 #
 # L'image `barichello/godot-ci` doit correspondre a la version de Godot du projet
 # (config/features dans project.godot). L'APK Android est signe avec la cle debug.
 
 on:
+  push:
+    branches: [refactor/architecture-origine]
   pull_request:
   workflow_dispatch:
 
