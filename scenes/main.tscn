@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://biod1yqhch7nv" path="res://scripts/managers/level_manager.gd" id="8_lvlmgr"]
 [ext_resource type="PackedScene" uid="uid://b4qqoy48s4na1" path="res://content/prefabs/ui/level/level.tscn" id="9_lvlprfb"]
 [ext_resource type="PackedScene" path="res://content/prefabs/ui/mute_button_ui.tscn" id="10_mute"]
+[ext_resource type="Script" path="res://scripts/managers/save_manager.gd" id="11_save"]
 
 [node name="Main" type="Node" unique_id=727947993 node_paths=PackedStringArray("game_manager")]
 script = ExtResource("1_sugp2")
@@ -15,11 +16,15 @@ game_manager = NodePath("Global/GameManager")
 
 [node name="Global" type="Node" parent="." unique_id=681545103]
 
-[node name="GameManager" type="Node" parent="Global" unique_id=1073659002 node_paths=PackedStringArray("game_ui_manager", "level_manager")]
+[node name="GameManager" type="Node" parent="Global" unique_id=1073659002 node_paths=PackedStringArray("save_manager", "game_ui_manager", "level_manager")]
 script = ExtResource("1_o5qli")
 game_data = ExtResource("2_0wfyh")
+save_manager = NodePath("SaveManager")
 game_ui_manager = NodePath("GameUIManager")
 level_manager = NodePath("LevelManager")
+
+[node name="SaveManager" type="Node" parent="Global/GameManager"]
+script = ExtResource("11_save")
 
 [node name="GameUIManager" type="Node" parent="Global/GameManager" unique_id=433846898 node_paths=PackedStringArray("root_scene")]
 script = ExtResource("4_jyhfs")
