@@ -11,15 +11,34 @@ extends Control
 @export var back_button: Button
 
 const PROGRESS_TWEEN_DURATION := 0.3
+const TITLE_MIN_FONT_SIZE := 18
+const TITLE_SIDE_MARGIN := 16.0
 
 var level_index: int
 var level_data: LevelData
 var _game_manager: GameManager
+var _title_font_size: int
 
 func initialize(_level_index: int, _level_data: LevelData, game_manager: GameManager) -> void:
 	level_index = _level_index
 	level_data = _level_data
 	_game_manager = game_manager
+	_title_font_size = mini_game_label.get_theme_font_size("font_size")
+	mini_game_label.resized.connect(_fit_title)
+	_initialize_mini_game()
+	_fit_title()
+
+func _fit_title() -> void:
+	var available_width := mini_game_label.size.x - TITLE_SIDE_MARGIN
+	if available_width <= 0.0:
+		return
+	var font := mini_game_label.get_theme_font("font")
+	var font_size := _title_font_size
+	while font_size > TITLE_MIN_FONT_SIZE and font.get_string_size(mini_game_label.text, HORIZONTAL_ALIGNMENT_LEFT, -1, font_size).x > available_width:
+		font_size -= 1
+	mini_game_label.add_theme_font_size_override("font_size", font_size)
+
+func _initialize_mini_game() -> void:
 	validate_button.hide()
 	validate_button.pressed.connect(_on_validate_button_pressed)
 	back_button.pressed.connect(_on_back_button_pressed)

@@ -17,12 +17,12 @@ grow_vertical = 2
 script = ExtResource("1_8od4f")
 mini_game_label = NodePath("Layout/MiniGameLabel")
 mini_game_container = NodePath("Layout/MiniGameContainer")
-progress_bar = NodePath("Layout/ProgressBar")
+progress_bar = NodePath("Layout/TopBar/ProgressBar")
 crossword_prefab = ExtResource("2_xword")
 memo_prefab = ExtResource("4_memo")
 crypto_prefab = ExtResource("5_crypto")
-validate_button = NodePath("Layout/ValidateButton")
-back_button = NodePath("Layout/TopBar/BackButton")
+validate_button = NodePath("ValidateButton")
+back_button = NodePath("Layout/TopBar/BackButtonSlot/BackButton")
 
 [node name="Background" type="TextureRect" parent="." unique_id=2094036631]
 layout_mode = 1
@@ -40,46 +40,72 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = -27.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TopBar" type="Control" parent="Layout" unique_id=2005981840]
-custom_minimum_size = Vector2(0, 140)
+[node name="TopBar" type="HBoxContainer" parent="Layout" unique_id=2005981840]
+custom_minimum_size = Vector2(0, 124)
 layout_mode = 2
+theme_override_constants/separation = 12
 
-[node name="BackButton" type="Button" parent="Layout/TopBar" unique_id=731727699]
+[node name="BackButtonSlot" type="Control" parent="Layout/TopBar" unique_id=1834562001]
+custom_minimum_size = Vector2(136, 124)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="BackButton" type="Button" parent="Layout/TopBar/BackButtonSlot" unique_id=731727699]
 layout_mode = 0
-offset_right = 214.0
-offset_bottom = 194.0
+offset_left = -35.0
+offset_top = -30.0
+offset_right = 179.0
+offset_bottom = 164.0
 scale = Vector2(0.525, 0.525)
 theme_override_font_sizes/font_size = 39
 icon = ExtResource("6_back")
 icon_alignment = 1
 
-[node name="MiniGameLabel" type="Label" parent="Layout" unique_id=1895217850]
-custom_minimum_size = Vector2(0, 56)
+[node name="ProgressBar" type="ProgressBar" parent="Layout/TopBar" unique_id=1075584870]
+custom_minimum_size = Vector2(0, 28)
 layout_mode = 2
-text = "LEVEL"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="ProgressBar" type="ProgressBar" parent="Layout" unique_id=1075584870]
-custom_minimum_size = Vector2(420, 24)
-layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 3
+size_flags_vertical = 4
 max_value = 3.0
 step = 0.0
 value = 1.0
 show_percentage = false
 
+[node name="MuteButtonSpace" type="Control" parent="Layout/TopBar" unique_id=1834562002]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="MiniGameLabel" type="Label" parent="Layout" unique_id=1895217850]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+text = "LEVEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 3
+
 [node name="MiniGameContainer" type="Control" parent="Layout" unique_id=1891193126]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ValidateButton" type="Button" parent="Layout" unique_id=1310090121]
+[node name="ValidateButton" type="Button" parent="." unique_id=1310090121]
+visible = false
 custom_minimum_size = Vector2(300, 125)
-layout_mode = 2
-size_flags_horizontal = 4
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -187.0
+offset_right = 150.0
+offset_bottom = -62.0
+grow_horizontal = 2
+grow_vertical = 0
 text = "Valider le niveau"

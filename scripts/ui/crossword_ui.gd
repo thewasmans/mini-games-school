@@ -20,7 +20,13 @@ const VICTORY_END_DELAY := 0.6
 
 @export var grid_area: Control
 @export var grid_container: GridContainer
+@export var hint_frame: Control
 @export var hint_label: Label
+@export var previous_word_button: TextureButton
+@export var next_word_button: TextureButton
+@export var keyboard_panel: Control
+@export var hint_line_scroll: ScrollContainer
+@export var hint_line_label: Label
 @export var keyboard: VirtualKeyboardUI
 @export var tile_letter_theme: Theme
 @export var tile_letter_validated_theme: Theme
@@ -35,18 +41,64 @@ var _hovered_placement: CrosswordWordPlacement
 var _cursor_index: int = 0
 var _word_count: int
 var _is_completed := false
+var _default_hint: String
+var _ordered_placements: Array[CrosswordWordPlacement] = []
 
 func initialize(crossword_data: CrosswordData) -> void:
 	var placements := crossword_data.build_placements()
 	_word_count = placements.size()
+	_default_hint = hint_label.text
 	progress_changed.emit(0, _word_count)
 	_render_grid(placements)
 	grid_area.resized.connect(_fit_grid_to_area)
+	grid_area.gui_input.connect(_on_grid_area_gui_input)
 	grid_container.minimum_size_changed.connect(_fit_grid_to_area)
 	_fit_grid_to_area()
 	keyboard.letter_pressed.connect(_on_letter_pressed)
 	keyboard.erase_pressed.connect(_on_erase_pressed)
-	keyboard.set_enabled(false)
+	_ordered_placements = placements.duplicate()
+	_ordered_placements.sort_custom(_is_before_in_reading_order)
+	next_word_button.texture_normal = _mirrored(previous_word_button.texture_normal)
+	previous_word_button.pressed.connect(_select_adjacent_word.bind(-1))
+	next_word_button.pressed.connect(_select_adjacent_word.bind(1))
+	_set_keyboard_shown(false)
+
+func _is_before_in_reading_order(a: CrosswordWordPlacement, b: CrosswordWordPlacement) -> bool:
+	if a.start.y != b.start.y:
+		return a.start.y < b.start.y
+	if a.start.x != b.start.x:
+		return a.start.x < b.start.x
+	return a.is_horizontal and not b.is_horizontal
+
+func _mirrored(texture: Texture2D) -> Texture2D:
+	var image := texture.get_image()
+	image.flip_x()
+	return ImageTexture.create_from_image(image)
+
+func _select_adjacent_word(step: int) -> void:
+	var unsolved := _ordered_placements.filter(func(placement: CrosswordWordPlacement) -> bool: return not _solved_placements.has(placement))
+	if unsolved.is_empty():
+		return
+	var current_index := unsolved.find(_selected_placement)
+	var next_index := (0 if step > 0 else unsolved.size() - 1) if current_index == -1 else posmod(current_index + step, unsolved.size())
+	var next_placement: CrosswordWordPlacement = unsolved[next_index]
+	_select_placement(next_placement, next_placement.cell_position(_first_open_index(next_placement)))
+	_set_keyboard_shown(false)
+
+func _set_keyboard_shown(is_shown: bool) -> void:
+	keyboard.set_enabled(is_shown and not _is_completed)
+	keyboard_panel.visible = is_shown and not _is_completed
+	hint_frame.visible = not is_shown and not _is_completed
+
+func _set_hint(text: String) -> void:
+	hint_label.text = text
+	hint_line_label.text = text
+	hint_line_scroll.scroll_horizontal = 0
+
+func _on_grid_area_gui_input(event: InputEvent) -> void:
+	var mouse_button := event as InputEventMouseButton
+	if mouse_button != null and mouse_button.pressed and mouse_button.button_index == MOUSE_BUTTON_LEFT:
+		_set_keyboard_shown(false)
 
 func is_placement_solved(placement: CrosswordWordPlacement) -> bool:
 	return _solved_placements.has(placement)
@@ -96,6 +148,7 @@ func _render_grid(placements: Array[CrosswordWordPlacement]) -> void:
 			else:
 				var spacer := Control.new()
 				spacer.custom_minimum_size = CELL_SIZE
+				spacer.mouse_filter = Control.MOUSE_FILTER_IGNORE
 				grid_container.add_child(spacer)
 
 func _create_cell(pos: Vector2i) -> Button:
@@ -136,11 +189,12 @@ func _select_placement(placement: CrosswordWordPlacement, pos: Vector2i) -> void
 	if _locked_cells.has(_cursor_position()):
 		_cursor_index = _first_open_index(placement)
 	var direction := "Horizontal" if placement.is_horizontal else "Vertical"
-	hint_label.text = "(%s) %s" % [direction, placement.word_data.hint]
-	keyboard.set_enabled(true)
+	_set_hint("(%s) %s" % [direction, placement.word_data.hint])
+	_set_keyboard_shown(true)
 	_refresh_colors()
 
 func _move_cursor_to(pos: Vector2i) -> void:
+	_set_keyboard_shown(true)
 	if _locked_cells.has(pos):
 		return
 	_cursor_index = _index_in(_selected_placement, pos)
@@ -295,8 +349,8 @@ func _solve_placement(placement: CrosswordWordPlacement) -> void:
 		_cells[pos].theme = tile_letter_validated_theme
 	if placement == _selected_placement:
 		_selected_placement = null
-		hint_label.text = ""
-		keyboard.set_enabled(false)
+		_set_hint(_default_hint)
+		_set_keyboard_shown(false)
 	_refresh_colors()
 	_play_success_feedback(placement)
 	progress_changed.emit(_solved_placements.size(), _word_count)
@@ -315,6 +369,7 @@ func _finish_if_completed() -> void:
 	if _is_completed or _solved_placements.size() < _word_count:
 		return
 	_is_completed = true
+	_set_keyboard_shown(false)
 	var victory_duration := _play_victory_feedback()
 	await get_tree().create_timer(victory_duration).timeout
 	completed.emit()
