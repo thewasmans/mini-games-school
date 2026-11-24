@@ -1,0 +1,67 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://b4oyktkual7ls"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_j5a4i"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_hfjs3"]
+
+[sub_resource type="Resource" id="Resource_l0wro"]
+script = ExtResource("1_j5a4i")
+question = "Quel élément chimique est au cœur de tous les composés organiques ?"
+choices = Array[String](["Azote.", "Oxygène.", "Carbone.", "Hydrogène."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_yvgc5"]
+script = ExtResource("1_j5a4i")
+question = "Combien de liaisons covalentes un atome de carbone forme-t-il généralement dans les molécules organiques ?"
+choices = Array[String](["Deux.", "Trois.", "Quatre.", "Cinq."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_vp8mm"]
+script = ExtResource("1_j5a4i")
+question = "Quel est le nom IUPAC de l'alcane possédant quatre atomes de carbone ?"
+choices = Array[String](["Propane.", "Butane.", "Pentane.", "Éthane."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ci6te"]
+script = ExtResource("1_j5a4i")
+question = "Quelle formule générale correspond aux alcènes acycliques ?"
+choices = Array[String](["CnH2n+2.", "CnH2n.", "CnH2n-2.", "CnHn."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_gfgl4"]
+script = ExtResource("1_j5a4i")
+question = "Comment qualifie-t-on une chaîne carbonée ne comportant que des liaisons simples ?"
+choices = Array[String](["Insaturée.", "Aromatique.", "Saturée.", "Cyclique."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_4rsaq"]
+script = ExtResource("1_j5a4i")
+question = "Quel groupement fonctionnel est caractéristique des alcools ?"
+choices = Array[String](["-COOH.", "-OH.", "-CHO.", "-CO-."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_hklmc"]
+script = ExtResource("1_j5a4i")
+question = "Quel groupement fonctionnel caractérise les acides carboxyliques ?"
+choices = Array[String](["-OH.", "-CHO.", "-COOH.", "-O-."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_hj1wk"]
+script = ExtResource("1_j5a4i")
+question = "Quelle est la position typique du groupement carbonyle dans une molécule d'aldéhyde ?"
+choices = Array[String](["Au milieu de la chaîne.", "Sur un carbone substitué.", "À l'extrémité de la chaîne.", "Sur un cycle."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_uffbv"]
+script = ExtResource("1_j5a4i")
+question = "Comment nomme-t-on les composés possédant une triple liaison carbone-carbone ?"
+choices = Array[String](["Alcanes.", "Alcènes.", "Alcynes.", "Aromatiques."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_1gb5e"]
+script = ExtResource("1_j5a4i")
+question = "Quelle est la formule brute du benzène ?"
+choices = Array[String](["C6H6.", "C6H12.", "C5H10.", "C6H14."])
+
+[resource]
+script = ExtResource("2_hfjs3")
+questions = Array[ExtResource("1_j5a4i")]([SubResource("Resource_l0wro"), SubResource("Resource_yvgc5"), SubResource("Resource_vp8mm"), SubResource("Resource_ci6te"), SubResource("Resource_gfgl4"), SubResource("Resource_4rsaq"), SubResource("Resource_hklmc"), SubResource("Resource_hj1wk"), SubResource("Resource_uffbv"), SubResource("Resource_1gb5e")])

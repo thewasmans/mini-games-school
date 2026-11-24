@@ -1,0 +1,101 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://3fg3hhhap8ao"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_n7ib3"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_02fpb"]
+
+[sub_resource type="Resource" id="Resource_k355w"]
+script = ExtResource("1_n7ib3")
+question = "Quel terme désigne la production des gamètes mâles ?"
+choices = Array[String](["L'ovogénèse.", "La spermatogénèse.", "L'embryogénèse.", "La mitose."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ow6h5"]
+script = ExtResource("1_n7ib3")
+question = "Quel terme désigne la production des gamètes femelles ?"
+choices = Array[String](["L'ovogénèse.", "La spermatogénèse.", "La mitose.", "La gastrulation."])
+
+[sub_resource type="Resource" id="Resource_4bd1y"]
+script = ExtResource("1_n7ib3")
+question = "Comment qualifie-t-on la division cellulaire spécifique qui permet la formation des gamètes haploïdes ?"
+choices = Array[String](["La mitose.", "La méiose.", "La scissiparité.", "Le bourgeonnement."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_4ppf8"]
+script = ExtResource("1_n7ib3")
+question = "Quelle hormone hypophysaire déclenche l'ovulation au milieu du cycle menstruel ?"
+choices = Array[String](["L'insuline.", "L'hormone lutéinisante (LH).", "La testostérone.", "Le cortisol."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_vff7e"]
+script = ExtResource("1_n7ib3")
+question = "Quel jour du cycle menstruel théorique de 28 jours se produit généralement l'ovulation ?"
+choices = Array[String](["Le 1er jour.", "Le 7e jour.", "Le 14e jour.", "Le 28e jour."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_k4smw"]
+script = ExtResource("1_n7ib3")
+question = "Comment nomme-t-on le corps jaune qui se forme dans l'ovaire après l'ovulation ?"
+choices = Array[String](["Le corps albicans.", "Le follicule de De Graaf.", "Le corps jaune.", "Le zygote."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_v78m0"]
+script = ExtResource("1_n7ib3")
+question = "Quelle hormone est sécrétée principalement par le corps jaune ?"
+choices = Array[String](["La progestérone.", "L'adrénaline.", "L'insuline.", "La thyroxine."])
+
+[sub_resource type="Resource" id="Resource_o0082"]
+script = ExtResource("1_n7ib3")
+question = "Quel est le nombre de chromosomes dans un gamète humain normal (cellule haploïde) ?"
+choices = Array[String](["46 chromosomes.", "23 chromosomes.", "92 chromosomes.", "24 chromosomes."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_c2lh6"]
+script = ExtResource("1_n7ib3")
+question = "Comment appelle-t-on la cellule issue de la fusion d'un spermatozoïde et d'un ovocyte ?"
+choices = Array[String](["Un gamète.", "Un zygote (ou cellule œuf).", "Une cellule somatique.", "Un globule polaire."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_n3s16"]
+script = ExtResource("1_n7ib3")
+question = "Quel moyen de contraception est considéré comme une méthode mécanique (barrière) ?"
+choices = Array[String](["La pilule contraceptive.", "Le préservatif.", "L'implant sous-cutané.", "L'anneau vaginal."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_b5asg"]
+script = ExtResource("1_n7ib3")
+question = "Quel moyen de contraception hormonal agit en bloquant l'ovulation par apport d'hormones de synthèse ?"
+choices = Array[String](["Le préservatif masculin.", "Le diaphragme.", "La pilule contraceptive.", "Le préservatif féminin."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_p0gko"]
+script = ExtResource("1_n7ib3")
+question = "Quelle infection sexuellement transmissible (IST) est causée par un virus attaquant le système immunitaire ?"
+choices = Array[String](["La chlamydiose.", "Le VIH.", "La syphilis.", "La gonorrhée."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_5wjcv"]
+script = ExtResource("1_n7ib3")
+question = "Quelle IST est causée par une bactérie (Treponema pallidum) ?"
+choices = Array[String](["Le VIH.", "L'herpès génital.", "La syphilis.", "L'hépatite B."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_3ns53"]
+script = ExtResource("1_n7ib3")
+question = "Quel rôle principal joue le placenta durant la grossesse ?"
+choices = Array[String](["Protéger contre les radiations solaires uniquement.", "Assurer les échanges nutritifs, respiratoires et excréteurs entre la mère et le fœtus.", "Produire les spermatozoides de l'enfant.", "Digérer les aliments de la mère."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_srw7q"]
+script = ExtResource("1_n7ib3")
+question = "À partir de quel moment de développement in utero l'embryon est-il qualifié de fœtus humain ?"
+choices = Array[String](["Dès la première division cellulaire.", "À partir de la fin du 2e mois de grossesse (8 semaines).", "Le jour de la naissance.", "À la 20e semaine uniquement."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_xk7wb"]
+script = ExtResource("1_n7ib3")
+question = "Quelle glande endocrine sécrète la GnRH qui régule l'axe reproducteur ?"
+choices = Array[String](["L'hypothalamus.", "La thyroïde.", "Le pancréas.", "La surrénale."])
+
+[resource]
+script = ExtResource("2_02fpb")
+questions = Array[ExtResource("1_n7ib3")]([SubResource("Resource_k355w"), SubResource("Resource_ow6h5"), SubResource("Resource_4bd1y"), SubResource("Resource_4ppf8"), SubResource("Resource_vff7e"), SubResource("Resource_k4smw"), SubResource("Resource_v78m0"), SubResource("Resource_o0082"), SubResource("Resource_c2lh6"), SubResource("Resource_n3s16"), SubResource("Resource_b5asg"), SubResource("Resource_p0gko"), SubResource("Resource_5wjcv"), SubResource("Resource_3ns53"), SubResource("Resource_srw7q"), SubResource("Resource_xk7wb")])

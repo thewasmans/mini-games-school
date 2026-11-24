@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://c7o3vahlit3mu"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_e0eje"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_08bux"]
+
+[sub_resource type="Resource" id="Resource_i3ljy"]
+script = ExtResource("1_e0eje")
+text = "Un acide fort se dissocie totalement."
+
+[sub_resource type="Resource" id="Resource_705g2"]
+script = ExtResource("1_e0eje")
+text = "Un acide faible se dissocie partiellement."
+
+[sub_resource type="Resource" id="Resource_v62no"]
+script = ExtResource("1_e0eje")
+text = "La constante Ka mesure la force d'un acide."
+
+[sub_resource type="Resource" id="Resource_rfq8e"]
+script = ExtResource("1_e0eje")
+text = "Le pKa caractérise un couple acide base."
+
+[resource]
+script = ExtResource("2_08bux")
+phrases = Array[ExtResource("1_e0eje")]([SubResource("Resource_i3ljy"), SubResource("Resource_705g2"), SubResource("Resource_v62no"), SubResource("Resource_rfq8e")])

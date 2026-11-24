@@ -1,0 +1,100 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dh7dhq2fitb8f"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_edy2t"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_oquin"]
+
+[sub_resource type="Resource" id="Resource_28kvs"]
+script = ExtResource("1_edy2t")
+word = "DEPHASAGE"
+hint = "Décalage entre deux ondes."
+grid_position = Vector2i(14, 10)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_pxqhe"]
+script = ExtResource("1_edy2t")
+word = "MARCHE"
+hint = "Différence des chemins ondulatoires parcourus par deux ondes."
+grid_position = Vector2i(6, 0)
+
+[sub_resource type="Resource" id="Resource_1a0rg"]
+script = ExtResource("1_edy2t")
+word = "SPECTRE"
+hint = "Partie de la lumière visible comprise entre 400nm (violet) et 800nm (rouge)."
+grid_position = Vector2i(22, 12)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_21q08"]
+script = ExtResource("1_edy2t")
+word = "HAUTEUR"
+hint = "Caractéristique correspondante à la fréquence d'un son."
+grid_position = Vector2i(0, 6)
+
+[sub_resource type="Resource" id="Resource_1id2p"]
+script = ExtResource("1_edy2t")
+word = "NOEUD"
+hint = "Point où l'amplitude de la vibration est minimale."
+grid_position = Vector2i(12, 13)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_djb0j"]
+script = ExtResource("1_edy2t")
+word = "MONOCHROMATIQUE"
+hint = "Onde composée de la même fréquence, d'une seule couleur."
+grid_position = Vector2i(6, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_c2rg1"]
+script = ExtResource("1_edy2t")
+word = "TIMBRE"
+hint = "Caractéristique sonore qui indique sa complexité, la nature de sa source."
+grid_position = Vector2i(8, 4)
+
+[sub_resource type="Resource" id="Resource_7e1nf"]
+script = ExtResource("1_edy2t")
+word = "BATTEMENT"
+hint = "Superposition de deux ondes de fréquences différentes."
+grid_position = Vector2i(16, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_6rvw1"]
+script = ExtResource("1_edy2t")
+word = "ELECTROMAGNETIQUE"
+hint = "Type d'onde capable de se propager dans le vide, comme la lumière."
+grid_position = Vector2i(6, 14)
+
+[sub_resource type="Resource" id="Resource_g78dk"]
+script = ExtResource("1_edy2t")
+word = "STATIONNAIRE"
+hint = "Oscillation locale dans un milieu clos, qui ne se propage pas."
+grid_position = Vector2i(8, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_c2a10"]
+script = ExtResource("1_edy2t")
+word = "VENTRE"
+hint = "Point où l'amplitude de la vibration est maximale."
+grid_position = Vector2i(9, 21)
+
+[sub_resource type="Resource" id="Resource_cvav1"]
+script = ExtResource("1_edy2t")
+word = "ULTRAVIOLET"
+hint = "Rayonnement électromagnétique invisible car la longueur d'onde dépasse le spectre."
+grid_position = Vector2i(10, 12)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_pwsu4"]
+script = ExtResource("1_edy2t")
+word = "INTENSITE"
+hint = "Caractéristique en relation avec l’amplitude du signal, sa force sonore."
+grid_position = Vector2i(18, 12)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_hhass"]
+script = ExtResource("1_edy2t")
+word = "FRANGE"
+hint = "Bande alternativement brillante et obscure, apparaissant lors du phénomène d'interférence d'ondes lumineuses."
+grid_position = Vector2i(14, 8)
+
+[resource]
+script = ExtResource("2_oquin")
+clues = Array[ExtResource("1_edy2t")]([SubResource("Resource_28kvs"), SubResource("Resource_pxqhe"), SubResource("Resource_1a0rg"), SubResource("Resource_21q08"), SubResource("Resource_1id2p"), SubResource("Resource_djb0j"), SubResource("Resource_c2rg1"), SubResource("Resource_7e1nf"), SubResource("Resource_6rvw1"), SubResource("Resource_g78dk"), SubResource("Resource_c2a10"), SubResource("Resource_cvav1"), SubResource("Resource_pwsu4"), SubResource("Resource_hhass")])

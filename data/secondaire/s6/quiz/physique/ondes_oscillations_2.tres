@@ -1,0 +1,101 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://f1jv71v6284u"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_kidqq"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_2jf33"]
+
+[sub_resource type="Resource" id="Resource_te01m"]
+script = ExtResource("1_kidqq")
+question = "Qu’est-ce qu’une période dans un mouvement oscillatoire ?"
+choices = Array[String](["C’est la distance entre deux sommets.", "C’est la durée d’une oscillation complète.", "C’est le nombre d’oscillations par seconde.", "C’est l’amplitude maximale du mouvement."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_06mss"]
+script = ExtResource("1_kidqq")
+question = "Comment définit-on la fréquence d’une onde ?"
+choices = Array[String](["C’est le temps mis pour faire un cycle.", "C’est le nombre de cycles par unité de temps.", "C’est la distance parcourue par l’onde.", "C’est la hauteur maximale de l’onde."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_e6mn1"]
+script = ExtResource("1_kidqq")
+question = "Quelle est l’unité de mesure de la fréquence dans le système international ?"
+choices = Array[String](["Le mètre.", "La seconde.", "Le hertz.", "Le joule."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_0smgx"]
+script = ExtResource("1_kidqq")
+question = "Quelle est la relation mathématique entre la période T et la fréquence f ?"
+choices = Array[String](["La fréquence est égale à la période.", "La fréquence est égale à la période multipliée par deux.", "La fréquence est égale à l’inverse de la période.", "La fréquence est égale à la période au carré."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_e04xq"]
+script = ExtResource("1_kidqq")
+question = "Qu’est-ce que l’amplitude d’une onde ?"
+choices = Array[String](["C’est la distance entre deux crêtes successives.", "C’est le déplacement maximal par rapport à la position d’équilibre.", "C’est la vitesse de propagation de l’onde.", "C’est la durée nécessaire pour parcourir une distance."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_klgdf"]
+script = ExtResource("1_kidqq")
+question = "Qu’est-ce qu’une onde transversale ?"
+choices = Array[String](["C’est une onde où le déplacement est parallèle à la direction de propagation.", "C’est une onde où le déplacement est perpendiculaire à la direction de propagation.", "C’est une onde qui ne transporte pas d’énergie.", "C’est une onde qui se déplace uniquement dans le vide."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_r51y3"]
+script = ExtResource("1_kidqq")
+question = "Qu’est-ce qu’une onde longitudinale ?"
+choices = Array[String](["C’est une onde où le déplacement est parallèle à la direction de propagation.", "C’est une onde où le déplacement est perpendiculaire à la direction de propagation.", "C’est une onde qui ne peut pas se propager dans l’air.", "C’est une onde qui possède une amplitude nulle."])
+
+[sub_resource type="Resource" id="Resource_cnj0e"]
+script = ExtResource("1_kidqq")
+question = "Quelle est la formule qui relie la célérité, la longueur d’onde et la fréquence ?"
+choices = Array[String](["Célérité est égale à longueur d’onde plus fréquence.", "Célérité est égale à longueur d’onde divisée par fréquence.", "Célérité est égale à longueur d’onde multipliée par fréquence.", "Célérité est égale à fréquence divisée par longueur d’onde."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_6s4xq"]
+script = ExtResource("1_kidqq")
+question = "Comment appelle-t-on la distance entre deux points consécutifs en phase ?"
+choices = Array[String](["La période.", "La longueur d’onde.", "L’amplitude.", "La fréquence."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ec6c0"]
+script = ExtResource("1_kidqq")
+question = "Que nécessite obligatoirement une onde mécanique pour se propager ?"
+choices = Array[String](["Un milieu matériel.", "Un vide parfait.", "Une source de lumière.", "Une température très élevée."])
+
+[sub_resource type="Resource" id="Resource_1eqtx"]
+script = ExtResource("1_kidqq")
+question = "Quel type d’onde est une onde sonore ?"
+choices = Array[String](["C’est une onde transversale.", "C’est une onde électromagnétique.", "C’est une onde longitudinale.", "C’est une onde stationnaire uniquement."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_wjm0b"]
+script = ExtResource("1_kidqq")
+question = "Quelle est la vitesse approximative du son dans l’air à température ambiante ?"
+choices = Array[String](["3 mètres par seconde.", "340 mètres par seconde.", "300 000 kilomètres par seconde.", "1000 mètres par seconde."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_g0j2d"]
+script = ExtResource("1_kidqq")
+question = "Que se passe-t-il lors de la réflexion d’une onde sur une surface plane ?"
+choices = Array[String](["L’onde change de nature physique.", "L’onde rebondit sur la surface en changeant de direction.", "L’onde s’arrête immédiatement.", "L’onde augmente sa fréquence."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_o6jvy"]
+script = ExtResource("1_kidqq")
+question = "Qu’est-ce que le phénomène de diffraction ?"
+choices = Array[String](["C’est la déviation d’une onde lors de son passage à travers une petite ouverture.", "C’est l’arrêt total d’une onde par un obstacle.", "C’est la multiplication de la fréquence d’une onde.", "C’est le changement de milieu de propagation."])
+
+[sub_resource type="Resource" id="Resource_jid1s"]
+script = ExtResource("1_kidqq")
+question = "Comment appelle-t-on la superposition de deux ondes ?"
+choices = Array[String](["La réflexion.", "La réfraction.", "L’interférence.", "La diffraction."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_pa3a8"]
+script = ExtResource("1_kidqq")
+question = "Que se passe-t-il lors d’une interférence constructive ?"
+choices = Array[String](["Les ondes s’annulent.", "Les amplitudes des ondes s’ajoutent.", "L’onde change de direction.", "La fréquence est divisée par deux."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_2jf33")
+questions = Array[ExtResource("1_kidqq")]([SubResource("Resource_te01m"), SubResource("Resource_06mss"), SubResource("Resource_e6mn1"), SubResource("Resource_0smgx"), SubResource("Resource_e04xq"), SubResource("Resource_klgdf"), SubResource("Resource_r51y3"), SubResource("Resource_cnj0e"), SubResource("Resource_6s4xq"), SubResource("Resource_ec6c0"), SubResource("Resource_1eqtx"), SubResource("Resource_wjm0b"), SubResource("Resource_g0j2d"), SubResource("Resource_o6jvy"), SubResource("Resource_jid1s"), SubResource("Resource_pa3a8")])

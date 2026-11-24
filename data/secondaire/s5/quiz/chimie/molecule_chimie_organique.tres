@@ -1,0 +1,66 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bvs2q7a1eff0g"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_d6rp6"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_xporj"]
+
+[sub_resource type="Resource" id="Resource_vvb76"]
+script = ExtResource("1_d6rp6")
+question = "Quel type d'isomérie est lié à une différence dans l'enchaînement des atomes de carbone ?"
+choices = Array[String](["Isomérie de chaîne.", "Isomérie de fonction.", "Stéréoisomérie.", "Isomérie de position."])
+
+[sub_resource type="Resource" id="Resource_d8pb7"]
+script = ExtResource("1_d6rp6")
+question = "Quel type de réaction est caractéristique des alcanes ?"
+choices = Array[String](["Addition.", "Substitution.", "Polymérisation.", "Elimination."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_6bnfg"]
+script = ExtResource("1_d6rp6")
+question = "Quel type de réaction est caractéristique des alcènes ?"
+choices = Array[String](["Substitution.", "Oxydation.", "Addition.", "Hydrolyse."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_slosp"]
+script = ExtResource("1_d6rp6")
+question = "Quels sont les réactifs nécessaires pour produire un ester ?"
+choices = Array[String](["Acide et Alcool.", "Alcool et Eau.", "Acide et Alcane.", "Base et Alcène."])
+
+[sub_resource type="Resource" id="Resource_eq3h2"]
+script = ExtResource("1_d6rp6")
+question = "Quelle est la propriété de la partie carbonée (la queue) d'une molécule de savon ?"
+choices = Array[String](["Hydrophile.", "Hydrosoluble.", "Lipophile.", "Polaire."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_r3uqo"]
+script = ExtResource("1_d6rp6")
+question = "Comment appelle-t-on l'unité répétitive de base dans un polymère ?"
+choices = Array[String](["Molécule.", "Monomère.", "Radical.", "Ion."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_l0awh"]
+script = ExtResource("1_d6rp6")
+question = "Quel alcane est le constituant principal du gaz naturel ?"
+choices = Array[String](["Éthane.", "Propane.", "Méthane.", "Butane."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_fxwpt"]
+script = ExtResource("1_d6rp6")
+question = "Quelle règle définit le choix du nom de la chaîne principale en IUPAC ?"
+choices = Array[String](["La plus courte.", "La plus ramifiée.", "La plus longue.", "Celle avec des halogènes."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_4ne1m"]
+script = ExtResource("1_d6rp6")
+question = "Dans quel type d'isomérie observe-t-on des configurations cis et trans ?"
+choices = Array[String](["Isomérie de chaîne.", "Isomérie géométrique.", "Isomérie de fonction.", "Tautomérie."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_jci4t"]
+script = ExtResource("1_d6rp6")
+question = "Où se situe le groupement carbonyle dans une cétone ?"
+choices = Array[String](["À l'extrémité de la chaîne.", "Sur un carbone porteur d'un OH.", "Sur un carbone non terminal.", "Sur un cycle benzénique."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("2_xporj")
+questions = Array[ExtResource("1_d6rp6")]([SubResource("Resource_vvb76"), SubResource("Resource_d8pb7"), SubResource("Resource_6bnfg"), SubResource("Resource_slosp"), SubResource("Resource_eq3h2"), SubResource("Resource_r3uqo"), SubResource("Resource_l0awh"), SubResource("Resource_fxwpt"), SubResource("Resource_4ne1m"), SubResource("Resource_jci4t")])

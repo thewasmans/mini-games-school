@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://bvcarkb4ublx5"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_peol5"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_c161m"]
+
+[sub_resource type="Resource" id="Resource_rwqlm"]
+script = ExtResource("1_peol5")
+text = "Un aimant possède un pôle nord et un pôle sud."
+
+[sub_resource type="Resource" id="Resource_qj384"]
+script = ExtResource("1_peol5")
+text = "Le champ magnétique entoure tout aimant permanent."
+
+[sub_resource type="Resource" id="Resource_2mytj"]
+script = ExtResource("1_peol5")
+text = "Le courant électrique crée un champ magnétique."
+
+[sub_resource type="Resource" id="Resource_jta3o"]
+script = ExtResource("1_peol5")
+text = "L'électroaimant fonctionne grâce au courant."
+
+[sub_resource type="Resource" id="Resource_m800p"]
+script = ExtResource("1_peol5")
+text = "La force de Laplace s'exerce sur un fil parcouru."
+
+[sub_resource type="Resource" id="Resource_3dla1"]
+script = ExtResource("1_peol5")
+text = "Le moteur électrique convertit l'électricité en mouvement."
+
+[resource]
+script = ExtResource("2_c161m")
+phrases = Array[ExtResource("1_peol5")]([SubResource("Resource_rwqlm"), SubResource("Resource_qj384"), SubResource("Resource_2mytj"), SubResource("Resource_jta3o"), SubResource("Resource_m800p"), SubResource("Resource_3dla1")])

@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://co02ildgnlmmw"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_tpsul"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_du2mk"]
+
+[sub_resource type="Resource" id="Resource_eyoer"]
+script = ExtResource("1_tpsul")
+text = "Un phénomène chimique transforme la matière en nouvelles substances."
+
+[sub_resource type="Resource" id="Resource_i3v0r"]
+script = ExtResource("1_tpsul")
+text = "Les réactifs sont consommés tandis que les produits se forment."
+
+[sub_resource type="Resource" id="Resource_ifr4m"]
+script = ExtResource("1_tpsul")
+text = "La masse totale se conserve au cours d'une transformation chimique."
+
+[sub_resource type="Resource" id="Resource_856nh"]
+script = ExtResource("1_tpsul")
+text = "Une équation chimique équilibrée respecte la stœchiométrie."
+
+[sub_resource type="Resource" id="Resource_hw7l5"]
+script = ExtResource("1_tpsul")
+text = "La vitesse de réaction dépend de la concentration et de la température."
+
+[sub_resource type="Resource" id="Resource_tetsl"]
+script = ExtResource("1_tpsul")
+text = "Un catalyseur accélère une réaction chimique sans être consommé."
+
+[sub_resource type="Resource" id="Resource_nxfmi"]
+script = ExtResource("1_tpsul")
+text = "Une réaction exothermique libère de l'énergie thermique."
+
+[sub_resource type="Resource" id="Resource_c6h7q"]
+script = ExtResource("1_tpsul")
+text = "Une réaction endothermique absorbe de l'énergie thermique."
+
+[resource]
+script = ExtResource("2_du2mk")
+phrases = Array[ExtResource("1_tpsul")]([SubResource("Resource_eyoer"), SubResource("Resource_i3v0r"), SubResource("Resource_ifr4m"), SubResource("Resource_856nh"), SubResource("Resource_hw7l5"), SubResource("Resource_tetsl"), SubResource("Resource_nxfmi"), SubResource("Resource_c6h7q")])

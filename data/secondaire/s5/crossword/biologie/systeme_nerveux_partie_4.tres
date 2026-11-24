@@ -1,0 +1,100 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bqi1s4dkve7dx"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_vabrr"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_vaqw1"]
+
+[sub_resource type="Resource" id="Resource_bfs1m"]
+script = ExtResource("1_vabrr")
+word = "SN"
+hint = "Terme qui simplifie le système nerveux."
+grid_position = Vector2i(9, 13)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_y8bw6"]
+script = ExtResource("1_vabrr")
+word = "RETINE"
+hint = "Partie de l'œil où se déroule la phototransduction."
+grid_position = Vector2i(5, 14)
+
+[sub_resource type="Resource" id="Resource_gr2md"]
+script = ExtResource("1_vabrr")
+word = "OSMOSE"
+hint = "Passage de molécules à travers une membrane semi-perméable depuis le milieu hypotonique en solutés vers celui hypertonique."
+grid_position = Vector2i(6, 9)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_47slu"]
+script = ExtResource("1_vabrr")
+word = "GLIE"
+hint = "Sorte de \"glue\" qui aide les neurones à fonctionner."
+grid_position = Vector2i(3, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_g5lei"]
+script = ExtResource("1_vabrr")
+word = "HYPOPHYSE"
+hint = "Petite glande cérébrale impliquée dans des fonctions endocrines et reproductrices."
+grid_position = Vector2i(16, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_jxd0l"]
+script = ExtResource("1_vabrr")
+word = "MIXTE"
+hint = "Type de nerf contenant des fibres sensitives et des fibres motrices."
+grid_position = Vector2i(5, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_xuk8w"]
+script = ExtResource("1_vabrr")
+word = "CIRCONVOLUTIONS"
+hint = "Replis du cerveau lui permettant d'augmenter sa surface."
+grid_position = Vector2i(2, 9)
+
+[sub_resource type="Resource" id="Resource_p1ghx"]
+script = ExtResource("1_vabrr")
+word = "PARALYSIE"
+hint = "Perte partielle ou complète de la motricité."
+grid_position = Vector2i(5, 1)
+
+[sub_resource type="Resource" id="Resource_j6sxn"]
+script = ExtResource("1_vabrr")
+word = "OSCILLATEUR"
+hint = "Dispositif dont la fonction est de produire un signal électrique périodique."
+grid_position = Vector2i(11, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_v2tol"]
+script = ExtResource("1_vabrr")
+word = "DROGUE"
+hint = "Substance addictive qui entraîne une tolérance."
+grid_position = Vector2i(0, 7)
+
+[sub_resource type="Resource" id="Resource_1ax7p"]
+script = ExtResource("1_vabrr")
+word = "SOMMEIL"
+hint = "Fonction permettant au cerveau de consolider sa mémoire et de gérer ses émotions."
+grid_position = Vector2i(4, 11)
+
+[sub_resource type="Resource" id="Resource_e52g4"]
+script = ExtResource("1_vabrr")
+word = "DENDRITE"
+hint = "Zone de réception d'un neurone."
+grid_position = Vector2i(13, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_gbnuo"]
+script = ExtResource("1_vabrr")
+word = "NERF"
+hint = "Faisceau de fibres nerveuses associées à une gaine protectrice et des vaisseaux sanguins."
+grid_position = Vector2i(12, 11)
+
+[sub_resource type="Resource" id="Resource_p772c"]
+script = ExtResource("1_vabrr")
+word = "ADN"
+hint = "Molécule à double brin possédant l'ensemble de l'information génétique."
+grid_position = Vector2i(7, 7)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_vaqw1")
+clues = Array[ExtResource("1_vabrr")]([SubResource("Resource_bfs1m"), SubResource("Resource_y8bw6"), SubResource("Resource_gr2md"), SubResource("Resource_47slu"), SubResource("Resource_g5lei"), SubResource("Resource_jxd0l"), SubResource("Resource_xuk8w"), SubResource("Resource_p1ghx"), SubResource("Resource_j6sxn"), SubResource("Resource_v2tol"), SubResource("Resource_1ax7p"), SubResource("Resource_e52g4"), SubResource("Resource_gbnuo"), SubResource("Resource_p772c")])

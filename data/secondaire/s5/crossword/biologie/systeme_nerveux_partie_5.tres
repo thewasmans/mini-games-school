@@ -1,0 +1,106 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://d2hvbg1u1ijaj"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_0123v"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_ugr45"]
+
+[sub_resource type="Resource" id="Resource_kmn8w"]
+script = ExtResource("1_0123v")
+word = "GRISE"
+hint = "Substance associée à la substance blanche dans le cerveau."
+grid_position = Vector2i(18, 12)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_5ciq1"]
+script = ExtResource("1_0123v")
+word = "SIDA"
+hint = "Dernière stade provoqué par le VIH, aussi appelé syndrome d'immunodéficience acquis."
+grid_position = Vector2i(1, 12)
+
+[sub_resource type="Resource" id="Resource_mysm5"]
+script = ExtResource("1_0123v")
+word = "SMT"
+hint = "Technique médicale qui consiste à stimuler le cerveau grâce à un champ magnétique produit par une bobine."
+grid_position = Vector2i(5, 20)
+
+[sub_resource type="Resource" id="Resource_1hhdb"]
+script = ExtResource("1_0123v")
+word = "MYELINE"
+hint = "Graisse contenue dans la gaine blanchâtre entourant parfois le neurone."
+grid_position = Vector2i(14, 16)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_m5nc0"]
+script = ExtResource("1_0123v")
+word = "LEPRE"
+hint = "Maladie bactérienne chronique qui provoque des taches cutanées rouges sur la peau."
+grid_position = Vector2i(20, 13)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_n4onf"]
+script = ExtResource("1_0123v")
+word = "NEUROTRANSMETTEUR"
+hint = "Molécule de communication induisant une réponse du neurone."
+grid_position = Vector2i(4, 16)
+
+[sub_resource type="Resource" id="Resource_5g788"]
+script = ExtResource("1_0123v")
+word = "MUSCLE"
+hint = "Ensemble de fibres musculaires qui peuvent se contracter."
+grid_position = Vector2i(15, 11)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_mlfad"]
+script = ExtResource("1_0123v")
+word = "PASSIF"
+hint = "Mode de transport d'éléments chimiques ne nécessitant pas d'énergie."
+grid_position = Vector2i(4, 2)
+
+[sub_resource type="Resource" id="Resource_mrd58"]
+script = ExtResource("1_0123v")
+word = "MOTONEURONE"
+hint = "Neurone spécialisé dans les fonctions motrices."
+grid_position = Vector2i(9, 14)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_dwegi"]
+script = ExtResource("1_0123v")
+word = "DOPAMINE"
+hint = "Neurotransmetteur impliqué dans l'état de bien-être d'un sujet."
+grid_position = Vector2i(11, 13)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_gfod3"]
+script = ExtResource("1_0123v")
+word = "AXONE"
+hint = "Partie du neurone où le signal électrique se propage induisant parfois une inversion de charges."
+grid_position = Vector2i(0, 3)
+
+[sub_resource type="Resource" id="Resource_i3d5p"]
+script = ExtResource("1_0123v")
+word = "HYPERPOLARISATION"
+hint = "Période où le neurone atteint une valeur très négative et n'est plus capable de répondre à un signal électrique."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_lyxls"]
+script = ExtResource("1_0123v")
+word = "DEPOLARISATION"
+hint = "Période d'inversion des charges au sein du neurone entrainant la libération de neurotransmetteurs."
+grid_position = Vector2i(7, 10)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_tej25"]
+script = ExtResource("1_0123v")
+word = "ACTIF"
+hint = "Mode de transport d'éléments chimiques faisant intervenir de l'énergie."
+grid_position = Vector2i(4, 8)
+
+[sub_resource type="Resource" id="Resource_8ey8a"]
+script = ExtResource("1_0123v")
+word = "ANION"
+hint = "Elément chimique chargé négativement, comme le Cl-."
+grid_position = Vector2i(1, 6)
+
+[resource]
+script = ExtResource("2_ugr45")
+clues = Array[ExtResource("1_0123v")]([SubResource("Resource_kmn8w"), SubResource("Resource_5ciq1"), SubResource("Resource_mysm5"), SubResource("Resource_1hhdb"), SubResource("Resource_m5nc0"), SubResource("Resource_n4onf"), SubResource("Resource_5g788"), SubResource("Resource_mlfad"), SubResource("Resource_mrd58"), SubResource("Resource_dwegi"), SubResource("Resource_gfod3"), SubResource("Resource_i3d5p"), SubResource("Resource_lyxls"), SubResource("Resource_tej25"), SubResource("Resource_8ey8a")])

@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://bxgduwj6kj8cu"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_l8doa"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_5vpfo"]
+
+[sub_resource type="Resource" id="Resource_244pb"]
+script = ExtResource("1_l8doa")
+text = "Les atomes cherchent à acquérir la configuration d'un gaz rare."
+
+[sub_resource type="Resource" id="Resource_u0q6b"]
+script = ExtResource("1_l8doa")
+text = "La règle du duet et de l'octet guide la formation des liaisons."
+
+[sub_resource type="Resource" id="Resource_sro7m"]
+script = ExtResource("1_l8doa")
+text = "La liaison covalente résulte d'une mise en commun d'électrons."
+
+[sub_resource type="Resource" id="Resource_86cfn"]
+script = ExtResource("1_l8doa")
+text = "La liaison ionique implique un transfert d'électrons entre ions."
+
+[sub_resource type="Resource" id="Resource_2x71c"]
+script = ExtResource("1_l8doa")
+text = "L'électronégativité mesure l'attirance d'un atome pour les électrons."
+
+[sub_resource type="Resource" id="Resource_otskc"]
+script = ExtResource("1_l8doa")
+text = "Une liaison covalente polarisée présente un dipôle électrique."
+
+[sub_resource type="Resource" id="Resource_epiax"]
+script = ExtResource("1_l8doa")
+text = "La représentation de Lewis visualise les doublets liants et non liants."
+
+[sub_resource type="Resource" id="Resource_0v53l"]
+script = ExtResource("1_l8doa")
+text = "Les molécules polaires possèdent un moment dipolaire global non nul."
+
+[resource]
+script = ExtResource("2_5vpfo")
+phrases = Array[ExtResource("1_l8doa")]([SubResource("Resource_244pb"), SubResource("Resource_u0q6b"), SubResource("Resource_sro7m"), SubResource("Resource_86cfn"), SubResource("Resource_2x71c"), SubResource("Resource_otskc"), SubResource("Resource_epiax"), SubResource("Resource_0v53l")])

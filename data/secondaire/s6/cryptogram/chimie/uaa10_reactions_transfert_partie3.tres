@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://chhfb7auwefi4"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_vr1g3"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_lh4o6"]
+
+[sub_resource type="Resource" id="Resource_o2ist"]
+script = ExtResource("1_vr1g3")
+text = "Une oxydoréduction transfère des électrons."
+
+[sub_resource type="Resource" id="Resource_0rr4i"]
+script = ExtResource("1_vr1g3")
+text = "L'oxydant capte des électrons."
+
+[sub_resource type="Resource" id="Resource_fgmax"]
+script = ExtResource("1_vr1g3")
+text = "Le réducteur cède des électrons."
+
+[sub_resource type="Resource" id="Resource_4dnw1"]
+script = ExtResource("1_vr1g3")
+text = "Le nombre d'oxydation indique le degré."
+
+[resource]
+script = ExtResource("2_lh4o6")
+phrases = Array[ExtResource("1_vr1g3")]([SubResource("Resource_o2ist"), SubResource("Resource_0rr4i"), SubResource("Resource_fgmax"), SubResource("Resource_4dnw1")])

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dfe7ks5dq6mbu"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_6r0bx"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_wclw4"]
+
+[sub_resource type="Resource" id="Resource_6hyoy"]
+script = ExtResource("1_6r0bx")
+text = "La deuxième loi de Newton lie force et accélération."
+
+[sub_resource type="Resource" id="Resource_0cu78"]
+script = ExtResource("1_6r0bx")
+text = "L'accélération dépend de la force et de la masse."
+
+[sub_resource type="Resource" id="Resource_028g7"]
+script = ExtResource("1_6r0bx")
+text = "Le travail d'une force dépend du déplacement."
+
+[sub_resource type="Resource" id="Resource_h65q4"]
+script = ExtResource("1_6r0bx")
+text = "L'énergie cinétique est liée à la vitesse."
+
+[sub_resource type="Resource" id="Resource_8183a"]
+script = ExtResource("1_6r0bx")
+text = "L'énergie potentielle dépend de la position."
+
+[sub_resource type="Resource" id="Resource_c5lsl"]
+script = ExtResource("1_6r0bx")
+text = "L'énergie mécanique se conserve en système isolé."
+
+[resource]
+script = ExtResource("2_wclw4")
+phrases = Array[ExtResource("1_6r0bx")]([SubResource("Resource_6hyoy"), SubResource("Resource_0cu78"), SubResource("Resource_028g7"), SubResource("Resource_h65q4"), SubResource("Resource_8183a"), SubResource("Resource_c5lsl")])
