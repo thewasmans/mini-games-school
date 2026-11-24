@@ -26,18 +26,20 @@ const VICTORY_END_DELAY := 0.6
 @export var tile_letter_validated_theme: Theme
 
 var _cells: Dictionary = {}
-var _cell_backgrounds: Dictionary = {}
 var _cell_placements: Dictionary = {}
-var _placement_attempts: Dictionary = {}
+var _letters: Dictionary = {}
+var _locked_cells: Dictionary = {}
+var _solved_placements: Dictionary = {}
 var _selected_placement: CrosswordWordPlacement
-var _current_text: String = ""
+var _hovered_placement: CrosswordWordPlacement
+var _cursor_index: int = 0
 var _word_count: int
-var _solved_count: int = 0
+var _is_completed := false
 
 func initialize(crossword_data: CrosswordData) -> void:
 	var placements := crossword_data.build_placements()
 	_word_count = placements.size()
-	progress_changed.emit(_solved_count, _word_count)
+	progress_changed.emit(0, _word_count)
 	_render_grid(placements)
 	grid_area.resized.connect(_fit_grid_to_area)
 	grid_container.minimum_size_changed.connect(_fit_grid_to_area)
@@ -45,6 +47,9 @@ func initialize(crossword_data: CrosswordData) -> void:
 	keyboard.letter_pressed.connect(_on_letter_pressed)
 	keyboard.erase_pressed.connect(_on_erase_pressed)
 	keyboard.set_enabled(false)
+
+func is_placement_solved(placement: CrosswordWordPlacement) -> bool:
+	return _solved_placements.has(placement)
 
 func _fit_grid_to_area() -> void:
 	var grid_size := grid_container.get_combined_minimum_size()
@@ -103,7 +108,6 @@ func _create_cell(pos: Vector2i) -> Button:
 	cell.mouse_entered.connect(_on_cell_mouse_entered.bind(pos))
 	cell.mouse_exited.connect(_on_cell_mouse_exited.bind(pos))
 	_cells[pos] = cell
-	_cell_backgrounds[pos] = cell
 	return cell
 
 func _apply_letter_color(cell: Button) -> void:
@@ -111,64 +115,99 @@ func _apply_letter_color(cell: Button) -> void:
 		cell.add_theme_color_override(state, Color.WHITE)
 
 func _on_cell_pressed(pos: Vector2i) -> void:
-	var placements: Array = _cell_placements[pos]
-	var next_placement: CrosswordWordPlacement = placements[0]
-	if placements.size() > 1 and _selected_placement in placements:
-		var current_index: int = placements.find(_selected_placement)
-		next_placement = placements[(current_index + 1) % placements.size()]
-	_select_placement(next_placement)
+	var candidates := _unsolved_placements_at(pos)
+	if candidates.is_empty():
+		return
+	if _selected_placement in candidates:
+		if _cursor_position() == pos and candidates.size() > 1:
+			var next_index := (candidates.find(_selected_placement) + 1) % candidates.size()
+			_select_placement(candidates[next_index], pos)
+			return
+		_move_cursor_to(pos)
+		return
+	_select_placement(candidates[0], pos)
 
-func _select_placement(placement: CrosswordWordPlacement) -> void:
-	if _selected_placement != null:
-		_placement_attempts[_selected_placement] = _current_text
-	_clear_selection_color()
+func _unsolved_placements_at(pos: Vector2i) -> Array:
+	return _cell_placements[pos].filter(func(placement: CrosswordWordPlacement) -> bool: return not _solved_placements.has(placement))
+
+func _select_placement(placement: CrosswordWordPlacement, pos: Vector2i) -> void:
 	_selected_placement = placement
-	_current_text = _placement_attempts.get(placement, "")
-	_update_word_cells(_current_text, false)
-	_update_current_cell_color(_current_text.length())
+	_cursor_index = _index_in(placement, pos)
+	if _locked_cells.has(_cursor_position()):
+		_cursor_index = _first_open_index(placement)
 	var direction := "Horizontal" if placement.is_horizontal else "Vertical"
 	hint_label.text = "(%s) %s" % [direction, placement.word_data.hint]
 	keyboard.set_enabled(true)
+	_refresh_colors()
+
+func _move_cursor_to(pos: Vector2i) -> void:
+	if _locked_cells.has(pos):
+		return
+	_cursor_index = _index_in(_selected_placement, pos)
+	_refresh_colors()
+
+func _index_in(placement: CrosswordWordPlacement, pos: Vector2i) -> int:
+	for letter_index in placement.word_data.word.length():
+		if placement.cell_position(letter_index) == pos:
+			return letter_index
+	return 0
+
+func _first_open_index(placement: CrosswordWordPlacement) -> int:
+	var first_unlocked_index := -1
+	for letter_index in placement.word_data.word.length():
+		var pos := placement.cell_position(letter_index)
+		if _locked_cells.has(pos):
+			continue
+		if not _letters.has(pos):
+			return letter_index
+		if first_unlocked_index == -1:
+			first_unlocked_index = letter_index
+	return maxi(first_unlocked_index, 0)
+
+func _next_open_index(from_index: int, step: int) -> int:
+	var letter_index := from_index + step
+	while letter_index >= 0 and letter_index < _selected_placement.word_data.word.length():
+		if not _locked_cells.has(_selected_placement.cell_position(letter_index)):
+			return letter_index
+		letter_index += step
+	return -1
+
+func _cursor_position() -> Vector2i:
+	return _selected_placement.cell_position(_cursor_index)
 
 func _on_cell_mouse_entered(pos: Vector2i) -> void:
-	_set_word_color(_cell_placements[pos][0], HOVER_COLOR)
+	var candidates := _unsolved_placements_at(pos)
+	_hovered_placement = candidates[0] if not candidates.is_empty() else null
+	_refresh_colors()
 
-func _on_cell_mouse_exited(pos: Vector2i) -> void:
-	var placement: CrosswordWordPlacement = _cell_placements[pos][0]
-	if placement == _selected_placement:
-		_update_current_cell_color(_current_text.length())
-	else:
-		_set_word_color(placement, NORMAL_COLOR)
+func _on_cell_mouse_exited(_pos: Vector2i) -> void:
+	_hovered_placement = null
+	_refresh_colors()
+
+func _refresh_colors() -> void:
+	for pos in _cells:
+		_cells[pos].modulate = NORMAL_COLOR
+	if _hovered_placement != null and _hovered_placement != _selected_placement:
+		_set_word_color(_hovered_placement, HOVER_COLOR)
+	if _selected_placement == null:
+		return
+	for letter_index in _selected_placement.word_data.word.length():
+		var pos := _selected_placement.cell_position(letter_index)
+		_cells[pos].modulate = CURRENT_COLOR if letter_index == _cursor_index else SELECTED_COLOR
 
 func _set_word_color(placement: CrosswordWordPlacement, color: Color) -> void:
 	for letter_index in placement.word_data.word.length():
-		var pos := placement.cell_position(letter_index)
-		if _cell_backgrounds.has(pos):
-			_cell_backgrounds[pos].modulate = color
+		_cells[placement.cell_position(letter_index)].modulate = color
 
-func _clear_selection_color() -> void:
-	if _selected_placement == null:
-		return
-	_set_word_color(_selected_placement, NORMAL_COLOR)
-
-func _update_current_cell_color(current_index: int) -> void:
-	for letter_index in _selected_placement.word_data.word.length():
-		var pos := _selected_placement.cell_position(letter_index)
-		if not _cell_backgrounds.has(pos):
-			continue
-		_cell_backgrounds[pos].modulate = CURRENT_COLOR if letter_index == current_index else SELECTED_COLOR
-
-func _update_word_cells(new_text: String, animate: bool = true) -> void:
-	var word := _selected_placement.word_data.word
-	for letter_index in word.length():
-		var pos := _selected_placement.cell_position(letter_index)
-		if not _cells.has(pos):
-			continue
-		var cell: Button = _cells[pos]
-		var letter := new_text[letter_index].to_upper() if letter_index < new_text.length() else ""
-		if animate and letter != "" and cell.text != letter:
-			_animate_letter(cell)
-		cell.text = letter
+func _set_letter(pos: Vector2i, letter: String, animate: bool) -> void:
+	if letter.is_empty():
+		_letters.erase(pos)
+	else:
+		_letters[pos] = letter
+	var cell: Button = _cells[pos]
+	if animate and not letter.is_empty() and cell.text != letter:
+		_animate_letter(cell)
+	cell.text = letter
 
 func _animate_letter(cell: Control) -> void:
 	var tween := UIFeedback.create_tween_for(cell)
@@ -200,43 +239,82 @@ func _play_victory_feedback() -> float:
 	return (max_diagonal - min_diagonal) * VICTORY_WAVE_STAGGER + UIFeedback.POP_DURATION + VICTORY_END_DELAY
 
 func _on_letter_pressed(letter: String) -> void:
-	if _selected_placement == null or _current_text.length() >= _selected_placement.word_data.word.length():
+	if _selected_placement == null:
 		return
-	_current_text += letter
-	_on_current_text_changed()
+	var pos := _cursor_position()
+	if _locked_cells.has(pos):
+		return
+	_set_letter(pos, letter, true)
+	var next_index := _next_open_index(_cursor_index, 1)
+	if next_index != -1:
+		_cursor_index = next_index
+	_refresh_colors()
+	_check_placement(_selected_placement)
 
 func _on_erase_pressed() -> void:
-	if _selected_placement == null or _current_text.is_empty():
+	if _selected_placement == null:
 		return
-	_current_text = _current_text.left(-1)
-	_on_current_text_changed()
+	var pos := _cursor_position()
+	if _letters.has(pos) and not _locked_cells.has(pos):
+		_set_letter(pos, "", false)
+	else:
+		var previous_index := _next_open_index(_cursor_index, -1)
+		if previous_index == -1:
+			return
+		_cursor_index = previous_index
+		_set_letter(_cursor_position(), "", false)
+	_refresh_colors()
 
-func _on_current_text_changed() -> void:
-	_update_word_cells(_current_text)
-	_update_current_cell_color(_current_text.length())
-	if _current_text.length() == _selected_placement.word_data.word.length():
-		_validate_word(_current_text)
+func _typed_word(placement: CrosswordWordPlacement) -> String:
+	var typed := ""
+	for letter_index in placement.word_data.word.length():
+		var pos := placement.cell_position(letter_index)
+		if not _letters.has(pos):
+			return ""
+		typed += _letters[pos]
+	return typed
 
-func _validate_word(submitted_text: String) -> void:
-	if not LetterNormalizer.matches(submitted_text, _selected_placement.word_data.word):
-		_set_word_color(_selected_placement, INCORRECT_COLOR)
-		_play_incorrect_feedback(_selected_placement)
+func _check_placement(placement: CrosswordWordPlacement) -> void:
+	var typed := _typed_word(placement)
+	if typed.is_empty():
 		return
-	_placement_attempts[_selected_placement] = _selected_placement.word_data.word
-	_update_word_cells(_selected_placement.word_data.word, false)
-	_clear_selection_color()
-	for letter_index in _selected_placement.word_data.word.length():
-		var pos := _selected_placement.cell_position(letter_index)
-		if _cells.has(pos):
-			_cells[pos].theme = tile_letter_validated_theme
-	_play_success_feedback(_selected_placement)
-	_selected_placement = null
-	hint_label.text = ""
-	_current_text = ""
-	keyboard.set_enabled(false)
-	_solved_count += 1
-	progress_changed.emit(_solved_count, _word_count)
-	if _solved_count == _word_count:
-		var victory_duration := _play_victory_feedback()
-		await get_tree().create_timer(victory_duration).timeout
-		completed.emit()
+	if not LetterNormalizer.matches(typed, placement.word_data.word):
+		_set_word_color(placement, INCORRECT_COLOR)
+		_play_incorrect_feedback(placement)
+		return
+	_solve_placement(placement)
+	_finish_if_completed()
+
+func _solve_placement(placement: CrosswordWordPlacement) -> void:
+	_solved_placements[placement] = true
+	var word := placement.word_data.word
+	for letter_index in word.length():
+		var pos := placement.cell_position(letter_index)
+		_set_letter(pos, word[letter_index].to_upper(), false)
+		_locked_cells[pos] = true
+		_cells[pos].theme = tile_letter_validated_theme
+	if placement == _selected_placement:
+		_selected_placement = null
+		hint_label.text = ""
+		keyboard.set_enabled(false)
+	_refresh_colors()
+	_play_success_feedback(placement)
+	progress_changed.emit(_solved_placements.size(), _word_count)
+	_solve_words_completed_by_crossings()
+
+func _solve_words_completed_by_crossings() -> void:
+	for placements in _cell_placements.values():
+		for placement: CrosswordWordPlacement in placements:
+			if _solved_placements.has(placement):
+				continue
+			var typed := _typed_word(placement)
+			if not typed.is_empty() and LetterNormalizer.matches(typed, placement.word_data.word):
+				_solve_placement(placement)
+
+func _finish_if_completed() -> void:
+	if _is_completed or _solved_placements.size() < _word_count:
+		return
+	_is_completed = true
+	var victory_duration := _play_victory_feedback()
+	await get_tree().create_timer(victory_duration).timeout
+	completed.emit()
