@@ -24,6 +24,7 @@ const VICTORY_END_DELAY := 0.6
 @export var hint_label: Label
 @export var previous_word_button: TextureButton
 @export var next_word_button: TextureButton
+@export var show_keyboard_button: Button
 @export var keyboard_panel: Control
 @export var hint_line_scroll: ScrollContainer
 @export var hint_line_label: Label
@@ -43,6 +44,7 @@ var _word_count: int
 var _is_completed := false
 var _default_hint: String
 var _ordered_placements: Array[CrosswordWordPlacement] = []
+var _is_peeking_hint := false
 
 func initialize(crossword_data: CrosswordData) -> void:
 	var placements := crossword_data.build_placements()
@@ -61,7 +63,34 @@ func initialize(crossword_data: CrosswordData) -> void:
 	next_word_button.texture_normal = _mirrored(previous_word_button.texture_normal)
 	previous_word_button.pressed.connect(_select_adjacent_word.bind(-1))
 	next_word_button.pressed.connect(_select_adjacent_word.bind(1))
+	keyboard.set_collapse_key_visible(true)
+	keyboard.collapse_pressed.connect(_set_keyboard_shown.bind(false))
+	show_keyboard_button.pressed.connect(_on_show_keyboard_pressed)
+	hint_line_scroll.gui_input.connect(_on_hint_line_gui_input)
 	_set_keyboard_shown(false)
+
+func _on_show_keyboard_pressed() -> void:
+	if _selected_placement == null:
+		_select_adjacent_word(1)
+	_set_keyboard_shown(true)
+
+func _on_hint_line_gui_input(event: InputEvent) -> void:
+	var mouse_button := event as InputEventMouseButton
+	if mouse_button == null or mouse_button.button_index != MOUSE_BUTTON_LEFT or not mouse_button.pressed or _is_completed:
+		return
+	_is_peeking_hint = true
+	keyboard.set_enabled(false)
+	keyboard_panel.visible = false
+	hint_frame.visible = true
+
+func _input(event: InputEvent) -> void:
+	if not _is_peeking_hint:
+		return
+	var mouse_button := event as InputEventMouseButton
+	if mouse_button == null or mouse_button.button_index != MOUSE_BUTTON_LEFT or mouse_button.pressed:
+		return
+	_is_peeking_hint = false
+	_set_keyboard_shown(true)
 
 func _is_before_in_reading_order(a: CrosswordWordPlacement, b: CrosswordWordPlacement) -> bool:
 	if a.start.y != b.start.y:
@@ -89,6 +118,7 @@ func _set_keyboard_shown(is_shown: bool) -> void:
 	keyboard.set_enabled(is_shown and not _is_completed)
 	keyboard_panel.visible = is_shown and not _is_completed
 	hint_frame.visible = not is_shown and not _is_completed
+	show_keyboard_button.visible = hint_frame.visible
 
 func _set_hint(text: String) -> void:
 	hint_label.text = text
