@@ -77,3 +77,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_jvw4b")
 clues = Array[ExtResource("1_7h12m")]([SubResource("Resource_pk1k8"), SubResource("Resource_6wa4i"), SubResource("Resource_bu6d1"), SubResource("Resource_dhqtl"), SubResource("Resource_3kbku"), SubResource("Resource_r3s2w"), SubResource("Resource_ivl05"), SubResource("Resource_vfnms"), SubResource("Resource_rtacb"), SubResource("Resource_2gx4p"), SubResource("Resource_ulgdp")])
+school_year = "S3"
+title = "La nutrition humaine"

@@ -32,3 +32,5 @@ grid_position = Vector2i(1, 0)
 [resource]
 script = ExtResource("2_18ntd")
 clues = Array[ExtResource("1_x2o6h")]([SubResource("Resource_vtlc3"), SubResource("Resource_6xu1r"), SubResource("Resource_6fix3"), SubResource("Resource_htj08")])
+school_year = "P4"
+title = "Le cycle de l'eau"

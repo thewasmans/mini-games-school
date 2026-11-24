@@ -19,3 +19,5 @@ text = "Une espèce nouvelle apparaît lorsque des populations divergent durable
 script = ExtResource("2_7ry5w")
 hidden_letter_ratio = 0.13
 phrases = Array[ExtResource("1_1f8qn")]([SubResource("Resource_6j84w"), SubResource("Resource_cmpnx"), SubResource("Resource_ylky1")])
+school_year = "S2"
+title = "L'évolution du vivant"

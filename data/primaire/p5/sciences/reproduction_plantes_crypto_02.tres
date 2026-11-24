@@ -23,3 +23,5 @@ text = "La dissémination disperse les graines loin de la plante."
 script = ExtResource("2_nihmf")
 hidden_letter_ratio = 0.15
 phrases = Array[ExtResource("1_f31gp")]([SubResource("Resource_6cpcm"), SubResource("Resource_r2ohb"), SubResource("Resource_rh8ot"), SubResource("Resource_oclub")])
+school_year = "P5"
+title = "La reproduction des plantes"

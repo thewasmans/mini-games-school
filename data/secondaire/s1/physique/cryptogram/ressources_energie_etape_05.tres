@@ -27,3 +27,5 @@ text = "L'efficacité énergétique permet d'économiser nos ressources."
 script = ExtResource("2_w6sad")
 hidden_letter_ratio = 0.15
 phrases = Array[ExtResource("1_3dcny")]([SubResource("Resource_jms7r"), SubResource("Resource_48uan"), SubResource("Resource_ls3vh"), SubResource("Resource_elai7"), SubResource("Resource_dfglb")])
+school_year = "S1"
+title = "Ressources et énergie"

@@ -40,3 +40,5 @@ choices = Array[String](["Se dit de la substance qui va être dissoute.", "Se di
 [resource]
 script = ExtResource("2_5lmoo")
 questions = Array[ExtResource("1_veoss")]([SubResource("Resource_3iyiy"), SubResource("Resource_e5ba6"), SubResource("Resource_x18j5"), SubResource("Resource_5dfbn"), SubResource("Resource_p3rue"), SubResource("Resource_8k1kb")])
+school_year = "S1"
+title = "Les mélanges"

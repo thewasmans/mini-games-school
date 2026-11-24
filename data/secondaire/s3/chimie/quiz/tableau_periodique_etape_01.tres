@@ -28,3 +28,5 @@ choices = Array[String](["La famille.", "La période.", "La fréquence.", "Le sy
 [resource]
 script = ExtResource("2_sl1gm")
 questions = Array[ExtResource("1_iydit")]([SubResource("Resource_rhbte"), SubResource("Resource_o608e"), SubResource("Resource_ycxbu"), SubResource("Resource_blx0p")])
+school_year = "S3"
+title = "Le tableau périodique"

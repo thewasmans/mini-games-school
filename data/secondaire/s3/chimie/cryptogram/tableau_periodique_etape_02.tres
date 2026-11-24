@@ -19,3 +19,5 @@ text = "Le modèle de Bohr représente les électrons sur des orbites circulaire
 script = ExtResource("2_4vleh")
 hidden_letter_ratio = 0.13
 phrases = Array[ExtResource("1_6c0f2")]([SubResource("Resource_7vd1d"), SubResource("Resource_3l6iv"), SubResource("Resource_jv7sk")])
+school_year = "S3"
+title = "Le tableau périodique"

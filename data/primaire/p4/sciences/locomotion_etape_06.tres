@@ -43,3 +43,5 @@ hint = "Os situé dans la jambe, derrière le tibia."
 [resource]
 script = ExtResource("2_fffg3")
 clues = Array[ExtResource("1_jjwk4")]([SubResource("Resource_bhux7"), SubResource("Resource_8ghla"), SubResource("Resource_583lf"), SubResource("Resource_ak654"), SubResource("Resource_kk30k"), SubResource("Resource_oghvm")])
+school_year = "P4"
+title = "La locomotion"

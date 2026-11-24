@@ -19,3 +19,5 @@ text = "La sélection naturelle favorise les individus les mieux adaptés à leu
 script = ExtResource("2_2qgvm")
 hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_01jnu")]([SubResource("Resource_tg7u8"), SubResource("Resource_uukc6"), SubResource("Resource_fu5ip")])
+school_year = "S2"
+title = "L'évolution du vivant"

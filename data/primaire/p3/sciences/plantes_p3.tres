@@ -71,3 +71,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_txu7q")
 clues = Array[ExtResource("1_86lpp")]([SubResource("Resource_0eomh"), SubResource("Resource_4v6vp"), SubResource("Resource_c8i6y"), SubResource("Resource_r0hnc"), SubResource("Resource_xsw2i"), SubResource("Resource_eymc4"), SubResource("Resource_60sik"), SubResource("Resource_6wssq"), SubResource("Resource_dojx2"), SubResource("Resource_eficl")])
+school_year = "P3"
+title = "Les plantes"

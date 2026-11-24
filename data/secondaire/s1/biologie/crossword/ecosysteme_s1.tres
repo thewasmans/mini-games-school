@@ -91,3 +91,5 @@ grid_position = Vector2i(5, 16)
 [resource]
 script = ExtResource("2_jb37q")
 clues = Array[ExtResource("1_dk1pg")]([SubResource("Resource_qtr5x"), SubResource("Resource_t53rl"), SubResource("Resource_aado8"), SubResource("Resource_sfg6p"), SubResource("Resource_og61n"), SubResource("Resource_0g3je"), SubResource("Resource_2f2sb"), SubResource("Resource_faclh"), SubResource("Resource_7u02h"), SubResource("Resource_p7uw2"), SubResource("Resource_eobjx"), SubResource("Resource_53uwy"), SubResource("Resource_xwx1n")])
+school_year = "S1"
+title = "Les écosystèmes"

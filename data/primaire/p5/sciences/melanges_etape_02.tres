@@ -44,3 +44,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_isfva")
 clues = Array[ExtResource("1_qfj40")]([SubResource("Resource_6eo7s"), SubResource("Resource_lexjq"), SubResource("Resource_6aere"), SubResource("Resource_hs0fa"), SubResource("Resource_7a4s3"), SubResource("Resource_mes3f")])
+school_year = "P5"
+title = "Les mélanges"

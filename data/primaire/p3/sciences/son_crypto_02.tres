@@ -23,3 +23,5 @@ text = "La loupe agrandit l'image d'un objet."
 script = ExtResource("2_jqkh3")
 hidden_letter_ratio = 0.15
 phrases = Array[ExtResource("1_1jq3o")]([SubResource("Resource_axplf"), SubResource("Resource_bvqb7"), SubResource("Resource_sj8qh"), SubResource("Resource_opuka")])
+school_year = "P3"
+title = "Les sens, le son et la lumière"

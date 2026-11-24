@@ -47,3 +47,5 @@ text = "Chaque citoyen peut agir au quotidien pour préserver la planète."
 [resource]
 script = ExtResource("2_eh1e4")
 phrases = Array[ExtResource("1_3je2x")]([SubResource("Resource_an0k1"), SubResource("Resource_sj8vh"), SubResource("Resource_hupkm"), SubResource("Resource_o2lmc"), SubResource("Resource_nafpa"), SubResource("Resource_3vfto"), SubResource("Resource_4ro2k"), SubResource("Resource_buc4y"), SubResource("Resource_lbmkn"), SubResource("Resource_aw5an")])
+school_year = "S2"
+title = "L'humain et l'environnement"

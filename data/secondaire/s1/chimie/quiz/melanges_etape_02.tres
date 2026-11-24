@@ -38,3 +38,5 @@ choices = Array[String](["D'atomes.", "De cellules.", "D'organes.", "D'espèces.
 [resource]
 script = ExtResource("2_e5c62")
 questions = Array[ExtResource("1_04nbl")]([SubResource("Resource_gurlu"), SubResource("Resource_lnmg5"), SubResource("Resource_inb2s"), SubResource("Resource_m6qy5"), SubResource("Resource_vhiye"), SubResource("Resource_3mc40")])
+school_year = "S1"
+title = "Les mélanges"

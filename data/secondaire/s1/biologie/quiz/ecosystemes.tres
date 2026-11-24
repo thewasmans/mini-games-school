@@ -51,3 +51,5 @@ correct_choice_index = 2
 [resource]
 script = ExtResource("2_ieiap")
 questions = Array[ExtResource("1_jakfe")]([SubResource("Resource_j4do6"), SubResource("Resource_m2hvr"), SubResource("Resource_71kdh"), SubResource("Resource_am0t1"), SubResource("Resource_kbo6q"), SubResource("Resource_4eidk"), SubResource("Resource_iba1v"), SubResource("Resource_s016m")])
+school_year = "S1"
+title = "Les écosystèmes"

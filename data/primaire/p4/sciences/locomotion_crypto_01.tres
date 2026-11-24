@@ -19,3 +19,5 @@ text = "Le fémur est l'os de la cuisse."
 script = ExtResource("2_q6fji")
 hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_dc6m1")]([SubResource("Resource_qsuor"), SubResource("Resource_7y4vx"), SubResource("Resource_7q6gf")])
+school_year = "P4"
+title = "La locomotion"

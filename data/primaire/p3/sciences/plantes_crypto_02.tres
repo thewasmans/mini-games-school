@@ -23,3 +23,5 @@ text = "Le fruit contient les graines de la plante."
 script = ExtResource("2_5brdp")
 hidden_letter_ratio = 0.15
 phrases = Array[ExtResource("1_k6lep")]([SubResource("Resource_8lpkf"), SubResource("Resource_2mu7v"), SubResource("Resource_ly1st"), SubResource("Resource_qslhe")])
+school_year = "P3"
+title = "Les plantes"

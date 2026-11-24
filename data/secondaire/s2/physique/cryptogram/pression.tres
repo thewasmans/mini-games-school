@@ -47,3 +47,5 @@ text = "Les variations de pression influencent la météo et les conditions de v
 [resource]
 script = ExtResource("2_l7vdk")
 phrases = Array[ExtResource("1_qw2q8")]([SubResource("Resource_bo2nd"), SubResource("Resource_dsepn"), SubResource("Resource_my0hq"), SubResource("Resource_2ev4o"), SubResource("Resource_kntsg"), SubResource("Resource_c7s2c"), SubResource("Resource_gtghu"), SubResource("Resource_dcqyq"), SubResource("Resource_rqf0k"), SubResource("Resource_3qc3m")])
+school_year = "S2"
+title = "Forces et pression"

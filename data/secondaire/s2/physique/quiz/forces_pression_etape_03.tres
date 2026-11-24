@@ -33,3 +33,5 @@ choices = Array[String](["Une basse pression.", "Une haute pression.", "Une pres
 [resource]
 script = ExtResource("2_sjuur")
 questions = Array[ExtResource("1_2fqt0")]([SubResource("Resource_ctngj"), SubResource("Resource_3dppl"), SubResource("Resource_yaocc"), SubResource("Resource_ew3ml"), SubResource("Resource_4vvqp")])
+school_year = "S2"
+title = "Forces et pression"

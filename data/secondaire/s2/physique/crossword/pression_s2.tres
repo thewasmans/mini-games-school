@@ -86,3 +86,5 @@ grid_position = Vector2i(17, 11)
 [resource]
 script = ExtResource("2_7l7l7")
 clues = Array[ExtResource("1_j8bvq")]([SubResource("Resource_5vp4a"), SubResource("Resource_cteb8"), SubResource("Resource_spawi"), SubResource("Resource_q3bcf"), SubResource("Resource_imon7"), SubResource("Resource_mtf0l"), SubResource("Resource_v1sl0"), SubResource("Resource_bb1np"), SubResource("Resource_d4pmg"), SubResource("Resource_lniou"), SubResource("Resource_1juev"), SubResource("Resource_5sgvp")])
+school_year = "S2"
+title = "Forces et pression"

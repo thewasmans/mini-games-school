@@ -35,3 +35,5 @@ choices = Array[String](["Oestradiol.", "Dopamine.", "Insuline.", "Testostérone
 [resource]
 script = ExtResource("2_n7y4l")
 questions = Array[ExtResource("1_v5r0w")]([SubResource("Resource_bpjjw"), SubResource("Resource_gxmoj"), SubResource("Resource_vwllo"), SubResource("Resource_7wgou"), SubResource("Resource_4jff0")])
+school_year = "S1"
+title = "La reproduction humaine"

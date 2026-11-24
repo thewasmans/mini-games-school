@@ -43,3 +43,5 @@ hint = "Ensemble de fibres musculaires."
 [resource]
 script = ExtResource("2_0dnpu")
 clues = Array[ExtResource("1_x05mo")]([SubResource("Resource_8etli"), SubResource("Resource_g8rcx"), SubResource("Resource_r48it"), SubResource("Resource_7gyw8"), SubResource("Resource_vt1jc"), SubResource("Resource_6wmq6")])
+school_year = "P4"
+title = "La locomotion"

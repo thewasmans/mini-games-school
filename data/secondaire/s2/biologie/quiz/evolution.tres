@@ -65,3 +65,5 @@ choices = Array[String](["2.", "12.", "1000.", "2000."])
 [resource]
 script = ExtResource("2_81g35")
 questions = Array[ExtResource("1_e2hb7")]([SubResource("Resource_teui1"), SubResource("Resource_1vy7e"), SubResource("Resource_1by2p"), SubResource("Resource_n621s"), SubResource("Resource_ufh0x"), SubResource("Resource_8qmit"), SubResource("Resource_l3sdu"), SubResource("Resource_k10td"), SubResource("Resource_u6qom"), SubResource("Resource_uxauv")])
+school_year = "S2"
+title = "L'évolution du vivant"

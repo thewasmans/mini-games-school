@@ -19,3 +19,5 @@ text = "On peut trier les vivants selon leurs attributs."
 script = ExtResource("2_71dcu")
 hidden_letter_ratio = 0.13
 phrases = Array[ExtResource("1_qlryf")]([SubResource("Resource_wmn3m"), SubResource("Resource_6430i"), SubResource("Resource_40wy8")])
+school_year = "P1"
+title = "Le vivant"

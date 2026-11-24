@@ -19,3 +19,5 @@ text = "Un aliment local est cultivé près de chez nous."
 script = ExtResource("2_a4pei")
 hidden_letter_ratio = 0.13
 phrases = Array[ExtResource("1_carwg")]([SubResource("Resource_4ljnm"), SubResource("Resource_r0den"), SubResource("Resource_8fm6g")])
+school_year = "P1"
+title = "L'alimentation"

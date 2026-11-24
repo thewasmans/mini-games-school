@@ -19,3 +19,5 @@ text = "Le volume est l'espace occupé par un objet."
 script = ExtResource("2_8pc7v")
 hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_eetyr")]([SubResource("Resource_3i0jk"), SubResource("Resource_gpb3f"), SubResource("Resource_o2mtf")])
+school_year = "P5"
+title = "Les mélanges"

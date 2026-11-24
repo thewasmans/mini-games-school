@@ -46,3 +46,5 @@ choices = Array[String](["C'est un corps pur simple.", "C'est un corps pur compo
 [resource]
 script = ExtResource("2_nwn22")
 questions = Array[ExtResource("1_gtj2b")]([SubResource("Resource_k3ain"), SubResource("Resource_kvcgr"), SubResource("Resource_gtgot"), SubResource("Resource_fd2e0"), SubResource("Resource_0edcn"), SubResource("Resource_4i3mp"), SubResource("Resource_7uc24")])
+school_year = "S1"
+title = "Les mélanges"

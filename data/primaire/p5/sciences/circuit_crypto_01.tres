@@ -19,3 +19,5 @@ text = "Quand le circuit est ouvert, le courant ne passe pas."
 script = ExtResource("2_m0so1")
 hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_wbdqh")]([SubResource("Resource_306wm"), SubResource("Resource_p764y"), SubResource("Resource_8h17y")])
+school_year = "P5"
+title = "Les circuits électriques"

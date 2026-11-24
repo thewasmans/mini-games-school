@@ -35,3 +35,5 @@ correct_choice_index = 1
 [resource]
 script = ExtResource("2_kvhau")
 questions = Array[ExtResource("1_1sjr6")]([SubResource("Resource_7yb1g"), SubResource("Resource_m6yjb"), SubResource("Resource_imsgu"), SubResource("Resource_8ifem"), SubResource("Resource_qw0eb")])
+school_year = "S3"
+title = "La nutrition humaine"

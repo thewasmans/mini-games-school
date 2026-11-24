@@ -24,3 +24,5 @@ text = "La pression dans les liquides augmente avec la profondeur."
 script = ExtResource("2_kq7by")
 hidden_letter_ratio = 0.15
 phrases = Array[ExtResource("1_5qin0")]([SubResource("Resource_tdlb2"), SubResource("Resource_nkpfd"), SubResource("Resource_rcrhs"), SubResource("Resource_ir480")])
+school_year = "S2"
+title = "Forces et pression"

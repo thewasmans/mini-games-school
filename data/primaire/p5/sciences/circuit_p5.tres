@@ -60,3 +60,5 @@ grid_position = Vector2i(0, 5)
 [resource]
 script = ExtResource("2_qr3y8")
 clues = Array[ExtResource("1_72w5h")]([SubResource("Resource_7rr3q"), SubResource("Resource_881bq"), SubResource("Resource_p3bif"), SubResource("Resource_2bkbc"), SubResource("Resource_b80tk"), SubResource("Resource_tbmh0"), SubResource("Resource_qskix"), SubResource("Resource_pysbs")])
+school_year = "P5"
+title = "Les circuits électriques"

@@ -39,3 +39,5 @@ choices = Array[String](["C'est la loi des actions réciproques.", "La seconde l
 [resource]
 script = ExtResource("2_i7pon")
 questions = Array[ExtResource("1_d34d1")]([SubResource("Resource_alcw3"), SubResource("Resource_53wec"), SubResource("Resource_dd3pn"), SubResource("Resource_kcl34"), SubResource("Resource_f7lr7"), SubResource("Resource_o0sr7")])
+school_year = "S2"
+title = "Forces et pression"

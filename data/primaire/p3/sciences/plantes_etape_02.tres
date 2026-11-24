@@ -44,3 +44,5 @@ hint = "Arbre de petite taille, ne dépassant pas 10 mètres de haut."
 [resource]
 script = ExtResource("2_mcoj5")
 clues = Array[ExtResource("1_w2cny")]([SubResource("Resource_jxnvj"), SubResource("Resource_fyufq"), SubResource("Resource_tab2u"), SubResource("Resource_5pi3i"), SubResource("Resource_d8k56"), SubResource("Resource_h8re5")])
+school_year = "P3"
+title = "Les plantes"

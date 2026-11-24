@@ -29,3 +29,5 @@ correct_choice_index = 3
 [resource]
 script = ExtResource("2_w58rt")
 questions = Array[ExtResource("1_hoy2a")]([SubResource("Resource_toky1"), SubResource("Resource_7nssb"), SubResource("Resource_g3bj2"), SubResource("Resource_tgsdy")])
+school_year = "S2"
+title = "Atomes et molécules"

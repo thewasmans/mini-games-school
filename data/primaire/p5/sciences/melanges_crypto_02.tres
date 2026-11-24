@@ -23,3 +23,5 @@ text = "Une molécule est formée d'atomes."
 script = ExtResource("2_flyx2")
 hidden_letter_ratio = 0.15
 phrases = Array[ExtResource("1_5kben")]([SubResource("Resource_nnok2"), SubResource("Resource_4n24i"), SubResource("Resource_xbp6v"), SubResource("Resource_cdmxl")])
+school_year = "P5"
+title = "Les mélanges"

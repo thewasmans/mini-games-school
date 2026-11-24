@@ -49,3 +49,5 @@ hint = "Processus de transformation d'énergie sans oxygène réalisé par des b
 [resource]
 script = ExtResource("2_vpqhf")
 clues = Array[ExtResource("1_qtnny")]([SubResource("Resource_vcg7x"), SubResource("Resource_lsfv0"), SubResource("Resource_baiv1"), SubResource("Resource_gq275"), SubResource("Resource_sp58i"), SubResource("Resource_01h31"), SubResource("Resource_irseu")])
+school_year = "S3"
+title = "La nutrition humaine"

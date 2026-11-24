@@ -31,3 +31,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_cug03")
 clues = Array[ExtResource("1_pdlfh")]([SubResource("Resource_q0esp"), SubResource("Resource_bp7w0"), SubResource("Resource_llp8v"), SubResource("Resource_sggv7")])
+school_year = "P6"
+title = "Les systèmes du corps humain"

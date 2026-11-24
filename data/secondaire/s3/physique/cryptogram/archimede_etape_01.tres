@@ -19,3 +19,5 @@ text = "Cette force est égale au poids du volume de fluide déplacé par l'obje
 script = ExtResource("2_oii2w")
 hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_ab8ov")]([SubResource("Resource_8onmb"), SubResource("Resource_ukvr8"), SubResource("Resource_1pylm")])
+school_year = "S3"
+title = "La poussée d'Archimède"

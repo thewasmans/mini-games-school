@@ -31,3 +31,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_vqqi2")
 clues = Array[ExtResource("1_683rr")]([SubResource("Resource_x71ti"), SubResource("Resource_dukfl"), SubResource("Resource_aj2l8"), SubResource("Resource_kngre")])
+school_year = "S2"
+title = "L'évolution du vivant"

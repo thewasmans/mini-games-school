@@ -19,3 +19,5 @@ text = "Le dioxygène est le comburant de la combustion."
 script = ExtResource("2_fqhn5")
 hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_5j0is")]([SubResource("Resource_20qha"), SubResource("Resource_1qm5w"), SubResource("Resource_65si3")])
+school_year = "P6"
+title = "Les transformations de la matière"

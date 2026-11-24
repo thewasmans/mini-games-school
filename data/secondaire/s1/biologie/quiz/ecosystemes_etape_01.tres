@@ -28,3 +28,5 @@ choices = Array[String](["Uniquement les êtres vivants.", "Ensemble d'êtres vi
 [resource]
 script = ExtResource("2_np67b")
 questions = Array[ExtResource("1_8e12d")]([SubResource("Resource_fat8p"), SubResource("Resource_vpnr5"), SubResource("Resource_gwmdy"), SubResource("Resource_bsxyw")])
+school_year = "S1"
+title = "Les écosystèmes"

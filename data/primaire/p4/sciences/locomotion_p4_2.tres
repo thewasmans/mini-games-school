@@ -84,3 +84,5 @@ grid_position = Vector2i(4, 4)
 [resource]
 script = ExtResource("2_8ud63")
 clues = Array[ExtResource("1_ych2n")]([SubResource("Resource_570op"), SubResource("Resource_rbyse"), SubResource("Resource_roqcp"), SubResource("Resource_tqc3l"), SubResource("Resource_rbngc"), SubResource("Resource_fb5sd"), SubResource("Resource_77jty"), SubResource("Resource_w0h2j"), SubResource("Resource_4ofmi"), SubResource("Resource_sj7pe"), SubResource("Resource_tas7x"), SubResource("Resource_f5ixq")])
+school_year = "P4"
+title = "La locomotion"

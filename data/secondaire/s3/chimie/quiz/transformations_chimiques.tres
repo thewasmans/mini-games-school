@@ -49,3 +49,5 @@ correct_choice_index = 1
 [resource]
 script = ExtResource("2_wokkf")
 questions = Array[ExtResource("1_4mplb")]([SubResource("Resource_1t32v"), SubResource("Resource_vcdb2"), SubResource("Resource_btg4t"), SubResource("Resource_mbh36"), SubResource("Resource_1h5od"), SubResource("Resource_yxj05"), SubResource("Resource_mu8x2"), SubResource("Resource_xwlym")])
+school_year = "S3"
+title = "Les transformations chimiques"

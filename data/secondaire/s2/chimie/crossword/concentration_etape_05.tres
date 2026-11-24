@@ -50,3 +50,5 @@ grid_position = Vector2i(0, 2)
 [resource]
 script = ExtResource("2_5gjjb")
 clues = Array[ExtResource("1_5n0vd")]([SubResource("Resource_w6ayy"), SubResource("Resource_vjgfp"), SubResource("Resource_kd777"), SubResource("Resource_5gld2"), SubResource("Resource_5e5k3"), SubResource("Resource_ob0um"), SubResource("Resource_xs0j7")])
+school_year = "S2"
+title = "La concentration massique"

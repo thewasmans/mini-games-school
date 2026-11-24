@@ -40,3 +40,5 @@ correct_choice_index = 3
 [resource]
 script = ExtResource("2_bilko")
 questions = Array[ExtResource("1_fxv47")]([SubResource("Resource_aafif"), SubResource("Resource_wtymn"), SubResource("Resource_8q67q"), SubResource("Resource_hrq0s"), SubResource("Resource_5bqfs"), SubResource("Resource_1nf53")])
+school_year = "S1"
+title = "Ressources et énergie"

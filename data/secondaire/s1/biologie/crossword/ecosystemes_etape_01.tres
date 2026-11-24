@@ -31,3 +31,5 @@ hint = "Milieu physico-chimique dans lequel on y retrouve les êtres vivants."
 [resource]
 script = ExtResource("2_36s6f")
 clues = Array[ExtResource("1_lad5a")]([SubResource("Resource_h655n"), SubResource("Resource_yfaa7"), SubResource("Resource_m0kcg"), SubResource("Resource_u6hsa")])
+school_year = "S1"
+title = "Les écosystèmes"

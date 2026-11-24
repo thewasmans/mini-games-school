@@ -41,3 +41,5 @@ choices = Array[String](["Un circuit où le courant prend différents chemins.",
 [resource]
 script = ExtResource("2_k51yy")
 questions = Array[ExtResource("1_g4hpr")]([SubResource("Resource_vth5p"), SubResource("Resource_bddha"), SubResource("Resource_33rkm"), SubResource("Resource_kd1uh"), SubResource("Resource_mbw7i"), SubResource("Resource_i4yr5")])
+school_year = "S3"
+title = "L'électricité"

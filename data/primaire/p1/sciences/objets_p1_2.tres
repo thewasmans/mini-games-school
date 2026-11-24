@@ -63,3 +63,5 @@ grid_position = Vector2i(3, 7)
 [resource]
 script = ExtResource("2_5mnr6")
 clues = Array[ExtResource("1_5wgyb")]([SubResource("Resource_ps2qn"), SubResource("Resource_0jo43"), SubResource("Resource_mqyqb"), SubResource("Resource_asti7"), SubResource("Resource_8b0cg"), SubResource("Resource_3dcrk"), SubResource("Resource_hxoti"), SubResource("Resource_xvjuj"), SubResource("Resource_wci0k")])
+school_year = "P1"
+title = "Les objets et les forces"

@@ -42,3 +42,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_f5mmv")
 clues = Array[ExtResource("1_c441t")]([SubResource("Resource_amxjq"), SubResource("Resource_e0tpo"), SubResource("Resource_8we0g"), SubResource("Resource_5r2v3"), SubResource("Resource_t81r2"), SubResource("Resource_43dt6")])
+school_year = "S3"
+title = "L'électricité"

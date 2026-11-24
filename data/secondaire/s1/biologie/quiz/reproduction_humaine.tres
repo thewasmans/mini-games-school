@@ -41,3 +41,5 @@ correct_choice_index = 1
 [resource]
 script = ExtResource("2_aiq7h")
 questions = Array[ExtResource("1_f03fb")]([SubResource("Resource_ku1rx"), SubResource("Resource_cgnyq"), SubResource("Resource_k4yy0"), SubResource("Resource_1wls4"), SubResource("Resource_cpt4e"), SubResource("Resource_8gg7p")])
+school_year = "S1"
+title = "La reproduction humaine"

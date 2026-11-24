@@ -29,3 +29,5 @@ correct_choice_index = 3
 [resource]
 script = ExtResource("2_o60sx")
 questions = Array[ExtResource("1_q7pr6")]([SubResource("Resource_tp2b6"), SubResource("Resource_tjq1k"), SubResource("Resource_bybb3"), SubResource("Resource_cqtww")])
+school_year = "S2"
+title = "Forces et pression"

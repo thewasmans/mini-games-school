@@ -19,3 +19,5 @@ text = "L'électricité est dangereuse : il faut se protéger."
 script = ExtResource("2_qqp58")
 hidden_letter_ratio = 0.13
 phrases = Array[ExtResource("1_tedtw")]([SubResource("Resource_1eguo"), SubResource("Resource_1yg80"), SubResource("Resource_0t5cp")])
+school_year = "P2"
+title = "Les appareils électriques"

@@ -31,3 +31,5 @@ grid_position = Vector2i(0, 7)
 [resource]
 script = ExtResource("2_offro")
 clues = Array[ExtResource("1_qbi5e")]([SubResource("Resource_cnuko"), SubResource("Resource_l0nou"), SubResource("Resource_85y2p"), SubResource("Resource_otqd5")])
+school_year = "S1"
+title = "Les écosystèmes"

@@ -38,3 +38,5 @@ grid_position = Vector2i(0, 3)
 [resource]
 script = ExtResource("2_gnwf6")
 clues = Array[ExtResource("1_e6o6u")]([SubResource("Resource_sfv7t"), SubResource("Resource_5lbuk"), SubResource("Resource_7qku3"), SubResource("Resource_j1xpf"), SubResource("Resource_xjpu7")])
+school_year = "S2"
+title = "Atomes et molécules"

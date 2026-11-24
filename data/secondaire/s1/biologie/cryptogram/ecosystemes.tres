@@ -46,3 +46,5 @@ text = "Protéger la nature préserve la biodiversité."
 [resource]
 script = ExtResource("2_yy6f0")
 phrases = Array[ExtResource("1_taqhf")]([SubResource("Resource_2bea4"), SubResource("Resource_wn8b3"), SubResource("Resource_rmoib"), SubResource("Resource_ja7yf"), SubResource("Resource_6531l"), SubResource("Resource_b28sq"), SubResource("Resource_xth16"), SubResource("Resource_tpwiv"), SubResource("Resource_rnpp6"), SubResource("Resource_xvjea")])
+school_year = "S1"
+title = "Les écosystèmes"

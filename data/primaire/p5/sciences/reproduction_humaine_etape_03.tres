@@ -39,3 +39,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_gmyw2")
 clues = Array[ExtResource("1_dce1e")]([SubResource("Resource_gssu7"), SubResource("Resource_6dc6q"), SubResource("Resource_mq8rt"), SubResource("Resource_05m4v"), SubResource("Resource_obfpg")])
+school_year = "P5"
+title = "La reproduction humaine"

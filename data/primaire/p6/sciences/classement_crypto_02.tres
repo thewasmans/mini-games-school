@@ -23,3 +23,5 @@ text = "On classe les animaux selon leurs attributs communs."
 script = ExtResource("2_guo7v")
 hidden_letter_ratio = 0.15
 phrases = Array[ExtResource("1_ili1w")]([SubResource("Resource_spwd7"), SubResource("Resource_hxbuv"), SubResource("Resource_46x24"), SubResource("Resource_pn4os")])
+school_year = "P6"
+title = "Le classement des animaux"

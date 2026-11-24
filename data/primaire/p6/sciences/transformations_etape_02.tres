@@ -45,3 +45,5 @@ grid_position = Vector2i(0, 11)
 [resource]
 script = ExtResource("2_ghljf")
 clues = Array[ExtResource("1_3tnyr")]([SubResource("Resource_g2mh5"), SubResource("Resource_ot2yy"), SubResource("Resource_drs1c"), SubResource("Resource_bqfk5"), SubResource("Resource_36ins"), SubResource("Resource_ykdaq")])
+school_year = "P6"
+title = "Les transformations de la matière"

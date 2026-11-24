@@ -60,3 +60,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_pw0tk")
 clues = Array[ExtResource("1_au24a")]([SubResource("Resource_5vexa"), SubResource("Resource_wrx6d"), SubResource("Resource_xty3x"), SubResource("Resource_5xdc8"), SubResource("Resource_mdchh"), SubResource("Resource_j3bb2"), SubResource("Resource_7ji8l"), SubResource("Resource_6dmug")])
+school_year = "P2"
+title = "Le cycle de vie"

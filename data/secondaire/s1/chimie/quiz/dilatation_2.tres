@@ -81,3 +81,5 @@ correct_choice_index = 1
 [resource]
 script = ExtResource("2_0iap1")
 questions = Array[ExtResource("1_ejdus")]([SubResource("Resource_8lb5p"), SubResource("Resource_3yf0p"), SubResource("Resource_a2aot"), SubResource("Resource_464ko"), SubResource("Resource_4hgbh"), SubResource("Resource_ihjf8"), SubResource("Resource_3u45l"), SubResource("Resource_ko2np"), SubResource("Resource_un63s"), SubResource("Resource_xppkw"), SubResource("Resource_ymytn"), SubResource("Resource_cwti6"), SubResource("Resource_lb28s")])
+school_year = "S1"
+title = "La dilatation"

@@ -25,3 +25,5 @@ text = "Le volume total de la solution est égal au volume de solvant ajouté."
 script = ExtResource("2_woog7")
 hidden_letter_ratio = 0.17
 phrases = Array[ExtResource("1_u5d4y")]([SubResource("Resource_5l325"), SubResource("Resource_6yy5c"), SubResource("Resource_v3uda"), SubResource("Resource_qp0a8")])
+school_year = "S2"
+title = "La concentration massique"

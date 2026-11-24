@@ -19,3 +19,5 @@ text = "L'escargot porte une coquille sur son dos."
 script = ExtResource("2_rvjoq")
 hidden_letter_ratio = 0.08
 phrases = Array[ExtResource("1_sa71y")]([SubResource("Resource_27ovy"), SubResource("Resource_ptxnr"), SubResource("Resource_ccl6x")])
+school_year = "P1"
+title = "Le vivant"

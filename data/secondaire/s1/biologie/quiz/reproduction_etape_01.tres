@@ -23,3 +23,5 @@ choices = Array[String](["Ovaire.", "Testicule.", "Utérus.", "Scrotum."])
 [resource]
 script = ExtResource("2_k5f0s")
 questions = Array[ExtResource("1_lcfbi")]([SubResource("Resource_jhnop"), SubResource("Resource_1gcjn"), SubResource("Resource_p35e6")])
+school_year = "S1"
+title = "La reproduction humaine"

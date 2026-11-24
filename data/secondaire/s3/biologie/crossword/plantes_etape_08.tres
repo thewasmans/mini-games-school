@@ -59,3 +59,5 @@ grid_position = Vector2i(0, 14)
 [resource]
 script = ExtResource("2_kpa7s")
 clues = Array[ExtResource("1_3dcb3")]([SubResource("Resource_7c2hp"), SubResource("Resource_s3gj7"), SubResource("Resource_0mnck"), SubResource("Resource_8rvuk"), SubResource("Resource_8ekdr"), SubResource("Resource_ah1xy"), SubResource("Resource_kx6ul"), SubResource("Resource_41ddf")])
+school_year = "S3"
+title = "La nutrition des plantes"

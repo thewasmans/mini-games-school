@@ -19,3 +19,5 @@ text = "Les nerfs portent les informations jusqu'au cerveau."
 script = ExtResource("2_vajbm")
 hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_s4b88")]([SubResource("Resource_aycop"), SubResource("Resource_2ym04"), SubResource("Resource_rpjl2")])
+school_year = "P3"
+title = "Les sens, le son et la lumière"

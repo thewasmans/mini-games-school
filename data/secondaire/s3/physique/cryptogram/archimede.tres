@@ -46,3 +46,5 @@ text = "L'unité de mesure de la poussée d'Archimède est le newton."
 [resource]
 script = ExtResource("2_1dcpb")
 phrases = Array[ExtResource("1_cbtjh")]([SubResource("Resource_3rfpw"), SubResource("Resource_lx8tb"), SubResource("Resource_xwu6y"), SubResource("Resource_acdlm"), SubResource("Resource_u2nyj"), SubResource("Resource_yykwh"), SubResource("Resource_chhgk"), SubResource("Resource_h7x0f"), SubResource("Resource_toy85"), SubResource("Resource_se846")])
+school_year = "S3"
+title = "La poussée d'Archimède"

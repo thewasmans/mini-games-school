@@ -71,3 +71,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_lgiw0")
 clues = Array[ExtResource("1_qoaa8")]([SubResource("Resource_h633f"), SubResource("Resource_csht4"), SubResource("Resource_u2rx2"), SubResource("Resource_f687y"), SubResource("Resource_b33x3"), SubResource("Resource_tnohu"), SubResource("Resource_vdrti"), SubResource("Resource_u7f31"), SubResource("Resource_1xvnx"), SubResource("Resource_vqwvp")])
+school_year = "S1"
+title = "La dilatation"

@@ -23,3 +23,5 @@ text = "Une eau polluée peut être toxique."
 script = ExtResource("2_8ayw7")
 hidden_letter_ratio = 0.15
 phrases = Array[ExtResource("1_eku7a")]([SubResource("Resource_swfts"), SubResource("Resource_ukgac"), SubResource("Resource_6cwso"), SubResource("Resource_7bnv6")])
+school_year = "P3"
+title = "L'eau"

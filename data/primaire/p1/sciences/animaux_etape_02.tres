@@ -31,3 +31,5 @@ grid_position = Vector2i(0, 4)
 [resource]
 script = ExtResource("2_uvfsd")
 clues = Array[ExtResource("1_bilaq")]([SubResource("Resource_5p4ii"), SubResource("Resource_5j4el"), SubResource("Resource_uset2"), SubResource("Resource_guhbq")])
+school_year = "P1"
+title = "Les animaux et leurs milieux"

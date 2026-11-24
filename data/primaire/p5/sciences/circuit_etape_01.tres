@@ -31,3 +31,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_qnk21")
 clues = Array[ExtResource("1_2ra4r")]([SubResource("Resource_2un26"), SubResource("Resource_5ii6e"), SubResource("Resource_n4app"), SubResource("Resource_8kvef")])
+school_year = "P5"
+title = "Les circuits électriques"

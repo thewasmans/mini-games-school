@@ -19,3 +19,5 @@ text = "La tomate et le concombre poussent au potager."
 script = ExtResource("2_q3nje")
 hidden_letter_ratio = 0.08
 phrases = Array[ExtResource("1_bc882")]([SubResource("Resource_x5xkg"), SubResource("Resource_hwkq4"), SubResource("Resource_5tquk")])
+school_year = "P1"
+title = "L'alimentation"

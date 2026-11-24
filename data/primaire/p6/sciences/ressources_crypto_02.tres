@@ -23,3 +23,5 @@ text = "L'aluminium est un bon conducteur de chaleur."
 script = ExtResource("2_mmo3l")
 hidden_letter_ratio = 0.15
 phrases = Array[ExtResource("1_dmitk")]([SubResource("Resource_kvf17"), SubResource("Resource_ygk8w"), SubResource("Resource_v5yxj"), SubResource("Resource_tmw0u")])
+school_year = "P6"
+title = "Les ressources et l'énergie"

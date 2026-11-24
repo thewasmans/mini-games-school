@@ -65,3 +65,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_gnqd0")
 clues = Array[ExtResource("1_idpor")]([SubResource("Resource_xrhjh"), SubResource("Resource_aylgo"), SubResource("Resource_ja2bv"), SubResource("Resource_esjuf"), SubResource("Resource_r6id4"), SubResource("Resource_poxrl"), SubResource("Resource_yymtf"), SubResource("Resource_m7wmn"), SubResource("Resource_0ip0j")])
+school_year = "S3"
+title = "La poussée d'Archimède"

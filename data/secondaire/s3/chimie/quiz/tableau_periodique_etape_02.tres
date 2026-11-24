@@ -34,3 +34,5 @@ choices = Array[String](["C.", "N.", "K.", "R."])
 [resource]
 script = ExtResource("2_ki0uo")
 questions = Array[ExtResource("1_g0j83")]([SubResource("Resource_7t8w5"), SubResource("Resource_gn4e1"), SubResource("Resource_0koth"), SubResource("Resource_h4vod"), SubResource("Resource_s5gi1")])
+school_year = "S3"
+title = "Le tableau périodique"

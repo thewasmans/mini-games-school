@@ -23,3 +23,5 @@ text = "Certains oiseaux migrent vers des pays chauds en hiver."
 script = ExtResource("2_t36e4")
 hidden_letter_ratio = 0.15
 phrases = Array[ExtResource("1_bdtm1")]([SubResource("Resource_3ehux"), SubResource("Resource_5nqgg"), SubResource("Resource_xffig"), SubResource("Resource_rfrao")])
+school_year = "P4"
+title = "La chaîne alimentaire"

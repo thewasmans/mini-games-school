@@ -46,3 +46,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_np63b")
 clues = Array[ExtResource("1_8dk4r")]([SubResource("Resource_8tkeb"), SubResource("Resource_6cut2"), SubResource("Resource_owcmu"), SubResource("Resource_7217g"), SubResource("Resource_loy5d"), SubResource("Resource_7rxrv")])
+school_year = "P5"
+title = "Le système solaire"

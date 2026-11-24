@@ -45,3 +45,5 @@ grid_position = Vector2i(0, 5)
 [resource]
 script = ExtResource("2_yj0l6")
 clues = Array[ExtResource("1_vrwqc")]([SubResource("Resource_sw5hj"), SubResource("Resource_fuuc8"), SubResource("Resource_572en"), SubResource("Resource_ctq7l"), SubResource("Resource_d20g3"), SubResource("Resource_omhkk")])
+school_year = "S1"
+title = "La dilatation"

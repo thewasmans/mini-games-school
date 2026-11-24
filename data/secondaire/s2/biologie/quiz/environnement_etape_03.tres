@@ -33,3 +33,5 @@ correct_choice_index = 1
 [resource]
 script = ExtResource("2_w65hi")
 questions = Array[ExtResource("1_m3mwf")]([SubResource("Resource_t3ho0"), SubResource("Resource_oruux"), SubResource("Resource_5r266"), SubResource("Resource_e5w8q"), SubResource("Resource_iqmsb")])
+school_year = "S2"
+title = "L'humain et l'environnement"

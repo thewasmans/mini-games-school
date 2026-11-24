@@ -24,3 +24,5 @@ text = "La puissance électrique se calcule en multipliant la tension par l'inte
 script = ExtResource("2_b6t1a")
 hidden_letter_ratio = 0.17
 phrases = Array[ExtResource("1_agnuy")]([SubResource("Resource_mvekq"), SubResource("Resource_t8ot4"), SubResource("Resource_y23l2"), SubResource("Resource_2kpy0")])
+school_year = "S3"
+title = "L'électricité"

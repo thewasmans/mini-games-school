@@ -29,3 +29,5 @@ choices = Array[String](["La puberté.", "L'homosexualité.", "Les variations.",
 [resource]
 script = ExtResource("2_xbj34")
 questions = Array[ExtResource("1_e5b6h")]([SubResource("Resource_fxeof"), SubResource("Resource_gu6vy"), SubResource("Resource_toexp"), SubResource("Resource_dsbei")])
+school_year = "S1"
+title = "La reproduction humaine"

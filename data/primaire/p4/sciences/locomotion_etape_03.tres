@@ -36,3 +36,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_57c8e")
 clues = Array[ExtResource("1_rncoy")]([SubResource("Resource_oghi6"), SubResource("Resource_2f77g"), SubResource("Resource_qsej4"), SubResource("Resource_uu3hv"), SubResource("Resource_ddy7y")])
+school_year = "P4"
+title = "La locomotion"

@@ -19,3 +19,5 @@ text = "Les animaux respirent l'air pour vivre."
 script = ExtResource("2_vdd70")
 hidden_letter_ratio = 0.13
 phrases = Array[ExtResource("1_3qfh6")]([SubResource("Resource_tomn8"), SubResource("Resource_rc2mf"), SubResource("Resource_uotd1")])
+school_year = "P1"
+title = "Les animaux et leurs milieux"

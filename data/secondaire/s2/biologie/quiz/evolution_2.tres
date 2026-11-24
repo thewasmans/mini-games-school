@@ -69,3 +69,5 @@ choices = Array[String](["L'ancêtre commun.", "La lignée pure.", "Les dates.",
 [resource]
 script = ExtResource("2_1tcal")
 questions = Array[ExtResource("1_qdkx3")]([SubResource("Resource_2qaxp"), SubResource("Resource_ik4kw"), SubResource("Resource_ajskf"), SubResource("Resource_jdx5y"), SubResource("Resource_0ekfg"), SubResource("Resource_7ltmj"), SubResource("Resource_k7jyf"), SubResource("Resource_j12fx"), SubResource("Resource_udtbj"), SubResource("Resource_1k4gl"), SubResource("Resource_020uv")])
+school_year = "S2"
+title = "L'évolution du vivant"

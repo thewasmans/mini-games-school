@@ -19,3 +19,5 @@ text = "Le pistil est la partie femelle de la fleur."
 script = ExtResource("2_t6cfn")
 hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_e10xv")]([SubResource("Resource_28m7u"), SubResource("Resource_kv2dp"), SubResource("Resource_18f7h")])
+school_year = "P5"
+title = "La reproduction des plantes"

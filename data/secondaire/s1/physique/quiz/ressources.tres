@@ -54,3 +54,5 @@ choices = Array[String](["Une fission nucléaire.", "Une aimantation.", "Une dé
 [resource]
 script = ExtResource("2_nw22i")
 questions = Array[ExtResource("1_sv51v")]([SubResource("Resource_xf8l3"), SubResource("Resource_aw2jc"), SubResource("Resource_cs1m4"), SubResource("Resource_orbvf"), SubResource("Resource_e7b7d"), SubResource("Resource_cs6xy"), SubResource("Resource_bllsl"), SubResource("Resource_ga6r0"), SubResource("Resource_aahg7")])
+school_year = "S1"
+title = "Ressources et énergie"

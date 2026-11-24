@@ -19,3 +19,5 @@ text = "Un mélange homogène présente un aspect identique partout."
 script = ExtResource("2_lcsu3")
 hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_pf2iq")]([SubResource("Resource_ysfh2"), SubResource("Resource_lgo83"), SubResource("Resource_15twy")])
+school_year = "S1"
+title = "Les mélanges"

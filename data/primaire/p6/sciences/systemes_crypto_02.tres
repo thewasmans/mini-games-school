@@ -23,3 +23,5 @@ text = "Les artères transportent le sang qui part du cœur."
 script = ExtResource("2_27gox")
 hidden_letter_ratio = 0.15
 phrases = Array[ExtResource("1_ocl5b")]([SubResource("Resource_0llyg"), SubResource("Resource_v4ggc"), SubResource("Resource_4r1ys"), SubResource("Resource_f3e4v")])
+school_year = "P6"
+title = "Les systèmes du corps humain"

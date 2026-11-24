@@ -47,3 +47,5 @@ text = "Les végétaux verts sont les principaux producteurs des écosystèmes."
 [resource]
 script = ExtResource("2_06fws")
 phrases = Array[ExtResource("1_kyi40")]([SubResource("Resource_t4bxq"), SubResource("Resource_richp"), SubResource("Resource_4dx8d"), SubResource("Resource_5rr1q"), SubResource("Resource_6j2kt"), SubResource("Resource_r083s"), SubResource("Resource_glh2u"), SubResource("Resource_e1tm1"), SubResource("Resource_s856l"), SubResource("Resource_brgu5")])
+school_year = "S3"
+title = "La nutrition des plantes"

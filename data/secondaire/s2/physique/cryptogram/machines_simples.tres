@@ -47,3 +47,5 @@ text = "Le rapport de transmission caractérise l'efficacité des machines simpl
 [resource]
 script = ExtResource("2_8oxxb")
 phrases = Array[ExtResource("1_wf81n")]([SubResource("Resource_lry0n"), SubResource("Resource_mr5pq"), SubResource("Resource_cbciw"), SubResource("Resource_vsw1n"), SubResource("Resource_biijj"), SubResource("Resource_vjtd3"), SubResource("Resource_wk6u7"), SubResource("Resource_p4vn0"), SubResource("Resource_3dpli"), SubResource("Resource_g6r5d")])
+school_year = "S2"
+title = "Forces et pression"

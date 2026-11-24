@@ -19,3 +19,5 @@ text = "L'évaporation transforme l'eau liquide en vapeur."
 script = ExtResource("2_qhcpt")
 hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_ftavl")]([SubResource("Resource_tma73"), SubResource("Resource_52svc"), SubResource("Resource_aywxu")])
+school_year = "P4"
+title = "Le cycle de l'eau"

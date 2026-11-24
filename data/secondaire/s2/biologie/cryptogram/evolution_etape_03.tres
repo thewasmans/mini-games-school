@@ -23,3 +23,5 @@ text = "Toutes les formes de vie sur Terre partagent des origines communes."
 script = ExtResource("2_y28n7")
 hidden_letter_ratio = 0.17
 phrases = Array[ExtResource("1_u407k")]([SubResource("Resource_6op3v"), SubResource("Resource_rbcwc"), SubResource("Resource_q6i5w"), SubResource("Resource_3e2qi")])
+school_year = "S2"
+title = "L'évolution du vivant"

@@ -23,3 +23,5 @@ text = "Les muscles font bouger les os."
 script = ExtResource("2_1s74n")
 hidden_letter_ratio = 0.15
 phrases = Array[ExtResource("1_1y53y")]([SubResource("Resource_ue8xu"), SubResource("Resource_pj58f"), SubResource("Resource_u5lxn"), SubResource("Resource_hugu4")])
+school_year = "P4"
+title = "La locomotion"

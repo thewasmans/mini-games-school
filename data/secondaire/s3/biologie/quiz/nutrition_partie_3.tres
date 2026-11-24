@@ -95,3 +95,5 @@ correct_choice_index = 1
 [resource]
 script = ExtResource("2_xu30v")
 questions = Array[ExtResource("1_wxbci")]([SubResource("Resource_h7dq3"), SubResource("Resource_jdyio"), SubResource("Resource_7cf2o"), SubResource("Resource_0sigv"), SubResource("Resource_3dshw"), SubResource("Resource_wfq3w"), SubResource("Resource_ghgkh"), SubResource("Resource_6cyjb"), SubResource("Resource_aj0no"), SubResource("Resource_13vld"), SubResource("Resource_pvhcy"), SubResource("Resource_ni6qf"), SubResource("Resource_2j8b7"), SubResource("Resource_kvw5q"), SubResource("Resource_sd7vu")])
+school_year = "S3"
+title = "La nutrition des plantes"

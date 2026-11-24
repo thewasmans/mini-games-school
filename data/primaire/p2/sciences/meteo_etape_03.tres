@@ -38,3 +38,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_sx7cs")
 clues = Array[ExtResource("1_762ys")]([SubResource("Resource_0e5ox"), SubResource("Resource_mwe03"), SubResource("Resource_b70bc"), SubResource("Resource_25ff4"), SubResource("Resource_h64og")])
+school_year = "P2"
+title = "La météo"

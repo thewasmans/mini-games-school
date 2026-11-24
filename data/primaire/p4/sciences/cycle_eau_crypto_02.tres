@@ -23,3 +23,5 @@ text = "Le ruissellement conduit l'eau vers les rivières."
 script = ExtResource("2_6qcj1")
 hidden_letter_ratio = 0.15
 phrases = Array[ExtResource("1_6imbx")]([SubResource("Resource_0dfqv"), SubResource("Resource_c4ua4"), SubResource("Resource_0agja"), SubResource("Resource_g7jut")])
+school_year = "P4"
+title = "Le cycle de l'eau"

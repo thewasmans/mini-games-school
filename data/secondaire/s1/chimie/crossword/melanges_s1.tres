@@ -77,3 +77,5 @@ grid_position = Vector2i(2, 14)
 [resource]
 script = ExtResource("2_j5trp")
 clues = Array[ExtResource("1_76uo7")]([SubResource("Resource_5f5ag"), SubResource("Resource_f5bly"), SubResource("Resource_bh7ng"), SubResource("Resource_g3i7e"), SubResource("Resource_vsups"), SubResource("Resource_wonnt"), SubResource("Resource_00lcd"), SubResource("Resource_lssqe"), SubResource("Resource_syb6q"), SubResource("Resource_hb6qw"), SubResource("Resource_odu6m")])
+school_year = "S1"
+title = "Les mélanges"

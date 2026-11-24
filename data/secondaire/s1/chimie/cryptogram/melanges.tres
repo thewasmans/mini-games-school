@@ -46,3 +46,5 @@ text = "Les méthodes de séparation permettent d'isoler les constituants."
 [resource]
 script = ExtResource("2_vq5tp")
 phrases = Array[ExtResource("1_12rpd")]([SubResource("Resource_6inqe"), SubResource("Resource_mpvus"), SubResource("Resource_0ia3h"), SubResource("Resource_715l2"), SubResource("Resource_eylls"), SubResource("Resource_0saq0"), SubResource("Resource_ulbyk"), SubResource("Resource_oxe0u"), SubResource("Resource_xnbn2"), SubResource("Resource_dlern")])
+school_year = "S1"
+title = "Les mélanges"

@@ -34,3 +34,5 @@ choices = Array[String](["Science qui décrit les phénomènes causés par les c
 [resource]
 script = ExtResource("2_7vc5s")
 questions = Array[ExtResource("1_6djnr")]([SubResource("Resource_8mba1"), SubResource("Resource_cnv5n"), SubResource("Resource_2jo2y"), SubResource("Resource_oiak2"), SubResource("Resource_hfol6")])
+school_year = "S3"
+title = "L'électricité"

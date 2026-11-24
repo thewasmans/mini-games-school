@@ -23,3 +23,5 @@ text = "La Terre fait le tour du Soleil en un an : c'est sa révolution."
 script = ExtResource("2_1tqi4")
 hidden_letter_ratio = 0.15
 phrases = Array[ExtResource("1_8fa7w")]([SubResource("Resource_w3645"), SubResource("Resource_shkiw"), SubResource("Resource_pf3h5"), SubResource("Resource_67n47")])
+school_year = "P5"
+title = "Le système solaire"

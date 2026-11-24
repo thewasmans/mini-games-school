@@ -31,3 +31,5 @@ grid_position = Vector2i(1, 6)
 [resource]
 script = ExtResource("2_uvy0m")
 clues = Array[ExtResource("1_dm66u")]([SubResource("Resource_r57tr"), SubResource("Resource_cok1u"), SubResource("Resource_vrv7h"), SubResource("Resource_eadcb")])
+school_year = "P5"
+title = "Le système solaire"

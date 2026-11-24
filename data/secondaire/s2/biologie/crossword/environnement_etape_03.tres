@@ -40,3 +40,5 @@ grid_position = Vector2i(0, 8)
 [resource]
 script = ExtResource("2_7hf60")
 clues = Array[ExtResource("1_kv7gf")]([SubResource("Resource_p1j1s"), SubResource("Resource_d381c"), SubResource("Resource_e832q"), SubResource("Resource_ubh3s"), SubResource("Resource_s1j3x")])
+school_year = "S2"
+title = "L'humain et l'environnement"

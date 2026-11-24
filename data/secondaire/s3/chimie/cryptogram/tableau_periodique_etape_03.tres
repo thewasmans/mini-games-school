@@ -23,3 +23,5 @@ text = "Chaque élément chimique possède un symbole unique composé d'une ou d
 script = ExtResource("2_sqwrf")
 hidden_letter_ratio = 0.17
 phrases = Array[ExtResource("1_bgohm")]([SubResource("Resource_i5vlh"), SubResource("Resource_yd0ac"), SubResource("Resource_ahgej"), SubResource("Resource_qmffk")])
+school_year = "S3"
+title = "Le tableau périodique"

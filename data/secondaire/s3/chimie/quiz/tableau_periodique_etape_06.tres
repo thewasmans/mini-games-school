@@ -46,3 +46,5 @@ correct_choice_index = 1
 [resource]
 script = ExtResource("2_xd00y")
 questions = Array[ExtResource("1_1cvxb")]([SubResource("Resource_74ksr"), SubResource("Resource_jpu71"), SubResource("Resource_0nuqt"), SubResource("Resource_eeboq"), SubResource("Resource_57e2b"), SubResource("Resource_cticm"), SubResource("Resource_opy5t")])
+school_year = "S3"
+title = "Le tableau périodique"

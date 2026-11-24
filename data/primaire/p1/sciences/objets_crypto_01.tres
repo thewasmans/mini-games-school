@@ -19,3 +19,5 @@ text = "Un aimant peut attirer ou repousser un objet."
 script = ExtResource("2_35gqx")
 hidden_letter_ratio = 0.08
 phrases = Array[ExtResource("1_68fx8")]([SubResource("Resource_25bef"), SubResource("Resource_062ig"), SubResource("Resource_i84uf")])
+school_year = "P1"
+title = "Les objets et les forces"

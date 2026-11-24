@@ -19,3 +19,5 @@ text = "L'omnivore mange des plantes et de la viande."
 script = ExtResource("2_k3ny8")
 hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_jqjc6")]([SubResource("Resource_e3yab"), SubResource("Resource_3sqw3"), SubResource("Resource_e3im3")])
+school_year = "P4"
+title = "La chaîne alimentaire"

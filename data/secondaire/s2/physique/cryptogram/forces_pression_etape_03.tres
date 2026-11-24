@@ -24,3 +24,5 @@ text = "La pression correspond à une force exercée sur une surface."
 script = ExtResource("2_icu4p")
 hidden_letter_ratio = 0.13
 phrases = Array[ExtResource("1_tmse7")]([SubResource("Resource_q0ssa"), SubResource("Resource_o3mo8"), SubResource("Resource_lw3e7"), SubResource("Resource_k4hwx")])
+school_year = "S2"
+title = "Forces et pression"

@@ -71,3 +71,5 @@ grid_position = Vector2i(12, 3)
 [resource]
 script = ExtResource("2_m2wyk")
 clues = Array[ExtResource("1_m7ioo")]([SubResource("Resource_c4wbk"), SubResource("Resource_5y3p3"), SubResource("Resource_0ykp7"), SubResource("Resource_vpohg"), SubResource("Resource_ora5h"), SubResource("Resource_81tdq"), SubResource("Resource_vfpud"), SubResource("Resource_cyrgh"), SubResource("Resource_ojdxf"), SubResource("Resource_yteng")])
+school_year = "P5"
+title = "La reproduction humaine"

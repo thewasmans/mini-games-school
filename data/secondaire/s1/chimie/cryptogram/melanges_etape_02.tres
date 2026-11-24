@@ -19,3 +19,5 @@ text = "La décantation sépare des substances de densités différentes."
 script = ExtResource("2_l5rup")
 hidden_letter_ratio = 0.13
 phrases = Array[ExtResource("1_hckrh")]([SubResource("Resource_srhui"), SubResource("Resource_xul42"), SubResource("Resource_mhui3")])
+school_year = "S1"
+title = "Les mélanges"

@@ -19,3 +19,5 @@ text = "Les consommateurs se nourrissent d'autres êtres."
 script = ExtResource("2_7i2hg")
 hidden_letter_ratio = 0.13
 phrases = Array[ExtResource("1_yr1d0")]([SubResource("Resource_khsb6"), SubResource("Resource_phbue"), SubResource("Resource_ccr3a")])
+school_year = "S1"
+title = "Les écosystèmes"

@@ -97,3 +97,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_yngkc")
 clues = Array[ExtResource("1_7cgah")]([SubResource("Resource_47266"), SubResource("Resource_otwfs"), SubResource("Resource_cc6o4"), SubResource("Resource_2ouk1"), SubResource("Resource_yp7pc"), SubResource("Resource_ydltf"), SubResource("Resource_8kcxk"), SubResource("Resource_jmqrh"), SubResource("Resource_hs2s2"), SubResource("Resource_rivnu"), SubResource("Resource_tw7ai"), SubResource("Resource_0bvt1"), SubResource("Resource_xhp5u"), SubResource("Resource_ecdn6")])
+school_year = "S2"
+title = "L'humain et l'environnement"

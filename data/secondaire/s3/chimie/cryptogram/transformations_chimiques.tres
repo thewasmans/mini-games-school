@@ -46,3 +46,5 @@ text = "Aucun atome ne se crée et aucun atome ne se détruit lors d'une réacti
 [resource]
 script = ExtResource("2_wokkf")
 phrases = Array[ExtResource("1_4mplb")]([SubResource("Resource_1t32v"), SubResource("Resource_vcdb2"), SubResource("Resource_btg4t"), SubResource("Resource_mbh36"), SubResource("Resource_1h5od"), SubResource("Resource_yxj05"), SubResource("Resource_mu8x2"), SubResource("Resource_xwlym"), SubResource("Resource_prrgg"), SubResource("Resource_2y0vi")])
+school_year = "S3"
+title = "Les transformations chimiques"

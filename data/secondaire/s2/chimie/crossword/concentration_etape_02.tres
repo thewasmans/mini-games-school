@@ -40,3 +40,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_fqorc")
 clues = Array[ExtResource("1_o7j0t")]([SubResource("Resource_fwjj1"), SubResource("Resource_x1ckl"), SubResource("Resource_8f6sr"), SubResource("Resource_t31x7"), SubResource("Resource_81nva")])
+school_year = "S2"
+title = "La concentration massique"

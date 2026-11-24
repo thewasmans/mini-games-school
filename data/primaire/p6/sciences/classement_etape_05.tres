@@ -44,3 +44,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_txusi")
 clues = Array[ExtResource("1_nqv47")]([SubResource("Resource_c8lg8"), SubResource("Resource_xv26f"), SubResource("Resource_q6wnn"), SubResource("Resource_qkyy5"), SubResource("Resource_u4ve8"), SubResource("Resource_j0gta")])
+school_year = "P6"
+title = "Le classement des animaux"

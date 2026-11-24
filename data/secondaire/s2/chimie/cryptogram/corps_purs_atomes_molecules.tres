@@ -46,3 +46,5 @@ text = "L'eau est un corps pur composé associant hydrogène et oxygène."
 [resource]
 script = ExtResource("2_kuuoh")
 phrases = Array[ExtResource("1_5yyi3")]([SubResource("Resource_6ifhd"), SubResource("Resource_av0rb"), SubResource("Resource_0w3op"), SubResource("Resource_mm8su"), SubResource("Resource_n5vyr"), SubResource("Resource_15xbo"), SubResource("Resource_rhrbb"), SubResource("Resource_pioq5"), SubResource("Resource_sdw7k"), SubResource("Resource_8vvrl")])
+school_year = "S2"
+title = "Atomes et molécules"

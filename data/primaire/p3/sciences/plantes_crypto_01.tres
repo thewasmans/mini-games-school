@@ -19,3 +19,5 @@ text = "La feuille capte la lumière du Soleil."
 script = ExtResource("2_b11me")
 hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_hrgiw")]([SubResource("Resource_uac0q"), SubResource("Resource_it22x"), SubResource("Resource_s5or7")])
+school_year = "P3"
+title = "Les plantes"

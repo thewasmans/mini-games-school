@@ -47,3 +47,5 @@ text = "Une gestion durable préserve l'avenir des ressources."
 [resource]
 script = ExtResource("2_73u3h")
 phrases = Array[ExtResource("1_umpw5")]([SubResource("Resource_dx1yv"), SubResource("Resource_ig67y"), SubResource("Resource_6f1mj"), SubResource("Resource_r6mps"), SubResource("Resource_4pi3r"), SubResource("Resource_sin20"), SubResource("Resource_wsmd2"), SubResource("Resource_imnos"), SubResource("Resource_broae"), SubResource("Resource_trbhe")])
+school_year = "S1"
+title = "Ressources et énergie"

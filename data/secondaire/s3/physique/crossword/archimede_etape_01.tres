@@ -32,3 +32,5 @@ grid_position = Vector2i(0, 1)
 [resource]
 script = ExtResource("2_v2ync")
 clues = Array[ExtResource("1_2omql")]([SubResource("Resource_afk3g"), SubResource("Resource_xifrv"), SubResource("Resource_831xp"), SubResource("Resource_6ilsd")])
+school_year = "S3"
+title = "La poussée d'Archimède"

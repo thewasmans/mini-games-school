@@ -78,3 +78,5 @@ grid_position = Vector2i(0, 7)
 [resource]
 script = ExtResource("2_s8y1i")
 clues = Array[ExtResource("1_2qwpw")]([SubResource("Resource_v6mka"), SubResource("Resource_3sjxx"), SubResource("Resource_3yd4p"), SubResource("Resource_s2o6u"), SubResource("Resource_ngpjm"), SubResource("Resource_ilbjr"), SubResource("Resource_2o72f"), SubResource("Resource_plhgh"), SubResource("Resource_easq0"), SubResource("Resource_bvb3v"), SubResource("Resource_787tx")])
+school_year = "P4"
+title = "La chaîne alimentaire"

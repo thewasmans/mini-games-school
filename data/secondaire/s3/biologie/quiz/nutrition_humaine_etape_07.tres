@@ -38,3 +38,5 @@ choices = Array[String](["Acheter des produits produits près de chez soi.", "Ac
 [resource]
 script = ExtResource("2_wipk4")
 questions = Array[ExtResource("1_tx5nr")]([SubResource("Resource_67rde"), SubResource("Resource_3vg20"), SubResource("Resource_lk3bd"), SubResource("Resource_vhaj5"), SubResource("Resource_jsjmx"), SubResource("Resource_4gq7w")])
+school_year = "S3"
+title = "La nutrition humaine"

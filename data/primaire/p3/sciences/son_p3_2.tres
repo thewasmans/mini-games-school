@@ -91,3 +91,5 @@ grid_position = Vector2i(14, 9)
 [resource]
 script = ExtResource("2_0w2n6")
 clues = Array[ExtResource("1_5gjqv")]([SubResource("Resource_1uyln"), SubResource("Resource_0vs6p"), SubResource("Resource_71ruu"), SubResource("Resource_jcdvk"), SubResource("Resource_a7ugn"), SubResource("Resource_pwap7"), SubResource("Resource_ljuwx"), SubResource("Resource_cy07s"), SubResource("Resource_4pu5y"), SubResource("Resource_v7r84"), SubResource("Resource_2ox7w"), SubResource("Resource_bh6t7"), SubResource("Resource_p4mjv")])
+school_year = "P3"
+title = "Les sens, le son et la lumière"

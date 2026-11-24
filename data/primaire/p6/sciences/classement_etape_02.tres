@@ -37,3 +37,5 @@ hint = "Groupe d'animaux dans lequel on y retrouve le mille pattes et le chilopo
 [resource]
 script = ExtResource("2_rd72v")
 clues = Array[ExtResource("1_tau17")]([SubResource("Resource_grj3d"), SubResource("Resource_ard4a"), SubResource("Resource_pc3x7"), SubResource("Resource_frrtd"), SubResource("Resource_pymjv")])
+school_year = "P6"
+title = "Le classement des animaux"

@@ -45,3 +45,5 @@ grid_position = Vector2i(2, 0)
 [resource]
 script = ExtResource("2_lijj2")
 clues = Array[ExtResource("1_p7vyf")]([SubResource("Resource_hmrr5"), SubResource("Resource_dcgo8"), SubResource("Resource_5hmwd"), SubResource("Resource_0yqnk"), SubResource("Resource_m1a5c"), SubResource("Resource_ynn57")])
+school_year = "P6"
+title = "Le classement des animaux"

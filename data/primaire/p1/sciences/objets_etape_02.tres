@@ -32,3 +32,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_36pvt")
 clues = Array[ExtResource("1_hg7wu")]([SubResource("Resource_m1mcp"), SubResource("Resource_g1t71"), SubResource("Resource_r0sjs"), SubResource("Resource_sw7lq")])
+school_year = "P1"
+title = "Les objets et les forces"

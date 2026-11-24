@@ -30,3 +30,5 @@ correct_choice_index = 3
 [resource]
 script = ExtResource("2_lgaqs")
 questions = Array[ExtResource("1_6duyh")]([SubResource("Resource_wddnv"), SubResource("Resource_vj4uh"), SubResource("Resource_8xaqc"), SubResource("Resource_i1g0m")])
+school_year = "S2"
+title = "L'évolution du vivant"

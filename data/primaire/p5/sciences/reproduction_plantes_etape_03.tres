@@ -52,3 +52,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_anpbw")
 clues = Array[ExtResource("1_gksar")]([SubResource("Resource_xcmt1"), SubResource("Resource_ni42j"), SubResource("Resource_1gpxt"), SubResource("Resource_xguqk"), SubResource("Resource_msot3"), SubResource("Resource_nhj2y"), SubResource("Resource_jhfch")])
+school_year = "P5"
+title = "La reproduction des plantes"

@@ -19,3 +19,5 @@ text = "Le château d'eau garde une réserve d'eau."
 script = ExtResource("2_86ehl")
 hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_nhecl")]([SubResource("Resource_cneoh"), SubResource("Resource_857pu"), SubResource("Resource_pp3vr")])
+school_year = "P3"
+title = "L'eau"

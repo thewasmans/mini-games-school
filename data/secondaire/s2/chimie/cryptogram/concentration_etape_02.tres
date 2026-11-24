@@ -20,3 +20,5 @@ text = "Une solution saturée ne peut plus dissoudre de soluté supplémentaire.
 script = ExtResource("2_480da")
 hidden_letter_ratio = 0.13
 phrases = Array[ExtResource("1_1turu")]([SubResource("Resource_1gcl5"), SubResource("Resource_pufd3"), SubResource("Resource_k7l32")])
+school_year = "S2"
+title = "La concentration massique"

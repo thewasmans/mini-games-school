@@ -39,3 +39,5 @@ choices = Array[String](["Les légumineuses (lentilles, pois, haricots).", "Le s
 [resource]
 script = ExtResource("2_42imc")
 questions = Array[ExtResource("1_3e6bg")]([SubResource("Resource_xi2qy"), SubResource("Resource_5snn1"), SubResource("Resource_cr7ln"), SubResource("Resource_ulocj"), SubResource("Resource_1en8d"), SubResource("Resource_aqx4i")])
+school_year = "S3"
+title = "La nutrition humaine"

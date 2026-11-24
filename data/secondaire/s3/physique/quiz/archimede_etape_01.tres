@@ -28,3 +28,5 @@ choices = Array[String](["La gravité.", "La poussée d'Archimède.", "Le vent."
 [resource]
 script = ExtResource("2_p8557")
 questions = Array[ExtResource("1_p7iet")]([SubResource("Resource_xpfr4"), SubResource("Resource_xke6p"), SubResource("Resource_evvp6"), SubResource("Resource_l4lx6")])
+school_year = "S3"
+title = "La poussée d'Archimède"

@@ -92,3 +92,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_byjs3")
 clues = Array[ExtResource("1_c4nwc")]([SubResource("Resource_4rovi"), SubResource("Resource_1nebd"), SubResource("Resource_5glpt"), SubResource("Resource_1t7eu"), SubResource("Resource_s1j1e"), SubResource("Resource_qx3me"), SubResource("Resource_vq0sk"), SubResource("Resource_uobkx"), SubResource("Resource_nmh83"), SubResource("Resource_wgcqr"), SubResource("Resource_st211"), SubResource("Resource_d0ulo"), SubResource("Resource_okiix")])
+school_year = "P6"
+title = "Les ressources et l'énergie"

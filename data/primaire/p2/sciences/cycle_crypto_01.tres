@@ -19,3 +19,5 @@ text = "Les animaux ovipares pondent des œufs."
 script = ExtResource("2_mef2x")
 hidden_letter_ratio = 0.08
 phrases = Array[ExtResource("1_lfyyg")]([SubResource("Resource_jhkoi"), SubResource("Resource_fd05v"), SubResource("Resource_xalkp")])
+school_year = "P2"
+title = "Le cycle de vie"

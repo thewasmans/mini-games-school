@@ -37,3 +37,5 @@ grid_position = Vector2i(4, 2)
 [resource]
 script = ExtResource("2_4c8ti")
 clues = Array[ExtResource("1_a3d2a")]([SubResource("Resource_858ln"), SubResource("Resource_g4ge6"), SubResource("Resource_ryjn2"), SubResource("Resource_nyldy"), SubResource("Resource_nnwkt")])
+school_year = "S3"
+title = "Les transformations chimiques"

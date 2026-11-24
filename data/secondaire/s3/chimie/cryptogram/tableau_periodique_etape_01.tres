@@ -19,3 +19,5 @@ text = "Les éléments d'une même colonne possèdent des propriétés chimiques
 script = ExtResource("2_yo7wh")
 hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_xuoes")]([SubResource("Resource_g5nbw"), SubResource("Resource_yrgxm"), SubResource("Resource_bllxf")])
+school_year = "S3"
+title = "Le tableau périodique"

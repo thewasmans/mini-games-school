@@ -34,3 +34,5 @@ correct_choice_index = 1
 [resource]
 script = ExtResource("2_a6r2h")
 questions = Array[ExtResource("1_fxtmy")]([SubResource("Resource_0ywn4"), SubResource("Resource_o6vts"), SubResource("Resource_wvvhy"), SubResource("Resource_6rcje"), SubResource("Resource_wev7i")])
+school_year = "S3"
+title = "La poussée d'Archimède"

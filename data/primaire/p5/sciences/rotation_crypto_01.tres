@@ -19,3 +19,5 @@ text = "Saturne est entourée d'anneaux."
 script = ExtResource("2_nmnyi")
 hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_2jgy1")]([SubResource("Resource_rfmli"), SubResource("Resource_exwon"), SubResource("Resource_e87er")])
+school_year = "P5"
+title = "Le système solaire"

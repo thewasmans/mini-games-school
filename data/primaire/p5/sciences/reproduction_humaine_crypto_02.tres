@@ -23,3 +23,5 @@ text = "Le préservatif protège lors des rapports sexuels."
 script = ExtResource("2_peso0")
 hidden_letter_ratio = 0.15
 phrases = Array[ExtResource("1_hy282")]([SubResource("Resource_lnbs1"), SubResource("Resource_1vecw"), SubResource("Resource_63vgj"), SubResource("Resource_6t1q6")])
+school_year = "P5"
+title = "La reproduction humaine"

@@ -46,3 +46,5 @@ choices = Array[String](["La combustion.", "La convection.", "La conduction.", "
 [resource]
 script = ExtResource("2_qbuq0")
 questions = Array[ExtResource("1_ich02")]([SubResource("Resource_pyf1v"), SubResource("Resource_5xq4w"), SubResource("Resource_mwpnl"), SubResource("Resource_8x78e"), SubResource("Resource_s1ea3"), SubResource("Resource_x6gfq"), SubResource("Resource_o414s")])
+school_year = "S1"
+title = "La dilatation"

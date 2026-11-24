@@ -19,3 +19,5 @@ text = "La météorologie étudie le temps qu'il fait."
 script = ExtResource("2_y1drk")
 hidden_letter_ratio = 0.13
 phrases = Array[ExtResource("1_l804l")]([SubResource("Resource_tgvh2"), SubResource("Resource_6ga4w"), SubResource("Resource_i7bhv")])
+school_year = "P2"
+title = "La météo"

@@ -38,3 +38,5 @@ text = "L'activité physique et une alimentation saine préservent la santé."
 [resource]
 script = ExtResource("2_l8ejl")
 phrases = Array[ExtResource("1_t41ib")]([SubResource("Resource_e5iem"), SubResource("Resource_i03te"), SubResource("Resource_ddl1m"), SubResource("Resource_16m5o"), SubResource("Resource_36gvc"), SubResource("Resource_3clla"), SubResource("Resource_soc2j"), SubResource("Resource_lwsnq")])
+school_year = "S3"
+title = "La nutrition humaine"

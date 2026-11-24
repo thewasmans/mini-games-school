@@ -46,3 +46,5 @@ grid_position = Vector2i(3, 6)
 [resource]
 script = ExtResource("2_h1ihe")
 clues = Array[ExtResource("1_jor1w")]([SubResource("Resource_vo7qa"), SubResource("Resource_8kdv2"), SubResource("Resource_gg3gl"), SubResource("Resource_pl05q"), SubResource("Resource_n3s7n"), SubResource("Resource_6s02c")])
+school_year = "P6"
+title = "Les systèmes du corps humain"

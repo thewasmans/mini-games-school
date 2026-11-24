@@ -45,3 +45,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_o2o2h")
 clues = Array[ExtResource("1_3hio5")]([SubResource("Resource_uh7r7"), SubResource("Resource_ndc11"), SubResource("Resource_ouwb7"), SubResource("Resource_ct3yi"), SubResource("Resource_ehj45"), SubResource("Resource_v8ig8")])
+school_year = "P4"
+title = "La chaîne alimentaire"

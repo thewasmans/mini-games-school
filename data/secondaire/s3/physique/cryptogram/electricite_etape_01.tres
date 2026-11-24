@@ -19,3 +19,5 @@ text = "La tension électrique représente la différence de potentiel entre deu
 script = ExtResource("2_vg5tf")
 hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_ghfu0")]([SubResource("Resource_5ibcl"), SubResource("Resource_wluwx"), SubResource("Resource_evsq0")])
+school_year = "S3"
+title = "L'électricité"

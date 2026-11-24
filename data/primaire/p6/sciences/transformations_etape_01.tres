@@ -33,3 +33,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_u34ao")
 clues = Array[ExtResource("1_7m6t8")]([SubResource("Resource_3a1la"), SubResource("Resource_74ay8"), SubResource("Resource_u6c7r"), SubResource("Resource_wq6dv")])
+school_year = "P6"
+title = "Les transformations de la matière"

@@ -29,3 +29,5 @@ correct_choice_index = 1
 [resource]
 script = ExtResource("2_x3ywu")
 questions = Array[ExtResource("1_mmhgr")]([SubResource("Resource_vf3a4"), SubResource("Resource_68ds4"), SubResource("Resource_obcos"), SubResource("Resource_5wewr")])
+school_year = "S1"
+title = "Les mélanges"

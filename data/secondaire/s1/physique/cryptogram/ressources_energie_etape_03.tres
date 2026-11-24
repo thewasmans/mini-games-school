@@ -23,3 +23,5 @@ text = "L'énergie est nécessaire pour effectuer un travail ou produire de la c
 script = ExtResource("2_ietgd")
 hidden_letter_ratio = 0.12
 phrases = Array[ExtResource("1_2jfco")]([SubResource("Resource_01k8g"), SubResource("Resource_l6l67"), SubResource("Resource_efqwd"), SubResource("Resource_5brff")])
+school_year = "S1"
+title = "Ressources et énergie"

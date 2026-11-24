@@ -23,3 +23,5 @@ text = "Un feu a besoin d'un combustible, d'un comburant et de chaleur."
 script = ExtResource("2_ci8ka")
 hidden_letter_ratio = 0.15
 phrases = Array[ExtResource("1_foqqm")]([SubResource("Resource_o0lhw"), SubResource("Resource_p2nox"), SubResource("Resource_ovpql"), SubResource("Resource_s5via")])
+school_year = "P6"
+title = "Les transformations de la matière"

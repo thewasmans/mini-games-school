@@ -32,3 +32,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_eo0hx")
 clues = Array[ExtResource("1_pgrbn")]([SubResource("Resource_bahb6"), SubResource("Resource_84ulb"), SubResource("Resource_2d8jm"), SubResource("Resource_pcici")])
+school_year = "P1"
+title = "Les animaux et leurs milieux"

@@ -19,3 +19,5 @@ text = "Les insectes ont six pattes."
 script = ExtResource("2_xut7t")
 hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_e3uue")]([SubResource("Resource_7pjdj"), SubResource("Resource_tw2m2"), SubResource("Resource_p0wia")])
+school_year = "P6"
+title = "Le classement des animaux"

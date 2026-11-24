@@ -51,3 +51,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_7iiny")
 clues = Array[ExtResource("1_gfx08")]([SubResource("Resource_ta3b0"), SubResource("Resource_wgc5q"), SubResource("Resource_q6pfh"), SubResource("Resource_td1gn"), SubResource("Resource_j6o7g"), SubResource("Resource_p7jhv"), SubResource("Resource_sruuh")])
+school_year = "S3"
+title = "Le tableau périodique"

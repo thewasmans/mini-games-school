@@ -71,3 +71,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_62mmy")
 clues = Array[ExtResource("1_wxxmw")]([SubResource("Resource_y0yf3"), SubResource("Resource_8r43f"), SubResource("Resource_am7eg"), SubResource("Resource_odo5g"), SubResource("Resource_no5uw"), SubResource("Resource_qi8a5"), SubResource("Resource_rsseq"), SubResource("Resource_ysobg"), SubResource("Resource_vpson"), SubResource("Resource_388jv")])
+school_year = "S2"
+title = "Atomes et molécules"

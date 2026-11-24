@@ -91,3 +91,5 @@ grid_position = Vector2i(4, 5)
 [resource]
 script = ExtResource("2_g5bds")
 clues = Array[ExtResource("1_gmj5i")]([SubResource("Resource_njsc0"), SubResource("Resource_qsvs7"), SubResource("Resource_sf743"), SubResource("Resource_iaobp"), SubResource("Resource_rd51c"), SubResource("Resource_lx6sk"), SubResource("Resource_huv0q"), SubResource("Resource_51h8a"), SubResource("Resource_hhgbf"), SubResource("Resource_l4wvv"), SubResource("Resource_hjscl"), SubResource("Resource_w8yyf"), SubResource("Resource_5hggf")])
+school_year = "P2"
+title = "Les appareils électriques"

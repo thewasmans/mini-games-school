@@ -34,3 +34,5 @@ choices = Array[String](["Abaisser le bon disjoncteur.", "Couper toute l'install
 [resource]
 script = ExtResource("2_6xttk")
 questions = Array[ExtResource("1_qd8ld")]([SubResource("Resource_x3ce7"), SubResource("Resource_gtifm"), SubResource("Resource_i2nl4"), SubResource("Resource_le42g"), SubResource("Resource_kkxmy")])
+school_year = "S3"
+title = "L'électricité"

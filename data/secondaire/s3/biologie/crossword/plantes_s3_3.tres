@@ -86,3 +86,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_ffcnh")
 clues = Array[ExtResource("1_3rpa1")]([SubResource("Resource_2ab3r"), SubResource("Resource_mwske"), SubResource("Resource_0k8ba"), SubResource("Resource_6jxc7"), SubResource("Resource_1w7m7"), SubResource("Resource_ideni"), SubResource("Resource_6m3qa"), SubResource("Resource_jbs08"), SubResource("Resource_50v4u"), SubResource("Resource_an4ox"), SubResource("Resource_ffyo1"), SubResource("Resource_lc76t")])
+school_year = "S3"
+title = "La nutrition des plantes"

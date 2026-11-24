@@ -38,3 +38,5 @@ choices = Array[String](["Anion.", "Cation.", "Anode.", "Électrode."])
 [resource]
 script = ExtResource("2_umb5k")
 questions = Array[ExtResource("1_hbx8i")]([SubResource("Resource_6pyci"), SubResource("Resource_l02ye"), SubResource("Resource_an60h"), SubResource("Resource_wcqh0"), SubResource("Resource_rjks0"), SubResource("Resource_avp5r")])
+school_year = "S3"
+title = "Le tableau périodique"

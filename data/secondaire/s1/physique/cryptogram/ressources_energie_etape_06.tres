@@ -28,3 +28,5 @@ text = "La fusion est le passage de l'état solide à l'état liquide."
 script = ExtResource("2_bl8xi")
 hidden_letter_ratio = 0.15
 phrases = Array[ExtResource("1_jvojt")]([SubResource("Resource_n5ym0"), SubResource("Resource_0pt1j"), SubResource("Resource_1yswf"), SubResource("Resource_7g07d"), SubResource("Resource_g44oi")])
+school_year = "S1"
+title = "Ressources et énergie"

@@ -19,3 +19,5 @@ text = "Les ovaires produisent les ovocytes."
 script = ExtResource("2_xyy8x")
 hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_7wmyh")]([SubResource("Resource_en1e6"), SubResource("Resource_ncg68"), SubResource("Resource_7l6fp")])
+school_year = "P5"
+title = "La reproduction humaine"

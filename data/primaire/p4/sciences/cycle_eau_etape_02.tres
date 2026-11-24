@@ -39,3 +39,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_mol66")
 clues = Array[ExtResource("1_thvbx")]([SubResource("Resource_8koco"), SubResource("Resource_anery"), SubResource("Resource_i1d4x"), SubResource("Resource_fv7ct"), SubResource("Resource_0meho")])
+school_year = "P4"
+title = "Le cycle de l'eau"

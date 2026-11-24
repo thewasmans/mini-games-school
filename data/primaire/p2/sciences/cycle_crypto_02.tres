@@ -19,3 +19,5 @@ text = "Le cycle de la vie recommence avec la reproduction."
 script = ExtResource("2_2i0f5")
 hidden_letter_ratio = 0.13
 phrases = Array[ExtResource("1_a0phq")]([SubResource("Resource_uutkm"), SubResource("Resource_hun6d"), SubResource("Resource_63cax")])
+school_year = "P2"
+title = "Le cycle de vie"

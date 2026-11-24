@@ -19,3 +19,5 @@ text = "Le barrage utilise l'énergie de l'eau en mouvement."
 script = ExtResource("2_h8cxk")
 hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_gvv4n")]([SubResource("Resource_mjaeo"), SubResource("Resource_vfglv"), SubResource("Resource_dyswp")])
+school_year = "P6"
+title = "Les ressources et l'énergie"

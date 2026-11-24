@@ -19,3 +19,5 @@ text = "Les enzymes facilitent la décomposition chimique des aliments."
 script = ExtResource("2_l1pcm")
 hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_hoeth")]([SubResource("Resource_11lym"), SubResource("Resource_rbuv8"), SubResource("Resource_bmg2p")])
+school_year = "S3"
+title = "La nutrition humaine"

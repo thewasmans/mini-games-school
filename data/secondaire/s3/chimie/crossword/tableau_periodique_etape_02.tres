@@ -42,3 +42,5 @@ grid_position = Vector2i(4, 3)
 [resource]
 script = ExtResource("2_llj7a")
 clues = Array[ExtResource("1_r51gm")]([SubResource("Resource_pa5o2"), SubResource("Resource_nmn13"), SubResource("Resource_qeoe2"), SubResource("Resource_rqppr"), SubResource("Resource_nvyhw"), SubResource("Resource_j24bh")])
+school_year = "S3"
+title = "Le tableau périodique"

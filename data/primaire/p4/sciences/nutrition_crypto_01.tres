@@ -19,3 +19,5 @@ text = "L'estomac mélange les aliments avec le suc gastrique."
 script = ExtResource("2_xoy7l")
 hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_3x6fo")]([SubResource("Resource_pqyy8"), SubResource("Resource_2udk8"), SubResource("Resource_vq2fq")])
+school_year = "P4"
+title = "La nutrition"

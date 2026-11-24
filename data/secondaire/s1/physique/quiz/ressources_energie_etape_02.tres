@@ -37,3 +37,5 @@ choices = Array[String](["Fragments de roches.", "Air.", "Eau.", "Poussières d'
 [resource]
 script = ExtResource("2_0kmtu")
 questions = Array[ExtResource("1_fmgbe")]([SubResource("Resource_nt330"), SubResource("Resource_hpu8s"), SubResource("Resource_gur52"), SubResource("Resource_vig8s"), SubResource("Resource_okx0h"), SubResource("Resource_f4uwb")])
+school_year = "S1"
+title = "Ressources et énergie"

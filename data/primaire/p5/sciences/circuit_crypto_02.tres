@@ -23,3 +23,5 @@ text = "Dans un circuit en série, le courant suit un seul chemin."
 script = ExtResource("2_0obgs")
 hidden_letter_ratio = 0.15
 phrases = Array[ExtResource("1_k5tvw")]([SubResource("Resource_4hlnj"), SubResource("Resource_eemni"), SubResource("Resource_iffvl"), SubResource("Resource_rtbaa")])
+school_year = "P5"
+title = "Les circuits électriques"

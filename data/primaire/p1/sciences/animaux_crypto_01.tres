@@ -19,3 +19,5 @@ text = "Les grenouilles vivent près de la mare."
 script = ExtResource("2_rn7a5")
 hidden_letter_ratio = 0.08
 phrases = Array[ExtResource("1_i6fi8")]([SubResource("Resource_is4wn"), SubResource("Resource_gsmmb"), SubResource("Resource_lxs4p")])
+school_year = "P1"
+title = "Les animaux et leurs milieux"

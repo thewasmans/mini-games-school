@@ -39,3 +39,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_vgcqv")
 clues = Array[ExtResource("1_uod2n")]([SubResource("Resource_82rl4"), SubResource("Resource_pa2gh"), SubResource("Resource_umquv"), SubResource("Resource_w410o"), SubResource("Resource_do7ux")])
+school_year = "P3"
+title = "Les sens, le son et la lumière"

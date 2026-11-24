@@ -19,3 +19,5 @@ text = "Sous zéro degré, l'eau devient de la glace."
 script = ExtResource("2_mbmye")
 hidden_letter_ratio = 0.08
 phrases = Array[ExtResource("1_h4sw0")]([SubResource("Resource_0iwio"), SubResource("Resource_73gag"), SubResource("Resource_wwpsb")])
+school_year = "P2"
+title = "La météo"

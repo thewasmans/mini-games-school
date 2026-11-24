@@ -19,3 +19,5 @@ text = "Avant de conclure, on fait un essai."
 script = ExtResource("2_rhuc5")
 hidden_letter_ratio = 0.13
 phrases = Array[ExtResource("1_shbr7")]([SubResource("Resource_vshhj"), SubResource("Resource_5gmka"), SubResource("Resource_2k2o5")])
+school_year = "P1"
+title = "Les objets et les forces"

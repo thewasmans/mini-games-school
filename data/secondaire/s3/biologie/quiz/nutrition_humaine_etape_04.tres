@@ -34,3 +34,5 @@ choices = Array[String](["Mastication et salivation.", "Peristaltisme et absorpt
 [resource]
 script = ExtResource("2_4asql")
 questions = Array[ExtResource("1_800yu")]([SubResource("Resource_vj2gm"), SubResource("Resource_0rfda"), SubResource("Resource_2x6sc"), SubResource("Resource_740j0"), SubResource("Resource_sor5b")])
+school_year = "S3"
+title = "La nutrition humaine"

@@ -19,3 +19,5 @@ text = "La télévision fonctionne avec l'électricité."
 script = ExtResource("2_qyoim")
 hidden_letter_ratio = 0.08
 phrases = Array[ExtResource("1_ngpwm")]([SubResource("Resource_1hur3"), SubResource("Resource_rrb8s"), SubResource("Resource_hcud6")])
+school_year = "P2"
+title = "Les appareils électriques"

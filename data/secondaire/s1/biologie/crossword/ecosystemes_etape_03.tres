@@ -39,3 +39,5 @@ is_horizontal = false
 [resource]
 script = ExtResource("2_ipbl5")
 clues = Array[ExtResource("1_k25ur")]([SubResource("Resource_y2stu"), SubResource("Resource_7tq65"), SubResource("Resource_w335f"), SubResource("Resource_l3shm"), SubResource("Resource_6g8qg")])
+school_year = "S1"
+title = "Les écosystèmes"

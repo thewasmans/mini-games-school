@@ -23,3 +23,5 @@ text = "Le choix responsable implique information et prévention."
 script = ExtResource("2_jgm8d")
 hidden_letter_ratio = 0.17
 phrases = Array[ExtResource("1_63l00")]([SubResource("Resource_7v22d"), SubResource("Resource_y743m"), SubResource("Resource_0benc"), SubResource("Resource_7yeff")])
+school_year = "S1"
+title = "La reproduction humaine"

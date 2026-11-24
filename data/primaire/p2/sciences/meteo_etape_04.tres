@@ -45,3 +45,5 @@ grid_position = Vector2i(2, 2)
 [resource]
 script = ExtResource("2_87sc1")
 clues = Array[ExtResource("1_orqvu")]([SubResource("Resource_pqlq7"), SubResource("Resource_epsf3"), SubResource("Resource_4t2nb"), SubResource("Resource_f64je"), SubResource("Resource_oues2"), SubResource("Resource_0qb6c")])
+school_year = "P2"
+title = "La météo"

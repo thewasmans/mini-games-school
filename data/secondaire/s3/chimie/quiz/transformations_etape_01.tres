@@ -27,3 +27,5 @@ choices = Array[String](["L'énergie minimale pour qu'une réaction se déclench
 [resource]
 script = ExtResource("2_foveu")
 questions = Array[ExtResource("1_g7uoo")]([SubResource("Resource_h8tgp"), SubResource("Resource_xgrg7"), SubResource("Resource_rqpw3"), SubResource("Resource_k6tlo")])
+school_year = "S3"
+title = "Les transformations chimiques"

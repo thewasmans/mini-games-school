@@ -19,3 +19,5 @@ text = "À l'inspiration, l'air entre dans les poumons."
 script = ExtResource("2_6eb4g")
 hidden_letter_ratio = 0.1
 phrases = Array[ExtResource("1_r63pk")]([SubResource("Resource_n6l34"), SubResource("Resource_f1i2m"), SubResource("Resource_vqp3r")])
+school_year = "P6"
+title = "Les systèmes du corps humain"

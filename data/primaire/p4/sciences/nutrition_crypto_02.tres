@@ -23,3 +23,5 @@ text = "Le rectum est la dernière partie du gros intestin."
 script = ExtResource("2_4h7ie")
 hidden_letter_ratio = 0.15
 phrases = Array[ExtResource("1_cii1b")]([SubResource("Resource_y8vtr"), SubResource("Resource_wtke1"), SubResource("Resource_7uksu"), SubResource("Resource_l70tc")])
+school_year = "P4"
+title = "La nutrition"

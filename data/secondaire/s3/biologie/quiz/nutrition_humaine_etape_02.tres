@@ -27,3 +27,5 @@ choices = Array[String](["Le foie.", "L'estomac.", "L'intestin grêle.", "Le gro
 [resource]
 script = ExtResource("2_shrwy")
 questions = Array[ExtResource("1_fwj0c")]([SubResource("Resource_08qt5"), SubResource("Resource_cvrru"), SubResource("Resource_qud3v"), SubResource("Resource_yj4jw")])
+school_year = "S3"
+title = "La nutrition humaine"
