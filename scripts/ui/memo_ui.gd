@@ -15,6 +15,10 @@ const QUESTION_FRAME_MIN_HEIGHT := 110.0
 const QUESTION_FRAME_MAX_HEIGHT := 240.0
 const QUESTION_MIN_FONT_SIZE := 16
 const QUESTION_FONT_STEP := 2
+const CHOICE_MIN_HEIGHT := 68.0
+const CHOICE_MAX_HEIGHT := 104.0
+const CHOICE_TEXT_PADDING := Vector2(4, 8)
+const CHOICE_MIN_FONT_SIZE := 16
 
 @export var question_frame: Control
 @export var question_label: Label
@@ -25,15 +29,19 @@ var _questions: Array[MemoQuestionData] = []
 var _question_index: int = 0
 var _default_image: Texture2D
 var _question_font_size: int
+var _choice_font_size: int
 
 func initialize(memo_data: MemoData) -> void:
 	_questions = memo_data.questions
 	_default_image = image_rect.texture
 	_question_font_size = question_label.get_theme_font_size("font_size")
+	_choice_font_size = choice_buttons[0].get_theme_font_size("font_size")
 	question_label.resized.connect(_fit_question)
 	progress_changed.emit(_question_index, _questions.size())
 	for choice_index in choice_buttons.size():
-		choice_buttons[choice_index].pressed.connect(_on_choice_pressed.bind(choice_index))
+		var button := choice_buttons[choice_index]
+		button.pressed.connect(_on_choice_pressed.bind(choice_index))
+		button.resized.connect(_fit_choice.bind(button))
 	_show_question()
 
 func _show_question() -> void:
@@ -44,6 +52,7 @@ func _show_question() -> void:
 	for choice_index in choice_buttons.size():
 		var button := choice_buttons[choice_index]
 		button.text = question_data.choices[choice_index]
+		_fit_choice(button)
 		button.disabled = false
 		button.modulate = Color.WHITE
 		UIFeedback.appear(button, choice_index * APPEAR_STAGGER)
@@ -62,6 +71,21 @@ func _fit_question() -> void:
 		text_height = _question_text_height(font, text_width, font_size)
 	question_label.add_theme_font_size_override("font_size", font_size)
 	question_frame.custom_minimum_size.y = clampf(text_height + vertical_padding, QUESTION_FRAME_MIN_HEIGHT, QUESTION_FRAME_MAX_HEIGHT)
+
+func _fit_choice(button: Button) -> void:
+	var style_margins := button.get_theme_stylebox("normal").get_minimum_size()
+	var text_width := button.size.x - style_margins.x - CHOICE_TEXT_PADDING.x
+	if text_width <= 0.0:
+		return
+	var font := button.get_theme_font("font")
+	var vertical_padding := style_margins.y + CHOICE_TEXT_PADDING.y
+	var font_size := _choice_font_size
+	var text_height := font.get_multiline_string_size(button.text, HORIZONTAL_ALIGNMENT_CENTER, text_width, font_size).y
+	while text_height + vertical_padding > CHOICE_MAX_HEIGHT and font_size > CHOICE_MIN_FONT_SIZE:
+		font_size -= 1
+		text_height = font.get_multiline_string_size(button.text, HORIZONTAL_ALIGNMENT_CENTER, text_width, font_size).y
+	button.add_theme_font_size_override("font_size", font_size)
+	button.custom_minimum_size.y = clampf(text_height + vertical_padding, CHOICE_MIN_HEIGHT, CHOICE_MAX_HEIGHT)
 
 func _question_text_height(font: Font, text_width: float, font_size: int) -> float:
 	return font.get_multiline_string_size(question_label.text, HORIZONTAL_ALIGNMENT_CENTER, text_width, font_size).y
