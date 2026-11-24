@@ -6,6 +6,22 @@
 [ext_resource type="Shader" uid="uid://bsitsh62plr28" path="res://content/shaders/ui_title.gdshader" id="4_title_shader"]
 [ext_resource type="Shader" uid="uid://bohtck3gprpqg" path="res://content/shaders/ui_play_button.gdshader" id="5_play_button_shader"]
 [ext_resource type="AudioStream" uid="uid://d1ui0l0byilnv" path="res://content/audios/sfx_background_music.mp3" id="6_05shb"]
+[ext_resource type="Script" path="res://scripts/ui/quit_button_ui.gd" id="7_quit_button"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_quit_button"]
+bg_color = Color(0.83, 0.19, 0.2, 0.96)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.78, 0.65, 0.9)
+shadow_color = Color(0.28, 0.06, 0.13, 0.48)
+shadow_size = 4
+shadow_offset = Vector2(0, 3)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_title"]
 shader = ExtResource("4_title_shader")
@@ -58,7 +74,7 @@ offset_left = -210.5
 offset_right = 210.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 127
+theme_override_constants/separation = 107
 alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer" unique_id=261438544]
@@ -81,6 +97,24 @@ size_flags_vertical = 4
 theme_override_font_sizes/font_size = 50
 text = "CREDITS"
 
+[node name="QuitButton" type="Button" parent="."]
+custom_minimum_size = Vector2(58, 58)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -74.0
+offset_top = -74.0
+offset_right = -16.0
+offset_bottom = -16.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_quit_button")
+theme_override_styles/hover = SubResource("StyleBoxFlat_quit_button")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_quit_button")
+tooltip_text = "Quitter le jeu"
+script = ExtResource("7_quit_button")
+
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=1748454735]
 stream = ExtResource("6_05shb")
 autoplay = true
@@ -88,12 +122,13 @@ autoplay = true
 [node name="DevelopmentWarningLabel" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 12
+anchor_left = 0.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 16.0
+offset_left = 84.0
 offset_top = -96.0
-offset_right = -16.0
+offset_right = -84.0
 offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -106,3 +141,4 @@ autowrap_mode = 3
 
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
