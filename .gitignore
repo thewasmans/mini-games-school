@@ -3,3 +3,8 @@
 
 # Rapports gdUnit4
 /reports/
+
+# CI build output
+/build/
+/dist/
+*.keystore

@@ -1,0 +1,77 @@
+name: Build
+
+# Compile le projet pour Windows, Linux, Web et Android, sans publier sur itch.io.
+# Se declenche sur chaque Pull Request et manuellement via "Run workflow".
+# Les builds sont disponibles dans les artefacts du run (30 jours).
+#
+# L'image `barichello/godot-ci` doit correspondre a la version de Godot du projet
+# (config/features dans project.godot). L'APK Android est signe avec la cle debug.
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    name: Export ${{ matrix.channel }}
+    runs-on: ubuntu-latest
+    container:
+      image: barichello/godot-ci:4.7
+    env:
+      GODOT_VERSION: "4.7"
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - channel: windows
+            preset: Windows Desktop
+            output: mini-games-school.exe
+            mode: release
+          - channel: linux
+            preset: Linux
+            output: mini-games-school.x86_64
+            mode: release
+          - channel: web
+            preset: Web
+            output: index.html
+            mode: release
+          - channel: android
+            preset: Android
+            output: mini-games-school.apk
+            mode: debug
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup export templates + reglages editeur
+        run: |
+          mkdir -v -p ~/.local/share/godot/export_templates/
+          mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+          mkdir -p ~/.config/godot
+          cp -rn /root/.config/godot/. ~/.config/godot/ 2>/dev/null || true
+
+      - name: Import du projet
+        run: godot --headless --editor --path . --quit || true
+
+      - name: Export ${{ matrix.preset }}
+        run: |
+          set -e
+          mkdir -v -p "build/${{ matrix.channel }}"
+          EXPORT_DIR="$(readlink -f build)"
+          echo "Export ${{ matrix.preset }} (mode: ${{ matrix.mode }})"
+          godot --headless --verbose --path . --export-${{ matrix.mode }} "${{ matrix.preset }}" "$EXPORT_DIR/${{ matrix.channel }}/${{ matrix.output }}"
+          echo "--- contenu du build ---"
+          ls -R "build/${{ matrix.channel }}"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.channel }}
+          path: build/${{ matrix.channel }}
+          if-no-files-found: error
+          retention-days: 30
