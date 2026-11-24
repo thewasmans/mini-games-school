@@ -62,15 +62,24 @@ jobs:
       - name: Import du projet
         run: godot --headless --editor --path . --quit || true
 
+      # Godot 4.7 headless peut crasher a la fermeture (signal 11) apres un export reussi :
+      # on juge le resultat sur la presence du fichier exporte plutot que sur le code de sortie.
       - name: Export ${{ matrix.preset }}
         run: |
-          set -e
           mkdir -v -p "build/${{ matrix.channel }}"
-          EXPORT_DIR="$(readlink -f build)"
+          OUTPUT="$(readlink -f build)/${{ matrix.channel }}/${{ matrix.output }}"
           echo "Export ${{ matrix.preset }} (mode: ${{ matrix.mode }})"
-          godot --headless --verbose --path . --export-${{ matrix.mode }} "${{ matrix.preset }}" "$EXPORT_DIR/${{ matrix.channel }}/${{ matrix.output }}"
+          STATUS=0
+          godot --headless --path . --export-${{ matrix.mode }} "${{ matrix.preset }}" "$OUTPUT" || STATUS=$?
           echo "--- contenu du build ---"
           ls -R "build/${{ matrix.channel }}"
+          if [ ! -s "$OUTPUT" ]; then
+            echo "::error::Export echoue (code $STATUS), fichier absent : $OUTPUT"
+            exit 1
+          fi
+          if [ "$STATUS" -ne 0 ]; then
+            echo "::warning::Godot a quitte avec le code $STATUS apres l'export, mais le fichier est bien produit."
+          fi
 
       - uses: actions/upload-artifact@v4
         with:
