@@ -1,7 +1,7 @@
 name: Build & Deploy
 
 # Se declenche UNIQUEMENT quand une Pull Request est mergee dans `develop`
-# (ou manuellement via "Run workflow").
+# (ou manuellement via "Run workflow" : compile seulement, sauf si "Publier sur itch.io" est coche).
 #
 # Secrets a definir dans Settings > Secrets and variables > Actions :
 #   BUTLER_API_KEY              cle API itch.io  (https://itch.io/user/settings/api-keys)
@@ -20,6 +20,11 @@ on:
     types: [closed]
     branches: [develop]
   workflow_dispatch:
+    inputs:
+      publish:
+        description: "Publier sur itch.io"
+        type: boolean
+        default: false
 
 concurrency:
   group: build-deploy-${{ github.ref }}
@@ -105,7 +110,7 @@ jobs:
   itch:
     name: Publier sur itch.io
     needs: export
-    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true || (github.event_name == 'workflow_dispatch' && inputs.publish)
     runs-on: ubuntu-latest
     steps:
       - name: Verifie les secrets itch.io
