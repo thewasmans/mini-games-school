@@ -59,11 +59,11 @@ func _show_question() -> void:
 	UIFeedback.appear(question_label, 0.0)
 
 func _fit_question() -> void:
-	var text_width := question_label.size.x
+	var text_width := question_frame.size.x - question_label.offset_left + question_label.offset_right
 	if text_width <= 0.0:
 		return
 	var font := question_label.get_theme_font("font")
-	var vertical_padding := question_frame.size.y - question_label.size.y
+	var vertical_padding := question_label.offset_top - question_label.offset_bottom
 	var font_size := _question_font_size
 	var text_height := _question_text_height(font, text_width, font_size)
 	while text_height + vertical_padding > QUESTION_FRAME_MAX_HEIGHT and font_size > QUESTION_MIN_FONT_SIZE:
@@ -88,7 +88,9 @@ func _fit_choice(button: Button) -> void:
 	button.custom_minimum_size.y = clampf(text_height + vertical_padding, CHOICE_MIN_HEIGHT, CHOICE_MAX_HEIGHT)
 
 func _question_text_height(font: Font, text_width: float, font_size: int) -> float:
-	return font.get_multiline_string_size(question_label.text, HORIZONTAL_ALIGNMENT_CENTER, text_width, font_size).y
+	var text_height := font.get_multiline_string_size(question_label.text, HORIZONTAL_ALIGNMENT_CENTER, text_width, font_size).y
+	var line_count := roundi(text_height / font.get_height(font_size))
+	return text_height + maxi(line_count - 1, 0) * question_label.get_theme_constant("line_spacing")
 
 func _on_choice_pressed(choice_index: int) -> void:
 	var question_data := _questions[_question_index]
