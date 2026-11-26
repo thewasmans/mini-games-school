@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HousingItemData" format=3 uid="uid://bvdf6y4cwpqgn"]
+
+[ext_resource type="Script" uid="uid://bmeandbtfpwf3" path="res://scripts/data/housing/housing_item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+word = "QUATERNAIRE"
+variants = PackedStringArray("QUATERNAIRES")
+title = "Lustre à 4 boules"
+description = "Composé formé de quatre éléments différents, par exemple NaHCO₃."
+mnemonic = "4 boules, 4 éléments."
+slot = 2
+footprint = Vector2i(4, 4)

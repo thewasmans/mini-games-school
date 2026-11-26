@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HousingItemData" format=3 uid="uid://6r2cjkaunafj"]
+
+[ext_resource type="Script" uid="uid://bmeandbtfpwf3" path="res://scripts/data/housing/housing_item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+word = "CONDUCTIBILITE"
+variants = PackedStringArray()
+title = "Guirlande lumineuse"
+description = "Capacité d'une solution à laisser passer le courant électrique grâce aux ions qu'elle contient."
+mnemonic = "Le courant passe, la guirlande s'allume."
+slot = 1
+footprint = Vector2i(3, 1)

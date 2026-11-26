@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HousingItemData" format=3 uid="uid://b1lku8u26m1e8"]
+
+[ext_resource type="Script" uid="uid://bmeandbtfpwf3" path="res://scripts/data/housing/housing_item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+word = "ACTEUR"
+variants = PackedStringArray("ACTEURS")
+title = "Scène de théâtre"
+description = "Ion qui participe à la réaction et se retrouve dans le produit formé."
+mnemonic = "L'acteur joue sur scène : il participe à la réaction."
+slot = 0
+footprint = Vector2i(2, 1)

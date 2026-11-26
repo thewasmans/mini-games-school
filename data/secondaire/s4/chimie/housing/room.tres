@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="HousingRoomData" format=3 uid="uid://b2qlueoyj72qi"]
+
+[ext_resource type="Script" uid="uid://bmeandbtfpwf3" path="res://scripts/data/housing/housing_item_data.gd" id="item"]
+[ext_resource type="Resource" uid="uid://7h1bwe7dg01w" path="res://data/secondaire/s4/chimie/housing/nomenclature.tres" id="item_0"]
+[ext_resource type="Resource" uid="uid://pnypodpyglox" path="res://data/secondaire/s4/chimie/housing/binaire.tres" id="item_1"]
+[ext_resource type="Resource" uid="uid://eky2j624ahxd" path="res://data/secondaire/s4/chimie/housing/ternaire.tres" id="item_2"]
+[ext_resource type="Resource" uid="uid://bvdf6y4cwpqgn" path="res://data/secondaire/s4/chimie/housing/quaternaire.tres" id="item_3"]
+[ext_resource type="Resource" uid="uid://bag6ym1wrcqbs" path="res://data/secondaire/s4/chimie/housing/isotope.tres" id="item_4"]
+[ext_resource type="Resource" uid="uid://b1lku8u26m1e8" path="res://data/secondaire/s4/chimie/housing/acteur.tres" id="item_5"]
+[ext_resource type="Resource" uid="uid://fguiqme01md0" path="res://data/secondaire/s4/chimie/housing/spectateur.tres" id="item_6"]
+[ext_resource type="Resource" uid="uid://onamfa02u20u" path="res://data/secondaire/s4/chimie/housing/ionique.tres" id="item_7"]
+[ext_resource type="Resource" uid="uid://b0fvo7oeg0t5n" path="res://data/secondaire/s4/chimie/housing/significatifs.tres" id="item_8"]
+[ext_resource type="Resource" uid="uid://qryq0v0pnnso" path="res://data/secondaire/s4/chimie/housing/mole.tres" id="item_9"]
+[ext_resource type="Resource" uid="uid://20r4vhtyrafg" path="res://data/secondaire/s4/chimie/housing/avogadro.tres" id="item_10"]
+[ext_resource type="Resource" uid="uid://bamm4w4086smn" path="res://data/secondaire/s4/chimie/housing/stoechiometrie.tres" id="item_11"]
+[ext_resource type="Resource" uid="uid://boleajc1td5l" path="res://data/secondaire/s4/chimie/housing/cntp.tres" id="item_12"]
+[ext_resource type="Resource" uid="uid://rvdyqr1bxtvh" path="res://data/secondaire/s4/chimie/housing/densite.tres" id="item_13"]
+[ext_resource type="Resource" uid="uid://bcddvbf5xfl5h" path="res://data/secondaire/s4/chimie/housing/aqueuse.tres" id="item_14"]
+[ext_resource type="Resource" uid="uid://tsgqmje05os3" path="res://data/secondaire/s4/chimie/housing/dilution.tres" id="item_15"]
+[ext_resource type="Resource" uid="uid://6p083hcspjvm" path="res://data/secondaire/s4/chimie/housing/solubilite.tres" id="item_16"]
+[ext_resource type="Resource" uid="uid://ihwb1lywg8b8" path="res://data/secondaire/s4/chimie/housing/precipitation.tres" id="item_17"]
+[ext_resource type="Resource" uid="uid://b2h55ft0o1ss3" path="res://data/secondaire/s4/chimie/housing/electrolyte.tres" id="item_18"]
+[ext_resource type="Resource" uid="uid://b50guyn1r2a4u" path="res://data/secondaire/s4/chimie/housing/electrolyse.tres" id="item_19"]
+[ext_resource type="Resource" uid="uid://6r2cjkaunafj" path="res://data/secondaire/s4/chimie/housing/conductibilite.tres" id="item_20"]
+[ext_resource type="Script" uid="uid://2apymmfsd8ok" path="res://scripts/data/housing/housing_renovation_data.gd" id="renovation"]
+[ext_resource type="Script" uid="uid://bje34xhkvvd32" path="res://scripts/data/housing/housing_room_data.gd" id="room"]
+
+[sub_resource type="Resource" id="Renovation_0"]
+script = ExtResource("renovation")
+title = "Planches cassées"
+cells = Array[Vector2i]([Vector2i(0, 4), Vector2i(0, 5), Vector2i(1, 4), Vector2i(1, 5), Vector2i(2, 4), Vector2i(2, 5)])
+
+[sub_resource type="Resource" id="Renovation_1"]
+script = ExtResource("renovation")
+title = "Caisses du grand-père"
+cost = 4
+cells = Array[Vector2i]([Vector2i(3, 0), Vector2i(3, 1), Vector2i(4, 0), Vector2i(4, 1), Vector2i(5, 0), Vector2i(5, 1)])
+
+[sub_resource type="Resource" id="Renovation_2"]
+script = ExtResource("renovation")
+title = "Mur taché"
+slot = 1
+cells = Array[Vector2i]([Vector2i(0, 0), Vector2i(1, 0)])
+
+[resource]
+script = ExtResource("room")
+items = Array[ExtResource("item")]([ExtResource("item_0"), ExtResource("item_1"), ExtResource("item_2"), ExtResource("item_3"), ExtResource("item_4"), ExtResource("item_5"), ExtResource("item_6"), ExtResource("item_7"), ExtResource("item_8"), ExtResource("item_9"), ExtResource("item_10"), ExtResource("item_11"), ExtResource("item_12"), ExtResource("item_13"), ExtResource("item_14"), ExtResource("item_15"), ExtResource("item_16"), ExtResource("item_17"), ExtResource("item_18"), ExtResource("item_19"), ExtResource("item_20")])
+renovations = Array[ExtResource("renovation")]([SubResource("Renovation_0"), SubResource("Renovation_1"), SubResource("Renovation_2")])
+grid_size = Vector2i(6, 6)

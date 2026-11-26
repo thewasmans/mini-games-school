@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HousingItemData" format=3 uid="uid://bag6ym1wrcqbs"]
+
+[ext_resource type="Script" uid="uid://bmeandbtfpwf3" path="res://scripts/data/housing/housing_item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+word = "ISOTOPE"
+variants = PackedStringArray("ISOTOPES")
+title = "Matriochkas"
+description = "Atomes d'un même élément (même nombre de protons) qui ont un nombre de neutrons différent."
+mnemonic = "Des poupées identiques, mais pas du même poids."
+slot = 0
+footprint = Vector2i(1, 1)

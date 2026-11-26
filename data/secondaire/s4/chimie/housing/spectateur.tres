@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HousingItemData" format=3 uid="uid://fguiqme01md0"]
+
+[ext_resource type="Script" uid="uid://bmeandbtfpwf3" path="res://scripts/data/housing/housing_item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+word = "SPECTATEUR"
+variants = PackedStringArray("SPECTATEURS")
+title = "Fauteuil et pop-corn"
+description = "Ion présent dans la solution qui ne participe pas à la réaction."
+mnemonic = "Le spectateur regarde la pièce sans monter sur scène."
+slot = 0
+footprint = Vector2i(1, 1)

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HousingItemData" format=3 uid="uid://b50guyn1r2a4u"]
+
+[ext_resource type="Script" uid="uid://bmeandbtfpwf3" path="res://scripts/data/housing/housing_item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+word = "ELECTROLYSE"
+variants = PackedStringArray("ELECTROLYSES")
+title = "Appareil à électrolyse"
+description = "Décomposition d'une substance par le courant électrique, par exemple l'eau en H₂ et O₂."
+mnemonic = "Deux tubes, deux gaz qui font des bulles."
+slot = 0
+footprint = Vector2i(2, 1)

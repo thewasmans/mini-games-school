@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HousingItemData" format=3 uid="uid://eky2j624ahxd"]
+
+[ext_resource type="Script" uid="uid://bmeandbtfpwf3" path="res://scripts/data/housing/housing_item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+word = "TERNAIRE"
+variants = PackedStringArray("TERNAIRES")
+title = "Lustre à 3 boules"
+description = "Composé formé de trois éléments différents, par exemple H₂SO₄."
+mnemonic = "3 boules, 3 éléments."
+slot = 2
+footprint = Vector2i(4, 4)

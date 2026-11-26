@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HousingItemData" format=3 uid="uid://tsgqmje05os3"]
+
+[ext_resource type="Script" uid="uid://bmeandbtfpwf3" path="res://scripts/data/housing/housing_item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+word = "DILUTION"
+variants = PackedStringArray("DILUTIONS")
+title = "Carafe de sirop"
+description = "Ajout de solvant à une solution : la concentration diminue, la quantité de soluté ne change pas."
+mnemonic = "On allonge le sirop avec de l'eau."
+slot = 0
+footprint = Vector2i(1, 1)

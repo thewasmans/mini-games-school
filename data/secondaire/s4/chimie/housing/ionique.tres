@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HousingItemData" format=3 uid="uid://onamfa02u20u"]
+
+[ext_resource type="Script" uid="uid://bmeandbtfpwf3" path="res://scripts/data/housing/housing_item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+word = "IONIQUE"
+variants = PackedStringArray("IONIQUES")
+title = "Frigo aux aimants"
+description = "Se dit d'une liaison ou d'un composé formé d'ions de charges opposées qui s'attirent."
+mnemonic = "Le + et le − des aimants s'attirent fort."
+slot = 0
+footprint = Vector2i(1, 1)

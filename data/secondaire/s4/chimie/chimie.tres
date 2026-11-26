@@ -27,9 +27,11 @@
 [ext_resource type="Resource" uid="uid://rqssjtprojuv" path="res://data/secondaire/s4/chimie/level_23.tres" id="24_5wipa"]
 [ext_resource type="Resource" uid="uid://celi8v7v7oyh8" path="res://data/secondaire/s4/chimie/level_24.tres" id="25_6hu70"]
 [ext_resource type="Resource" uid="uid://7o3vassboco0" path="res://content/map_themes/chimie.tres" id="map_theme"]
+[ext_resource type="Resource" uid="uid://b2qlueoyj72qi" path="res://data/secondaire/s4/chimie/housing/room.tres" id="housing_room"]
 
 [resource]
 script = ExtResource("13_eufgw")
 name = "Chimie"
 levels = Array[ExtResource("1_kn5mt")]([ExtResource("2_idtbq"), ExtResource("3_0rtx5"), ExtResource("4_6a2s8"), ExtResource("5_vd025"), ExtResource("6_k3r52"), ExtResource("7_ojqkc"), ExtResource("8_3frmy"), ExtResource("9_njs4d"), ExtResource("10_33ahv"), ExtResource("11_kerh2"), ExtResource("12_ews48"), ExtResource("13_ewaxh"), ExtResource("14_3f5wj"), ExtResource("15_sn1xb"), ExtResource("16_6iho8"), ExtResource("17_vnj1l"), ExtResource("18_pc6uw"), ExtResource("19_u5f7l"), ExtResource("20_pa17j"), ExtResource("21_7slha"), ExtResource("22_jqdyq"), ExtResource("23_u7ce6"), ExtResource("24_5wipa"), ExtResource("25_6hu70")])
 map_theme = ExtResource("map_theme")
+housing_room = ExtResource("housing_room")

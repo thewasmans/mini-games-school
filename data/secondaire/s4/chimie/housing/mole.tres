@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HousingItemData" format=3 uid="uid://qryq0v0pnnso"]
+
+[ext_resource type="Script" uid="uid://bmeandbtfpwf3" path="res://scripts/data/housing/housing_item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+word = "MOLE"
+variants = PackedStringArray("MOLES")
+title = "Peluche de taupe"
+description = "Unité de quantité de matière : une mole contient 6,02 × 10²³ entités."
+mnemonic = "« Mole » veut dire taupe en anglais."
+slot = 0
+footprint = Vector2i(1, 1)

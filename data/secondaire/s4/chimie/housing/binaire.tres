@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HousingItemData" format=3 uid="uid://pnypodpyglox"]
+
+[ext_resource type="Script" uid="uid://bmeandbtfpwf3" path="res://scripts/data/housing/housing_item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+word = "BINAIRE"
+variants = PackedStringArray("BINAIRES")
+title = "Lustre à 2 boules"
+description = "Composé formé de deux éléments différents, par exemple NaCl."
+mnemonic = "2 boules, 2 éléments."
+slot = 2
+footprint = Vector2i(4, 4)

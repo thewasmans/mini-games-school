@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HousingItemData" format=3 uid="uid://boleajc1td5l"]
+
+[ext_resource type="Script" uid="uid://bmeandbtfpwf3" path="res://scripts/data/housing/housing_item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+word = "CNTP"
+variants = PackedStringArray()
+title = "Thermomètre et baromètre"
+description = "Conditions normales de température et de pression : 0 °C et 101,3 kPa. Une mole de gaz y occupe 22,4 L."
+mnemonic = "Un instrument pour la température, un pour la pression."
+slot = 1
+footprint = Vector2i(2, 1)

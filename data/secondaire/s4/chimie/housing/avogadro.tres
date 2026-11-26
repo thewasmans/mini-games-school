@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HousingItemData" format=3 uid="uid://20r4vhtyrafg"]
+
+[ext_resource type="Script" uid="uid://bmeandbtfpwf3" path="res://scripts/data/housing/housing_item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+word = "AVOGADRO"
+variants = PackedStringArray()
+title = "Portrait d'Avogadro"
+description = "Le nombre d'Avogadro, 6,02 × 10²³, est le nombre d'entités dans une mole."
+mnemonic = "Avogadro pose fièrement avec son nombre."
+slot = 1
+footprint = Vector2i(1, 2)

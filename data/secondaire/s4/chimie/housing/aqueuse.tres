@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HousingItemData" format=3 uid="uid://bcddvbf5xfl5h"]
+
+[ext_resource type="Script" uid="uid://bmeandbtfpwf3" path="res://scripts/data/housing/housing_item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+word = "AQUEUSE"
+variants = PackedStringArray("AQUEUSES")
+title = "Aquarium"
+description = "Une solution aqueuse est une solution dont le solvant est l'eau."
+mnemonic = "L'aquarium est plein d'eau."
+slot = 0
+footprint = Vector2i(2, 1)

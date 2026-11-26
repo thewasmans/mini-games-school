@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HousingItemData" format=3 uid="uid://rvdyqr1bxtvh"]
+
+[ext_resource type="Script" uid="uid://bmeandbtfpwf3" path="res://scripts/data/housing/housing_item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+word = "DENSITE"
+variants = PackedStringArray("DENSITES")
+title = "Lampe à lave"
+description = "Rapport entre la masse volumique d'une substance et celle de l'eau."
+mnemonic = "Le liquide le plus dense reste en bas."
+slot = 0
+footprint = Vector2i(1, 1)

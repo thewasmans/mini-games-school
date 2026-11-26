@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HousingItemData" format=3 uid="uid://b0fvo7oeg0t5n"]
+
+[ext_resource type="Script" uid="uid://bmeandbtfpwf3" path="res://scripts/data/housing/housing_item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+word = "SIGNIFICATIFS"
+variants = PackedStringArray("SIGNIFICATIF")
+title = "Balance de précision"
+description = "Chiffres significatifs : les chiffres d'une mesure qui ont un sens, selon sa précision."
+mnemonic = "La balance au millième : chaque chiffre compte."
+slot = 0
+footprint = Vector2i(1, 1)

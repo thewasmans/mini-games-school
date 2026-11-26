@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HousingItemData" format=3 uid="uid://b2h55ft0o1ss3"]
+
+[ext_resource type="Script" uid="uid://bmeandbtfpwf3" path="res://scripts/data/housing/housing_item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+word = "ELECTROLYTE"
+variants = PackedStringArray("ELECTROLYTES")
+title = "Pile au citron"
+description = "Substance qui, dissoute dans l'eau, libère des ions et laisse passer le courant."
+mnemonic = "Le jus de citron fait briller l'ampoule."
+slot = 0
+footprint = Vector2i(1, 1)

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HousingItemData" format=3 uid="uid://7h1bwe7dg01w"]
+
+[ext_resource type="Script" uid="uid://bmeandbtfpwf3" path="res://scripts/data/housing/housing_item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+word = "NOMENCLATURE"
+variants = PackedStringArray()
+title = "Meuble d'apothicaire"
+description = "Ensemble des règles qui permettent de nommer les espèces chimiques."
+mnemonic = "Chaque tiroir porte son étiquette : chaque espèce a son nom."
+slot = 0
+footprint = Vector2i(2, 1)

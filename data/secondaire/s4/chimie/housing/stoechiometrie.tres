@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HousingItemData" format=3 uid="uid://bamm4w4086smn"]
+
+[ext_resource type="Script" uid="uid://bmeandbtfpwf3" path="res://scripts/data/housing/housing_item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+word = "STOECHIOMETRIE"
+variants = PackedStringArray()
+title = "Balance à deux plateaux"
+description = "Étude des proportions dans lesquelles les réactifs réagissent et les produits se forment."
+mnemonic = "Les deux plateaux restent en équilibre, comme une équation pondérée."
+slot = 0
+footprint = Vector2i(2, 1)
