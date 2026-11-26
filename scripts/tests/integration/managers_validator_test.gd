@@ -12,6 +12,7 @@ var _validator: ManagersValidator
 
 
 func before_test() -> void:
+	TestData.use_empty_save()
 	var main := scene_runner(MAIN_SCENE).scene() as Main
 	_game_manager = main.game_manager
 	_validator = main.get_node("Global/ManagersValidator") as ManagersValidator
@@ -30,6 +31,7 @@ func test_every_manager_child_is_initialized() -> void:
 func test_typed_accessors_find_their_manager_in_the_list() -> void:
 	assert_object(_game_manager.game_ui_manager).is_instanceof(GameUIManager)
 	assert_object(_game_manager.level_manager).is_instanceof(LevelManager)
+	assert_object(_game_manager.house_manager).is_instanceof(HouseManager)
 
 
 func test_forgotten_manager_is_reported() -> void:

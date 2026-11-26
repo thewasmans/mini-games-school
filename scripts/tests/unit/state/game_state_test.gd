@@ -145,3 +145,34 @@ func test_spending_a_bonus_needs_one() -> void:
 	assert_int(state.bonus_count).is_equal(0)
 	@warning_ignore("redundant_await")
 	await assert_signal(state).is_emitted("bonus_count_changed", 0)
+
+
+func test_completing_a_level_returns_the_newly_earned_stars() -> void:
+	var state := TestData.game_state([3])
+	assert_int(state.complete_level(0, 2.4)).is_equal(2)
+	assert_int(state.complete_level(0, 1.5)).is_equal(0)
+	assert_int(state.complete_level(0, 3.0)).is_equal(1)
+	assert_int(state.complete_level(1, 0.0)).is_equal(0)
+
+
+func test_current_subject_key_follows_the_selection() -> void:
+	var state := TestData.game_state([3, 3])
+	assert_that(state.current_subject_key).is_equal(Vector3i(TestData.SECONDARY, TestData.FOURTH_YEAR, 0))
+	state.select_subject(1)
+	assert_that(state.current_subject_key).is_equal(Vector3i(TestData.SECONDARY, TestData.FOURTH_YEAR, 1))
+
+
+func test_bonus_changes_are_signaled_as_progress() -> void:
+	var state := TestData.game_state([1])
+	monitor_signals(state, false)
+	state.add_bonus(2)
+	@warning_ignore("redundant_await")
+	await assert_signal(state).is_emitted("progress_changed")
+
+
+func test_selecting_a_level_is_signaled_as_progress() -> void:
+	var state := TestData.game_state([3])
+	monitor_signals(state, false)
+	state.select_level(2)
+	@warning_ignore("redundant_await")
+	await assert_signal(state).is_emitted("progress_changed")

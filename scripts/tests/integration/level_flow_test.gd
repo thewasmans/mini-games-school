@@ -182,3 +182,66 @@ func test_crossword_hint_reveals_a_letter_of_the_selected_word() -> void:
 	var filled_after := cells.filter(func(p: Vector2i) -> bool: return (crossword._cells[p] as CrosswordCell).letter != "").size()
 	assert_int(filled_after).is_equal(filled_before + 1)
 	assert_int(crossword.mistake_count).is_equal(0)
+
+
+func test_word_points_keep_the_score_of_the_answer_that_found_the_word() -> void:
+	var words: Array[String] = ["la mole", "la densité"]
+	var level := _start_level(0, TestData.memo_about(words))
+	var memo := level.mini_game_ui as MemoUI
+	memo.answer_buttons[0].pressed.emit()
+	await await_millis(1800)
+	memo.answer_buttons[1].pressed.emit()
+	memo.answer_buttons[0].pressed.emit()
+	var word_points := level.word_points()
+	assert_int(word_points["MOLE"]).is_equal(10)
+	assert_int(word_points["DENSITE"]).is_equal(5)
+
+
+func test_crypto_answer_covers_the_word_of_the_hidden_letter() -> void:
+	var level := _start_level(0, TestData.crypto(["La mole est une unité"]))
+	var crypto := level.mini_game_ui as CryptoUI
+	var hidden_index: int = crypto._hidden[0]
+	var text := "La mole est une unité"
+	var words := Array(crypto.answer_words(Vector2i(0, hidden_index)))
+	assert_array(words).contains([TextUtil.word_at(text, hidden_index)])
+
+
+func test_rewards_show_the_points_and_a_gauge_per_item() -> void:
+	var level := _start_level(0, TestData.memo(1))
+	var progress: Array[Dictionary] = [
+		{"item": TestData.housing_item("MOLE"), "before": 10, "after": 20, "size": 30},
+		{"item": TestData.housing_item("CNTP"), "before": 0, "after": 10, "size": 10},
+	]
+	level.show_rewards(3, 7, progress)
+	var panel := level._discovery_panel
+	assert_bool(panel.points_label.visible).is_true()
+	assert_str(panel.points_label.text).contains("+3")
+	assert_int(panel.rows.size()).is_equal(2)
+	assert_bool(panel.rows[0].is_unlocked()).is_false()
+	assert_bool(panel.rows[1].is_unlocked()).is_true()
+	await await_millis(1500)
+	assert_bool(panel.rows[1].new_label.visible).is_true()
+
+
+func test_continuing_closes_the_rewards() -> void:
+	var level := _start_level(0, TestData.memo(1))
+	level.show_rewards(2, 2, [] as Array[Dictionary])
+	assert_bool(level._discovery_panel.objects_title.visible).is_false()
+	monitor_signals(level, false)
+	level._discovery_panel.continue_button.pressed.emit()
+	@warning_ignore("redundant_await")
+	await assert_signal(level).is_emitted("rewards_closed")
+
+
+func test_a_word_found_with_a_hint_earns_hint_points() -> void:
+	var words: Array[String] = ["la mole"]
+	var level := _start_level(0, TestData.memo_about(words))
+	var memo := level.mini_game_ui as MemoUI
+	assert_bool(level.use_hint()).is_true()
+	memo.answer_buttons[0].pressed.emit()
+	assert_int(level.word_points()["MOLE"]).is_equal(level.hint_points)
+
+
+func test_a_level_without_mini_game_has_no_word_points() -> void:
+	var level := _start_level(0, null)
+	assert_bool(level.word_points().is_empty()).is_true()

@@ -9,6 +9,7 @@ var _menu_levels: MenuLevelsUI
 
 
 func before_test() -> void:
+	TestData.use_empty_save()
 	var main := scene_runner(MAIN_SCENE).scene() as Main
 	_game_manager = main.game_manager
 	var ui := _game_manager.game_ui_manager._game_ui

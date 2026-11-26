@@ -3,6 +3,12 @@ extends RefCounted
 
 const SECONDARY := 1
 const FOURTH_YEAR := 3
+const SAVE_PATH := "user://test_save.json"
+
+
+static func use_empty_save() -> void:
+	SaveManager.save_path = SAVE_PATH
+	SaveManager.delete_save()
 
 
 static func memo(question_count: int) -> MemoData:
@@ -70,3 +76,37 @@ static func crossword(words: Array[String]) -> CrosswordData:
 		entry.clue = "Indice de " + word
 		crossword_data.entries.append(entry)
 	return crossword_data
+
+
+static func memo_about(words: Array[String]) -> MemoData:
+	var memo_data := memo(words.size())
+	for index in words.size():
+		memo_data.questions[index].question = "Que veut dire %s ?" % words[index]
+	return memo_data
+
+
+static func housing_item(word: String, footprint := Vector2i.ONE, slot := HousingItemData.Slot.FLOOR) -> HousingItemData:
+	var item := HousingItemData.new()
+	item.word = word
+	item.title = word.capitalize()
+	item.footprint = footprint
+	item.slot = slot
+	return item
+
+
+static func housing_state(level_words: Array, items: Array[HousingItemData], grid_size := Vector2i(4, 4)) -> HousingState:
+	var data := game_data([level_words.size()])
+	var subject := data.secondary_4.subjects[0]
+	for level_index in level_words.size():
+		var words: Array[String] = []
+		words.assign(level_words[level_index])
+		subject.levels[level_index].mini_game = memo_about(words)
+	var room := HousingRoomData.new()
+	room.items = items
+	room.grid_size = grid_size
+	subject.housing_room = room
+	return HousingState.new(HousingCatalog.new(data))
+
+
+static func housing_subject_key() -> Vector3i:
+	return Vector3i(SECONDARY, FOURTH_YEAR, 0)

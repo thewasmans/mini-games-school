@@ -10,6 +10,7 @@ var _ui: GameUI
 
 
 func before_test() -> void:
+	TestData.use_empty_save()
 	var runner := scene_runner(MAIN_SCENE)
 	_main = runner.scene() as Main
 	_game_manager = _main.game_manager
@@ -46,6 +47,11 @@ func test_choosing_a_level_hides_the_menus_and_validating_comes_back() -> void:
 	level.validate_button.show()
 	level.validate()
 	await await_millis(100)
+	assert_bool(_ui.visible).is_false()
+	assert_object(level._discovery_panel).is_not_null()
+	level._discovery_panel.continue_button.pressed.emit()
+	await await_millis(100)
 	assert_bool(_ui.visible).is_true()
 	assert_bool(_game_manager.game_state.is_level_completed(0)).is_true()
 	assert_bool(_game_manager.game_state.is_level_unlocked(1)).is_true()
+	assert_int(_game_manager.housing_state.action_points).is_equal(HousingState.FIRST_COMPLETION_POINTS)

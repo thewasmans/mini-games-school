@@ -10,6 +10,7 @@ var _debug_helper: DebugHelper
 
 
 func before_test() -> void:
+	TestData.use_empty_save()
 	var main := scene_runner(MAIN_SCENE).scene() as Main
 	_game_manager = main.game_manager
 	_debug_helper = main.find_children("*", "CanvasLayer", false, false)[0] as DebugHelper
