@@ -10,12 +10,15 @@ Godot 4.7, GDScript, portrait 720×1280 (`canvas_items`, `expand`). Le fonctionn
 Main (main.gd)
 ├─ Global
 │  ├─ GameManager
+│  │  ├─ SaveManager     charge la sauvegarde, la réécrit à chaque changement
 │  │  ├─ GameUIManager   instancie game_ui.tscn sous UI, pilote la navigation menus <-> level
-│  │  └─ LevelManager    instancie level.tscn sous Level
+│  │  ├─ LevelManager    instancie level.tscn sous Level
+│  │  └─ HouseManager    instancie house.tscn sous House
 │  └─ ManagersValidator  (@tool) vérifie la liste des managers dans l'éditeur
 ├─ Background            AnimatedBackground (décor 3D)
 ├─ UI
-└─ Level
+├─ Level
+└─ House
 ```
 
 - **Managers** : `Manager` (`@abstract`) expose `game_state` / `game_data`. Un nouveau manager s'ajoute dans la liste exportée `managers` de `GameManager` (seule référence, qui fixe aussi l'ordre d'initialisation) ; si d'autres scripts doivent y accéder, ajouter un getter typé comme `level_manager`. Le nœud `Global/ManagersValidator` (`@tool`) affiche un avertissement si un `Manager` enfant manque dans la liste ou y figure deux fois ; `GameManager` n'est pas `@tool`.
@@ -24,7 +27,8 @@ Main (main.gd)
 
 ## État et données
 
-- `GameState` (`scripts/state/`, `RefCounted`) : créé par `GameManager` depuis `GameData`. Sélection courante (niveau d'études, année, matière, level), progression par `Vector3i` (étoiles par level, îles bonus récupérées), compteur de bonus, signaux `level_unlocked`, `current_level_changed`, `all_levels_unlocked`, `bonus_count_changed`. Îles bonus tous les `SubjectData.bonus_island_interval` levels ; récompense = moyenne d'étoiles du groupe arrondie à l'inférieur. Les nombres de levels sont lus dans `GameData`, jamais copiés. Pas de sauvegarde.
+- `GameState` (`scripts/state/`, `RefCounted`) : créé par `GameManager` depuis `GameData`. Sélection courante (niveau d'études, année, matière, level), progression par `Vector3i` (étoiles par level, îles bonus récupérées), compteur de bonus, signaux `level_unlocked`, `current_level_changed`, `all_levels_unlocked`, `bonus_count_changed`, `progress_changed`. Îles bonus tous les `SubjectData.bonus_island_interval` levels ; récompense = moyenne d'étoiles du groupe arrondie à l'inférieur. Les nombres de levels sont lus dans `GameData`, jamais copiés. Sauvegarde : `SaveManager` (premier de la liste des managers) charge `user://save.json` au lancement et le réécrit à chaque `progress_changed`, via `GameState.to_save_data()` / `load_save_data()` (indices de progression, étoiles, îles récupérées, bonus ; « tout débloquer » n'est pas sauvegardé). Les tests qui lancent `main.tscn` appellent `TestData.use_empty_save()`.
+- **Housing** (spec `docs/housing.md`, plan `docs/housing_plan.md`) : `HousingState` (`scripts/state/`, créé par `GameManager`, exposé par `Manager.housing_state`) gère les points d'action, les jauges de découverte des objets (meilleure rencontre du mot par level), le placement sur grille et les rénovations. `HousingCatalog` lit les pièces (`SubjectData.housing_room` → `HousingRoomData` → `HousingItemData`, `scripts/data/housing/`) et calcule la taille des jauges depuis `MiniGameData.answer_words()`. Les rencontres viennent de `MiniGameUI.answer_words(clé)` → `found_answers` → `Level.word_points()`, lus par `LevelManager` à la validation. S'il y a des points d'action gagnés ou une jauge qui monte, `Level.show_rewards()` affiche `level/discovery_panel.tscn` et le level se ferme sur `rewards_closed`. La barre du haut (`TopBar`) affiche les points d'action (`ActionPointsPill`) et, si `show_house`, le bouton Maison. La maison (`HouseManager` → `content/prefabs/house/house.tscn`, scripts `scripts/house/` et `scripts/ui/house/`) est construite en code par `HouseWorld` / `HouseModels` (modèles des objets de chimie : `ChemistryModels`) (hall + une pièce par matière qui a une `HousingRoomData`), parcourue par `PlayerCharacter` (3e personne, `TouchJoystick`).
 - `GameData` (`scripts/data/`) → `SchoolYearData` → `SubjectData` → `LevelData` → `MiniGameData` (`scripts/mini_games/` : `crossword/`, `memo/`, `crypto/`). Les 18 champs d'années sont fixes (système scolaire belge) : c'est voulu.
 - **Un fichier par ressource**, rangé selon la hiérarchie : `data/<niveau>/<année>/<année>.tres`, `data/<niveau>/<année>/<matière>/<matière>.tres`, `level_NN.tres` et les mini-jeux `NN_<type>_<thème>.tres` à côté. Les levels sont courts et grandissent peu à peu, commencent par un cryptogramme et alternent les types (vérifié par `game_data_content_test.gd`). `game_data.tres` ne contient que des références. L'année d'un mini-jeu se déduit de sa place dans la hiérarchie.
 - La grille des mots croisés est calculée par `CrosswordGenerator` dans l'éditeur (plugin Crossword ou import CSV), jamais en jeu (sauf repli avec avertissement).
@@ -40,7 +44,7 @@ Les écrans sont des scènes modifiables dans l'éditeur ; le code ne fait que l
 - `level/level.tscn` (`Level`) : barre du haut, titre, jauge d'étoiles `star_gauge.tscn` (`StarGauge` : une `JuicyProgressBar` et les étoiles posées sur ses paliers), bouton indice, conteneur du mini-jeu, Valider ; `level/victory_banner.tscn`.
 - Mini-jeux : `mini_games/*_ui.tscn`, scripts héritant de `MiniGameUI` (`@abstract`, signaux `completed` / `progress_changed(completed_count, total_count)` / `mistake_made` / `answer_found(mistake_count, hinted)`, `initialize(mini_game_data)` qui fixe `answer_total`, `use_hint() -> bool`, et pour chaque réponse (question, mot, lettre cachée) `_make_mistake(clé)`, `_mark_hinted(clé)`, `_answer_found(clé)`). `Level` convertit les réponses en points (10 sans erreur, 5 après 1 erreur, 2 après 2, 0 au-delà, 4 au plus avec un indice) rapportés au score maximum du level ; la jauge `StarGauge` monte avec le score et porte les étoiles à 30 %, 60 % et 90 % : seule une étoile atteinte par la jauge est gagnée. `Level` choisit le prefab dans le registre `mini_games/mini_game_prefabs.tres` (`MiniGamePrefabs`, script de données → prefab). Ajouter un mini-jeu = données + interface + entrée du registre (+ cheat), sans toucher à `Level`.
 - Composants posés explicitement dans les prefabs : `ButtonPressAnimation` (enfant d'un bouton : écrasement, survol, son), jamais de script global qui modifie les nœuds.
-- Debug F1 : `content/prefabs/ui/debug_helper.tscn` (`scripts/helpers/`), barre en bas au thème par défaut de Godot. Elle écoute `LevelManager.level_started` et utilise un `MiniGameCheat` par mini-jeu (`CrosswordCheat`, `MemoCheat`, `CryptoCheat`).
+- Debug F1 : `content/prefabs/ui/debug_helper.tscn` (`scripts/helpers/`), barre en bas au thème par défaut de Godot. « Maison : tout débloquer » appelle `HousingState.unlock_all()`. Elle écoute `LevelManager.level_started` et utilise un `MiniGameCheat` par mini-jeu (`CrosswordCheat`, `MemoCheat`, `CryptoCheat`).
 
 ## Thème et rendu
 

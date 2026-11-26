@@ -11,3 +11,7 @@ func get_kind_name() -> String:
 
 func get_kind_id() -> String:
 	return ""
+
+
+func answer_words() -> PackedStringArray:
+	return PackedStringArray()

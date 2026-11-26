@@ -38,6 +38,7 @@ La grille est calculée **dans l'éditeur** (plugin Crossword ou import CSV), ja
 - **UID :** un `.tscn` ou un `.tres` créé hors de l'éditeur (script, copie, merge) n'a pas d'UID tant qu'il n'a pas été enregistré une fois dans Godot ; ses références cassent s'il est déplacé. Le test `scripts/tests/content/resource_uid_test.gd` liste les fichiers et références sans UID ou avec un UID périmé.
 - **Ressource ouverte dans l'éditeur :** l'éditeur garde en mémoire les ressources ouvertes. Après une modification externe (merge, script, import), recharger le projet avant d'enregistrer, sinon la version en mémoire écrase celle du disque.
 - **`.tscn` écrit à la main :** dans un nœud, les propriétés propres à son script (par exemple `icon_left` d'un `JuicyButton`) doivent venir **après** la ligne `script = ...`, sinon Godot les ignore au chargement. L'éditeur respecte cet ordre de lui-même.
+- **Nœuds ajoutés dans une scène instanciée :** un nœud dont le `parent` est à l'intérieur d'une instance (par exemple dans le `Content` d'un `TitledPanel`) n'est gardé que si l'instance est marquée « Enfants modifiables », c'est-à-dire avec une ligne `[editable path="..."]` en fin de fichier. Sans elle, le jeu charge la scène normalement, mais le premier enregistrement dans l'éditeur supprime ces nœuds et les exports qui pointent vers eux.
 
 ---
 

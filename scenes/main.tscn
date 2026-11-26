@@ -10,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://ce1uu38c55ewe" path="res://content/prefabs/ui/level/level.tscn" id="8"]
 [ext_resource type="Script" uid="uid://b4xilacjnh0fe" path="res://scripts/ui/animated_background.gd" id="9"]
 [ext_resource type="Script" uid="uid://vmgx87fwpj4m" path="res://scripts/managers/managers_validator.gd" id="10"]
+[ext_resource type="Script" uid="uid://bib654bg5kaw6" path="res://scripts/managers/save_manager.gd" id="11"]
+[ext_resource type="Script" uid="uid://p61b3f3f2g7h" path="res://scripts/managers/house_manager.gd" id="12"]
+[ext_resource type="PackedScene" uid="uid://bojmmfkwegdf7" path="res://content/prefabs/house/house.tscn" id="13"]
 
 [node name="Main" type="Node" unique_id=1965104666 node_paths=PackedStringArray("game_manager")]
 script = ExtResource("1")
@@ -21,7 +24,10 @@ debug_helper_prefab = ExtResource("2")
 [node name="GameManager" type="Node" parent="Global" unique_id=1369628355 node_paths=PackedStringArray("managers")]
 script = ExtResource("3")
 game_data = ExtResource("4")
-managers = [NodePath("GameUIManager"), NodePath("LevelManager")]
+managers = [NodePath("SaveManager"), NodePath("GameUIManager"), NodePath("LevelManager"), NodePath("HouseManager")]
+
+[node name="SaveManager" type="Node" parent="Global/GameManager" unique_id=1846203917]
+script = ExtResource("11")
 
 [node name="GameUIManager" type="Node" parent="Global/GameManager" unique_id=365876765 node_paths=PackedStringArray("root_scene", "background")]
 script = ExtResource("5")
@@ -33,6 +39,11 @@ background = NodePath("../../../Background")
 script = ExtResource("7")
 level_root = NodePath("../../../Level")
 level_prefab = ExtResource("8")
+
+[node name="HouseManager" type="Node" parent="Global/GameManager" unique_id=1739402215 node_paths=PackedStringArray("house_root")]
+script = ExtResource("12")
+house_root = NodePath("../../../House")
+house_prefab = ExtResource("13")
 
 [node name="ManagersValidator" type="Node" parent="Global" unique_id=440690946 node_paths=PackedStringArray("game_manager")]
 script = ExtResource("10")
@@ -57,6 +68,15 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="Level" type="Control" parent="." unique_id=2120668901]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="House" type="Control" parent="." unique_id=1592648307]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

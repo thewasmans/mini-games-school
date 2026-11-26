@@ -77,7 +77,7 @@ La grille s'adapte à la taille de l'écran. Elle est calculée à l'avance dans
 - **Indices :** ils sont communs à toutes les matières. La pastille de la grille des levels en affiche le nombre.
 - La progression est suivie séparément pour chaque combinaison de niveau d'études, d'année et de matière.
 - Les jauges du menu des niveaux d'études additionnent les levels terminés de toutes les années et de toutes les matières.
-- **La progression n'est pas sauvegardée** : elle repart de zéro à chaque lancement du jeu.
+- **La progression est sauvegardée** automatiquement (levels terminés, étoiles, îles bonus récupérées, indices) et reprise au lancement suivant. Le bouton « tout débloquer » du panneau de debug n'est pas sauvegardé.
 
 ---
 

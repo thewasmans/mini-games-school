@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://b5e04x6g2vyn8"]
+
+[ext_resource type="Script" uid="uid://brkvw3uf62slf" path="res://scripts/ui/panels/action_points_pill.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://da7bsgfs5sdpw" path="res://scripts/ui/icon_view.gd" id="2_icon"]
+
+[node name="ActionPointsPill" type="PanelContainer"]
+tooltip_text = "Points d'action"
+theme_type_variation = &"PillStars"
+script = ExtResource("1_script")
+
+[node name="Row" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="House" type="Control" parent="Row"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+mouse_filter = 2
+script = ExtResource("2_icon")
+icon = "house"
+
+[node name="Inner" type="PanelContainer" parent="Row"]
+layout_mode = 2
+theme_type_variation = &"PillStarsInner"
+
+[node name="Count" type="Label" parent="Row/Inner"]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_font_sizes/font_size = 30
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1

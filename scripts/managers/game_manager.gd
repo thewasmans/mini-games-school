@@ -7,6 +7,7 @@ signal initialized
 @export var managers: Array[Manager] = []
 
 var game_state: GameState
+var housing_state: HousingState
 
 var game_ui_manager: GameUIManager:
 	get:
@@ -16,9 +17,14 @@ var level_manager: LevelManager:
 	get:
 		return _manager_of_type(LevelManager)
 
+var house_manager: HouseManager:
+	get:
+		return _manager_of_type(HouseManager)
+
 
 func initialize() -> void:
 	game_state = GameState.new(game_data)
+	housing_state = HousingState.new(HousingCatalog.new(game_data))
 	for manager in managers:
 		manager.initialize(self)
 	initialized.emit()

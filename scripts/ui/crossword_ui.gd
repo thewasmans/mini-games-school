@@ -202,6 +202,11 @@ func _type(letter: String) -> void:
 		_check_word(_selected)
 
 
+func answer_words(answer_key: Variant) -> PackedStringArray:
+	var entry: CrosswordEntry = _words[answer_key].entry
+	return entry.answer_words()
+
+
 func use_hint() -> bool:
 	if is_completed:
 		return false

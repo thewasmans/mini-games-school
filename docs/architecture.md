@@ -17,6 +17,7 @@ Le projet suit un **pattern de managers** :
 Main (_ready)
  └─► GameManager.initialize()
       ├─ game_state = GameState.new(game_data)
+      ├─ SaveManager.initialize()     → charge user://save.json dans game_state
       ├─ GameUIManager.initialize()   → instancie GameUI (menus), pilote la navigation
       ├─ LevelManager.initialize()    → instancie Level à la demande
       └─ emit initialized
@@ -30,6 +31,7 @@ Main (_ready)
 Main (main.gd)
 ├─ Global
 │  ├─ GameManager (game_manager.gd)
+│  │  ├─ SaveManager (save_manager.gd)
 │  │  ├─ GameUIManager (game_ui_manager.gd)
 │  │  └─ LevelManager (level_manager.gd)
 │  └─ ManagersValidator (managers_validator.gd, @tool)
@@ -48,7 +50,7 @@ Le seul autoload est **`Sfx`** : sons synthétisés au démarrage, joués avec `
 
 | Dossier | Rôle |
 |---|---|
-| `managers/` | Orchestration : `GameManager`, `Manager` (base abstraite), `GameUIManager`, `LevelManager`, `Sfx` |
+| `managers/` | Orchestration : `GameManager`, `Manager` (base abstraite), `SaveManager`, `GameUIManager`, `LevelManager`, `Sfx` |
 | `state/` | État de la partie : `GameState` |
 | `data/` | Ressources de contenu : `GameData`, `SchoolYearData`, `SubjectData`, `LevelData`, `CreditsData` |
 | `mini_games/` | Données et logique des mini-jeux, un sous-dossier par mini-jeu ; `MiniGameData` et `TextUtil` à la racine |
@@ -80,8 +82,9 @@ Le seul autoload est **`Sfx`** : sons synthétisés au démarrage, joués avec `
 - **Îles bonus :** `island_count` vient de `SubjectData.bonus_island_interval` ; `island_levels(i)`, `is_island_reached(i)`, `island_reward(i)` (moyenne d'étoiles arrondie à l'inférieur) et `claim_island(i)`, qui ne donne que les bonus pas encore récupérés.
 - **Bonus :** `bonus_count`, `add_bonus()`, `spend_bonus()`.
 - **Compteurs :** `completed_level_count()` et `level_count()` filtrent par niveau d'études, et facultativement par année et matière ; `total_progress()` alimente la pastille d'étoiles.
-- **Signaux :** `level_unlocked`, `current_level_changed`, `all_levels_unlocked`, `bonus_count_changed`.
-- **Pas de sauvegarde.**
+- **Signaux :** `level_unlocked`, `current_level_changed`, `all_levels_unlocked`, `bonus_count_changed`, `progress_changed` (toute modification à sauvegarder).
+- **Housing :** `HousingState` (à côté de `GameState`, voir `docs/housing_plan.md`) ; `complete_level()` rend le nombre d'étoiles nouvellement gagnées, utilisé pour les points d'action.
+- **Sauvegarde :** `to_save_data()` produit un dictionnaire JSON (version, bonus, et par matière : level courant, étoiles, îles récupérées) ; `load_save_data()` le relit. `SaveManager`, premier manager initialisé, charge `user://save.json` (version 2 : `progress` et `housing` ; la version 1 est encore lue) (chemin dans `SaveManager.save_path`) et le réécrit à chaque `progress_changed`. La progression est indexée par position (niveau, année, matière, level) : réordonner les levels d'une matière décale la sauvegarde.
 
 ### 3.3 Données : hiérarchie du contenu
 

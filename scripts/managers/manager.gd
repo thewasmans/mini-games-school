@@ -6,6 +6,10 @@ var game_state: GameState:
 	get:
 		return _game_manager.game_state
 
+var housing_state: HousingState:
+	get:
+		return _game_manager.housing_state
+
 var game_data: GameData:
 	get:
 		return _game_manager.game_data

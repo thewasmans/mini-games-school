@@ -12,3 +12,11 @@ extends Resource
 @export var horizontal: bool = true
 @export var placed: bool = false
 @export var number: int = 0
+
+
+func answer_words() -> PackedStringArray:
+	var out := TextUtil.words(word)
+	var whole := TextUtil.to_answer(word)
+	if not out.has(whole):
+		out.append(whole)
+	return out

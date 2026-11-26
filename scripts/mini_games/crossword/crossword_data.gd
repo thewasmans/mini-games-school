@@ -17,6 +17,14 @@ func get_kind_id() -> String:
 	return "crossword"
 
 
+func answer_words() -> PackedStringArray:
+	var out := PackedStringArray()
+	for entry in entries:
+		if entry != null:
+			out.append_array(entry.answer_words())
+	return out
+
+
 func is_generated() -> bool:
 	return grid_width > 0 and grid_height > 0
 

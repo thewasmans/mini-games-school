@@ -11,6 +11,7 @@ signal answer_found(mistake_count: int, hinted: bool)
 var is_completed := false
 var answer_total := 0
 var mistake_count := 0
+var found_answers: Array[Dictionary] = []
 var _missed_answers: Dictionary = {}
 var _hinted_answers: Dictionary = {}
 
@@ -31,8 +32,15 @@ func _mark_hinted(answer_key: Variant) -> void:
 	_hinted_answers[answer_key] = true
 
 
+func answer_words(_answer_key: Variant) -> PackedStringArray:
+	return PackedStringArray()
+
+
 func _answer_found(answer_key: Variant) -> void:
-	answer_found.emit(_missed_answers.get(answer_key, 0), _hinted_answers.has(answer_key))
+	var missed: int = _missed_answers.get(answer_key, 0)
+	var hinted := _hinted_answers.has(answer_key)
+	found_answers.append({"words": answer_words(answer_key), "mistakes": missed, "hinted": hinted})
+	answer_found.emit(missed, hinted)
 
 
 func _finish() -> void:

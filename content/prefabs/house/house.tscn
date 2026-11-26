@@ -1,0 +1,270 @@
+[gd_scene format=3 uid="uid://bojmmfkwegdf7"]
+
+[ext_resource type="Script" uid="uid://drqftke7mylbc" path="res://scripts/house/house.gd" id="1"]
+[ext_resource type="Script" uid="uid://ba7ppbcs560y3" path="res://scripts/house/house_world.gd" id="world"]
+[ext_resource type="PackedScene" uid="uid://b54kmlpndkv0q" path="res://content/prefabs/house/player_character.tscn" id="player"]
+[ext_resource type="PackedScene" uid="uid://b52giqd67oijg" path="res://content/prefabs/ui/house/touch_joystick.tscn" id="joystick"]
+[ext_resource type="PackedScene" uid="uid://boxa1db7u81at" path="res://content/prefabs/ui/house/house_inventory.tscn" id="inventory"]
+[ext_resource type="PackedScene" uid="uid://xnm8b4rncoxt" path="res://content/prefabs/ui/house/item_sign.tscn" id="sign"]
+[ext_resource type="PackedScene" uid="uid://c5347yer7gwac" path="res://content/prefabs/ui/panels/pill.tscn" id="pill"]
+[ext_resource type="PackedScene" uid="uid://b5e04x6g2vyn8" path="res://content/prefabs/ui/panels/action_points_pill.tscn" id="action_pill"]
+[ext_resource type="Script" uid="uid://c45v0m5ykanjk" path="res://scripts/ui/juicy_button.gd" id="juicy"]
+[ext_resource type="Script" uid="uid://c4sgyuaafswdq" path="res://scripts/ui/button_press_animation.gd" id="press"]
+
+[sub_resource type="ProceduralSkyMaterial" id="Sky_house"]
+sky_top_color = Color(0.3725, 0.6, 0.8392, 1)
+sky_horizon_color = Color(0.9686, 0.8549, 0.6824, 1)
+ground_bottom_color = Color(0.4, 0.5686, 0.7333, 1)
+ground_horizon_color = Color(0.9686, 0.8549, 0.6824, 1)
+ground_curve = 0.3
+
+[sub_resource type="Sky" id="Sky_resource"]
+sky_material = SubResource("Sky_house")
+
+[sub_resource type="Environment" id="Environment_house"]
+background_mode = 2
+sky = SubResource("Sky_resource")
+ambient_light_source = 2
+ambient_light_color = Color(1, 0.9216, 0.8, 1)
+ambient_light_energy = 0.55
+
+[node name="House" type="Control" node_paths=PackedStringArray("world_root", "world", "back_button", "play_button", "room_title", "room_counter", "action_points_pill", "camera_drag_area", "joystick", "inventory_button", "primary_button", "secondary_button", "info_button", "inventory", "item_sign", "empty_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+world_root = NodePath("ViewportContainer/Viewport/World")
+world = NodePath("ViewportContainer/Viewport/World/HouseWorld")
+player_prefab = ExtResource("player")
+back_button = NodePath("Hud/Layout/TopRow/BackButton")
+play_button = NodePath("Hud/Layout/TopRow/PlayButton")
+room_title = NodePath("Hud/Layout/TopRow/RoomTitle")
+room_counter = NodePath("Hud/Layout/RoomCounter")
+action_points_pill = NodePath("Hud/Layout/TopRow/ActionPointsPill")
+camera_drag_area = NodePath("CameraDragArea")
+joystick = NodePath("Hud/Layout/BottomRow/Joystick")
+inventory_button = NodePath("Hud/Layout/BottomRow/Actions/InventoryButton")
+primary_button = NodePath("Hud/Layout/BottomRow/Actions/PrimaryButton")
+secondary_button = NodePath("Hud/Layout/BottomRow/Actions/SecondaryButton")
+info_button = NodePath("Hud/Layout/BottomRow/Actions/InfoButton")
+inventory = NodePath("Inventory")
+item_sign = NodePath("ItemSign")
+empty_label = NodePath("EmptyLabel")
+
+[node name="ViewportContainer" type="SubViewportContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+stretch = true
+
+[node name="Viewport" type="SubViewport" parent="ViewportContainer"]
+own_world_3d = true
+handle_input_locally = false
+size = Vector2i(720, 1280)
+render_target_update_mode = 4
+
+[node name="World" type="Node3D" parent="ViewportContainer/Viewport"]
+
+[node name="Environment" type="WorldEnvironment" parent="ViewportContainer/Viewport/World"]
+environment = SubResource("Environment_house")
+
+[node name="Sun" type="DirectionalLight3D" parent="ViewportContainer/Viewport/World"]
+rotation = Vector3(-0.95, 0.55, 0)
+light_color = Color(1, 0.8941, 0.7255, 1)
+light_energy = 1.25
+shadow_enabled = true
+
+[node name="HouseWorld" type="Node3D" parent="ViewportContainer/Viewport/World"]
+script = ExtResource("world")
+
+[node name="CameraDragArea" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Hud" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 30
+
+[node name="Layout" type="VBoxContainer" parent="Hud"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 14
+
+[node name="TopRow" type="HBoxContainer" parent="Hud/Layout"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 12
+
+[node name="BackButton" type="Button" parent="Hud/Layout/TopRow"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 32
+text = ""
+script = ExtResource("juicy")
+color = Color(0.2392, 0.5176, 0.949, 1)
+icon_kind = "back"
+
+[node name="ButtonPressAnimation" type="Node" parent="Hud/Layout/TopRow/BackButton"]
+script = ExtResource("press")
+
+[node name="RoomTitle" type="Label" parent="Hud/Layout/TopRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 36
+text = "Hall du grand-père"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ActionPointsPill" parent="Hud/Layout/TopRow" instance=ExtResource("action_pill")]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="PlayButton" type="Button" parent="Hud/Layout/TopRow"]
+custom_minimum_size = Vector2(150, 80)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 32
+text = "JOUER"
+script = ExtResource("juicy")
+color = Color(0.3725, 0.8275, 0.3529, 1)
+
+[node name="ButtonPressAnimation" type="Node" parent="Hud/Layout/TopRow/PlayButton"]
+script = ExtResource("press")
+
+[node name="RoomCounter" parent="Hud/Layout" instance=ExtResource("pill")]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+theme_type_variation = &"PillBlue"
+text = "0 / 0 objets découverts"
+
+[node name="Spacer" type="Control" parent="Hud/Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="BottomRow" type="HBoxContainer" parent="Hud/Layout"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 12
+
+[node name="Joystick" parent="Hud/Layout/BottomRow" instance=ExtResource("joystick")]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Spacer" type="Control" parent="Hud/Layout/BottomRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Actions" type="VBoxContainer" parent="Hud/Layout/BottomRow"]
+custom_minimum_size = Vector2(270, 0)
+layout_mode = 2
+size_flags_vertical = 8
+mouse_filter = 2
+theme_override_constants/separation = 12
+alignment = 2
+
+[node name="InfoButton" type="Button" parent="Hud/Layout/BottomRow/Actions"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 28
+text = "PANCARTE"
+script = ExtResource("juicy")
+color = Color(0.2392, 0.5176, 0.949, 1)
+icon_left = "scroll"
+
+[node name="ButtonPressAnimation" type="Node" parent="Hud/Layout/BottomRow/Actions/InfoButton"]
+script = ExtResource("press")
+
+[node name="SecondaryButton" type="Button" parent="Hud/Layout/BottomRow/Actions"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 28
+text = "RANGER"
+script = ExtResource("juicy")
+color = Color(1, 0.4196, 0.4549, 1)
+
+[node name="ButtonPressAnimation" type="Node" parent="Hud/Layout/BottomRow/Actions/SecondaryButton"]
+script = ExtResource("press")
+
+[node name="PrimaryButton" type="Button" parent="Hud/Layout/BottomRow/Actions"]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 32
+text = "POSER"
+script = ExtResource("juicy")
+color = Color(0.3725, 0.8275, 0.3529, 1)
+sparkles = true
+
+[node name="ButtonPressAnimation" type="Node" parent="Hud/Layout/BottomRow/Actions/PrimaryButton"]
+script = ExtResource("press")
+
+[node name="InventoryButton" type="Button" parent="Hud/Layout/BottomRow/Actions"]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 32
+text = "OBJETS"
+script = ExtResource("juicy")
+color = Color(1, 0.651, 0.1686, 1)
+icon_left = "book"
+
+[node name="ButtonPressAnimation" type="Node" parent="Hud/Layout/BottomRow/Actions/InventoryButton"]
+script = ExtResource("press")
+
+[node name="EmptyLabel" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 34
+text = "La maison attend ses premières pièces :
+aucune matière n'a encore d'objets."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Inventory" parent="." instance=ExtResource("inventory")]
+visible = false
+layout_mode = 1
+
+[node name="ItemSign" parent="." instance=ExtResource("sign")]
+visible = false
+layout_mode = 1

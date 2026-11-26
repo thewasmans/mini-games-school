@@ -4,13 +4,16 @@
 [ext_resource type="Script" uid="uid://c45v0m5ykanjk" path="res://scripts/ui/juicy_button.gd" id="2"]
 [ext_resource type="Script" uid="uid://c4sgyuaafswdq" path="res://scripts/ui/button_press_animation.gd" id="3"]
 [ext_resource type="PackedScene" uid="uid://d4isb4wtnq55b" path="res://content/prefabs/ui/panels/stars_pill.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://b5e04x6g2vyn8" path="res://content/prefabs/ui/panels/action_points_pill.tscn" id="5"]
 
-[node name="TopBar" type="HBoxContainer" node_paths=PackedStringArray("back_button", "stars_pill", "sound_button")]
+[node name="TopBar" type="HBoxContainer" node_paths=PackedStringArray("back_button", "stars_pill", "action_points_pill", "sound_button", "house_button")]
 theme_override_constants/separation = 14
 script = ExtResource("1")
 back_button = NodePath("BackButton")
-stars_pill = NodePath("Center/StarsPill")
+stars_pill = NodePath("Center/Pills/StarsPill")
+action_points_pill = NodePath("Center/Pills/ActionPointsPill")
 sound_button = NodePath("SoundButton")
+house_button = NodePath("HouseButton")
 
 [node name="BackButton" type="Button" parent="."]
 layout_mode = 2
@@ -28,8 +31,29 @@ script = ExtResource("3")
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="StarsPill" parent="Center" instance=ExtResource("4")]
+[node name="Pills" type="HBoxContainer" parent="Center"]
 layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="StarsPill" parent="Center/Pills" instance=ExtResource("4")]
+layout_mode = 2
+
+[node name="ActionPointsPill" parent="Center/Pills" instance=ExtResource("5")]
+layout_mode = 2
+
+[node name="HouseButton" type="Button" parent="."]
+visible = false
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_minimum_size = Vector2(80, 80)
+tooltip_text = "Maison"
+script = ExtResource("2")
+color = Color(1, 0.651, 0.1686, 1)
+icon_kind = "house"
+
+[node name="ButtonPressAnimation" type="Node" parent="HouseButton"]
+script = ExtResource("3")
 
 [node name="SoundButton" type="Button" parent="."]
 layout_mode = 2
@@ -45,4 +69,5 @@ icon_kind = "gear"
 script = ExtResource("3")
 
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="HouseButton" to="." method="_on_house_button_pressed"]
 [connection signal="pressed" from="SoundButton" to="." method="_on_sound_button_pressed"]

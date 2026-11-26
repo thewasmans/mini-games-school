@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://2dh1b7340a35"]
+
+[ext_resource type="Script" uid="uid://btm4vcqul840c" path="res://scripts/level/discovery_panel.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://bdi7r74ueocq3" path="res://content/prefabs/ui/level/discovery_row.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://dlwcuux7dlrik" path="res://content/prefabs/ui/panels/titled_panel.tscn" id="3"]
+[ext_resource type="Script" uid="uid://c45v0m5ykanjk" path="res://scripts/ui/juicy_button.gd" id="4"]
+[ext_resource type="Texture2D" uid="uid://0cj6gn6d3is7" path="res://content/ui/button_green.png" id="4_cxuow"]
+[ext_resource type="Script" uid="uid://c4sgyuaafswdq" path="res://scripts/ui/button_press_animation.gd" id="5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cxuow"]
+content_margin_left = 22.0
+content_margin_top = 10.0
+content_margin_right = 90.0
+content_margin_bottom = 20.0
+texture = ExtResource("4_cxuow")
+texture_margin_left = 30.0
+texture_margin_top = 20.0
+texture_margin_right = 30.0
+texture_margin_bottom = 24.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0fu2q"]
+content_margin_left = 22.0
+content_margin_top = 14.0
+content_margin_right = 90.0
+content_margin_bottom = 16.0
+texture = ExtResource("4_cxuow")
+texture_margin_left = 30.0
+texture_margin_top = 20.0
+texture_margin_right = 30.0
+texture_margin_bottom = 24.0
+modulate_color = Color(0.9, 0.9, 0.9, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tat1y"]
+content_margin_left = 22.0
+content_margin_top = 10.0
+content_margin_right = 90.0
+content_margin_bottom = 20.0
+texture = ExtResource("4_cxuow")
+texture_margin_left = 30.0
+texture_margin_top = 20.0
+texture_margin_right = 30.0
+texture_margin_bottom = 24.0
+modulate_color = Color(1.12, 1.12, 1.12, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gc4x5"]
+content_margin_left = 22.0
+content_margin_top = 14.0
+content_margin_right = 90.0
+content_margin_bottom = 16.0
+texture = ExtResource("4_cxuow")
+texture_margin_left = 30.0
+texture_margin_top = 20.0
+texture_margin_right = 30.0
+texture_margin_bottom = 24.0
+modulate_color = Color(0.9, 0.9, 0.9, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bc0dr"]
+content_margin_left = 22.0
+content_margin_top = 10.0
+content_margin_right = 90.0
+content_margin_bottom = 20.0
+texture = ExtResource("4_cxuow")
+texture_margin_left = 30.0
+texture_margin_top = 20.0
+texture_margin_right = 30.0
+texture_margin_bottom = 24.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1bkej"]
+content_margin_right = 67.0
+
+[node name="DiscoveryPanel" type="Control" unique_id=275558255 node_paths=PackedStringArray("points_label", "objects_title", "rows_container", "continue_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+points_label = NodePath("Center/Layout/Panel/Layout/Inner/Content/Points")
+objects_title = NodePath("Center/Layout/Panel/Layout/Inner/Content/ObjectsTitle")
+rows_container = NodePath("Center/Layout/Panel/Layout/Inner/Content/Rows")
+continue_button = NodePath("Center/Layout/ContinueButton")
+row_prefab = ExtResource("2")
+
+[node name="Dim" type="ColorRect" parent="." unique_id=621431517]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.04, 0.15, 0.6)
+
+[node name="Center" type="CenterContainer" parent="." unique_id=1652674708]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layout" type="VBoxContainer" parent="Center" unique_id=1965758351]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Panel" parent="Center/Layout" unique_id=14105789 instance=ExtResource("3")]
+layout_mode = 2
+title = "Ta maison"
+
+[node name="Title" parent="Center/Layout/Panel/Layout/Header" index="0"]
+text = "Ta maison"
+
+[node name="Points" type="Label" parent="Center/Layout/Panel/Layout/Inner/Content" index="0" unique_id=1607433100]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8235, 0.2471, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 32
+text = "+2 points d'action"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ObjectsTitle" type="Label" parent="Center/Layout/Panel/Layout/Inner/Content" index="1" unique_id=2048047977]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 26
+text = "Objets à découvrir"
+horizontal_alignment = 1
+
+[node name="Rows" type="VBoxContainer" parent="Center/Layout/Panel/Layout/Inner/Content" index="2" unique_id=677331611]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="ContinueButton" type="Button" parent="Center/Layout" unique_id=760719863]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ButtonGreen"
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_cxuow")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0fu2q")
+theme_override_styles/hover = SubResource("StyleBoxTexture_tat1y")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_gc4x5")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_bc0dr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1bkej")
+text = "CONTINUER"
+script = ExtResource("4")
+icon_right = "next"
+color = Color(0.3725, 0.8275, 0.3529, 1)
+
+[node name="ButtonPressAnimation" type="Node" parent="Center/Layout/ContinueButton" unique_id=1325281085]
+script = ExtResource("5")
+sound = "pop"
+
+[editable path="Center/Layout/Panel"]

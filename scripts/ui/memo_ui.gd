@@ -83,6 +83,10 @@ func _show_question(question_index: int) -> void:
 	UIFeedback.pop_in(question_card, 0.0, 0.85)
 
 
+func answer_words(answer_key: Variant) -> PackedStringArray:
+	return _data.questions[answer_key].answer_words()
+
+
 func use_hint() -> bool:
 	if _locked or is_completed:
 		return false

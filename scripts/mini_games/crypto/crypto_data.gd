@@ -12,3 +12,10 @@ func get_kind_name() -> String:
 
 func get_kind_id() -> String:
 	return "crypto"
+
+
+func answer_words() -> PackedStringArray:
+	var out := PackedStringArray()
+	for sentence in sentences:
+		out.append_array(TextUtil.words(sentence.sentence))
+	return out

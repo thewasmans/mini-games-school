@@ -42,6 +42,7 @@ theme_override_constants/separation = 22
 [node name="TopBar" parent="Margin/Layout" instance=ExtResource("2")]
 layout_mode = 2
 show_back = false
+show_house = true
 
 [node name="TitleBanner" parent="Margin/Layout" instance=ExtResource("3")]
 custom_minimum_size = Vector2(420, 0)

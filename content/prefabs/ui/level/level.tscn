@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dk7bb7ooy4ix2" path="res://content/prefabs/ui/star_gauge.tscn" id="6"]
 [ext_resource type="Script" uid="uid://c45v0m5ykanjk" path="res://scripts/ui/juicy_button.gd" id="7"]
 [ext_resource type="Script" uid="uid://c4sgyuaafswdq" path="res://scripts/ui/button_press_animation.gd" id="8"]
+[ext_resource type="PackedScene" uid="uid://2dh1b7340a35" path="res://content/prefabs/ui/level/discovery_panel.tscn" id="9"]
 
 [node name="Level" type="Control" node_paths=PackedStringArray("top_bar", "title_banner", "star_gauge", "hint_button", "mini_game_container", "missing_mini_game_label", "validate_button")]
 layout_mode = 3
@@ -26,6 +27,7 @@ missing_mini_game_label = NodePath("Margin/Layout/MissingMiniGameLabel")
 validate_button = NodePath("Margin/Layout/ValidateButton")
 mini_game_prefabs = ExtResource("2")
 victory_banner_prefab = ExtResource("3")
+discovery_panel_prefab = ExtResource("9")
 
 [node name="Margin" type="MarginContainer" parent="."]
 layout_mode = 1

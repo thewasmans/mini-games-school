@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://boxa1db7u81at"]
+
+[ext_resource type="Script" uid="uid://dx2ji7fpjlg5k" path="res://scripts/ui/house/house_inventory.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://dlwcuux7dlrik" path="res://content/prefabs/ui/panels/titled_panel.tscn" id="titled"]
+[ext_resource type="Script" uid="uid://c45v0m5ykanjk" path="res://scripts/ui/juicy_button.gd" id="juicy"]
+[ext_resource type="Script" uid="uid://c4sgyuaafswdq" path="res://scripts/ui/button_press_animation.gd" id="press"]
+[ext_resource type="PackedScene" uid="uid://bfgs6ayobhuyt" path="res://content/prefabs/ui/house/inventory_row.tscn" id="row"]
+
+[node name="HouseInventory" type="Control" node_paths=PackedStringArray("panel", "rows_container", "close_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+panel = NodePath("Center/Layout/Panel")
+rows_container = NodePath("Center/Layout/Panel/Layout/Inner/Content/Scroll/Rows")
+close_button = NodePath("Center/Layout/CloseButton")
+row_prefab = ExtResource("row")
+
+[node name="Dim" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.04, 0.15, 0.6)
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layout" type="VBoxContainer" parent="Center"]
+custom_minimum_size = Vector2(640, 0)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Panel" parent="Center/Layout" instance=ExtResource("titled")]
+layout_mode = 2
+title = "Objets"
+
+[node name="Scroll" type="ScrollContainer" parent="Center/Layout/Panel/Layout/Inner/Content"]
+custom_minimum_size = Vector2(0, 760)
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="Rows" type="VBoxContainer" parent="Center/Layout/Panel/Layout/Inner/Content/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="CloseButton" type="Button" parent="Center/Layout"]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 38
+text = "FERMER"
+script = ExtResource("juicy")
+color = Color(0.2392, 0.5176, 0.949, 1)
+icon_left = "back"
+
+[node name="ButtonPressAnimation" type="Node" parent="Center/Layout/CloseButton"]
+script = ExtResource("press")
+
+[editable path="Center/Layout/Panel"]

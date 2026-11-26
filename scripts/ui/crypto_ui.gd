@@ -217,6 +217,16 @@ func _check() -> void:
 	UIFeedback.pop_in(next_button)
 
 
+func answer_words(answer_key: Variant) -> PackedStringArray:
+	var key: Vector2i = answer_key
+	var text := _data.sentences[key.x].sentence.strip_edges()
+	var out := PackedStringArray([TextUtil.word_at(text, key.y)])
+	for span in TextUtil.word_spans(text):
+		if not _hidden.any(func(k: int) -> bool: return k >= span.x and k < span.y):
+			out.append(TextUtil.to_answer(text.substr(span.x, span.y - span.x)))
+	return out
+
+
 func use_hint() -> bool:
 	if _solved or is_completed:
 		return false

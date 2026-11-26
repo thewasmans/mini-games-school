@@ -5,6 +5,8 @@ signal validated(level_index: int, stars: float)
 signal exited
 signal validation_available
 signal hint_requested
+signal rewards_shown
+signal rewards_closed
 
 @export var top_bar: TopBar
 @export var title_banner: TitleBanner
@@ -15,6 +17,7 @@ signal hint_requested
 @export var validate_button: JuicyButton
 @export var mini_game_prefabs: MiniGamePrefabs
 @export var victory_banner_prefab: PackedScene
+@export var discovery_panel_prefab: PackedScene
 
 @export_group("Réglages")
 ## Délai entre la fin du mini-jeu et l'apparition du bouton Valider, en secondes.
@@ -34,6 +37,7 @@ var level_index: int
 var mini_game_ui: MiniGameUI
 var _validated := false
 var _bonus_count := 0
+var _discovery_panel: DiscoveryPanel
 var score := 0
 
 var max_score: int:
@@ -89,6 +93,22 @@ func validate() -> void:
 	validated.emit(level_index, stars)
 
 
+func show_rewards(gained_points: int, action_points: int, progress: Array[Dictionary]) -> void:
+	top_bar.set_action_points(action_points)
+	_discovery_panel = discovery_panel_prefab.instantiate() as DiscoveryPanel
+	add_child(_discovery_panel)
+	_discovery_panel.initialize(gained_points, action_points, progress)
+	_discovery_panel.closed.connect(close_rewards)
+	rewards_shown.emit()
+
+
+func close_rewards() -> void:
+	if _discovery_panel == null:
+		return
+	_discovery_panel = null
+	rewards_closed.emit()
+
+
 func star_thresholds() -> Array[float]:
 	return [one_star_ratio, two_stars_ratio, three_stars_ratio]
 
@@ -101,6 +121,17 @@ func _refresh_hint_button() -> void:
 func points_for(mistake_count: int, hinted: bool) -> int:
 	var points := points_by_mistakes[mini(mistake_count, points_by_mistakes.size() - 1)]
 	return mini(points, hint_points) if hinted else points
+
+
+func word_points() -> Dictionary[String, int]:
+	var result: Dictionary[String, int] = {}
+	if mini_game_ui == null:
+		return result
+	for answer in mini_game_ui.found_answers:
+		var points := points_for(answer.mistakes, answer.hinted)
+		for word: String in answer.words:
+			result[word] = mini(result.get(word, points), points)
+	return result
 
 
 func _on_mini_game_answer_found(mistake_count: int, hinted: bool) -> void:

@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://xnm8b4rncoxt"]
+
+[ext_resource type="Script" uid="uid://824qs6wnrru4" path="res://scripts/ui/house/item_sign.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://dlwcuux7dlrik" path="res://content/prefabs/ui/panels/titled_panel.tscn" id="titled"]
+[ext_resource type="Script" uid="uid://c45v0m5ykanjk" path="res://scripts/ui/juicy_button.gd" id="juicy"]
+[ext_resource type="Script" uid="uid://c4sgyuaafswdq" path="res://scripts/ui/button_press_animation.gd" id="press"]
+
+[node name="ItemSign" type="Control" node_paths=PackedStringArray("panel", "description_label", "mnemonic_label", "replay_button", "close_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+panel = NodePath("Center/Layout/Panel")
+description_label = NodePath("Center/Layout/Panel/Layout/Inner/Content/Description")
+mnemonic_label = NodePath("Center/Layout/Panel/Layout/Inner/Content/Mnemonic")
+replay_button = NodePath("Center/Layout/Buttons/ReplayButton")
+close_button = NodePath("Center/Layout/Buttons/CloseButton")
+
+[node name="Dim" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.04, 0.15, 0.6)
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layout" type="VBoxContainer" parent="Center"]
+custom_minimum_size = Vector2(640, 0)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Panel" parent="Center/Layout" instance=ExtResource("titled")]
+layout_mode = 2
+title = "Objet"
+
+[node name="Description" type="Label" parent="Center/Layout/Panel/Layout/Inner/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Définition"
+autowrap_mode = 3
+
+[node name="Mnemonic" type="Label" parent="Center/Layout/Panel/Layout/Inner/Content"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8235, 0.2471, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 26
+text = "Lien"
+autowrap_mode = 3
+
+[node name="Buttons" type="HBoxContainer" parent="Center/Layout"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="ReplayButton" type="Button" parent="Center/Layout/Buttons"]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 34
+text = "REJOUER"
+script = ExtResource("juicy")
+color = Color(0.3725, 0.8275, 0.3529, 1)
+size_flags_horizontal = 3
+icon_left = "next"
+
+[node name="ButtonPressAnimation" type="Node" parent="Center/Layout/Buttons/ReplayButton"]
+script = ExtResource("press")
+
+[node name="CloseButton" type="Button" parent="Center/Layout/Buttons"]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 34
+text = "FERMER"
+script = ExtResource("juicy")
+color = Color(0.2392, 0.5176, 0.949, 1)
+size_flags_horizontal = 3
+
+[node name="ButtonPressAnimation" type="Node" parent="Center/Layout/Buttons/CloseButton"]
+script = ExtResource("press")
+
+[editable path="Center/Layout/Panel"]

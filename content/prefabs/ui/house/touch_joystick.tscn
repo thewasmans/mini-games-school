@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b52giqd67oijg"]
+
+[ext_resource type="Script" uid="uid://bx6tyqnycxh0n" path="res://scripts/ui/house/touch_joystick.gd" id="1"]
+
+[node name="TouchJoystick" type="Control"]
+custom_minimum_size = Vector2(260, 260)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 260.0
+offset_bottom = 260.0
+script = ExtResource("1")

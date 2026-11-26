@@ -34,3 +34,36 @@ static func to_answer(word: String) -> String:
 		elif is_letter(c):
 			out += normalize_char(c)
 	return out
+
+
+static func is_word_char(c: String) -> bool:
+	return is_letter(c) or c.to_upper() == "Œ" or c.to_upper() == "Æ"
+
+
+static func word_spans(text: String) -> Array[Vector2i]:
+	var spans: Array[Vector2i] = []
+	var start := -1
+	for index in text.length():
+		if is_word_char(text[index]):
+			if start < 0:
+				start = index
+		elif start >= 0:
+			spans.append(Vector2i(start, index))
+			start = -1
+	if start >= 0:
+		spans.append(Vector2i(start, text.length()))
+	return spans
+
+
+static func words(text: String) -> PackedStringArray:
+	var out := PackedStringArray()
+	for span in word_spans(text):
+		out.append(to_answer(text.substr(span.x, span.y - span.x)))
+	return out
+
+
+static func word_at(text: String, index: int) -> String:
+	for span in word_spans(text):
+		if index >= span.x and index < span.y:
+			return to_answer(text.substr(span.x, span.y - span.x))
+	return ""

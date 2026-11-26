@@ -2,6 +2,7 @@ class_name GameUI
 extends Control
 
 signal level_requested(level_index: int)
+signal house_requested
 signal study_level_shown(study_level_index: int)
 
 const NO_STUDY_LEVEL := -1
@@ -29,6 +30,7 @@ func initialize(game_manager: GameManager) -> void:
 	for menu in _menus():
 		menu.hide()
 		menu.initialize(game_manager)
+		menu.house_pressed.connect(house_requested.emit)
 	menu_start.play_pressed.connect(_switch_to.bind(menu_study_levels))
 	menu_start.credits_pressed.connect(_switch_to.bind(menu_credits))
 	menu_credits.back_pressed.connect(_switch_to.bind(menu_start, false))
@@ -47,6 +49,19 @@ func initialize(game_manager: GameManager) -> void:
 
 func show_levels_menu() -> void:
 	menu_levels.show_menu()
+
+
+func show_current_menu() -> void:
+	_current.show_menu()
+
+
+func open_subject_levels(subject_key: Vector3i) -> void:
+	var game_state := _game_manager.game_state
+	game_state.select_study_level(subject_key.x)
+	game_state.select_school_year(subject_key.y)
+	game_state.select_subject(subject_key.z)
+	_skipped_school_years = _game_manager.game_data.get_existing_years(subject_key.x).size() == 1
+	_switch_to(menu_levels)
 
 
 func _menus() -> Array[MenuUI]:

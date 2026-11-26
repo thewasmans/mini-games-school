@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://bfgs6ayobhuyt"]
+
+[ext_resource type="Script" uid="uid://c55jupu638lwl" path="res://scripts/ui/house/inventory_row.gd" id="1"]
+[ext_resource type="Script" uid="uid://8yrap112yt84" path="res://scripts/ui/juicy_progress_bar.gd" id="bar"]
+[ext_resource type="Script" uid="uid://c45v0m5ykanjk" path="res://scripts/ui/juicy_button.gd" id="juicy"]
+[ext_resource type="Script" uid="uid://c4sgyuaafswdq" path="res://scripts/ui/button_press_animation.gd" id="press"]
+
+[node name="InventoryRow" type="PanelContainer" node_paths=PackedStringArray("title_label", "status_label", "bar", "value_label", "action_button")]
+theme_type_variation = &"Tile"
+script = ExtResource("1")
+title_label = NodePath("Layout/Text/Title")
+status_label = NodePath("Layout/Text/Status")
+bar = NodePath("Layout/Text/Gauge/Bar")
+value_label = NodePath("Layout/Text/Gauge/Value")
+action_button = NodePath("Layout/ActionButton")
+
+[node name="Layout" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Text" type="VBoxContainer" parent="Layout"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="Title" type="Label" parent="Layout/Text"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 28
+text = "Objet"
+
+[node name="Status" type="Label" parent="Layout/Text"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Statut"
+autowrap_mode = 3
+
+[node name="Gauge" type="HBoxContainer" parent="Layout/Text"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Bar" type="Control" parent="Layout/Text/Gauge"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 2
+script = ExtResource("bar")
+fill_color = Color(1, 0.8235, 0.2471, 1)
+text = ""
+
+[node name="Value" type="Label" parent="Layout/Text/Gauge"]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "0 / 30"
+horizontal_alignment = 2
+
+[node name="ActionButton" type="Button" parent="Layout"]
+custom_minimum_size = Vector2(170, 80)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 28
+text = "PRENDRE"
+script = ExtResource("juicy")
+color = Color(1, 0.651, 0.1686, 1)
+size_flags_vertical = 4
+
+[node name="ButtonPressAnimation" type="Node" parent="Layout/ActionButton"]
+script = ExtResource("press")
+

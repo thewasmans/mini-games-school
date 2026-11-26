@@ -143,6 +143,8 @@ static func icon(ci: CanvasItem, name: String, c: Vector2, s: float) -> void:
 			ci.draw_line(c + Vector2(0.26, -0.14) * s, c + Vector2(-0.02, 0.14) * s, UIStyle.INK, s * 0.09, true)
 		"lock":
 			lock(ci, c, s)
+		"house":
+			_house(ci, c, s)
 		"sound_off":
 			_gear(ci, c, s)
 			ci.draw_line(c + Vector2(-0.45, -0.45) * s, c + Vector2(0.45, 0.45) * s, UIStyle.INK, s * 0.2, true)
@@ -232,6 +234,15 @@ static func _chevron(ci: CanvasItem, c: Vector2, s: float, left: bool) -> void:
 	var pts := PackedVector2Array([c + Vector2(0.18 * d, -0.36) * s, c + Vector2(-0.2 * d, 0) * s, c + Vector2(0.18 * d, 0.36) * s])
 	ci.draw_polyline(pts, UIStyle.INK, s * 0.34, true)
 	ci.draw_polyline(pts, Color.WHITE, s * 0.2, true)
+
+
+static func _house(ci: CanvasItem, c: Vector2, s: float) -> void:
+	poly(ci, [Vector2(-0.36, -0.02), Vector2(0.36, -0.02), Vector2(0.36, 0.46), Vector2(-0.36, 0.46)], c + Vector2(0.03, 0.04) * s, s, 0.0, Color(0, 0, 0, 0.25))
+	poly(ci, [Vector2(-0.36, -0.04), Vector2(0.36, -0.04), Vector2(0.36, 0.44), Vector2(-0.36, 0.44)], c, s, 0.0, Color("fff4dc"))
+	poly(ci, [Vector2(0.12, -0.04), Vector2(0.36, -0.04), Vector2(0.36, 0.44), Vector2(0.12, 0.44)], c, s, 0.0, Color("f0dcb4"))
+	poly(ci, [Vector2(-0.5, 0.02), Vector2(0.0, -0.48), Vector2(0.5, 0.02), Vector2(0.38, 0.1), Vector2(0.0, -0.3), Vector2(-0.38, 0.1)], c, s, 0.0, Color("e2533f"))
+	poly(ci, [Vector2(-0.1, 0.16), Vector2(0.1, 0.16), Vector2(0.1, 0.44), Vector2(-0.1, 0.44)], c, s, 0.0, Color("8a5a2b"))
+	poly(ci, [Vector2(0.18, 0.06), Vector2(0.3, 0.06), Vector2(0.3, 0.18), Vector2(0.18, 0.18)], c, s, 0.0, Color("6ec6ff"))
 
 
 static func lock(ci: CanvasItem, c: Vector2, s: float) -> void:

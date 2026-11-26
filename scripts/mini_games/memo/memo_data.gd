@@ -11,3 +11,10 @@ func get_kind_name() -> String:
 
 func get_kind_id() -> String:
 	return "memo"
+
+
+func answer_words() -> PackedStringArray:
+	var out := PackedStringArray()
+	for question in questions:
+		out.append_array(question.answer_words())
+	return out

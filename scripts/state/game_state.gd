@@ -5,6 +5,7 @@ signal level_unlocked(level_index: int)
 signal current_level_changed(level_index: int)
 signal all_levels_unlocked
 signal bonus_count_changed(bonus_count: int)
+signal progress_changed
 
 var current_study_level := 0
 var current_school_year := 0
@@ -20,6 +21,10 @@ var _claimed_islands: Dictionary[Vector3i, Dictionary] = {}
 var current_level: int:
 	get:
 		return _current_levels.get(_progress_key(), 0)
+
+var current_subject_key: Vector3i:
+	get:
+		return _progress_key()
 
 var current_levels: Array[LevelData]:
 	get:
@@ -53,6 +58,7 @@ func select_subject(subject_index: int) -> void:
 func select_level(level_index: int) -> void:
 	_current_levels[_progress_key()] = level_index
 	current_level_changed.emit(level_index)
+	progress_changed.emit()
 
 
 func is_level_unlocked(level_index: int) -> bool:
@@ -74,17 +80,20 @@ func level_stars(level_index: int) -> float:
 	return _completed_in(_progress_key()).get(level_index, 0.0)
 
 
-func complete_level(level_index: int, stars := 3.0) -> void:
+func complete_level(level_index: int, stars := 3.0) -> int:
 	var completed_levels := _completed_in(_progress_key())
 	var first_completion := not completed_levels.has(level_index)
-	completed_levels[level_index] = maxf(completed_levels.get(level_index, 0.0), stars)
+	var previous_stars: float = completed_levels.get(level_index, 0.0)
+	completed_levels[level_index] = maxf(previous_stars, stars)
+	var new_stars := maxi(floori(stars + 0.001) - floori(previous_stars + 0.001), 0)
+	progress_changed.emit()
 	if not first_completion:
-		return
+		return new_stars
 	var next_level_index := level_index + 1
-	if next_level_index >= current_levels.size():
-		return
-	level_unlocked.emit(next_level_index)
-	select_level(next_level_index)
+	if next_level_index < current_levels.size():
+		level_unlocked.emit(next_level_index)
+		select_level(next_level_index)
+	return new_stars
 
 
 func island_levels(island_index: int) -> Array[int]:
@@ -125,6 +134,7 @@ func claim_island(island_index: int) -> int:
 func add_bonus(count: int) -> void:
 	bonus_count += count
 	bonus_count_changed.emit(bonus_count)
+	progress_changed.emit()
 
 
 func spend_bonus() -> bool:
@@ -132,6 +142,7 @@ func spend_bonus() -> bool:
 		return false
 	bonus_count -= 1
 	bonus_count_changed.emit(bonus_count)
+	progress_changed.emit()
 	return true
 
 
@@ -162,6 +173,50 @@ func total_progress() -> Vector2i:
 	for study_level_index in GameData.STUDY_NAMES.size():
 		progress += Vector2i(completed_level_count(study_level_index), level_count(study_level_index))
 	return progress
+
+
+func to_save_data() -> Dictionary:
+	var keys: Array[Vector3i] = []
+	for key: Vector3i in _current_levels.keys() + _completed_levels.keys() + _claimed_islands.keys():
+		if not keys.has(key):
+			keys.append(key)
+	var subjects: Array[Dictionary] = []
+	for key in keys:
+		subjects.append({
+			"key": [key.x, key.y, key.z],
+			"current_level": _current_levels.get(key, 0),
+			"stars": _string_keyed(_completed_levels.get(key, {})),
+			"claimed_islands": _string_keyed(_claimed_islands.get(key, {})),
+		})
+	return {"bonus_count": bonus_count, "subjects": subjects}
+
+
+func load_save_data(data: Dictionary) -> void:
+	bonus_count = int(data.get("bonus_count", 0))
+	_current_levels.clear()
+	_completed_levels.clear()
+	_claimed_islands.clear()
+	for subject: Dictionary in data.get("subjects", []):
+		var raw_key: Array = subject.get("key", [])
+		if raw_key.size() != 3:
+			continue
+		var key := Vector3i(int(raw_key[0]), int(raw_key[1]), int(raw_key[2]))
+		_current_levels[key] = int(subject.get("current_level", 0))
+		var stars := _completed_in(key)
+		var saved_stars: Dictionary = subject.get("stars", {})
+		for level_index: String in saved_stars:
+			stars[int(level_index)] = float(saved_stars[level_index])
+		var claimed := _claimed_in(key)
+		var saved_claimed: Dictionary = subject.get("claimed_islands", {})
+		for island_index: String in saved_claimed:
+			claimed[int(island_index)] = int(saved_claimed[island_index])
+
+
+func _string_keyed(source: Dictionary) -> Dictionary:
+	var result := {}
+	for index: int in source:
+		result[str(index)] = source[index]
+	return result
 
 
 func _matches(key: Vector3i, study_level_index: int, school_year_index: int, subject_index: int) -> bool:

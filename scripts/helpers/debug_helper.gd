@@ -2,6 +2,7 @@ class_name DebugHelper
 extends CanvasLayer
 
 const HINT_REFRESH_INTERVAL := 0.3
+const DEBUG_ACTION_POINTS := 50
 
 @export var bar: PanelContainer
 @export var auto_fill_check: CheckBox
@@ -9,6 +10,7 @@ const HINT_REFRESH_INTERVAL := 0.3
 @export var show_hints_check: CheckBox
 @export var unlock_all_button: Button
 @export var add_bonus_button: Button
+@export var unlock_house_button: Button
 @export var hint_label: Label
 
 var _game_manager: GameManager
@@ -26,6 +28,7 @@ func initialize(game_manager: GameManager) -> void:
 	show_hints_check.toggled.connect(_on_show_hints_toggled)
 	unlock_all_button.pressed.connect(game_manager.game_state.unlock_all_levels)
 	add_bonus_button.pressed.connect(game_manager.game_state.add_bonus.bind(3))
+	unlock_house_button.pressed.connect(game_manager.housing_state.unlock_all.bind(DEBUG_ACTION_POINTS))
 	game_manager.level_manager.level_started.connect(_on_level_started)
 
 
@@ -50,6 +53,7 @@ func _on_level_started(level: Level) -> void:
 	_level = level
 	_cheat = _make_cheat(level.mini_game_ui) if level.mini_game_ui != null else null
 	level.validation_available.connect(_on_validation_available)
+	level.rewards_shown.connect(_on_rewards_shown)
 	level.tree_exited.connect(_on_level_closed.bind(level))
 	_refresh_hint()
 	if auto_fill_check.button_pressed:
@@ -85,6 +89,11 @@ func _on_show_hints_toggled(_on: bool) -> void:
 func _on_validation_available() -> void:
 	if auto_validate_check.button_pressed:
 		_level.validate()
+
+
+func _on_rewards_shown() -> void:
+	if auto_validate_check.button_pressed:
+		_level.close_rewards()
 
 
 func _start_autofill() -> void:

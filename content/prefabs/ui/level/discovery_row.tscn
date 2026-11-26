@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bdi7r74ueocq3"]
+
+[ext_resource type="Script" uid="uid://bpn32hpp175" path="res://scripts/level/discovery_row.gd" id="1"]
+[ext_resource type="Script" uid="uid://8yrap112yt84" path="res://scripts/ui/juicy_progress_bar.gd" id="2"]
+
+[node name="DiscoveryRow" type="HBoxContainer" unique_id=1962647267 node_paths=PackedStringArray("title_label", "bar", "value_label", "new_label")]
+theme_override_constants/separation = 12
+script = ExtResource("1")
+title_label = NodePath("Text/Title")
+bar = NodePath("Text/Gauge/Bar")
+value_label = NodePath("Text/Gauge/Value")
+new_label = NodePath("Text/NewItem")
+
+[node name="Text" type="VBoxContainer" parent="." unique_id=2030742601]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="Title" type="Label" parent="Text" unique_id=1818017426]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 28
+text = "Objet"
+
+[node name="Gauge" type="HBoxContainer" parent="Text" unique_id=920832696]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Bar" type="Control" parent="Text/Gauge" unique_id=72280887]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 2
+script = ExtResource("2")
+fill_color = Color(1, 0.8235, 0.2471, 1)
+text = ""
+
+[node name="Value" type="Label" parent="Text/Gauge" unique_id=2077607422]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 26
+text = "0 / 30"
+horizontal_alignment = 2
+
+[node name="NewItem" type="Label" parent="Text" unique_id=365781762]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8235, 0.2471, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 28
+text = "Nouvel objet !"
+horizontal_alignment = 1
