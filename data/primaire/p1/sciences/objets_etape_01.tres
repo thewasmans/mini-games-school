@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bb77vjx6rthad"]
 
-[ext_resource type="Script" path="res://scripts/mini_games/crossword/word_data.gd" id="1_swr1u"]
-[ext_resource type="Script" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_re3l4"]
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_swr1u"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_re3l4"]
 
 [sub_resource type="Resource" id="Resource_d7i4n"]
 script = ExtResource("1_swr1u")

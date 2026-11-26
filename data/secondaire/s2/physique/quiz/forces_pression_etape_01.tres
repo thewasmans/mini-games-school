@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bp1klfb1p5y1o"]
 
-[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_30lvc"]
-[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="2_jte2f"]
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_30lvc"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_jte2f"]
 
 [sub_resource type="Resource" id="Resource_kkqmd"]
 script = ExtResource("1_30lvc")
