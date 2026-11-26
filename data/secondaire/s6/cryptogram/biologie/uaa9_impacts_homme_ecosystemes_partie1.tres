@@ -37,4 +37,5 @@ text = "L'introduction d'espèces invasives perturbe les équilibres."
 
 [resource]
 script = ExtResource("2_m1fq5")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_mcd1u")]([SubResource("Resource_t11lq"), SubResource("Resource_1pwa0"), SubResource("Resource_3s0pi"), SubResource("Resource_u70h3"), SubResource("Resource_by84q"), SubResource("Resource_7dvtt"), SubResource("Resource_73xt7"), SubResource("Resource_mghin")])

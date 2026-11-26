@@ -21,4 +21,5 @@ text = "Le nombre d'oxydation indique le degré."
 
 [resource]
 script = ExtResource("2_lh4o6")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_vr1g3")]([SubResource("Resource_o2ist"), SubResource("Resource_0rr4i"), SubResource("Resource_fgmax"), SubResource("Resource_4dnw1")])

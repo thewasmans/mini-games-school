@@ -29,4 +29,5 @@ text = "La célérité est la vitesse de propagation de l'onde."
 
 [resource]
 script = ExtResource("2_7trrn")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_b0fwg")]([SubResource("Resource_5isa6"), SubResource("Resource_adfhm"), SubResource("Resource_gy6mk"), SubResource("Resource_pdffy"), SubResource("Resource_if25u"), SubResource("Resource_m4rji")])

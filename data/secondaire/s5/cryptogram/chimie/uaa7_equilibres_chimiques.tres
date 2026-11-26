@@ -39,4 +39,5 @@ text = "Une augmentation de température déplace l'équilibre dans le sens endo
 
 [resource]
 script = ExtResource("2_b61c6")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_4i6ql")]([SubResource("Resource_al0js"), SubResource("Resource_nqkq1"), SubResource("Resource_qecwk"), SubResource("Resource_oiddf"), SubResource("Resource_4vx2m"), SubResource("Resource_7atbe"), SubResource("Resource_vlsk3"), SubResource("Resource_4p5gf")])

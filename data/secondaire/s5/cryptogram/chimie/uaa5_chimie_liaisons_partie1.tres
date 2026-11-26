@@ -37,4 +37,5 @@ text = "Les molécules polaires possèdent un moment dipolaire global non nul."
 
 [resource]
 script = ExtResource("2_5vpfo")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_l8doa")]([SubResource("Resource_244pb"), SubResource("Resource_u0q6b"), SubResource("Resource_sro7m"), SubResource("Resource_86cfn"), SubResource("Resource_2x71c"), SubResource("Resource_otskc"), SubResource("Resource_epiax"), SubResource("Resource_0v53l")])

@@ -29,4 +29,5 @@ text = "L'entropie mesure le désordre d'un système."
 
 [resource]
 script = ExtResource("2_paoyk")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_wkfia")]([SubResource("Resource_kul3n"), SubResource("Resource_ypjuv"), SubResource("Resource_ofp0j"), SubResource("Resource_1texo"), SubResource("Resource_pa1a5"), SubResource("Resource_yb218")])

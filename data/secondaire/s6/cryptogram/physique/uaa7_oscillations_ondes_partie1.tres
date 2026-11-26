@@ -29,4 +29,5 @@ text = "Le pendule simple oscille sous l'effet du poids."
 
 [resource]
 script = ExtResource("2_tdy36")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_ft5jb")]([SubResource("Resource_mmyy0"), SubResource("Resource_ctc1g"), SubResource("Resource_iat3m"), SubResource("Resource_r4kl6"), SubResource("Resource_e6or8"), SubResource("Resource_htgau")])

@@ -38,4 +38,5 @@ text = "Les arbres généalogiques suivent la transmission héréditaire."
 
 [resource]
 script = ExtResource("2_jv31k")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_8rtfi")]([SubResource("Resource_xcg46"), SubResource("Resource_hw75b"), SubResource("Resource_h52pm"), SubResource("Resource_ksj07"), SubResource("Resource_ruhi5"), SubResource("Resource_edydi"), SubResource("Resource_12jwq"), SubResource("Resource_42fod")])

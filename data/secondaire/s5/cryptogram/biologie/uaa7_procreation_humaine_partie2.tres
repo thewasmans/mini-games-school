@@ -37,4 +37,5 @@ text = "La fécondation in vitro (FIV) se réalise en laboratoire."
 
 [resource]
 script = ExtResource("2_7j2gd")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_6nvaf")]([SubResource("Resource_8xy0d"), SubResource("Resource_5tqa5"), SubResource("Resource_3ry6j"), SubResource("Resource_fyc6l"), SubResource("Resource_ahdhm"), SubResource("Resource_gbf53"), SubResource("Resource_j1dln"), SubResource("Resource_hp2ld")])

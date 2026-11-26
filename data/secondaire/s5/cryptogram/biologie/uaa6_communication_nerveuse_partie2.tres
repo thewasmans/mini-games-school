@@ -38,4 +38,5 @@ text = "La période réfractaire empêche le retour en arrière de l'influx."
 
 [resource]
 script = ExtResource("2_brx36")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_2521m")]([SubResource("Resource_b7q7w"), SubResource("Resource_np7w3"), SubResource("Resource_qkv3d"), SubResource("Resource_d7e2f"), SubResource("Resource_81jry"), SubResource("Resource_c6y60"), SubResource("Resource_07gx5"), SubResource("Resource_6lgfx")])

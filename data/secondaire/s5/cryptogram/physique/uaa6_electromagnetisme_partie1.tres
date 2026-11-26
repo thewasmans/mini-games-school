@@ -29,4 +29,5 @@ text = "Le moteur électrique convertit l'électricité en mouvement."
 
 [resource]
 script = ExtResource("2_c161m")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_peol5")]([SubResource("Resource_rwqlm"), SubResource("Resource_qj384"), SubResource("Resource_2mytj"), SubResource("Resource_jta3o"), SubResource("Resource_m800p"), SubResource("Resource_3dla1")])

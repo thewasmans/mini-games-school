@@ -37,4 +37,5 @@ text = "Une lésion du système nerveux entraîne des troubles moteurs ou sensit
 
 [resource]
 script = ExtResource("2_o7gto")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_0n17w")]([SubResource("Resource_rix5s"), SubResource("Resource_wlb2a"), SubResource("Resource_483bb"), SubResource("Resource_uj886"), SubResource("Resource_rui8a"), SubResource("Resource_o7hr8"), SubResource("Resource_q5lrd"), SubResource("Resource_dolof")])

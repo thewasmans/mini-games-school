@@ -37,4 +37,5 @@ text = "La nomenclature IUPAC permet de nommer précisément les molécules."
 
 [resource]
 script = ExtResource("2_g6jte")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_grruk")]([SubResource("Resource_evj23"), SubResource("Resource_03pf4"), SubResource("Resource_r4urb"), SubResource("Resource_7j7uf"), SubResource("Resource_c5glo"), SubResource("Resource_jd52p"), SubResource("Resource_cymu3"), SubResource("Resource_ydhw0")])

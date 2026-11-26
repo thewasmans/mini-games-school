@@ -21,4 +21,5 @@ text = "L'électrolyse force une réaction non spontanée."
 
 [resource]
 script = ExtResource("2_ef4ff")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_4fsmb")]([SubResource("Resource_1jgx7"), SubResource("Resource_h70mx"), SubResource("Resource_07qqk"), SubResource("Resource_fhnmn")])

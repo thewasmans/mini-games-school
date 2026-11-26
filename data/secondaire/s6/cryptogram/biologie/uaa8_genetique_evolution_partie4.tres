@@ -37,4 +37,5 @@ text = "La biogéographie explique la répartition actuelle des espèces."
 
 [resource]
 script = ExtResource("2_pq0gp")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_42jxl")]([SubResource("Resource_fkofb"), SubResource("Resource_h16kt"), SubResource("Resource_ld21l"), SubResource("Resource_rn5bf"), SubResource("Resource_4fpbw"), SubResource("Resource_by8le"), SubResource("Resource_75fwq"), SubResource("Resource_kgg2u")])

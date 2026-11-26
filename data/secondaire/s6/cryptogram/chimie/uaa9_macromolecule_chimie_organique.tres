@@ -29,4 +29,5 @@ text = "Les plastiques proviennent de la pétrochimie."
 
 [resource]
 script = ExtResource("2_o36gp")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_q5e4o")]([SubResource("Resource_al7tn"), SubResource("Resource_1p6jy"), SubResource("Resource_144nj"), SubResource("Resource_gkhbs"), SubResource("Resource_0f7qh"), SubResource("Resource_wcgfn")])

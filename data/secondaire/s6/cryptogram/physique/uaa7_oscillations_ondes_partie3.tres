@@ -29,4 +29,5 @@ text = "La diffraction contourne les obstacles."
 
 [resource]
 script = ExtResource("2_p4d6b")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_2mwps")]([SubResource("Resource_m0ces"), SubResource("Resource_qe8jo"), SubResource("Resource_top2l"), SubResource("Resource_50g12"), SubResource("Resource_xerrf"), SubResource("Resource_yghqn")])

@@ -37,4 +37,5 @@ text = "L'empreinte écologique mesure la pression humaine sur la Terre."
 
 [resource]
 script = ExtResource("2_q1jje")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_u0prk")]([SubResource("Resource_hbuxi"), SubResource("Resource_geu0y"), SubResource("Resource_5lrm8"), SubResource("Resource_8iti5"), SubResource("Resource_ev70u"), SubResource("Resource_8c7ur"), SubResource("Resource_ck78g"), SubResource("Resource_rtn42")])

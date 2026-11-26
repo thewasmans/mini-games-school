@@ -29,4 +29,5 @@ text = "L'énergie mécanique se conserve en système isolé."
 
 [resource]
 script = ExtResource("2_wclw4")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_6r0bx")]([SubResource("Resource_6hyoy"), SubResource("Resource_0cu78"), SubResource("Resource_028g7"), SubResource("Resource_h65q4"), SubResource("Resource_8183a"), SubResource("Resource_c5lsl")])

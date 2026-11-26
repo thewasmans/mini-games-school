@@ -37,4 +37,5 @@ text = "Les flores cutanées et muqueuses bloquent les germes opportunistes."
 
 [resource]
 script = ExtResource("2_ouj12")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_vgfld")]([SubResource("Resource_eumcb"), SubResource("Resource_cyp36"), SubResource("Resource_tl8tf"), SubResource("Resource_hhfpg"), SubResource("Resource_jhm8p"), SubResource("Resource_byanb"), SubResource("Resource_ul0ls"), SubResource("Resource_ncsrm")])

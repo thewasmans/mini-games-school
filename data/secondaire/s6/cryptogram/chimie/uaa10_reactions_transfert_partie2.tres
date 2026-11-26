@@ -21,4 +21,5 @@ text = "Le pKa caractérise un couple acide base."
 
 [resource]
 script = ExtResource("2_08bux")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_e0eje")]([SubResource("Resource_i3ljy"), SubResource("Resource_705g2"), SubResource("Resource_v62no"), SubResource("Resource_rfq8e")])

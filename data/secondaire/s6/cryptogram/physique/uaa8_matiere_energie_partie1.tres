@@ -29,4 +29,5 @@ text = "La capacité thermique caractérise un corps."
 
 [resource]
 script = ExtResource("2_fhxhy")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_c4ukg")]([SubResource("Resource_ioypi"), SubResource("Resource_f4phx"), SubResource("Resource_uibec"), SubResource("Resource_2617o"), SubResource("Resource_dt2y7"), SubResource("Resource_vnmtr")])

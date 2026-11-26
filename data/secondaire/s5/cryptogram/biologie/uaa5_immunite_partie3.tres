@@ -37,4 +37,5 @@ text = "La vaccination repose sur cette mémoire immunitaire."
 
 [resource]
 script = ExtResource("2_hjwp0")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_jh84h")]([SubResource("Resource_1q3tw"), SubResource("Resource_1lkqm"), SubResource("Resource_yhet5"), SubResource("Resource_qeymm"), SubResource("Resource_a4qm7"), SubResource("Resource_3tgc8"), SubResource("Resource_g2u7t"), SubResource("Resource_2mvpp")])

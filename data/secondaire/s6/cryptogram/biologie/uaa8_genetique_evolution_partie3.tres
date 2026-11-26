@@ -37,4 +37,5 @@ text = "Les mutations aléatoires alimentent la variabilité évolutive."
 
 [resource]
 script = ExtResource("2_62utf")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_2hadp")]([SubResource("Resource_qnlco"), SubResource("Resource_n56wl"), SubResource("Resource_llgpm"), SubResource("Resource_puff2"), SubResource("Resource_g6bsf"), SubResource("Resource_f3d6m"), SubResource("Resource_0w6bt"), SubResource("Resource_ac1v4")])

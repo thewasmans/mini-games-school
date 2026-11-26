@@ -21,4 +21,5 @@ text = "Le pH mesure l'acidité d'une solution."
 
 [resource]
 script = ExtResource("2_vcdbh")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_butqd")]([SubResource("Resource_dtwjh"), SubResource("Resource_qy8fo"), SubResource("Resource_jb0ta"), SubResource("Resource_qtnmd")])

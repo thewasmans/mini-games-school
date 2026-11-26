@@ -29,4 +29,5 @@ text = "Les ondes électromagnétiques se propagent dans l'espace."
 
 [resource]
 script = ExtResource("2_vx3ed")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_3sbod")]([SubResource("Resource_mm0ee"), SubResource("Resource_aipg7"), SubResource("Resource_73hi2"), SubResource("Resource_cp4ri"), SubResource("Resource_kk1cb"), SubResource("Resource_w84u0")])

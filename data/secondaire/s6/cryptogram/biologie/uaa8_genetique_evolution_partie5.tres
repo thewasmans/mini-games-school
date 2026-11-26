@@ -37,4 +37,5 @@ text = "La génétique des populations étudie l'évolution des gènes humains."
 
 [resource]
 script = ExtResource("2_uefqo")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_1bajo")]([SubResource("Resource_q7lut"), SubResource("Resource_yfdub"), SubResource("Resource_oub6s"), SubResource("Resource_lcy8v"), SubResource("Resource_xe3jd"), SubResource("Resource_mp3tq"), SubResource("Resource_homkl"), SubResource("Resource_qc7nb")])

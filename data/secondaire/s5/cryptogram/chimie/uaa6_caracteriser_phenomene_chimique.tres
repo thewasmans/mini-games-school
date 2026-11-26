@@ -37,4 +37,5 @@ text = "Une réaction endothermique absorbe de l'énergie thermique."
 
 [resource]
 script = ExtResource("2_du2mk")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_tpsul")]([SubResource("Resource_eyoer"), SubResource("Resource_i3v0r"), SubResource("Resource_ifr4m"), SubResource("Resource_856nh"), SubResource("Resource_hw7l5"), SubResource("Resource_tetsl"), SubResource("Resource_nxfmi"), SubResource("Resource_c6h7q")])

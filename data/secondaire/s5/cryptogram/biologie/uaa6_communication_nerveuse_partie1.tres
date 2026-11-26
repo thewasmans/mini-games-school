@@ -37,4 +37,5 @@ text = "Les neurotransmetteurs libérés traversent la fente synaptique."
 
 [resource]
 script = ExtResource("2_5acoq")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_bs40h")]([SubResource("Resource_fi0tp"), SubResource("Resource_cqaaa"), SubResource("Resource_88ogp"), SubResource("Resource_31din"), SubResource("Resource_sg6dm"), SubResource("Resource_rfvln"), SubResource("Resource_tycu2"), SubResource("Resource_opar5")])

@@ -38,4 +38,5 @@ text = "La solubilité dépend de la polarité des solvants et des solutés."
 
 [resource]
 script = ExtResource("2_xeycn")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_gtpa0")]([SubResource("Resource_c1712"), SubResource("Resource_0oakg"), SubResource("Resource_fsdb3"), SubResource("Resource_otdnq"), SubResource("Resource_7h5qq"), SubResource("Resource_knqm4"), SubResource("Resource_nr4xc"), SubResource("Resource_w72u1")])

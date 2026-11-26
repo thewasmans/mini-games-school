@@ -38,4 +38,5 @@ text = "Les réactions organiques transforment les groupes caractéristiques."
 
 [resource]
 script = ExtResource("2_hwild")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_blawb")]([SubResource("Resource_hjml7"), SubResource("Resource_hvv3e"), SubResource("Resource_7wf1o"), SubResource("Resource_1mbrm"), SubResource("Resource_26rk5"), SubResource("Resource_kkiue"), SubResource("Resource_q4x47"), SubResource("Resource_y4bj0")])

@@ -29,4 +29,5 @@ text = "La force de frottement s'oppose au mouvement."
 
 [resource]
 script = ExtResource("2_wn0eq")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_ayp1w")]([SubResource("Resource_ito8h"), SubResource("Resource_wibn0"), SubResource("Resource_kq54j"), SubResource("Resource_4xfub"), SubResource("Resource_3wa3x"), SubResource("Resource_r6857")])

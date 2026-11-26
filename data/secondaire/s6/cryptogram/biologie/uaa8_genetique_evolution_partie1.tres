@@ -38,4 +38,5 @@ text = "Les brassages chromosomiques génèrent la diversité génétique."
 
 [resource]
 script = ExtResource("2_7422i")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_nt7y8")]([SubResource("Resource_evho5"), SubResource("Resource_pdcgj"), SubResource("Resource_8q68x"), SubResource("Resource_w8dl0"), SubResource("Resource_6xh8w"), SubResource("Resource_6r6ij"), SubResource("Resource_moumv"), SubResource("Resource_8stvw")])

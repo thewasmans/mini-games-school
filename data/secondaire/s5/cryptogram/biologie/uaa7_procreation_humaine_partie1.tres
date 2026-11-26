@@ -38,4 +38,5 @@ text = "La fécondation a lieu dans les trompes de Fallope."
 
 [resource]
 script = ExtResource("2_4xs2m")
+hidden_letter_ratio = 0.05
 phrases = Array[ExtResource("1_3uu0g")]([SubResource("Resource_cqwxh"), SubResource("Resource_n585j"), SubResource("Resource_rpk7i"), SubResource("Resource_4fpk3"), SubResource("Resource_cpij1"), SubResource("Resource_b42th"), SubResource("Resource_hicp5"), SubResource("Resource_lyi1w")])
