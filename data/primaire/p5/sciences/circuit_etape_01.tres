@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bncullqgpyo5r"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_2ra4r"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_qnk21"]
+
+[sub_resource type="Resource" id="Resource_2un26"]
+script = ExtResource("1_2ra4r")
+word = "LAMPE"
+hint = "Elément lumineux qui sert de récepteur dans un circuit simple."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_5ii6e"]
+script = ExtResource("1_2ra4r")
+word = "ISOLANT"
+hint = "Caractérise un matériau qui ne conduit pas le courant électrique, comme le plastique."
+grid_position = Vector2i(0, 1)
+
+[sub_resource type="Resource" id="Resource_n4app"]
+script = ExtResource("1_2ra4r")
+word = "OUVERT"
+hint = "Circuit dont le courant ne passe pas et le récepteur (lampe) se coupe (s'éteint)."
+grid_position = Vector2i(1, 4)
+
+[sub_resource type="Resource" id="Resource_8kvef"]
+script = ExtResource("1_2ra4r")
+word = "FIL"
+hint = "Autre terme correspondant à des câbles électriques."
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_qnk21")
+clues = Array[ExtResource("1_2ra4r")]([SubResource("Resource_2un26"), SubResource("Resource_5ii6e"), SubResource("Resource_n4app"), SubResource("Resource_8kvef")])
+school_year = "P5"
+title = "Les circuits électriques"

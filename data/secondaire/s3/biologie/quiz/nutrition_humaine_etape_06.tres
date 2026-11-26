@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://n4koow3k6q1d"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_bmc0i"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_uopcy"]
+
+[sub_resource type="Resource" id="Resource_asbjk"]
+script = ExtResource("1_bmc0i")
+question = "Quelle structure permet à l'air d'entrer et gonfle ?"
+choices = Array[String](["Poumon.", "Alvéole.", "Trachée.", "Diaphragme."])
+
+[sub_resource type="Resource" id="Resource_puv3f"]
+script = ExtResource("1_bmc0i")
+question = "Quelle structure est un tube composé de cartilages entre la gorge et les poumons ?"
+choices = Array[String](["Poumon.", "Alvéole.", "Trachée.", "Diaphragme."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_6p6ma"]
+script = ExtResource("1_bmc0i")
+question = "Quelle structure joue un rôle musculaire lors de la respiration ?"
+choices = Array[String](["Poumon.", "Alvéole.", "Trachée.", "Diaphragme."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_gaa2x"]
+script = ExtResource("1_bmc0i")
+question = "Qu'est-ce que l'épiglotte ?"
+choices = Array[String](["Un clapet.", "Une structure qui se ferme lors de la digestion.", "Une structure qui s'ouvre lors de la respiration.", "Toutes ces réponses sont justes."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_3nxg6"]
+script = ExtResource("1_bmc0i")
+question = "Comment peut-on appeler les deux organes représentés en rouge ?"
+choices = Array[String](["Les testicules.", "Les reins.", "Les poumons.", "Deux os de la colonne."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_g3rit"]
+script = ExtResource("1_bmc0i")
+question = "Quel est le rôle du rein ?"
+choices = Array[String](["Réguler la glycémie.", "Fabriquer l'urine.", "Pomper le sang.", "Stocker des globules blances."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_uopcy")
+questions = Array[ExtResource("1_bmc0i")]([SubResource("Resource_asbjk"), SubResource("Resource_puv3f"), SubResource("Resource_6p6ma"), SubResource("Resource_gaa2x"), SubResource("Resource_3nxg6"), SubResource("Resource_g3rit")])
+school_year = "S3"
+title = "La nutrition humaine"

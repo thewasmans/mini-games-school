@@ -1,0 +1,105 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://c545vv482b75"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_5vu30"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_4mgkg"]
+
+[sub_resource type="Resource" id="Resource_tdvqs"]
+script = ExtResource("1_5vu30")
+word = "VIVO"
+hint = "Caractérise une expérience qui se déroule dans le vivant."
+grid_position = Vector2i(8, 3)
+
+[sub_resource type="Resource" id="Resource_br1nc"]
+script = ExtResource("1_5vu30")
+word = "IRM"
+hint = "Acronyme d'imagerie par résonance magnétique."
+grid_position = Vector2i(7, 5)
+
+[sub_resource type="Resource" id="Resource_bvvuw"]
+script = ExtResource("1_5vu30")
+word = "MACROPHAGE"
+hint = "Globule blanc aspécifique capable de phagocytose."
+grid_position = Vector2i(11, 14)
+
+[sub_resource type="Resource" id="Resource_5e8kx"]
+script = ExtResource("1_5vu30")
+word = "SOI"
+hint = "Se dit de ce qui appartient au corps, de ce qui est reconnu par le SI."
+grid_position = Vector2i(5, 14)
+
+[sub_resource type="Resource" id="Resource_4xf57"]
+script = ExtResource("1_5vu30")
+word = "MATURATION"
+hint = "Transformation qui consiste à rendre les lymphocytes immunocompétents."
+grid_position = Vector2i(0, 7)
+
+[sub_resource type="Resource" id="Resource_ndy2t"]
+script = ExtResource("1_5vu30")
+word = "SOUCHES"
+hint = "Cellules immatures qui peuvent se transformer en n'importe quelles autres cellules."
+grid_position = Vector2i(1, 12)
+
+[sub_resource type="Resource" id="Resource_li645"]
+script = ExtResource("1_5vu30")
+word = "CYTOTOXIQUES"
+hint = "Lymphocytes TCD8, capables de détruire des cellules infectées."
+grid_position = Vector2i(5, 9)
+
+[sub_resource type="Resource" id="Resource_ob7t5"]
+script = ExtResource("1_5vu30")
+word = "TOUX"
+hint = "Symptôme suite à une infection des voies respiratoires supérieures."
+grid_position = Vector2i(15, 13)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_uwqmw"]
+script = ExtResource("1_5vu30")
+word = "IMMUNITAIRE"
+hint = "Système de défense du corps humain."
+grid_position = Vector2i(9, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_vc2u3"]
+script = ExtResource("1_5vu30")
+word = "ABO"
+hint = "Système qui détermine les groupes sanguins."
+grid_position = Vector2i(5, 16)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_d2wa6"]
+script = ExtResource("1_5vu30")
+word = "TRITHERAPIE"
+hint = "Associer trois médicaments afin d’inhiber la réplication d'un microbe."
+grid_position = Vector2i(12, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_pydm4"]
+script = ExtResource("1_5vu30")
+word = "PLAQUETTES"
+hint = "Cellules du sang intervenant dans la coagulation."
+grid_position = Vector2i(16, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_bkp7n"]
+script = ExtResource("1_5vu30")
+word = "INTERSTITIEL"
+hint = "Liquide incolore entre les capillaires sanguins et les cellules, facilitant les échanges."
+grid_position = Vector2i(7, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_vodxk"]
+script = ExtResource("1_5vu30")
+word = "ANTALGIQUES"
+hint = "Médicaments qui permettent d’atténuer, voire de supprimer la douleur."
+grid_position = Vector2i(14, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_cmtuq"]
+script = ExtResource("1_5vu30")
+word = "LYMPHATIQUE"
+hint = "Système de nettoyage, de drainage du corps humain."
+grid_position = Vector2i(0, 16)
+
+[resource]
+script = ExtResource("2_4mgkg")
+clues = Array[ExtResource("1_5vu30")]([SubResource("Resource_tdvqs"), SubResource("Resource_br1nc"), SubResource("Resource_bvvuw"), SubResource("Resource_5e8kx"), SubResource("Resource_4xf57"), SubResource("Resource_ndy2t"), SubResource("Resource_li645"), SubResource("Resource_ob7t5"), SubResource("Resource_uwqmw"), SubResource("Resource_vc2u3"), SubResource("Resource_d2wa6"), SubResource("Resource_pydm4"), SubResource("Resource_bkp7n"), SubResource("Resource_vodxk"), SubResource("Resource_cmtuq")])

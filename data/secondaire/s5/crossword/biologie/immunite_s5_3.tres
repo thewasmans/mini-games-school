@@ -1,0 +1,104 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://biq210vwaicjd"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_8uxcy"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_m808g"]
+
+[sub_resource type="Resource" id="Resource_q6y42"]
+script = ExtResource("1_8uxcy")
+word = "TOXEMIE"
+hint = "Accumulation de toxines d'origine endogène ou exogène dans le sang."
+grid_position = Vector2i(2, 10)
+
+[sub_resource type="Resource" id="Resource_cqh0d"]
+script = ExtResource("1_8uxcy")
+word = "EAU"
+hint = "Molécule constituée de deux atomes d'hydrogène et d'un atome d'oxygène."
+grid_position = Vector2i(6, 12)
+
+[sub_resource type="Resource" id="Resource_io555"]
+script = ExtResource("1_8uxcy")
+word = "RHUME"
+hint = "Infection virale de la muqueuse du nez, des sinus et de la gorge."
+grid_position = Vector2i(12, 21)
+
+[sub_resource type="Resource" id="Resource_cc13k"]
+script = ExtResource("1_8uxcy")
+word = "SEPTICEMIE"
+hint = "Réaction grave de l'ensemble du corps suite à une infection."
+grid_position = Vector2i(7, 5)
+
+[sub_resource type="Resource" id="Resource_22ppy"]
+script = ExtResource("1_8uxcy")
+word = "HEMATOPOIESE"
+hint = "Processus de différentiation de cellules souches en cellules du sang."
+grid_position = Vector2i(6, 16)
+
+[sub_resource type="Resource" id="Resource_r012o"]
+script = ExtResource("1_8uxcy")
+word = "ACYCLOVIR"
+hint = "Antiviral qui agit contre le virus de l'herpès."
+grid_position = Vector2i(0, 7)
+
+[sub_resource type="Resource" id="Resource_p3vky"]
+script = ExtResource("1_8uxcy")
+word = "ORI"
+hint = "Nom donné à l'origine de réplication de la bactérie."
+grid_position = Vector2i(5, 14)
+
+[sub_resource type="Resource" id="Resource_4qdyt"]
+script = ExtResource("1_8uxcy")
+word = "ERYTHROCYTE"
+hint = "Terme scientifique pour les globules rouges."
+grid_position = Vector2i(10, 13)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ht2kc"]
+script = ExtResource("1_8uxcy")
+word = "LYMPHE"
+hint = "Liquide jaunâtre contenant des lymphocytes et intervenant dans l'immunité."
+grid_position = Vector2i(8, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_rklaf"]
+script = ExtResource("1_8uxcy")
+word = "DIABETE"
+hint = "Maladie qui se caractérise par une variation anormale de la glycémie."
+grid_position = Vector2i(4, 23)
+
+[sub_resource type="Resource" id="Resource_gnxbv"]
+script = ExtResource("1_8uxcy")
+word = "PENETRATION"
+hint = "Etape de fusion de l’enveloppe virale avec la membrane plasmique cellulaire."
+grid_position = Vector2i(12, 16)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_xcx4s"]
+script = ExtResource("1_8uxcy")
+word = "LYMPHOCYTES"
+hint = "Globules blancs spécifiques du système immunitaire acquis."
+grid_position = Vector2i(15, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_v14c0"]
+script = ExtResource("1_8uxcy")
+word = "SCISSIPARITE"
+hint = "Mécanisme de division cellulaire utilisé par les bactéries pour se scinder en deux."
+grid_position = Vector2i(7, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_nc172"]
+script = ExtResource("1_8uxcy")
+word = "BIOSYNTHESE"
+hint = "Formation d'une substance organique dans un être vivant."
+grid_position = Vector2i(17, 8)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_l86lu"]
+script = ExtResource("1_8uxcy")
+word = "VIRION"
+hint = "Particule virale permettant de former un virus."
+grid_position = Vector2i(11, 24)
+
+[resource]
+script = ExtResource("2_m808g")
+clues = Array[ExtResource("1_8uxcy")]([SubResource("Resource_q6y42"), SubResource("Resource_cqh0d"), SubResource("Resource_io555"), SubResource("Resource_cc13k"), SubResource("Resource_22ppy"), SubResource("Resource_r012o"), SubResource("Resource_p3vky"), SubResource("Resource_4qdyt"), SubResource("Resource_ht2kc"), SubResource("Resource_rklaf"), SubResource("Resource_gnxbv"), SubResource("Resource_xcx4s"), SubResource("Resource_v14c0"), SubResource("Resource_nc172"), SubResource("Resource_l86lu")])

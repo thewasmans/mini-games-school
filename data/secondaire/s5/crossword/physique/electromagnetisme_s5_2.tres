@@ -1,0 +1,74 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://ds52fs3bejnpt"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_7mddw"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_4tgge"]
+
+[sub_resource type="Resource" id="Resource_mh38d"]
+script = ExtResource("1_7mddw")
+word = "DDP"
+hint = "Abrégé pour \"Différence de potentiel électrique\"."
+grid_position = Vector2i(4, 11)
+
+[sub_resource type="Resource" id="Resource_ene00"]
+script = ExtResource("1_7mddw")
+word = "FARADAY"
+hint = "Loi selon laquelle une tension électromotrice est induite dans un circuit lorsque le flux magnétique traversant ce circuit varie au cours du temps."
+grid_position = Vector2i(4, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_fe38t"]
+script = ExtResource("1_7mddw")
+word = "AIMANT"
+hint = "Objet métallique qui permet d'en attirer ou d'en repousser d'autres."
+grid_position = Vector2i(11, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_kiyop"]
+script = ExtResource("1_7mddw")
+word = "TRANSFORMATEUR"
+hint = "Machine de conversion qui permet de modifier la tension et l'intensité d'un courant électrique."
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_28wg8"]
+script = ExtResource("1_7mddw")
+word = "LENZ"
+hint = "Loi disant que le courant induit circule dans un sens tel qu’il s’oppose par ses effets, aux causes qui lui ont donné naissance."
+grid_position = Vector2i(10, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_wmcsx"]
+script = ExtResource("1_7mddw")
+word = "FOUCAULT"
+hint = "Se dit des courants induits qui prennent naissance dans un corps conducteur en mouvement dans un champ magnétique."
+grid_position = Vector2i(4, 7)
+
+[sub_resource type="Resource" id="Resource_g0v7t"]
+script = ExtResource("1_7mddw")
+word = "LAPLACE"
+hint = "Théorème disant que tout conducteur parcouru par un courant et placé dans un aimant subit une force électromagnétique."
+grid_position = Vector2i(8, 6)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_kei4t"]
+script = ExtResource("1_7mddw")
+word = "SOLENOIDE"
+hint = "Bobine allongée constituée par un fil conducteur enroulé qui crée sur son axe un champ magnétique suite au passage d'un courant."
+grid_position = Vector2i(0, 4)
+
+[sub_resource type="Resource" id="Resource_vwcr8"]
+script = ExtResource("1_7mddw")
+word = "INDUIT"
+hint = "Se dit d'un courant électrique produit par une variation du champ magnétique autour d'un conducteur."
+grid_position = Vector2i(6, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_iyeqi"]
+script = ExtResource("1_7mddw")
+word = "LORENTZ"
+hint = "Force magnétique appliquée sur une charge électrique en mouvement."
+grid_position = Vector2i(2, 4)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_4tgge")
+clues = Array[ExtResource("1_7mddw")]([SubResource("Resource_mh38d"), SubResource("Resource_ene00"), SubResource("Resource_fe38t"), SubResource("Resource_kiyop"), SubResource("Resource_28wg8"), SubResource("Resource_wmcsx"), SubResource("Resource_g0v7t"), SubResource("Resource_kei4t"), SubResource("Resource_vwcr8"), SubResource("Resource_iyeqi")])

@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://50f1cghy5voc"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_b00hx"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_a03bx"]
+
+[sub_resource type="Resource" id="Resource_bkae7"]
+script = ExtResource("1_b00hx")
+word = "CONSOMMATEUR"
+hint = "Organisme qui se nourrit des producteurs."
+grid_position = Vector2i(2, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_7qi6n"]
+script = ExtResource("1_b00hx")
+word = "MIMETISME"
+hint = "Capacité d'un être vivant à imiter un autre vivant pour survivre."
+grid_position = Vector2i(5, 6)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_vir2i"]
+script = ExtResource("1_b00hx")
+word = "MIGRATION"
+hint = "Déplacement d'animaux d'un environnement vers un autre pour diverses raisons, comme le climat."
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_pi1qb"]
+script = ExtResource("1_b00hx")
+word = "PROIE"
+hint = "Animal qui est traqué par le prédateur."
+grid_position = Vector2i(1, 14)
+
+[sub_resource type="Resource" id="Resource_0rp3f"]
+script = ExtResource("1_b00hx")
+word = "RACE"
+hint = "Population animale résultant, par sélection, de la subdivision d'une même espèce."
+grid_position = Vector2i(0, 3)
+
+[resource]
+script = ExtResource("2_a03bx")
+clues = Array[ExtResource("1_b00hx")]([SubResource("Resource_bkae7"), SubResource("Resource_7qi6n"), SubResource("Resource_vir2i"), SubResource("Resource_pi1qb"), SubResource("Resource_0rp3f")])
+school_year = "P4"
+title = "La chaîne alimentaire"

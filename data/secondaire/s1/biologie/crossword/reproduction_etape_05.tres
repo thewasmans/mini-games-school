@@ -1,0 +1,62 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://brfv8880r1jkj"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_15c14"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_epnsr"]
+
+[sub_resource type="Resource" id="Resource_j4ell"]
+script = ExtResource("1_15c14")
+word = "GROSSESSE"
+hint = "Aussi appelée gestation, période durant laquelle la femme est enceinte."
+grid_position = Vector2i(2, 9)
+
+[sub_resource type="Resource" id="Resource_dwwiw"]
+script = ExtResource("1_15c14")
+word = "GENRE"
+hint = "Définit l'identité dans laquelle la personne se sent : homme, femme ou non binaire."
+grid_position = Vector2i(6, 3)
+
+[sub_resource type="Resource" id="Resource_hnprs"]
+script = ExtResource("1_15c14")
+word = "EMBRYON"
+hint = "Premier stade du développement d'un œuf ou zygote."
+grid_position = Vector2i(9, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_d6e03"]
+script = ExtResource("1_15c14")
+word = "PUBERTE"
+hint = "Période de transformations physiologiques du corps de l'adolescent."
+grid_position = Vector2i(1, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_xsygi"]
+script = ExtResource("1_15c14")
+word = "FECONDATION"
+hint = "Union entre un spermatozoïde et un ovocyte."
+grid_position = Vector2i(0, 5)
+
+[sub_resource type="Resource" id="Resource_yf42b"]
+script = ExtResource("1_15c14")
+word = "VACCINATION"
+hint = "Acte médical permettant de protéger contre un microbe."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_xf6gb"]
+script = ExtResource("1_15c14")
+word = "FSH"
+hint = "Hormone folliculaire."
+grid_position = Vector2i(6, 8)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_2mnnp"]
+script = ExtResource("1_15c14")
+word = "SEXE"
+hint = "Terme caractérisant la différence biologique entre les mâles et les femelles."
+grid_position = Vector2i(6, 0)
+
+[resource]
+script = ExtResource("2_epnsr")
+clues = Array[ExtResource("1_15c14")]([SubResource("Resource_j4ell"), SubResource("Resource_dwwiw"), SubResource("Resource_hnprs"), SubResource("Resource_d6e03"), SubResource("Resource_xsygi"), SubResource("Resource_yf42b"), SubResource("Resource_xf6gb"), SubResource("Resource_2mnnp")])
+school_year = "S1"
+title = "La reproduction humaine"

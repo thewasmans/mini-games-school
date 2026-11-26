@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://odye0fik85ou"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_pdlfh"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_cug03"]
+
+[sub_resource type="Resource" id="Resource_q0esp"]
+script = ExtResource("1_pdlfh")
+word = "OESOPHAGE"
+hint = "Tube séparant la bouche de l'estomac dans lequel la bouillie alimentaire circule."
+grid_position = Vector2i(3, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_bp7w0"]
+script = ExtResource("1_pdlfh")
+word = "FOIE"
+hint = "Glande annexe au système digestif qui sécrète la bile et stocke le sucre."
+grid_position = Vector2i(0, 11)
+
+[sub_resource type="Resource" id="Resource_llp8v"]
+script = ExtResource("1_pdlfh")
+word = "NASAL"
+hint = "Terme scientifique qui caractérise la cavité du nez."
+grid_position = Vector2i(0, 9)
+
+[sub_resource type="Resource" id="Resource_sggv7"]
+script = ExtResource("1_pdlfh")
+word = "EXPIRATION"
+hint = "Mécanisme respiratoire qui correspond à la sortie d'air."
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_cug03")
+clues = Array[ExtResource("1_pdlfh")]([SubResource("Resource_q0esp"), SubResource("Resource_bp7w0"), SubResource("Resource_llp8v"), SubResource("Resource_sggv7")])
+school_year = "P6"
+title = "Les systèmes du corps humain"

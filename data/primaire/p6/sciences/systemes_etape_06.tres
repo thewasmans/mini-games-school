@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://ccwnnuuchloii"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_2jo1x"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_82xat"]
+
+[sub_resource type="Resource" id="Resource_iv3u4"]
+script = ExtResource("1_2jo1x")
+word = "SALIVE"
+hint = "Substance sécrétée par des glandes dans la bouche qui aide à la digestion."
+grid_position = Vector2i(1, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_e2s37"]
+script = ExtResource("1_2jo1x")
+word = "CIRCULATION"
+hint = "Terme qui réfère à la manière dont le sang se déplace dans le corps, peut être pulmonaire ou générale."
+grid_position = Vector2i(0, 3)
+
+[sub_resource type="Resource" id="Resource_lmxaa"]
+script = ExtResource("1_2jo1x")
+word = "GLANDE"
+hint = "Organe dont la fonction est de sécréter des substances dans le corps ou à l'extérieur."
+grid_position = Vector2i(10, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_5a7u5"]
+script = ExtResource("1_2jo1x")
+word = "URINE"
+hint = "Substance contenue dans la vessie et qui s'élimine régulièrement."
+grid_position = Vector2i(8, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ns2x3"]
+script = ExtResource("1_2jo1x")
+word = "VEINE"
+hint = "Vaisseau sanguin à faible pression, dont les parois sont fines."
+grid_position = Vector2i(0, 5)
+
+[sub_resource type="Resource" id="Resource_s7hcl"]
+script = ExtResource("1_2jo1x")
+word = "POULS"
+hint = "Battement des artères produit par les vagues successives du sang projeté du cœur."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_82xat")
+clues = Array[ExtResource("1_2jo1x")]([SubResource("Resource_iv3u4"), SubResource("Resource_e2s37"), SubResource("Resource_lmxaa"), SubResource("Resource_5a7u5"), SubResource("Resource_ns2x3"), SubResource("Resource_s7hcl")])
+school_year = "P6"
+title = "Les systèmes du corps humain"

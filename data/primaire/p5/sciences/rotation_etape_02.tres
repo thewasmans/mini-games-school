@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bed03tbdmwlv0"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_tb5lq"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_t346p"]
+
+[sub_resource type="Resource" id="Resource_l0t5e"]
+script = ExtResource("1_tb5lq")
+word = "REVOLUTION"
+hint = "Trajectoire d'une planète autour d'une étoile, comme la Terre autour du Soleil."
+grid_position = Vector2i(1, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_oig32"]
+script = ExtResource("1_tb5lq")
+word = "MARS"
+hint = "Planète rouge dans laquelle il y a de fortes tempêtes de sables."
+grid_position = Vector2i(3, 2)
+
+[sub_resource type="Resource" id="Resource_yk031"]
+script = ExtResource("1_tb5lq")
+word = "PLANETE"
+hint = "Astre qui tourne autour d'une étoile, comme Jupiter."
+grid_position = Vector2i(0, 4)
+
+[sub_resource type="Resource" id="Resource_yhhv5"]
+script = ExtResource("1_tb5lq")
+word = "SATELLITE"
+hint = "Corps céleste gravitant autour d'une planète."
+grid_position = Vector2i(4, 1)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_t346p")
+clues = Array[ExtResource("1_tb5lq")]([SubResource("Resource_l0t5e"), SubResource("Resource_oig32"), SubResource("Resource_yk031"), SubResource("Resource_yhhv5")])
+school_year = "P5"
+title = "Le système solaire"

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bh34opmao6sek"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_ijjg2"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_v8eb7"]
+
+[sub_resource type="Resource" id="Resource_qmyao"]
+script = ExtResource("1_ijjg2")
+question = "Qu'est-ce qu'un protocole ?"
+choices = Array[String](["Des règles à suivre.", "Un schéma à dessiner.", "Un mécanisme à analyser.", "Des croquis à comparer."])
+
+[sub_resource type="Resource" id="Resource_l5e4q"]
+script = ExtResource("1_ijjg2")
+question = "Quelle est la différence entre un acide et une base ?"
+choices = Array[String](["L'acide peut donner des protons, la base prend les protons.", "La base donne les protons et l'acide les récupère.", "Aucune différence.", "L'acide se comporte comme une base en milieu neutre."])
+
+[sub_resource type="Resource" id="Resource_r00bf"]
+script = ExtResource("1_ijjg2")
+question = "Dans quel cas parlons-nous d'une transformation chimique ?"
+choices = Array[String](["Lorsque la situation est réversible (eau en glace).", "Lorsque la situation est irréversible (eau en vin).", "Lorsque le produit est différent des réactifs.", "Lorsque deux molécules s'associent."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_rvjtq"]
+script = ExtResource("1_ijjg2")
+question = "Comment appelons-nous les éléments de gauche de la réaction ?"
+choices = Array[String](["Les produits.", "Les réactifs.", "Les coefficients.", "Les indices."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_v8eb7")
+questions = Array[ExtResource("1_ijjg2")]([SubResource("Resource_qmyao"), SubResource("Resource_l5e4q"), SubResource("Resource_r00bf"), SubResource("Resource_rvjtq")])
+school_year = "S3"
+title = "Les transformations chimiques"

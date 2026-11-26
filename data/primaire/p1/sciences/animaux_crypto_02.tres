@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dg0lnhips604k"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_3qfh6"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_vdd70"]
+
+[sub_resource type="Resource" id="Resource_tomn8"]
+script = ExtResource("1_3qfh6")
+text = "La forêt abrite des plantes et des animaux."
+
+[sub_resource type="Resource" id="Resource_rc2mf"]
+script = ExtResource("1_3qfh6")
+text = "La rivière et le lac sont des milieux aquatiques."
+
+[sub_resource type="Resource" id="Resource_uotd1"]
+script = ExtResource("1_3qfh6")
+text = "Les animaux respirent l'air pour vivre."
+
+[resource]
+script = ExtResource("2_vdd70")
+hidden_letter_ratio = 0.13
+phrases = Array[ExtResource("1_3qfh6")]([SubResource("Resource_tomn8"), SubResource("Resource_rc2mf"), SubResource("Resource_uotd1")])
+school_year = "P1"
+title = "Les animaux et leurs milieux"

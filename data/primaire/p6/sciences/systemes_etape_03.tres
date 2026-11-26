@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bqs3bmmnxir55"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_3rt65"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_kaifc"]
+
+[sub_resource type="Resource" id="Resource_5l5y1"]
+script = ExtResource("1_3rt65")
+word = "DIAPHRAGME"
+hint = "Muscle sous les poumons impliqué dans les mouvements respiratoires."
+grid_position = Vector2i(0, 7)
+
+[sub_resource type="Resource" id="Resource_c140v"]
+script = ExtResource("1_3rt65")
+word = "ESTOMAC"
+hint = "Organe contenant du suc gastrique et qui stocke les aliments."
+grid_position = Vector2i(4, 1)
+
+[sub_resource type="Resource" id="Resource_or3qk"]
+script = ExtResource("1_3rt65")
+word = "ALVEOLE"
+hint = "Petite cavité en forme de sac dans les poumons où se produisent les échanges gazeux."
+grid_position = Vector2i(9, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_f3s52"]
+script = ExtResource("1_3rt65")
+word = "POUMON"
+hint = "Organe situé dans le thorax qui permet de respirer."
+grid_position = Vector2i(1, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_30de0"]
+script = ExtResource("1_3rt65")
+word = "INSPIRATION"
+hint = "Mécanisme respiratoire qui correspond à l'entrée d'air dans les poumons."
+grid_position = Vector2i(0, 5)
+
+[resource]
+script = ExtResource("2_kaifc")
+clues = Array[ExtResource("1_3rt65")]([SubResource("Resource_5l5y1"), SubResource("Resource_c140v"), SubResource("Resource_or3qk"), SubResource("Resource_f3s52"), SubResource("Resource_30de0")])
+school_year = "P6"
+title = "Les systèmes du corps humain"

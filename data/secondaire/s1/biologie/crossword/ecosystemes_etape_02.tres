@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bc8n2cafngbvv"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_qbi5e"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_offro"]
+
+[sub_resource type="Resource" id="Resource_cnuko"]
+script = ExtResource("1_qbi5e")
+word = "TEMPERATURE"
+hint = "Paramètre qui se mesure à l'aide d'un thermomètre."
+grid_position = Vector2i(0, 2)
+
+[sub_resource type="Resource" id="Resource_l0nou"]
+script = ExtResource("1_qbi5e")
+word = "CYCLE"
+hint = "Suite de phénomènes se renouvelant sans arrêt."
+grid_position = Vector2i(2, 0)
+
+[sub_resource type="Resource" id="Resource_85y2p"]
+script = ExtResource("1_qbi5e")
+word = "COMPOSTAGE"
+hint = "Processus biologique de transformation de déchets organiques."
+grid_position = Vector2i(2, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_otqd5"]
+script = ExtResource("1_qbi5e")
+word = "QUALITATIVES"
+hint = "Par opposition aux données quantitatives."
+grid_position = Vector2i(0, 7)
+
+[resource]
+script = ExtResource("2_offro")
+clues = Array[ExtResource("1_qbi5e")]([SubResource("Resource_cnuko"), SubResource("Resource_l0nou"), SubResource("Resource_85y2p"), SubResource("Resource_otqd5")])
+school_year = "S1"
+title = "Les écosystèmes"

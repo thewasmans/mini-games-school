@@ -1,0 +1,54 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://2j3fyoh3tj8s"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_cx52t"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_a02c6"]
+
+[sub_resource type="Resource" id="Resource_vhrxp"]
+script = ExtResource("1_cx52t")
+word = "SERIE"
+hint = "Se dit d'un circuit électrique où il n'y a qu'un seul chemin par lequel peut passer le courant, ce qui fait que l'intensité est la même dans tout le circuit."
+grid_position = Vector2i(3, 2)
+
+[sub_resource type="Resource" id="Resource_mjds5"]
+script = ExtResource("1_cx52t")
+word = "PARALLELE"
+hint = "Se dit d'un circuit électrique dont le courant emprunte différents chemins, l'intensité est différente dans le circuit et les récepteurs sont indépendants."
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_32k2l"]
+script = ExtResource("1_cx52t")
+word = "RESISTANCE"
+hint = "Aptitude d'un matériau conducteur à s'opposer au passage d'un courant électrique de symbole R."
+grid_position = Vector2i(7, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_v3m07"]
+script = ExtResource("1_cx52t")
+word = "PRISE"
+hint = "Connecteur permettant de relier des appareils électriques au réseau, on y branche son smartphone."
+
+[sub_resource type="Resource" id="Resource_l2gaa"]
+script = ExtResource("1_cx52t")
+word = "ELECTROCUTION"
+hint = "Le passage d'électricité dans le corps (électrisation) qui peut causer des brûlures, des troubles cardiaques ou d'autres lésions mortelles."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_7y53q"]
+script = ExtResource("1_cx52t")
+word = "CONTACT"
+hint = "Forme d'électrisation qui permet de charger deux objets neutres et de nature différente sans les frotter, en se touchant simplement."
+grid_position = Vector2i(1, 9)
+
+[sub_resource type="Resource" id="Resource_gkgax"]
+script = ExtResource("1_cx52t")
+word = "TENSION"
+hint = "Différence de potentiel, quantité d'énergie électrique transférée par unité de charge entre deux points d'un circuit."
+grid_position = Vector2i(2, 4)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_a02c6")
+clues = Array[ExtResource("1_cx52t")]([SubResource("Resource_vhrxp"), SubResource("Resource_mjds5"), SubResource("Resource_32k2l"), SubResource("Resource_v3m07"), SubResource("Resource_l2gaa"), SubResource("Resource_7y53q"), SubResource("Resource_gkgax")])
+school_year = "S3"
+title = "L'électricité"

@@ -13,10 +13,6 @@ border_width_bottom = 4
 border_color = Color(0.93116945, 0.9311695, 0.93116945, 1)
 
 [resource]
-LineEdit/constants/minimum_character_width = 1
-LineEdit/font_sizes/font_size = 16
-LineEdit/styles/focus = SubResource("StyleBoxFlat_be3fo")
-LineEdit/styles/normal = SubResource("StyleBoxFlat_n3xvn")
 Button/font_sizes/font_size = 32
 Button/styles/disabled = SubResource("StyleBoxFlat_n3xvn")
 Button/styles/focus = SubResource("StyleBoxEmpty_filled")
@@ -33,3 +29,7 @@ CryptoSlotSelected/styles/disabled = SubResource("StyleBoxFlat_be3fo")
 CryptoSlotSelected/styles/hover = SubResource("StyleBoxFlat_be3fo")
 CryptoSlotSelected/styles/normal = SubResource("StyleBoxFlat_be3fo")
 CryptoSlotSelected/styles/pressed = SubResource("StyleBoxFlat_be3fo")
+LineEdit/constants/minimum_character_width = 1
+LineEdit/font_sizes/font_size = 16
+LineEdit/styles/focus = SubResource("StyleBoxFlat_be3fo")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_n3xvn")

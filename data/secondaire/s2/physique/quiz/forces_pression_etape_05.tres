@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://dmoumdlco0dte"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_d34d1"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_i7pon"]
+
+[sub_resource type="Resource" id="Resource_alcw3"]
+script = ExtResource("1_d34d1")
+question = "Qu'est-ce que la force ?"
+choices = Array[String](["C'est le produit de la masse et de l'accélération d'un corps.", "C'est le travail effectué sur une période de temps.", "C'est la capacité de tenir un objet en hauteur.", "C'est la capacité de repousser des objets."])
+
+[sub_resource type="Resource" id="Resource_53wec"]
+script = ExtResource("1_d34d1")
+question = "Comment se nomme une force qui fait appel à un aimant ?"
+choices = Array[String](["La gravité.", "Le magnétisme.", "La friction.", "L'électrostatique."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_dd3pn"]
+script = ExtResource("1_d34d1")
+question = "Comment se nomme une force qui se traduit par une chute ?"
+choices = Array[String](["La gravité.", "Le magnétisme.", "La friction.", "L'électrostatique."])
+
+[sub_resource type="Resource" id="Resource_kcl34"]
+script = ExtResource("1_d34d1")
+question = "Quelle est la principale découverte de Newton ?"
+choices = Array[String](["Le trou noir.", "La gravitation universelle.", "Les lois de Kepler.", "L'électromagnétisme."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_f7lr7"]
+script = ExtResource("1_d34d1")
+question = "En quoi consiste l'inertie ?"
+choices = Array[String](["C'est la loi des actions réciproques.", "La seconde loi de Newton.", "La tendance naturelle de garder la vitesse du mobile dans lequel le corps se trouve.", "La loi de ségrégation des allèles."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_o0sr7"]
+script = ExtResource("1_d34d1")
+question = "Quelle est la troisième loi de Newton ?"
+choices = Array[String](["C'est la loi des actions réciproques.", "La seconde loi de Newton.", "La tendance naturelle de garder la vitesse du mobile dans lequel le corps se trouve.", "La loi de ségrégation des allèles."])
+
+[resource]
+script = ExtResource("2_i7pon")
+questions = Array[ExtResource("1_d34d1")]([SubResource("Resource_alcw3"), SubResource("Resource_53wec"), SubResource("Resource_dd3pn"), SubResource("Resource_kcl34"), SubResource("Resource_f7lr7"), SubResource("Resource_o0sr7")])
+school_year = "S2"
+title = "Forces et pression"

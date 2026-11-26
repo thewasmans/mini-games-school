@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://d2c0hr6l5gt4d"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_hy282"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_peso0"]
+
+[sub_resource type="Resource" id="Resource_lnbs1"]
+script = ExtResource("1_hy282")
+text = "La fécondation unit un spermatozoïde et un ovocyte."
+
+[sub_resource type="Resource" id="Resource_1vecw"]
+script = ExtResource("1_hy282")
+text = "Le bébé se développe dans l'utérus."
+
+[sub_resource type="Resource" id="Resource_63vgj"]
+script = ExtResource("1_hy282")
+text = "La reproduction humaine est une reproduction sexuée."
+
+[sub_resource type="Resource" id="Resource_6t1q6"]
+script = ExtResource("1_hy282")
+text = "Le préservatif protège lors des rapports sexuels."
+
+[resource]
+script = ExtResource("2_peso0")
+hidden_letter_ratio = 0.15
+phrases = Array[ExtResource("1_hy282")]([SubResource("Resource_lnbs1"), SubResource("Resource_1vecw"), SubResource("Resource_63vgj"), SubResource("Resource_6t1q6")])
+school_year = "P5"
+title = "La reproduction humaine"

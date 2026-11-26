@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://r6jpegyqf25r"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_k8mvr"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_yn2yy"]
+
+[sub_resource type="Resource" id="Resource_5n7j0"]
+script = ExtResource("1_k8mvr")
+word = "SQUELETTE"
+hint = "Ensemble des os qui constituent le corps humain."
+grid_position = Vector2i(1, 5)
+
+[sub_resource type="Resource" id="Resource_qadps"]
+script = ExtResource("1_k8mvr")
+word = "TIBIA"
+hint = "Os qui se situe dans la jambe, à l'avant."
+grid_position = Vector2i(0, 3)
+
+[sub_resource type="Resource" id="Resource_gng3g"]
+script = ExtResource("1_k8mvr")
+word = "RADIUS"
+hint = "Os qui se situe dans l'avant-bras, du côté du pouce."
+grid_position = Vector2i(1, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_4cly5"]
+script = ExtResource("1_k8mvr")
+word = "COUDE"
+hint = "Articulation située à la jonction du bras et de l'avant-bras."
+grid_position = Vector2i(6, 1)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_yn2yy")
+clues = Array[ExtResource("1_k8mvr")]([SubResource("Resource_5n7j0"), SubResource("Resource_qadps"), SubResource("Resource_gng3g"), SubResource("Resource_4cly5")])
+school_year = "P4"
+title = "La locomotion"

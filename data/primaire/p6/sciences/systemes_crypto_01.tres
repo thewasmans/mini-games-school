@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://3p8jq7hr7wmm"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_r63pk"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_6eb4g"]
+
+[sub_resource type="Resource" id="Resource_n6l34"]
+script = ExtResource("1_r63pk")
+text = "Le cœur pompe le sang dans tout le corps."
+
+[sub_resource type="Resource" id="Resource_f1i2m"]
+script = ExtResource("1_r63pk")
+text = "Les poumons se trouvent dans le thorax."
+
+[sub_resource type="Resource" id="Resource_vqp3r"]
+script = ExtResource("1_r63pk")
+text = "À l'inspiration, l'air entre dans les poumons."
+
+[resource]
+script = ExtResource("2_6eb4g")
+hidden_letter_ratio = 0.1
+phrases = Array[ExtResource("1_r63pk")]([SubResource("Resource_n6l34"), SubResource("Resource_f1i2m"), SubResource("Resource_vqp3r")])
+school_year = "P6"
+title = "Les systèmes du corps humain"

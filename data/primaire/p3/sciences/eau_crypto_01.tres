@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://c1a25r0c5av83"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_nhecl"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_86ehl"]
+
+[sub_resource type="Resource" id="Resource_cneoh"]
+script = ExtResource("1_nhecl")
+text = "L'eau potable peut être bue sans danger."
+
+[sub_resource type="Resource" id="Resource_857pu"]
+script = ExtResource("1_nhecl")
+text = "L'eau pure est incolore et inodore."
+
+[sub_resource type="Resource" id="Resource_pp3vr"]
+script = ExtResource("1_nhecl")
+text = "Le château d'eau garde une réserve d'eau."
+
+[resource]
+script = ExtResource("2_86ehl")
+hidden_letter_ratio = 0.1
+phrases = Array[ExtResource("1_nhecl")]([SubResource("Resource_cneoh"), SubResource("Resource_857pu"), SubResource("Resource_pp3vr")])
+school_year = "P3"
+title = "L'eau"

@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://byw6rqlt0xrg6"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_fdisd"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_odu4g"]
+
+[sub_resource type="Resource" id="Resource_hhpj7"]
+script = ExtResource("1_fdisd")
+word = "SOLVANT"
+hint = "Se dit d'une substance qui permet de dissoudre, comme l'eau."
+grid_position = Vector2i(0, 1)
+
+[sub_resource type="Resource" id="Resource_mou1t"]
+script = ExtResource("1_fdisd")
+word = "AIMANTATION"
+hint = "Procédé par lequel un métal est séparé d’un autre constituant par attirance magnétique."
+grid_position = Vector2i(4, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_r5tx7"]
+script = ExtResource("1_fdisd")
+word = "HOMOGENE"
+hint = "Mélange dont on ne peut pas distinguer les constituants à l’œil nu après agitation."
+grid_position = Vector2i(1, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_g08xi"]
+script = ExtResource("1_fdisd")
+word = "TAMISAGE"
+hint = "Opération qui consiste à faire passer un élément sur un tamis pour en extraire les plus fines particules."
+grid_position = Vector2i(6, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ip3he"]
+script = ExtResource("1_fdisd")
+word = "CORPS"
+hint = "Elément constitué d'une seule espèce chimique."
+grid_position = Vector2i(3, 10)
+
+[resource]
+script = ExtResource("2_odu4g")
+clues = Array[ExtResource("1_fdisd")]([SubResource("Resource_hhpj7"), SubResource("Resource_mou1t"), SubResource("Resource_r5tx7"), SubResource("Resource_g08xi"), SubResource("Resource_ip3he")])
+school_year = "S1"
+title = "Les mélanges"

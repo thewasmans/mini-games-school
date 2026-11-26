@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bqcmfkw8wlvjk"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_tx5nr"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_wipk4"]
+
+[sub_resource type="Resource" id="Resource_67rde"]
+script = ExtResource("1_tx5nr")
+question = "Quel minéral est essentiel pour la santé des os et des dents ?"
+choices = Array[String](["Le fer.", "Le calcium.", "Le sodium.", "Le potassium."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_3vg20"]
+script = ExtResource("1_tx5nr")
+question = "Quelle est la fonction principale des lipides (matières grasses) ?"
+choices = Array[String](["Fournir une réserve d'énergie et protéger les organes.", "Construire les muscles.", "Remplacer l'eau.", "Augmenter le taux de sucre."])
+
+[sub_resource type="Resource" id="Resource_lk3bd"]
+script = ExtResource("1_tx5nr")
+question = "Pourquoi les fibres alimentaires sont-elles importantes ?"
+choices = Array[String](["Pour favoriser le transit intestinal.", "Pour donner de la force immédiate.", "Pour réduire le cholestérol totalement.", "Elles ne sont pas utiles."])
+
+[sub_resource type="Resource" id="Resource_vhaj5"]
+script = ExtResource("1_tx5nr")
+question = "Qu'est-ce qu'une \"ration alimentaire\" ?"
+choices = Array[String](["La quantité de nourriture consommée en une fois.", "Le nom d'un aliment.", "Le prix d'un repas.", "Un type de régime."])
+
+[sub_resource type="Resource" id="Resource_jsjmx"]
+script = ExtResource("1_tx5nr")
+question = "Quel nutriment est crucial pour le transport de l'oxygène dans le sang ?"
+choices = Array[String](["Le magnésium.", "Le fer.", "Le sucre.", "La vitamine C."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_4gq7w"]
+script = ExtResource("1_tx5nr")
+question = "Que signifie une alimentation \"locale\" ?"
+choices = Array[String](["Acheter des produits produits près de chez soi.", "Acheter des produits bio.", "Acheter des produits très chers.", "Acheter uniquement des fruits."])
+
+[resource]
+script = ExtResource("2_wipk4")
+questions = Array[ExtResource("1_tx5nr")]([SubResource("Resource_67rde"), SubResource("Resource_3vg20"), SubResource("Resource_lk3bd"), SubResource("Resource_vhaj5"), SubResource("Resource_jsjmx"), SubResource("Resource_4gq7w")])
+school_year = "S3"
+title = "La nutrition humaine"

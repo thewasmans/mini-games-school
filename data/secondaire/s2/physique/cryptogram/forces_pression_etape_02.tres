@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://vkdtd6b22nk6"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_8m0k0"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_4ev6w"]
+
+[sub_resource type="Resource" id="Resource_nftg1"]
+script = ExtResource("1_8m0k0")
+text = "Une machine simple facilite l'exécution d'un travail mécanique."
+
+[sub_resource type="Resource" id="Resource_yiquc"]
+script = ExtResource("1_8m0k0")
+text = "Le levier permet de soulever des charges lourdes avec moins d'effort."
+
+[sub_resource type="Resource" id="Resource_bohna"]
+script = ExtResource("1_8m0k0")
+text = "La poulie facilite le hissage vertical des charges en changeant de direction."
+
+[sub_resource type="Resource" id="Resource_jhdbc"]
+script = ExtResource("1_8m0k0")
+text = "Le plan incliné réduit l'effort nécessaire pour élever une charge."
+
+[resource]
+script = ExtResource("2_4ev6w")
+hidden_letter_ratio = 0.12
+phrases = Array[ExtResource("1_8m0k0")]([SubResource("Resource_nftg1"), SubResource("Resource_yiquc"), SubResource("Resource_bohna"), SubResource("Resource_jhdbc")])
+school_year = "S2"
+title = "Forces et pression"

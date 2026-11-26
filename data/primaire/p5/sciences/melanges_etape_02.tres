@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://c1ye12dsu7dot"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_qfj40"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_isfva"]
+
+[sub_resource type="Resource" id="Resource_6eo7s"]
+script = ExtResource("1_qfj40")
+word = "CARBONE"
+hint = "Elément chimique se trouvant au cœur des molécules du vivant."
+grid_position = Vector2i(3, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_lexjq"]
+script = ExtResource("1_qfj40")
+word = "DIAZOTE"
+hint = "Gaz se trouvant dans l'air, molécule diatomique composée de deux atomes d'azote."
+grid_position = Vector2i(1, 2)
+
+[sub_resource type="Resource" id="Resource_6aere"]
+script = ExtResource("1_qfj40")
+word = "INTERACTION"
+hint = "Relation entre deux objets lorsqu'une force s'exerce."
+grid_position = Vector2i(0, 7)
+
+[sub_resource type="Resource" id="Resource_hs0fa"]
+script = ExtResource("1_qfj40")
+word = "PURE"
+hint = "Caractérise une eau nettoyée, filtrée, otée d'impuretés."
+grid_position = Vector2i(8, 3)
+
+[sub_resource type="Resource" id="Resource_7a4s3"]
+script = ExtResource("1_qfj40")
+word = "DIOXYGENE"
+hint = "Gaz se trouvant dans l'air, nécessaire à la survie des animaux."
+grid_position = Vector2i(1, 5)
+
+[sub_resource type="Resource" id="Resource_mes3f"]
+script = ExtResource("1_qfj40")
+word = "VOLUME"
+hint = "Espace occupé par un objet."
+grid_position = Vector2i(9, 0)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_isfva")
+clues = Array[ExtResource("1_qfj40")]([SubResource("Resource_6eo7s"), SubResource("Resource_lexjq"), SubResource("Resource_6aere"), SubResource("Resource_hs0fa"), SubResource("Resource_7a4s3"), SubResource("Resource_mes3f")])
+school_year = "P5"
+title = "Les mélanges"

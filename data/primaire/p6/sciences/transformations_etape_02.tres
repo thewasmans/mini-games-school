@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cavhofds1ym8c"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_3tnyr"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_ghljf"]
+
+[sub_resource type="Resource" id="Resource_g2mh5"]
+script = ExtResource("1_3tnyr")
+word = "COMBURANT"
+hint = "Substance chimique qui permet la combustion d'un combustible, comme l'oxygène."
+grid_position = Vector2i(0, 1)
+
+[sub_resource type="Resource" id="Resource_ot2yy"]
+script = ExtResource("1_3tnyr")
+word = "TRANSFORMATION"
+hint = "Opération par laquelle il y a du changement."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_drs1c"]
+script = ExtResource("1_3tnyr")
+word = "FORCE"
+hint = "Toute cause capable de modifier l'état de mouvement d'un corps ou de la déformer."
+grid_position = Vector2i(4, 6)
+
+[sub_resource type="Resource" id="Resource_bqfk5"]
+script = ExtResource("1_3tnyr")
+word = "PHYSIQUE"
+hint = "Se dit d'une transformation au cours de laquelle la matière n'est pas modifiée, comme l'eau en glace."
+grid_position = Vector2i(2, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_36ins"]
+script = ExtResource("1_3tnyr")
+word = "CHIMIQUE"
+hint = "Se dit d'une transformation au cours de laquelle la matière est modifiée, comme l'eau en vin."
+grid_position = Vector2i(0, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ykdaq"]
+script = ExtResource("1_3tnyr")
+word = "ENERGIE"
+hint = "Capacité à modifier un état, comme la température, l'état physique ou encore le mouvement."
+grid_position = Vector2i(0, 11)
+
+[resource]
+script = ExtResource("2_ghljf")
+clues = Array[ExtResource("1_3tnyr")]([SubResource("Resource_g2mh5"), SubResource("Resource_ot2yy"), SubResource("Resource_drs1c"), SubResource("Resource_bqfk5"), SubResource("Resource_36ins"), SubResource("Resource_ykdaq")])
+school_year = "P6"
+title = "Les transformations de la matière"

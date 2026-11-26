@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bowpm1r0mj784"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_db8e2"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_bond4"]
+
+[sub_resource type="Resource" id="Resource_g1x3o"]
+script = ExtResource("1_db8e2")
+question = "Quel élément caractérise le codon ?"
+choices = Array[String](["Il code pour un acide aminé.", "Il est formé de 4 protéines.", "Il est spécifique à l'être humain.", "Il est spécifique aux bactéries."])
+
+[sub_resource type="Resource" id="Resource_1s1yf"]
+script = ExtResource("1_db8e2")
+question = "En quoi consiste une mutation ?"
+choices = Array[String](["Une modification génétique.", "Une maladie.", "Un défaut de protéines.", "Un changement de comportement."])
+
+[sub_resource type="Resource" id="Resource_mlffs"]
+script = ExtResource("1_db8e2")
+question = "A quoi servent les ribosomes ?"
+choices = Array[String](["Traduire l'ARNm.", "Transcrire l'ADN.", "Traduire le cytosol.", "Convertir le glucose."])
+
+[sub_resource type="Resource" id="Resource_lbdv6"]
+script = ExtResource("1_db8e2")
+question = "En quoi consiste la polyploidie ?"
+choices = Array[String](["C'est la présence de plusieurs lots de chromosomes.", "C'est un jeu d'un chromosome.", "C'est un lot de protéines.", "C'est une bactérie."])
+
+[sub_resource type="Resource" id="Resource_umqjj"]
+script = ExtResource("1_db8e2")
+question = "En quoi consiste le polygénisme ?"
+choices = Array[String](["Un caractère subit l’influence de plusieurs gènes différents.", "Plusieurs gènes s'éteignent.", "Plusieurs gènes se reproduisent.", "Plusieurs gènes se déplacent."])
+
+[sub_resource type="Resource" id="Resource_efinh"]
+script = ExtResource("1_db8e2")
+question = "On dit de la drépanocytose que ?"
+choices = Array[String](["Les globules rouges ont une forme anormale.", "Les globules blancs ont une forme anormale.", "Les globules rouges s'agglutinent.", "Les globules rouges grandissent trop vite."])
+
+[sub_resource type="Resource" id="Resource_pyyb8"]
+script = ExtResource("1_db8e2")
+question = "Comment se nomment les gènes organisant la structure des êtres vivants ?"
+choices = Array[String](["Les gènes homéotiques.", "Les gènes uniques.", "Les gènes systémiques.", "Les codons."])
+
+[sub_resource type="Resource" id="Resource_2n42r"]
+script = ExtResource("1_db8e2")
+question = "Que signifie l'acronyme OGM ?"
+choices = Array[String](["Organisme génétiquement modifié.", "Organisation de groupe mondial.", "Organisation sans germes mauvais.", "Organisme sans germe modifié."])
+
+[sub_resource type="Resource" id="Resource_ryi1b"]
+script = ExtResource("1_db8e2")
+question = "On utilise pour la thérapie génique ?"
+choices = Array[String](["Des plasmides.", "De la cryothérapie.", "Des antidépresseurs.", "Toutes ces réponses sont bonnes."])
+
+[sub_resource type="Resource" id="Resource_g7req"]
+script = ExtResource("1_db8e2")
+question = "A quoi sert la génétique des populations ?"
+choices = Array[String](["Etudier la distribution et les changements de la fréquence des allèles.", "Etudier la distribution des noyaux.", "Etudier la distribution du biotope.", "Etudier la distribution des bactéries."])
+
+[sub_resource type="Resource" id="Resource_mv1as"]
+script = ExtResource("1_db8e2")
+question = "Quel élément ne constitue pas l'atmosphère primitive de la Terre ?"
+choices = Array[String](["Les émulsifiants.", "Le méthane.", "L'eau.", "Le dioxyde de carbone."])
+
+[sub_resource type="Resource" id="Resource_jhoya"]
+script = ExtResource("1_db8e2")
+question = "Que peux-tu conclure des travaux de Miller et Urey ?"
+choices = Array[String](["Ils expliquent l'apparition des molécules de la vie.", "Ils expliquent comment les vivants apparaissent sur Terre.", "Ils disent comment les êtres vivants évoluent.", "Ils expliquent les mécanismes d'adaptations des espèces."])
+
+[resource]
+script = ExtResource("2_bond4")
+questions = Array[ExtResource("1_db8e2")]([SubResource("Resource_g1x3o"), SubResource("Resource_1s1yf"), SubResource("Resource_mlffs"), SubResource("Resource_lbdv6"), SubResource("Resource_umqjj"), SubResource("Resource_efinh"), SubResource("Resource_pyyb8"), SubResource("Resource_2n42r"), SubResource("Resource_ryi1b"), SubResource("Resource_g7req"), SubResource("Resource_mv1as"), SubResource("Resource_jhoya")])

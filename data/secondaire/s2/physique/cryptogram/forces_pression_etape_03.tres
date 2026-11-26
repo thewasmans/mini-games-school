@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dvnl8tvp3era2"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_tmse7"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_icu4p"]
+
+[sub_resource type="Resource" id="Resource_q0ssa"]
+script = ExtResource("1_tmse7")
+text = "La roue et l'essieu transmettent et amplifient les forces en rotation."
+
+[sub_resource type="Resource" id="Resource_o3mo8"]
+script = ExtResource("1_tmse7")
+text = "Une machine simple ne diminue pas le travail total"
+hint = "mais réduit l'effort."
+
+[sub_resource type="Resource" id="Resource_lw3e7"]
+script = ExtResource("1_tmse7")
+text = "Le rapport de transmission caractérise l'efficacité des machines simples."
+
+[sub_resource type="Resource" id="Resource_k4hwx"]
+script = ExtResource("1_tmse7")
+text = "La pression correspond à une force exercée sur une surface."
+
+[resource]
+script = ExtResource("2_icu4p")
+hidden_letter_ratio = 0.13
+phrases = Array[ExtResource("1_tmse7")]([SubResource("Resource_q0ssa"), SubResource("Resource_o3mo8"), SubResource("Resource_lw3e7"), SubResource("Resource_k4hwx")])
+school_year = "S2"
+title = "Forces et pression"
