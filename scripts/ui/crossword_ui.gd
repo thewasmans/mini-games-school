@@ -219,9 +219,11 @@ func _on_current_text_changed() -> void:
 
 func _validate_word(submitted_text: String) -> void:
 	if not LetterNormalizer.matches(submitted_text, _selected_placement.word_data.word):
+		UIFeedback.play_lose(self)
 		_set_word_color(_selected_placement, INCORRECT_COLOR)
 		_play_incorrect_feedback(_selected_placement)
 		return
+	UIFeedback.play_win(self)
 	_placement_attempts[_selected_placement] = _selected_placement.word_data.word
 	_update_word_cells(_selected_placement.word_data.word, false)
 	_clear_selection_color()

@@ -43,6 +43,7 @@ func _show_question() -> void:
 func _on_choice_pressed(choice_index: int) -> void:
 	var question_data := _questions[_question_index]
 	if choice_index != question_data.correct_choice_index:
+		UIFeedback.play_lose(self)
 		var wrong_button := choice_buttons[choice_index]
 		wrong_button.disabled = true
 		wrong_button.modulate = INCORRECT_COLOR
@@ -50,6 +51,7 @@ func _on_choice_pressed(choice_index: int) -> void:
 		return
 	for button in choice_buttons:
 		button.disabled = true
+	UIFeedback.play_win(self)
 	UIFeedback.pop(choice_buttons[question_data.correct_choice_index], 0.0, CORRECT_POP_SCALE, CORRECT_FLASH_COLOR, CORRECT_COLOR)
 	_question_index += 1
 	progress_changed.emit(_question_index, _questions.size())
