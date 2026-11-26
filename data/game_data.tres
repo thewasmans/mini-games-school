@@ -376,6 +376,124 @@
 [ext_resource type="Resource" uid="uid://bmeqjbs5yvie3" path="res://data/secondaire/s3/physique/quiz/electricite_etape_05.tres" id="264_kb72x"]
 [ext_resource type="Resource" uid="uid://cqymlfcexdiod" path="res://data/secondaire/s3/physique/crossword/electricite_etape_02.tres" id="265_g8qwa"]
 [ext_resource type="Resource" uid="uid://2j3fyoh3tj8s" path="res://data/secondaire/s3/physique/crossword/electricite_etape_03.tres" id="266_u3geb"]
+[ext_resource type="Resource" uid="uid://doy00kcyt57jn" path="res://data/secondaire/s5/cryptogram/biologie/uaa5_immunite_partie1.tres" id="s5_ext_1"]
+[ext_resource type="Resource" uid="uid://dpbpqxpd0141x" path="res://data/secondaire/s5/cryptogram/biologie/uaa5_immunite_partie3.tres" id="s5_ext_2"]
+[ext_resource type="Resource" uid="uid://cfelsj2i6r50h" path="res://data/secondaire/s5/cryptogram/biologie/uaa5_immunite_partie4.tres" id="s5_ext_3"]
+[ext_resource type="Resource" uid="uid://cjg70vpr8qqhm" path="res://data/secondaire/s5/cryptogram/biologie/uaa6_communication_nerveuse_partie1.tres" id="s5_ext_4"]
+[ext_resource type="Resource" uid="uid://c5j4woswqjepg" path="res://data/secondaire/s5/cryptogram/biologie/uaa6_communication_nerveuse_partie2.tres" id="s5_ext_5"]
+[ext_resource type="Resource" uid="uid://f3t5jad2f3nr" path="res://data/secondaire/s5/cryptogram/biologie/uaa6_communication_nerveuse_partie3.tres" id="s5_ext_6"]
+[ext_resource type="Resource" uid="uid://dd05oj2j3iol2" path="res://data/secondaire/s5/cryptogram/biologie/uaa7_procreation_humaine_partie1.tres" id="s5_ext_7"]
+[ext_resource type="Resource" uid="uid://c2gcj6strbjwc" path="res://data/secondaire/s5/cryptogram/biologie/uaa7_procreation_humaine_partie2.tres" id="s5_ext_8"]
+[ext_resource type="Resource" uid="uid://bu367c8usbxg" path="res://data/secondaire/s5/quiz/biologie/immunite.tres" id="s5_ext_9"]
+[ext_resource type="Resource" uid="uid://dcav8hfthkpx0" path="res://data/secondaire/s5/quiz/biologie/immunite_2.tres" id="s5_ext_10"]
+[ext_resource type="Resource" uid="uid://clcw8o8rgsq8t" path="res://data/secondaire/s5/quiz/biologie/reproduction_partie_1.tres" id="s5_ext_11"]
+[ext_resource type="Resource" uid="uid://bmxu7qhohtb6v" path="res://data/secondaire/s5/quiz/biologie/reproduction_partie_2.tres" id="s5_ext_12"]
+[ext_resource type="Resource" uid="uid://3fg3hhhap8ao" path="res://data/secondaire/s5/quiz/biologie/reproduction_partie_3.tres" id="s5_ext_13"]
+[ext_resource type="Resource" uid="uid://0vfdqbrdowjh" path="res://data/secondaire/s5/quiz/biologie/systeme_nerveux_partie_1.tres" id="s5_ext_14"]
+[ext_resource type="Resource" uid="uid://bfwfacvhr5j70" path="res://data/secondaire/s5/quiz/biologie/systeme_nerveux_partie_2.tres" id="s5_ext_15"]
+[ext_resource type="Resource" uid="uid://eow6jndll1yt" path="res://data/secondaire/s5/quiz/biologie/systeme_nerveux_partie_3.tres" id="s5_ext_16"]
+[ext_resource type="Resource" uid="uid://byee82gelducp" path="res://data/secondaire/s5/quiz/biologie/systeme_nerveux_partie_4.tres" id="s5_ext_17"]
+[ext_resource type="Resource" uid="uid://d1e3rxwr17huc" path="res://data/secondaire/s5/quiz/biologie/systeme_nerveux_partie_5.tres" id="s5_ext_18"]
+[ext_resource type="Resource" uid="uid://yaaclkek7rss" path="res://data/secondaire/s5/crossword/biologie/immunite_s5.tres" id="s5_ext_19"]
+[ext_resource type="Resource" uid="uid://u3ve6mv08b21" path="res://data/secondaire/s5/crossword/biologie/immunite_s5_2.tres" id="s5_ext_20"]
+[ext_resource type="Resource" uid="uid://biq210vwaicjd" path="res://data/secondaire/s5/crossword/biologie/immunite_s5_3.tres" id="s5_ext_21"]
+[ext_resource type="Resource" uid="uid://c545vv482b75" path="res://data/secondaire/s5/crossword/biologie/immunite_s5_4.tres" id="s5_ext_22"]
+[ext_resource type="Resource" uid="uid://mxato54bjv80" path="res://data/secondaire/s5/crossword/biologie/immunite_s5_5.tres" id="s5_ext_23"]
+[ext_resource type="Resource" uid="uid://n5avnmv3npu1" path="res://data/secondaire/s5/crossword/biologie/immunite_s5_6.tres" id="s5_ext_24"]
+[ext_resource type="Resource" uid="uid://dgrfgqwucg2hg" path="res://data/secondaire/s5/crossword/biologie/immunite_s5_7.tres" id="s5_ext_25"]
+[ext_resource type="Resource" uid="uid://be13ufprb0o8b" path="res://data/secondaire/s5/crossword/biologie/immunite_s5_8.tres" id="s5_ext_26"]
+[ext_resource type="Resource" uid="uid://ctcwq81uexme7" path="res://data/secondaire/s5/crossword/biologie/repro_partie_1.tres" id="s5_ext_27"]
+[ext_resource type="Resource" uid="uid://ky2jjvyqdsrh" path="res://data/secondaire/s5/crossword/biologie/repro_partie_2.tres" id="s5_ext_28"]
+[ext_resource type="Resource" uid="uid://bfrsddmxcayqs" path="res://data/secondaire/s5/crossword/biologie/repro_partie_3.tres" id="s5_ext_29"]
+[ext_resource type="Resource" uid="uid://nbtdhqulyj46" path="res://data/secondaire/s5/crossword/biologie/repro_partie_4.tres" id="s5_ext_30"]
+[ext_resource type="Resource" uid="uid://cktbgtf34ojhq" path="res://data/secondaire/s5/crossword/biologie/systeme_nerveux_partie_1.tres" id="s5_ext_31"]
+[ext_resource type="Resource" uid="uid://d1po4xrvvs50f" path="res://data/secondaire/s5/crossword/biologie/systeme_nerveux_partie_2.tres" id="s5_ext_32"]
+[ext_resource type="Resource" uid="uid://78a0cnp8fvrw" path="res://data/secondaire/s5/crossword/biologie/systeme_nerveux_partie_3.tres" id="s5_ext_33"]
+[ext_resource type="Resource" uid="uid://bqi1s4dkve7dx" path="res://data/secondaire/s5/crossword/biologie/systeme_nerveux_partie_4.tres" id="s5_ext_34"]
+[ext_resource type="Resource" uid="uid://d2hvbg1u1ijaj" path="res://data/secondaire/s5/crossword/biologie/systeme_nerveux_partie_5.tres" id="s5_ext_35"]
+[ext_resource type="Resource" uid="uid://d342qtj84pfkf" path="res://data/secondaire/s5/crossword/biologie/systeme_nerveux_partie_6.tres" id="s5_ext_36"]
+[ext_resource type="Resource" uid="uid://b20cl7bj2woov" path="res://data/secondaire/s5/crossword/biologie/systeme_nerveux_partie_7.tres" id="s5_ext_37"]
+[ext_resource type="Resource" uid="uid://bxgduwj6kj8cu" path="res://data/secondaire/s5/cryptogram/chimie/uaa5_chimie_liaisons_partie1.tres" id="s5_ext_38"]
+[ext_resource type="Resource" uid="uid://ccde65ehivhid" path="res://data/secondaire/s5/cryptogram/chimie/uaa5_chimie_liaisons_partie2.tres" id="s5_ext_39"]
+[ext_resource type="Resource" uid="uid://co02ildgnlmmw" path="res://data/secondaire/s5/cryptogram/chimie/uaa6_caracteriser_phenomene_chimique.tres" id="s5_ext_40"]
+[ext_resource type="Resource" uid="uid://c8qb8mx5k65l1" path="res://data/secondaire/s5/cryptogram/chimie/uaa7_equilibres_chimiques.tres" id="s5_ext_41"]
+[ext_resource type="Resource" uid="uid://bgn2wnvw6yh0o" path="res://data/secondaire/s5/cryptogram/chimie/uaa8_chimie_organique_partie1.tres" id="s5_ext_42"]
+[ext_resource type="Resource" uid="uid://chaesj5gndnuj" path="res://data/secondaire/s5/cryptogram/chimie/uaa8_chimie_organique_partie2.tres" id="s5_ext_43"]
+[ext_resource type="Resource" uid="uid://bbhklqgiuomgs" path="res://data/secondaire/s5/quiz/chimie/equilibres_chimiques.tres" id="s5_ext_44"]
+[ext_resource type="Resource" uid="uid://dtdotv1m2ktuk" path="res://data/secondaire/s5/quiz/chimie/equilibres_chimiques_2.tres" id="s5_ext_45"]
+[ext_resource type="Resource" uid="uid://ctuot602wlmfa" path="res://data/secondaire/s5/quiz/chimie/liaisons_chimiques.tres" id="s5_ext_46"]
+[ext_resource type="Resource" uid="uid://dwro7djd4tbyg" path="res://data/secondaire/s5/quiz/chimie/liaisons_chimiques_2.tres" id="s5_ext_47"]
+[ext_resource type="Resource" uid="uid://bvs2q7a1eff0g" path="res://data/secondaire/s5/quiz/chimie/molecule_chimie_organique.tres" id="s5_ext_48"]
+[ext_resource type="Resource" uid="uid://b4oyktkual7ls" path="res://data/secondaire/s5/quiz/chimie/molecule_chimie_organique_2.tres" id="s5_ext_49"]
+[ext_resource type="Resource" uid="uid://c4abybijjjg68" path="res://data/secondaire/s5/crossword/chimie/chimie_organique_s5.tres" id="s5_ext_50"]
+[ext_resource type="Resource" uid="uid://doe2slpwatnp" path="res://data/secondaire/s5/crossword/chimie/chimie_organique_s5_2.tres" id="s5_ext_51"]
+[ext_resource type="Resource" uid="uid://bioteigd6l21w" path="res://data/secondaire/s5/crossword/chimie/equilibre_chimiques_s5.tres" id="s5_ext_52"]
+[ext_resource type="Resource" uid="uid://b148h3lusxjkf" path="res://data/secondaire/s5/crossword/chimie/equilibre_chimiques_s5_2.tres" id="s5_ext_53"]
+[ext_resource type="Resource" uid="uid://ycanbxdc0j34" path="res://data/secondaire/s5/crossword/chimie/equilibre_chimiques_s5_3.tres" id="s5_ext_54"]
+[ext_resource type="Resource" uid="uid://dw23nnlrio80p" path="res://data/secondaire/s5/cryptogram/physique/uaa5_physique_forces_mouvements_partie1.tres" id="s5_ext_55"]
+[ext_resource type="Resource" uid="uid://dfe7ks5dq6mbu" path="res://data/secondaire/s5/cryptogram/physique/uaa5_physique_forces_mouvements_partie2.tres" id="s5_ext_56"]
+[ext_resource type="Resource" uid="uid://bvcarkb4ublx5" path="res://data/secondaire/s5/cryptogram/physique/uaa6_electromagnetisme_partie1.tres" id="s5_ext_57"]
+[ext_resource type="Resource" uid="uid://balhtx56p5jq4" path="res://data/secondaire/s5/cryptogram/physique/uaa6_electromagnetisme_partie2.tres" id="s5_ext_58"]
+[ext_resource type="Resource" uid="uid://b2knmk0akn8n5" path="res://data/secondaire/s5/quiz/physique/electromagnetisme.tres" id="s5_ext_59"]
+[ext_resource type="Resource" uid="uid://54m062nwiikc" path="res://data/secondaire/s5/quiz/physique/electromagnetisme_2.tres" id="s5_ext_60"]
+[ext_resource type="Resource" uid="uid://cuu10hbfpwtct" path="res://data/secondaire/s5/quiz/physique/forces_mouvements.tres" id="s5_ext_61"]
+[ext_resource type="Resource" uid="uid://bw5p653qqbscm" path="res://data/secondaire/s5/quiz/physique/forces_mouvements_2.tres" id="s5_ext_62"]
+[ext_resource type="Resource" uid="uid://55uwmmsbyelc" path="res://data/secondaire/s5/crossword/physique/electromagnetisme_s5.tres" id="s5_ext_63"]
+[ext_resource type="Resource" uid="uid://ds52fs3bejnpt" path="res://data/secondaire/s5/crossword/physique/electromagnetisme_s5_2.tres" id="s5_ext_64"]
+[ext_resource type="Resource" uid="uid://q4u6mf787pnm" path="res://data/secondaire/s5/crossword/physique/force_s5.tres" id="s5_ext_65"]
+[ext_resource type="Resource" uid="uid://ctudcm4yd08vu" path="res://data/secondaire/s5/crossword/physique/force_s5_2.tres" id="s5_ext_66"]
+[ext_resource type="Resource" uid="uid://dyifwsdkyqf8y" path="res://data/secondaire/s6/cryptogram/biologie/uaa8_genetique_evolution_partie1.tres" id="s6_ext_67"]
+[ext_resource type="Resource" uid="uid://yvm121tvepq5" path="res://data/secondaire/s6/cryptogram/biologie/uaa8_genetique_evolution_partie2.tres" id="s6_ext_68"]
+[ext_resource type="Resource" uid="uid://o3w2v6kauu6t" path="res://data/secondaire/s6/cryptogram/biologie/uaa8_genetique_evolution_partie3.tres" id="s6_ext_69"]
+[ext_resource type="Resource" uid="uid://dvbcvtkfiqmsu" path="res://data/secondaire/s6/cryptogram/biologie/uaa8_genetique_evolution_partie4.tres" id="s6_ext_70"]
+[ext_resource type="Resource" uid="uid://boxrobcwjyshv" path="res://data/secondaire/s6/cryptogram/biologie/uaa8_genetique_evolution_partie5.tres" id="s6_ext_71"]
+[ext_resource type="Resource" uid="uid://l0avyv8cn1ae" path="res://data/secondaire/s6/cryptogram/biologie/uaa9_impacts_homme_ecosystemes_partie1.tres" id="s6_ext_72"]
+[ext_resource type="Resource" uid="uid://getpoylpkmmc" path="res://data/secondaire/s6/cryptogram/biologie/uaa9_impacts_homme_ecosystemes_partie2.tres" id="s6_ext_73"]
+[ext_resource type="Resource" uid="uid://df38qqopdqg6a" path="res://data/secondaire/s6/quiz/biologie/environnement.tres" id="s6_ext_74"]
+[ext_resource type="Resource" uid="uid://d4i457t8xmss4" path="res://data/secondaire/s6/quiz/biologie/environnement_2.tres" id="s6_ext_75"]
+[ext_resource type="Resource" uid="uid://dktunt8dua7d6" path="res://data/secondaire/s6/quiz/biologie/genetique_partie_1.tres" id="s6_ext_76"]
+[ext_resource type="Resource" uid="uid://bd5qkhsmug0s8" path="res://data/secondaire/s6/quiz/biologie/genetique_partie_2.tres" id="s6_ext_77"]
+[ext_resource type="Resource" uid="uid://bowpm1r0mj784" path="res://data/secondaire/s6/quiz/biologie/genetique_partie_3.tres" id="s6_ext_78"]
+[ext_resource type="Resource" uid="uid://d03qc3u7raxqg" path="res://data/secondaire/s6/quiz/biologie/genetique_partie_4.tres" id="s6_ext_79"]
+[ext_resource type="Resource" uid="uid://xu5pgwy8xnn3" path="res://data/secondaire/s6/crossword/biologie/environnement_s6.tres" id="s6_ext_80"]
+[ext_resource type="Resource" uid="uid://c46riin40ihot" path="res://data/secondaire/s6/crossword/biologie/environnement_s6_2.tres" id="s6_ext_81"]
+[ext_resource type="Resource" uid="uid://dvfjtcxjpyn32" path="res://data/secondaire/s6/crossword/biologie/environnement_s6_3.tres" id="s6_ext_82"]
+[ext_resource type="Resource" uid="uid://bu1ol3xy8lc28" path="res://data/secondaire/s6/crossword/biologie/genetique_partie_1.tres" id="s6_ext_83"]
+[ext_resource type="Resource" uid="uid://b1qoaa3mvox1b" path="res://data/secondaire/s6/crossword/biologie/genetique_partie_2.tres" id="s6_ext_84"]
+[ext_resource type="Resource" uid="uid://bs6d5uyqo8va" path="res://data/secondaire/s6/crossword/biologie/genetique_partie_3.tres" id="s6_ext_85"]
+[ext_resource type="Resource" uid="uid://c307ut3hed5ny" path="res://data/secondaire/s6/crossword/biologie/genetique_partie_4.tres" id="s6_ext_86"]
+[ext_resource type="Resource" uid="uid://cuufyida34qmu" path="res://data/secondaire/s6/crossword/biologie/genetique_partie_5.tres" id="s6_ext_87"]
+[ext_resource type="Resource" uid="uid://cysmhjv4uw7dx" path="res://data/secondaire/s6/crossword/biologie/genetique_partie_6.tres" id="s6_ext_88"]
+[ext_resource type="Resource" uid="uid://dr78e3hehgfn7" path="res://data/secondaire/s6/crossword/biologie/genetique_partie_7.tres" id="s6_ext_89"]
+[ext_resource type="Resource" uid="uid://dutmwt2atieu" path="res://data/secondaire/s6/crossword/biologie/genetique_partie_8.tres" id="s6_ext_90"]
+[ext_resource type="Resource" uid="uid://cow16v6ne1x0y" path="res://data/secondaire/s6/crossword/biologie/genetique_partie_9.tres" id="s6_ext_91"]
+[ext_resource type="Resource" uid="uid://tp8l5y44p2c6" path="res://data/secondaire/s6/crossword/biologie/genetique_partie_10.tres" id="s6_ext_92"]
+[ext_resource type="Resource" uid="uid://cj78yjikcwfrg" path="res://data/secondaire/s6/cryptogram/chimie/uaa9_macromolecule_chimie_organique.tres" id="s6_ext_93"]
+[ext_resource type="Resource" uid="uid://b6eknfyl5axp6" path="res://data/secondaire/s6/cryptogram/chimie/uaa10_reactions_transfert_partie1.tres" id="s6_ext_94"]
+[ext_resource type="Resource" uid="uid://c7o3vahlit3mu" path="res://data/secondaire/s6/cryptogram/chimie/uaa10_reactions_transfert_partie2.tres" id="s6_ext_95"]
+[ext_resource type="Resource" uid="uid://chhfb7auwefi4" path="res://data/secondaire/s6/cryptogram/chimie/uaa10_reactions_transfert_partie3.tres" id="s6_ext_96"]
+[ext_resource type="Resource" uid="uid://8kuv5g7lkq21" path="res://data/secondaire/s6/cryptogram/chimie/uaa10_reactions_transfert_partie4.tres" id="s6_ext_97"]
+[ext_resource type="Resource" uid="uid://d1culwbltisy0" path="res://data/secondaire/s6/quiz/chimie/chimie_organique.tres" id="s6_ext_98"]
+[ext_resource type="Resource" uid="uid://be5h4cjitipth" path="res://data/secondaire/s6/quiz/chimie/chimie_organique_2.tres" id="s6_ext_99"]
+[ext_resource type="Resource" uid="uid://dp3gjaugsojud" path="res://data/secondaire/s6/quiz/chimie/reactions_transfert.tres" id="s6_ext_100"]
+[ext_resource type="Resource" uid="uid://bll0rj41ygcci" path="res://data/secondaire/s6/quiz/chimie/reactions_transfert_2.tres" id="s6_ext_101"]
+[ext_resource type="Resource" uid="uid://b3wdrdiijvien" path="res://data/secondaire/s6/crossword/chimie/chimie_organique_s6.tres" id="s6_ext_102"]
+[ext_resource type="Resource" uid="uid://c0xbxw3hhkia4" path="res://data/secondaire/s6/crossword/chimie/redox_s6.tres" id="s6_ext_103"]
+[ext_resource type="Resource" uid="uid://b17psc1ipticd" path="res://data/secondaire/s6/crossword/chimie/redox_s6_2.tres" id="s6_ext_104"]
+[ext_resource type="Resource" uid="uid://j7vmi2iicibk" path="res://data/secondaire/s6/cryptogram/physique/uaa7_oscillations_ondes_partie1.tres" id="s6_ext_105"]
+[ext_resource type="Resource" uid="uid://kwygfud5nxei" path="res://data/secondaire/s6/cryptogram/physique/uaa7_oscillations_ondes_partie2.tres" id="s6_ext_106"]
+[ext_resource type="Resource" uid="uid://cf27vr28r8fw1" path="res://data/secondaire/s6/cryptogram/physique/uaa7_oscillations_ondes_partie3.tres" id="s6_ext_107"]
+[ext_resource type="Resource" uid="uid://cq532orr2ts8f" path="res://data/secondaire/s6/cryptogram/physique/uaa8_matiere_energie_partie1.tres" id="s6_ext_108"]
+[ext_resource type="Resource" uid="uid://2atff5ew7fk7" path="res://data/secondaire/s6/cryptogram/physique/uaa8_matiere_energie_partie2.tres" id="s6_ext_109"]
+[ext_resource type="Resource" uid="uid://cgv7st7qr7t24" path="res://data/secondaire/s6/quiz/physique/matiere_energie.tres" id="s6_ext_110"]
+[ext_resource type="Resource" uid="uid://dcgpldgyfk2h1" path="res://data/secondaire/s6/quiz/physique/matiere_energie_2.tres" id="s6_ext_111"]
+[ext_resource type="Resource" uid="uid://c8v1p5qxs21qd" path="res://data/secondaire/s6/quiz/physique/ondes_oscillations.tres" id="s6_ext_112"]
+[ext_resource type="Resource" uid="uid://f1jv71v6284u" path="res://data/secondaire/s6/quiz/physique/ondes_oscillations_2.tres" id="s6_ext_113"]
+[ext_resource type="Resource" uid="uid://bx5h5jljmvggd" path="res://data/secondaire/s6/crossword/physique/matiere_energie_s6.tres" id="s6_ext_114"]
+[ext_resource type="Resource" uid="uid://ccv4mpyma1asi" path="res://data/secondaire/s6/crossword/physique/matiere_energie_s6_2.tres" id="s6_ext_115"]
+[ext_resource type="Resource" uid="uid://mk8bkf6m63k8" path="res://data/secondaire/s6/crossword/physique/ondes_oscillations_s6.tres" id="s6_ext_116"]
+[ext_resource type="Resource" uid="uid://c0knqw4akhhse" path="res://data/secondaire/s6/crossword/physique/ondes_oscillations_s6_2.tres" id="s6_ext_117"]
+[ext_resource type="Resource" uid="uid://dh7dhq2fitb8f" path="res://data/secondaire/s6/crossword/physique/ondes_oscillations_s6_3.tres" id="s6_ext_118"]
 
 [sub_resource type="Resource" id="Resource_0o1m1"]
 script = ExtResource("2_r34r7")
@@ -2065,6 +2183,644 @@ script = ExtResource("26_school_year")
 name = "S4"
 subjects = Array[ExtResource("25_subject")]([SubResource("Subject_biologie"), SubResource("Subject_chimie"), SubResource("Subject_physique")])
 
+[sub_resource type="Resource" id="s5_level_1"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_1")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_2"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_2")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_3"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_3")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_4"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_4")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_5"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_5")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_6"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_6")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_7"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_7")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_8"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_8")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_9"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_9")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_10"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_10")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_11"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_11")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_12"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_12")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_13"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_13")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_14"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_14")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_15"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_15")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_16"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_16")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_17"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_17")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_18"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_18")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_19"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_19")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_20"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_20")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_21"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_21")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_22"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_22")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_23"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_23")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_24"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_24")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_25"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_25")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_26"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_26")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_27"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_27")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_28"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_28")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_29"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_29")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_30"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_30")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_31"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_31")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_32"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_32")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_33"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_33")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_34"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_34")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_35"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_35")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_36"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_36")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_37"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_37")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Subject_s5_biologie"]
+script = ExtResource("25_subject")
+name = "Biologie"
+levels = Array[ExtResource("2_r34r7")]([SubResource("s5_level_1"), SubResource("s5_level_2"), SubResource("s5_level_3"), SubResource("s5_level_4"), SubResource("s5_level_5"), SubResource("s5_level_6"), SubResource("s5_level_7"), SubResource("s5_level_8"), SubResource("s5_level_9"), SubResource("s5_level_10"), SubResource("s5_level_11"), SubResource("s5_level_12"), SubResource("s5_level_13"), SubResource("s5_level_14"), SubResource("s5_level_15"), SubResource("s5_level_16"), SubResource("s5_level_17"), SubResource("s5_level_18"), SubResource("s5_level_19"), SubResource("s5_level_20"), SubResource("s5_level_21"), SubResource("s5_level_22"), SubResource("s5_level_23"), SubResource("s5_level_24"), SubResource("s5_level_25"), SubResource("s5_level_26"), SubResource("s5_level_27"), SubResource("s5_level_28"), SubResource("s5_level_29"), SubResource("s5_level_30"), SubResource("s5_level_31"), SubResource("s5_level_32"), SubResource("s5_level_33"), SubResource("s5_level_34"), SubResource("s5_level_35"), SubResource("s5_level_36"), SubResource("s5_level_37")])
+metadata/_custom_type_script = "uid://mjs6wa16j8bi"
+
+[sub_resource type="Resource" id="s5_level_38"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_38")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_39"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_39")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_40"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_40")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_41"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_41")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_42"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_42")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_43"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_43")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_44"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_44")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_45"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_45")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_46"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_46")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_47"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_47")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_48"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_48")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_49"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_49")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_50"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_50")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_51"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_51")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_52"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_52")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_53"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_53")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_54"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_54")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Subject_s5_chimie"]
+script = ExtResource("25_subject")
+name = "Chimie"
+levels = Array[ExtResource("2_r34r7")]([SubResource("s5_level_38"), SubResource("s5_level_39"), SubResource("s5_level_40"), SubResource("s5_level_41"), SubResource("s5_level_42"), SubResource("s5_level_43"), SubResource("s5_level_44"), SubResource("s5_level_45"), SubResource("s5_level_46"), SubResource("s5_level_47"), SubResource("s5_level_48"), SubResource("s5_level_49"), SubResource("s5_level_50"), SubResource("s5_level_51"), SubResource("s5_level_52"), SubResource("s5_level_53"), SubResource("s5_level_54")])
+metadata/_custom_type_script = "uid://mjs6wa16j8bi"
+
+[sub_resource type="Resource" id="s5_level_55"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_55")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_56"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_56")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_57"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_57")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_58"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_58")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_59"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_59")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_60"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_60")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_61"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_61")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_62"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_62")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_63"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_63")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_64"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_64")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_65"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_65")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s5_level_66"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s5_ext_66")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Subject_s5_physique"]
+script = ExtResource("25_subject")
+name = "Physique"
+levels = Array[ExtResource("2_r34r7")]([SubResource("s5_level_55"), SubResource("s5_level_56"), SubResource("s5_level_57"), SubResource("s5_level_58"), SubResource("s5_level_59"), SubResource("s5_level_60"), SubResource("s5_level_61"), SubResource("s5_level_62"), SubResource("s5_level_63"), SubResource("s5_level_64"), SubResource("s5_level_65"), SubResource("s5_level_66")])
+metadata/_custom_type_script = "uid://mjs6wa16j8bi"
+
+[sub_resource type="Resource" id="SchoolYear_s5"]
+script = ExtResource("26_school_year")
+name = "S5"
+subjects = Array[ExtResource("25_subject")]([SubResource("Subject_s5_biologie"), SubResource("Subject_s5_chimie"), SubResource("Subject_s5_physique")])
+metadata/_custom_type_script = "uid://dvqf0ovwg1l73"
+
+[sub_resource type="Resource" id="s6_level_67"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_67")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_68"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_68")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_69"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_69")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_70"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_70")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_71"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_71")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_72"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_72")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_73"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_73")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_74"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_74")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_75"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_75")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_76"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_76")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_77"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_77")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_78"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_78")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_79"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_79")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_80"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_80")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_81"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_81")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_82"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_82")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_83"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_83")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_84"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_84")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_85"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_85")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_86"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_86")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_87"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_87")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_88"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_88")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_89"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_89")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_90"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_90")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_91"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_91")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_92"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_92")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Subject_s6_biologie"]
+script = ExtResource("25_subject")
+name = "Biologie"
+levels = Array[ExtResource("2_r34r7")]([SubResource("s6_level_67"), SubResource("s6_level_68"), SubResource("s6_level_69"), SubResource("s6_level_70"), SubResource("s6_level_71"), SubResource("s6_level_72"), SubResource("s6_level_73"), SubResource("s6_level_74"), SubResource("s6_level_75"), SubResource("s6_level_76"), SubResource("s6_level_77"), SubResource("s6_level_78"), SubResource("s6_level_79"), SubResource("s6_level_80"), SubResource("s6_level_81"), SubResource("s6_level_82"), SubResource("s6_level_83"), SubResource("s6_level_84"), SubResource("s6_level_85"), SubResource("s6_level_86"), SubResource("s6_level_87"), SubResource("s6_level_88"), SubResource("s6_level_89"), SubResource("s6_level_90"), SubResource("s6_level_91"), SubResource("s6_level_92")])
+metadata/_custom_type_script = "uid://mjs6wa16j8bi"
+
+[sub_resource type="Resource" id="s6_level_93"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_93")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_94"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_94")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_95"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_95")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_96"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_96")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_97"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_97")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_98"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_98")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_99"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_99")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_100"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_100")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_101"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_101")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_102"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_102")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_103"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_103")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_104"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_104")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Subject_s6_chimie"]
+script = ExtResource("25_subject")
+name = "Chimie"
+levels = Array[ExtResource("2_r34r7")]([SubResource("s6_level_93"), SubResource("s6_level_94"), SubResource("s6_level_95"), SubResource("s6_level_96"), SubResource("s6_level_97"), SubResource("s6_level_98"), SubResource("s6_level_99"), SubResource("s6_level_100"), SubResource("s6_level_101"), SubResource("s6_level_102"), SubResource("s6_level_103"), SubResource("s6_level_104")])
+metadata/_custom_type_script = "uid://mjs6wa16j8bi"
+
+[sub_resource type="Resource" id="s6_level_105"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_105")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_106"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_106")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_107"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_107")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_108"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_108")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_109"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_109")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_110"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_110")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_111"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_111")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_112"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_112")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_113"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_113")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_114"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_114")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_115"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_115")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_116"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_116")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_117"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_117")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="s6_level_118"]
+script = ExtResource("2_r34r7")
+mini_games = Array[ExtResource("1_vllua")]([ExtResource("s6_ext_118")])
+metadata/_custom_type_script = "uid://br5q0sg4b052d"
+
+[sub_resource type="Resource" id="Subject_s6_physique"]
+script = ExtResource("25_subject")
+name = "Physique"
+levels = Array[ExtResource("2_r34r7")]([SubResource("s6_level_105"), SubResource("s6_level_106"), SubResource("s6_level_107"), SubResource("s6_level_108"), SubResource("s6_level_109"), SubResource("s6_level_110"), SubResource("s6_level_111"), SubResource("s6_level_112"), SubResource("s6_level_113"), SubResource("s6_level_114"), SubResource("s6_level_115"), SubResource("s6_level_116"), SubResource("s6_level_117"), SubResource("s6_level_118")])
+metadata/_custom_type_script = "uid://mjs6wa16j8bi"
+
+[sub_resource type="Resource" id="SchoolYear_s6"]
+script = ExtResource("26_school_year")
+name = "S6"
+subjects = Array[ExtResource("25_subject")]([SubResource("Subject_s6_biologie"), SubResource("Subject_s6_chimie"), SubResource("Subject_s6_physique")])
+metadata/_custom_type_script = "uid://dvqf0ovwg1l73"
+
 [resource]
 script = ExtResource("1_urpql")
 primary_1 = SubResource("Resource_y6l6p")
@@ -2077,4 +2833,6 @@ secondary_1 = SubResource("Resource_pi6i0")
 secondary_2 = SubResource("Resource_sis3n")
 secondary_3 = SubResource("Resource_k5spm")
 secondary_4 = SubResource("SchoolYear_s4")
+secondary_5 = SubResource("SchoolYear_s5")
+secondary_6 = SubResource("SchoolYear_s6")
 metadata/_custom_type_script = "uid://cp2inhinnjjop"
