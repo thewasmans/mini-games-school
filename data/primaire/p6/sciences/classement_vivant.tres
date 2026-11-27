@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="MemoData" format=3]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="quiz_q_6_b0gqm"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="memo_data"]
+
+[sub_resource type="Resource" id="q_6_rswl3f"]
+script = ExtResource("quiz_q_6_b0gqm")
+question = "Qu'est-ce qu'une classification du vivant ?"
+choices = Array[String](["Une façon de ranger les animaux.", "Une liste de courses.", "Un jeu de cartes.", "Une recette."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_6_2gdpc5"]
+script = ExtResource("quiz_q_6_b0gqm")
+question = "Comment appelle-t-on les animaux qui possèdent une colonne vertébrale ?"
+choices = Array[String](["Les invertébrés.", "Les vertébrés.", "Les insectes.", "Les plantes."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_6_a29ucd"]
+script = ExtResource("quiz_q_6_b0gqm")
+question = "Comment appelle-t-on les animaux qui n'ont pas de colonne vertébrale ?"
+choices = Array[String](["Les vertébrés.", "Les arthropodes", "Les mammifères.", "Les oiseaux."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_6_hxp7v5"]
+script = ExtResource("quiz_q_6_b0gqm")
+question = "Dans quel groupe classe-t-on le chien ?"
+choices = Array[String](["Les oiseaux.", "Les poissons.", "Les mammifères.", "Les insectes."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_6_8untf1"]
+script = ExtResource("quiz_q_6_b0gqm")
+question = "Quelle est la particularité des mammifères ?"
+choices = Array[String](["Ils pondent des œufs.", "Ils allaitent leurs petits.", "Ils vivent uniquement dans l'eau.", "Ils n'ont pas de poils."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_6_qoaj6j"]
+script = ExtResource("quiz_q_6_b0gqm")
+question = "À quel groupe appartient l'aigle ?"
+choices = Array[String](["Les mammifères.", "Les oiseaux.", "Les reptiles.", "Les amphibiens."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_6_jd6f87"]
+script = ExtResource("quiz_q_6_b0gqm")
+question = "Quelle caractéristique définit les oiseaux ?"
+choices = Array[String](["Ils ont des plumes.", "Ils ont des écailles.", "Ils vivent dans l'eau.", "Ils ont des poils."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_6_ueil3d"]
+script = ExtResource("quiz_q_6_b0gqm")
+question = "À quel groupe appartiennent les anguilles ?"
+choices = Array[String](["Les mammifères.", "Les poissons.", "Les insectes.", "Les reptiles."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_6_ygejqw"]
+script = ExtResource("quiz_q_6_b0gqm")
+question = "Quelle est la caractéristique principale des poissons ?"
+choices = Array[String](["Ils ont des poumons.", "Ils respirent avec des branchies.", "Ils ont des poils.", "Ils marchent."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_6_ckqagv"]
+script = ExtResource("quiz_q_6_b0gqm")
+question = "Dans quel groupe classe-t-on le lézard ?"
+choices = Array[String](["Les mammifères.", "Les oiseaux.", "Les squamates.", "Les insectes."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_6_8rq29y"]
+script = ExtResource("quiz_q_6_b0gqm")
+question = "Quel animal est un amphibien ?"
+choices = Array[String](["Le chien.", "La grenouille.", "La fourmi.", "Le requin."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("memo_data")
+questions = Array[ExtResource("quiz_q_6_b0gqm")]([SubResource("q_6_rswl3f"), SubResource("q_6_2gdpc5"), SubResource("q_6_a29ucd"), SubResource("q_6_hxp7v5"), SubResource("q_6_8untf1"), SubResource("q_6_qoaj6j"), SubResource("q_6_jd6f87"), SubResource("q_6_ueil3d"), SubResource("q_6_ygejqw"), SubResource("q_6_ckqagv"), SubResource("q_6_8rq29y")])
+

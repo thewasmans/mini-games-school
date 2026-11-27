@@ -1,0 +1,81 @@
+[gd_resource type="Resource" script_class="MemoData" format=3]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="quiz_q_6_q6fcl"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="memo_data"]
+
+[sub_resource type="Resource" id="q_6_1hg84z"]
+script = ExtResource("quiz_q_6_q6fcl")
+question = "De quoi sont constitués les vertébrés ?"
+choices = Array[String](["Une carapace.", "Un squelette interne (colonne vertébrale).", "Des tentacules.", "Une peau nue."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_6_cg55ve"]
+script = ExtResource("quiz_q_6_q6fcl")
+question = "Laquelle de ces caractéristiques est propre aux mammifères ?"
+choices = Array[String](["La présence de poils.", "La présence d'écailles.", "La respiration branchiale.", "La ponte d'œufs."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_6_019qm9"]
+script = ExtResource("quiz_q_6_q6fcl")
+question = "Dans quel groupe figure le serpent ?"
+choices = Array[String](["Mammifère.", "Oiseau.", "Squamate.", "Insecte."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_6_myxhjl"]
+script = ExtResource("quiz_q_6_q6fcl")
+question = "L'escargot est-il un vertébré ?"
+choices = Array[String](["Oui.", "Non, c'est un mollusque.", "Non, c'est un bivalve.", "Non, c'est un chélonien."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_6_905ym8"]
+script = ExtResource("quiz_q_6_q6fcl")
+question = "Quelle est la fonction d'une clé de détermination ?"
+choices = Array[String](["Ouvrir une porte.", "Aider à classer les êtres vivants.", "Mesurer la taille.", "Décorer la classe."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_6_a48u4c"]
+script = ExtResource("quiz_q_6_q6fcl")
+question = "Les animaux qui n'ont pas de squelette interne sont ?"
+choices = Array[String](["Les vertébrés.", "Les arthropodes.", "Les mammifères.", "Les oiseaux."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_6_nunr5g"]
+script = ExtResource("quiz_q_6_q6fcl")
+question = "Dans quel groupe figure la chauve-souris ?"
+choices = Array[String](["Oiseau.", "Mammifère.", "Insecte.", "Reptile."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_6_gfgcxh"]
+script = ExtResource("quiz_q_6_q6fcl")
+question = "Dans quel groupe figure le requin ?"
+choices = Array[String](["Poisson.", "Mammifère.", "Reptile.", "Oiseau."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_6_jotc3x"]
+script = ExtResource("quiz_q_6_q6fcl")
+question = "Un animal qui change de couleur est ?"
+choices = Array[String](["Forcément un reptile.", "Un insecte.", "Cela dépend de l'espèce.", "Un mammifère."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_6_bhxxme"]
+script = ExtResource("quiz_q_6_q6fcl")
+question = "Dans quel groupe figure la fourmi ?"
+choices = Array[String](["Vertébré.", "Insecte.", "Mammifère.", "Poisson."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_6_imvug5"]
+script = ExtResource("quiz_q_6_q6fcl")
+question = "Pourquoi classe-t-on les animaux ?"
+choices = Array[String](["Pour mieux les étudier et les comprendre.", "Pour les manger.", "Parce qu'ils sont beaux.", "Pour les colorier."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_6_4omz73"]
+script = ExtResource("quiz_q_6_q6fcl")
+question = "Qu'est-ce que le classement phylogénétique ?"
+choices = Array[String](["Classer les espèces selon leur âge.", "Classer les espèces selon leur milieu de vie.", "Classer les espèces selon leur degré de parenté.", "Classer les espèces selon leur couleur."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("memo_data")
+questions = Array[ExtResource("quiz_q_6_q6fcl")]([SubResource("q_6_1hg84z"), SubResource("q_6_cg55ve"), SubResource("q_6_019qm9"), SubResource("q_6_myxhjl"), SubResource("q_6_905ym8"), SubResource("q_6_a48u4c"), SubResource("q_6_nunr5g"), SubResource("q_6_gfgcxh"), SubResource("q_6_jotc3x"), SubResource("q_6_bhxxme"), SubResource("q_6_imvug5"), SubResource("q_6_4omz73")])
+

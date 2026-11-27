@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="MemoData" format=3]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="quiz_q_3_3xc5d"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="memo_data"]
+
+[sub_resource type="Resource" id="q_3_64hi2v"]
+script = ExtResource("quiz_q_3_3xc5d")
+question = "Quelle partie de la plante absorbe l'eau et les minéraux du sol ?"
+choices = Array[String](["La feuille.", "La tige.", "La racine.", "La fleur."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_3_fxhoji"]
+script = ExtResource("quiz_q_3_3xc5d")
+question = "Quelle partie de la plante soutient les feuilles et transporte l'eau ?"
+choices = Array[String](["La tige.", "La graine.", "La racine.", "Le fruit."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_3_xr2pp5"]
+script = ExtResource("quiz_q_3_3xc5d")
+question = "Quelle partie de la plante capte la lumière pour fabriquer sa nourriture ?"
+choices = Array[String](["La racine.", "La feuille.", "Le fruit.", "La graine."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_3_yg2snk"]
+script = ExtResource("quiz_q_3_3xc5d")
+question = "D'où proviennent les nouvelles plantes dans la nature ?"
+choices = Array[String](["Des cailloux.", "Du tronc.", "De la graine.", "De la racine."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_3_m4qcs8"]
+script = ExtResource("quiz_q_3_3xc5d")
+question = "Quel facteur n’est pas strictement nécessaire à la germination d’une plante ?"
+choices = Array[String](["L'eau.", "La chaleur.", "L'air.", "L'obscurité totale."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="q_3_7p7xd9"]
+script = ExtResource("quiz_q_3_3xc5d")
+question = "Quel besoin est essentiel pour la croissance d'une plante ?"
+choices = Array[String](["Le sucre.", "La lumière.", "Le vent.", "Le sable."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_3_5n3jlp"]
+script = ExtResource("quiz_q_3_3xc5d")
+question = "Comment s'appelle le moment où la graine commence à se développer ?"
+choices = Array[String](["La floraison.", "La récolte.", "La germination.", "La pousse."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_3_oi8bwx"]
+script = ExtResource("quiz_q_3_3xc5d")
+question = "Que se passe-t-il si une graine n'a pas d'eau ?"
+choices = Array[String](["Elle pousse vite.", "Elle ne germe pas.", "Elle devient un fruit.", "Elle change de couleur."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_3_gqo6fp"]
+script = ExtResource("quiz_q_3_3xc5d")
+question = "Pourquoi la lumière est-elle importante pour la plante ?"
+choices = Array[String](["Elle empêche de boire.", "Elle fabrique sa nourriture.", "Elle réchauffe le pot.", "Elle sert à décorer."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_3_qnzwhf"]
+script = ExtResource("quiz_q_3_3xc5d")
+question = "Laquelle de ces plantes produit des fleurs ?"
+choices = Array[String](["Le sapin.", "La fougère.", "La marguerite.", "La mousse."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("memo_data")
+questions = Array[ExtResource("quiz_q_3_3xc5d")]([SubResource("q_3_64hi2v"), SubResource("q_3_fxhoji"), SubResource("q_3_xr2pp5"), SubResource("q_3_yg2snk"), SubResource("q_3_m4qcs8"), SubResource("q_3_7p7xd9"), SubResource("q_3_5n3jlp"), SubResource("q_3_oi8bwx"), SubResource("q_3_gqo6fp"), SubResource("q_3_qnzwhf")])
+

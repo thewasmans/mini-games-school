@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="MemoData" format=3]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="quiz_q_6_82snm"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="memo_data"]
+
+[sub_resource type="Resource" id="q_6_ncf95h"]
+script = ExtResource("quiz_q_6_82snm")
+question = "Le bois est une ressource énergétique renouvelable si ?"
+choices = Array[String](["On ne replante pas d'arbres.", "On gère la forêt durablement.", "On le brûle dans le jardin.", "On le mélange au pétrole."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_6_dxdtsj"]
+script = ExtResource("quiz_q_6_82snm")
+question = "L'énergie cinétique du vent est transformée en électricité par ?"
+choices = Array[String](["Un panneau solaire.", "Une éolienne.", "Un réacteur nucléaire.", "Un poêle à bois."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_6_ql564p"]
+script = ExtResource("quiz_q_6_82snm")
+question = "Les panneaux photovoltaïques transforment la lumière en ?"
+choices = Array[String](["Chaleur uniquement.", "Électricité.", "Vapeur.", "Mouvement."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_6_moss72"]
+script = ExtResource("quiz_q_6_82snm")
+question = "Quel est le problème principal du charbon ?"
+choices = Array[String](["Il est trop cher.", "Il pollue beaucoup lors de sa combustion.", "Il est introuvable.", "Il ne brûle pas."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_6_fdkl8v"]
+script = ExtResource("quiz_q_6_82snm")
+question = "Laquelle de ces énergies est la plus polluante ?"
+choices = Array[String](["Le soleil.", "Le pétrole.", "Le vent.", "L'eau."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_6_j0z9jz"]
+script = ExtResource("quiz_q_6_82snm")
+question = "Le gaz naturel est une énergie ?"
+choices = Array[String](["Fossile.", "Renouvelable.", "Solaire.", "Hydraulique."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_6_ni1u4a"]
+script = ExtResource("quiz_q_6_82snm")
+question = "Comment appelle-t-on le passage d'une énergie à une autre ?"
+choices = Array[String](["La conversion énergétique.", "La disparition.", "La création d'énergie.", "La pollution."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_6_onslqb"]
+script = ExtResource("quiz_q_6_82snm")
+question = "Les voitures électriques utilisent quelle source ?"
+choices = Array[String](["Le charbon directement.", "L'électricité stockée dans des batteries.", "La vapeur d'eau.", "Le gaz naturel."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_6_rg6i9k"]
+script = ExtResource("quiz_q_6_82snm")
+question = "Quelle ressource est inépuisable à l'échelle humaine ?"
+choices = Array[String](["Le charbon.", "Le pétrole.", "L'énergie solaire.", "Le gaz naturel."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_6_a9fjxx"]
+script = ExtResource("quiz_q_6_82snm")
+question = "Le recyclage aide-t-il à économiser l'énergie ?"
+choices = Array[String](["Non.", "Oui, en évitant de produire des matières neuves.", "Seulement le plastique.", "Seulement le papier."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_6_nl74un"]
+script = ExtResource("quiz_q_6_82snm")
+question = "Qu'est-ce qui produit le plus de déchets radioactifs ?"
+choices = Array[String](["L'éolienne.", "Le panneau solaire.", "La centrale nucléaire.", "Le barrage."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("memo_data")
+questions = Array[ExtResource("quiz_q_6_82snm")]([SubResource("q_6_ncf95h"), SubResource("q_6_dxdtsj"), SubResource("q_6_ql564p"), SubResource("q_6_moss72"), SubResource("q_6_fdkl8v"), SubResource("q_6_j0z9jz"), SubResource("q_6_ni1u4a"), SubResource("q_6_onslqb"), SubResource("q_6_rg6i9k"), SubResource("q_6_a9fjxx"), SubResource("q_6_nl74un")])
+

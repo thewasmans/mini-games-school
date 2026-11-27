@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="MemoData" format=3]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="quiz_q_4_zzida"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="memo_data"]
+
+[sub_resource type="Resource" id="q_4_0gvwlq"]
+script = ExtResource("quiz_q_4_zzida")
+question = "Comment appelle-t-on l’eau qui pénètre dans le sol ?"
+choices = Array[String](["L’évaporation.", "L’infiltration.", "Les précipitations.", "La fusion."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_4_jmof83"]
+script = ExtResource("quiz_q_4_zzida")
+question = "Comment appelle-t-on l’eau qui coule sur le sol ?"
+choices = Array[String](["L’évaporation.", "L’infiltration.", "Le ruissellement.", "La fusion."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_4_5qjhs6"]
+script = ExtResource("quiz_q_4_zzida")
+question = "Que devient l’eau lorsqu’elle chauffe très fort ?"
+choices = Array[String](["Solide.", "Gazeuse.", "Glacée.", "Dure."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_4_zokcvd"]
+script = ExtResource("quiz_q_4_zzida")
+question = "Quelle est la forme de l’eau dans une casserole qui bout ?"
+choices = Array[String](["Solide.", "Gazeuse (vapeur d’eau).", "Glacée.", "Dure."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_4_4i8yoy"]
+script = ExtResource("quiz_q_4_zzida")
+question = "Que sont la glace, la pluie et la vapeur d'eau ?"
+choices = Array[String](["Des matières différentes.", "Des aliments.", "La même matière : l’eau.", "Des gaz."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_4_zjawi2"]
+script = ExtResource("quiz_q_4_zzida")
+question = "Quand l’eau gèle, que se passe-t-il ?"
+choices = Array[String](["Elle disparaît.", "Elle prend plus de place.", "Elle devient du feu.", "Elle change de masse."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_4_nuzuyd"]
+script = ExtResource("quiz_q_4_zzida")
+question = "Comment se comporte la masse lorsque l’eau change d’état ?"
+choices = Array[String](["Augmente.", "Diminue.", "Disparaît.", "Reste la même."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="q_4_l2nar4"]
+script = ExtResource("quiz_q_4_zzida")
+question = "Pourquoi le cycle de l’eau est-il important ?"
+choices = Array[String](["Pour changer les saisons.", "Pour fabriquer des montagnes.", "Pour faire circuler l’eau dans la nature.", "Pour arrêter la pluie."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_4_14box8"]
+script = ExtResource("quiz_q_4_zzida")
+question = "Quel changement d’état produit de la vapeur d’eau à la surface d’un liquide ?"
+choices = Array[String](["La fusion.", "L’évaporation.", "La condensation.", "La solidification."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_4_rhsrai"]
+script = ExtResource("quiz_q_4_zzida")
+question = "Que signifie « ébullition » ?"
+choices = Array[String](["Quand l’eau gèle.", "Quand l’eau coule.", "Quand l’eau bout.", "Quand l’eau tombe du ciel."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_4_alsqsn"]
+script = ExtResource("quiz_q_4_zzida")
+question = "Que produit le refroidissement de la vapeur d’eau ?"
+choices = Array[String](["De la glace directement.", "De l’eau liquide.", "Du sable.", "De la fumée."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("memo_data")
+questions = Array[ExtResource("quiz_q_4_zzida")]([SubResource("q_4_0gvwlq"), SubResource("q_4_jmof83"), SubResource("q_4_5qjhs6"), SubResource("q_4_zokcvd"), SubResource("q_4_4i8yoy"), SubResource("q_4_zjawi2"), SubResource("q_4_nuzuyd"), SubResource("q_4_l2nar4"), SubResource("q_4_14box8"), SubResource("q_4_rhsrai"), SubResource("q_4_alsqsn")])
+

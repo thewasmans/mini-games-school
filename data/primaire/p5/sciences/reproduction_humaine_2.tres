@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="MemoData" format=3]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="quiz_q_5_497md"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="memo_data"]
+
+[sub_resource type="Resource" id="q_5_0zh8b8"]
+script = ExtResource("quiz_q_5_497md")
+question = "Qu’est-ce que la puberté ?"
+choices = Array[String](["Une maladie.", "Une étape où le corps change.", "Un sport.", "Une opération."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_5_qsumll"]
+script = ExtResource("quiz_q_5_497md")
+question = "Quel changement peut apparaître à la puberté ?"
+choices = Array[String](["Les cheveux changent de couleur.", "Les oreilles disparaissent.", "Apparition d’un troisième bras.", "Apparition d’une pilosité."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="q_5_eiwtt7"]
+script = ExtResource("quiz_q_5_497md")
+question = "Que provoque la puberté chez les garçons ?"
+choices = Array[String](["La mue de la voix.", "La disparition des dents.", "Des ailes.", "Un troisième œil."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_5_w869z0"]
+script = ExtResource("quiz_q_5_497md")
+question = "Que provoque la puberté chez les filles ?"
+choices = Array[String](["La chute d’un bras.", "Des nageoires.", "Une carapace.", "Les menstruations."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="q_5_4ebe1l"]
+script = ExtResource("quiz_q_5_497md")
+question = "Quel organe produit les spermatozoïdes ?"
+choices = Array[String](["Le pénis.", "Les testicules.", "Le vagin.", "L’utérus."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_5_hrydqm"]
+script = ExtResource("quiz_q_5_497md")
+question = "Quel organe produit les ovules ?"
+choices = Array[String](["Les ovaires.", "Le pénis.", "Les testicules.", "Le clitoris."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_5_ahdhnd"]
+script = ExtResource("quiz_q_5_497md")
+question = "Quel organe accueille le bébé pendant la grossesse ?"
+choices = Array[String](["Le vagin.", "Le pénis.", "L’utérus.", "Le clitoris."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("memo_data")
+questions = Array[ExtResource("quiz_q_5_497md")]([SubResource("q_5_0zh8b8"), SubResource("q_5_qsumll"), SubResource("q_5_eiwtt7"), SubResource("q_5_w869z0"), SubResource("q_5_4ebe1l"), SubResource("q_5_hrydqm"), SubResource("q_5_ahdhnd")])
+

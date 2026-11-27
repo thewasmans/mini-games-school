@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="MemoData" format=3]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="quiz_q_2_pd4ia"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="memo_data"]
+
+[sub_resource type="Resource" id="q_2_2sofgn"]
+script = ExtResource("quiz_q_2_pd4ia")
+question = "Quel matériau conduit bien l'électricité ?"
+choices = Array[String](["Le plastique.", "Le bois.", "Le métal.", "Le verre."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_2_gunlu0"]
+script = ExtResource("quiz_q_2_pd4ia")
+question = "Pourquoi est-il dangereux de toucher une prise électrique ?"
+choices = Array[String](["Parce qu'on peut s'électrocuter.", "Parce qu'elle est sale.", "Parce qu'elle est petite.", "Parce qu'elle est invisible."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_2_ckg6c7"]
+script = ExtResource("quiz_q_2_pd4ia")
+question = "Qu'est-ce qu'une prise de courant ?"
+choices = Array[String](["Un objet pour s'asseoir.", "Un point de connexion au réseau.", "Un jouet.", "Un aliment."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_2_b7x8g0"]
+script = ExtResource("quiz_q_2_pd4ia")
+question = "Que se passe-t-il si on ouvre un interrupteur ?"
+choices = Array[String](["La lampe s'allume.", "La lampe s'éteint.", "La lampe explose.", "La pile se vide."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_2_c4v28j"]
+script = ExtResource("quiz_q_2_pd4ia")
+question = "Pourquoi faut-il éteindre les lumières ?"
+choices = Array[String](["Pour faire des économies.", "Parce que c'est interdit.", "Pour casser la lampe.", "Pour dormir."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_2_v8sg2e"]
+script = ExtResource("quiz_q_2_pd4ia")
+question = "Quelle est la source d'énergie d'une lampe de poche ?"
+choices = Array[String](["Le soleil.", "Le vent.", "La pile.", "L'eau."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_2_g48iya"]
+script = ExtResource("quiz_q_2_pd4ia")
+question = "Quel objet n'a pas besoin d'électricité ?"
+choices = Array[String](["Une télévision.", "Un crayon.", "Un ordinateur.", "Une machine à laver."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_2_xxd71j"]
+script = ExtResource("quiz_q_2_pd4ia")
+question = "De quoi est composée une pile ?"
+choices = Array[String](["De sucre.", "De produits chimiques.", "De fleurs.", "De sable."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_2_iwcfx3"]
+script = ExtResource("quiz_q_2_pd4ia")
+question = "Qu'est-ce qu'un conducteur électrique ?"
+choices = Array[String](["Un objet qui bloque le courant.", "Un objet qui laisse passer le courant.", "Un objet qui ne sert à rien.", "Un objet qui produit de la lumière."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_2_t0i554"]
+script = ExtResource("quiz_q_2_pd4ia")
+question = "Qu'est-ce qu'un isolant électrique ?"
+choices = Array[String](["Un objet qui bloque le courant.", "Un objet qui laisse passer le courant.", "Un objet qui produit de la chaleur.", "Un objet qui attire les aimants."])
+correct_choice_index = 0
+
+[resource]
+script = ExtResource("memo_data")
+questions = Array[ExtResource("quiz_q_2_pd4ia")]([SubResource("q_2_2sofgn"), SubResource("q_2_gunlu0"), SubResource("q_2_ckg6c7"), SubResource("q_2_b7x8g0"), SubResource("q_2_c4v28j"), SubResource("q_2_v8sg2e"), SubResource("q_2_g48iya"), SubResource("q_2_xxd71j"), SubResource("q_2_iwcfx3"), SubResource("q_2_t0i554")])
+

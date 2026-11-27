@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="MemoData" format=3]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="quiz_q_2_0n5eb"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="memo_data"]
+
+[sub_resource type="Resource" id="q_2_xduef9"]
+script = ExtResource("quiz_q_2_0n5eb")
+question = "Quel instrument sert à mesurer la température ?"
+choices = Array[String](["La balance.", "Le thermomètre.", "Le mètre.", "La boussole."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_2_ypxl66"]
+script = ExtResource("quiz_q_2_0n5eb")
+question = "Quel instrument sert à mesurer la quantité de pluie ?"
+choices = Array[String](["Le thermomètre.", "Le pluviomètre.", "La girouette.", "L'horloge."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_2_dzgu2q"]
+script = ExtResource("quiz_q_2_0n5eb")
+question = "Quel instrument indique la direction du vent ?"
+choices = Array[String](["La girouette.", "Le thermomètre.", "Le parapluie.", "Le chronomètre."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_2_7jwyqt"]
+script = ExtResource("quiz_q_2_0n5eb")
+question = "Que tombe-t-il des nuages quand il fait très froid en hiver ?"
+choices = Array[String](["Du sable.", "De la neige.", "Des cailloux.", "Des feuilles."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_2_yia35u"]
+script = ExtResource("quiz_q_2_0n5eb")
+question = "Comment s'appelle l'eau quand elle est complètement gelée ?"
+choices = Array[String](["La glace.", "La vapeur.", "La pluie.", "Le brouillard."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_2_sot2si"]
+script = ExtResource("quiz_q_2_0n5eb")
+question = "Que devient l'eau liquide quand on la chauffe très fort ?"
+choices = Array[String](["De la glace.", "De la vapeur d'eau.", "De la neige.", "Du plastique."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_2_xxwarh"]
+script = ExtResource("quiz_q_2_0n5eb")
+question = "Quelle saison vient juste après l'hiver ?"
+choices = Array[String](["L'été.", "L'automne.", "Le printemps.", "La mousson."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_2_txmd7u"]
+script = ExtResource("quiz_q_2_0n5eb")
+question = "Pendant quelle saison fait-il généralement le plus chaud ?"
+choices = Array[String](["L'automne.", "L'hiver.", "L'été.", "Le printemps."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_2_j4ja3a"]
+script = ExtResource("quiz_q_2_0n5eb")
+question = "Pendant quelle saison les feuilles des arbres tombent-elles souvent ?"
+choices = Array[String](["L'automne.", "L'hiver.", "L'été.", "Le printemps."])
+correct_choice_index = 0
+
+[resource]
+script = ExtResource("memo_data")
+questions = Array[ExtResource("quiz_q_2_0n5eb")]([SubResource("q_2_xduef9"), SubResource("q_2_ypxl66"), SubResource("q_2_dzgu2q"), SubResource("q_2_7jwyqt"), SubResource("q_2_yia35u"), SubResource("q_2_sot2si"), SubResource("q_2_xxwarh"), SubResource("q_2_txmd7u"), SubResource("q_2_j4ja3a")])
+

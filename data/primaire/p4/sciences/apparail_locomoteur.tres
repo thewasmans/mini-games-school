@@ -1,0 +1,87 @@
+[gd_resource type="Resource" script_class="MemoData" format=3]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="quiz_q_4_b1s19"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="memo_data"]
+
+[sub_resource type="Resource" id="q_4_jox7nj"]
+script = ExtResource("quiz_q_4_b1s19")
+question = "Peut-on bouger sans muscle ?"
+choices = Array[String](["Oui, c'est facile.", "Non, les muscles sont indispensables au mouvement.", "Seulement si on est un enfant.", "Seulement dans l'eau."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_4_ube9xc"]
+script = ExtResource("quiz_q_4_b1s19")
+question = "Comment appelle-t-on les muscles qui travaillent ensemble ?"
+choices = Array[String](["Des muscles antagonistes.", "Des muscles solitaires.", "Des muscles inutiles.", "Des os."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_4_oinwbz"]
+script = ExtResource("quiz_q_4_b1s19")
+question = "Quelle est la fonction principale de la cheville ?"
+choices = Array[String](["Protéger le cœur.", "Permettre le mouvement du pied.", "Digérer.", "Produire de l'énergie."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_4_6etyte"]
+script = ExtResource("quiz_q_4_b1s19")
+question = "Les os sont reliés entre eux par ?"
+choices = Array[String](["Des ligaments.", "De la colle.", "Des cheveux.", "De la peau."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_4_jaj5ui"]
+script = ExtResource("quiz_q_4_b1s19")
+question = "Quelle partie du corps soutient tout le poids du squelette debout ?"
+choices = Array[String](["Les bras.", "Le crâne.", "La colonne vertébrale et les jambes.", "Les doigts."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_4_nucrtv"]
+script = ExtResource("quiz_q_4_b1s19")
+question = "Que se passe-t-il quand un muscle se contracte ?"
+choices = Array[String](["Il s'allonge.", "Il raccourcit et durcit.", "Il disparaît.", "Il change de couleur."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_4_rfyjaq"]
+script = ExtResource("quiz_q_4_b1s19")
+question = "Le fémur se trouve dans ?"
+choices = Array[String](["Le bras.", "La main.", "La cuisse.", "Le pied."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_4_6wdfvq"]
+script = ExtResource("quiz_q_4_b1s19")
+question = "Quelle articulation permet de tourner la tête ?"
+choices = Array[String](["Le cou (vertèbres cervicales).", "Le genou.", "Le coude.", "La cheville."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_4_z6zycq"]
+script = ExtResource("quiz_q_4_b1s19")
+question = "Qu'est-ce qu'une fracture ?"
+choices = Array[String](["Un muscle fatigué.", "Un os cassé.", "Une articulation bloquée.", "Une peau abîmée."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_4_abc7j6"]
+script = ExtResource("quiz_q_4_b1s19")
+question = "Qu'est-ce qu'une entorse ?"
+choices = Array[String](["Une blessure des ligaments.", "Un os qui grandit.", "Un muscle qui pousse.", "Une fracture."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_4_09pj09"]
+script = ExtResource("quiz_q_4_b1s19")
+question = "Le biceps est un muscle du ?"
+choices = Array[String](["Bras.", "Pied.", "Visage.", "Dos."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_4_ou5fep"]
+script = ExtResource("quiz_q_4_b1s19")
+question = "L'humérus est un os situé dans ?"
+choices = Array[String](["Le bras.", "La jambe.", "Le pied.", "La tête."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_4_ydfb6l"]
+script = ExtResource("quiz_q_4_b1s19")
+question = "De quoi est composé l'intérieur de certains os ?"
+choices = Array[String](["D'air.", "De moelle osseuse.", "D'eau pure.", "De muscles."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("memo_data")
+questions = Array[ExtResource("quiz_q_4_b1s19")]([SubResource("q_4_jox7nj"), SubResource("q_4_ube9xc"), SubResource("q_4_oinwbz"), SubResource("q_4_6etyte"), SubResource("q_4_jaj5ui"), SubResource("q_4_nucrtv"), SubResource("q_4_rfyjaq"), SubResource("q_4_6wdfvq"), SubResource("q_4_z6zycq"), SubResource("q_4_abc7j6"), SubResource("q_4_09pj09"), SubResource("q_4_ou5fep"), SubResource("q_4_ydfb6l")])
+

@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="MemoData" format=3]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="quiz_q_5_1s7ci"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="memo_data"]
+
+[sub_resource type="Resource" id="q_5_esi5a5"]
+script = ExtResource("quiz_q_5_1s7ci")
+question = "Qu’est-ce que le Soleil ?"
+choices = Array[String](["Une planète.", "Une étoile.", "Un satellite.", "Une lune."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_5_y2i726"]
+script = ExtResource("quiz_q_5_1s7ci")
+question = "Qu’est-ce que la Terre ?"
+choices = Array[String](["Une étoile.", "Un satellite.", "Une planète.", "Une galaxie."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_5_nahocr"]
+script = ExtResource("quiz_q_5_1s7ci")
+question = "Qu’est-ce que la Lune ?"
+choices = Array[String](["Un satellite naturel de la Terre.", "Une étoile.", "Une planète.", "Un nuage."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_5_m3pqgz"]
+script = ExtResource("quiz_q_5_1s7ci")
+question = "Que produit le Soleil ?"
+choices = Array[String](["De la pluie.", "De la lumière.", "Des montagnes.", "Du vent."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_5_ry10up"]
+script = ExtResource("quiz_q_5_1s7ci")
+question = "Pourquoi voit-on la Lune briller ?"
+choices = Array[String](["Parce qu’elle fabrique sa lumière.", "Parce qu’elle est en feu.", "Parce qu’elle est transparente.", "Parce qu’elle reflète la lumière du Soleil."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="q_5_ff2rmo"]
+script = ExtResource("quiz_q_5_1s7ci")
+question = "À quoi correspond la rotation de la Terre ?"
+choices = Array[String](["Au mouvement de la Terre autour du Soleil.", "Au mouvement de la Lune.", "Au fait que la Terre tourne sur elle-même.", "À la chute des étoiles."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_5_denl3g"]
+script = ExtResource("quiz_q_5_1s7ci")
+question = "Combien de temps dure une rotation complète de la Terre ?"
+choices = Array[String](["1 heure.", "1 jour.", "1 semaine.", "1 année."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_5_q3xx8c"]
+script = ExtResource("quiz_q_5_1s7ci")
+question = "Par quoi est causée l’alternance du jour et de la nuit ?"
+choices = Array[String](["Les nuages.", "La rotation de la Terre.", "La révolution de la Terre.", "Le mouvement de la Lune."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_5_885hhz"]
+script = ExtResource("quiz_q_5_1s7ci")
+question = "Autour de quoi la Lune tourne ?"
+choices = Array[String](["Autour du Soleil uniquement.", "Autour de Mars.", "Autour de la Terre.", "Autour des étoiles."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("memo_data")
+questions = Array[ExtResource("quiz_q_5_1s7ci")]([SubResource("q_5_esi5a5"), SubResource("q_5_y2i726"), SubResource("q_5_nahocr"), SubResource("q_5_m3pqgz"), SubResource("q_5_ry10up"), SubResource("q_5_ff2rmo"), SubResource("q_5_denl3g"), SubResource("q_5_q3xx8c"), SubResource("q_5_885hhz")])
+
