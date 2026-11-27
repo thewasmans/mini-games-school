@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://rumdebbk5r7f"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_4bf8i"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_snbgo"]
+
+[sub_resource type="Resource" id="word_1"]
+script = ExtResource("1_4bf8i")
+word = "TOXICOMANIE"
+hint = "Maladie provoquant l'addiction à une drogue."
+grid_position = Vector2i(3, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_2"]
+script = ExtResource("1_4bf8i")
+word = "POSSESSION"
+hint = "Trouble dissociatif de l'identité où un agent extérieur prend le contrôle du sujet."
+grid_position = Vector2i(2, 5)
+
+[sub_resource type="Resource" id="word_3"]
+script = ExtResource("1_4bf8i")
+word = "NEUROLEPTIQUE"
+hint = "Antipsychotique qui réduit les symptômes positifs de la schizophrénie."
+grid_position = Vector2i(0, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_4"]
+script = ExtResource("1_4bf8i")
+word = "TOURETTE"
+hint = "Syndrome provoquant des tics moteurs et vocaux."
+grid_position = Vector2i(12, 6)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_5"]
+script = ExtResource("1_4bf8i")
+word = "BORDERLINE"
+hint = "Trouble caractérisé par une instabilité thymique et de l'impulsivité."
+grid_position = Vector2i(14, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_6"]
+script = ExtResource("1_4bf8i")
+word = "HISTERIE"
+hint = "Névrose caractérisée par une tendance aux manifestations émotives spectaculaires."
+grid_position = Vector2i(2, 13)
+
+[sub_resource type="Resource" id="word_7"]
+script = ExtResource("1_4bf8i")
+word = "THYMOREGULATEUR"
+hint = "Médicament que l'on donne à un sujet bipolaire."
+grid_position = Vector2i(0, 10)
+
+[sub_resource type="Resource" id="word_8"]
+script = ExtResource("1_4bf8i")
+word = "BIPOLAIRE"
+hint = "Trouble de la régulation de l'humeur provoquant des phases d'euphorie et de dépression."
+grid_position = Vector2i(2, 7)
+
+[sub_resource type="Resource" id="word_9"]
+script = ExtResource("1_4bf8i")
+word = "DELIRE"
+hint = "Perte du sens de la réalité se traduisant par un ensemble de convictions fausses."
+grid_position = Vector2i(6, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_10"]
+script = ExtResource("1_4bf8i")
+word = "PICK"
+hint = "Maladie neurodégénérative où le sujet souffre de désinhibition et d'indifférence émotionnelle."
+grid_position = Vector2i(5, 3)
+
+[resource]
+script = ExtResource("2_snbgo")
+clues = Array[ExtResource("1_4bf8i")]([SubResource("word_1"), SubResource("word_2"), SubResource("word_3"), SubResource("word_4"), SubResource("word_5"), SubResource("word_6"), SubResource("word_7"), SubResource("word_8"), SubResource("word_9"), SubResource("word_10")])
+school_year = "Q1"
+title = "Neurosciences - Mots croisés 14"

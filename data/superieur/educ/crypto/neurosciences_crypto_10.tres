@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dj0ggja43fc1i"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_hqm8x"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_ccyvk"]
+
+[sub_resource type="Resource" id="phrase_1"]
+script = ExtResource("1_hqm8x")
+text = "La conscience implique de réaliser des activités volontaires en activant le lobe frontal."
+
+[sub_resource type="Resource" id="phrase_2"]
+script = ExtResource("1_hqm8x")
+text = "L'inconscience permet de réaliser des activités autonomes sans nécessiter de réflexion consciente."
+
+[sub_resource type="Resource" id="phrase_3"]
+script = ExtResource("1_hqm8x")
+text = "Le système nerveux entérique est souvent qualifié de second cerveau intestinal autonome."
+
+[sub_resource type="Resource" id="phrase_4"]
+script = ExtResource("1_hqm8x")
+text = "Le microbiote intestinal communique directement avec le système nerveux central via le nerf."
+
+[sub_resource type="Resource" id="phrase_5"]
+script = ExtResource("1_hqm8x")
+text = "Le nerf vague relie directement le tube digestif aux structures cérébrales supérieures."
+
+[sub_resource type="Resource" id="phrase_6"]
+script = ExtResource("1_hqm8x")
+text = "La sérotonine intestinale joue un rôle majeur dans la régulation digestive périphérique."
+
+[sub_resource type="Resource" id="phrase_7"]
+script = ExtResource("1_hqm8x")
+text = "L'axe intestin-cerveau influence significativement les comportements émotionnels et l'anxiété humaine."
+
+[sub_resource type="Resource" id="phrase_8"]
+script = ExtResource("1_hqm8x")
+text = "Les perturbations du microbiote intestinal peuvent modifier l'humeur et la neurotransmission cérébrale."
+
+[sub_resource type="Resource" id="phrase_9"]
+script = ExtResource("1_hqm8x")
+text = "Le système entérique régule la motricité digestive et la protection contre les agents pathogènes."
+
+[sub_resource type="Resource" id="phrase_10"]
+script = ExtResource("1_hqm8x")
+text = "La barrière intestinale protège l'organisme contre le passage des agents toxiques extérieurs."
+
+[resource]
+script = ExtResource("2_ccyvk")
+hidden_letter_ratio = 0.08
+phrases = Array[ExtResource("1_hqm8x")]([SubResource("phrase_1"), SubResource("phrase_2"), SubResource("phrase_3"), SubResource("phrase_4"), SubResource("phrase_5"), SubResource("phrase_6"), SubResource("phrase_7"), SubResource("phrase_8"), SubResource("phrase_9"), SubResource("phrase_10")])
+school_year = "Q1"
+title = "Neurosciences - Cryptogramme 10"

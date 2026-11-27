@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dol5nwi60vq4j"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_014mj"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_pwpar"]
+
+[sub_resource type="Resource" id="phrase_1"]
+script = ExtResource("1_014mj")
+text = "La mémoire est une fonction qui permet de conserver et rappeler une information."
+
+[sub_resource type="Resource" id="phrase_2"]
+script = ExtResource("1_014mj")
+text = "La mémoire sensorielle garde un élément en mémoire grâce à la perception auditive."
+
+[sub_resource type="Resource" id="phrase_3"]
+script = ExtResource("1_014mj")
+text = "La mémoire de travail retient les informations durant quelques secondes à quelques minutes."
+
+[sub_resource type="Resource" id="phrase_4"]
+script = ExtResource("1_014mj")
+text = "La mémoire explicite et consciente englobe la mémoire sémantique et épisodique."
+
+[sub_resource type="Resource" id="phrase_5"]
+script = ExtResource("1_014mj")
+text = "La mémoire implicite et inconsciente comprend les savoir-faire stockés de manière procédurale."
+
+[sub_resource type="Resource" id="phrase_6"]
+script = ExtResource("1_014mj")
+text = "L'hippocampe mémorise et fait revenir les souvenirs dans la conscience humaine."
+
+[sub_resource type="Resource" id="phrase_7"]
+script = ExtResource("1_014mj")
+text = "L'amnésie antérograde est l'incapacité totale de stocker de nouveaux souvenirs récents."
+
+[sub_resource type="Resource" id="phrase_8"]
+script = ExtResource("1_014mj")
+text = "L'oubli est un processus naturel et essentiel permettant d'accueillir de nouvelles acquisitions."
+
+[sub_resource type="Resource" id="phrase_9"]
+script = ExtResource("1_014mj")
+text = "La potentialisation à long terme renforce durablement l'efficacité de la transmission synaptique."
+
+[sub_resource type="Resource" id="phrase_10"]
+script = ExtResource("1_014mj")
+text = "La méthode des lieux associe un prénom avec un endroit familier pour mémoriser."
+
+[resource]
+script = ExtResource("2_pwpar")
+hidden_letter_ratio = 0.08
+phrases = Array[ExtResource("1_014mj")]([SubResource("phrase_1"), SubResource("phrase_2"), SubResource("phrase_3"), SubResource("phrase_4"), SubResource("phrase_5"), SubResource("phrase_6"), SubResource("phrase_7"), SubResource("phrase_8"), SubResource("phrase_9"), SubResource("phrase_10")])
+school_year = "Q1"
+title = "Neurosciences - Cryptogramme 8"

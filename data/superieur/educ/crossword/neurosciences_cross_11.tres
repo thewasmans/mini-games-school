@@ -1,0 +1,104 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://s3cm4ian7sbd"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_h6lcq"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_l0ktx"]
+
+[sub_resource type="Resource" id="word_1"]
+script = ExtResource("1_h6lcq")
+word = "GLOBALE"
+hint = "Méthode de lecture où on enseigne le mot dans son ensemble avec une image."
+grid_position = Vector2i(12, 6)
+
+[sub_resource type="Resource" id="word_2"]
+script = ExtResource("1_h6lcq")
+word = "CONNEXIONISME"
+hint = "Théorie selon laquelle le cerveau fonctionne comme un ensemble pour les différentes aptitudes."
+grid_position = Vector2i(0, 2)
+
+[sub_resource type="Resource" id="word_3"]
+script = ExtResource("1_h6lcq")
+word = "PARADOXALE"
+hint = "Forme d'illusion en 2D, mais qui n'existe qu'en 3D."
+grid_position = Vector2i(0, 12)
+
+[sub_resource type="Resource" id="word_4"]
+script = ExtResource("1_h6lcq")
+word = "RETROGRADE"
+hint = "Amnésie de type trouble de la remémoration."
+grid_position = Vector2i(12, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_5"]
+script = ExtResource("1_h6lcq")
+word = "OPTIQUE"
+hint = "Forme d'illusion qui provoque une fausse impression de perspective ou de dimension."
+grid_position = Vector2i(16, 8)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_6"]
+script = ExtResource("1_h6lcq")
+word = "MEMOIRE"
+hint = "Fonction qui permet de conserver et rappeler une information."
+grid_position = Vector2i(10, 14)
+
+[sub_resource type="Resource" id="word_7"]
+script = ExtResource("1_h6lcq")
+word = "SOMMEIL"
+hint = "Fonction permettant de consolider la mémoire et de réguler ses émotions."
+grid_position = Vector2i(17, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_8"]
+script = ExtResource("1_h6lcq")
+word = "LIEU"
+hint = "Méthode de mémorisation associant un élément à retenir avec un endroit."
+grid_position = Vector2i(10, 10)
+
+[sub_resource type="Resource" id="word_9"]
+script = ExtResource("1_h6lcq")
+word = "IMAGINATION"
+hint = "Forme d'apprentissage permettant d'améliorer ses mouvements lorsqu'ils sont automatisés."
+grid_position = Vector2i(0, 7)
+
+[sub_resource type="Resource" id="word_10"]
+script = ExtResource("1_h6lcq")
+word = "NEUROEFFICACE"
+hint = "Se dit d'un cerveau qui est très opérationnel en utilisant peu d'énergie."
+grid_position = Vector2i(0, 16)
+
+[sub_resource type="Resource" id="word_11"]
+script = ExtResource("1_h6lcq")
+word = "CONSCIENCE"
+hint = "Concept à la fois biologique et philosophique très difficile à définir."
+grid_position = Vector2i(0, 9)
+
+[sub_resource type="Resource" id="word_12"]
+script = ExtResource("1_h6lcq")
+word = "POLYSOMNOGRAPHIE"
+hint = "Ensemble de techniques médicales permettant d'étudier le sommeil."
+grid_position = Vector2i(1, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_13"]
+script = ExtResource("1_h6lcq")
+word = "SIESTE"
+hint = "Courte période de sommeil permettant d'améliorer ses aptitudes."
+grid_position = Vector2i(14, 0)
+
+[sub_resource type="Resource" id="word_14"]
+script = ExtResource("1_h6lcq")
+word = "HYPERMNESIE"
+hint = "Trouble où le patient mémorise l'ensemble des moments de sa vie."
+grid_position = Vector2i(0, 4)
+
+[sub_resource type="Resource" id="word_15"]
+script = ExtResource("1_h6lcq")
+word = "PARADOXAL"
+hint = "Stade du sommeil où le sujet rêve."
+grid_position = Vector2i(11, 8)
+
+[resource]
+script = ExtResource("2_l0ktx")
+clues = Array[ExtResource("1_h6lcq")]([SubResource("word_1"), SubResource("word_2"), SubResource("word_3"), SubResource("word_4"), SubResource("word_5"), SubResource("word_6"), SubResource("word_7"), SubResource("word_8"), SubResource("word_9"), SubResource("word_10"), SubResource("word_11"), SubResource("word_12"), SubResource("word_13"), SubResource("word_14"), SubResource("word_15")])
+school_year = "Q1"
+title = "Neurosciences - Mots croisés 11"

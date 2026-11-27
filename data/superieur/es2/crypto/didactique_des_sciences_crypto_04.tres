@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://bb4vdnpt38nbh"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_1y6tl"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_50y26"]
+
+[sub_resource type="Resource" id="phrase_1"]
+script = ExtResource("1_1y6tl")
+text = "La cellule eucaryote possède un noyau qui contient l'ADN."
+
+[sub_resource type="Resource" id="phrase_2"]
+script = ExtResource("1_1y6tl")
+text = "Les mitochondries sont les usines énergétiques des cellules humaines."
+
+[sub_resource type="Resource" id="phrase_3"]
+script = ExtResource("1_1y6tl")
+text = "Le réticulum endoplasmique synthétise les protéines nécessaires."
+
+[sub_resource type="Resource" id="phrase_4"]
+script = ExtResource("1_1y6tl")
+text = "L'appareil de Golgi modifie et empaquète les molécules."
+
+[sub_resource type="Resource" id="phrase_5"]
+script = ExtResource("1_1y6tl")
+text = "Les lysosomes digèrent les déchets et débris cellulaires."
+
+[sub_resource type="Resource" id="phrase_6"]
+script = ExtResource("1_1y6tl")
+text = "Les neurones possèdent environ dix mille synapses chacun."
+
+[sub_resource type="Resource" id="phrase_7"]
+script = ExtResource("1_1y6tl")
+text = "Les cellules gliales soutiennent et protègent les neurones."
+
+[sub_resource type="Resource" id="phrase_8"]
+script = ExtResource("1_1y6tl")
+text = "Le corps humain contient environ trente sept virgule deux milliards de cellules."
+
+[sub_resource type="Resource" id="phrase_9"]
+script = ExtResource("1_1y6tl")
+text = "Les niveaux d'organisation vont de la cellule à l'organisme entier."
+
+[sub_resource type="Resource" id="phrase_10"]
+script = ExtResource("1_1y6tl")
+text = "L'homéostasie maintient l'équilibre des conditions internes du corps."
+
+[resource]
+script = ExtResource("2_50y26")
+hidden_letter_ratio = 0.08
+phrases = Array[ExtResource("1_1y6tl")]([SubResource("phrase_1"), SubResource("phrase_2"), SubResource("phrase_3"), SubResource("phrase_4"), SubResource("phrase_5"), SubResource("phrase_6"), SubResource("phrase_7"), SubResource("phrase_8"), SubResource("phrase_9"), SubResource("phrase_10")])
+school_year = "Q1"
+title = "Didactique des sciences - Cryptogramme 4"

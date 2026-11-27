@@ -1,0 +1,107 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://c2desrm5t4out"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_rdg1j"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_mqcts"]
+
+[sub_resource type="Resource" id="word_1"]
+script = ExtResource("1_rdg1j")
+word = "IRM"
+hint = "Technique médicale qui repose sur les propriétés magnétiques de l'eau."
+grid_position = Vector2i(7, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_2"]
+script = ExtResource("1_rdg1j")
+word = "PARKINSON"
+hint = "Maladie neurodégénérative qui se caractérise par une perturbation de la motricité."
+grid_position = Vector2i(3, 7)
+
+[sub_resource type="Resource" id="word_3"]
+script = ExtResource("1_rdg1j")
+word = "LOBOTOMIE"
+hint = "Technique qui consiste à sectionner des fibres nerveuses dans le cerveau."
+grid_position = Vector2i(10, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_4"]
+script = ExtResource("1_rdg1j")
+word = "DIFFUSION"
+hint = "Technique d'imagerie développée par Denis LeBihan."
+grid_position = Vector2i(4, 11)
+
+[sub_resource type="Resource" id="word_5"]
+script = ExtResource("1_rdg1j")
+word = "ELECTRIQUE"
+hint = "Type d'activité produite par les neurones."
+grid_position = Vector2i(2, 1)
+
+[sub_resource type="Resource" id="word_6"]
+script = ExtResource("1_rdg1j")
+word = "ELECTRODE"
+hint = "Dispositif permettant d'étudier l'activité électrique que l'on place sur le corps."
+grid_position = Vector2i(9, 4)
+
+[sub_resource type="Resource" id="word_7"]
+script = ExtResource("1_rdg1j")
+word = "SCINTIGRAPHIE"
+hint = "Technique d'imagerie permettant d'étudier le fonctionnement d'un organe."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_8"]
+script = ExtResource("1_rdg1j")
+word = "CHIRURGIE"
+hint = "Intervention médicale qui consiste à ouvrir une partie du corps."
+grid_position = Vector2i(14, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_9"]
+script = ExtResource("1_rdg1j")
+word = "TEP"
+hint = "Technique d'imagerie qui repose sur des rayonnements émis par un traceur radioactif."
+grid_position = Vector2i(3, 9)
+
+[sub_resource type="Resource" id="word_10"]
+script = ExtResource("1_rdg1j")
+word = "ALZHEIMER"
+hint = "Maladie neurodégénérative qui se caractérise par une perte de mémoire."
+grid_position = Vector2i(17, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_11"]
+script = ExtResource("1_rdg1j")
+word = "NEURONE"
+hint = "Cellule nerveuse impliquée dans diverses fonctions comme le raisonnement."
+grid_position = Vector2i(16, 7)
+
+[sub_resource type="Resource" id="word_12"]
+script = ExtResource("1_rdg1j")
+word = "SMT"
+hint = "Technique qui consiste à créer un champ magnétique autour du cerveau."
+grid_position = Vector2i(24, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_13"]
+script = ExtResource("1_rdg1j")
+word = "EMOTION"
+hint = "Ressenti psychologique et biologique subjectif d'une personne."
+grid_position = Vector2i(20, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_14"]
+script = ExtResource("1_rdg1j")
+word = "GLIE"
+hint = "Substance qui entoure les neurones."
+grid_position = Vector2i(12, 8)
+
+[sub_resource type="Resource" id="word_15"]
+script = ExtResource("1_rdg1j")
+word = "PARIETAL"
+hint = "Lobe du cerveau qui intervient dans la douleur."
+grid_position = Vector2i(0, 4)
+
+[resource]
+script = ExtResource("2_mqcts")
+clues = Array[ExtResource("1_rdg1j")]([SubResource("word_1"), SubResource("word_2"), SubResource("word_3"), SubResource("word_4"), SubResource("word_5"), SubResource("word_6"), SubResource("word_7"), SubResource("word_8"), SubResource("word_9"), SubResource("word_10"), SubResource("word_11"), SubResource("word_12"), SubResource("word_13"), SubResource("word_14"), SubResource("word_15")])
+school_year = "Q1"
+title = "Neurosciences - Mots croisés 2"

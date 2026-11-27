@@ -1,0 +1,106 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://clr4wq6k0vipi"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_05xi7"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_lq7yx"]
+
+[sub_resource type="Resource" id="word_1"]
+script = ExtResource("1_05xi7")
+word = "AGRYPNIE"
+hint = "Perte prolongée du sommeil."
+grid_position = Vector2i(7, 3)
+
+[sub_resource type="Resource" id="word_2"]
+script = ExtResource("1_05xi7")
+word = "INSOMNIE"
+hint = "Difficulté de s'endormir."
+grid_position = Vector2i(7, 6)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_3"]
+script = ExtResource("1_05xi7")
+word = "BRUGADA"
+hint = "Syndrome provoquant des anomalies cardiaques et des paralysies du sommeil."
+grid_position = Vector2i(15, 12)
+
+[sub_resource type="Resource" id="word_4"]
+script = ExtResource("1_05xi7")
+word = "LENT"
+hint = "Stade du sommeil où le sujet récupère progressivement."
+grid_position = Vector2i(18, 10)
+
+[sub_resource type="Resource" id="word_5"]
+script = ExtResource("1_05xi7")
+word = "MYOPATHIE"
+hint = "Maladie musculaire provoquée par la mutation du chromosome X."
+grid_position = Vector2i(10, 14)
+
+[sub_resource type="Resource" id="word_6"]
+script = ExtResource("1_05xi7")
+word = "NEUROPATHOLOGIE"
+hint = "Terme général qui caractérise des maladies affectant le système nerveux."
+grid_position = Vector2i(18, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_7"]
+script = ExtResource("1_05xi7")
+word = "RUBINSTEIN"
+hint = "Anomalie génétique caractérisée par des parties du corps déformées et un retard mental."
+grid_position = Vector2i(16, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_8"]
+script = ExtResource("1_05xi7")
+word = "TRISOMIE"
+hint = "Anomalie chromosomique provoquant une dysmorphie et des malformations cardiaques."
+grid_position = Vector2i(0, 13)
+
+[sub_resource type="Resource" id="word_9"]
+script = ExtResource("1_05xi7")
+word = "MENTALE"
+hint = "Maladie qui affecte les pensées, les émotions et les comportements."
+grid_position = Vector2i(5, 11)
+
+[sub_resource type="Resource" id="word_10"]
+script = ExtResource("1_05xi7")
+word = "KORSAKOFF"
+hint = "Syndrome provoqué par l'alcool et qui provoque de la confabulation."
+grid_position = Vector2i(6, 9)
+
+[sub_resource type="Resource" id="word_11"]
+script = ExtResource("1_05xi7")
+word = "PSYCHIATRIE"
+hint = "Partie de la médecine qui étudie et traite les maladies mentales."
+grid_position = Vector2i(8, 1)
+
+[sub_resource type="Resource" id="word_12"]
+script = ExtResource("1_05xi7")
+word = "HUNTINGTON"
+hint = "Maladie héréditaire dominante qui se traduit par une chorée dans les premiers stades."
+grid_position = Vector2i(12, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_13"]
+script = ExtResource("1_05xi7")
+word = "XXY"
+hint = "Etat chromosomique d'un patient souffrant du syndrome de Klinefelter."
+grid_position = Vector2i(20, 6)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_14"]
+script = ExtResource("1_05xi7")
+word = "HAYLING"
+hint = "Test neurocognitif permettant d'évaluer les capacités d'inhibition."
+grid_position = Vector2i(18, 8)
+
+[sub_resource type="Resource" id="word_15"]
+script = ExtResource("1_05xi7")
+word = "DEPISTAGE"
+hint = "Technique qui consiste à rechercher une maladie chez un sujet."
+grid_position = Vector2i(9, 5)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_lq7yx")
+clues = Array[ExtResource("1_05xi7")]([SubResource("word_1"), SubResource("word_2"), SubResource("word_3"), SubResource("word_4"), SubResource("word_5"), SubResource("word_6"), SubResource("word_7"), SubResource("word_8"), SubResource("word_9"), SubResource("word_10"), SubResource("word_11"), SubResource("word_12"), SubResource("word_13"), SubResource("word_14"), SubResource("word_15")])
+school_year = "Q1"
+title = "Neurosciences - Mots croisés 12"

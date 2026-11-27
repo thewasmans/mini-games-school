@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://j7fsfkptrs1j"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_yriem"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_n6gko"]
+
+[sub_resource type="Resource" id="question_1"]
+script = ExtResource("1_yriem")
+question = "Qui a proposé l'hypothèse du cerveau triunique divisant l'organe en trois parties ?"
+choices = Array[String](["Il s'agit du médecin Franz Joseph Gall.", "Il s'agit du chercheur Paul MacLean.", "Il s'agit du neurochirurgien Wilder Penfield.", "Il s'agit de l'anatomiste Santiago Ramón y Cajal."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_2"]
+script = ExtResource("1_yriem")
+question = "Quel traceur radioactif est injecté lors d'une tomographie par émission de positrons (TEP) ?"
+choices = Array[String](["Il s'agit du fluorodéoxyglucose.", "Il s'agit de l'isofluorane.", "Il s'agit de l'hélium liquide.", "Il s'agit de la sérotonine."])
+
+[sub_resource type="Resource" id="question_3"]
+script = ExtResource("1_yriem")
+question = "Quel est le rôle principal des oligodendrocytes dans le système nerveux ?"
+choices = Array[String](["Ils forment la barrière hémato-encéphalique.", "Ils jouent un rôle de macrophages pour éliminer les déchets.", "Ils produisent la gaine de myéline.", "Ils secrètent directement de l'acétylcholine."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="question_4"]
+script = ExtResource("1_yriem")
+question = "Quel lobe cérébral est principalement impliqué dans la vision ?"
+choices = Array[String](["Le lobe frontal est le principal responsable.", "Le lobe pariétal gère cette fonction.", "Le lobe temporal traite ces informations.", "Le lobe occipital est uniquement impliqué dans la vision."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="question_5"]
+script = ExtResource("1_yriem")
+question = "Quel est l'effet principal du cortisol libéré par le cortex surrénalien en situation de stress ?"
+choices = Array[String](["Il provoque une diminution immédiate de la pression sanguine.", "Il induit un sommeil profond et réparateur.", "Il permet au foie de décomposer le glycogène pour libérer du glucose dans le sang.", "Il bloque totalement la transmission des influx nerveux."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="question_6"]
+script = ExtResource("1_yriem")
+question = "Que caractérise l'aphasie de Wernicke chez un patient ?"
+choices = Array[String](["Une incapacité totale à articuler les mots.", "Une incompréhension du discours produit et du sens des mots employés.", "Une perte définitive de la vision périphérique.", "Une paralysie complète des membres inférieurs."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_7"]
+script = ExtResource("1_yriem")
+question = "Quelle est la capacité de la mémoire de travail (court terme) chez l'adulte selon Miller ?"
+choices = Array[String](["Elle est limitée à 1 ou 2 éléments.", "Elle se situe entre 5 et 9 empans.", "Elle peut stocker entre 10 et 15 éléments.", "Elle est totalement illimitée."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_8"]
+script = ExtResource("1_yriem")
+question = "En quoi consiste la technique d'optogénétique ?"
+choices = Array[String](["À créer un champ magnétique à l'aide d'une bobine au-dessus du crâne.", "À utiliser la lumière pour déclencher des séquences génétiques et activer des neurones.", "À implanter chirurgicalement des électrodes profondes.", "À mesurer le mouvement des molécules d'eau par diffusion."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_9"]
+script = ExtResource("1_yriem")
+question = "Quel phénomène explique que le cortex moteur gauche contrôle la partie droite du corps ?"
+choices = Array[String](["La loi du réverbère.", "La plasticité cérébrale.", "Le phénomène controlatéral.", "Le syndrome de déconnexion."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="question_10"]
+script = ExtResource("1_yriem")
+question = "Quelle glande est responsable de la sécrétion de la mélatonine, hormone de l'obscurité ?"
+choices = Array[String](["L'hypophyse.", "L'épiphyse ou glande pinéale.", "L'amygdale.", "L'hippocampe."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_n6gko")
+questions = Array[ExtResource("1_yriem")]([SubResource("question_1"), SubResource("question_2"), SubResource("question_3"), SubResource("question_4"), SubResource("question_5"), SubResource("question_6"), SubResource("question_7"), SubResource("question_8"), SubResource("question_9"), SubResource("question_10")])
+school_year = "Q1"
+title = "Neurosciences - Quiz 1"

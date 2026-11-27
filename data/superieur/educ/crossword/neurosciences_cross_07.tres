@@ -1,0 +1,108 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dc5cmqtyg2655"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_0yyq8"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_qvyje"]
+
+[sub_resource type="Resource" id="word_1"]
+script = ExtResource("1_0yyq8")
+word = "SPINAUX"
+hint = "Se dit des nerfs qui ressortent de la moelle épinière."
+grid_position = Vector2i(0, 10)
+
+[sub_resource type="Resource" id="word_2"]
+script = ExtResource("1_0yyq8")
+word = "ANXIETE"
+hint = "Réaction physiologique liée à la peur."
+grid_position = Vector2i(2, 12)
+
+[sub_resource type="Resource" id="word_3"]
+script = ExtResource("1_0yyq8")
+word = "FRONTAL"
+hint = "Syndrome qui se caractérise par un changement de la personnalité."
+grid_position = Vector2i(0, 4)
+
+[sub_resource type="Resource" id="word_4"]
+script = ExtResource("1_0yyq8")
+word = "HEMISPHERE"
+hint = "Partie du cerveau comprenant les lobes."
+grid_position = Vector2i(2, 1)
+
+[sub_resource type="Resource" id="word_5"]
+script = ExtResource("1_0yyq8")
+word = "CERVELET"
+hint = "Structure impliquée dans l'équilibre."
+grid_position = Vector2i(11, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_6"]
+script = ExtResource("1_0yyq8")
+word = "SYMPATHIQUE"
+hint = "Système nerveux qui s'active en cas de stress."
+grid_position = Vector2i(1, 14)
+
+[sub_resource type="Resource" id="word_7"]
+script = ExtResource("1_0yyq8")
+word = "TEMPORAL"
+hint = "Lobe impliqué dans la mémoire."
+grid_position = Vector2i(2, 20)
+
+[sub_resource type="Resource" id="word_8"]
+script = ExtResource("1_0yyq8")
+word = "STRESS"
+hint = "Menace dans l'environnement."
+grid_position = Vector2i(1, 14)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_9"]
+script = ExtResource("1_0yyq8")
+word = "AVC"
+hint = "Acronyme d'accident vasculaire cérébral."
+grid_position = Vector2i(9, 18)
+
+[sub_resource type="Resource" id="word_10"]
+script = ExtResource("1_0yyq8")
+word = "MALADIE"
+hint = "Terme commun pour désigner une pathologie."
+grid_position = Vector2i(3, 14)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_11"]
+script = ExtResource("1_0yyq8")
+word = "CAPGRAS"
+hint = "Syndrome du délire d'illusions de sosies."
+grid_position = Vector2i(7, 16)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_12"]
+script = ExtResource("1_0yyq8")
+word = "DECONNEXION"
+hint = "Syndrome qui se caractérise par une séparation entre les deux hémisphères."
+grid_position = Vector2i(3, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_13"]
+script = ExtResource("1_0yyq8")
+word = "SCHIZOPHRENIE"
+hint = "Maladie psychiatrique où le patient perçoit une réalité différente et souffre d'hallucinations."
+grid_position = Vector2i(8, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_14"]
+script = ExtResource("1_0yyq8")
+word = "HALLUCINATION"
+hint = "Trouble dans lequel une personne voit ou entend des choses qui n'existent pas."
+grid_position = Vector2i(5, 6)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_15"]
+script = ExtResource("1_0yyq8")
+word = "DEMENCE"
+hint = "Perte d'autonomie chez un patient."
+grid_position = Vector2i(11, 13)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_qvyje")
+clues = Array[ExtResource("1_0yyq8")]([SubResource("word_1"), SubResource("word_2"), SubResource("word_3"), SubResource("word_4"), SubResource("word_5"), SubResource("word_6"), SubResource("word_7"), SubResource("word_8"), SubResource("word_9"), SubResource("word_10"), SubResource("word_11"), SubResource("word_12"), SubResource("word_13"), SubResource("word_14"), SubResource("word_15")])
+school_year = "Q1"
+title = "Neurosciences - Mots croisés 7"

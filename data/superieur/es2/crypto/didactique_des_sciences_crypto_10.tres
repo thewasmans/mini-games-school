@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://les1rqsemkhs"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_ds52a"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_iemqn"]
+
+[sub_resource type="Resource" id="phrase_1"]
+script = ExtResource("1_ds52a")
+text = "L'être humain est un animal mammifère appartenant à la classe des vertébrés."
+
+[sub_resource type="Resource" id="phrase_2"]
+script = ExtResource("1_ds52a")
+text = "L'homéostasie maintient l'équilibre des conditions internes constantes."
+
+[sub_resource type="Resource" id="phrase_3"]
+script = ExtResource("1_ds52a")
+text = "L'évolution s'observe dans l'adaptation des systèmes biologiques."
+
+[sub_resource type="Resource" id="phrase_4"]
+script = ExtResource("1_ds52a")
+text = "La conscience et la pensée émergent de l'activité du cortex préfrontal."
+
+[sub_resource type="Resource" id="phrase_5"]
+script = ExtResource("1_ds52a")
+text = "L'inconscient influence nos comportements et nos décisions."
+
+[sub_resource type="Resource" id="phrase_6"]
+script = ExtResource("1_ds52a")
+text = "La place de l'humain dans la biodiversité en fait un animal responsable."
+
+[sub_resource type="Resource" id="phrase_7"]
+script = ExtResource("1_ds52a")
+text = "Les gènes transmettent les caractéristiques d'une génération à l'autre."
+
+[sub_resource type="Resource" id="phrase_8"]
+script = ExtResource("1_ds52a")
+text = "La sélection naturelle favorise les organismes les mieux adaptés."
+
+[sub_resource type="Resource" id="phrase_9"]
+script = ExtResource("1_ds52a")
+text = "La mutation génétique crée la variation génétique dans les populations."
+
+[sub_resource type="Resource" id="phrase_10"]
+script = ExtResource("1_ds52a")
+text = "L'écosystème repose sur l'interdépendance de tous les êtres vivants."
+
+[resource]
+script = ExtResource("2_iemqn")
+hidden_letter_ratio = 0.08
+phrases = Array[ExtResource("1_ds52a")]([SubResource("phrase_1"), SubResource("phrase_2"), SubResource("phrase_3"), SubResource("phrase_4"), SubResource("phrase_5"), SubResource("phrase_6"), SubResource("phrase_7"), SubResource("phrase_8"), SubResource("phrase_9"), SubResource("phrase_10")])
+school_year = "Q1"
+title = "Didactique des sciences - Cryptogramme 10"

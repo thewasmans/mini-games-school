@@ -1,0 +1,95 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dy4avsia1q3l3"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_grw0b"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_mea64"]
+
+[sub_resource type="Resource" id="word_1"]
+script = ExtResource("1_grw0b")
+word = "PETALE"
+hint = "Élément coloré de la corolle servant à attirer les pollinisateurs."
+grid_position = Vector2i(8, 13)
+
+[sub_resource type="Resource" id="word_2"]
+script = ExtResource("1_grw0b")
+word = "COROLLE"
+hint = "Ensemble de tous les pétales d'une fleur."
+grid_position = Vector2i(2, 8)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_3"]
+script = ExtResource("1_grw0b")
+word = "SEPALE"
+hint = "Pièce protectrice externe de la fleur."
+grid_position = Vector2i(11, 11)
+
+[sub_resource type="Resource" id="word_4"]
+script = ExtResource("1_grw0b")
+word = "CALICE"
+hint = "Ensemble de tous les sépales d'une fleur."
+grid_position = Vector2i(12, 6)
+
+[sub_resource type="Resource" id="word_5"]
+script = ExtResource("1_grw0b")
+word = "FECONDATION"
+hint = "Fusion entre le grain de pollen et l'ovule."
+grid_position = Vector2i(3, 4)
+
+[sub_resource type="Resource" id="word_6"]
+script = ExtResource("1_grw0b")
+word = "ETIOLATION"
+hint = "Allongement excessif et anormal de la tige d'une plante à l'obscurité."
+grid_position = Vector2i(4, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_7"]
+script = ExtResource("1_grw0b")
+word = "TROPISME"
+hint = "Orientation de la croissance d'une plante en réaction à un stimulus."
+grid_position = Vector2i(0, 11)
+
+[sub_resource type="Resource" id="word_8"]
+script = ExtResource("1_grw0b")
+word = "ZOOCHORIE"
+hint = "Mode de pollinisation ou de dissémination assuré par les animaux."
+grid_position = Vector2i(12, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_9"]
+script = ExtResource("1_grw0b")
+word = "ANEMOGAMIE"
+hint = "Mode de pollinisation assuré par le vent."
+grid_position = Vector2i(9, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_10"]
+script = ExtResource("1_grw0b")
+word = "HYDROGAMIE"
+hint = "Mode de pollinisation assuré par l'eau."
+grid_position = Vector2i(6, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_11"]
+script = ExtResource("1_grw0b")
+word = "CAROTENE"
+hint = "Pigment végétal absorbant principalement les longueurs d'onde bleues et vertes."
+grid_position = Vector2i(0, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_12"]
+script = ExtResource("1_grw0b")
+word = "ALGUE"
+hint = "Végétal aquatique primitif dépourvu de racines."
+grid_position = Vector2i(17, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_13"]
+script = ExtResource("1_grw0b")
+word = "CRAMPON"
+hint = "Organe de fixation des algues sur le substrat."
+grid_position = Vector2i(11, 9)
+
+[resource]
+script = ExtResource("2_mea64")
+clues = Array[ExtResource("1_grw0b")]([SubResource("word_1"), SubResource("word_2"), SubResource("word_3"), SubResource("word_4"), SubResource("word_5"), SubResource("word_6"), SubResource("word_7"), SubResource("word_8"), SubResource("word_9"), SubResource("word_10"), SubResource("word_11"), SubResource("word_12"), SubResource("word_13")])
+school_year = "Q1"
+title = "Didactique des sciences - Mots croisés 10"

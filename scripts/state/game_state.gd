@@ -8,6 +8,7 @@ signal progress_changed
 
 const SAVE_COMPLETED_KEY := "completed"
 const SAVE_CURRENT_KEY := "current"
+const HIGHER_PROGRESS_REVISION := "higher-order-v2"
 
 var current_study_level: int
 var current_school_year: int
@@ -37,7 +38,10 @@ func _init(game_data: GameData) -> void:
 				_current_levels[key] = 0
 				_completed_levels[key] = {}
 				_level_counts[key] = subjects[subject_index].levels.size()
-				_subject_save_keys[key] = "%s/%s/%s" % [study_level.name, school_year.name, subjects[subject_index].name]
+				var save_key := "%s/%s/%s" % [study_level.name, school_year.name, subjects[subject_index].name]
+				if study_level_index == 2:
+					save_key += "/%s" % HIGHER_PROGRESS_REVISION
+				_subject_save_keys[key] = save_key
 
 func save_data() -> Dictionary:
 	var subjects := {}

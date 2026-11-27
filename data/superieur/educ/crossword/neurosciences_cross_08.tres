@@ -1,0 +1,109 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://clrmsv3n2wtuq"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_qyqw8"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_hjqfh"]
+
+[sub_resource type="Resource" id="word_1"]
+script = ExtResource("1_qyqw8")
+word = "PROSOPAGNOSIE"
+hint = "Syndrome où le patient voit des visages déformés."
+grid_position = Vector2i(9, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_2"]
+script = ExtResource("1_qyqw8")
+word = "GERSTMANN"
+hint = "Syndrome qui se caractérise par une acalculie et une agnosie."
+grid_position = Vector2i(18, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_3"]
+script = ExtResource("1_qyqw8")
+word = "ILLUSION"
+hint = "Conflit entre la perception et la réalité."
+grid_position = Vector2i(1, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_4"]
+script = ExtResource("1_qyqw8")
+word = "DORSALE"
+hint = "Voie nerveuse dans le haut du cerveau qui localise les objets."
+grid_position = Vector2i(3, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_5"]
+script = ExtResource("1_qyqw8")
+word = "VENTRALE"
+hint = "Voie nerveuse dans le bas du cerveau qui identifie les objets."
+grid_position = Vector2i(5, 6)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_6"]
+script = ExtResource("1_qyqw8")
+word = "ATAXIE"
+hint = "Trouble de la marche affectant le cervelet."
+grid_position = Vector2i(18, 6)
+
+[sub_resource type="Resource" id="word_7"]
+script = ExtResource("1_qyqw8")
+word = "ISCHEMIQUE"
+hint = "Forme d'AVC qui se caractérise par un thrombus bloquant l'artère."
+grid_position = Vector2i(9, 14)
+
+[sub_resource type="Resource" id="word_8"]
+script = ExtResource("1_qyqw8")
+word = "HYPOTHALAMUS"
+hint = "Petite glande dans le cerveau impliquée dans de nombreuses fonctions comme le sommeil ou la faim."
+grid_position = Vector2i(7, 3)
+
+[sub_resource type="Resource" id="word_9"]
+script = ExtResource("1_qyqw8")
+word = "SENSATION"
+hint = "Variation dans un milieu."
+grid_position = Vector2i(1, 11)
+
+[sub_resource type="Resource" id="word_10"]
+script = ExtResource("1_qyqw8")
+word = "DYSPHASIE"
+hint = "Difficulté dans la communication orale."
+grid_position = Vector2i(10, 1)
+
+[sub_resource type="Resource" id="word_11"]
+script = ExtResource("1_qyqw8")
+word = "CAROTIDE"
+hint = "Artère du cou qui alimente le cerveau."
+grid_position = Vector2i(0, 4)
+
+[sub_resource type="Resource" id="word_12"]
+script = ExtResource("1_qyqw8")
+word = "FOIE"
+hint = "Organe qui stocke et donne le sucre lorsqu'il en faut."
+grid_position = Vector2i(18, 11)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_13"]
+script = ExtResource("1_qyqw8")
+word = "DIASCHISIS"
+hint = "Perte de fonction cérébrale éloignée de la lésion."
+grid_position = Vector2i(15, 6)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_14"]
+script = ExtResource("1_qyqw8")
+word = "ADRENALINE"
+hint = "Hormone libérée lors d'un stress permettant de dilater les pupilles."
+grid_position = Vector2i(13, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_15"]
+script = ExtResource("1_qyqw8")
+word = "HEMORRAGIQUE"
+hint = "Forme d'AVC qui se caractérise par une rupture d'anévrisme."
+grid_position = Vector2i(7, 3)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_hjqfh")
+clues = Array[ExtResource("1_qyqw8")]([SubResource("word_1"), SubResource("word_2"), SubResource("word_3"), SubResource("word_4"), SubResource("word_5"), SubResource("word_6"), SubResource("word_7"), SubResource("word_8"), SubResource("word_9"), SubResource("word_10"), SubResource("word_11"), SubResource("word_12"), SubResource("word_13"), SubResource("word_14"), SubResource("word_15")])
+school_year = "Q1"
+title = "Neurosciences - Mots croisés 8"

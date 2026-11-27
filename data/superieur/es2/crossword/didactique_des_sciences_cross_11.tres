@@ -1,0 +1,81 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://gcwnewt3ahn7"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_sqaum"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_gcaon"]
+
+[sub_resource type="Resource" id="word_1"]
+script = ExtResource("1_sqaum")
+word = "HERBIER"
+hint = "Collection scientifique de plantes séchées."
+grid_position = Vector2i(1, 4)
+
+[sub_resource type="Resource" id="word_2"]
+script = ExtResource("1_sqaum")
+word = "CHAMPIGNON"
+hint = "Organisme hétérotrophe doté d'une paroi en chitine."
+grid_position = Vector2i(7, 3)
+
+[sub_resource type="Resource" id="word_3"]
+script = ExtResource("1_sqaum")
+word = "CHITINE"
+hint = "Molécule rigide constituant la paroi cellulaire des champignons."
+grid_position = Vector2i(1, 9)
+
+[sub_resource type="Resource" id="word_4"]
+script = ExtResource("1_sqaum")
+word = "GLYCOGENE"
+hint = "Forme de stockage des glucides chez les champignons."
+grid_position = Vector2i(13, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_5"]
+script = ExtResource("1_sqaum")
+word = "MICROMYCETE"
+hint = "Champignon microscopique unicellulaire."
+grid_position = Vector2i(7, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_6"]
+script = ExtResource("1_sqaum")
+word = "MACROMYCETE"
+hint = "Champignon supérieur visible à l'œil nu."
+grid_position = Vector2i(7, 1)
+
+[sub_resource type="Resource" id="word_7"]
+script = ExtResource("1_sqaum")
+word = "MYCELIUM"
+hint = "Réseau souterrain dense constitué de filaments chez les champignons."
+grid_position = Vector2i(0, 6)
+
+[sub_resource type="Resource" id="word_8"]
+script = ExtResource("1_sqaum")
+word = "HYPHE"
+hint = "Filament microscopique constituant la structure des champignons."
+grid_position = Vector2i(2, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_9"]
+script = ExtResource("1_sqaum")
+word = "CHAPEAU"
+hint = "Partie supérieure du champignon abritant les spores."
+grid_position = Vector2i(3, 11)
+
+[sub_resource type="Resource" id="word_10"]
+script = ExtResource("1_sqaum")
+word = "PEDONCULE"
+hint = "Tige ou pied soutenant le chapeau du champignon."
+grid_position = Vector2i(11, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_11"]
+script = ExtResource("1_sqaum")
+word = "ANNEAU"
+hint = "Collerette résiduelle entourant le pied de certains champignons."
+grid_position = Vector2i(9, 3)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_gcaon")
+clues = Array[ExtResource("1_sqaum")]([SubResource("word_1"), SubResource("word_2"), SubResource("word_3"), SubResource("word_4"), SubResource("word_5"), SubResource("word_6"), SubResource("word_7"), SubResource("word_8"), SubResource("word_9"), SubResource("word_10"), SubResource("word_11")])
+school_year = "Q1"
+title = "Didactique des sciences - Mots croisés 11"

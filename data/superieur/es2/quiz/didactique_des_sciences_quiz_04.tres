@@ -1,0 +1,77 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://2sw5ob5jpjon"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_gdlgy"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_tj6dw"]
+
+[sub_resource type="Resource" id="question_1"]
+script = ExtResource("1_gdlgy")
+question = "Quel est le nom du plus grand organisme vivant au monde, découvert en Oregon aux États-Unis, qui est un champignon ?"
+choices = Array[String](["L'amanite phalloïde.", "Le champignon de miel du genre Armillaria.", "Le cèpe de Bordeaux.", "Le polypore hérissé."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_2"]
+script = ExtResource("1_gdlgy")
+question = "Quel groupe d'organismes représente environ 85% de l'ensemble des végétaux ?"
+choices = Array[String](["Les algues.", "Les mousses.", "Les conifères.", "Les plantes à fleurs."])
+
+[sub_resource type="Resource" id="question_3"]
+script = ExtResource("1_gdlgy")
+question = "Quel type de sève est transporté par le phloème dans la plante ?"
+choices = Array[String](["La sève brute.", "La sève élaborée.", "De l'eau pure sans sels minéraux.", "Du nectar de fleurs."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_4"]
+script = ExtResource("1_gdlgy")
+question = "À quelle époque estime-t-on l'apparition des premières plantes sur Terre ?"
+choices = Array[String](["Il y a 400 millions d'années.", "Il y a 3,8 milliards d'années.", "Il y a 10 000 ans.", "Il y a 50 millions d'années."])
+
+[sub_resource type="Resource" id="question_5"]
+script = ExtResource("1_gdlgy")
+question = "Quelle est la particularité des feuilles du nénuphar géant d'Amazonie en termes de résistance ?"
+choices = Array[String](["Elles peuvent supporter le poids d'un enfant de 9 mois.", "Elles résistent à des températures de -50°C.", "Elles peuvent briller dans le noir.", "Elles flottent mais se déchirent au moindre contact."])
+
+[sub_resource type="Resource" id="question_6"]
+script = ExtResource("1_gdlgy")
+question = "Comment appelle-t-on l'ensemble des hyphes qui constituent la partie souterraine d'un champignon ?"
+choices = Array[String](["Le mycélium.", "Le chapeau.", "Le pédoncule.", "La volve."])
+
+[sub_resource type="Resource" id="question_7"]
+script = ExtResource("1_gdlgy")
+question = "Quelle couleur de lumière est généralement le moins absorbée (rejetée) par les pigments chlorophylliens ?"
+choices = Array[String](["Le rouge.", "Le vert.", "Le bleu.", "Le jaune."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_8"]
+script = ExtResource("1_gdlgy")
+question = "Quelle température atteint environ le permafrost dans la toundra (comme au Groenland) ?"
+choices = Array[String](["0°C.", "-10°C.", "-50°C.", "-100°C."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="question_9"]
+script = ExtResource("1_gdlgy")
+question = "Quel est le nom du fruit ou de la plante qui détient le record du plus gros fruit au monde avec 1054 kg (en Suisse) ?"
+choices = Array[String](["Une citrouille.", "Une pastèque.", "Un melon.", "Un ananas."])
+
+[sub_resource type="Resource" id="question_10"]
+script = ExtResource("1_gdlgy")
+question = "Qui est considéré comme le père de la médecine ?"
+choices = Array[String](["Aristote", "Galien", "Hippocrate", "André Vésale"])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="question_11"]
+script = ExtResource("1_gdlgy")
+question = "Quel organite est le site de la respiration cellulaire fournissant l'ATP ?"
+choices = Array[String](["Noyau", "Mitochondrie", "Ribosome", "Cytoplasme"])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_12"]
+script = ExtResource("1_gdlgy")
+question = "Quelle est la paire de chromosomes sexuels d'une femme ?"
+choices = Array[String](["XY", "XX", "XXY", "X"])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_tj6dw")
+questions = Array[ExtResource("1_gdlgy")]([SubResource("question_1"), SubResource("question_2"), SubResource("question_3"), SubResource("question_4"), SubResource("question_5"), SubResource("question_6"), SubResource("question_7"), SubResource("question_8"), SubResource("question_9"), SubResource("question_10"), SubResource("question_11"), SubResource("question_12")])
+school_year = "Q1"
+title = "Didactique des sciences - Quiz 4"

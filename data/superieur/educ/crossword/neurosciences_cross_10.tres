@@ -1,0 +1,105 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://ofy1nrmfrpin"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_0ndt1"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_l8bvp"]
+
+[sub_resource type="Resource" id="word_1"]
+script = ExtResource("1_0ndt1")
+word = "MIGRAINE"
+hint = "Maladie neurologique qui provoque des maux de tête et des scintillements."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_2"]
+script = ExtResource("1_0ndt1")
+word = "BALINT"
+hint = "Syndrome qui provoque une apraxie du regard."
+grid_position = Vector2i(21, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_3"]
+script = ExtResource("1_0ndt1")
+word = "AKINETOPSIE"
+hint = "Agnosie visuelle du mouvement."
+grid_position = Vector2i(18, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_4"]
+script = ExtResource("1_0ndt1")
+word = "RESILIENCE"
+hint = "Capacité à se reconstruire après un choc émotionnel."
+grid_position = Vector2i(9, 11)
+
+[sub_resource type="Resource" id="word_5"]
+script = ExtResource("1_0ndt1")
+word = "CLASSIQUE"
+hint = "Forme de conditionnement qui implique un stimulus neutre et une réponse conditionnelle."
+grid_position = Vector2i(13, 3)
+
+[sub_resource type="Resource" id="word_6"]
+script = ExtResource("1_0ndt1")
+word = "BROCA"
+hint = "Forme d'aphasie où le sujet parle en se répétant."
+grid_position = Vector2i(0, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_7"]
+script = ExtResource("1_0ndt1")
+word = "PROCEDURALE"
+hint = "Mémoire concernant les savoirs faire, comme l'apprentissage du vélo."
+grid_position = Vector2i(10, 1)
+
+[sub_resource type="Resource" id="word_8"]
+script = ExtResource("1_0ndt1")
+word = "RASMUSSEN"
+hint = "Forme d'épilepsie qui touche les enfants."
+grid_position = Vector2i(13, 9)
+
+[sub_resource type="Resource" id="word_9"]
+script = ExtResource("1_0ndt1")
+word = "ANTEROGRADE"
+hint = "Amnésie de type trouble de la consolidation."
+grid_position = Vector2i(8, 5)
+
+[sub_resource type="Resource" id="word_10"]
+script = ExtResource("1_0ndt1")
+word = "SYLLABIQUE"
+hint = "Méthode de lecture où on enseigne les lettres, puis les mots."
+grid_position = Vector2i(8, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_11"]
+script = ExtResource("1_0ndt1")
+word = "WERNICKE"
+hint = "Forme d'aphasie où le sujet utilise beaucoup de mots mais formulent des phrases insensées."
+grid_position = Vector2i(1, 10)
+
+[sub_resource type="Resource" id="word_12"]
+script = ExtResource("1_0ndt1")
+word = "EXPLICITE"
+hint = "Comprend les mémoires sémantique et épisodique."
+grid_position = Vector2i(4, 7)
+
+[sub_resource type="Resource" id="word_13"]
+script = ExtResource("1_0ndt1")
+word = "OPERANT"
+hint = "Forme de conditionnement qui implique des récompenses et des punitions."
+grid_position = Vector2i(0, 4)
+
+[sub_resource type="Resource" id="word_14"]
+script = ExtResource("1_0ndt1")
+word = "EMPAN"
+hint = "Nombre d'éléments que l'on peut restituer après mémorisation."
+grid_position = Vector2i(3, 0)
+
+[sub_resource type="Resource" id="word_15"]
+script = ExtResource("1_0ndt1")
+word = "OUBLI"
+hint = "Processus naturel de la mémoire permettant de laisser la place à de nouveaux souvenirs."
+grid_position = Vector2i(18, 7)
+
+[resource]
+script = ExtResource("2_l8bvp")
+clues = Array[ExtResource("1_0ndt1")]([SubResource("word_1"), SubResource("word_2"), SubResource("word_3"), SubResource("word_4"), SubResource("word_5"), SubResource("word_6"), SubResource("word_7"), SubResource("word_8"), SubResource("word_9"), SubResource("word_10"), SubResource("word_11"), SubResource("word_12"), SubResource("word_13"), SubResource("word_14"), SubResource("word_15")])
+school_year = "Q1"
+title = "Neurosciences - Mots croisés 10"

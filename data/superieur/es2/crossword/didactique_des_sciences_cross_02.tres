@@ -1,0 +1,108 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://f75q4fih71ey"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_2ilpp"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_o8ft7"]
+
+[sub_resource type="Resource" id="word_1"]
+script = ExtResource("1_2ilpp")
+word = "ARCHEOPTERYX"
+hint = "Oiseau primitif découvert en 1861, possédant des dents et des écailles."
+grid_position = Vector2i(6, 9)
+
+[sub_resource type="Resource" id="word_2"]
+script = ExtResource("1_2ilpp")
+word = "LINNE"
+hint = "Botaniste ayant proposé une nouvelle méthode de classification en 1735."
+grid_position = Vector2i(4, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_3"]
+script = ExtResource("1_2ilpp")
+word = "ARISTOTE"
+hint = "Philosophe antique ayant classé les animaux par milieu de vie."
+grid_position = Vector2i(0, 13)
+
+[sub_resource type="Resource" id="word_4"]
+script = ExtResource("1_2ilpp")
+word = "DARWIN"
+hint = "Naturaliste auteur de la théorie de la sélection naturelle."
+grid_position = Vector2i(0, 10)
+
+[sub_resource type="Resource" id="word_5"]
+script = ExtResource("1_2ilpp")
+word = "LAMARCK"
+hint = "Naturaliste ayant proposé la théorie de l'usage."
+grid_position = Vector2i(1, 9)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_6"]
+script = ExtResource("1_2ilpp")
+word = "SELECTION"
+hint = "Processus par lequel les individus les mieux adaptés survivent."
+grid_position = Vector2i(11, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_7"]
+script = ExtResource("1_2ilpp")
+word = "USAGE"
+hint = "Théorie selon laquelle l'utilisation d'un organe le modifie."
+grid_position = Vector2i(3, 12)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_8"]
+script = ExtResource("1_2ilpp")
+word = "RECYCLAGE"
+hint = "Processus de traitement des déchets."
+grid_position = Vector2i(16, 6)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_9"]
+script = ExtResource("1_2ilpp")
+word = "BIODIVERSITE"
+hint = "Variété des formes de vie présentes sur Terre."
+grid_position = Vector2i(7, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_10"]
+script = ExtResource("1_2ilpp")
+word = "TAXONOMIE"
+hint = "Science de la classification des organismes."
+grid_position = Vector2i(0, 3)
+
+[sub_resource type="Resource" id="word_11"]
+script = ExtResource("1_2ilpp")
+word = "ESPECE"
+hint = "Groupe d'individus capables de se reproduire entre eux."
+grid_position = Vector2i(11, 3)
+
+[sub_resource type="Resource" id="word_12"]
+script = ExtResource("1_2ilpp")
+word = "ENDOTHERME"
+hint = "Animal capable de réguler sa propre température corporelle."
+grid_position = Vector2i(9, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_13"]
+script = ExtResource("1_2ilpp")
+word = "ECTOTHERME"
+hint = "Animal dont la température corporelle dépend de l'environnement."
+grid_position = Vector2i(14, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_14"]
+script = ExtResource("1_2ilpp")
+word = "VERTEBRES"
+hint = "Animaux possédant une colonne vertébrale, apparus vers 420 millions d'années."
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_15"]
+script = ExtResource("1_2ilpp")
+word = "INSECTES"
+hint = "Groupe d'invertébrés terrestres apparus vers 410 millions d'années."
+grid_position = Vector2i(10, 14)
+
+[resource]
+script = ExtResource("2_o8ft7")
+clues = Array[ExtResource("1_2ilpp")]([SubResource("word_1"), SubResource("word_2"), SubResource("word_3"), SubResource("word_4"), SubResource("word_5"), SubResource("word_6"), SubResource("word_7"), SubResource("word_8"), SubResource("word_9"), SubResource("word_10"), SubResource("word_11"), SubResource("word_12"), SubResource("word_13"), SubResource("word_14"), SubResource("word_15")])
+school_year = "Q1"
+title = "Didactique des sciences - Mots croisés 2"

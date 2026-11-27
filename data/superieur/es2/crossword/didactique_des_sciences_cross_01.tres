@@ -1,0 +1,89 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://5o86s4u2r3vc"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_74q5f"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_6ocpg"]
+
+[sub_resource type="Resource" id="word_1"]
+script = ExtResource("1_74q5f")
+word = "EUCARYOTES"
+hint = "Organismes dont les cellules possèdent un noyau, apparus il y a 2,1 milliards d'années."
+grid_position = Vector2i(2, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_2"]
+script = ExtResource("1_74q5f")
+word = "STROMATOLITHES"
+hint = "Fossiles bactériens retrouvés en Australie, preuves de vie ancienne."
+grid_position = Vector2i(0, 5)
+
+[sub_resource type="Resource" id="word_3"]
+script = ExtResource("1_74q5f")
+word = "PHOTOSYNTHESE"
+hint = "Processus biologique réalisé par les algues bleues."
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_4"]
+script = ExtResource("1_74q5f")
+word = "ACANTHOSTEGA"
+hint = "Premier amphibien identifié, marquant la sortie du poisson de l'eau."
+grid_position = Vector2i(6, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_5"]
+script = ExtResource("1_74q5f")
+word = "AMNIOTIQUE"
+hint = "Type d'œuf permettant aux reptiles de se développer hors de l'eau."
+grid_position = Vector2i(4, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_6"]
+script = ExtResource("1_74q5f")
+word = "PANGEE"
+hint = "Supercontinent qui regroupait les terres émergées à l'époque des reptiles."
+grid_position = Vector2i(12, 1)
+
+[sub_resource type="Resource" id="word_7"]
+script = ExtResource("1_74q5f")
+word = "HOMINIDES"
+hint = "Famille incluant l'espèce humaine, apparue il y a environ 7 millions d'années."
+grid_position = Vector2i(11, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_8"]
+script = ExtResource("1_74q5f")
+word = "TRIAS"
+hint = "Période de l'ère secondaire située entre 251 et 200 millions d'années."
+grid_position = Vector2i(16, 6)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_9"]
+script = ExtResource("1_74q5f")
+word = "JURASSIQUE"
+hint = "Période de l'ère secondaire située entre 200 et 145 millions d'années."
+grid_position = Vector2i(11, 3)
+
+[sub_resource type="Resource" id="word_10"]
+script = ExtResource("1_74q5f")
+word = "CRETACE"
+hint = "Période de l'ère secondaire située entre 145 et 65 millions d'années."
+grid_position = Vector2i(13, 6)
+
+[sub_resource type="Resource" id="word_11"]
+script = ExtResource("1_74q5f")
+word = "ORNITISCHIENS"
+hint = "Lignée de dinosaures caractérisée par un régime alimentaire herbivore."
+grid_position = Vector2i(9, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_12"]
+script = ExtResource("1_74q5f")
+word = "SAURISCHIENS"
+hint = "Lignée de dinosaures caractérisée par un mode de vie carnivore bipède."
+grid_position = Vector2i(13, 0)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_6ocpg")
+clues = Array[ExtResource("1_74q5f")]([SubResource("word_1"), SubResource("word_2"), SubResource("word_3"), SubResource("word_4"), SubResource("word_5"), SubResource("word_6"), SubResource("word_7"), SubResource("word_8"), SubResource("word_9"), SubResource("word_10"), SubResource("word_11"), SubResource("word_12")])
+school_year = "Q1"
+title = "Didactique des sciences - Mots croisés 1"

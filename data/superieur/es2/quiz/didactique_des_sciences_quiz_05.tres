@@ -1,0 +1,78 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://7i7jbseqgntq"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_lqr62"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_b7ehb"]
+
+[sub_resource type="Resource" id="question_1"]
+script = ExtResource("1_lqr62")
+question = "Combien d'os possède environ un bébé à la naissance ?"
+choices = Array[String](["100", "200", "350", "500"])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="question_2"]
+script = ExtResource("1_lqr62")
+question = "Quel type d'articulation trouve-t-on au niveau du crâne ?"
+choices = Array[String](["Fixe", "Semi-mobile", "Très mobile", "Aucune"])
+
+[sub_resource type="Resource" id="question_3"]
+script = ExtResource("1_lqr62")
+question = "Quel muscle est responsable de la mastication ?"
+choices = Array[String](["Deltoïde", "Biceps", "Masséter", "Grand fessier"])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="question_4"]
+script = ExtResource("1_lqr62")
+question = "Quel est le muscle le plus volumineux du corps ?"
+choices = Array[String](["Grand fessier", "Quadriceps", "Triceps", "Sterno-cléido-mastoïdien"])
+
+[sub_resource type="Resource" id="question_5"]
+script = ExtResource("1_lqr62")
+question = "Quelles sont les trois couches de la peau ?"
+choices = Array[String](["Épiderme, Derme, Hypoderme", "Épiderme, Derme, Os", "Poil, Ongle, Derme", "Squelette, Muscle, Peau"])
+
+[sub_resource type="Resource" id="question_6"]
+script = ExtResource("1_lqr62")
+question = "Quelle cellule sécrète la mélanine pour protéger contre les UV ?"
+choices = Array[String](["Kératinocyte", "Mélanocyte", "Neurone", "Adipocyte"])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_7"]
+script = ExtResource("1_lqr62")
+question = "Quelle est la fréquence sonore perçue par l'homme (en Hertz) ?"
+choices = Array[String](["100-1000 Hz", "20-20.000 Hz", "1000-120.000 Hz", "0-10 Hz"])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_8"]
+script = ExtResource("1_lqr62")
+question = "Comment appelle-t-on la partie colorée de l'œil ?"
+choices = Array[String](["Pupille", "Cornée", "Iris", "Cristallin"])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="question_9"]
+script = ExtResource("1_lqr62")
+question = "Quelle pathologie se caractérise par une focalisation avant la rétine ?"
+choices = Array[String](["Hypermétropie", "Presbytie", "Myopie", "Astigmatisme"])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="question_10"]
+script = ExtResource("1_lqr62")
+question = "Quelle est la principale fonction des globules rouges ?"
+choices = Array[String](["Défense immunitaire", "Transport oxygène", "Coagulation", "Digestion"])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_11"]
+script = ExtResource("1_lqr62")
+question = "Quel groupe sanguin est un receveur universel ?"
+choices = Array[String](["A", "B", "AB", "O"])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="question_12"]
+script = ExtResource("1_lqr62")
+question = "Quel organe est responsable du recyclage du fer des globules rouges ?"
+choices = Array[String](["Rate", "Foie", "Pancréas", "Estomac"])
+
+[resource]
+script = ExtResource("2_b7ehb")
+questions = Array[ExtResource("1_lqr62")]([SubResource("question_1"), SubResource("question_2"), SubResource("question_3"), SubResource("question_4"), SubResource("question_5"), SubResource("question_6"), SubResource("question_7"), SubResource("question_8"), SubResource("question_9"), SubResource("question_10"), SubResource("question_11"), SubResource("question_12")])
+school_year = "Q1"
+title = "Didactique des sciences - Quiz 5"
