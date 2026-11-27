@@ -1,0 +1,97 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dxgntollm5mgk"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_0eid1"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_yqjcb"]
+
+[sub_resource type="Resource" id="word_1"]
+script = ExtResource("1_0eid1")
+word = "STOMATE"
+hint = "Petite ouverture sur les feuilles permettant les échanges gazeux."
+grid_position = Vector2i(7, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_2"]
+script = ExtResource("1_0eid1")
+word = "XYLEME"
+hint = "Tissu conducteur transportant la sève brute."
+grid_position = Vector2i(7, 12)
+
+[sub_resource type="Resource" id="word_3"]
+script = ExtResource("1_0eid1")
+word = "PHLOEME"
+hint = "Tissu conducteur transportant la sève élaborée."
+grid_position = Vector2i(10, 8)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_4"]
+script = ExtResource("1_0eid1")
+word = "CRYPTOGAME"
+hint = "Nom donné aux plantes sans fleurs."
+grid_position = Vector2i(3, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_5"]
+script = ExtResource("1_0eid1")
+word = "PHANEROGAME"
+hint = "Nom donné aux plantes à fleurs."
+grid_position = Vector2i(0, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_6"]
+script = ExtResource("1_0eid1")
+word = "LIMBE"
+hint = "Surface principale de la feuille."
+grid_position = Vector2i(12, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_7"]
+script = ExtResource("1_0eid1")
+word = "PETIOLE"
+hint = "Portion par laquelle la feuille s'accroche à la tige."
+grid_position = Vector2i(14, 6)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_8"]
+script = ExtResource("1_0eid1")
+word = "AUTOTROPHE"
+hint = "Organisme capable de produire sa propre matière organique."
+grid_position = Vector2i(5, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_9"]
+script = ExtResource("1_0eid1")
+word = "EVAPOTRANSPIRATION"
+hint = "Mécanisme d'élimination d'eau par la plante."
+grid_position = Vector2i(0, 8)
+
+[sub_resource type="Resource" id="word_10"]
+script = ExtResource("1_0eid1")
+word = "TOUNDRA"
+hint = "Biome très froid caractérisé par un sol gelé en profondeur."
+grid_position = Vector2i(16, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_11"]
+script = ExtResource("1_0eid1")
+word = "TAIGA"
+hint = "Vaste forêt de conifères propre aux régions froides."
+grid_position = Vector2i(8, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_12"]
+script = ExtResource("1_0eid1")
+word = "SAVANE"
+hint = "Biome caractérisé par des herbes hautes et de grands mammifères."
+grid_position = Vector2i(7, 4)
+
+[sub_resource type="Resource" id="word_13"]
+script = ExtResource("1_0eid1")
+word = "STEPPE"
+hint = "Biome caractérisé par une végétation herbacée basse."
+grid_position = Vector2i(8, 14)
+
+[resource]
+script = ExtResource("2_yqjcb")
+clues = Array[ExtResource("1_0eid1")]([SubResource("word_1"), SubResource("word_2"), SubResource("word_3"), SubResource("word_4"), SubResource("word_5"), SubResource("word_6"), SubResource("word_7"), SubResource("word_8"), SubResource("word_9"), SubResource("word_10"), SubResource("word_11"), SubResource("word_12"), SubResource("word_13")])
+school_year = "Q1"
+title = "Didactique des sciences - Mots croisés 8"

@@ -1,0 +1,67 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bpxxhr25flt8k"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_av2gt"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_awiyu"]
+
+[sub_resource type="Resource" id="question_1"]
+script = ExtResource("1_av2gt")
+question = "Qui a qualifié le cerveau de siège des mécanismes mentaux dans l'Antiquité ?"
+choices = Array[String](["Aristote.", "Platon et Galien.", "Paul Broca.", "Franz Joseph Gall."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_2"]
+script = ExtResource("1_av2gt")
+question = "Qui a fondé la phrénologie en 1810 ?"
+choices = Array[String](["Franz Joseph Gall.", "Pierre Flourens.", "Wilder Penfield.", "Denis LeBihan."])
+
+[sub_resource type="Resource" id="question_3"]
+script = ExtResource("1_av2gt")
+question = "Qui a inventé l'IRM de diffusion ?"
+choices = Array[String](["Denis LeBihan.", "Egas Moniz.", "Hugues Duffeau.", "Santiago Ramón y Cajal."])
+
+[sub_resource type="Resource" id="question_4"]
+script = ExtResource("1_av2gt")
+question = "Comment appelle-t-on la chirurgie cartographiant le cerveau d'un patient éveillé ?"
+choices = Array[String](["La stimulation profonde.", "La chirurgie éveillée.", "La stimulation magnétique.", "L'hypnosédation."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_5"]
+script = ExtResource("1_av2gt")
+question = "Quel robot possède un cerveau biologique de 100 000 neurones de rat ?"
+choices = Array[String](["Le robot HRP-4C.", "Le robot Gordon.", "Le robot Diabetio.", "Le robot Cardiocube."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_6"]
+script = ExtResource("1_av2gt")
+question = "Quel est le volume moyen du cerveau humain adulte ?"
+choices = Array[String](["Environ 100 cm3.", "Environ 500 cm3.", "Environ 1400 cm3.", "Environ 5000 cm3."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="question_7"]
+script = ExtResource("1_av2gt")
+question = "Comment appelle-t-on la suppression massive de synapses chez le jeune enfant ?"
+choices = Array[String](["La neurogenèse.", "L'élagage synaptique.", "La plasticité sensorielle.", "La dépolarisation."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_8"]
+script = ExtResource("1_av2gt")
+question = "Quel test prouve que les bébés de 4 mois ont l'intuition des nombres ?"
+choices = Array[String](["Le test de Piaget.", "Le test de Wynn.", "Le test de Dehaene.", "Le test d'Ekman."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_9"]
+script = ExtResource("1_av2gt")
+question = "Quelle drogue de synthèse est connue sous le nom de 'drogue du viol' ?"
+choices = Array[String](["Le LSD.", "Le GHB.", "La cocaïne.", "L'ecstasy."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_10"]
+script = ExtResource("1_av2gt")
+question = "Quel pigment brun s'accumule dans les cellules lors du vieillissement ?"
+choices = Array[String](["La lipofuscine.", "La mélatonine.", "La rhodopsine.", "Le tryptophane."])
+
+[resource]
+script = ExtResource("2_awiyu")
+questions = Array[ExtResource("1_av2gt")]([SubResource("question_1"), SubResource("question_2"), SubResource("question_3"), SubResource("question_4"), SubResource("question_5"), SubResource("question_6"), SubResource("question_7"), SubResource("question_8"), SubResource("question_9"), SubResource("question_10")])
+school_year = "Q1"
+title = "Neurosciences - Quiz 2"

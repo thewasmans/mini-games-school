@@ -1,0 +1,65 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://8kwx0wma6jes"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_cyo31"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_6k8du"]
+
+[sub_resource type="Resource" id="question_1"]
+script = ExtResource("1_cyo31")
+question = "Combien de cellules gliales environ compte le cerveau humain ?"
+choices = Array[String](["10 milliards.", "50 milliards.", "100 milliards.", "1 000 milliards."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="question_2"]
+script = ExtResource("1_cyo31")
+question = "Quelle maladie rare est causée par une anomalie génétique des astrocytes ?"
+choices = Array[String](["La maladie d'Alexander.", "La maladie d'Alzheimer.", "La maladie de Parkinson.", "L'ataxie de Friedreich."])
+
+[sub_resource type="Resource" id="question_3"]
+script = ExtResource("1_cyo31")
+question = "Qui a formulé la théorie neuronale en 1888 ?"
+choices = Array[String](["Santiago Ramón y Cajal.", "Camillo Golgi.", "Carl Wernicke.", "Paul Broca."])
+
+[sub_resource type="Resource" id="question_4"]
+script = ExtResource("1_cyo31")
+question = "Quel neurotransmetteur excitateur majeur forme 50% des synapses ?"
+choices = Array[String](["L'acétylcholine.", "Le glutamate.", "La dopamine.", "La sérotonine."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_5"]
+script = ExtResource("1_cyo31")
+question = "Quelle neurotoxine de serpent bloque les récepteurs à acétylcholine ?"
+choices = Array[String](["La tétrodotoxine.", "L'abungarotoxine.", "L'isofluorane.", "La kétamine."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_6"]
+script = ExtResource("1_cyo31")
+question = "Combien de paires de nerfs crâniens composent le système périphérique ?"
+choices = Array[String](["12 paires.", "31 paires.", "62 paires.", "85 paires."])
+
+[sub_resource type="Resource" id="question_7"]
+script = ExtResource("1_cyo31")
+question = "Quel cas historique de lésion frontale est causé par une barre de fer ?"
+choices = Array[String](["Henry Molaison.", "Phineas Gage.", "Victor Leborgne.", "Ken Parks."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_8"]
+script = ExtResource("1_cyo31")
+question = "Quel syndrome pariétal associe acalculie et agnosie des doigts ?"
+choices = Array[String](["Le syndrome de Gerstmann.", "Le syndrome de Balint.", "Le syndrome de Klüver-Bucy.", "Le syndrome de Capgras."])
+
+[sub_resource type="Resource" id="question_9"]
+script = ExtResource("1_cyo31")
+question = "Quel syndrome limbique provoque hyperoralité et hypersexualité ?"
+choices = Array[String](["Le syndrome de Klüver-Bucy.", "Le syndrome de Fregoli.", "Le locked-in syndrome.", "La chorée de Morvan."])
+
+[sub_resource type="Resource" id="question_10"]
+script = ExtResource("1_cyo31")
+question = "Comment nomme-t-on l'agnosie visuelle empêchant de voir le mouvement ?"
+choices = Array[String](["La prosopagnosie.", "L'akinétopsie.", "L'alexie.", "L'ataxie optique."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_6k8du")
+questions = Array[ExtResource("1_cyo31")]([SubResource("question_1"), SubResource("question_2"), SubResource("question_3"), SubResource("question_4"), SubResource("question_5"), SubResource("question_6"), SubResource("question_7"), SubResource("question_8"), SubResource("question_9"), SubResource("question_10")])
+school_year = "Q1"
+title = "Neurosciences - Quiz 3"

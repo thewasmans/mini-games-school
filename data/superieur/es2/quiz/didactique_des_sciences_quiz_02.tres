@@ -1,0 +1,79 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bp20wqoao8qda"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_0i66q"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_s4bm3"]
+
+[sub_resource type="Resource" id="question_1"]
+script = ExtResource("1_0i66q")
+question = "Comment qualifie-t-on un champignon et une algue vivant en association symbiotique étroite ?"
+choices = Array[String](["Un lichen.", "Une mousse.", "Une fougère.", "Une bactérie."])
+
+[sub_resource type="Resource" id="question_2"]
+script = ExtResource("1_0i66q")
+question = "Quel est le plus grand animal vivant actuellement sur Terre ?"
+choices = Array[String](["Le requin blanc.", "L'éléphant d'Afrique.", "La baleine bleue.", "La girafe."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="question_3"]
+script = ExtResource("1_0i66q")
+question = "Quel phénomène désigne l'adaptation d'une espèce inoffensive pour ressembler à une espèce dangereuse ?"
+choices = Array[String](["Le mimétisme.", "Le camouflage.", "L'hibernation.", "L'endémisme."])
+
+[sub_resource type="Resource" id="question_4"]
+script = ExtResource("1_0i66q")
+question = "Quel organe permet aux poissons de respirer sous l'eau ?"
+choices = Array[String](["Les poumons.", "Les branchies.", "La peau.", "Les nageoires."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_5"]
+script = ExtResource("1_0i66q")
+question = "Quelle est la particularité des plantes carnivores ?"
+choices = Array[String](["Elles mangent de la viande humaine.", "Elles complètent leur nutrition en capturant des proies pour leurs nutriments.", "Elles ne font pas de photosynthèse.", "Elles vivent uniquement dans le désert."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_6"]
+script = ExtResource("1_0i66q")
+question = "Comment appelle-t-on une espèce qui n'existe que dans une seule région géographique précise ?"
+choices = Array[String](["Une espèce migratrice.", "Une espèce invasive.", "Une espèce endémique.", "Une espèce domestique."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="question_7"]
+script = ExtResource("1_0i66q")
+question = "Quel est le principal gaz absorbé par les plantes lors de la photosynthèse ?"
+choices = Array[String](["L'oxygène.", "L'azote.", "Le dioxyde de carbone.", "L'hydrogène."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="question_8"]
+script = ExtResource("1_0i66q")
+question = "Quel groupe de vertébrés a vu le jour en premier sur Terre selon l'histoire évolutive ?"
+choices = Array[String](["Les poissons.", "Les mammifères.", "Les oiseaux.", "Les amphibiens."])
+
+[sub_resource type="Resource" id="question_9"]
+script = ExtResource("1_0i66q")
+question = "Quel animal marin est capable de régénérer la totalité de ses bras s'ils sont coupés ?"
+choices = Array[String](["L'orque.", "L'étoile de mer.", "La méduse.", "Le thon."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_10"]
+script = ExtResource("1_0i66q")
+question = "Quel type de reproduction n'implique qu'un seul parent et produit des clones ?"
+choices = Array[String](["La reproduction sexuée.", "La reproduction asexuée.", "La fécondation croisée.", "La pollinisation."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_11"]
+script = ExtResource("1_0i66q")
+question = "Quelle est la fonction principale des chloroplastes dans une cellule végétale ?"
+choices = Array[String](["Produire de l'énergie par la respiration.", "Assurer la photosynthèse.", "Stocker l'eau.", "Digérer les nutriments."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_12"]
+script = ExtResource("1_0i66q")
+question = "Quel est l'âge estimé de l'apparition de la vie sur Terre ?"
+choices = Array[String](["Il y a 500 ans.", "Il y a 3,8 milliards d'années.", "Il y a 100 millions d'années.", "Il y a 10 000 ans."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_s4bm3")
+questions = Array[ExtResource("1_0i66q")]([SubResource("question_1"), SubResource("question_2"), SubResource("question_3"), SubResource("question_4"), SubResource("question_5"), SubResource("question_6"), SubResource("question_7"), SubResource("question_8"), SubResource("question_9"), SubResource("question_10"), SubResource("question_11"), SubResource("question_12")])
+school_year = "Q1"
+title = "Didactique des sciences - Quiz 2"

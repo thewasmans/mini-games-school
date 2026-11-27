@@ -1,0 +1,108 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bullxbp51nhl1"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_ag8tx"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_au23b"]
+
+[sub_resource type="Resource" id="word_1"]
+script = ExtResource("1_ag8tx")
+word = "DECLIN"
+hint = "Phénomène cognitif qui apparait malheureusement avec l'âge."
+grid_position = Vector2i(7, 5)
+
+[sub_resource type="Resource" id="word_2"]
+script = ExtResource("1_ag8tx")
+word = "GYRUS"
+hint = "Terme scientifique qui correspond aux plis du cerveau."
+grid_position = Vector2i(1, 5)
+
+[sub_resource type="Resource" id="word_3"]
+script = ExtResource("1_ag8tx")
+word = "NEUROGENESE"
+hint = "Capacité de fabrication de neurones."
+grid_position = Vector2i(5, 3)
+
+[sub_resource type="Resource" id="word_4"]
+script = ExtResource("1_ag8tx")
+word = "SYNAPSE"
+hint = "Zone de communication entre deux neurones."
+grid_position = Vector2i(13, 7)
+
+[sub_resource type="Resource" id="word_5"]
+script = ExtResource("1_ag8tx")
+word = "HIPPOCAMPE"
+hint = "Structure du cerveau qui intervient dans la mémoire spatiale."
+grid_position = Vector2i(5, 0)
+
+[sub_resource type="Resource" id="word_6"]
+script = ExtResource("1_ag8tx")
+word = "BLANCHE"
+hint = "Substance composée de graisses."
+grid_position = Vector2i(16, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_7"]
+script = ExtResource("1_ag8tx")
+word = "GRISE"
+hint = "Substance composée de neurones."
+grid_position = Vector2i(3, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_8"]
+script = ExtResource("1_ag8tx")
+word = "CALLEUX"
+hint = "Corps qui sépare les deux hémisphères."
+grid_position = Vector2i(19, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_9"]
+script = ExtResource("1_ag8tx")
+word = "MENINGES"
+hint = "Couches protectrices du cerveau."
+grid_position = Vector2i(11, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_10"]
+script = ExtResource("1_ag8tx")
+word = "HYPNOSEDATION"
+hint = "Technique qui associe l'hypnose et la sédation intraveineuse."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_11"]
+script = ExtResource("1_ag8tx")
+word = "GLYCEMIE"
+hint = "Taux de sucres dans le sang."
+grid_position = Vector2i(14, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_12"]
+script = ExtResource("1_ag8tx")
+word = "ESCALIER"
+hint = "Modèle d'apprentissage proposé par Piaget."
+grid_position = Vector2i(8, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_13"]
+script = ExtResource("1_ag8tx")
+word = "AMNESIE"
+hint = "Perte de mémoire."
+grid_position = Vector2i(0, 10)
+
+[sub_resource type="Resource" id="word_14"]
+script = ExtResource("1_ag8tx")
+word = "NEUROMYTHE"
+hint = "Mythe qui concerne les neurosciences, comme les 10% d'utilisation."
+grid_position = Vector2i(5, 12)
+
+[sub_resource type="Resource" id="word_15"]
+script = ExtResource("1_ag8tx")
+word = "WYNN"
+hint = "Test qui permet de vérifier l'intuition des mathématiques chez les enfants."
+grid_position = Vector2i(11, 11)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_au23b")
+clues = Array[ExtResource("1_ag8tx")]([SubResource("word_1"), SubResource("word_2"), SubResource("word_3"), SubResource("word_4"), SubResource("word_5"), SubResource("word_6"), SubResource("word_7"), SubResource("word_8"), SubResource("word_9"), SubResource("word_10"), SubResource("word_11"), SubResource("word_12"), SubResource("word_13"), SubResource("word_14"), SubResource("word_15")])
+school_year = "Q1"
+title = "Neurosciences - Mots croisés 3"

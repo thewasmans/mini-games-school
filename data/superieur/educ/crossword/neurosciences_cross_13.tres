@@ -1,0 +1,109 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://divstho13gttv"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_fsc03"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_y1eij"]
+
+[sub_resource type="Resource" id="word_1"]
+script = ExtResource("1_fsc03")
+word = "TURNER"
+hint = "Monosomie affectant uniquement les filles et provoquant souvent une infertilité."
+grid_position = Vector2i(15, 12)
+
+[sub_resource type="Resource" id="word_2"]
+script = ExtResource("1_fsc03")
+word = "SPECTRE"
+hint = "Terme actuel qui caractérise les différentes formes d'autisme."
+grid_position = Vector2i(2, 6)
+
+[sub_resource type="Resource" id="word_3"]
+script = ExtResource("1_fsc03")
+word = "WILLIAM"
+hint = "Micro-délétion détectée par la méthode FISH et qui se traduit par de l'hypersociabilité."
+grid_position = Vector2i(1, 4)
+
+[sub_resource type="Resource" id="word_4"]
+script = ExtResource("1_fsc03")
+word = "COMORBIDITE"
+hint = "Association de plusieurs troubles suite à une maladie primaire."
+grid_position = Vector2i(7, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_5"]
+script = ExtResource("1_fsc03")
+word = "DEPRESSION"
+hint = "Maladie psychiatrique induisant tristesse, fatigue et perte d'intérêt."
+grid_position = Vector2i(10, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_6"]
+script = ExtResource("1_fsc03")
+word = "TREACHER"
+hint = "Maladie congénitale qui entraine un mauvais développement des structures du visage."
+grid_position = Vector2i(14, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_7"]
+script = ExtResource("1_fsc03")
+word = "TACHYCARDIE"
+hint = "Augmentation rapide du rythme cardiaque."
+grid_position = Vector2i(12, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_8"]
+script = ExtResource("1_fsc03")
+word = "LEWY"
+hint = "Forme de démence comprenant des hallucinations visuelles et une cognition fluctuante."
+grid_position = Vector2i(1, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_9"]
+script = ExtResource("1_fsc03")
+word = "SCLEROSE"
+hint = "Maladie auto-immune où des macrophages détruisent la gaine de myéline."
+grid_position = Vector2i(17, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_10"]
+script = ExtResource("1_fsc03")
+word = "PRADER"
+hint = "Maladie très rare provoquant de l'hyperphagie et de l'hypotonie chez le bébé."
+grid_position = Vector2i(7, 0)
+
+[sub_resource type="Resource" id="word_11"]
+script = ExtResource("1_fsc03")
+word = "ANGOISSE"
+hint = "Grande anxiété qui se traduit par une rupture de la personne."
+grid_position = Vector2i(0, 12)
+
+[sub_resource type="Resource" id="word_12"]
+script = ExtResource("1_fsc03")
+word = "KLINEFELTER"
+hint = "Trisomie touchant exclusivement les hommes et provoquant l'infertilité."
+grid_position = Vector2i(20, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_13"]
+script = ExtResource("1_fsc03")
+word = "AUTISME"
+hint = "Trouble qui se caractérise par de la stéréotypie, des difficultés de communication et de sociabilité."
+grid_position = Vector2i(4, 9)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_14"]
+script = ExtResource("1_fsc03")
+word = "CHARCOT"
+hint = "Forme de sclérose paralysante suite à une dégénérescence des motoneurones."
+grid_position = Vector2i(0, 10)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_15"]
+script = ExtResource("1_fsc03")
+word = "HISTOPATHOLOGIE"
+hint = "Technique permettant de distinguer certaines neuropathologies sur base des protéines."
+grid_position = Vector2i(6, 8)
+
+[resource]
+script = ExtResource("2_y1eij")
+clues = Array[ExtResource("1_fsc03")]([SubResource("word_1"), SubResource("word_2"), SubResource("word_3"), SubResource("word_4"), SubResource("word_5"), SubResource("word_6"), SubResource("word_7"), SubResource("word_8"), SubResource("word_9"), SubResource("word_10"), SubResource("word_11"), SubResource("word_12"), SubResource("word_13"), SubResource("word_14"), SubResource("word_15")])
+school_year = "Q1"
+title = "Neurosciences - Mots croisés 13"

@@ -1,0 +1,74 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://ttr5g8eb0100"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_fotfq"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_fc8bc"]
+
+[sub_resource type="Resource" id="question_1"]
+script = ExtResource("1_fotfq")
+question = "Quel animal marin possède trois cœurs et un sang de couleur bleue ?"
+choices = Array[String](["Le requin.", "Le poulpe.", "La raie.", "Le calamar géant."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_2"]
+script = ExtResource("1_fotfq")
+question = "Comment nomme-t-on la relation durable et à bénéfice réciproque entre deux espèces différentes ?"
+choices = Array[String](["Le parasitisme.", "La symbiose.", "La prédation.", "La compétition."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_3"]
+script = ExtResource("1_fotfq")
+question = "Quel insecte produit du miel en butinant les fleurs ?"
+choices = Array[String](["La guêpe.", "L'abeille.", "Le bourdon.", "La fourmi."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_4"]
+script = ExtResource("1_fotfq")
+question = "Quel est le nom scientifique de l'humain moderne ?"
+choices = Array[String](["Homo habilis.", "Homo erectus.", "Homo sapiens.", "Australopithecus."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="question_5"]
+script = ExtResource("1_fotfq")
+question = "Quelle structure protège les graines chez les plantes angiospermes ?"
+choices = Array[String](["Le fruit.", "La racine.", "La feuille.", "La tige."])
+
+[sub_resource type="Resource" id="question_6"]
+script = ExtResource("1_fotfq")
+question = "Quel mammifère marin est doté d'une longue dent en forme de spirale qui a inspiré la légende de la licorne ?"
+choices = Array[String](["Le narval.", "Le phoque.", "Le lamantin.", "Le morse."])
+
+[sub_resource type="Resource" id="question_7"]
+script = ExtResource("1_fotfq")
+question = "En quelle année les champignons ont-ils été officiellement exclus du règne botanique ?"
+choices = Array[String](["1735.", "1950.", "1969.", "2005."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="question_8"]
+script = ExtResource("1_fotfq")
+question = "Quel est le pourcentage de la pollinisation qui est assuré par les abeilles ?"
+choices = Array[String](["50%.", "80%.", "30%.", "95%."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_9"]
+script = ExtResource("1_fotfq")
+question = "De quelle matière est principalement composée la paroi des champignons, contrairement aux plantes ?"
+choices = Array[String](["La cellulose.", "La chitine.", "L'amidon.", "La lignine."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_10"]
+script = ExtResource("1_fotfq")
+question = "Quel est le nom du tissu conducteur qui transporte la sève brute (sans sucre) chez les plantes ?"
+choices = Array[String](["Le phloème.", "Le xylème.", "Le cortex.", "Le mycélium."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="question_11"]
+script = ExtResource("1_fotfq")
+question = "Quelle est la principale raison pour laquelle les plantes carnivores se nourrissent d'insectes ?"
+choices = Array[String](["Pour trouver de l'eau dans le désert.", "Pour vivre dans des milieux pauvres en azote.", "Pour remplacer complètement la photosynthèse.", "Pour se protéger du froid de la toundra."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_fc8bc")
+questions = Array[ExtResource("1_fotfq")]([SubResource("question_1"), SubResource("question_2"), SubResource("question_3"), SubResource("question_4"), SubResource("question_5"), SubResource("question_6"), SubResource("question_7"), SubResource("question_8"), SubResource("question_9"), SubResource("question_10"), SubResource("question_11")])
+school_year = "Q1"
+title = "Didactique des sciences - Quiz 3"

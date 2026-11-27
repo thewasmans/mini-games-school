@@ -3,12 +3,17 @@ extends Control
 
 const STUDY_LEVEL_BUTTON_MIN_SIZE := Vector2(360, 90)
 const STUDY_LEVEL_BUTTON_FONT_SIZE := 40
+const HIGHER_BUTTON_MIN_SIZE := Vector2(500, 120)
+const HIGHER_BUTTON_FONT_SIZE := 24
 const STUDY_LEVEL_PROGRESS_HEIGHT := 28
 const STUDY_LEVEL_ENTRY_SEPARATION := 8
 const SCHOOL_YEAR_BUTTON_MIN_SIZE := Vector2(200, 90)
 const COMING_SOON_TEXT := "Bientôt disponible"
 const COMING_SOON_FONT_SIZE := 24
 const COMING_SOON_COLOR := Color(1.0, 1.0, 1.0, 0.7)
+const HIGHER_CATEGORIES := ["Educateur spécialisé", "Enseignement de section 2"]
+const HIGHER_TOPICS := ["Neurosciences", "Didactique des sciences"]
+const HIGHER_GAME_TITLES := ["Éducateur - Neurosciences", "ES2 - Didactique des sciences"]
 
 @export var menu_start: MenuStartUI
 @export var menu_study_levels: MenuStudyLevelsUI
@@ -21,6 +26,8 @@ const COMING_SOON_COLOR := Color(1.0, 1.0, 1.0, 0.7)
 var _game_manager: GameManager
 var _level_buttons: Array[ButtonLevelUI] = []
 var _study_level_progress_bars: Array[ProgressBar] = []
+var _is_higher_navigation := false
+var _higher_category_index := 0
 
 func initialize(game_manager: GameManager) -> void:
 	_game_manager = game_manager
@@ -48,7 +55,10 @@ func _populate_study_levels() -> void:
 		var entry := _create_choice_entry(study_level.name, STUDY_LEVEL_BUTTON_MIN_SIZE, study_level.has_levels(), _on_study_level_selected.bind(study_level_index))
 		var progress_bar := ProgressBar.new()
 		progress_bar.custom_minimum_size = Vector2(STUDY_LEVEL_BUTTON_MIN_SIZE.x, STUDY_LEVEL_PROGRESS_HEIGHT)
-		progress_bar.visible = study_level.has_levels()
+		progress_bar.min_value = 0.0
+		progress_bar.value = 0.0
+		progress_bar.show_percentage = true
+		progress_bar.visible = true
 		entry.add_child(progress_bar)
 		_study_level_progress_bars.append(progress_bar)
 		menu_study_levels.buttons_container.add_child(entry)
@@ -57,13 +67,16 @@ func _show_study_levels_menu() -> void:
 	var game_state := _game_manager.game_state
 	for study_level_index in _study_level_progress_bars.size():
 		var progress_bar := _study_level_progress_bars[study_level_index]
+		var completed_level_count := game_state.completed_level_count(study_level_index)
 		progress_bar.max_value = maxi(1, game_state.level_count(study_level_index))
-		progress_bar.value = game_state.completed_level_count(study_level_index)
+		progress_bar.value = completed_level_count
+		progress_bar.visible = true
 	menu_study_levels.show()
 
 func _populate_school_years(study_level_index: int) -> void:
 	for child in menu_school_years.buttons_container.get_children():
 		child.queue_free()
+	menu_school_years.buttons_container.columns = 2
 	var study_level := _game_manager.game_data.study_levels[study_level_index]
 	menu_school_years.title_label.text = study_level.name
 	var school_years := study_level.school_years
@@ -85,13 +98,16 @@ func _populate_subjects() -> void:
 		var entry := _create_choice_entry(subject.name, STUDY_LEVEL_BUTTON_MIN_SIZE, subject.has_levels(), _on_subject_selected.bind(subject_index))
 		menu_subjects.buttons_container.add_child(entry)
 
-func _create_choice_entry(button_text: String, minimum_size: Vector2, is_available: bool, on_pressed: Callable) -> VBoxContainer:
+func _create_choice_entry(button_text: String, minimum_size: Vector2, is_available: bool, on_pressed: Callable, font_size: int = STUDY_LEVEL_BUTTON_FONT_SIZE) -> VBoxContainer:
 	var entry := VBoxContainer.new()
 	entry.add_theme_constant_override("separation", STUDY_LEVEL_ENTRY_SEPARATION)
 	var button := Button.new()
 	button.text = button_text
-	button.custom_minimum_size = minimum_size
-	button.add_theme_font_size_override("font_size", STUDY_LEVEL_BUTTON_FONT_SIZE)
+	var button_size := minimum_size
+	if _is_higher_navigation:
+		button_size.x = minf(button_size.x, get_viewport_rect().size.x - 40.0)
+	button.custom_minimum_size = button_size
+	button.add_theme_font_size_override("font_size", font_size)
 	button.disabled = not is_available
 	button.pressed.connect(on_pressed)
 	entry.add_child(button)
@@ -122,11 +138,41 @@ func _on_menu_study_levels_back() -> void:
 func _on_study_level_selected(study_level_index: int) -> void:
 	_game_manager.game_state.select_study_level(study_level_index)
 	menu_study_levels.hide()
+	_is_higher_navigation = study_level_index == 2
+	if _is_higher_navigation:
+		_populate_higher_categories()
+		menu_school_years.show()
+		return
 	if _has_school_year_choice():
 		_populate_school_years(study_level_index)
 		menu_school_years.show()
 		return
 	_on_school_year_selected(0)
+
+func _populate_higher_categories() -> void:
+	for child in menu_school_years.buttons_container.get_children():
+		child.queue_free()
+	menu_school_years.title_label.text = "Supérieur"
+	menu_school_years.buttons_container.columns = 1
+	for category_index in HIGHER_CATEGORIES.size():
+		var entry := _create_choice_entry(HIGHER_CATEGORIES[category_index], HIGHER_BUTTON_MIN_SIZE, true, _on_higher_category_selected.bind(category_index), HIGHER_BUTTON_FONT_SIZE)
+		menu_school_years.buttons_container.add_child(entry)
+
+func _on_higher_category_selected(category_index: int) -> void:
+	_higher_category_index = category_index
+	_game_manager.game_state.select_school_year(0)
+	menu_school_years.hide()
+	_populate_higher_topic()
+	menu_subjects.show()
+
+func _populate_higher_topic() -> void:
+	for child in menu_subjects.buttons_container.get_children():
+		child.queue_free()
+	menu_subjects.title_label.text = HIGHER_CATEGORIES[_higher_category_index]
+	var subject_index := _higher_category_index
+	var subject := _game_manager.game_data.school_year_of(2, 0).subjects[subject_index]
+	var entry := _create_choice_entry(HIGHER_TOPICS[_higher_category_index], HIGHER_BUTTON_MIN_SIZE, subject.has_levels(), _on_subject_selected.bind(subject_index), HIGHER_BUTTON_FONT_SIZE)
+	menu_subjects.buttons_container.add_child(entry)
 
 func _has_school_year_choice() -> bool:
 	var study_level := _game_manager.game_data.study_levels[_game_manager.game_state.current_study_level]
@@ -134,6 +180,7 @@ func _has_school_year_choice() -> bool:
 
 func _on_menu_school_years_back() -> void:
 	menu_school_years.hide()
+	_is_higher_navigation = false
 	_show_study_levels_menu()
 
 func _on_school_year_selected(school_year_index: int) -> void:
@@ -144,6 +191,9 @@ func _on_school_year_selected(school_year_index: int) -> void:
 
 func _on_menu_subjects_back() -> void:
 	menu_subjects.hide()
+	if _is_higher_navigation:
+		menu_school_years.show()
+		return
 	if _has_school_year_choice():
 		menu_school_years.show()
 		return
@@ -154,7 +204,10 @@ func _on_subject_selected(subject_index: int) -> void:
 	game_state.select_subject(subject_index)
 	var study_level := _game_manager.game_data.study_levels[game_state.current_study_level]
 	var school_year := study_level.school_years[game_state.current_school_year]
-	menu_levels.title_label.text = "%s - %s - %s" % [study_level.name, school_year.name, school_year.subjects[subject_index].name]
+	if _is_higher_navigation:
+		menu_levels.title_label.text = HIGHER_GAME_TITLES[_higher_category_index]
+	else:
+		menu_levels.title_label.text = "%s - %s - %s" % [study_level.name, school_year.name, school_year.subjects[subject_index].name]
 	menu_subjects.hide()
 	_build_level_grid()
 	menu_levels.show()

@@ -376,6 +376,7 @@
 [ext_resource type="Resource" uid="uid://bmeqjbs5yvie3" path="res://data/secondaire/s3/physique/quiz/electricite_etape_05.tres" id="264_kb72x"]
 [ext_resource type="Resource" uid="uid://cqymlfcexdiod" path="res://data/secondaire/s3/physique/crossword/electricite_etape_02.tres" id="265_g8qwa"]
 [ext_resource type="Resource" uid="uid://2j3fyoh3tj8s" path="res://data/secondaire/s3/physique/crossword/electricite_etape_03.tres" id="266_u3geb"]
+[ext_resource type="Resource" uid="uid://cwfqa0hjhxx0o" path="res://data/superieur/higher_school_year.tres" id="higher_school_year"]
 [ext_resource type="Resource" uid="uid://doy00kcyt57jn" path="res://data/secondaire/s5/cryptogram/biologie/uaa5_immunite_partie1.tres" id="s5_ext_1"]
 [ext_resource type="Resource" uid="uid://dpbpqxpd0141x" path="res://data/secondaire/s5/cryptogram/biologie/uaa5_immunite_partie3.tres" id="s5_ext_2"]
 [ext_resource type="Resource" uid="uid://cfelsj2i6r50h" path="res://data/secondaire/s5/cryptogram/biologie/uaa5_immunite_partie4.tres" id="s5_ext_3"]
@@ -2835,4 +2836,5 @@ secondary_3 = SubResource("Resource_k5spm")
 secondary_4 = SubResource("SchoolYear_s4")
 secondary_5 = SubResource("SchoolYear_s5")
 secondary_6 = SubResource("SchoolYear_s6")
+quadrimester_1 = ExtResource("higher_school_year")
 metadata/_custom_type_script = "uid://cp2inhinnjjop"

@@ -1,0 +1,102 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://ddr3vvddm0474"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_r0suy"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_1k2oe"]
+
+[sub_resource type="Resource" id="word_1"]
+script = ExtResource("1_r0suy")
+word = "LARVE"
+hint = "Forme juvénile de certains animaux différente de l'adulte."
+grid_position = Vector2i(11, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_2"]
+script = ExtResource("1_r0suy")
+word = "MUE"
+hint = "Processus de changement de peau ou de carapace chez certains animaux."
+grid_position = Vector2i(11, 12)
+
+[sub_resource type="Resource" id="word_3"]
+script = ExtResource("1_r0suy")
+word = "EXOSQUELETTE"
+hint = "Squelette externe rigide chez les insectes et crustacés."
+grid_position = Vector2i(7, 0)
+
+[sub_resource type="Resource" id="word_4"]
+script = ExtResource("1_r0suy")
+word = "ENDOSQUELETTE"
+hint = "Squelette interne, caractéristique des vertébrés."
+grid_position = Vector2i(7, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_5"]
+script = ExtResource("1_r0suy")
+word = "CARTILAGE"
+hint = "Tissu conjonctif souple composant le squelette de certains vertébrés."
+grid_position = Vector2i(13, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_6"]
+script = ExtResource("1_r0suy")
+word = "OS"
+hint = "Tissu rigide composant le squelette interne des vertébrés."
+grid_position = Vector2i(9, 10)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_7"]
+script = ExtResource("1_r0suy")
+word = "RESPIRATION"
+hint = "Processus d'échange gazeux."
+grid_position = Vector2i(6, 7)
+
+[sub_resource type="Resource" id="word_8"]
+script = ExtResource("1_r0suy")
+word = "BRANCHIES"
+hint = "Organes respiratoires des poissons."
+grid_position = Vector2i(0, 12)
+
+[sub_resource type="Resource" id="word_9"]
+script = ExtResource("1_r0suy")
+word = "POUMONS"
+hint = "Organes respiratoires des mammifères."
+grid_position = Vector2i(15, 6)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_10"]
+script = ExtResource("1_r0suy")
+word = "CIRCULATION"
+hint = "Mouvement du sang dans l'organisme pour transporter les nutriments."
+grid_position = Vector2i(0, 10)
+
+[sub_resource type="Resource" id="word_11"]
+script = ExtResource("1_r0suy")
+word = "CŒUR"
+hint = "Organe musculaire pompant le sang."
+grid_position = Vector2i(2, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_12"]
+script = ExtResource("1_r0suy")
+word = "SANG"
+hint = "Liquide transportant l'oxygène et les nutriments."
+grid_position = Vector2i(10, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_13"]
+script = ExtResource("1_r0suy")
+word = "EXCRETION"
+hint = "Élimination des déchets métaboliques de l'organisme."
+grid_position = Vector2i(0, 3)
+
+[sub_resource type="Resource" id="word_14"]
+script = ExtResource("1_r0suy")
+word = "CERVEAU"
+hint = "Centre de contrôle du système nerveux central."
+grid_position = Vector2i(0, 2)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_1k2oe")
+clues = Array[ExtResource("1_r0suy")]([SubResource("word_1"), SubResource("word_2"), SubResource("word_3"), SubResource("word_4"), SubResource("word_5"), SubResource("word_6"), SubResource("word_7"), SubResource("word_8"), SubResource("word_9"), SubResource("word_10"), SubResource("word_11"), SubResource("word_12"), SubResource("word_13"), SubResource("word_14")])
+school_year = "Q1"
+title = "Didactique des sciences - Mots croisés 6"

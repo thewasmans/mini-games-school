@@ -1,0 +1,76 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://q57jby74kshn"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_3ktun"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_1stwx"]
+
+[sub_resource type="Resource" id="word_1"]
+script = ExtResource("1_3ktun")
+word = "CORNEE"
+hint = "Membrane transparente et bombée située à l'avant de l'œil."
+grid_position = Vector2i(15, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_2"]
+script = ExtResource("1_3ktun")
+word = "IRIS"
+hint = "Partie colorée de l'œil."
+grid_position = Vector2i(2, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_3"]
+script = ExtResource("1_3ktun")
+word = "PUPILLE"
+hint = "Ouverture centrale de l'iris par où la lumière pénètre dans l'œil."
+grid_position = Vector2i(9, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_4"]
+script = ExtResource("1_3ktun")
+word = "CRISTALLIN"
+hint = "Lentille élastique permettant l'accommodation de l'œil."
+grid_position = Vector2i(7, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_5"]
+script = ExtResource("1_3ktun")
+word = "RETINE"
+hint = "Membrane interne de l'œil contenant les photorécepteurs."
+grid_position = Vector2i(4, 10)
+
+[sub_resource type="Resource" id="word_6"]
+script = ExtResource("1_3ktun")
+word = "PAPILLE"
+hint = "Structure de la langue contenant les récepteurs sensoriels du goût."
+grid_position = Vector2i(9, 4)
+
+[sub_resource type="Resource" id="word_7"]
+script = ExtResource("1_3ktun")
+word = "ARTERE"
+hint = "Vaisseau sanguin transportant le sang du cœur vers les organes."
+grid_position = Vector2i(4, 6)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_8"]
+script = ExtResource("1_3ktun")
+word = "VEINE"
+hint = "Vaisseau sanguin ramenant le sang des organes vers le cœur."
+grid_position = Vector2i(0, 9)
+
+[sub_resource type="Resource" id="word_9"]
+script = ExtResource("1_3ktun")
+word = "CAPILLAIRE"
+hint = "Vaisseau sanguin microscopique où s'effectuent les échanges de gaz et de nutriments avec les tissus."
+grid_position = Vector2i(7, 2)
+
+[sub_resource type="Resource" id="word_10"]
+script = ExtResource("1_3ktun")
+word = "PLASMA"
+hint = "Partie liquide du sang composée d'eau et de protéines."
+grid_position = Vector2i(11, 4)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_1stwx")
+clues = Array[ExtResource("1_3ktun")]([SubResource("word_1"), SubResource("word_2"), SubResource("word_3"), SubResource("word_4"), SubResource("word_5"), SubResource("word_6"), SubResource("word_7"), SubResource("word_8"), SubResource("word_9"), SubResource("word_10")])
+school_year = "Q1"
+title = "Didactique des sciences - Mots croisés 17"

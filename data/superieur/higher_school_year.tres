@@ -1,0 +1,316 @@
+[gd_resource type="Resource" script_class="SchoolYearData" format=3 uid="uid://cwfqa0hjhxx0o"]
+
+[ext_resource type="Resource" uid="uid://dlex41utb7uyg" path="res://data/superieur/educ/crypto/neurosciences_crypto_01.tres" id="5_ukrhk"]
+[ext_resource type="Resource" uid="uid://dr7wv5etav5ls" path="res://data/superieur/educ/crypto/neurosciences_crypto_02.tres" id="6_vu0p8"]
+[ext_resource type="Resource" uid="uid://cyuaslvbunl68" path="res://data/superieur/educ/crypto/neurosciences_crypto_03.tres" id="7_rrkt8"]
+[ext_resource type="Resource" uid="uid://c3o7obnhkgg2k" path="res://data/superieur/educ/crypto/neurosciences_crypto_04.tres" id="8_xdroy"]
+[ext_resource type="Resource" uid="uid://c2ekpl80hdsm" path="res://data/superieur/educ/crypto/neurosciences_crypto_05.tres" id="9_fbtfa"]
+[ext_resource type="Resource" uid="uid://df4u45y86eud8" path="res://data/superieur/educ/crypto/neurosciences_crypto_06.tres" id="10_u1u4d"]
+[ext_resource type="Resource" uid="uid://cysevilmk4nxl" path="res://data/superieur/educ/crypto/neurosciences_crypto_07.tres" id="11_ud8f5"]
+[ext_resource type="Resource" uid="uid://dol5nwi60vq4j" path="res://data/superieur/educ/crypto/neurosciences_crypto_08.tres" id="12_3e2vs"]
+[ext_resource type="Resource" uid="uid://bxekvkm0i44bf" path="res://data/superieur/educ/crypto/neurosciences_crypto_09.tres" id="13_7yunk"]
+[ext_resource type="Resource" uid="uid://dj0ggja43fc1i" path="res://data/superieur/educ/crypto/neurosciences_crypto_10.tres" id="14_x3snh"]
+[ext_resource type="Resource" uid="uid://j7fsfkptrs1j" path="res://data/superieur/educ/quiz/neurosciences_quiz_01.tres" id="15_nkgf8"]
+[ext_resource type="Resource" uid="uid://bpxxhr25flt8k" path="res://data/superieur/educ/quiz/neurosciences_quiz_02.tres" id="16_itucg"]
+[ext_resource type="Resource" uid="uid://8kwx0wma6jes" path="res://data/superieur/educ/quiz/neurosciences_quiz_03.tres" id="17_ofgd5"]
+[ext_resource type="Resource" uid="uid://c2mqjupbfb1fh" path="res://data/superieur/educ/quiz/neurosciences_quiz_04.tres" id="18_vse38"]
+[ext_resource type="Resource" uid="uid://dnm4fo6l6106o" path="res://data/superieur/educ/crossword/neurosciences_cross_01.tres" id="19_g0q4i"]
+[ext_resource type="Resource" uid="uid://c2desrm5t4out" path="res://data/superieur/educ/crossword/neurosciences_cross_02.tres" id="20_w5ck8"]
+[ext_resource type="Resource" uid="uid://bullxbp51nhl1" path="res://data/superieur/educ/crossword/neurosciences_cross_03.tres" id="21_apyn4"]
+[ext_resource type="Resource" uid="uid://8uqhwe50dy58" path="res://data/superieur/educ/crossword/neurosciences_cross_04.tres" id="22_54b83"]
+[ext_resource type="Resource" uid="uid://cxicbuawu4wrx" path="res://data/superieur/educ/crossword/neurosciences_cross_05.tres" id="23_y5dia"]
+[ext_resource type="Resource" uid="uid://ci4fqa7gpj8og" path="res://data/superieur/educ/crossword/neurosciences_cross_06.tres" id="24_e5ff3"]
+[ext_resource type="Resource" uid="uid://dc5cmqtyg2655" path="res://data/superieur/educ/crossword/neurosciences_cross_07.tres" id="25_b42qh"]
+[ext_resource type="Resource" uid="uid://clrmsv3n2wtuq" path="res://data/superieur/educ/crossword/neurosciences_cross_08.tres" id="26_dh5jk"]
+[ext_resource type="Resource" uid="uid://bkarkfyrwcf82" path="res://data/superieur/educ/crossword/neurosciences_cross_09.tres" id="27_bwpvm"]
+[ext_resource type="Resource" uid="uid://ofy1nrmfrpin" path="res://data/superieur/educ/crossword/neurosciences_cross_10.tres" id="28_n4prm"]
+[ext_resource type="Resource" uid="uid://s3cm4ian7sbd" path="res://data/superieur/educ/crossword/neurosciences_cross_11.tres" id="29_ns8rx"]
+[ext_resource type="Resource" uid="uid://clr4wq6k0vipi" path="res://data/superieur/educ/crossword/neurosciences_cross_12.tres" id="30_7letx"]
+[ext_resource type="Resource" uid="uid://divstho13gttv" path="res://data/superieur/educ/crossword/neurosciences_cross_13.tres" id="31_u111m"]
+[ext_resource type="Resource" uid="uid://rumdebbk5r7f" path="res://data/superieur/educ/crossword/neurosciences_cross_14.tres" id="32_v7jsd"]
+[ext_resource type="Resource" uid="uid://d257y1g87nxdd" path="res://data/superieur/es2/crypto/didactique_des_sciences_crypto_01.tres" id="33_8bsfs"]
+[ext_resource type="Resource" uid="uid://dvuo288rpmyki" path="res://data/superieur/es2/crypto/didactique_des_sciences_crypto_02.tres" id="34_7bsax"]
+[ext_resource type="Resource" uid="uid://blm7oc3lspuir" path="res://data/superieur/es2/crypto/didactique_des_sciences_crypto_03.tres" id="35_8std2"]
+[ext_resource type="Resource" uid="uid://bb4vdnpt38nbh" path="res://data/superieur/es2/crypto/didactique_des_sciences_crypto_04.tres" id="36_lkjjt"]
+[ext_resource type="Resource" uid="uid://b27er5f6hspn" path="res://data/superieur/es2/crypto/didactique_des_sciences_crypto_05.tres" id="37_cnuqy"]
+[ext_resource type="Resource" uid="uid://cptg6vxom74b1" path="res://data/superieur/es2/crypto/didactique_des_sciences_crypto_06.tres" id="38_gugdi"]
+[ext_resource type="Resource" uid="uid://d11ullbxxa0mr" path="res://data/superieur/es2/crypto/didactique_des_sciences_crypto_07.tres" id="39_koq4f"]
+[ext_resource type="Resource" uid="uid://b50kuv2buwmd3" path="res://data/superieur/es2/crypto/didactique_des_sciences_crypto_08.tres" id="40_m62vf"]
+[ext_resource type="Resource" uid="uid://bi3wps6tc5mn" path="res://data/superieur/es2/crypto/didactique_des_sciences_crypto_09.tres" id="41_5bwmo"]
+[ext_resource type="Resource" uid="uid://les1rqsemkhs" path="res://data/superieur/es2/crypto/didactique_des_sciences_crypto_10.tres" id="42_r2bbo"]
+[ext_resource type="Resource" uid="uid://vn50upn10c3c" path="res://data/superieur/es2/quiz/didactique_des_sciences_quiz_01.tres" id="43_s7qnc"]
+[ext_resource type="Resource" uid="uid://bp20wqoao8qda" path="res://data/superieur/es2/quiz/didactique_des_sciences_quiz_02.tres" id="44_8la22"]
+[ext_resource type="Resource" uid="uid://ttr5g8eb0100" path="res://data/superieur/es2/quiz/didactique_des_sciences_quiz_03.tres" id="45_rsf2y"]
+[ext_resource type="Resource" uid="uid://2sw5ob5jpjon" path="res://data/superieur/es2/quiz/didactique_des_sciences_quiz_04.tres" id="46_nn6vc"]
+[ext_resource type="Resource" uid="uid://7i7jbseqgntq" path="res://data/superieur/es2/quiz/didactique_des_sciences_quiz_05.tres" id="47_0mo4o"]
+[ext_resource type="Resource" uid="uid://c30o7hmbg4lg1" path="res://data/superieur/es2/quiz/didactique_des_sciences_quiz_06.tres" id="48_mg3s1"]
+[ext_resource type="Resource" uid="uid://5o86s4u2r3vc" path="res://data/superieur/es2/crossword/didactique_des_sciences_cross_01.tres" id="49_ch4m4"]
+[ext_resource type="Resource" uid="uid://f75q4fih71ey" path="res://data/superieur/es2/crossword/didactique_des_sciences_cross_02.tres" id="50_qps86"]
+[ext_resource type="Resource" uid="uid://u0xoblaocr3e" path="res://data/superieur/es2/crossword/didactique_des_sciences_cross_03.tres" id="51_i2xq3"]
+[ext_resource type="Resource" uid="uid://bk0wp6lbnl34o" path="res://data/superieur/es2/crossword/didactique_des_sciences_cross_04.tres" id="52_8drfj"]
+[ext_resource type="Resource" uid="uid://dcp221j7hiv4t" path="res://data/superieur/es2/crossword/didactique_des_sciences_cross_05.tres" id="53_vd5qp"]
+[ext_resource type="Resource" uid="uid://ddr3vvddm0474" path="res://data/superieur/es2/crossword/didactique_des_sciences_cross_06.tres" id="54_ty53f"]
+[ext_resource type="Resource" uid="uid://c4s6hv0mkunfu" path="res://data/superieur/es2/crossword/didactique_des_sciences_cross_07.tres" id="55_45c54"]
+[ext_resource type="Resource" uid="uid://dxgntollm5mgk" path="res://data/superieur/es2/crossword/didactique_des_sciences_cross_08.tres" id="56_xns3r"]
+[ext_resource type="Resource" uid="uid://cvx51omadecju" path="res://data/superieur/es2/crossword/didactique_des_sciences_cross_09.tres" id="57_5273r"]
+[ext_resource type="Resource" uid="uid://dy4avsia1q3l3" path="res://data/superieur/es2/crossword/didactique_des_sciences_cross_10.tres" id="58_e0eky"]
+[ext_resource type="Resource" uid="uid://gcwnewt3ahn7" path="res://data/superieur/es2/crossword/didactique_des_sciences_cross_11.tres" id="59_7xn6m"]
+[ext_resource type="Resource" uid="uid://c74f8kqrqfr4p" path="res://data/superieur/es2/crossword/didactique_des_sciences_cross_12.tres" id="60_44kk8"]
+[ext_resource type="Resource" uid="uid://dutarnrax3lcm" path="res://data/superieur/es2/crossword/didactique_des_sciences_cross_13.tres" id="61_3cdbl"]
+[ext_resource type="Resource" uid="uid://q57jby74kshn" path="res://data/superieur/es2/crossword/didactique_des_sciences_cross_17.tres" id="62_65q1e"]
+[ext_resource type="Resource" uid="uid://bl8mm3jl3r6w3" path="res://data/superieur/es2/crossword/didactique_des_sciences_cross_18.tres" id="63_3smu0"]
+[ext_resource type="Script" uid="uid://br5q0sg4b052d" path="res://scripts/data/level_data.gd" id="level"]
+[ext_resource type="Script" uid="uid://5t2j51l6wd4l" path="res://scripts/mini_games/mini_game_data.gd" id="mini_game"]
+[ext_resource type="Script" uid="uid://mjs6wa16j8bi" path="res://scripts/data/subject_data.gd" id="subject"]
+[ext_resource type="Script" uid="uid://dvqf0ovwg1l73" path="res://scripts/data/school_year_data.gd" id="year"]
+
+[sub_resource type="Resource" id="subject_1_level_1"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("5_ukrhk")])
+
+[sub_resource type="Resource" id="subject_1_level_2"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("6_vu0p8")])
+
+[sub_resource type="Resource" id="subject_1_level_3"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("7_rrkt8")])
+
+[sub_resource type="Resource" id="subject_1_level_4"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("8_xdroy")])
+
+[sub_resource type="Resource" id="subject_1_level_5"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("9_fbtfa")])
+
+[sub_resource type="Resource" id="subject_1_level_6"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("10_u1u4d")])
+
+[sub_resource type="Resource" id="subject_1_level_7"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("11_ud8f5")])
+
+[sub_resource type="Resource" id="subject_1_level_8"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("12_3e2vs")])
+
+[sub_resource type="Resource" id="subject_1_level_9"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("13_7yunk")])
+
+[sub_resource type="Resource" id="subject_1_level_10"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("14_x3snh")])
+
+[sub_resource type="Resource" id="subject_1_level_11"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("15_nkgf8")])
+
+[sub_resource type="Resource" id="subject_1_level_12"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("16_itucg")])
+
+[sub_resource type="Resource" id="subject_1_level_13"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("17_ofgd5")])
+
+[sub_resource type="Resource" id="subject_1_level_14"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("18_vse38")])
+
+[sub_resource type="Resource" id="subject_1_level_15"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("19_g0q4i")])
+
+[sub_resource type="Resource" id="subject_1_level_16"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("20_w5ck8")])
+
+[sub_resource type="Resource" id="subject_1_level_17"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("21_apyn4")])
+
+[sub_resource type="Resource" id="subject_1_level_18"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("22_54b83")])
+
+[sub_resource type="Resource" id="subject_1_level_19"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("23_y5dia")])
+
+[sub_resource type="Resource" id="subject_1_level_20"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("24_e5ff3")])
+
+[sub_resource type="Resource" id="subject_1_level_21"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("25_b42qh")])
+
+[sub_resource type="Resource" id="subject_1_level_22"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("26_dh5jk")])
+
+[sub_resource type="Resource" id="subject_1_level_23"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("27_bwpvm")])
+
+[sub_resource type="Resource" id="subject_1_level_24"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("28_n4prm")])
+
+[sub_resource type="Resource" id="subject_1_level_25"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("29_ns8rx")])
+
+[sub_resource type="Resource" id="subject_1_level_26"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("30_7letx")])
+
+[sub_resource type="Resource" id="subject_1_level_27"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("31_u111m")])
+
+[sub_resource type="Resource" id="subject_1_level_28"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("32_v7jsd")])
+
+[sub_resource type="Resource" id="subject_1"]
+script = ExtResource("subject")
+name = "Neurosciences"
+levels = Array[ExtResource("level")]([SubResource("subject_1_level_1"), SubResource("subject_1_level_2"), SubResource("subject_1_level_3"), SubResource("subject_1_level_4"), SubResource("subject_1_level_5"), SubResource("subject_1_level_6"), SubResource("subject_1_level_7"), SubResource("subject_1_level_8"), SubResource("subject_1_level_9"), SubResource("subject_1_level_10"), SubResource("subject_1_level_11"), SubResource("subject_1_level_12"), SubResource("subject_1_level_13"), SubResource("subject_1_level_14"), SubResource("subject_1_level_15"), SubResource("subject_1_level_16"), SubResource("subject_1_level_17"), SubResource("subject_1_level_18"), SubResource("subject_1_level_19"), SubResource("subject_1_level_20"), SubResource("subject_1_level_21"), SubResource("subject_1_level_22"), SubResource("subject_1_level_23"), SubResource("subject_1_level_24"), SubResource("subject_1_level_25"), SubResource("subject_1_level_26"), SubResource("subject_1_level_27"), SubResource("subject_1_level_28")])
+
+[sub_resource type="Resource" id="subject_2_level_1"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("33_8bsfs")])
+
+[sub_resource type="Resource" id="subject_2_level_2"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("34_7bsax")])
+
+[sub_resource type="Resource" id="subject_2_level_3"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("35_8std2")])
+
+[sub_resource type="Resource" id="subject_2_level_4"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("36_lkjjt")])
+
+[sub_resource type="Resource" id="subject_2_level_5"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("37_cnuqy")])
+
+[sub_resource type="Resource" id="subject_2_level_6"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("38_gugdi")])
+
+[sub_resource type="Resource" id="subject_2_level_7"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("39_koq4f")])
+
+[sub_resource type="Resource" id="subject_2_level_8"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("40_m62vf")])
+
+[sub_resource type="Resource" id="subject_2_level_9"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("41_5bwmo")])
+
+[sub_resource type="Resource" id="subject_2_level_10"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("42_r2bbo")])
+
+[sub_resource type="Resource" id="subject_2_level_11"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("43_s7qnc")])
+
+[sub_resource type="Resource" id="subject_2_level_12"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("44_8la22")])
+
+[sub_resource type="Resource" id="subject_2_level_13"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("45_rsf2y")])
+
+[sub_resource type="Resource" id="subject_2_level_14"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("46_nn6vc")])
+
+[sub_resource type="Resource" id="subject_2_level_15"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("47_0mo4o")])
+
+[sub_resource type="Resource" id="subject_2_level_16"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("48_mg3s1")])
+
+[sub_resource type="Resource" id="subject_2_level_17"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("49_ch4m4")])
+
+[sub_resource type="Resource" id="subject_2_level_18"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("50_qps86")])
+
+[sub_resource type="Resource" id="subject_2_level_19"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("51_i2xq3")])
+
+[sub_resource type="Resource" id="subject_2_level_20"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("52_8drfj")])
+
+[sub_resource type="Resource" id="subject_2_level_21"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("53_vd5qp")])
+
+[sub_resource type="Resource" id="subject_2_level_22"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("54_ty53f")])
+
+[sub_resource type="Resource" id="subject_2_level_23"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("55_45c54")])
+
+[sub_resource type="Resource" id="subject_2_level_24"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("56_xns3r")])
+
+[sub_resource type="Resource" id="subject_2_level_25"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("57_5273r")])
+
+[sub_resource type="Resource" id="subject_2_level_26"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("58_e0eky")])
+
+[sub_resource type="Resource" id="subject_2_level_27"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("59_7xn6m")])
+
+[sub_resource type="Resource" id="subject_2_level_28"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("60_44kk8")])
+
+[sub_resource type="Resource" id="subject_2_level_29"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("61_3cdbl")])
+
+[sub_resource type="Resource" id="subject_2_level_30"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("62_65q1e")])
+
+[sub_resource type="Resource" id="subject_2_level_31"]
+script = ExtResource("level")
+mini_games = Array[ExtResource("mini_game")]([ExtResource("63_3smu0")])
+
+[sub_resource type="Resource" id="subject_2"]
+script = ExtResource("subject")
+name = "Didactique des sciences"
+levels = Array[ExtResource("level")]([SubResource("subject_2_level_1"), SubResource("subject_2_level_2"), SubResource("subject_2_level_3"), SubResource("subject_2_level_4"), SubResource("subject_2_level_5"), SubResource("subject_2_level_6"), SubResource("subject_2_level_7"), SubResource("subject_2_level_8"), SubResource("subject_2_level_9"), SubResource("subject_2_level_10"), SubResource("subject_2_level_11"), SubResource("subject_2_level_12"), SubResource("subject_2_level_13"), SubResource("subject_2_level_14"), SubResource("subject_2_level_15"), SubResource("subject_2_level_16"), SubResource("subject_2_level_17"), SubResource("subject_2_level_18"), SubResource("subject_2_level_19"), SubResource("subject_2_level_20"), SubResource("subject_2_level_21"), SubResource("subject_2_level_22"), SubResource("subject_2_level_23"), SubResource("subject_2_level_24"), SubResource("subject_2_level_25"), SubResource("subject_2_level_26"), SubResource("subject_2_level_27"), SubResource("subject_2_level_28"), SubResource("subject_2_level_29"), SubResource("subject_2_level_30"), SubResource("subject_2_level_31")])
+
+[resource]
+script = ExtResource("year")
+name = "Q1"
+subjects = Array[ExtResource("subject")]([SubResource("subject_1"), SubResource("subject_2")])

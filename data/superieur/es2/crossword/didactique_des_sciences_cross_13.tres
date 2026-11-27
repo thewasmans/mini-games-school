@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dutarnrax3lcm"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_jf7kr"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_nsg0s"]
+
+[sub_resource type="Resource" id="word_1"]
+script = ExtResource("1_jf7kr")
+word = "MYOCARDE"
+hint = "Muscle constituant la paroi du cœur."
+grid_position = Vector2i(0, 12)
+
+[sub_resource type="Resource" id="word_2"]
+script = ExtResource("1_jf7kr")
+word = "TENDON"
+hint = "Tissu conjonctif fibreux reliant un muscle à un os."
+grid_position = Vector2i(3, 2)
+
+[sub_resource type="Resource" id="word_3"]
+script = ExtResource("1_jf7kr")
+word = "DERME"
+hint = "Couche profonde de la peau riche en vaisseaux sanguins."
+grid_position = Vector2i(0, 9)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_4"]
+script = ExtResource("1_jf7kr")
+word = "MELANINE"
+hint = "Pigment responsable de la couleur de la peau."
+grid_position = Vector2i(13, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_5"]
+script = ExtResource("1_jf7kr")
+word = "SEBACEE"
+hint = "Glande cutanée sécrétant le sébum."
+grid_position = Vector2i(3, 8)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_6"]
+script = ExtResource("1_jf7kr")
+word = "SUDORIPARE"
+hint = "Glande produisant la sueur."
+grid_position = Vector2i(11, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_7"]
+script = ExtResource("1_jf7kr")
+word = "METABOLISME"
+hint = "Ensemble des réactions chimiques qui se déroulent au sein d'un organisme."
+grid_position = Vector2i(6, 5)
+
+[sub_resource type="Resource" id="word_8"]
+script = ExtResource("1_jf7kr")
+word = "SQUELETTE"
+hint = "Ensemble des os et des cartilages soutenant le corps humain."
+grid_position = Vector2i(16, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_9"]
+script = ExtResource("1_jf7kr")
+word = "OSTEOPOROSE"
+hint = "Maladie caractérisée par une diminution de la densité osseuse."
+grid_position = Vector2i(7, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_10"]
+script = ExtResource("1_jf7kr")
+word = "CARTILAGE"
+hint = "Tissu conjonctif souple et résistant contenant de l'eau."
+grid_position = Vector2i(9, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="word_11"]
+script = ExtResource("1_jf7kr")
+word = "LISSE"
+hint = "Muscle involontaire présent dans les parois des organes internes."
+grid_position = Vector2i(1, 8)
+
+[resource]
+script = ExtResource("2_nsg0s")
+clues = Array[ExtResource("1_jf7kr")]([SubResource("word_1"), SubResource("word_2"), SubResource("word_3"), SubResource("word_4"), SubResource("word_5"), SubResource("word_6"), SubResource("word_7"), SubResource("word_8"), SubResource("word_9"), SubResource("word_10"), SubResource("word_11")])
+school_year = "Q1"
+title = "Didactique des sciences - Mots croisés 13"

@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://cysevilmk4nxl"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_g5e4u"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_fyrju"]
+
+[sub_resource type="Resource" id="phrase_1"]
+script = ExtResource("1_g5e4u")
+text = "La sensation est une variation physique tandis que la perception est son interprétation."
+
+[sub_resource type="Resource" id="phrase_2"]
+script = ExtResource("1_g5e4u")
+text = "La synesthésie est la capacité d'avoir plusieurs perceptions à partir d'un stimulus unique."
+
+[sub_resource type="Resource" id="phrase_3"]
+script = ExtResource("1_g5e4u")
+text = "La douleur est ressentie au niveau du cortex cingulaire et de l'insula."
+
+[sub_resource type="Resource" id="phrase_4"]
+script = ExtResource("1_g5e4u")
+text = "L'algo-hallucinose explique la sensation illusoire d'un membre fantôme après une amputation."
+
+[sub_resource type="Resource" id="phrase_5"]
+script = ExtResource("1_g5e4u")
+text = "Les migraines ophtalmiques sont causées par des modifications du diamètre des vaisseaux sanguins."
+
+[sub_resource type="Resource" id="phrase_6"]
+script = ExtResource("1_g5e4u")
+text = "La sérotonine est impliquée dans le mécanisme neurobiologique des crises migraineuses."
+
+[sub_resource type="Resource" id="phrase_7"]
+script = ExtResource("1_g5e4u")
+text = "Le lobe occipital est uniquement impliqué dans le traitement visuel des informations."
+
+[sub_resource type="Resource" id="phrase_8"]
+script = ExtResource("1_g5e4u")
+text = "L'akinétopsie est une agnosie visuelle provoquant une incapacité à percevoir le mouvement."
+
+[sub_resource type="Resource" id="phrase_9"]
+script = ExtResource("1_g5e4u")
+text = "La prosopagnosie empêche le patient de reconnaître les visages familiers par la vision."
+
+[sub_resource type="Resource" id="phrase_10"]
+script = ExtResource("1_g5e4u")
+text = "Le syndrome de Balint associe ataxie optique et simultagnosie visuospatiale."
+
+[resource]
+script = ExtResource("2_fyrju")
+hidden_letter_ratio = 0.08
+phrases = Array[ExtResource("1_g5e4u")]([SubResource("phrase_1"), SubResource("phrase_2"), SubResource("phrase_3"), SubResource("phrase_4"), SubResource("phrase_5"), SubResource("phrase_6"), SubResource("phrase_7"), SubResource("phrase_8"), SubResource("phrase_9"), SubResource("phrase_10")])
+school_year = "Q1"
+title = "Neurosciences - Cryptogramme 7"

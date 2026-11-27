@@ -15,6 +15,7 @@ const PROGRESS_TWEEN_DURATION := 0.3
 var level_index: int
 var level_data: LevelData
 var _game_manager: GameManager
+var _mini_game_index := 0
 
 func initialize(_level_index: int, _level_data: LevelData, game_manager: GameManager) -> void:
 	level_index = _level_index
@@ -28,7 +29,15 @@ func initialize(_level_index: int, _level_data: LevelData, game_manager: GameMan
 	if level_data.mini_games.is_empty():
 		mini_game_label.text = "Level %d - Aucun mini-jeu" % (level_index + 1)
 		return
-	var mini_game := level_data.mini_games[0]
+	_show_current_mini_game()
+
+func _show_current_mini_game() -> void:
+	for child in mini_game_container.get_children():
+		mini_game_container.remove_child(child)
+		child.queue_free()
+	validate_button.hide()
+	progress_bar.value = 0
+	var mini_game := level_data.mini_games[_mini_game_index]
 	var mini_game_prefab := _prefab_for(mini_game)
 	if mini_game_prefab == null:
 		mini_game_label.text = "Level %d - %s" % [level_index + 1, mini_game.get_script().get_global_name()]
@@ -46,6 +55,8 @@ func initialize(_level_index: int, _level_data: LevelData, game_manager: GameMan
 
 func _mini_game_title(mini_game: MiniGameData) -> String:
 	var game_state := _game_manager.game_state
+	if game_state.current_study_level == 2:
+		return ["Éducateur - Neurosciences", "ES2 - Didactique des sciences"][game_state.current_subject]
 	var study_level := _game_manager.game_data.study_levels[game_state.current_study_level]
 	var school_year := study_level.school_years[game_state.current_school_year]
 	var subject := school_year.subjects[game_state.current_subject]
@@ -72,9 +83,14 @@ func _on_mini_game_progress_changed(completed_count: int, total_count: int) -> v
 	create_tween().tween_property(progress_bar, "value", completed_count, PROGRESS_TWEEN_DURATION)
 
 func _on_mini_game_completed() -> void:
+	validate_button.text = "Jeu suivant" if _mini_game_index + 1 < level_data.mini_games.size() else "Valider le niveau"
 	validate_button.show()
 
 func _on_validate_button_pressed() -> void:
+	if _mini_game_index + 1 < level_data.mini_games.size():
+		_mini_game_index += 1
+		_show_current_mini_game()
+		return
 	_game_manager.game_state.complete_level(level_index)
 	_game_manager.game_ui_manager.show_menu()
 	queue_free()
