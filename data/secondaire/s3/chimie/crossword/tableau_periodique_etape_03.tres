@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cpiqu1f3k2qis"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_gfx08"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_7iiny"]
+
+[sub_resource type="Resource" id="Resource_ta3b0"]
+script = ExtResource("1_gfx08")
+word = "ATOME"
+hint = "Constituant élémentaire de toutes les substances solides, liquides ou gazeuses."
+grid_position = Vector2i(0, 4)
+
+[sub_resource type="Resource" id="Resource_wgc5q"]
+script = ExtResource("1_gfx08")
+word = "ANION"
+hint = "Elément chimique chargé négativement."
+grid_position = Vector2i(0, 6)
+
+[sub_resource type="Resource" id="Resource_q6pfh"]
+script = ExtResource("1_gfx08")
+word = "MICROSCOPE"
+hint = "Outil de mesure basé sur des lentilles et permettant d'agrandir l'image d'un objet."
+grid_position = Vector2i(0, 8)
+
+[sub_resource type="Resource" id="Resource_td1gn"]
+script = ExtResource("1_gfx08")
+word = "DEMOCRITE"
+hint = "Philosophe de l’Antiquité qui affirme que la matière est constituée de particules très petites."
+grid_position = Vector2i(1, 1)
+
+[sub_resource type="Resource" id="Resource_j6o7g"]
+script = ExtResource("1_gfx08")
+word = "MENDELEIEV"
+hint = "Scientifique russe qui a proposé un classement périodique des éléments chimiques."
+grid_position = Vector2i(9, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_p7jhv"]
+script = ExtResource("1_gfx08")
+word = "PROTON"
+hint = "Particule élémentaire du noyau atomique, de charge électrique positive."
+grid_position = Vector2i(6, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_sruuh"]
+script = ExtResource("1_gfx08")
+word = "DALTON"
+hint = "Chimiste du 18ème siècle précisant que les atomes peuvent se combiner pour former une nouvelle substance (pense à Lucky Luke)."
+grid_position = Vector2i(1, 1)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_7iiny")
+clues = Array[ExtResource("1_gfx08")]([SubResource("Resource_ta3b0"), SubResource("Resource_wgc5q"), SubResource("Resource_q6pfh"), SubResource("Resource_td1gn"), SubResource("Resource_j6o7g"), SubResource("Resource_p7jhv"), SubResource("Resource_sruuh")])
+school_year = "S3"
+title = "Le tableau périodique"

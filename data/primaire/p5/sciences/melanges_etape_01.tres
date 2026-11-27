@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bwsky77mrpo5n"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_gvv7k"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_gkmns"]
+
+[sub_resource type="Resource" id="Resource_ndpy1"]
+script = ExtResource("1_gvv7k")
+word = "CHIMIE"
+hint = "Science qui étudie la matière et ses transformations."
+grid_position = Vector2i(9, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_j5o2e"]
+script = ExtResource("1_gvv7k")
+word = "MOLECULE"
+hint = "Ensemble d'atomes associés, chimiquement connectés."
+grid_position = Vector2i(0, 3)
+
+[sub_resource type="Resource" id="Resource_7slq2"]
+script = ExtResource("1_gvv7k")
+word = "MASSE"
+hint = "Quantité de matière d'une substance dont l'unité est le gramme."
+grid_position = Vector2i(0, 1)
+
+[sub_resource type="Resource" id="Resource_imsn4"]
+script = ExtResource("1_gvv7k")
+word = "ATOME"
+hint = "Elément constitutif de la matière, des molécules en particulier."
+grid_position = Vector2i(1, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_tog1m"]
+script = ExtResource("1_gvv7k")
+word = "HETEROGENE"
+hint = "Mélange dont il est possible de distinguer les constituants à l'œil nu, comme l'eau et l'huile."
+grid_position = Vector2i(0, 5)
+
+[resource]
+script = ExtResource("2_gkmns")
+clues = Array[ExtResource("1_gvv7k")]([SubResource("Resource_ndpy1"), SubResource("Resource_j5o2e"), SubResource("Resource_7slq2"), SubResource("Resource_imsn4"), SubResource("Resource_tog1m")])
+school_year = "P5"
+title = "Les mélanges"

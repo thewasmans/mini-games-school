@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cm2sg5vntaw0b"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_ovj2t"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_7i7ii"]
+
+[sub_resource type="Resource" id="Resource_cwn0m"]
+script = ExtResource("1_ovj2t")
+word = "FEHLING"
+hint = "Liqueur qui sert couramment à caractériser des substances chimiques à partir d'une coloration bleue."
+grid_position = Vector2i(7, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_yqlb6"]
+script = ExtResource("1_ovj2t")
+word = "MALBOUFFE"
+hint = "Alimentation malsaine que l'on retrouve dans les fast food."
+
+[sub_resource type="Resource" id="Resource_7dkpt"]
+script = ExtResource("1_ovj2t")
+word = "BOULIMIE"
+hint = "Trouble alimentaire caractérisé par des crises d'hyperphagie."
+grid_position = Vector2i(3, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_58pvj"]
+script = ExtResource("1_ovj2t")
+word = "DIETE"
+hint = "Absence temporaire totale ou partielle de nourriture."
+grid_position = Vector2i(6, 4)
+
+[sub_resource type="Resource" id="Resource_fvx3k"]
+script = ExtResource("1_ovj2t")
+word = "PROTIDE"
+hint = "Séquence d'acides aminés ayant différents rôles, autre terme que la protéine."
+grid_position = Vector2i(9, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_uix6t"]
+script = ExtResource("1_ovj2t")
+word = "ALIMENT"
+hint = "Substance composée de nutriments."
+grid_position = Vector2i(1, 0)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_7i7ii")
+clues = Array[ExtResource("1_ovj2t")]([SubResource("Resource_cwn0m"), SubResource("Resource_yqlb6"), SubResource("Resource_7dkpt"), SubResource("Resource_58pvj"), SubResource("Resource_fvx3k"), SubResource("Resource_uix6t")])
+school_year = "S3"
+title = "La nutrition humaine"

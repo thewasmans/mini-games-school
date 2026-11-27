@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bvdtx5sukm1oe"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_1ppph"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_07x8c"]
+
+[sub_resource type="Resource" id="Resource_skmyw"]
+script = ExtResource("1_1ppph")
+word = "APNEE"
+hint = "Arrêt momentané de la respiration."
+grid_position = Vector2i(1, 13)
+
+[sub_resource type="Resource" id="Resource_1kpm2"]
+script = ExtResource("1_1ppph")
+word = "CAPILLAIRES"
+hint = "Petits vaisseaux sanguins qui relient les veines aux artères."
+grid_position = Vector2i(0, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_6fmk6"]
+script = ExtResource("1_1ppph")
+word = "PERISTALTISME"
+hint = "Mouvement de contraction automatique des organes lors de la digestion."
+grid_position = Vector2i(5, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_e6u61"]
+script = ExtResource("1_1ppph")
+word = "ARTERE"
+hint = "Vaisseau sanguin à forte pression, dont les parois sont épaisses."
+grid_position = Vector2i(0, 2)
+
+[sub_resource type="Resource" id="Resource_pmn7j"]
+script = ExtResource("1_1ppph")
+word = "NUTRIMENT"
+hint = "Qui constitue l'aliment."
+grid_position = Vector2i(3, 6)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_xh0w2"]
+script = ExtResource("1_1ppph")
+word = "COEUR"
+hint = "Organe musculaire qui sert à pomper le sang dans le corps."
+grid_position = Vector2i(3, 0)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_07x8c")
+clues = Array[ExtResource("1_1ppph")]([SubResource("Resource_skmyw"), SubResource("Resource_1kpm2"), SubResource("Resource_6fmk6"), SubResource("Resource_e6u61"), SubResource("Resource_pmn7j"), SubResource("Resource_xh0w2")])
+school_year = "P6"
+title = "Les systèmes du corps humain"

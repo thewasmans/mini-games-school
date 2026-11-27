@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://b1y2aog4mwe6l"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_bilaq"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_uvfsd"]
+
+[sub_resource type="Resource" id="Resource_5p4ii"]
+script = ExtResource("1_bilaq")
+word = "AIR"
+hint = "Mélange de gaz incolore, invisible et inodore permettant aux animaux de respirer."
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_5j4el"]
+script = ExtResource("1_bilaq")
+word = "JARDIN"
+hint = "Milieu de vie aménagé par l'humain à proximité de sa maison afin d'avoir un décor vert."
+grid_position = Vector2i(3, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_uset2"]
+script = ExtResource("1_bilaq")
+word = "REPRODUCTION"
+hint = "Etape de la vie d'un vivant qui lui permet d'avoir des enfants."
+grid_position = Vector2i(0, 2)
+
+[sub_resource type="Resource" id="Resource_guhbq"]
+script = ExtResource("1_bilaq")
+word = "PRAIRIE"
+hint = "Grande étendue d'herbes où l'on peut y voir des moutons ou des vaches."
+grid_position = Vector2i(0, 4)
+
+[resource]
+script = ExtResource("2_uvfsd")
+clues = Array[ExtResource("1_bilaq")]([SubResource("Resource_5p4ii"), SubResource("Resource_5j4el"), SubResource("Resource_uset2"), SubResource("Resource_guhbq")])
+school_year = "P1"
+title = "Les animaux et leurs milieux"

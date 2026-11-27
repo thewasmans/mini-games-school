@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://blvmy01w1lpxh"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_3dcb3"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_kpa7s"]
+
+[sub_resource type="Resource" id="Resource_7c2hp"]
+script = ExtResource("1_3dcb3")
+word = "FLUX"
+hint = "Transfert de matière et/ou d'énergie d'un chainon à l'autre."
+grid_position = Vector2i(9, 12)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_s3gj7"]
+script = ExtResource("1_3dcb3")
+word = "WWF"
+hint = "Acronyme de \"World Wildlife Fund\"."
+grid_position = Vector2i(7, 12)
+
+[sub_resource type="Resource" id="Resource_0mnck"]
+script = ExtResource("1_3dcb3")
+word = "CHAINON"
+hint = "Elément d'une chaine alimentaire qui représente un niveau, autre terme que maillon."
+grid_position = Vector2i(7, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_8rvuk"]
+script = ExtResource("1_3dcb3")
+word = "CARNIVORE"
+hint = "Type de régime alimentaire où la viande se trouve au menu principal."
+grid_position = Vector2i(1, 8)
+
+[sub_resource type="Resource" id="Resource_8ekdr"]
+script = ExtResource("1_3dcb3")
+word = "PHYTOPLANCTON"
+hint = "Ensemble des végétaux unicellulaires présents dans les eaux de surface dans l'océan."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ah1xy"]
+script = ExtResource("1_3dcb3")
+word = "CARBONE"
+hint = "Elément chimique présent dans les êtres vivants, les océans, l’air et l’écorce terrestre."
+grid_position = Vector2i(1, 8)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_kx6ul"]
+script = ExtResource("1_3dcb3")
+word = "HYDROSPHERE"
+hint = "Zones de la planète occupées par de l’eau ou de la glace, avec la lithosphère et l'atmosphère."
+grid_position = Vector2i(9, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_41ddf"]
+script = ExtResource("1_3dcb3")
+word = "DECOMPOSEUR"
+hint = "Organisme de la chaine alimentaire qui transforme la matière minérale en matière organique."
+grid_position = Vector2i(0, 14)
+
+[resource]
+script = ExtResource("2_kpa7s")
+clues = Array[ExtResource("1_3dcb3")]([SubResource("Resource_7c2hp"), SubResource("Resource_s3gj7"), SubResource("Resource_0mnck"), SubResource("Resource_8rvuk"), SubResource("Resource_8ekdr"), SubResource("Resource_ah1xy"), SubResource("Resource_kx6ul"), SubResource("Resource_41ddf")])
+school_year = "S3"
+title = "La nutrition des plantes"

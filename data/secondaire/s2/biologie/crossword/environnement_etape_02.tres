@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bxbix62vgvgsb"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_ownwp"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_nvd22"]
+
+[sub_resource type="Resource" id="Resource_j7k4x"]
+script = ExtResource("1_ownwp")
+word = "BIOCONTAMINATION"
+hint = "Pollution d'un environnement à cause d'une substance toxique ou d'une espèce néfaste."
+grid_position = Vector2i(3, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_gt66h"]
+script = ExtResource("1_ownwp")
+word = "RESERVE"
+hint = "Espace naturel protégé d'une importance nationale ou internationale."
+grid_position = Vector2i(6, 6)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_1o7vj"]
+script = ExtResource("1_ownwp")
+word = "MAIS"
+hint = "Plante tropicale cultivée comme céréale pour ses grains riches en amidon."
+grid_position = Vector2i(3, 8)
+
+[sub_resource type="Resource" id="Resource_2l6co"]
+script = ExtResource("1_ownwp")
+word = "BIOMANIPULATION"
+hint = "Action de manipuler l'environnement en introduisant une espèce."
+grid_position = Vector2i(1, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_k0ltb"]
+script = ExtResource("1_ownwp")
+word = "FAUNE"
+hint = "Ensemble des espèces animales vivant dans un espace géographique."
+grid_position = Vector2i(0, 5)
+
+[resource]
+script = ExtResource("2_nvd22")
+clues = Array[ExtResource("1_ownwp")]([SubResource("Resource_j7k4x"), SubResource("Resource_gt66h"), SubResource("Resource_1o7vj"), SubResource("Resource_2l6co"), SubResource("Resource_k0ltb")])
+school_year = "S2"
+title = "L'humain et l'environnement"

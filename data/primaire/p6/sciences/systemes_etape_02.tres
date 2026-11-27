@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bot2j153krdg1"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_8q1f7"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_hc468"]
+
+[sub_resource type="Resource" id="Resource_jleas"]
+script = ExtResource("1_8q1f7")
+word = "VENTILATION"
+hint = "Terme scientifique qui correspond à la respiration."
+grid_position = Vector2i(0, 2)
+
+[sub_resource type="Resource" id="Resource_ahs43"]
+script = ExtResource("1_8q1f7")
+word = "BUCCAL"
+hint = "Terme scientifique qui caractérise la cavité de la bouche."
+grid_position = Vector2i(3, 6)
+
+[sub_resource type="Resource" id="Resource_7qmsr"]
+script = ExtResource("1_8q1f7")
+word = "THORAX"
+hint = "Partie du squelette dans lequel on retrouve les poumons et le cœur."
+grid_position = Vector2i(7, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_q0372"]
+script = ExtResource("1_8q1f7")
+word = "SANG"
+hint = "Liquide biologique vital qui circule continuellement dans les vaisseaux sanguins."
+grid_position = Vector2i(2, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_j5gip"]
+script = ExtResource("1_8q1f7")
+word = "PANCREAS"
+hint = "Organe permettant de réguler le taux de sucre dans le sang."
+grid_position = Vector2i(10, 0)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_hc468")
+clues = Array[ExtResource("1_8q1f7")]([SubResource("Resource_jleas"), SubResource("Resource_ahs43"), SubResource("Resource_7qmsr"), SubResource("Resource_q0372"), SubResource("Resource_j5gip")])
+school_year = "P6"
+title = "Les systèmes du corps humain"

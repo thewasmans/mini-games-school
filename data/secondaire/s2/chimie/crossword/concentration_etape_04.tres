@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cyoc60oaw3qr1"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_rcmhj"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_dkghk"]
+
+[sub_resource type="Resource" id="Resource_uxn4f"]
+script = ExtResource("1_rcmhj")
+word = "HYDROXYDE"
+hint = "Fonction chimique qui se note -OH."
+grid_position = Vector2i(1, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_2p518"]
+script = ExtResource("1_rcmhj")
+word = "SODIUM"
+hint = "Elément chimique dont la symbole est Na."
+grid_position = Vector2i(5, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_610jw"]
+script = ExtResource("1_rcmhj")
+word = "OR"
+hint = "Elément chimique dont la symbole est Au."
+grid_position = Vector2i(0, 5)
+
+[sub_resource type="Resource" id="Resource_qgrs8"]
+script = ExtResource("1_rcmhj")
+word = "CONCENTRATION"
+hint = "Rapport entre la quantité de soluté présente dans une quantité donnée de solution."
+grid_position = Vector2i(3, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_rpg8e"]
+script = ExtResource("1_rcmhj")
+word = "HELIUM"
+hint = "Elément chimique dont la symbole est He."
+grid_position = Vector2i(0, 10)
+
+[sub_resource type="Resource" id="Resource_x05h7"]
+script = ExtResource("1_rcmhj")
+word = "NB"
+hint = "Symbole chimique du niobium."
+grid_position = Vector2i(3, 2)
+
+[resource]
+script = ExtResource("2_dkghk")
+clues = Array[ExtResource("1_rcmhj")]([SubResource("Resource_uxn4f"), SubResource("Resource_2p518"), SubResource("Resource_610jw"), SubResource("Resource_qgrs8"), SubResource("Resource_rpg8e"), SubResource("Resource_x05h7")])
+school_year = "S2"
+title = "La concentration massique"

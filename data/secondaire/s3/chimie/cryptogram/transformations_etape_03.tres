@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dgy4pkj2tu85n"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_urabw"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_jh7g6"]
+
+[sub_resource type="Resource" id="Resource_u1epi"]
+script = ExtResource("1_urabw")
+text = "La combustion d'un corps dégage de l'énergie thermique et de la lumière."
+
+[sub_resource type="Resource" id="Resource_hub2t"]
+script = ExtResource("1_urabw")
+text = "Le dioxygène est un réactif indispensable à de nombreuses combustions."
+
+[sub_resource type="Resource" id="Resource_30dbh"]
+script = ExtResource("1_urabw")
+text = "Les indices et les coefficients stœchiométriques décrivent les quantités."
+
+[sub_resource type="Resource" id="Resource_jqbk8"]
+script = ExtResource("1_urabw")
+text = "Aucun atome ne se crée et aucun atome ne se détruit lors d'une réaction."
+
+[resource]
+script = ExtResource("2_jh7g6")
+hidden_letter_ratio = 0.17
+phrases = Array[ExtResource("1_urabw")]([SubResource("Resource_u1epi"), SubResource("Resource_hub2t"), SubResource("Resource_30dbh"), SubResource("Resource_jqbk8")])
+school_year = "S3"
+title = "Les transformations chimiques"

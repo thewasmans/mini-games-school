@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://iil7drv7xoaa"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_2omql"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_v2ync"]
+
+[sub_resource type="Resource" id="Resource_afk3g"]
+script = ExtResource("1_2omql")
+word = "FORCE"
+hint = "Produit mathématique de la masse et de l'accélération selon la seconde loi de Newton."
+grid_position = Vector2i(0, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_xifrv"]
+script = ExtResource("1_2omql")
+word = "POUSSEE"
+hint = "Force verticale qui s'oppose au corps qui descend vers le fond, proposée par Archimède."
+grid_position = Vector2i(2, 3)
+
+[sub_resource type="Resource" id="Resource_831xp"]
+script = ExtResource("1_2omql")
+word = "MASSE"
+hint = "Quantité de matière d'une substance dont l'unité est le gramme."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_6ilsd"]
+script = ExtResource("1_2omql")
+word = "FLOTTAISON"
+hint = "Action de rester en surface sur un liquide sans couler."
+grid_position = Vector2i(0, 1)
+
+[resource]
+script = ExtResource("2_v2ync")
+clues = Array[ExtResource("1_2omql")]([SubResource("Resource_afk3g"), SubResource("Resource_xifrv"), SubResource("Resource_831xp"), SubResource("Resource_6ilsd")])
+school_year = "S3"
+title = "La poussée d'Archimède"

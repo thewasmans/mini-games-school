@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bldr8xv1gf42e"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_hg8te"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_cqvnb"]
+
+[sub_resource type="Resource" id="Resource_lax55"]
+script = ExtResource("1_hg8te")
+word = "ENGRENAGE"
+hint = "Dispositif mécanique comportant deux roues dentées engrenées qui permet la transmission d'un mouvement de rotation."
+grid_position = Vector2i(0, 5)
+
+[sub_resource type="Resource" id="Resource_6dxkq"]
+script = ExtResource("1_hg8te")
+word = "SI"
+hint = "Terme simplifié pour le système international des unités."
+grid_position = Vector2i(3, 7)
+
+[sub_resource type="Resource" id="Resource_ey8rj"]
+script = ExtResource("1_hg8te")
+word = "NEWTON"
+hint = "Unité de mesure de la force."
+grid_position = Vector2i(0, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_rx0wo"]
+script = ExtResource("1_hg8te")
+word = "ELECTROSTATIQUE"
+hint = "Branche de la physique qui étudie les phénomènes causés par les charges électriques au repos."
+grid_position = Vector2i(3, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_7hybk"]
+script = ExtResource("1_hg8te")
+word = "MAGNETISME"
+hint = "Partie de la physique qui étudie les propriétés des aimants et les phénomènes qui s'y rattachent."
+grid_position = Vector2i(6, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ciq81"]
+script = ExtResource("1_hg8te")
+word = "FROTTEMENT"
+hint = "Force créée par l'interaction de deux surfaces en contact qui glissent l'une sur l'autre et qui s'oppose au mouvement."
+grid_position = Vector2i(8, 0)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_cqvnb")
+clues = Array[ExtResource("1_hg8te")]([SubResource("Resource_lax55"), SubResource("Resource_6dxkq"), SubResource("Resource_ey8rj"), SubResource("Resource_rx0wo"), SubResource("Resource_7hybk"), SubResource("Resource_ciq81")])
+school_year = "S2"
+title = "Forces et pression"

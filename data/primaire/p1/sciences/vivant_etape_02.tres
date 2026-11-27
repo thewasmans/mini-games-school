@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bmfsneu7mimln"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_m8ms6"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_wxpwf"]
+
+[sub_resource type="Resource" id="Resource_80ccs"]
+script = ExtResource("1_m8ms6")
+word = "MOURIR"
+hint = "Verbe à l'infinitif caractérisant un être vivant qui disparait définitivement de l'environnement."
+grid_position = Vector2i(7, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_yyut7"]
+script = ExtResource("1_m8ms6")
+word = "ATTRIBUT"
+hint = "Elément qui caractérise un être vivant, comme ses pattes, son squelette ou ses plumes."
+grid_position = Vector2i(1, 5)
+
+[sub_resource type="Resource" id="Resource_jxm6u"]
+script = ExtResource("1_m8ms6")
+word = "TRIER"
+hint = "Regrouper des êtres vivants selon ce qu'ils possèdent ou ne possèdent pas."
+grid_position = Vector2i(2, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_wp58r"]
+script = ExtResource("1_m8ms6")
+word = "CHAMPIGNON"
+hint = "Se dit d'un être vivant qui vit fixé sur un support, mais qui n'est pas un végétal."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_6lfcu"]
+script = ExtResource("1_m8ms6")
+word = "VEGETAL"
+hint = "Être vivant qui vit fixé sur un support et utilise le Soleil comme énergie."
+grid_position = Vector2i(0, 2)
+
+[resource]
+script = ExtResource("2_wxpwf")
+clues = Array[ExtResource("1_m8ms6")]([SubResource("Resource_80ccs"), SubResource("Resource_yyut7"), SubResource("Resource_jxm6u"), SubResource("Resource_wp58r"), SubResource("Resource_6lfcu")])
+school_year = "P1"
+title = "Le vivant"

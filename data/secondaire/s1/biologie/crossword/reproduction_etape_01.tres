@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://b37yw1gplunn5"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_i0txo"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_5q2ur"]
+
+[sub_resource type="Resource" id="Resource_mi2a1"]
+script = ExtResource("1_i0txo")
+word = "UTERUS"
+hint = "Partie de l'appareil reproducteur féminin dans lequel le bébé se développe."
+grid_position = Vector2i(0, 7)
+
+[sub_resource type="Resource" id="Resource_c2i17"]
+script = ExtResource("1_i0txo")
+word = "PENIS"
+hint = "Organe musculaire qui libère le sperme."
+grid_position = Vector2i(5, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_qj4jb"]
+script = ExtResource("1_i0txo")
+word = "ENDOMETRE"
+hint = "Paroi interne de l'utérus."
+grid_position = Vector2i(2, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_j1bny"]
+script = ExtResource("1_i0txo")
+word = "SPERMIDUCTE"
+hint = "Aussi appelé canal déférent, conduit dans lequel circulent les spermatozoïdes."
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_5q2ur")
+clues = Array[ExtResource("1_i0txo")]([SubResource("Resource_mi2a1"), SubResource("Resource_c2i17"), SubResource("Resource_qj4jb"), SubResource("Resource_j1bny")])
+school_year = "S1"
+title = "La reproduction humaine"

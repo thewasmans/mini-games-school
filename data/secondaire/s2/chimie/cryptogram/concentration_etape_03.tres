@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dyqt6wyycgulr"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_u5d4y"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_woog7"]
+
+[sub_resource type="Resource" id="Resource_5l325"]
+script = ExtResource("1_u5d4y")
+text = "La dilution consiste à ajouter du solvant pour diminuer la concentration."
+
+[sub_resource type="Resource" id="Resource_6yy5c"]
+script = ExtResource("1_u5d4y")
+text = "Lors d'une dilution"
+hint = "la masse de soluté dissous reste constante."
+
+[sub_resource type="Resource" id="Resource_v3uda"]
+script = ExtResource("1_u5d4y")
+text = "Plus une solution est concentrée"
+hint = "plus sa couleur est intense."
+
+[sub_resource type="Resource" id="Resource_qp0a8"]
+script = ExtResource("1_u5d4y")
+text = "Le volume total de la solution est égal au volume de solvant ajouté."
+
+[resource]
+script = ExtResource("2_woog7")
+hidden_letter_ratio = 0.17
+phrases = Array[ExtResource("1_u5d4y")]([SubResource("Resource_5l325"), SubResource("Resource_6yy5c"), SubResource("Resource_v3uda"), SubResource("Resource_qp0a8")])
+school_year = "S2"
+title = "La concentration massique"

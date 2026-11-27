@@ -1,0 +1,66 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://be5h4cjitipth"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_rcrvc"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_pis2k"]
+
+[sub_resource type="Resource" id="Resource_po6dx"]
+script = ExtResource("1_rcrvc")
+question = "Comment appelle-t-on les petites molécules qui s'assemblent pour former un polymère ?"
+choices = Array[String](["Macromolécule.", "Monomère.", "Radical.", "Ion."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_iqj4q"]
+script = ExtResource("1_rcrvc")
+question = "Quel est le nom du processus chimique permettant de lier des monomères entre eux ?"
+choices = Array[String](["Isomérisation.", "Polymérisation.", "Substitution.", "Oxydation."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_pa5ps"]
+script = ExtResource("1_rcrvc")
+question = "Quelle est la différence majeure entre une polymérisation par addition et par condensation ?"
+choices = Array[String](["La libération d'une petite molécule.", "La température de réaction.", "Le nombre de monomères.", "La pression utilisée."])
+
+[sub_resource type="Resource" id="Resource_t66vy"]
+script = ExtResource("1_rcrvc")
+question = "Quel polymère naturel constitue la paroi cellulaire des végétaux ?"
+choices = Array[String](["Amidon.", "Glycogène.", "Cellulose.", "Chitine."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_ipp4d"]
+script = ExtResource("1_rcrvc")
+question = "Le polyéthylène (PE) est un polymère obtenu à partir de quel monomère ?"
+choices = Array[String](["Propène.", "Éthène.", "Butadiène.", "Styrène."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_g88wm"]
+script = ExtResource("1_rcrvc")
+question = "Quel type de polymérisation est caractérisé par la conservation de tous les atomes des monomères dans le produit final ?"
+choices = Array[String](["Polycondensation.", "Addition.", "Hydrolyse.", "Neutralisation."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ojeem"]
+script = ExtResource("1_rcrvc")
+question = "Quel est l'exemple typique de polymère naturel présent dans nos muscles et tissus ?"
+choices = Array[String](["ADN.", "Polystyrène.", "Protéines.", "Nylon."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_50wdo"]
+script = ExtResource("1_rcrvc")
+question = "Quelle molécule est souvent libérée lors d'une réaction de polycondensation (comme pour le nylon) ?"
+choices = Array[String](["Dioxygène.", "Eau.", "Méthane.", "Hydrogène."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_hgxo5"]
+script = ExtResource("1_rcrvc")
+question = "Quel polymère est le constituant principal des bouteilles d'eau en plastique (PET) ?"
+choices = Array[String](["Polyéthylène.", "Polypropylène.", "Polytéréphtalate d'éthylène.", "Polychlorure de vinyle."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_vw4yq"]
+script = ExtResource("1_rcrvc")
+question = "Comment appelle-t-on la partie de la chaîne d'un polymère qui se répète régulièrement ?"
+choices = Array[String](["Motif.", "Radical.", "Isomère.", "Oligomère."])
+
+[resource]
+script = ExtResource("2_pis2k")
+questions = Array[ExtResource("1_rcrvc")]([SubResource("Resource_po6dx"), SubResource("Resource_iqj4q"), SubResource("Resource_pa5ps"), SubResource("Resource_t66vy"), SubResource("Resource_ipp4d"), SubResource("Resource_g88wm"), SubResource("Resource_ojeem"), SubResource("Resource_50wdo"), SubResource("Resource_hgxo5"), SubResource("Resource_vw4yq")])

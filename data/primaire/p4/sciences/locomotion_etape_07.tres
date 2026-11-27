@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bxq4hcq21uhmj"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_maai7"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_1g07i"]
+
+[sub_resource type="Resource" id="Resource_nyjry"]
+script = ExtResource("1_maai7")
+word = "LIGAMENT"
+hint = "Ensemble de fibres qui unissent deux os au niveau d'une articulation."
+grid_position = Vector2i(0, 5)
+
+[sub_resource type="Resource" id="Resource_57eo6"]
+script = ExtResource("1_maai7")
+word = "NERF"
+hint = "Faisceau de fibres nerveuses issues de neurones."
+grid_position = Vector2i(6, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_vh8sk"]
+script = ExtResource("1_maai7")
+word = "PHALANGE"
+hint = "Pièce osseuse que l'on retrouve au niveau des doigts."
+grid_position = Vector2i(0, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_s0cwp"]
+script = ExtResource("1_maai7")
+word = "CERVEAU"
+hint = "Organe responsable des fonctions essentielles."
+grid_position = Vector2i(3, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_67uwm"]
+script = ExtResource("1_maai7")
+word = "FLEXION"
+hint = "Mouvement d'un membre du corps qui se plie ou se courbe."
+grid_position = Vector2i(1, 1)
+
+[sub_resource type="Resource" id="Resource_d7ono"]
+script = ExtResource("1_maai7")
+word = "DISQUE"
+hint = "Articulation située entre les vertèbres de la colonne."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_1g07i")
+clues = Array[ExtResource("1_maai7")]([SubResource("Resource_nyjry"), SubResource("Resource_57eo6"), SubResource("Resource_vh8sk"), SubResource("Resource_s0cwp"), SubResource("Resource_67uwm"), SubResource("Resource_d7ono")])
+school_year = "P4"
+title = "La locomotion"

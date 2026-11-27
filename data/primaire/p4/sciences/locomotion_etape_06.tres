@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bg2np2kojghir"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_jjwk4"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_fffg3"]
+
+[sub_resource type="Resource" id="Resource_bhux7"]
+script = ExtResource("1_jjwk4")
+word = "TETE"
+hint = "Partie supérieure du fémur."
+grid_position = Vector2i(2, 10)
+
+[sub_resource type="Resource" id="Resource_8ghla"]
+script = ExtResource("1_jjwk4")
+word = "ULNA"
+hint = "Autre terme scientifique pour désigner le cubitus."
+grid_position = Vector2i(1, 2)
+
+[sub_resource type="Resource" id="Resource_583lf"]
+script = ExtResource("1_jjwk4")
+word = "EQUILIBRE"
+hint = "Capacité du corps à être maintenu droit sans tomber."
+grid_position = Vector2i(1, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ak654"]
+script = ExtResource("1_jjwk4")
+word = "TENDON"
+hint = "Tissu qui relie l'os au muscle."
+grid_position = Vector2i(0, 12)
+
+[sub_resource type="Resource" id="Resource_kk30k"]
+script = ExtResource("1_jjwk4")
+word = "ARTICULATION"
+hint = "Jointure, point de contact entre deux ou plusieurs os."
+grid_position = Vector2i(4, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_oghvm"]
+script = ExtResource("1_jjwk4")
+word = "PERONE"
+hint = "Os situé dans la jambe, derrière le tibia."
+
+[resource]
+script = ExtResource("2_fffg3")
+clues = Array[ExtResource("1_jjwk4")]([SubResource("Resource_bhux7"), SubResource("Resource_8ghla"), SubResource("Resource_583lf"), SubResource("Resource_ak654"), SubResource("Resource_kk30k"), SubResource("Resource_oghvm")])
+school_year = "P4"
+title = "La locomotion"

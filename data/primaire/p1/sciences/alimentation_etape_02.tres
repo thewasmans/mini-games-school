@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bdqm2dndox12e"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_ke3io"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_lsuoc"]
+
+[sub_resource type="Resource" id="Resource_c3x8y"]
+script = ExtResource("1_ke3io")
+word = "CERISIER"
+hint = "Arbre qui produit des cerises."
+grid_position = Vector2i(0, 6)
+
+[sub_resource type="Resource" id="Resource_501xc"]
+script = ExtResource("1_ke3io")
+word = "POTAGER"
+hint = "Espace de culture de légumes et de fruits frais."
+grid_position = Vector2i(2, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_inhjs"]
+script = ExtResource("1_ke3io")
+word = "LEGUME"
+hint = "Partie d'une plante que l'on peut manger et que l'on retrouve dans le potager."
+grid_position = Vector2i(9, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_dybv8"]
+script = ExtResource("1_ke3io")
+word = "CONCOMBRE"
+hint = "Plante potagère dont les fruits verts allongés et aqueux sont consommés en salade."
+grid_position = Vector2i(1, 1)
+
+[sub_resource type="Resource" id="Resource_s7ewl"]
+script = ExtResource("1_ke3io")
+word = "SAISON"
+hint = "Période qui correspond à l'été, l'hiver, l'automne ou le printemps."
+grid_position = Vector2i(1, 3)
+
+[resource]
+script = ExtResource("2_lsuoc")
+clues = Array[ExtResource("1_ke3io")]([SubResource("Resource_c3x8y"), SubResource("Resource_501xc"), SubResource("Resource_inhjs"), SubResource("Resource_dybv8"), SubResource("Resource_s7ewl")])
+school_year = "P1"
+title = "L'alimentation"

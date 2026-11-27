@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://jvuwjbn1s4oq"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_yr1d0"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_7i2hg"]
+
+[sub_resource type="Resource" id="Resource_khsb6"]
+script = ExtResource("1_yr1d0")
+text = "Les chaînes alimentaires lient les organismes."
+
+[sub_resource type="Resource" id="Resource_phbue"]
+script = ExtResource("1_yr1d0")
+text = "Les végétaux producteurs fabriquent leur matière."
+
+[sub_resource type="Resource" id="Resource_ccr3a"]
+script = ExtResource("1_yr1d0")
+text = "Les consommateurs se nourrissent d'autres êtres."
+
+[resource]
+script = ExtResource("2_7i2hg")
+hidden_letter_ratio = 0.13
+phrases = Array[ExtResource("1_yr1d0")]([SubResource("Resource_khsb6"), SubResource("Resource_phbue"), SubResource("Resource_ccr3a")])
+school_year = "S1"
+title = "Les écosystèmes"

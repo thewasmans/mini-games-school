@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://b504n63hb3t23"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_2n65a"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_oyj4m"]
+
+[sub_resource type="Resource" id="Resource_fvwbt"]
+script = ExtResource("1_2n65a")
+word = "SON"
+hint = "Onde acoustique qui se propage dans l'air."
+grid_position = Vector2i(3, 8)
+
+[sub_resource type="Resource" id="Resource_4l3bc"]
+script = ExtResource("1_2n65a")
+word = "REFLEXION"
+hint = "Changement de direction de la lumière à l'interface de deux milieux."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_pfvdh"]
+script = ExtResource("1_2n65a")
+word = "PRODUCTION"
+hint = "Action de fabriquer quelque chose."
+grid_position = Vector2i(7, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_6i8s2"]
+script = ExtResource("1_2n65a")
+word = "INTENSITE"
+hint = "Caractérise un son de force faible ou forte."
+grid_position = Vector2i(0, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_r1myw"]
+script = ExtResource("1_2n65a")
+word = "TIMBRE"
+hint = "Ensemble de caractéristiques du son qui permet de reconnaître un instrument ou une voix."
+grid_position = Vector2i(0, 4)
+
+[sub_resource type="Resource" id="Resource_ya61d"]
+script = ExtResource("1_2n65a")
+word = "HAUTEUR"
+hint = "Caractérise un son grave ou aigu."
+grid_position = Vector2i(1, 1)
+
+[resource]
+script = ExtResource("2_oyj4m")
+clues = Array[ExtResource("1_2n65a")]([SubResource("Resource_fvwbt"), SubResource("Resource_4l3bc"), SubResource("Resource_pfvdh"), SubResource("Resource_6i8s2"), SubResource("Resource_r1myw"), SubResource("Resource_ya61d")])
+school_year = "P3"
+title = "Les sens, le son et la lumière"

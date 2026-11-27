@@ -1,0 +1,105 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://mxato54bjv80"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_chmy4"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_vm2e0"]
+
+[sub_resource type="Resource" id="Resource_5wt7k"]
+script = ExtResource("1_chmy4")
+word = "RATE"
+hint = "Organe lymphatique qui stocke des globules blancs."
+grid_position = Vector2i(3, 7)
+
+[sub_resource type="Resource" id="Resource_8wjic"]
+script = ExtResource("1_chmy4")
+word = "THYMUS"
+hint = "Organe lymphoïde primaire situé dans le thorax où les globules blancs maturent."
+grid_position = Vector2i(16, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_6uew4"]
+script = ExtResource("1_chmy4")
+word = "OPPORTUNISTES"
+hint = "Caractérise des microbes qui profitent d'une faiblesse pour infecter."
+grid_position = Vector2i(4, 12)
+
+[sub_resource type="Resource" id="Resource_dwh67"]
+script = ExtResource("1_chmy4")
+word = "AUXILIAIRES"
+hint = "Lymphocytes TCD4, médiateurs pour enclencher une réponse immunitaire."
+grid_position = Vector2i(8, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_dc1lt"]
+script = ExtResource("1_chmy4")
+word = "SEBUM"
+hint = "Film lipidique sécrété par les glandes sébacées de la peau."
+grid_position = Vector2i(13, 16)
+
+[sub_resource type="Resource" id="Resource_ja0fq"]
+script = ExtResource("1_chmy4")
+word = "SIDA"
+hint = "Dernière stade provoqué par le VIH, aussi appelé syndrome d'immunodéficience acquis."
+grid_position = Vector2i(3, 10)
+
+[sub_resource type="Resource" id="Resource_t5oa3"]
+script = ExtResource("1_chmy4")
+word = "LTB"
+hint = "Acronyme de lymphocytes permettant la fabrication d'anticorps."
+grid_position = Vector2i(10, 8)
+
+[sub_resource type="Resource" id="Resource_i3oju"]
+script = ExtResource("1_chmy4")
+word = "LTT"
+hint = "Acronyme de lymphocytes capables de reconnaître un agent étrange et de l'éliminer."
+grid_position = Vector2i(10, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_h2ona"]
+script = ExtResource("1_chmy4")
+word = "CYTOKINE"
+hint = "Message chimique intervenant dans la RI, comme les interleukines."
+grid_position = Vector2i(11, 6)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_0b5yl"]
+script = ExtResource("1_chmy4")
+word = "GREFFE"
+hint = "Acte de transplanter, opération chirurgicale consistant à remplacer un organe malade par un organe sain."
+grid_position = Vector2i(13, 14)
+
+[sub_resource type="Resource" id="Resource_hui8c"]
+script = ExtResource("1_chmy4")
+word = "FLORE"
+hint = "Barrière biologique dite « commensale » en surface de la peau ou dans le tube digestif."
+grid_position = Vector2i(13, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_4erxk"]
+script = ExtResource("1_chmy4")
+word = "BACTERIE"
+hint = "Etre vivant unicellulaire sans noyau et se trouvant naturellement dans le corps humain."
+grid_position = Vector2i(14, 9)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_h1m3l"]
+script = ExtResource("1_chmy4")
+word = "ANTICORPS"
+hint = "Protéine faisant partie des immunoglobulines et intervenant dans la réponse immunitaire."
+grid_position = Vector2i(4, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ve7y6"]
+script = ExtResource("1_chmy4")
+word = "ANTIGENE"
+hint = "Toute substance du non soi capable de déclencher une réponse immunitaire."
+grid_position = Vector2i(8, 4)
+
+[sub_resource type="Resource" id="Resource_agnxc"]
+script = ExtResource("1_chmy4")
+word = "SUEUR"
+hint = "Terme médical correspondant à la transpiration."
+grid_position = Vector2i(0, 13)
+
+[resource]
+script = ExtResource("2_vm2e0")
+clues = Array[ExtResource("1_chmy4")]([SubResource("Resource_5wt7k"), SubResource("Resource_8wjic"), SubResource("Resource_6uew4"), SubResource("Resource_dwh67"), SubResource("Resource_dc1lt"), SubResource("Resource_ja0fq"), SubResource("Resource_t5oa3"), SubResource("Resource_i3oju"), SubResource("Resource_h2ona"), SubResource("Resource_0b5yl"), SubResource("Resource_hui8c"), SubResource("Resource_4erxk"), SubResource("Resource_h1m3l"), SubResource("Resource_ve7y6"), SubResource("Resource_agnxc")])

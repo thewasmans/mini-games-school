@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dr52fo481er7a"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_1jq3o"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_jqkh3"]
+
+[sub_resource type="Resource" id="Resource_axplf"]
+script = ExtResource("1_1jq3o")
+text = "Le son se propage dans l'air."
+
+[sub_resource type="Resource" id="Resource_bvqb7"]
+script = ExtResource("1_1jq3o")
+text = "Un son grave ou aigu : c'est sa hauteur."
+
+[sub_resource type="Resource" id="Resource_sj8qh"]
+script = ExtResource("1_1jq3o")
+text = "Le miroir réfléchit la lumière."
+
+[sub_resource type="Resource" id="Resource_opuka"]
+script = ExtResource("1_1jq3o")
+text = "La loupe agrandit l'image d'un objet."
+
+[resource]
+script = ExtResource("2_jqkh3")
+hidden_letter_ratio = 0.15
+phrases = Array[ExtResource("1_1jq3o")]([SubResource("Resource_axplf"), SubResource("Resource_bvqb7"), SubResource("Resource_sj8qh"), SubResource("Resource_opuka")])
+school_year = "P3"
+title = "Les sens, le son et la lumière"

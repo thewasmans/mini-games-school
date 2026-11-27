@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://18h7wax7cpsa"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_m47nf"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_xoqgo"]
+
+[sub_resource type="Resource" id="Resource_e7eak"]
+script = ExtResource("1_m47nf")
+text = "La force de poussée dépend du volume immergé et de la masse volumique du fluide."
+
+[sub_resource type="Resource" id="Resource_mlh8e"]
+script = ExtResource("1_m47nf")
+text = "Les navires immenses flottent grâce à l'air qu'ils contiennent et à leur forme."
+
+[sub_resource type="Resource" id="Resource_afsy7"]
+script = ExtResource("1_m47nf")
+text = "Un sous-marin gère sa flottaison en remplissant ou vidant ses ballasts."
+
+[sub_resource type="Resource" id="Resource_rdf5h"]
+script = ExtResource("1_m47nf")
+text = "L'unité de mesure de la poussée d'Archimède est le newton."
+
+[resource]
+script = ExtResource("2_xoqgo")
+hidden_letter_ratio = 0.17
+phrases = Array[ExtResource("1_m47nf")]([SubResource("Resource_e7eak"), SubResource("Resource_mlh8e"), SubResource("Resource_afsy7"), SubResource("Resource_rdf5h")])
+school_year = "S3"
+title = "La poussée d'Archimède"

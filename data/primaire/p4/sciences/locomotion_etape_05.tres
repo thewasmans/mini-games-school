@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://y3yx1lnqii57"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_x05mo"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_0dnpu"]
+
+[sub_resource type="Resource" id="Resource_8etli"]
+script = ExtResource("1_x05mo")
+word = "OS"
+hint = "Organe, tissu que l'on retrouve dans le squelette."
+grid_position = Vector2i(2, 5)
+
+[sub_resource type="Resource" id="Resource_g8rcx"]
+script = ExtResource("1_x05mo")
+word = "LOCOMOTION"
+hint = "Action de se mouvoir, de se déplacer d'un lieu vers un autre."
+grid_position = Vector2i(2, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_r48it"]
+script = ExtResource("1_x05mo")
+word = "FORCE"
+hint = "Action qui se réalise suite à l'interaction entre deux objets."
+grid_position = Vector2i(1, 3)
+
+[sub_resource type="Resource" id="Resource_7gyw8"]
+script = ExtResource("1_x05mo")
+word = "AXIAL"
+hint = "Par opposition au squelette dit appendiculaire."
+grid_position = Vector2i(0, 9)
+
+[sub_resource type="Resource" id="Resource_vt1jc"]
+script = ExtResource("1_x05mo")
+word = "EXTENSION"
+hint = "Mouvement d'un membre du corps qui s'étire, qui s'allonge."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_6wmq6"]
+script = ExtResource("1_x05mo")
+word = "MUSCLE"
+hint = "Ensemble de fibres musculaires."
+
+[resource]
+script = ExtResource("2_0dnpu")
+clues = Array[ExtResource("1_x05mo")]([SubResource("Resource_8etli"), SubResource("Resource_g8rcx"), SubResource("Resource_r48it"), SubResource("Resource_7gyw8"), SubResource("Resource_vt1jc"), SubResource("Resource_6wmq6")])
+school_year = "P4"
+title = "La locomotion"

@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://c5r3qucncr1pt"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_uwl6s"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_xdw6o"]
+
+[sub_resource type="Resource" id="Resource_84msf"]
+script = ExtResource("1_uwl6s")
+text = "Les sources d'énergie renouvelables se régénèrent naturellement."
+
+[sub_resource type="Resource" id="Resource_c2hdq"]
+script = ExtResource("1_uwl6s")
+text = "Le soleil"
+hint = "le vent et l'eau fournissent des énergies renouvelables."
+
+[sub_resource type="Resource" id="Resource_0kb7n"]
+script = ExtResource("1_uwl6s")
+text = "Les combustibles fossiles sont issus de la décomposition d'organismes."
+
+[sub_resource type="Resource" id="Resource_snrbk"]
+script = ExtResource("1_uwl6s")
+text = "Le pétrole"
+hint = "le charbon et le gaz sont des énergies non renouvelables."
+
+[resource]
+script = ExtResource("2_xdw6o")
+hidden_letter_ratio = 0.13
+phrases = Array[ExtResource("1_uwl6s")]([SubResource("Resource_84msf"), SubResource("Resource_c2hdq"), SubResource("Resource_0kb7n"), SubResource("Resource_snrbk")])
+school_year = "S1"
+title = "Ressources et énergie"

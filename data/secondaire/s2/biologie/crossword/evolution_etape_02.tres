@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cn8c0rkre8oao"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_qrgcg"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_jabmk"]
+
+[sub_resource type="Resource" id="Resource_frw5x"]
+script = ExtResource("1_qrgcg")
+word = "PHYLOGENIE"
+hint = "Science qui étudie les relations de parenté génétique entre les espèces (taxons)."
+grid_position = Vector2i(1, 0)
+
+[sub_resource type="Resource" id="Resource_vvfwo"]
+script = ExtResource("1_qrgcg")
+word = "EVOLUTION"
+hint = "Fait scientifique qui se caractérise par des changements au cours du temps."
+grid_position = Vector2i(10, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_dm53h"]
+script = ExtResource("1_qrgcg")
+word = "DATE"
+hint = "Terme permettant de situer une espèce en étudiant la radioactivité du carbone."
+grid_position = Vector2i(3, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_yc5v1"]
+script = ExtResource("1_qrgcg")
+word = "MANTEAU"
+hint = "Couche intermédiaire entre le noyau terrestre et la croûte terrestre, l'écorce."
+grid_position = Vector2i(0, 7)
+
+[sub_resource type="Resource" id="Resource_algqy"]
+script = ExtResource("1_qrgcg")
+word = "BIODIVERSITE"
+hint = "Ensemble de la diversité des espèces dans un milieu."
+grid_position = Vector2i(0, 5)
+
+[resource]
+script = ExtResource("2_jabmk")
+clues = Array[ExtResource("1_qrgcg")]([SubResource("Resource_frw5x"), SubResource("Resource_vvfwo"), SubResource("Resource_dm53h"), SubResource("Resource_yc5v1"), SubResource("Resource_algqy")])
+school_year = "S2"
+title = "L'évolution du vivant"

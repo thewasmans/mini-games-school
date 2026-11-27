@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cu56wwld23nr8"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_p7vyf"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_lijj2"]
+
+[sub_resource type="Resource" id="Resource_hmrr5"]
+script = ExtResource("1_p7vyf")
+word = "SCORPION"
+hint = "Arachnide qui possède des pinces et un aiguillon venimeux."
+grid_position = Vector2i(11, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_dcgo8"]
+script = ExtResource("1_p7vyf")
+word = "MEDUSE"
+hint = "Animal présent depuis 600 millions d'années et qui est principalement composé d'eau."
+grid_position = Vector2i(7, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_5hmwd"]
+script = ExtResource("1_p7vyf")
+word = "OISEAUX"
+hint = "Groupe d'animaux ovipares, pourvus de plumes et d'ailes dont la majorité sont capable de chanter et de voler."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_0yqnk"]
+script = ExtResource("1_p7vyf")
+word = "MOLLUSQUES"
+hint = "Animaux dont le corps est mou, mais qui possède une coquille visible ou cachée."
+grid_position = Vector2i(0, 5)
+
+[sub_resource type="Resource" id="Resource_m1a5c"]
+script = ExtResource("1_p7vyf")
+word = "REQUIN"
+hint = "Poisson cartilagineux dont certains sont de grands prédateurs marins."
+grid_position = Vector2i(6, 7)
+
+[sub_resource type="Resource" id="Resource_ynn57"]
+script = ExtResource("1_p7vyf")
+word = "CROCODILES"
+hint = "Groupe d'animaux qui sont d'excellents prédateurs, ils ont un museau allongé et possèdent jusqu'à 80 dents."
+grid_position = Vector2i(2, 0)
+
+[resource]
+script = ExtResource("2_lijj2")
+clues = Array[ExtResource("1_p7vyf")]([SubResource("Resource_hmrr5"), SubResource("Resource_dcgo8"), SubResource("Resource_5hmwd"), SubResource("Resource_0yqnk"), SubResource("Resource_m1a5c"), SubResource("Resource_ynn57")])
+school_year = "P6"
+title = "Le classement des animaux"

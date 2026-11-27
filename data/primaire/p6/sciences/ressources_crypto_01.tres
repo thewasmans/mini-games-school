@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://cap18nptjhmhx"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_gvv4n"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_h8cxk"]
+
+[sub_resource type="Resource" id="Resource_mjaeo"]
+script = ExtResource("1_gvv4n")
+text = "Le Soleil est une source d'énergie renouvelable."
+
+[sub_resource type="Resource" id="Resource_vfglv"]
+script = ExtResource("1_gvv4n")
+text = "L'éolienne utilise l'énergie du vent."
+
+[sub_resource type="Resource" id="Resource_dyswp"]
+script = ExtResource("1_gvv4n")
+text = "Le barrage utilise l'énergie de l'eau en mouvement."
+
+[resource]
+script = ExtResource("2_h8cxk")
+hidden_letter_ratio = 0.1
+phrases = Array[ExtResource("1_gvv4n")]([SubResource("Resource_mjaeo"), SubResource("Resource_vfglv"), SubResource("Resource_dyswp")])
+school_year = "P6"
+title = "Les ressources et l'énergie"

@@ -1,0 +1,106 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://u3ve6mv08b21"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_t3oq6"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_fwmk5"]
+
+[sub_resource type="Resource" id="Resource_i62pu"]
+script = ExtResource("1_t3oq6")
+word = "FERMENTATION"
+hint = "Processus de fabrication d'énergie se déroulant en absence d'oxygène."
+grid_position = Vector2i(7, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_k0q18"]
+script = ExtResource("1_t3oq6")
+word = "BACTERIE"
+hint = "Etre vivant faisant partie du monde des procaryotes."
+grid_position = Vector2i(14, 11)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_3qv2l"]
+script = ExtResource("1_t3oq6")
+word = "IST"
+hint = "Acronyme d'infection sexuellement transmissible."
+grid_position = Vector2i(10, 17)
+
+[sub_resource type="Resource" id="Resource_qkxsp"]
+script = ExtResource("1_t3oq6")
+word = "AMYGDALE"
+hint = "Organe lymphoïde secondaire qui constitue un lieu de stockage des globules blancs."
+grid_position = Vector2i(0, 3)
+
+[sub_resource type="Resource" id="Resource_uxnpe"]
+script = ExtResource("1_t3oq6")
+word = "CAPSIDE"
+hint = "Coque protéique renfermant le matériel génétique."
+grid_position = Vector2i(16, 8)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ibtit"]
+script = ExtResource("1_t3oq6")
+word = "SIDA"
+hint = "Dernier stade provoqué par le VIH."
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_hulyp"]
+script = ExtResource("1_t3oq6")
+word = "VIRUS"
+hint = "Parasite intracellulaire obligatoire, nécessitant un hôte."
+grid_position = Vector2i(5, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ugrc0"]
+script = ExtResource("1_t3oq6")
+word = "HLA"
+hint = "Système de l'Human Leukocyte Antigen, appelé en français CMH."
+grid_position = Vector2i(5, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_lu5ax"]
+script = ExtResource("1_t3oq6")
+word = "LEUCOCYTE"
+hint = "Terme scientifique pour les globules blancs."
+grid_position = Vector2i(9, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_6kotn"]
+script = ExtResource("1_t3oq6")
+word = "CAPSIDE"
+hint = "Coque protéique renfermant le matériel génétique."
+grid_position = Vector2i(1, 6)
+
+[sub_resource type="Resource" id="Resource_xlq56"]
+script = ExtResource("1_t3oq6")
+word = "VITRO"
+hint = "Caractérise une expérience qui se déroule en culture, in..."
+grid_position = Vector2i(8, 19)
+
+[sub_resource type="Resource" id="Resource_qvlwd"]
+script = ExtResource("1_t3oq6")
+word = "CONTAMINATION"
+hint = "Présence d'un microbe ou d'une substance indésirable dans le corps."
+grid_position = Vector2i(6, 12)
+
+[sub_resource type="Resource" id="Resource_1jjs2"]
+script = ExtResource("1_t3oq6")
+word = "RAGE"
+hint = "Infection virale grave transmise en cas de morsure et provoquant de fortes fièvres."
+grid_position = Vector2i(9, 15)
+
+[sub_resource type="Resource" id="Resource_kxqi5"]
+script = ExtResource("1_t3oq6")
+word = "CLONE"
+hint = "Terme utilisé pour caractérisé un sujet génétiquement identique."
+grid_position = Vector2i(18, 9)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_4rlni"]
+script = ExtResource("1_t3oq6")
+word = "INFECTION"
+hint = "Maladie causée par une invasion du tissu par des microorganismes."
+grid_position = Vector2i(12, 12)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_fwmk5")
+clues = Array[ExtResource("1_t3oq6")]([SubResource("Resource_i62pu"), SubResource("Resource_k0q18"), SubResource("Resource_3qv2l"), SubResource("Resource_qkxsp"), SubResource("Resource_uxnpe"), SubResource("Resource_ibtit"), SubResource("Resource_hulyp"), SubResource("Resource_ugrc0"), SubResource("Resource_lu5ax"), SubResource("Resource_6kotn"), SubResource("Resource_xlq56"), SubResource("Resource_qvlwd"), SubResource("Resource_1jjs2"), SubResource("Resource_kxqi5"), SubResource("Resource_4rlni")])

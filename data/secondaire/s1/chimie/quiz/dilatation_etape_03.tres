@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://dlhualt2c77i3"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_voafm"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_a63dr"]
+
+[sub_resource type="Resource" id="Resource_i6pm2"]
+script = ExtResource("1_voafm")
+question = "On dit que la matière est du gaz lorsque..."
+choices = Array[String](["Les molécules sont très proches et quasiment immobiles.", "Les molécules sont liées mais peuvent se déplacer les unes par rapport aux autres.", "Les molécules sont désordonnées et s'éloignent.", "Du gaz ionisé avec des particules chargées se forment."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_cmcwj"]
+script = ExtResource("1_voafm")
+question = "On dit que la matière est du plasma lorsque..."
+choices = Array[String](["Les molécules sont très proches et quasiment immobiles.", "Les molécules sont liées mais peuvent se déplacer les unes par rapport aux autres.", "Les molécules sont désordonnées et s'éloignent.", "Du gaz ionisé avec des particules chargées se forment."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_pq7cq"]
+script = ExtResource("1_voafm")
+question = "Dans quel état se trouve la matière lorsque la température est la plus basse ?"
+choices = Array[String](["Liquide.", "Solide.", "Gaz.", "Plasma."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_nf0le"]
+script = ExtResource("1_voafm")
+question = "Dans quel état se trouve la matière lorsque la température est la plus haute ?"
+choices = Array[String](["Liquide.", "Solide.", "Gaz.", "Plasma."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_mjd66"]
+script = ExtResource("1_voafm")
+question = "De quoi dépend l'état physique d'un corps ?"
+choices = Array[String](["De sa position.", "De sa température.", "Du biotope.", "De sa source."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_a63dr")
+questions = Array[ExtResource("1_voafm")]([SubResource("Resource_i6pm2"), SubResource("Resource_cmcwj"), SubResource("Resource_pq7cq"), SubResource("Resource_nf0le"), SubResource("Resource_mjd66")])
+school_year = "S1"
+title = "La dilatation"

@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://b25p0binsqhal"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_il3x8"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_2sngh"]
+
+[sub_resource type="Resource" id="Resource_c5vh2"]
+script = ExtResource("1_il3x8")
+word = "VISION"
+hint = "Fonction qui consiste à voir."
+grid_position = Vector2i(1, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_7wcv0"]
+script = ExtResource("1_il3x8")
+word = "TOUCHER"
+hint = "Sens dont l'organe utilisé est la peau."
+grid_position = Vector2i(0, 7)
+
+[sub_resource type="Resource" id="Resource_ny3ky"]
+script = ExtResource("1_il3x8")
+word = "EMETTEUR"
+hint = "Appareil qui produit les informations."
+grid_position = Vector2i(6, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_lh8y4"]
+script = ExtResource("1_il3x8")
+word = "ODORAT"
+hint = "Sens dont l'organe utilisé est le nez."
+grid_position = Vector2i(1, 4)
+
+[resource]
+script = ExtResource("2_2sngh")
+clues = Array[ExtResource("1_il3x8")]([SubResource("Resource_c5vh2"), SubResource("Resource_7wcv0"), SubResource("Resource_ny3ky"), SubResource("Resource_lh8y4")])
+school_year = "P3"
+title = "Les sens, le son et la lumière"

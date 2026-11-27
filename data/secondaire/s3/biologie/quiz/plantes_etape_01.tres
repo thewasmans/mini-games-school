@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bk532j3d0s1li"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_2ktab"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_fsnwh"]
+
+[sub_resource type="Resource" id="Resource_t5vwk"]
+script = ExtResource("1_2ktab")
+question = "Quelle structure n'appartient pas à la cellule végétale ?"
+choices = Array[String](["La paroi cellulaire.", "La vacuole.", "Le chloroplaste.", "Le centrosome."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_hdq5n"]
+script = ExtResource("1_2ktab")
+question = "Quelle structure permet à la cellule végétale d'effectuer la photosynthèse ?"
+choices = Array[String](["La paroi cellulaire.", "La vacuole.", "Le chloroplaste.", "Le centrosome."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_2l4un"]
+script = ExtResource("1_2ktab")
+question = "Comment les plantes se reproduisent-elles ?"
+choices = Array[String](["Grâce à des spores.", "Grâce à des graines.", "Par les fleurs.", "Tout est juste."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_0kard"]
+script = ExtResource("1_2ktab")
+question = "Comment se nomme la respiration chez les plantes ?"
+choices = Array[String](["La phototransduction.", "La photorespiration.", "La photosynthèse.", "Les plantes ne respirent pas."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_fsnwh")
+questions = Array[ExtResource("1_2ktab")]([SubResource("Resource_t5vwk"), SubResource("Resource_hdq5n"), SubResource("Resource_2l4un"), SubResource("Resource_0kard")])
+school_year = "S3"
+title = "La nutrition des plantes"

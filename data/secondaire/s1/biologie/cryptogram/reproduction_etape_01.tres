@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://clood7r4tbulk"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_k5b4q"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_kff3b"]
+
+[sub_resource type="Resource" id="Resource_02nfo"]
+script = ExtResource("1_k5b4q")
+text = "La puberté marque l'acquisition de la puberté et de la fertilité."
+
+[sub_resource type="Resource" id="Resource_fj473"]
+script = ExtResource("1_k5b4q")
+text = "L'appareil reproducteur masculin produit des spermatozoïdes."
+
+[sub_resource type="Resource" id="Resource_p1ojf"]
+script = ExtResource("1_k5b4q")
+text = "L'appareil reproducteur féminin produit des ovules."
+
+[resource]
+script = ExtResource("2_kff3b")
+hidden_letter_ratio = 0.1
+phrases = Array[ExtResource("1_k5b4q")]([SubResource("Resource_02nfo"), SubResource("Resource_fj473"), SubResource("Resource_p1ojf")])
+school_year = "S1"
+title = "La reproduction humaine"

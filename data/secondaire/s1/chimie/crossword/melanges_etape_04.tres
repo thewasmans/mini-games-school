@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://y175upl2docg"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_mhi6y"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_u3hnp"]
+
+[sub_resource type="Resource" id="Resource_wdjg8"]
+script = ExtResource("1_mhi6y")
+word = "MN"
+hint = "Symbole chimique du manganèse."
+grid_position = Vector2i(0, 8)
+
+[sub_resource type="Resource" id="Resource_s35ph"]
+script = ExtResource("1_mhi6y")
+word = "DECANTATION"
+hint = "Technique de séparation basée sur la gravité pour que les substances plus lourdes coulent."
+grid_position = Vector2i(1, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_qfytk"]
+script = ExtResource("1_mhi6y")
+word = "HETEROGENE"
+hint = "Mélange où l'on peut distinguer les constituants à l’œil nu après agitation."
+grid_position = Vector2i(6, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_rhfgu"]
+script = ExtResource("1_mhi6y")
+word = "FILTRATION"
+hint = "Opération consistant à passer un liquide à travers une membrane pour le débarrasser de ses particules solides."
+grid_position = Vector2i(3, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_k6unc"]
+script = ExtResource("1_mhi6y")
+word = "SEL"
+hint = "Composé chimique constitué de cations et d'anions formant un ensemble électriquement neutre."
+grid_position = Vector2i(1, 2)
+
+[sub_resource type="Resource" id="Resource_l3r08"]
+script = ExtResource("1_mhi6y")
+word = "NI"
+hint = "Symbole chimique du nickel."
+grid_position = Vector2i(3, 9)
+
+[sub_resource type="Resource" id="Resource_2laxc"]
+script = ExtResource("1_mhi6y")
+word = "MELANGE"
+hint = "Elément constitué de plusieurs espèces chimiques."
+grid_position = Vector2i(0, 5)
+
+[resource]
+script = ExtResource("2_u3hnp")
+clues = Array[ExtResource("1_mhi6y")]([SubResource("Resource_wdjg8"), SubResource("Resource_s35ph"), SubResource("Resource_qfytk"), SubResource("Resource_rhfgu"), SubResource("Resource_k6unc"), SubResource("Resource_l3r08"), SubResource("Resource_2laxc")])
+school_year = "S1"
+title = "Les mélanges"

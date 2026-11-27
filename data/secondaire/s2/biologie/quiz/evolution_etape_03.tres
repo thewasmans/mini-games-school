@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://dtk8h8u6sdix1"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_5m5nl"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_al01l"]
+
+[sub_resource type="Resource" id="Resource_jborm"]
+script = ExtResource("1_5m5nl")
+question = "Combien de groupes séparent les dinosaures ?"
+choices = Array[String](["2.", "12.", "1000.", "2000."])
+
+[sub_resource type="Resource" id="Resource_jpk4b"]
+script = ExtResource("1_5m5nl")
+question = "Comment se nomme la partie de la Terre sur laquelle nous marchons ?"
+choices = Array[String](["Le noyau.", "Le manteau.", "La croûte.", "L'hydrosphère."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_t7tuf"]
+script = ExtResource("1_5m5nl")
+question = "Comment se nomme la partie de la Terre où la température est d'environ 4000°C ?"
+choices = Array[String](["Le noyau.", "Le manteau.", "La croûte.", "L'hydrosphère."])
+
+[sub_resource type="Resource" id="Resource_qkwwj"]
+script = ExtResource("1_5m5nl")
+question = "Comment se nomme la partie de la Terre qui recouvre le noyau ?"
+choices = Array[String](["Le noyau.", "Le manteau.", "La croûte.", "L'hydrosphère."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_p0veb"]
+script = ExtResource("1_5m5nl")
+question = "Comment se nomme la partie de la Terre contenant l'eau ?"
+choices = Array[String](["Le noyau.", "Le manteau.", "La croûte.", "L'hydrosphère."])
+correct_choice_index = 3
+
+[resource]
+script = ExtResource("2_al01l")
+questions = Array[ExtResource("1_5m5nl")]([SubResource("Resource_jborm"), SubResource("Resource_jpk4b"), SubResource("Resource_t7tuf"), SubResource("Resource_qkwwj"), SubResource("Resource_p0veb")])
+school_year = "S2"
+title = "L'évolution du vivant"

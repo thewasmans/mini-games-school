@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bld0gjh4qnxev"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_3n6mo"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_cr5fw"]
+
+[sub_resource type="Resource" id="Resource_h7dv7"]
+script = ExtResource("1_3n6mo")
+word = "PETROLE"
+hint = "Ressource naturelle provenant de la décomposition d'organismes marins et qui est distillée pour obtenir du gaz."
+grid_position = Vector2i(0, 4)
+
+[sub_resource type="Resource" id="Resource_85twc"]
+script = ExtResource("1_3n6mo")
+word = "THERMIQUE"
+hint = "Se dit d'une énergie liée à la température, correspond à la chaleur."
+grid_position = Vector2i(6, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ekrgg"]
+script = ExtResource("1_3n6mo")
+word = "BIODEGRADABILITE"
+hint = "Qualité d'une substance qui se décompose par les microbes."
+grid_position = Vector2i(1, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ax2o2"]
+script = ExtResource("1_3n6mo")
+word = "MACROSCOPIQUE"
+hint = "Terme utilisé pour caractériser un élément que l'on peut voir à l'œil."
+grid_position = Vector2i(3, 1)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_cr5fw")
+clues = Array[ExtResource("1_3n6mo")]([SubResource("Resource_h7dv7"), SubResource("Resource_85twc"), SubResource("Resource_ekrgg"), SubResource("Resource_ax2o2")])
+school_year = "S1"
+title = "Ressources et énergie"

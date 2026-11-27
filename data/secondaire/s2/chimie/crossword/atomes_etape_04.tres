@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://nx1jskfoxdgf"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_v8u37"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_qspof"]
+
+[sub_resource type="Resource" id="Resource_rqhs6"]
+script = ExtResource("1_v8u37")
+word = "SN"
+hint = "Symbole chimique de l'étain."
+grid_position = Vector2i(0, 7)
+
+[sub_resource type="Resource" id="Resource_i74ts"]
+script = ExtResource("1_v8u37")
+word = "MN"
+hint = "Symbole chimique du manganèse."
+grid_position = Vector2i(5, 5)
+
+[sub_resource type="Resource" id="Resource_tq5a3"]
+script = ExtResource("1_v8u37")
+word = "IODE"
+hint = "Elément chimique dont le symbole est I."
+grid_position = Vector2i(4, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ckcag"]
+script = ExtResource("1_v8u37")
+word = "DIOXYGENE"
+hint = "Corps pur simple présent dans l'air et qui nous permet de respirer."
+grid_position = Vector2i(1, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_8jer7"]
+script = ExtResource("1_v8u37")
+word = "COMPOSE"
+hint = "Se dit d'un corps pur qui possède plusieurs types d'atomes, comme le NaCl."
+grid_position = Vector2i(0, 2)
+
+[sub_resource type="Resource" id="Resource_7muwy"]
+script = ExtResource("1_v8u37")
+word = "XENON"
+hint = "Gaz rare dont le symbole chimique est Xe."
+grid_position = Vector2i(6, 1)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_qspof")
+clues = Array[ExtResource("1_v8u37")]([SubResource("Resource_rqhs6"), SubResource("Resource_i74ts"), SubResource("Resource_tq5a3"), SubResource("Resource_ckcag"), SubResource("Resource_8jer7"), SubResource("Resource_7muwy")])
+school_year = "S2"
+title = "Atomes et molécules"

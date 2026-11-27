@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://0w81w11q1nxd"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_vxkfy"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_q5h2j"]
+
+[sub_resource type="Resource" id="Resource_ycg1b"]
+script = ExtResource("1_vxkfy")
+text = "L'être humain modifie profondément les écosystèmes par ses activités."
+
+[sub_resource type="Resource" id="Resource_lxy4o"]
+script = ExtResource("1_vxkfy")
+text = "La pollution de l'air"
+hint = "de l'eau et des sols fragilise la nature."
+
+[sub_resource type="Resource" id="Resource_4kpfh"]
+script = ExtResource("1_vxkfy")
+text = "La déforestation détruit les habitats naturels de nombreuses espèces."
+
+[resource]
+script = ExtResource("2_q5h2j")
+hidden_letter_ratio = 0.1
+phrases = Array[ExtResource("1_vxkfy")]([SubResource("Resource_ycg1b"), SubResource("Resource_lxy4o"), SubResource("Resource_4kpfh")])
+school_year = "S2"
+title = "L'humain et l'environnement"

@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dtlko6q5epju0"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_myn0b"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_l7so1"]
+
+[sub_resource type="Resource" id="Resource_cprb6"]
+script = ExtResource("1_myn0b")
+word = "FE"
+hint = "Symbole chimique du fer."
+grid_position = Vector2i(0, 5)
+
+[sub_resource type="Resource" id="Resource_0e44e"]
+script = ExtResource("1_myn0b")
+word = "MOLECULE"
+hint = "Ensemble d'atomes, structure de base de la matière comme l'eau."
+grid_position = Vector2i(1, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ki4dw"]
+script = ExtResource("1_myn0b")
+word = "SOLUTION"
+hint = "Résultat obtenu lorsqu'un solvant décompose un soluté."
+grid_position = Vector2i(3, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_kc12f"]
+script = ExtResource("1_myn0b")
+word = "SOLUTE"
+hint = "Se dit de la substance qui est dissoute par un solvant."
+grid_position = Vector2i(0, 3)
+
+[resource]
+script = ExtResource("2_l7so1")
+clues = Array[ExtResource("1_myn0b")]([SubResource("Resource_cprb6"), SubResource("Resource_0e44e"), SubResource("Resource_ki4dw"), SubResource("Resource_kc12f")])
+school_year = "S1"
+title = "Les mélanges"

@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bhbs3pkiac1xe"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_2fqt0"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_sjuur"]
+
+[sub_resource type="Resource" id="Resource_ctngj"]
+script = ExtResource("1_2fqt0")
+question = "Quel est l'instrument de mesure de la pression ?"
+choices = Array[String](["Le pluviomètre.", "Le baromètre.", "L'anémomètre.", "La girouette."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_3dppl"]
+script = ExtResource("1_2fqt0")
+question = "Comment est le temps lors d'un anticyclone ?"
+choices = Array[String](["Il y a des nuages et de la pluie.", "Il fait sec et parfois ensolleilé.", "Il y a toujours de l'orage.", "Il y a toujours des cyclones."])
+
+[sub_resource type="Resource" id="Resource_yaocc"]
+script = ExtResource("1_2fqt0")
+question = "Comment est le temps lors d'une dépression ?"
+choices = Array[String](["Il y a des nuages et de la pluie.", "Il fait sec et parfois ensolleilé.", "Il y a toujours de l'orage.", "Il y a toujours des cyclones."])
+
+[sub_resource type="Resource" id="Resource_ew3ml"]
+script = ExtResource("1_2fqt0")
+question = "Que peut-on relier à l'anticyclone ?"
+choices = Array[String](["Une basse pression.", "Une haute pression.", "Une pression stable.", "Aucune de ces données."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_4vvqp"]
+script = ExtResource("1_2fqt0")
+question = "Que peut-on relier à la dépression ?"
+choices = Array[String](["Une basse pression.", "Une haute pression.", "Une pression stable.", "Aucune de ces données."])
+
+[resource]
+script = ExtResource("2_sjuur")
+questions = Array[ExtResource("1_2fqt0")]([SubResource("Resource_ctngj"), SubResource("Resource_3dppl"), SubResource("Resource_yaocc"), SubResource("Resource_ew3ml"), SubResource("Resource_4vvqp")])
+school_year = "S2"
+title = "Forces et pression"

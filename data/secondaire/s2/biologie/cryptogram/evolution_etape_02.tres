@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://4ipoe65ef3r7"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_1f8qn"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_7ry5w"]
+
+[sub_resource type="Resource" id="Resource_6j84w"]
+script = ExtResource("1_1f8qn")
+text = "Les caractères héréditaires se transmettent de génération en génération."
+
+[sub_resource type="Resource" id="Resource_cmpnx"]
+script = ExtResource("1_1f8qn")
+text = "La biodiversité actuelle est le fruit d'une longue histoire évolutive."
+
+[sub_resource type="Resource" id="Resource_ylky1"]
+script = ExtResource("1_1f8qn")
+text = "Une espèce nouvelle apparaît lorsque des populations divergent durablement."
+
+[resource]
+script = ExtResource("2_7ry5w")
+hidden_letter_ratio = 0.13
+phrases = Array[ExtResource("1_1f8qn")]([SubResource("Resource_6j84w"), SubResource("Resource_cmpnx"), SubResource("Resource_ylky1")])
+school_year = "S2"
+title = "L'évolution du vivant"

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://6caxho30fo1s"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_4yaua"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_s81ua"]
+
+[sub_resource type="Resource" id="Resource_xqq2c"]
+script = ExtResource("1_4yaua")
+text = "Les plantes vertes fabriquent leur propre matière organique."
+
+[sub_resource type="Resource" id="Resource_10y6e"]
+script = ExtResource("1_4yaua")
+text = "La photosynthèse nécessite de l'eau"
+hint = "du dioxyde de carbone et de la lumière."
+
+[sub_resource type="Resource" id="Resource_e6hh5"]
+script = ExtResource("1_4yaua")
+text = "Les racines absorbent l'eau et les sels minéraux du sol."
+
+[resource]
+script = ExtResource("2_s81ua")
+hidden_letter_ratio = 0.1
+phrases = Array[ExtResource("1_4yaua")]([SubResource("Resource_xqq2c"), SubResource("Resource_10y6e"), SubResource("Resource_e6hh5")])
+school_year = "S3"
+title = "La nutrition des plantes"
