@@ -11,13 +11,18 @@ func autofill() -> void:
 	for placement in _placements():
 		if not _running():
 			return
-		if ui._placement_attempts.get(placement, "") == placement.word_data.word:
+		if ui.is_placement_solved(placement):
 			continue
-		ui._select_placement(placement)
-		ui._current_text = ""
 		var word: String = placement.word_data.word
-		for letter in word:
-			ui._on_letter_pressed(LetterNormalizer.base_letter(letter))
+		var open_indices: Array[int] = []
+		for letter_index in word.length():
+			if not ui._locked_cells.has(placement.cell_position(letter_index)):
+				open_indices.append(letter_index)
+		if open_indices.is_empty():
+			continue
+		ui._select_placement(placement, placement.cell_position(open_indices[0]))
+		for letter_index in open_indices:
+			ui._on_letter_pressed(LetterNormalizer.base_letter(word[letter_index]))
 			await _wait(CHAR_INTERVAL)
 			if not _running():
 				return

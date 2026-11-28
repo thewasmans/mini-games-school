@@ -3,5 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://c44gagyqg0slo" path="res://content/sprites/ui/ui_buttons_quizz.png" id="1_buttons"]
 
 [resource]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
 texture = ExtResource("1_buttons")
 region_rect = Rect2(396, 230, 344, 142)
