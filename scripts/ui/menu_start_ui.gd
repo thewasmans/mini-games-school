@@ -19,5 +19,5 @@ func _on_play_button_pressed() -> void:
 func _on_credits_button_pressed() -> void:
 	credits_pressed.emit()
 
-func _on_feedback_button_pressed() -> void:
-	OS.shell_open("https://tally.so/r/xVJbqr")
+func _on_quit_button_pressed() -> void:
+	get_tree().quit()
