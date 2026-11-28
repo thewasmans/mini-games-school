@@ -363,9 +363,11 @@ func _check_placement(placement: CrosswordWordPlacement) -> void:
 	if typed.is_empty():
 		return
 	if not LetterNormalizer.matches(typed, placement.word_data.word):
+		UIFeedback.play_lose(self)
 		_set_word_color(placement, INCORRECT_COLOR)
 		_play_incorrect_feedback(placement)
 		return
+	UIFeedback.play_win(self)
 	_solve_placement(placement)
 	_finish_if_completed()
 

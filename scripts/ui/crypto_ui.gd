@@ -196,8 +196,10 @@ func _validate() -> void:
 			_incorrect_indices[character_index] = true
 	_update_fix_errors_button()
 	if not _incorrect_indices.is_empty():
+		UIFeedback.play_lose(self)
 		UIFeedback.appear(fix_errors_button, 0.0)
 		return
+	UIFeedback.play_win(self)
 	_clear_selection()
 	_locked = true
 	keyboard.set_enabled(false)

@@ -13,6 +13,21 @@ const APPEAR_DURATION := 0.3
 const CONFETTI_AMOUNT := 90
 const CONFETTI_LIFETIME := 1.8
 const CONFETTI_COLORS: Array[Color] = [Color(1.0, 0.35, 0.35), Color(1.0, 0.8, 0.2), Color(0.4, 0.9, 0.45), Color(0.35, 0.65, 1.0), Color(0.8, 0.45, 1.0)]
+const WIN_SOUND: AudioStream = preload("res://content/audios/sfx_win.mp3")
+const LOSE_SOUND: AudioStream = preload("res://content/audios/sfx_lose.wav")
+
+static func play_win(parent: Node) -> void:
+	_play_result_sound(parent, WIN_SOUND)
+
+static func play_lose(parent: Node) -> void:
+	_play_result_sound(parent, LOSE_SOUND)
+
+static func _play_result_sound(parent: Node, stream: AudioStream) -> void:
+	var player := AudioStreamPlayer.new()
+	player.stream = stream
+	player.finished.connect(player.queue_free)
+	parent.add_child(player)
+	player.play()
 
 static func create_tween_for(node: Control) -> Tween:
 	if node.has_meta(TWEEN_META):
