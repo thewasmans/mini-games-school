@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://brafwhukismbe"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_bdtm1"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_t36e4"]
+
+[sub_resource type="Resource" id="Resource_3ehux"]
+script = ExtResource("1_bdtm1")
+text = "Le prédateur chasse sa proie."
+
+[sub_resource type="Resource" id="Resource_5nqgg"]
+script = ExtResource("1_bdtm1")
+text = "Les plantes sont les producteurs de la chaîne alimentaire."
+
+[sub_resource type="Resource" id="Resource_xffig"]
+script = ExtResource("1_bdtm1")
+text = "Le décomposeur recycle les restes des êtres vivants."
+
+[sub_resource type="Resource" id="Resource_rfrao"]
+script = ExtResource("1_bdtm1")
+text = "Certains oiseaux migrent vers des pays chauds en hiver."
+
+[resource]
+script = ExtResource("2_t36e4")
+hidden_letter_ratio = 0.15
+phrases = Array[ExtResource("1_bdtm1")]([SubResource("Resource_3ehux"), SubResource("Resource_5nqgg"), SubResource("Resource_xffig"), SubResource("Resource_rfrao")])
+school_year = "P4"
+title = "La chaîne alimentaire"

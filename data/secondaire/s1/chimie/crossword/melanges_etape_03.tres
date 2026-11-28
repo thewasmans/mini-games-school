@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://nrtvixlx6tc7"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_vrjfj"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_s88vp"]
+
+[sub_resource type="Resource" id="Resource_31qyg"]
+script = ExtResource("1_vrjfj")
+word = "OXYGENE"
+hint = "Composé chimique noté O."
+grid_position = Vector2i(0, 3)
+
+[sub_resource type="Resource" id="Resource_50gkq"]
+script = ExtResource("1_vrjfj")
+word = "ELEMENT"
+hint = "Substance chimique du tableau périodique de Mendeleïev."
+grid_position = Vector2i(1, 0)
+
+[sub_resource type="Resource" id="Resource_0mhqc"]
+script = ExtResource("1_vrjfj")
+word = "METAL"
+hint = "Elément qui réagit chimiquement en perdant ses électrons externes pour former des ions positifs."
+grid_position = Vector2i(3, 5)
+
+[sub_resource type="Resource" id="Resource_wmar1"]
+script = ExtResource("1_vrjfj")
+word = "SOL"
+hint = "Structure formée de roches minérales et organiques."
+grid_position = Vector2i(0, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_3nmmv"]
+script = ExtResource("1_vrjfj")
+word = "MODELE"
+hint = "Représentation simplifiée, et souvent idéale, de la réalité d'un phénomène, comme le système solaire."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_8xmvw"]
+script = ExtResource("1_vrjfj")
+word = "LI"
+hint = "Symbole chimique du lithium."
+grid_position = Vector2i(2, 0)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_s88vp")
+clues = Array[ExtResource("1_vrjfj")]([SubResource("Resource_31qyg"), SubResource("Resource_50gkq"), SubResource("Resource_0mhqc"), SubResource("Resource_wmar1"), SubResource("Resource_3nmmv"), SubResource("Resource_8xmvw")])
+school_year = "S1"
+title = "Les mélanges"

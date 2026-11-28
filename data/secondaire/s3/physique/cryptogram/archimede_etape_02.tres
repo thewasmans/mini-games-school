@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://bidqercgipvcc"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_nn4jj"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_q2clx"]
+
+[sub_resource type="Resource" id="Resource_2ofue"]
+script = ExtResource("1_nn4jj")
+text = "Un objet flotte si sa densité est inférieure à celle du liquide."
+
+[sub_resource type="Resource" id="Resource_6n1dw"]
+script = ExtResource("1_nn4jj")
+text = "Un objet coule si son poids est supérieur à la poussée d'Archimède."
+
+[sub_resource type="Resource" id="Resource_6hkkv"]
+script = ExtResource("1_nn4jj")
+text = "Archimède a découvert ce principe célèbre dans sa baignoire."
+
+[resource]
+script = ExtResource("2_q2clx")
+hidden_letter_ratio = 0.13
+phrases = Array[ExtResource("1_nn4jj")]([SubResource("Resource_2ofue"), SubResource("Resource_6n1dw"), SubResource("Resource_6hkkv")])
+school_year = "S3"
+title = "La poussée d'Archimède"

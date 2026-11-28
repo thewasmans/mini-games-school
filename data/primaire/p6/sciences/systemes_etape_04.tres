@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cicupcu747qlh"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_jor1w"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_h1ihe"]
+
+[sub_resource type="Resource" id="Resource_vo7qa"]
+script = ExtResource("1_jor1w")
+word = "SALIVATION"
+hint = "Partie de la digestion qui se déroule dans la bouche avec la mastication."
+grid_position = Vector2i(0, 2)
+
+[sub_resource type="Resource" id="Resource_8kdv2"]
+script = ExtResource("1_jor1w")
+word = "ANUS"
+hint = "Trou par lequel sort les matières fécales, le caca."
+grid_position = Vector2i(1, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_gg3gl"]
+script = ExtResource("1_jor1w")
+word = "TRACHEE"
+hint = "Tube constitué de cartilages qui sépare la gorge des poumons."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_pl05q"]
+script = ExtResource("1_jor1w")
+word = "BILE"
+hint = "Substance produite par le foie et libérée par la vésicule biliaire."
+grid_position = Vector2i(3, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_n3s7n"]
+script = ExtResource("1_jor1w")
+word = "COLON"
+hint = "Lieu où se déroule la fabrication de la matière fécale."
+grid_position = Vector2i(8, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_6s02c"]
+script = ExtResource("1_jor1w")
+word = "GRELE"
+hint = "Partie de l'intestin qui permet l'absorption des nutriments dans le sang."
+grid_position = Vector2i(3, 6)
+
+[resource]
+script = ExtResource("2_h1ihe")
+clues = Array[ExtResource("1_jor1w")]([SubResource("Resource_vo7qa"), SubResource("Resource_8kdv2"), SubResource("Resource_gg3gl"), SubResource("Resource_pl05q"), SubResource("Resource_n3s7n"), SubResource("Resource_6s02c")])
+school_year = "P6"
+title = "Les systèmes du corps humain"

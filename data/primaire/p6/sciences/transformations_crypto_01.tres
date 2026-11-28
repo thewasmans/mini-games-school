@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://daaf7s846pjuc"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_5j0is"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_fqhn5"]
+
+[sub_resource type="Resource" id="Resource_20qha"]
+script = ExtResource("1_5j0is")
+text = "La combustion produit de la chaleur."
+
+[sub_resource type="Resource" id="Resource_1qm5w"]
+script = ExtResource("1_5j0is")
+text = "Le bois et le charbon sont des combustibles."
+
+[sub_resource type="Resource" id="Resource_65si3"]
+script = ExtResource("1_5j0is")
+text = "Le dioxygène est le comburant de la combustion."
+
+[resource]
+script = ExtResource("2_fqhn5")
+hidden_letter_ratio = 0.1
+phrases = Array[ExtResource("1_5j0is")]([SubResource("Resource_20qha"), SubResource("Resource_1qm5w"), SubResource("Resource_65si3")])
+school_year = "P6"
+title = "Les transformations de la matière"

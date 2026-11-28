@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://d03qc3u7raxqg"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_bkmga"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_ww358"]
+
+[sub_resource type="Resource" id="Resource_fw3c1"]
+script = ExtResource("1_bkmga")
+question = "Comment se nomme l’ancêtre commun de tous les organismes actuels ?"
+choices = Array[String](["LUCA.", "NICO.", "HAMZA.", "TONI."])
+
+[sub_resource type="Resource" id="Resource_nuon6"]
+script = ExtResource("1_bkmga")
+question = "Qu'est-ce que les structures analogues ?"
+choices = Array[String](["Une fonction différente d'origine évolutive différente.", "Une fonction différente d'origine évolutive identique.", "Une fonction similaire d'origine évolutive différente.", "Une fonction perdue."])
+
+[sub_resource type="Resource" id="Resource_5wmtq"]
+script = ExtResource("1_bkmga")
+question = "Qu'est-ce que les structures homologues ?"
+choices = Array[String](["Une fonction différente d'origine évolutive différente.", "Une fonction différente d'origine évolutive identique.", "Une fonction similaire d'origine évolutive différente.", "Une fonction perdue."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_2onax"]
+script = ExtResource("1_bkmga")
+question = "Qu'est-ce que la phylogénie ?"
+choices = Array[String](["Le degré de différence entre chaque espèce comparée.", "Un arbre généalogique.", "Relation de parenté entre les espèces.", "Un classement exclusif de plantes."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_6ca2q"]
+script = ExtResource("1_bkmga")
+question = "En quoi consiste l'innovation évolutive ?"
+choices = Array[String](["Un caractère qui se transforme et passe d'un état à l'autre.", "Un caractère qui se conserve.", "Un caractère qui saute une génération.", "Un caractère qui est unique à une seule espèce."])
+
+[resource]
+script = ExtResource("2_ww358")
+questions = Array[ExtResource("1_bkmga")]([SubResource("Resource_fw3c1"), SubResource("Resource_nuon6"), SubResource("Resource_5wmtq"), SubResource("Resource_2onax"), SubResource("Resource_6ca2q")])

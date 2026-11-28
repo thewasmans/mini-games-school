@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://buu3h4qcsndx6"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_qtnny"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_vpqhf"]
+
+[sub_resource type="Resource" id="Resource_vcg7x"]
+script = ExtResource("1_qtnny")
+word = "RATE"
+hint = "Organe qui joue un rôle dans l'immunité des cellules sanguines."
+grid_position = Vector2i(5, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_lsfv0"]
+script = ExtResource("1_qtnny")
+word = "MICROSCOPE"
+hint = "Outil permettant d'agrandir l'image d'un objet."
+grid_position = Vector2i(3, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_baiv1"]
+script = ExtResource("1_qtnny")
+word = "AUTOTROPHE"
+hint = "Organisme capable de fabriquer seul leur matière organique."
+grid_position = Vector2i(0, 4)
+
+[sub_resource type="Resource" id="Resource_gq275"]
+script = ExtResource("1_qtnny")
+word = "HETEROTROPHE"
+hint = "Organisme incapable de fabriquer seul leur matière organique."
+grid_position = Vector2i(0, 9)
+
+[sub_resource type="Resource" id="Resource_sp58i"]
+script = ExtResource("1_qtnny")
+word = "COLON"
+hint = "Lieu où se déroule la fabrication de la matière fécale."
+grid_position = Vector2i(3, 2)
+
+[sub_resource type="Resource" id="Resource_01h31"]
+script = ExtResource("1_qtnny")
+word = "ESTOMAC"
+hint = "Organe de stockage du bol alimentaire."
+grid_position = Vector2i(5, 7)
+
+[sub_resource type="Resource" id="Resource_irseu"]
+script = ExtResource("1_qtnny")
+word = "FERMENTATION"
+hint = "Processus de transformation d'énergie sans oxygène réalisé par des bactéries et des levures."
+
+[resource]
+script = ExtResource("2_vpqhf")
+clues = Array[ExtResource("1_qtnny")]([SubResource("Resource_vcg7x"), SubResource("Resource_lsfv0"), SubResource("Resource_baiv1"), SubResource("Resource_gq275"), SubResource("Resource_sp58i"), SubResource("Resource_01h31"), SubResource("Resource_irseu")])
+school_year = "S3"
+title = "La nutrition humaine"

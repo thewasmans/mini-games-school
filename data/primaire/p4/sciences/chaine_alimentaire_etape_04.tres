@@ -1,0 +1,54 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://8gqu77dfjh6y"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_lxguf"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_5raio"]
+
+[sub_resource type="Resource" id="Resource_fiooo"]
+script = ExtResource("1_lxguf")
+word = "OMNIVORE"
+hint = "Être vivant qui se nourrit de viandes et d'herbes."
+grid_position = Vector2i(7, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_aao8f"]
+script = ExtResource("1_lxguf")
+word = "PRODUCTEUR"
+hint = "Organisme qui est à la base de la chaine alimentaire."
+grid_position = Vector2i(0, 7)
+
+[sub_resource type="Resource" id="Resource_5854f"]
+script = ExtResource("1_lxguf")
+word = "DECOMPOSEUR"
+hint = "Organisme qui transforme la matière organique."
+grid_position = Vector2i(1, 5)
+
+[sub_resource type="Resource" id="Resource_rp5x4"]
+script = ExtResource("1_lxguf")
+word = "PISCIVORE"
+hint = "Être vivant qui se nourrit de poissons."
+grid_position = Vector2i(1, 0)
+
+[sub_resource type="Resource" id="Resource_dd7gu"]
+script = ExtResource("1_lxguf")
+word = "ESPECE"
+hint = "Terme utilisé en biologie pour caractériser un être vivant."
+grid_position = Vector2i(9, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_7n01c"]
+script = ExtResource("1_lxguf")
+word = "MAILLON"
+hint = "Partie, étage dans la chaine alimentaire."
+grid_position = Vector2i(1, 2)
+
+[sub_resource type="Resource" id="Resource_1mqnq"]
+script = ExtResource("1_lxguf")
+word = "EAU"
+hint = "Peut être en surface ou souterraine dans son cycle."
+grid_position = Vector2i(9, 3)
+
+[resource]
+script = ExtResource("2_5raio")
+clues = Array[ExtResource("1_lxguf")]([SubResource("Resource_fiooo"), SubResource("Resource_aao8f"), SubResource("Resource_5854f"), SubResource("Resource_rp5x4"), SubResource("Resource_dd7gu"), SubResource("Resource_7n01c"), SubResource("Resource_1mqnq")])
+school_year = "P4"
+title = "La chaîne alimentaire"

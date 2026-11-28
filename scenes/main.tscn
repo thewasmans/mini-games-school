@@ -38,4 +38,4 @@ level_prefab = ExtResource("9_lvlprfb")
 
 [node name="Level" type="Node" parent="." unique_id=1565323220]
 
-[node name="MuteButtonLayer" parent="." instance=ExtResource("10_mute")]
+[node name="MuteButtonLayer" parent="." unique_id=1437158275 instance=ExtResource("10_mute")]

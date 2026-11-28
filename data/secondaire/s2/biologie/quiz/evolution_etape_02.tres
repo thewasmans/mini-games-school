@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://cy2w51333p6fn"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_qgp8s"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_8m35c"]
+
+[sub_resource type="Resource" id="Resource_j3kt3"]
+script = ExtResource("1_qgp8s")
+question = "Combien d'extinctions de masse se sont déroulées ?"
+choices = Array[String](["3.", "9.", "5.", "7."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_ieqio"]
+script = ExtResource("1_qgp8s")
+question = "Quelle est la dernière extinction ?"
+choices = Array[String](["Celle des mammifères.", "Celle des poissons.", "Celle des dinosaures.", "Celle des oiseaux."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_mpeo2"]
+script = ExtResource("1_qgp8s")
+question = "Durant quelle période s'est déroulée la première extinction ?"
+choices = Array[String](["Au crétacé.", "Au jurassique.", "Au silurien.", "Au trias."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_y0vn1"]
+script = ExtResource("1_qgp8s")
+question = "Pourquoi parlons-nous d'une 6ème extinction ?"
+choices = Array[String](["Car les poissons se reproduisent trop vite.", "Car les plantes disparaissent.", "Car l'homme modifie trop son environnement.", "Car les animaux mangent les plantes."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_u2vno"]
+script = ExtResource("1_qgp8s")
+question = "Peut-on dire que les oiseaux sont les descendants des dinosaures ?"
+choices = Array[String](["Non, c'est une faute fréquente.", "Non, c'est l'inverse.", "Oui, car les oiseaux sont des cousins.", "Oui, car les oiseaux font partie du même groupe que les dinosaures."])
+correct_choice_index = 3
+
+[resource]
+script = ExtResource("2_8m35c")
+questions = Array[ExtResource("1_qgp8s")]([SubResource("Resource_j3kt3"), SubResource("Resource_ieqio"), SubResource("Resource_mpeo2"), SubResource("Resource_y0vn1"), SubResource("Resource_u2vno")])
+school_year = "S2"
+title = "L'évolution du vivant"

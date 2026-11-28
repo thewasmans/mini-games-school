@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dtji3epgquvr6"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_a3d2a"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_4c8ti"]
+
+[sub_resource type="Resource" id="Resource_858ln"]
+script = ExtResource("1_a3d2a")
+word = "ACIDE"
+hint = "Se dit d'une substance chimique capable de donner des protons, comme l'acide phosphorique."
+grid_position = Vector2i(4, 0)
+
+[sub_resource type="Resource" id="Resource_g4ge6"]
+script = ExtResource("1_a3d2a")
+word = "PICTOGRAMME"
+hint = "Elément visuel, figuratif, qui peut représenter une notion, un concept ou une idée de manière graphique."
+grid_position = Vector2i(0, 6)
+
+[sub_resource type="Resource" id="Resource_ryjn2"]
+script = ExtResource("1_a3d2a")
+word = "COOLING"
+hint = "Technique de refroidissement qui consiste à faire couler de l'eau à 10-20 °C sur la brûlure pendant au moins 15 minutes."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_nyldy"]
+script = ExtResource("1_a3d2a")
+word = "ACTIVATION"
+hint = "Se dit d'une énergie nécessaire pour surmonter la barrière énergétique entre les réactifs et les produits d'une réaction."
+grid_position = Vector2i(2, 4)
+
+[sub_resource type="Resource" id="Resource_nnwkt"]
+script = ExtResource("1_a3d2a")
+word = "PONDERER"
+hint = "Méthode en chimie qui consiste à équilibrer des équations entre les réactifs et les produits."
+grid_position = Vector2i(4, 2)
+
+[resource]
+script = ExtResource("2_4c8ti")
+clues = Array[ExtResource("1_a3d2a")]([SubResource("Resource_858ln"), SubResource("Resource_g4ge6"), SubResource("Resource_ryjn2"), SubResource("Resource_nyldy"), SubResource("Resource_nnwkt")])
+school_year = "S3"
+title = "Les transformations chimiques"

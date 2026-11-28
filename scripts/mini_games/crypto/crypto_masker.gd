@@ -10,7 +10,8 @@ static func mask(phrase_data: CryptoPhraseData, hidden_letter_ratio: float, rng:
 	for character_index in phrase_data.text.length():
 		if _is_maskable(phrase_data.text[character_index]):
 			letter_indices.append(character_index)
-	var hidden_count := clampi(roundi(letter_indices.size() * hidden_letter_ratio), 0, letter_indices.size())
+	var minimum_hidden_count := mini(1, letter_indices.size())
+	var hidden_count := clampi(roundi(letter_indices.size() * hidden_letter_ratio), minimum_hidden_count, letter_indices.size())
 	_shuffle(letter_indices, random)
 	var hidden_indices: Array[int] = letter_indices.slice(0, hidden_count)
 	hidden_indices.sort()

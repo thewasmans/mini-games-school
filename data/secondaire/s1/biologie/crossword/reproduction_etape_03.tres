@@ -1,0 +1,56 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://b33ih1d1lyrc8"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_qdlia"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_bgkdp"]
+
+[sub_resource type="Resource" id="Resource_8gbdg"]
+script = ExtResource("1_qdlia")
+word = "SYSTEME"
+hint = "Ensemble d'organes assurant des fonctions biologiques spécifiques."
+grid_position = Vector2i(0, 9)
+
+[sub_resource type="Resource" id="Resource_lw431"]
+script = ExtResource("1_qdlia")
+word = "MUCUS"
+hint = "Sécrétions visqueuses et translucides, comme la glaire cervicale/vaginale."
+grid_position = Vector2i(0, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_0o6ya"]
+script = ExtResource("1_qdlia")
+word = "TESTICULE"
+hint = "Lieu de fabrication des spermatozoïdes."
+grid_position = Vector2i(6, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_hy37p"]
+script = ExtResource("1_qdlia")
+word = "URETRE"
+hint = "Conduit qui transporte l'urine ou le sperme."
+grid_position = Vector2i(1, 2)
+
+[sub_resource type="Resource" id="Resource_057x0"]
+script = ExtResource("1_qdlia")
+word = "IST"
+hint = "Infections sexuellement transmissibles (acronyme)."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_atfvy"]
+script = ExtResource("1_qdlia")
+word = "REGLES"
+hint = "Terme familier pour référer aux menstruations de la femme."
+grid_position = Vector2i(2, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_l5fiv"]
+script = ExtResource("1_qdlia")
+word = "VAGIN"
+hint = "Organe tubulaire qui sépare l'utérus de la vulve."
+grid_position = Vector2i(1, 0)
+
+[resource]
+script = ExtResource("2_bgkdp")
+clues = Array[ExtResource("1_qdlia")]([SubResource("Resource_8gbdg"), SubResource("Resource_lw431"), SubResource("Resource_0o6ya"), SubResource("Resource_hy37p"), SubResource("Resource_057x0"), SubResource("Resource_atfvy"), SubResource("Resource_l5fiv")])
+school_year = "S1"
+title = "La reproduction humaine"

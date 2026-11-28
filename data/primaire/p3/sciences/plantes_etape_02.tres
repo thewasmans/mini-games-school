@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://os0e22glv25c"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_w2cny"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_mcoj5"]
+
+[sub_resource type="Resource" id="Resource_jxnvj"]
+script = ExtResource("1_w2cny")
+word = "FLEUR"
+hint = "Partie de la plante qui est souvent odorante et contenant les organes reproducteurs."
+grid_position = Vector2i(0, 8)
+
+[sub_resource type="Resource" id="Resource_fyufq"]
+script = ExtResource("1_w2cny")
+word = "SEMIS"
+hint = "Opération qui consiste à mettre en terre les graines ou semences."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_tab2u"]
+script = ExtResource("1_w2cny")
+word = "GRAINE"
+hint = "Partie de la plante qui, après avoir germé, assure sa reproduction."
+grid_position = Vector2i(1, 3)
+
+[sub_resource type="Resource" id="Resource_5pi3i"]
+script = ExtResource("1_w2cny")
+word = "RACINE"
+hint = "Partie invisible de la plante, qui s'enfonce dans le sol et lui permet de tenir."
+grid_position = Vector2i(2, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_d8k56"]
+script = ExtResource("1_w2cny")
+word = "FEUILLE"
+hint = "Organe, partie de la plante qui capte la lumière."
+grid_position = Vector2i(6, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_h8re5"]
+script = ExtResource("1_w2cny")
+word = "ARBUSTE"
+hint = "Arbre de petite taille, ne dépassant pas 10 mètres de haut."
+
+[resource]
+script = ExtResource("2_mcoj5")
+clues = Array[ExtResource("1_w2cny")]([SubResource("Resource_jxnvj"), SubResource("Resource_fyufq"), SubResource("Resource_tab2u"), SubResource("Resource_5pi3i"), SubResource("Resource_d8k56"), SubResource("Resource_h8re5")])
+school_year = "P3"
+title = "Les plantes"

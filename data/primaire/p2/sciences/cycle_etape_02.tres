@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bfm728dlvmpp6"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_unmwd"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_batsa"]
+
+[sub_resource type="Resource" id="Resource_pjdo5"]
+script = ExtResource("1_unmwd")
+word = "CYCLE"
+hint = "Passage d'une étape de la vie à une autre selon un mode circulaire."
+grid_position = Vector2i(2, 9)
+
+[sub_resource type="Resource" id="Resource_yt40c"]
+script = ExtResource("1_unmwd")
+word = "ALIMENT"
+hint = "Nourriture permettant la croissance d'un vivant."
+grid_position = Vector2i(2, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_fvpma"]
+script = ExtResource("1_unmwd")
+word = "OVIPARE"
+hint = "Animal qui pond des œufs."
+grid_position = Vector2i(0, 2)
+
+[sub_resource type="Resource" id="Resource_8s0ve"]
+script = ExtResource("1_unmwd")
+word = "VIEILLISSEMENT"
+hint = "Etape de la vie d'un animal après sa croissance, lorsqu'il prend de l'âge."
+grid_position = Vector2i(6, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_r4awj"]
+script = ExtResource("1_unmwd")
+word = "CROISSANCE"
+hint = "Etape de la vie d'une espèce où elle grandit et change."
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_batsa")
+clues = Array[ExtResource("1_unmwd")]([SubResource("Resource_pjdo5"), SubResource("Resource_yt40c"), SubResource("Resource_fvpma"), SubResource("Resource_8s0ve"), SubResource("Resource_r4awj")])
+school_year = "P2"
+title = "Le cycle de vie"

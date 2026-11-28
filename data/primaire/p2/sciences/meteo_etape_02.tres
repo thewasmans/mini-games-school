@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cmdo6rb5t4g3s"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_lmpvx"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_p6gye"]
+
+[sub_resource type="Resource" id="Resource_q3smp"]
+script = ExtResource("1_lmpvx")
+word = "SOLEIL"
+hint = "Etoile qui donne la lumière à notre planète Terre."
+grid_position = Vector2i(4, 4)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_i18sm"]
+script = ExtResource("1_lmpvx")
+word = "GLACE"
+hint = "Eau à l'état solide lorsque la température descend en dessous de 0°C."
+grid_position = Vector2i(0, 7)
+
+[sub_resource type="Resource" id="Resource_johnt"]
+script = ExtResource("1_lmpvx")
+word = "METEOROLOGIE"
+hint = "Science qui étudie les phénomènes atmosphériques comme les nuages, la pluie ou le vent."
+grid_position = Vector2i(1, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_wt6gr"]
+script = ExtResource("1_lmpvx")
+word = "VENT"
+hint = "Mouvement de l'air."
+grid_position = Vector2i(0, 1)
+
+[resource]
+script = ExtResource("2_p6gye")
+clues = Array[ExtResource("1_lmpvx")]([SubResource("Resource_q3smp"), SubResource("Resource_i18sm"), SubResource("Resource_johnt"), SubResource("Resource_wt6gr")])
+school_year = "P2"
+title = "La météo"

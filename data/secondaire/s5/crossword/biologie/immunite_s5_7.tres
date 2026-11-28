@@ -1,0 +1,104 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dgrfgqwucg2hg"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_qgnov"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_k8urj"]
+
+[sub_resource type="Resource" id="Resource_othpg"]
+script = ExtResource("1_qgnov")
+word = "RHESUS"
+hint = "Facteur supplémentaire caractéristique des groupes sanguins."
+grid_position = Vector2i(0, 6)
+
+[sub_resource type="Resource" id="Resource_sjfpw"]
+script = ExtResource("1_qgnov")
+word = "SOI"
+hint = "Se dit de ce qui appartient au corps, de ce qui est reconnu par le SI."
+grid_position = Vector2i(10, 13)
+
+[sub_resource type="Resource" id="Resource_j3per"]
+script = ExtResource("1_qgnov")
+word = "DOULEUR"
+hint = "Lors de la réaction inflammatoire, il y a rougeur, gonflement, chaleur et ?"
+grid_position = Vector2i(14, 8)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_l05qj"]
+script = ExtResource("1_qgnov")
+word = "PRION"
+hint = "Protéine qui peut devenir pathogène en changeant sa conformation dans l'espace."
+grid_position = Vector2i(1, 3)
+
+[sub_resource type="Resource" id="Resource_pqh8t"]
+script = ExtResource("1_qgnov")
+word = "RATE"
+hint = "Organe lymphatique qui stocke des globules blancs."
+grid_position = Vector2i(12, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ssu1u"]
+script = ExtResource("1_qgnov")
+word = "OPPORTUNISTES"
+hint = "Caractérise des microbes qui profitent d'une faiblesse pour infecter."
+grid_position = Vector2i(4, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_kr51g"]
+script = ExtResource("1_qgnov")
+word = "META"
+hint = "Se dit d'une analyse qui combine les résultats d'une série d'études indépendantes sur un problème donné."
+grid_position = Vector2i(3, 11)
+
+[sub_resource type="Resource" id="Resource_6aecm"]
+script = ExtResource("1_qgnov")
+word = "CYTOLYSE"
+hint = "Processus de destruction d'une cellule cible, autre que l'apoptose ou la nécrose."
+grid_position = Vector2i(10, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_7uxs3"]
+script = ExtResource("1_qgnov")
+word = "DIAPEDESE"
+hint = "Migration des globules blancs du sang vers le tissu lésé."
+grid_position = Vector2i(6, 9)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_w6db2"]
+script = ExtResource("1_qgnov")
+word = "INNE"
+hint = "SI non spécifique, capable d'agir immédiatement."
+grid_position = Vector2i(3, 15)
+
+[sub_resource type="Resource" id="Resource_ri6pe"]
+script = ExtResource("1_qgnov")
+word = "DOULEUR"
+hint = "Lors de la réaction inflammatoire, il y a rougeur, gonflement, chaleur et ?"
+grid_position = Vector2i(3, 0)
+
+[sub_resource type="Resource" id="Resource_mngsw"]
+script = ExtResource("1_qgnov")
+word = "SIDA"
+hint = "Dernière stade provoqué par le VIH, aussi appelé syndrome d'immunodéficience acquis."
+grid_position = Vector2i(6, 16)
+
+[sub_resource type="Resource" id="Resource_nmmyr"]
+script = ExtResource("1_qgnov")
+word = "TUBERCULOSE"
+hint = "Maladie bactérienne qui infecte l’appareil respiratoire, provoquée la bacille de Koch."
+grid_position = Vector2i(8, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_x7336"]
+script = ExtResource("1_qgnov")
+word = "VASODILATATION"
+hint = "Dilatation des vaisseaux sanguins."
+grid_position = Vector2i(2, 9)
+
+[sub_resource type="Resource" id="Resource_ebum5"]
+script = ExtResource("1_qgnov")
+word = "TEP"
+hint = "Acronyme de la tomographie par émission de positons."
+grid_position = Vector2i(8, 2)
+
+[resource]
+script = ExtResource("2_k8urj")
+clues = Array[ExtResource("1_qgnov")]([SubResource("Resource_othpg"), SubResource("Resource_sjfpw"), SubResource("Resource_j3per"), SubResource("Resource_l05qj"), SubResource("Resource_pqh8t"), SubResource("Resource_ssu1u"), SubResource("Resource_kr51g"), SubResource("Resource_6aecm"), SubResource("Resource_7uxs3"), SubResource("Resource_w6db2"), SubResource("Resource_ri6pe"), SubResource("Resource_mngsw"), SubResource("Resource_nmmyr"), SubResource("Resource_x7336"), SubResource("Resource_ebum5")])

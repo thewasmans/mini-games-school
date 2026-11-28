@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cwxf3ar3ap03w"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_thvbx"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_mol66"]
+
+[sub_resource type="Resource" id="Resource_8koco"]
+script = ExtResource("1_thvbx")
+word = "SOLIDIFICATION"
+hint = "Passage d'un corps de l'état liquide à l'état solide."
+grid_position = Vector2i(0, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_anery"]
+script = ExtResource("1_thvbx")
+word = "EBULLITION"
+hint = "Formation de bulles lors du changement rapide d'un corps de l'état liquide vers l'état gazeux."
+grid_position = Vector2i(5, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_i1d4x"]
+script = ExtResource("1_thvbx")
+word = "SOLIDE"
+hint = "Etat de la matière caractérisé par l'absence de liberté entre les molécules, état organisé de la matière."
+grid_position = Vector2i(0, 2)
+
+[sub_resource type="Resource" id="Resource_fv7ct"]
+script = ExtResource("1_thvbx")
+word = "NEIGE"
+hint = "Eau congelée qui tombe des nuages en flocons blancs et légers."
+grid_position = Vector2i(0, 15)
+
+[sub_resource type="Resource" id="Resource_0meho"]
+script = ExtResource("1_thvbx")
+word = "RUISSELLEMENT"
+hint = "Ecoulement des eaux à la surface de la terre."
+grid_position = Vector2i(3, 0)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_mol66")
+clues = Array[ExtResource("1_thvbx")]([SubResource("Resource_8koco"), SubResource("Resource_anery"), SubResource("Resource_i1d4x"), SubResource("Resource_fv7ct"), SubResource("Resource_0meho")])
+school_year = "P4"
+title = "Le cycle de l'eau"

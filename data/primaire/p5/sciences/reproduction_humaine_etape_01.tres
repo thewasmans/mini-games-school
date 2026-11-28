@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://bv5ajamvjsuey"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_v80q0"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_ikfyj"]
+
+[sub_resource type="Resource" id="Resource_ub7rx"]
+script = ExtResource("1_v80q0")
+word = "VESSIE"
+hint = "Organe creux dans lequel s'accumule l'urine."
+grid_position = Vector2i(0, 5)
+
+[sub_resource type="Resource" id="Resource_0135p"]
+script = ExtResource("1_v80q0")
+word = "OVAIRE"
+hint = "Lieu de production des ovocytes."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_q3tua"]
+script = ExtResource("1_v80q0")
+word = "VULVE"
+hint = "Ensemble des organes génitaux externes de la femme, comme le vagin."
+grid_position = Vector2i(2, 1)
+
+[sub_resource type="Resource" id="Resource_8h334"]
+script = ExtResource("1_v80q0")
+word = "PENIS"
+hint = "Organe musculaire qui libère le sperme."
+grid_position = Vector2i(2, 3)
+
+[resource]
+script = ExtResource("2_ikfyj")
+clues = Array[ExtResource("1_v80q0")]([SubResource("Resource_ub7rx"), SubResource("Resource_0135p"), SubResource("Resource_q3tua"), SubResource("Resource_8h334")])
+school_year = "P5"
+title = "La reproduction humaine"

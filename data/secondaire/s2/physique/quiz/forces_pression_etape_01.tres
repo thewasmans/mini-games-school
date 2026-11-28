@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bp1klfb1p5y1o"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_30lvc"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_jte2f"]
+
+[sub_resource type="Resource" id="Resource_kkqmd"]
+script = ExtResource("1_30lvc")
+question = "De quoi dépend le poids ?"
+choices = Array[String](["De la masse.", "De l'endroit où on se trouve.", "De la gravité.", "De l'ensemble des éléments cités."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_mn1h3"]
+script = ExtResource("1_30lvc")
+question = "Qu'est-ce qu'un engrenage ?"
+choices = Array[String](["Système de roues dentées qui transmettent un mouvement.", "C'est une roue qui pivote autour d'un essieu, un point d'appui.", "Barre qui permet de soulever des charges lourdes.", "C'est un problème dans le moteur."])
+
+[sub_resource type="Resource" id="Resource_1hfjy"]
+script = ExtResource("1_30lvc")
+question = "Qu'est-ce qu'une poulie ?"
+choices = Array[String](["Système de roues dentées qui transmettent un mouvement.", "C'est une roue qui pivote autour d'un essieu, un point d'appui.", "Barre qui permet de soulever des charges lourdes.", "C'est un problème dans le moteur."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_e28k2"]
+script = ExtResource("1_30lvc")
+question = "Qu'est-ce qu'un levier ?"
+choices = Array[String](["Système de roues dentées qui transmettent un mouvement.", "C'est une roue qui pivote autour d'un essieu, un point d'appui.", "Barre qui permet de soulever des charges lourdes.", "C'est un problème dans le moteur."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("2_jte2f")
+questions = Array[ExtResource("1_30lvc")]([SubResource("Resource_kkqmd"), SubResource("Resource_mn1h3"), SubResource("Resource_1hfjy"), SubResource("Resource_e28k2")])
+school_year = "S2"
+title = "Forces et pression"

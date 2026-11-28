@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://b5cx11hj1h6fc"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_63l00"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_jgm8d"]
+
+[sub_resource type="Resource" id="Resource_7v22d"]
+script = ExtResource("1_63l00")
+text = "La contraception prévient efficacement les grossesses non désirées."
+
+[sub_resource type="Resource" id="Resource_y743m"]
+script = ExtResource("1_63l00")
+text = "Les préservatifs protègent contre les infections sexuellement transmissibles."
+
+[sub_resource type="Resource" id="Resource_0benc"]
+script = ExtResource("1_63l00")
+text = "Le dépistage régulier est essentiel pour la santé sexuelle."
+
+[sub_resource type="Resource" id="Resource_7yeff"]
+script = ExtResource("1_63l00")
+text = "Le choix responsable implique information et prévention."
+
+[resource]
+script = ExtResource("2_jgm8d")
+hidden_letter_ratio = 0.17
+phrases = Array[ExtResource("1_63l00")]([SubResource("Resource_7v22d"), SubResource("Resource_y743m"), SubResource("Resource_0benc"), SubResource("Resource_7yeff")])
+school_year = "S1"
+title = "La reproduction humaine"

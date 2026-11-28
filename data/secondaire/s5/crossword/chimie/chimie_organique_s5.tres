@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://c4abybijjjg68"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_univp"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_vyhyp"]
+
+[sub_resource type="Resource" id="Resource_jfegs"]
+script = ExtResource("1_univp")
+word = "ESTERIFICATION"
+hint = "Réaction de chimie organique au cours de laquelle un acide carboxylique et un alcool sont transformés en un ester."
+grid_position = Vector2i(7, 10)
+
+[sub_resource type="Resource" id="Resource_6cjdn"]
+script = ExtResource("1_univp")
+word = "PETROCHIMIE"
+hint = "Ensemble des activités industrielles, techniques ou scientifiques relatives à l'obtention de dérivés chimiques du pétrole."
+grid_position = Vector2i(7, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_4yetg"]
+script = ExtResource("1_univp")
+word = "PETROLE"
+hint = "Mélange composé principalement d’hydrocarbures, issu de la transformation provenant du plancton sédimenté."
+grid_position = Vector2i(19, 6)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_jr1nx"]
+script = ExtResource("1_univp")
+word = "ORGANIQUE"
+hint = "Partie de la chimie qui étudie les composés carbonés naturels ou synthétiques."
+grid_position = Vector2i(14, 5)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_r2uam"]
+script = ExtResource("1_univp")
+word = "DESULFURATION"
+hint = "Procédé permettant de retirer les molécules soufrées de différentes fractions."
+grid_position = Vector2i(10, 9)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_x7i6q"]
+script = ExtResource("1_univp")
+word = "CRAQUAGE"
+hint = "Procédé industriel permettant de fragmenter les grandes molécules d’hydrocarbures en petites."
+grid_position = Vector2i(0, 1)
+
+[sub_resource type="Resource" id="Resource_jflce"]
+script = ExtResource("1_univp")
+word = "SYNTHETIQUE"
+hint = "Se dit d'un composé chimique qui n'est pas naturelle, comme le caoutchouc."
+grid_position = Vector2i(12, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_0homo"]
+script = ExtResource("1_univp")
+word = "SAPONIFICATION"
+hint = "Transformation chimique permettant d’obtenir un savon."
+grid_position = Vector2i(8, 10)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_7c6e6"]
+script = ExtResource("1_univp")
+word = "REFORMAGE"
+hint = "Procédé industriel permettant de transformer les hydrocarbures à chaîne linéaire en chaîne ramifiée ou cyclique."
+grid_position = Vector2i(16, 4)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_vyhyp")
+clues = Array[ExtResource("1_univp")]([SubResource("Resource_jfegs"), SubResource("Resource_6cjdn"), SubResource("Resource_4yetg"), SubResource("Resource_jr1nx"), SubResource("Resource_r2uam"), SubResource("Resource_x7i6q"), SubResource("Resource_jflce"), SubResource("Resource_0homo"), SubResource("Resource_7c6e6")])

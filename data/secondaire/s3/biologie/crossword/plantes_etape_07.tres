@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://d2ijccw21a2iw"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_f4wsv"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_ar71a"]
+
+[sub_resource type="Resource" id="Resource_vo8bf"]
+script = ExtResource("1_f4wsv")
+word = "PARASITISME"
+hint = "Association entre deux espèces dans laquelle le parasite vit aux dépens de l'hôte."
+grid_position = Vector2i(0, 3)
+
+[sub_resource type="Resource" id="Resource_4gq8a"]
+script = ExtResource("1_f4wsv")
+word = "INTRASPECIFIQUE"
+hint = "Type de relation entre des organismes de la même espèce."
+grid_position = Vector2i(2, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ebtay"]
+script = ExtResource("1_f4wsv")
+word = "COMPETITION"
+hint = "Suite au manque de ressources alimentaires, les mêmes espèces entrent en…"
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_aj80w"]
+script = ExtResource("1_f4wsv")
+word = "COMMENSALISME"
+hint = "Association entre deux êtres vivants dans laquelle l'un tire profit de l'autre sans lui porter préjudice."
+grid_position = Vector2i(9, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_kqwgg"]
+script = ExtResource("1_f4wsv")
+word = "PREDATION"
+hint = "Relation de type alimentaire au cours de laquelle un prédateur se nourrit d’une proie."
+grid_position = Vector2i(7, 7)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_n07t2"]
+script = ExtResource("1_f4wsv")
+word = "CHAINE"
+hint = "Suite dans laquelle on présente de quoi se nourrit chacun des êtres vivants d'un écosystème."
+grid_position = Vector2i(7, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_ci8bv"]
+script = ExtResource("1_f4wsv")
+word = "SYMBIOSE"
+hint = "Association qui profite aux deux espèces qui y participent."
+grid_position = Vector2i(4, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_6f7yb"]
+script = ExtResource("1_f4wsv")
+word = "HERBIVORE"
+hint = "Se dit d'un  animal qui mange de l'herbe, des feuilles et d'autres végétaux."
+grid_position = Vector2i(1, 14)
+
+[resource]
+script = ExtResource("2_ar71a")
+clues = Array[ExtResource("1_f4wsv")]([SubResource("Resource_vo8bf"), SubResource("Resource_4gq8a"), SubResource("Resource_ebtay"), SubResource("Resource_aj80w"), SubResource("Resource_kqwgg"), SubResource("Resource_n07t2"), SubResource("Resource_ci8bv"), SubResource("Resource_6f7yb")])
+school_year = "S3"
+title = "La nutrition des plantes"

@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://dkd7w3qhsdibm"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_6hhcw"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_df6mw"]
+
+[sub_resource type="Resource" id="Resource_qjgky"]
+script = ExtResource("1_6hhcw")
+question = "Comment qualifie-t-on une alimentation qui couvre tous les besoins nutritionnels ?"
+choices = Array[String](["Monotone.", "Équilibrée et variée.", "Exclusivement végétalienne.", "Riche en graisses."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_gnmx7"]
+script = ExtResource("1_6hhcw")
+question = "Quelle est la place des produits sucrés et gras dans la pyramide alimentaire ?"
+choices = Array[String](["À la base.", "Au milieu.", "Au sommet (à limiter).", "Ils n'y sont pas."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_2uftp"]
+script = ExtResource("1_6hhcw")
+question = "Quel est le rôle principal des glucides complexes (féculents) ?"
+choices = Array[String](["Construire les tissus.", "Fournir de l'énergie durable.", "Hydrater les cellules.", "Améliorer la vue."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_rkvki"]
+script = ExtResource("1_6hhcw")
+question = "À quoi servent principalement les protéines ?"
+choices = Array[String](["Stocker les graisses.", "Apporter des vitamines.", "Construire et réparer les tissus.", "Digérer plus vite."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_y5ihs"]
+script = ExtResource("1_6hhcw")
+question = "Que nous apportent principalement les fruits et légumes ?"
+choices = Array[String](["Des calories vides.", "Des fibres, vitamines et minéraux.", "Uniquement du sucre.", "Des graisses saturées."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_3u7k5"]
+script = ExtResource("1_6hhcw")
+question = "Pourquoi limiter les produits \"ultra-transformés\" ?"
+choices = Array[String](["Car ils sont trop fades.", "Car ils sont trop riches en additifs, sel et sucre.", "Car ils sont trop rares.", "Car ils ne sont pas rassasiants."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_df6mw")
+questions = Array[ExtResource("1_6hhcw")]([SubResource("Resource_qjgky"), SubResource("Resource_gnmx7"), SubResource("Resource_2uftp"), SubResource("Resource_rkvki"), SubResource("Resource_y5ihs"), SubResource("Resource_3u7k5")])
+school_year = "S3"
+title = "La nutrition des plantes"

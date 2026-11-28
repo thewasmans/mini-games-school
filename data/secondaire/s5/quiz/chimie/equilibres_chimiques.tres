@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bbhklqgiuomgs"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_d2fj7"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_sxip8"]
+
+[sub_resource type="Resource" id="Resource_pp7bc"]
+script = ExtResource("1_d2fj7")
+question = "En quoi consiste une réaction exothermique ?"
+choices = Array[String](["Réaction qui absorbe de l’énergie thermique.", "Réaction qui dégage de l’énergie thermique.", "Réaction qui ne dégage ni absorbe de l’énergie thermique.", "Réaction qui n'est pas considérée comme chimique."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_tgxpr"]
+script = ExtResource("1_d2fj7")
+question = "En quoi consiste une réaction endothermique ?"
+choices = Array[String](["Réaction qui absorbe de l’énergie thermique.", "Réaction qui dégage de l’énergie thermique.", "Réaction qui ne dégage ni absorbe de l’énergie thermique.", "Réaction qui n'est pas considérée comme chimique."])
+
+[sub_resource type="Resource" id="Resource_qd4pm"]
+script = ExtResource("1_d2fj7")
+question = "En quoi consiste une réaction athermique ?"
+choices = Array[String](["Réaction qui absorbe de l’énergie thermique.", "Réaction qui dégage de l’énergie thermique.", "Réaction qui ne dégage ni absorbe de l’énergie thermique.", "Réaction qui n'est pas considérée comme chimique."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_tsc8a"]
+script = ExtResource("1_d2fj7")
+question = "En quoi consiste l'enthalpie ?"
+choices = Array[String](["L'énergie totale d'un système externe.", "L'énergie partielle d'un système interne.", "L'énergie totale d'un système interne.", "La transformation d'un système interne vers un système externe."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_58u3o"]
+script = ExtResource("1_d2fj7")
+question = "Qu'est-ce que la capacité calorifique massique ?"
+choices = Array[String](["C'est la chaleur massique.", "C'est une grandeur qui reflète la capacité d'un matériau à accumuler de l'énergie sous forme thermique.", "Toutes ces phrases sont justes.", "C'est la quantité d'énergie qu'un matériau a besoin pour être chauffé ou refroidit."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_q278e"]
+script = ExtResource("1_d2fj7")
+question = "Qu'est-ce que le calorimètre adiabatique ?"
+choices = Array[String](["Système permettant d'étudier les variations de chaleur en milieu isolé.", "Système évaluant la dureté des matériaux.", "Outil de mesure de la température extérieure.", "Outil de mesure de la pression."])
+
+[sub_resource type="Resource" id="Resource_78agc"]
+script = ExtResource("1_d2fj7")
+question = "Qu'est-ce que le pouvoir calorifique ?"
+choices = Array[String](["C'est l'énergie dégagée sous forme de chaleur par combustion.", "C'est l'enthalpie d'un système.", "C'est l'énergie absorbée par un système.", "Toutes ces phrases sont justes."])
+
+[sub_resource type="Resource" id="Resource_h7i23"]
+script = ExtResource("1_d2fj7")
+question = "Qu'est-ce que la vitesse d'une réaction chimique ?"
+choices = Array[String](["Le temps que met un solvant avant de réagir.", "Le temps que met un soluté avant de réagir.", "La vitesse de conversion d'une forme d'énergie en une autre.", "La vitesse à laquelle les réactifs se transforment en produits."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_xm305"]
+script = ExtResource("1_d2fj7")
+question = "Que représente le concept de \"cinétique\" ?"
+choices = Array[String](["Le nombre d'images par seconde.", "La vitesse de réaction.", "Le nombre de données traitées.", "La vitesse au point de départ."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_ocqij"]
+script = ExtResource("1_d2fj7")
+question = "Que représente le catalyseur ?"
+choices = Array[String](["Toutes ces réponses.", "Un mélange qui modifie la vitesse d’une réaction chimique.", "Une protéine.", "Un corps qui reste inchangé en fin de réaction."])
+
+[resource]
+script = ExtResource("2_sxip8")
+questions = Array[ExtResource("1_d2fj7")]([SubResource("Resource_pp7bc"), SubResource("Resource_tgxpr"), SubResource("Resource_qd4pm"), SubResource("Resource_tsc8a"), SubResource("Resource_58u3o"), SubResource("Resource_q278e"), SubResource("Resource_78agc"), SubResource("Resource_h7i23"), SubResource("Resource_xm305"), SubResource("Resource_ocqij")])

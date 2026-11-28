@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cxglbg23y768b"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_xg833"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_kn58x"]
+
+[sub_resource type="Resource" id="Resource_h57vw"]
+script = ExtResource("1_xg833")
+word = "CARNIVORE"
+hint = "Être vivant qui se nourrit de viandes."
+grid_position = Vector2i(2, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_8l3a8"]
+script = ExtResource("1_xg833")
+word = "TERRE"
+hint = "Planète sur laquelle on retrouve beaucoup d'écosystèmes."
+grid_position = Vector2i(0, 7)
+
+[sub_resource type="Resource" id="Resource_swqfl"]
+script = ExtResource("1_xg833")
+word = "PREDATEUR"
+hint = "Situé au dessus de la chaîne alimentaire, c'est un chasseur de différents animaux."
+grid_position = Vector2i(4, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_0ey4v"]
+script = ExtResource("1_xg833")
+word = "HIBERNATION"
+hint = "Adaptation d'un animal à réduire la température corporelle et d'autres fonctions vitales durant l'hiver."
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_kn58x")
+clues = Array[ExtResource("1_xg833")]([SubResource("Resource_h57vw"), SubResource("Resource_8l3a8"), SubResource("Resource_swqfl"), SubResource("Resource_0ey4v")])
+school_year = "P4"
+title = "La chaîne alimentaire"

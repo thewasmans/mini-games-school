@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://irkrq2hrf6ll"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_artiw"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_0smdx"]
+
+[sub_resource type="Resource" id="Resource_rf61i"]
+script = ExtResource("1_artiw")
+word = "ANTICYCLONE"
+hint = "Zone de haute pression atmosphérique souvent associée à un temps sec, sans nuage et donc ensoleillé."
+grid_position = Vector2i(1, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_jxak6"]
+script = ExtResource("1_artiw")
+word = "ATMOSPHERE"
+hint = "Ensemble de couches gazeuses qui enveloppent la Terre."
+grid_position = Vector2i(6, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_5uoy7"]
+script = ExtResource("1_artiw")
+word = "BAROMETRE"
+hint = "Outil de mesure de la pression."
+grid_position = Vector2i(0, 1)
+
+[sub_resource type="Resource" id="Resource_qlfod"]
+script = ExtResource("1_artiw")
+word = "DEPRESSION"
+hint = "Zone de basse pression atmosphérique souvent associée à un mauvais temps."
+grid_position = Vector2i(0, 11)
+
+[sub_resource type="Resource" id="Resource_twoj2"]
+script = ExtResource("1_artiw")
+word = "PRESSION"
+hint = "Force qui s'exerce sur une surface donnée dont l'unité est le bar ou le pascal."
+grid_position = Vector2i(9, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_cq6c0"]
+script = ExtResource("1_artiw")
+word = "INTENSITE"
+hint = "Caractéristique de la force autre que le sens, la direction ou le point d'application."
+grid_position = Vector2i(1, 4)
+
+[sub_resource type="Resource" id="Resource_g87g1"]
+script = ExtResource("1_artiw")
+word = "FORCE"
+hint = "Action mécanique exercée sur un objet entrainant son déplacement."
+grid_position = Vector2i(0, 9)
+
+[resource]
+script = ExtResource("2_0smdx")
+clues = Array[ExtResource("1_artiw")]([SubResource("Resource_rf61i"), SubResource("Resource_jxak6"), SubResource("Resource_5uoy7"), SubResource("Resource_qlfod"), SubResource("Resource_twoj2"), SubResource("Resource_cq6c0"), SubResource("Resource_g87g1")])
+school_year = "S2"
+title = "Forces et pression"

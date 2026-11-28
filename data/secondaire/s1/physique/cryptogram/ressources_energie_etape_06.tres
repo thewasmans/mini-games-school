@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://birfp6dpgxoln"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_jvojt"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_bl8xi"]
+
+[sub_resource type="Resource" id="Resource_n5ym0"]
+script = ExtResource("1_jvojt")
+text = "L'énergie thermique se transmet d'un corps chaud vers un corps froid."
+
+[sub_resource type="Resource" id="Resource_0pt1j"]
+script = ExtResource("1_jvojt")
+text = "La température mesure le degré d'agitation des particules."
+
+[sub_resource type="Resource" id="Resource_1yswf"]
+script = ExtResource("1_jvojt")
+text = "La dilatation thermique augmente le volume d'un corps lorsqu'il chauffe."
+
+[sub_resource type="Resource" id="Resource_7g07d"]
+script = ExtResource("1_jvojt")
+text = "La matière existe sous trois états principaux : solide"
+hint = "liquide et gazeux."
+
+[sub_resource type="Resource" id="Resource_g44oi"]
+script = ExtResource("1_jvojt")
+text = "La fusion est le passage de l'état solide à l'état liquide."
+
+[resource]
+script = ExtResource("2_bl8xi")
+hidden_letter_ratio = 0.15
+phrases = Array[ExtResource("1_jvojt")]([SubResource("Resource_n5ym0"), SubResource("Resource_0pt1j"), SubResource("Resource_1yswf"), SubResource("Resource_7g07d"), SubResource("Resource_g44oi")])
+school_year = "S1"
+title = "Ressources et énergie"

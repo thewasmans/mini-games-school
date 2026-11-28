@@ -1,0 +1,56 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dxes824utq7hk"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_in2xn"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_io1mn"]
+
+[sub_resource type="Resource" id="Resource_7rh1j"]
+script = ExtResource("1_in2xn")
+word = "MASSE"
+hint = "Quantité de matière d'un corps, invariable."
+grid_position = Vector2i(0, 4)
+
+[sub_resource type="Resource" id="Resource_lhqvc"]
+script = ExtResource("1_in2xn")
+word = "CORPS"
+hint = "Objet matériel caractérisé par ses propriétés physiques."
+grid_position = Vector2i(3, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_jhgyn"]
+script = ExtResource("1_in2xn")
+word = "SURFACE"
+hint = "Partie extérieure d'un solide, celle qui le limite."
+grid_position = Vector2i(1, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_rg1iy"]
+script = ExtResource("1_in2xn")
+word = "CLIMAT"
+hint = "Conditions météorologiques moyennes (température, précipitations, vent…) dans un endroit donné."
+grid_position = Vector2i(3, 0)
+
+[sub_resource type="Resource" id="Resource_en8qg"]
+script = ExtResource("1_in2xn")
+word = "AIR"
+hint = "Mélange de gaz contenant principalement du diazote."
+grid_position = Vector2i(7, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_xv1bj"]
+script = ExtResource("1_in2xn")
+word = "METEOROLOGIE"
+hint = "Science qui a pour objet l'étude des phénomènes atmosphériques tels que les nuages, les précipitations ou le vent."
+grid_position = Vector2i(0, 6)
+
+[sub_resource type="Resource" id="Resource_ycndv"]
+script = ExtResource("1_in2xn")
+word = "AIRE"
+hint = "Mesure de la surface, de l'intérieur de cette surface."
+grid_position = Vector2i(11, 3)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_io1mn")
+clues = Array[ExtResource("1_in2xn")]([SubResource("Resource_7rh1j"), SubResource("Resource_lhqvc"), SubResource("Resource_jhgyn"), SubResource("Resource_rg1iy"), SubResource("Resource_en8qg"), SubResource("Resource_xv1bj"), SubResource("Resource_ycndv")])
+school_year = "S2"
+title = "Forces et pression"

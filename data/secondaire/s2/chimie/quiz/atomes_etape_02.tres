@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://cn1wtxd5nktap"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_5ctia"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_68yt8"]
+
+[sub_resource type="Resource" id="Resource_c6lmt"]
+script = ExtResource("1_5ctia")
+question = "Élément chimique n° atomique 1 ?"
+choices = Array[String](["Néon.", "Carbone.", "Hydrogène.", "Fer."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_bufdd"]
+script = ExtResource("1_5ctia")
+question = "Quel est le symbole de l'azote ?"
+choices = Array[String](["O.", "He.", "A.", "N."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_ba0y7"]
+script = ExtResource("1_5ctia")
+question = "Quel est le symbole du soufre ?"
+choices = Array[String](["O.", "He.", "S.", "N."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_plg20"]
+script = ExtResource("1_5ctia")
+question = "Quel est le symbole de l'hélium ?"
+choices = Array[String](["O.", "He.", "S.", "N."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_je2la"]
+script = ExtResource("1_5ctia")
+question = "Qu'est-ce que le dioxyde de soufre ?"
+choices = Array[String](["Un atome.", "Élément chimique.", "Une molécule.", "Corps pur simple."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("2_68yt8")
+questions = Array[ExtResource("1_5ctia")]([SubResource("Resource_c6lmt"), SubResource("Resource_bufdd"), SubResource("Resource_ba0y7"), SubResource("Resource_plg20"), SubResource("Resource_je2la")])
+school_year = "S2"
+title = "Atomes et molécules"

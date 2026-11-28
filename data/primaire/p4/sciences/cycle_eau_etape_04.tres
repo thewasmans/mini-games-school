@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://dd0vni18vvaht"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_4hspj"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_efwv6"]
+
+[sub_resource type="Resource" id="Resource_atwm6"]
+script = ExtResource("1_4hspj")
+word = "LIQUEFACTION"
+hint = "Changement d'état qui fait passer un corps de l'état gazeux à l'état liquide."
+grid_position = Vector2i(4, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_goq1g"]
+script = ExtResource("1_4hspj")
+word = "SUBLIMATION"
+hint = "Passage de l'état solide à l'état gazeux de la matière."
+grid_position = Vector2i(9, 3)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_fdisi"]
+script = ExtResource("1_4hspj")
+word = "GELEE"
+hint = "Caractérise l'eau à l'état solide lorsqu'elle est glacée."
+
+[sub_resource type="Resource" id="Resource_h1nw2"]
+script = ExtResource("1_4hspj")
+word = "FUSION"
+hint = "Passage de l'état solide vers l'état liquide."
+grid_position = Vector2i(0, 12)
+
+[sub_resource type="Resource" id="Resource_0nroo"]
+script = ExtResource("1_4hspj")
+word = "PRECIPITATION"
+hint = "Terme qui caractérise toutes les formes de l'eau à l'état liquide ou solide provenant de l'atmosphère."
+grid_position = Vector2i(7, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_yq8di"]
+script = ExtResource("1_4hspj")
+word = "LIQUIDE"
+hint = "Etat de la matière où les éléments sont faiblement liés, forme de fluide déformable."
+grid_position = Vector2i(2, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_md7f1"]
+script = ExtResource("1_4hspj")
+word = "REVERSIBLE"
+hint = "Caractérise une situation où il est possible de revenir à l'état initial, au départ."
+grid_position = Vector2i(1, 6)
+
+[resource]
+script = ExtResource("2_efwv6")
+clues = Array[ExtResource("1_4hspj")]([SubResource("Resource_atwm6"), SubResource("Resource_goq1g"), SubResource("Resource_fdisi"), SubResource("Resource_h1nw2"), SubResource("Resource_0nroo"), SubResource("Resource_yq8di"), SubResource("Resource_md7f1")])
+school_year = "P4"
+title = "Le cycle de l'eau"

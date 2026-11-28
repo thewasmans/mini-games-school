@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://dmgetsuafodtr"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_4lgxq"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_ri0ji"]
+
+[sub_resource type="Resource" id="Resource_h0hjy"]
+script = ExtResource("1_4lgxq")
+question = "Quel changement a lieu lors de la puberté ?"
+choices = Array[String](["Le développement de la poitrine.", "Le développement des branchies.", "Le développement de l'anus.", "Les mécanismes respiratoires."])
+
+[sub_resource type="Resource" id="Resource_xduf0"]
+script = ExtResource("1_4lgxq")
+question = "Qui est concerné par ce cycle ?"
+choices = Array[String](["Les hommes.", "Les hommes et les femmes.", "Les femmes.", "Les enfants."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_hohfy"]
+script = ExtResource("1_4lgxq")
+question = "Peut-on dire que toutes les femmes suivent ce cycle de 28 jours ?"
+choices = Array[String](["non, que les hommes.", "cela ne concerne pas l'humain.", "non.", "oui."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_8xr5f"]
+script = ExtResource("1_4lgxq")
+question = "Quelle cellule concerne la fécondation ?"
+choices = Array[String](["Le neurone.", "Le gliocyte.", "L'hépatocyte.", "L'ovocyte."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="Resource_s70cu"]
+script = ExtResource("1_4lgxq")
+question = "Quel est le résultat de la fécondation ?"
+choices = Array[String](["Un ovocyte.", "Un ovule.", "Un neurone.", "Un spermatozoide."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_ri0ji")
+questions = Array[ExtResource("1_4lgxq")]([SubResource("Resource_h0hjy"), SubResource("Resource_xduf0"), SubResource("Resource_hohfy"), SubResource("Resource_8xr5f"), SubResource("Resource_s70cu")])
+school_year = "S1"
+title = "La reproduction humaine"

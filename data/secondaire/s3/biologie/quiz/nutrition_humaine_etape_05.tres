@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="MemoData" format=3 uid="uid://bvtm2yxuygo2j"]
+
+[ext_resource type="Script" uid="uid://bu15oyqfk3ofy" path="res://scripts/mini_games/memo/memo_question_data.gd" id="1_8hq4t"]
+[ext_resource type="Script" uid="uid://b6ekdfi06nmlm" path="res://scripts/mini_games/memo/memo_data.gd" id="2_8lsik"]
+
+[sub_resource type="Resource" id="Resource_deq05"]
+script = ExtResource("1_8hq4t")
+question = "Combien de glandes salivaires avons-nous ?"
+choices = Array[String](["8.", "6.", "3.", "9."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_p7f4e"]
+script = ExtResource("1_8hq4t")
+question = "Comment l'instestin échange-t-il les nutriments avec le corps ?"
+choices = Array[String](["En passant par les nerfs.", "En passant par la circulation sanguine.", "Par des hormones.", "Par le tissu épithélial."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_42id2"]
+script = ExtResource("1_8hq4t")
+question = "Comment se nomme le mouvement respiratoire permettant à l'air d'entrer ?"
+choices = Array[String](["Inspiration.", "Expiration.", "Ventilation.", "Apnée."])
+
+[sub_resource type="Resource" id="Resource_tusgn"]
+script = ExtResource("1_8hq4t")
+question = "Comment se nomme le mouvement respiratoire permettant à l'air de sortir ?"
+choices = Array[String](["Inspiration.", "Expiration.", "Ventilation.", "Apnée."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="Resource_t6bct"]
+script = ExtResource("1_8hq4t")
+question = "Quel autre nom porte la respiration ?"
+choices = Array[String](["Inspiration.", "Expiration.", "Ventilation.", "Apnée."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="Resource_4x745"]
+script = ExtResource("1_8hq4t")
+question = "Quelle structure spécifique assure les échanges gazeux ?"
+choices = Array[String](["Poumon.", "Alvéole.", "Trachée.", "Diaphragme."])
+correct_choice_index = 1
+
+[resource]
+script = ExtResource("2_8lsik")
+questions = Array[ExtResource("1_8hq4t")]([SubResource("Resource_deq05"), SubResource("Resource_p7f4e"), SubResource("Resource_42id2"), SubResource("Resource_tusgn"), SubResource("Resource_t6bct"), SubResource("Resource_4x745")])
+school_year = "S3"
+title = "La nutrition humaine"

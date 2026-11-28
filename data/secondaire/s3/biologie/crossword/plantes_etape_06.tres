@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://cl4ehdou26jy3"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_jonh3"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_euko5"]
+
+[sub_resource type="Resource" id="Resource_jtkyc"]
+script = ExtResource("1_jonh3")
+word = "BIOTIQUES"
+hint = "Se dit des facteurs d'un environnement qui font partie du vivant (prédateurs...)."
+grid_position = Vector2i(5, 1)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_l62av"]
+script = ExtResource("1_jonh3")
+word = "LIN"
+hint = "Herbe cultivée surtout pour les fibres textiles de sa tige."
+grid_position = Vector2i(2, 0)
+
+[sub_resource type="Resource" id="Resource_rsc7p"]
+script = ExtResource("1_jonh3")
+word = "MIEL"
+hint = "Service écologique fournit par les abeilles."
+grid_position = Vector2i(2, 11)
+
+[sub_resource type="Resource" id="Resource_5pwtr"]
+script = ExtResource("1_jonh3")
+word = "ESPECE"
+hint = "Taxon de base dont la définition n'est pas unanime entre les scientifiques."
+grid_position = Vector2i(0, 14)
+
+[sub_resource type="Resource" id="Resource_hsoti"]
+script = ExtResource("1_jonh3")
+word = "INTERSPECIFIQUE"
+hint = "Type de relation entre des organismes d'espèces différentes."
+grid_position = Vector2i(3, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_rbsdj"]
+script = ExtResource("1_jonh3")
+word = "RESEAU"
+hint = "Ensemble de chaines alimentaires."
+grid_position = Vector2i(0, 7)
+
+[sub_resource type="Resource" id="Resource_ql3bc"]
+script = ExtResource("1_jonh3")
+word = "COOPERATION"
+hint = "Travail d'équipe entre les mêmes espèces pour assurer leur survie, se dit également pour un jeu de société."
+grid_position = Vector2i(0, 2)
+is_horizontal = false
+
+[resource]
+script = ExtResource("2_euko5")
+clues = Array[ExtResource("1_jonh3")]([SubResource("Resource_jtkyc"), SubResource("Resource_l62av"), SubResource("Resource_rsc7p"), SubResource("Resource_5pwtr"), SubResource("Resource_hsoti"), SubResource("Resource_rbsdj"), SubResource("Resource_ql3bc")])
+school_year = "S3"
+title = "La nutrition des plantes"

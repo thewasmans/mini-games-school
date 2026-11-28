@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://bcm2x3m2yh7o3"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_npokd"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_6r058"]
+
+[sub_resource type="Resource" id="Resource_hfdan"]
+script = ExtResource("1_npokd")
+text = "Une force est une action capable de modifier le mouvement d'un corps."
+
+[sub_resource type="Resource" id="Resource_sc7j3"]
+script = ExtResource("1_npokd")
+text = "L'intensité d'une force se mesure en newtons à l'aide d'un dynamomètre."
+
+[sub_resource type="Resource" id="Resource_cxkcl"]
+script = ExtResource("1_npokd")
+text = "Le poids est la force d'attraction exercée par la Terre sur les objets."
+
+[resource]
+script = ExtResource("2_6r058")
+hidden_letter_ratio = 0.1
+phrases = Array[ExtResource("1_npokd")]([SubResource("Resource_hfdan"), SubResource("Resource_sc7j3"), SubResource("Resource_cxkcl")])
+school_year = "S2"
+title = "Forces et pression"

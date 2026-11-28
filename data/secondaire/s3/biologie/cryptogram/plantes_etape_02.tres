@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://dfa0u47f1g3xe"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_gmjnl"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_qluw4"]
+
+[sub_resource type="Resource" id="Resource_8bwma"]
+script = ExtResource("1_gmjnl")
+text = "Les feuilles captent l'énergie lumineuse grâce à la chlorophylle."
+
+[sub_resource type="Resource" id="Resource_domh2"]
+script = ExtResource("1_gmjnl")
+text = "Les stomates permettent les échanges de gaz avec l'atmosphère."
+
+[sub_resource type="Resource" id="Resource_8lmjx"]
+script = ExtResource("1_gmjnl")
+text = "La plante absorbe du dioxyde de carbone et rejette du dioxygène."
+
+[resource]
+script = ExtResource("2_qluw4")
+hidden_letter_ratio = 0.13
+phrases = Array[ExtResource("1_gmjnl")]([SubResource("Resource_8bwma"), SubResource("Resource_domh2"), SubResource("Resource_8lmjx")])
+school_year = "S3"
+title = "La nutrition des plantes"

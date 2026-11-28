@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CryptoData" format=3 uid="uid://bycb4xpdrdv50"]
+
+[ext_resource type="Script" uid="uid://dcacf80pyq888" path="res://scripts/mini_games/crypto/crypto_phrase_data.gd" id="1_tedtw"]
+[ext_resource type="Script" uid="uid://bd1ufgnv22yot" path="res://scripts/mini_games/crypto/crypto_data.gd" id="2_qqp58"]
+
+[sub_resource type="Resource" id="Resource_1eguo"]
+script = ExtResource("1_tedtw")
+text = "Une pile fournit de l'énergie électrique."
+
+[sub_resource type="Resource" id="Resource_1yg80"]
+script = ExtResource("1_tedtw")
+text = "Un circuit simple contient une pile, une lampe et des câbles."
+
+[sub_resource type="Resource" id="Resource_0t5cp"]
+script = ExtResource("1_tedtw")
+text = "L'électricité est dangereuse : il faut se protéger."
+
+[resource]
+script = ExtResource("2_qqp58")
+hidden_letter_ratio = 0.13
+phrases = Array[ExtResource("1_tedtw")]([SubResource("Resource_1eguo"), SubResource("Resource_1yg80"), SubResource("Resource_0t5cp")])
+school_year = "P2"
+title = "Les appareils électriques"

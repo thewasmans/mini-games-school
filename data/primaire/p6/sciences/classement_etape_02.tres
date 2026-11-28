@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="CrosswordData" format=3 uid="uid://6fjgobuj7hwa"]
+
+[ext_resource type="Script" uid="uid://cygosmrxwmpq0" path="res://scripts/mini_games/crossword/word_data.gd" id="1_tau17"]
+[ext_resource type="Script" uid="uid://cvhcj85uqr48d" path="res://scripts/mini_games/crossword/cross_word_data.gd" id="2_rd72v"]
+
+[sub_resource type="Resource" id="Resource_grj3d"]
+script = ExtResource("1_tau17")
+word = "GRENOUILLE"
+hint = "Amphibien qui pond dans l'eau, se métamorphose et vit sur terre à l'âge adulte."
+grid_position = Vector2i(0, 2)
+
+[sub_resource type="Resource" id="Resource_ard4a"]
+script = ExtResource("1_tau17")
+word = "POUX"
+hint = "Insectes parasites hématophages de l'homme qui vivent dans les cheveux, les poils ou les vêtements."
+grid_position = Vector2i(5, 0)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_pc3x7"]
+script = ExtResource("1_tau17")
+word = "MAMMIFERES"
+hint = "Groupe d'animaux qui possèdent des mamelles et des poils."
+grid_position = Vector2i(0, 5)
+
+[sub_resource type="Resource" id="Resource_frrtd"]
+script = ExtResource("1_tau17")
+word = "RENARD"
+hint = "Mammifère qui vit dans nos campagnes et qui chasse, entre autres, les poules."
+grid_position = Vector2i(1, 2)
+is_horizontal = false
+
+[sub_resource type="Resource" id="Resource_pymjv"]
+script = ExtResource("1_tau17")
+word = "MYRIAPODES"
+hint = "Groupe d'animaux dans lequel on y retrouve le mille pattes et le chilopode."
+
+[resource]
+script = ExtResource("2_rd72v")
+clues = Array[ExtResource("1_tau17")]([SubResource("Resource_grj3d"), SubResource("Resource_ard4a"), SubResource("Resource_pc3x7"), SubResource("Resource_frrtd"), SubResource("Resource_pymjv")])
+school_year = "P6"
+title = "Le classement des animaux"
