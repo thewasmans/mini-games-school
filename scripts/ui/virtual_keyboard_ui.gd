@@ -3,6 +3,7 @@ extends VBoxContainer
 
 signal letter_pressed(letter: String)
 signal erase_pressed
+signal collapse_pressed
 
 const ROWS: Array[String] = ["AZERTYUIOP", "QSDFGHJKLM", "WXCVBN"]
 const ROW_UNITS := 10
@@ -12,12 +13,16 @@ const KEY_SEPARATION := 4
 const KEY_FONT_SIZE := 24
 const ERASE_KEY_FONT_SIZE := 16
 const ERASE_KEY_TEXT := "Effacer"
+const COLLAPSE_KEY_UNITS := 2
+const COLLAPSE_KEY_TEXT := "Masquer"
 const KEY_BOUNCE_SCALE := 1.15
 const DISABLED_ALPHA := 0.5
 const MIN_KEY_PRESS_INTERVAL_MSEC := 90
 
 var _keys: Dictionary = {}
 var _erase_key: Button
+var _collapse_key: Button
+var _last_row_paddings: Array[Control] = []
 var _enabled := true
 var _last_key_press_msec := -MIN_KEY_PRESS_INTERVAL_MSEC
 
@@ -28,7 +33,12 @@ func _init() -> void:
 		var used_units := row.length() + (ERASE_KEY_UNITS if is_last_row else 0)
 		var padding_units := (ROW_UNITS - used_units) / 2.0
 		var row_box := _create_row()
-		_add_padding(row_box, padding_units)
+		if is_last_row:
+			_collapse_key = _create_key(COLLAPSE_KEY_TEXT, COLLAPSE_KEY_UNITS, ERASE_KEY_FONT_SIZE)
+			_collapse_key.pressed.connect(_on_collapse_key_pressed)
+			_collapse_key.visible = false
+			row_box.add_child(_collapse_key)
+		var leading_padding := _add_padding(row_box, padding_units)
 		for letter in row:
 			var key := _create_key(letter, 1.0, KEY_FONT_SIZE)
 			key.pressed.connect(_on_letter_key_pressed.bind(letter))
@@ -38,7 +48,14 @@ func _init() -> void:
 			_erase_key = _create_key(ERASE_KEY_TEXT, ERASE_KEY_UNITS, ERASE_KEY_FONT_SIZE)
 			_erase_key.pressed.connect(_on_erase_key_pressed)
 			row_box.add_child(_erase_key)
-		_add_padding(row_box, padding_units)
+		var trailing_padding := _add_padding(row_box, padding_units)
+		if is_last_row:
+			_last_row_paddings = [leading_padding, trailing_padding]
+
+func set_collapse_key_visible(is_visible: bool) -> void:
+	_collapse_key.visible = is_visible
+	for padding in _last_row_paddings:
+		padding.visible = not is_visible
 
 func set_enabled(enabled: bool) -> void:
 	_enabled = enabled
@@ -68,14 +85,15 @@ func _create_row() -> HBoxContainer:
 	add_child(row_box)
 	return row_box
 
-func _add_padding(row_box: HBoxContainer, units: float) -> void:
+func _add_padding(row_box: HBoxContainer, units: float) -> Control:
 	if units <= 0.0:
-		return
+		return null
 	var padding := Control.new()
 	padding.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	padding.size_flags_stretch_ratio = units
 	padding.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	row_box.add_child(padding)
+	return padding
 
 func _create_key(key_text: String, units: float, font_size: int) -> Button:
 	var key := Button.new()
@@ -92,6 +110,7 @@ func _create_key(key_text: String, units: float, font_size: int) -> Button:
 func _all_keys() -> Array:
 	var keys := _keys.values()
 	keys.append(_erase_key)
+	keys.append(_collapse_key)
 	return keys
 
 func _on_letter_key_pressed(letter: String) -> void:
@@ -101,6 +120,10 @@ func _on_letter_key_pressed(letter: String) -> void:
 func _on_erase_key_pressed() -> void:
 	if _accept_key_press():
 		_press_erase()
+
+func _on_collapse_key_pressed() -> void:
+	if _accept_key_press():
+		collapse_pressed.emit()
 
 func _accept_key_press() -> bool:
 	var now := Time.get_ticks_msec()
