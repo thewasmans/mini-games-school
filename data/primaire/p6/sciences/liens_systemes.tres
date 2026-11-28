@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="MemoData" format=3]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="quiz_q_6_ue63e"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="memo_data"]
+
+[sub_resource type="Resource" id="q_6_ki1z9d"]
+script = ExtResource("quiz_q_6_ue63e")
+question = "Quel muscle est impliqué dans les mouvements respiratoires ?"
+choices = Array[String](["Le larynx.", "Les poumons.", "Le diaphragme.", "Le nez."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_6_kgnnjb"]
+script = ExtResource("quiz_q_6_ue63e")
+question = "Par quelle voie l’air pénètre-t-il prioritairement dans l’organisme ?"
+choices = Array[String](["Le nez.", "La bouche.", "Les oreilles.", "Les poumons."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_6_bimu63"]
+script = ExtResource("quiz_q_6_ue63e")
+question = "Comment nomme-t-on les structures internes des poumons où se produisent les échanges gazeux ?"
+choices = Array[String](["Les alvéoles pulmonaires.", "Les bronches.", "La trachée.", "Le thorax."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_6_ocezx5"]
+script = ExtResource("quiz_q_6_ue63e")
+question = "Quel est l’endroit où se croisent les voies respiratoires et digestives ?"
+choices = Array[String](["L’estomac.", "Le larynx.", "Le diaphragme.", "Le pharynx."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="q_6_whqw8w"]
+script = ExtResource("quiz_q_6_ue63e")
+question = "Qu’est-ce que la plèvre ?"
+choices = Array[String](["Un muscle.", "Un organe.", "Une membrane.", "Un vaisseau."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_6_834v5c"]
+script = ExtResource("quiz_q_6_ue63e")
+question = "Quel rôle joue le sang dans le transport des nutriments issus de la digestion ?"
+choices = Array[String](["Il transporte les nutriments vers toutes les cellules.", "Il transforme les aliments en sucre.", "Il stocke les aliments dans les veines.", "Le sang ne transporte pas de nutriments."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_6_4629q2"]
+script = ExtResource("quiz_q_6_ue63e")
+question = "Pourquoi avons-nous besoin de respirer et de manger pour que notre corps fonctionne ?"
+choices = Array[String](["Pour nourrir les poumons directement.", "Car la nourriture remplace la respiration.", "Car les cellules ont besoin d’oxygène et de nutriments pour produire de l’énergie.", "Car respirer fait pousser les dents."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_6_6qhopp"]
+script = ExtResource("quiz_q_6_ue63e")
+question = "Quel système apporte l’oxygène nécessaire au fonctionnement des organes ?"
+choices = Array[String](["Le système digestif.", "Le système circulatoire.", "Le système nerveux.", "Le système respiratoire."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_6_ij2cap"]
+script = ExtResource("quiz_q_6_ue63e")
+question = "Après la digestion, où vont les nutriments pour être distribués dans tout le corps ?"
+choices = Array[String](["Dans le sang.", "Dans les muscles.", "Dans les os.", "Dans les poumons."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_6_uis4fc"]
+script = ExtResource("quiz_q_6_ue63e")
+question = "Quel organe pompe le sang pour transporter l’oxygène et les nutriments ?"
+choices = Array[String](["Les poumons.", "Le foie.", "Le cœur.", "L’estomac."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("memo_data")
+questions = Array[ExtResource("quiz_q_6_ue63e")]([SubResource("q_6_ki1z9d"), SubResource("q_6_kgnnjb"), SubResource("q_6_bimu63"), SubResource("q_6_ocezx5"), SubResource("q_6_whqw8w"), SubResource("q_6_834v5c"), SubResource("q_6_4629q2"), SubResource("q_6_6qhopp"), SubResource("q_6_ij2cap"), SubResource("q_6_uis4fc")])
+

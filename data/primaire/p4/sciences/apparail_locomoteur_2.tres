@@ -1,0 +1,81 @@
+[gd_resource type="Resource" script_class="MemoData" format=3]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="quiz_q_4_vnynb"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="memo_data"]
+
+[sub_resource type="Resource" id="q_4_jyqcw6"]
+script = ExtResource("quiz_q_4_vnynb")
+question = "À quoi sert le squelette ?"
+choices = Array[String](["À digérer les aliments.", "À soutenir et protéger le corps.", "À respirer.", "À pomper le sang."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_4_4fy1h6"]
+script = ExtResource("quiz_q_4_vnynb")
+question = "Combien d'os possède environ le corps humain adulte ?"
+choices = Array[String](["Environ 206 os.", "Environ 10 os.", "Environ 1000 os.", "Environ 50 os."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_4_gvsoun"]
+script = ExtResource("quiz_q_4_vnynb")
+question = "Quel est le rôle des muscles ?"
+choices = Array[String](["Ils protègent le cerveau.", "Ils permettent le mouvement en se contractant.", "Ils digèrent les aliments.", "Ils fabriquent les os."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_4_woexcg"]
+script = ExtResource("quiz_q_4_vnynb")
+question = "Comment appelle-t-on le point de rencontre entre deux os ?"
+choices = Array[String](["Un muscle.", "Une articulation.", "Un nerf.", "Un tendon."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_4_41x4ck"]
+script = ExtResource("quiz_q_4_vnynb")
+question = "Quel ensemble d'os protège le cerveau ?"
+choices = Array[String](["Le fémur.", "Le crâne.", "La colonne vertébrale.", "Le bassin."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_4_3661ab"]
+script = ExtResource("quiz_q_4_vnynb")
+question = "Quel est le nom de l'os le plus long du corps ?"
+choices = Array[String](["Le tibia.", "Le fémur.", "L'humérus.", "La côte."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_4_rk85ka"]
+script = ExtResource("quiz_q_4_vnynb")
+question = "Qu'est-ce qui relie le muscle à l'os ?"
+choices = Array[String](["Un cartilage.", "Un tendon.", "Un ligament.", "Une veine."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_4_y43riw"]
+script = ExtResource("quiz_q_4_vnynb")
+question = "Quelles sont les deux actions principales d'un muscle ?"
+choices = Array[String](["Sauter et courir.", "Contraction et relâchement.", "Dormir et manger.", "Casser et construire."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_4_cncxev"]
+script = ExtResource("quiz_q_4_vnynb")
+question = "Quelle articulation permet de plier le bras ?"
+choices = Array[String](["Le genou.", "Le coude.", "La cheville.", "Le poignet."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_4_8j5fy1"]
+script = ExtResource("quiz_q_4_vnynb")
+question = "Que protègent les côtes ?"
+choices = Array[String](["Le cerveau.", "Les poumons et le cœur.", "L'estomac uniquement.", "Les pieds."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_4_93ru9z"]
+script = ExtResource("quiz_q_4_vnynb")
+question = "Les os sont-ils vivants ?"
+choices = Array[String](["Oui, ils grandissent et se réparent.", "Non, ce sont des objets inertes.", "Seulement chez les enfants.", "Seulement chez les personnes âgées."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_4_fcdxx6"]
+script = ExtResource("quiz_q_4_vnynb")
+question = "Quel est le rôle du cartilage dans une articulation ?"
+choices = Array[String](["Il évite aux os de frotter directement entre eux.", "Il sert à stocker le sang.", "Il produit les muscles.", "Il protège le cerveau."])
+correct_choice_index = 0
+
+[resource]
+script = ExtResource("memo_data")
+questions = Array[ExtResource("quiz_q_4_vnynb")]([SubResource("q_4_jyqcw6"), SubResource("q_4_4fy1h6"), SubResource("q_4_gvsoun"), SubResource("q_4_woexcg"), SubResource("q_4_41x4ck"), SubResource("q_4_3661ab"), SubResource("q_4_rk85ka"), SubResource("q_4_y43riw"), SubResource("q_4_cncxev"), SubResource("q_4_8j5fy1"), SubResource("q_4_93ru9z"), SubResource("q_4_fcdxx6")])
+

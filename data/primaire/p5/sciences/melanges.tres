@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="MemoData" format=3]
+
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_question_data.gd" id="quiz_q_5_1z8nh"]
+[ext_resource type="Script" path="res://scripts/mini_games/memo/memo_data.gd" id="memo_data"]
+
+[sub_resource type="Resource" id="q_5_yz1ii5"]
+script = ExtResource("quiz_q_5_1z8nh")
+question = "Quelle unité sert à mesurer une masse ?"
+choices = Array[String](["Le kilogramme.", "Le litre.", "Le mètre.", "Le centimètre cube."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_5_aestca"]
+script = ExtResource("quiz_q_5_1z8nh")
+question = "Quelle unité sert à mesurer un volume ?"
+choices = Array[String](["Le gramme.", "Le kilogramme.", "Le litre.", "Le mètre."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_5_koyz6o"]
+script = ExtResource("quiz_q_5_1z8nh")
+question = "Quel instrument sert à mesurer une masse ?"
+choices = Array[String](["La balance.", "Le thermomètre.", "La règle.", "Le microscope."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_5_j9pu3i"]
+script = ExtResource("quiz_q_5_1z8nh")
+question = "Quel mot désigne les éléments qui composent un mélange ?"
+choices = Array[String](["Les racines.", "Les graines.", "Les organes.", "Les constituants."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="q_5_a9on0h"]
+script = ExtResource("quiz_q_5_1z8nh")
+question = "Quel objet permet de mesurer un volume de liquide ?"
+choices = Array[String](["Le mesureur gradué.", "La balance.", "La règle.", "L'horloge."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_5_864nk2"]
+script = ExtResource("quiz_q_5_1z8nh")
+question = "Quel gaz rejetons-nous lorsque nous expirons ?"
+choices = Array[String](["Le dioxygène.", "Le diazote.", "Le dioxyde de carbone.", "L’hélium."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_5_r64u5g"]
+script = ExtResource("quiz_q_5_1z8nh")
+question = "Deux bouteilles ont le même volume. L’une contient de l’eau et l’autre de l’huile. Que peut-on dire ?"
+choices = Array[String](["Elles ont forcément la même masse.", "Elles sont identiques.", "Elles contiennent le même liquide.", "Elles peuvent avoir des masses différentes."])
+correct_choice_index = 3
+
+[sub_resource type="Resource" id="q_5_v060dz"]
+script = ExtResource("quiz_q_5_1z8nh")
+question = "Quelle unité est la plus adaptée pour mesurer une petite quantité de jus ?"
+choices = Array[String](["Le millilitre.", "Le kilogramme.", "Le litre.", "Le gramme."])
+correct_choice_index = 0
+
+[sub_resource type="Resource" id="q_5_xqbdl3"]
+script = ExtResource("quiz_q_5_1z8nh")
+question = "Quel mélange est composé d’un solide et d’un liquide ?"
+choices = Array[String](["L'eau et l'huile.", "L'eau et le sel.", "L'air.", "Le jus et la grenadine."])
+correct_choice_index = 1
+
+[sub_resource type="Resource" id="q_5_on39mo"]
+script = ExtResource("quiz_q_5_1z8nh")
+question = "Pourquoi dit-on que l’air est homogène ?"
+choices = Array[String](["Parce qu’il contient un seul gaz.", "Parce qu’il est solide.", "Parce qu’on ne distingue pas ses différents gaz.", "Parce qu’il est toujours pur."])
+correct_choice_index = 2
+
+[sub_resource type="Resource" id="q_5_9bq4x9"]
+script = ExtResource("quiz_q_5_1z8nh")
+question = "Que devient le sucre quand on le mélange dans de l'eau chaude ?"
+choices = Array[String](["Disparait complètement.", "Flotte au-dessus.", "Se dissout dans l’eau.", "Devient un gaz."])
+correct_choice_index = 2
+
+[resource]
+script = ExtResource("memo_data")
+questions = Array[ExtResource("quiz_q_5_1z8nh")]([SubResource("q_5_yz1ii5"), SubResource("q_5_aestca"), SubResource("q_5_koyz6o"), SubResource("q_5_j9pu3i"), SubResource("q_5_a9on0h"), SubResource("q_5_864nk2"), SubResource("q_5_r64u5g"), SubResource("q_5_v060dz"), SubResource("q_5_xqbdl3"), SubResource("q_5_on39mo"), SubResource("q_5_9bq4x9")])
+
