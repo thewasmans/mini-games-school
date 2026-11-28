@@ -43,6 +43,22 @@ content_margin_top = 7.0
 content_margin_right = 14.0
 content_margin_bottom = 7.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_game_types"]
+bg_color = Color(0.08, 0.2, 0.42, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.36, 0.67, 1, 0.9)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+content_margin_left = 16.0
+content_margin_top = 5.0
+content_margin_right = 16.0
+content_margin_bottom = 5.0
+
 [node name="MenuStartUI" type="Control" unique_id=1192116906 node_paths=PackedStringArray("play_button")]
 layout_mode = 3
 anchors_preset = 15
@@ -74,16 +90,33 @@ offset_left = -210.5
 offset_right = 210.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 127
+theme_override_constants/separation = 90
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer" unique_id=261438544]
+[node name="TitleGroup" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 18
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/TitleGroup" unique_id=261438544]
 material = SubResource("ShaderMaterial_title")
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("3_8hs10")
 stretch_mode = 4
+
+[node name="GameTypesPanel" type="PanelContainer" parent="VBoxContainer/TitleGroup"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_game_types")
+
+[node name="GameTypesLabel" type="Label" parent="VBoxContainer/TitleGroup/GameTypesPanel"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 19
+text = "Mots croisés • Quiz • Cryptogrammes"
+horizontal_alignment = 1
 
 [node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=1518565421]
 material = SubResource("ShaderMaterial_play_button")
